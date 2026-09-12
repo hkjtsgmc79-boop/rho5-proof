@@ -1,0 +1,48 @@
+{
+  "schema": "RHO5_ASSEMBLY_INTAKE_V1",
+  "lane": "D142",
+  "snapshot": "D142",
+  "status": "ACCEPTED_FOR_ASSEMBLY_WITH_EXPLICIT_PREMISES",
+  "created_at": "2026-09-12T04:47:35.672586+00:00",
+  "scope": "NormalizedB global-maximal source gives a same-frame rooted canonical capacity endpoint. RootEndpointSafety remains an explicit unpaid premise; no global upper bound or rho5Trace = alpha claim.",
+  "sources": {
+    "src/Rho5/Shared/BRootCapacityEndpoint.lean": "37391ea2284e1f0afb1e90678d7da4d6c31cf35aeb1d72d4b7de0afa79d3eb9e",
+    "src/Rho5/Shared/BRootCapacityEndpoint/Refutation.lean": "d3c94029090e6466c1e875258d21ab3c79fd9a54390d5ead5139e7acf6f34761",
+    "src/Rho5/Shared/BRootCapacityEndpoint/Basic.lean": "9f65c7de75f7d5e6ce1b05beff9c006b6a1fbe8d83b9e5abbfd4b84302e3f70a",
+    "src/Rho5/Shared/BRootCapacityEndpoint/Audit.lean": "3104a6893f1ab9c165c2f97ef8c0d0a999b0955800da437604a17eb538d31ebf"
+  },
+  "live_binding_checks": 23,
+  "all_live_binding_checks_match": true,
+  "actual_axiom_records": 5,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "build_evidence": {
+    "independently_retained_zero_exits": 4,
+    "owner_successful_modules": 4
+  },
+  "dependencies": [
+    {
+      "provider": "D134",
+      "receipt": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/outputs/heartbeat_1149_delivery_20260912/D134/PAPER_B17_ROOT_ENTRY_READY.json",
+      "sha256": "640c4539ac12782d725001f373aed2508f7a6838cf9f63232ae0cda67358bb6e",
+      "reuse": "Previously accepted owner review; no recompilation or mathematical re-audit."
+    },
+    {
+      "provider": "D139",
+      "receipt": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/outputs/progress_1204_delivery_20260912/D139/results/B_FIBRE_GLOBAL_ENDPOINT_READY.json",
+      "sha256": "bb22329fe04a31ba7ef138a6b974c9d709e38330a0372c67e4b1ecda3c934954",
+      "reuse": "Previously accepted owner review; no recompilation or mathematical re-audit."
+    }
+  ],
+  "owner_receipts": [
+    "B_ROOT_CAPACITY_ENDPOINT_READY.json"
+  ],
+  "limits": [
+    "This is evidence and interface intake only; no Lean invocation, no mathematics re-audit, no upstream edits.",
+    "No terminal coverage, whole-X/whole-B safety, or final rho5Trace = alpha is inferred from these modules.",
+    "Historical sections in owner REPORT are retained verbatim. Latest READY and this intake scope govern the accepted stage."
+  ]
+}

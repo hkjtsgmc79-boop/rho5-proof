@@ -1,0 +1,40 @@
+{
+  "schema": "RHO5_C02_STAGE_READY_V1",
+  "stage": "ASSEMBLY_X_B_ROOT_REDUCTION_READY",
+  "created_at": "2026-09-12T05:41:46.050817+00:00",
+  "ready": true,
+  "coordinator_acceptance": "PENDING",
+  "target_names": [
+    "Rho5.Integration.StagedAssembly.exists_global_max_X_or_root_endpoint",
+    "Rho5.Integration.StagedAssembly.exists_X_or_root_endpoint"
+  ],
+  "full_actual_types": "results/FULL_TARGET_TYPES.txt",
+  "types_sha256": "1495c245fe170a91bdd65d668c848723faf2adfee7235cc906a8932b2d2046b4",
+  "axioms": {
+    "exists_global_max_X_or_root_endpoint": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "actual_log": "Rho5.Integration.StagedAssembly.RootReductionAudit_1789191075370226902.log",
+      "log_sha256": "efcb96df6e7ad862ce354d25b431e88490dd626da8a162c136466574d4a99e05"
+    },
+    "exists_X_or_root_endpoint": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "actual_log": "Rho5.Integration.StagedAssembly.RootReductionAudit_1789191075370226902.log",
+      "log_sha256": "efcb96df6e7ad862ce354d25b431e88490dd626da8a162c136466574d4a99e05"
+    }
+  },
+  "build_status": "results/BUILD_STATUS.json",
+  "actual_import_source_olean_binding": "results/IMPORT_SOURCE_OLEAN_BINDING.json",
+  "binding_sha256": "fe61675a87ff3c329e423f3758d4f51e32de4dda48d98faf5886c47453b4c36d",
+  "remaining_premises": [
+    "alpha < rho5Trace (explicit high-value/refutation branch)"
+  ],
+  "unconditional_final_ready": false
+}

@@ -1,0 +1,19 @@
+import Rho5.Integration.StagedAssembly.Conditional
+set_option pp.universes true
+set_option pp.explicit true
+set_option pp.fullNames true
+#print Rho5.Integration.StagedAssembly.XGlobalSafety
+#print Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety
+#print Rho5.Shared.BRootCapacityEndpoint.IsRootCapacityEndpoint
+#check @Rho5.Integration.StagedAssembly.rho5Trace_eq_alpha_of_safety
+#check @Rho5.Integration.StagedAssembly.legal_growth_le_alpha_of_safety
+#check @Rho5.Integration.StagedAssembly.fifth_readout_le_alpha_of_safety
+#check @Rho5.Integration.StagedAssembly.legal_growth_le_alpha_via_fifth_of_safety
+#check @Rho5.Integration.StagedAssembly.high_path_fifth_of_safety
+#check @Rho5.Integration.StagedAssembly.det_endpoint_of_safety
+#print axioms Rho5.Integration.StagedAssembly.rho5Trace_eq_alpha_of_safety
+#print axioms Rho5.Integration.StagedAssembly.legal_growth_le_alpha_of_safety
+#print axioms Rho5.Integration.StagedAssembly.fifth_readout_le_alpha_of_safety
+#print axioms Rho5.Integration.StagedAssembly.legal_growth_le_alpha_via_fifth_of_safety
+#print axioms Rho5.Integration.StagedAssembly.high_path_fifth_of_safety
+#print axioms Rho5.Integration.StagedAssembly.det_endpoint_of_safety

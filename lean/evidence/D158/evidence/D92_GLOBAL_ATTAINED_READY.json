@@ -1,0 +1,82 @@
+{
+  "receipt": "GLOBAL_ATTAINED_READY",
+  "lane": "D92",
+  "phase": "B",
+  "ready": true,
+  "namespace": "Rho5.Shared.GlobalAttainedWitness",
+  "module": "Rho5.Shared.GlobalAttainedWitness.Attained",
+  "goal": "discharge the 4 < rho5Trace hypothesis of the accepted D72_FULL / D81 / D68_FULL witness theorems and publish unconditional global attainment",
+  "discharge_chain": "D09 alpha_gt_four (4 < alpha) → D82 actualAlpha_le_rho5Trace (alpha ≤ rho5Trace) → phase A four_lt_rho5Trace (4 < rho5Trace) → all witness theorems of D72_FULL / D81 / D68_FULL applied with no remaining hypothesis",
+  "delivered": {
+    "K_nonempty": "Rho5.CompactMinorDomain.K.Nonempty",
+    "exists_witness_mem_K": "∃ w, w.M ∈ K ∧ f w.M = rho5Trace ∧ PolyCP w.M ∧ 1/2 < A w.M ∧ 1/2 < B w.M ∧ 1 < C w.M",
+    "exists_mem_K_f_eq_rho": "∃ M ∈ K, f M = rho5Trace",
+    "exists_isMaxOn_f": "∃ M ∈ K, IsMaxOn f K M",
+    "exists_max_on_K": "∃ M ∈ K, f M = rho5Trace ∧ IsMaxOn f K M  (D81)",
+    "global_max_exists": "∃ M ∈ K, IsMaxOn f K M ∧ f M = rho5Trace  (public unconditional global maximum existence)",
+    "exists_sorted_boundary_maximizer": "∃ M N P ε η values, N = signedEntries M (sigma5 ε) (sigma5 η) ∧ (ε = ±1) ∧ (η = ±1) ∧ (P = shift N (L N) ∨ P = (shift N (L N))ᵀ) ∧ SortedBoundaryMaximizerFacts P values  (D68_FULL)",
+    "exists_sorted_boundary_maximizer_four_faces": "∃ P values, SortedBoundaryMaximizerFacts P values ∧ 0 ≤ s P ∧ s P ≤ t P ∧ (P 4 4 = -1 ∨ S4 P 3 3 = -p P ∨ S3 P 2 2 = -k P ∨ T2 P 1 1 = -r P)",
+    "sorted_witness_trace_and_growth": "SortedBoundaryMaximizerFacts P values → values = [1,p P,k P,r P,|delta P|] ∧ LegalTrace P values ∧ growthRatio P values = rho5Trace ∧ matrixEntryMax P = 1 ∧ P 0 0 = 1"
+  },
+  "reused_not_rebuilt": [
+    "D72_FULL compactness/continuity/witness package",
+    "D81 K-vs-rho equivalence and K maximizer",
+    "D68_FULL sorted boundary maximizer and its four faces",
+    "no new extremum framework, no re-proof of compactness/rearrangement/legal path"
+  ],
+  "four_faces_preserved": "the four saturation faces are kept as a disjunction (boundary field and the compact four-face theorem); the balanced branch of D68_FULL is not used to collapse them",
+  "module_evidence": {
+    "module": "Rho5.Shared.GlobalAttainedWitness.Attained",
+    "file": "Rho5/Shared/GlobalAttainedWitness/Attained.lean",
+    "exit_code": 0,
+    "wall_seconds": 6.036,
+    "closure_size": 385,
+    "source_sha256": "6934c6c9e79aeac503b87728cc60d32e1fffbe245c7523cb2d2034dc1c5620da",
+    "source_sha256_remote_prefix": "6934c6c9e79aeac503b8",
+    "olean_sha256": "403afe77dbda61bd0365",
+    "dependency_hash_prefix": "2f18f9d68a7e92e1e895"
+  },
+  "aggregate_evidence": {
+    "module": "Rho5.Shared.GlobalAttainedWitness",
+    "file": "Rho5/Shared/GlobalAttainedWitness.lean",
+    "exit_code": 0,
+    "wall_seconds": 4.025,
+    "closure_size": 386,
+    "source_sha256": "b7cf15bddf5995d21bdaab663e56734d94d0004440cbc4026cb5fd084fb8f40d",
+    "source_sha256_remote_prefix": "b7cf15bddf5995d21bda",
+    "olean_sha256": "e606e4c2a3887e99ca9f",
+    "dependency_hash_prefix": "e9132602fde2ba3632c9"
+  },
+  "axioms": {
+    "records": 9,
+    "audited": [
+      "four_lt_rho5Trace",
+      "rho5Trace_mem_range",
+      "K_nonempty",
+      "exists_witness_mem_K",
+      "exists_max_on_K",
+      "global_max_exists",
+      "exists_sorted_boundary_maximizer",
+      "exists_sorted_boundary_maximizer_four_faces",
+      "sorted_witness_trace_and_growth"
+    ],
+    "distinct_sets": [
+      "[propext, Classical.choice, Quot.sound]"
+    ],
+    "sorryAx_present": false
+  },
+  "hashes": {
+    "entry_source_sha256": "b7cf15bddf5995d21bdaab663e56734d94d0004440cbc4026cb5fd084fb8f40d",
+    "dependency_hash": "e9132602fde2ba3632c97be2ff5ee59f6c6f9c732d96a71c7033a61331532d27",
+    "recorded_dependency_hash": "e9132602fde2ba3632c97be2ff5ee59f6c6f9c732d96a71c7033a61331532d27",
+    "closure_size": 386,
+    "missing_sources": [],
+    "source_conflicts": [],
+    "missing_oleans": []
+  },
+  "not_claimed": [
+    "no rho5Trace = alpha (D96 owns the equivalence closure)",
+    "no claim that the D68 sorted witness P itself lies in K (that needs the D41 sign transport, out of this card)",
+    "no new canonical minor reading (D94 owns it)"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+ "binding": "outputs/relay_1345_delivery_20260912/C02/results/IMPORT_SOURCE_OLEAN_BINDING.json",
+ "lake_manifest_sha256": "6fa600a652ca1ef77814e08127d1078febb38e3018ed9f8b1c5683b92427b789",
+ "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+ "lean_version": "Lean (version 4.30.0, x86_64-unknown-linux-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+ "source_closure_count": 495,
+ "loaded_count": 4788
+}

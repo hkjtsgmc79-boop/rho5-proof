@@ -1,0 +1,94 @@
+{
+ "odes_gate": {
+  "root": "Mathlib.Analysis.ODE.PicardLindelof",
+  "missing_from": [
+   "D58/cache/lean",
+   "pilot project build lib",
+   "D30 lane lib",
+   "D74 lane lib",
+   "/root/rho5_canary",
+   "/root/rho5_tier1"
+  ],
+  "real_lane_mathlib_roots": [
+   "Mathlib.Analysis.Calculus.ContDiff.Operations",
+   "Mathlib.Analysis.Calculus.ContDiff.RCLike",
+   "Mathlib.Analysis.ODE.PicardLindelof",
+   "Mathlib.Tactic.Linarith"
+  ],
+  "missing_roots": 1,
+  "corrected_minimal_closure": 441,
+  "unknown_sources": 0,
+  "umbrella_importers": [],
+  "azumaya_matrix_in_closure": false,
+  "earlier_wrong_count": 6123,
+  "bug": "first scan matched `import` lines inside block comments/doc examples and mis-parsed `import all Foo`",
+  "measured_rate_s_per_module": "3-5 (observed 21 modules in ~80 s)",
+  "estimate": "25-45 min single process; 0.3-0.6 GiB new disk",
+  "artifacts": [
+   "results/closure_audit.json",
+   "results/CLOSURE_REPAIR_STATUS.json",
+   "deps_map.json",
+   "repair_state.json"
+  ],
+  "authoritative_closure_via_lean_deps": 80,
+  "regex_closure_441": "over-inclusive (matched imports inside comments/doc examples); superseded",
+  "comment_blind_first_scan_6123": "superseded; retained only as the record of the corrected mistake",
+  "built": 78,
+  "hard_failures": 0,
+  "blocked_successors": 58,
+  "hard_failure_details": [
+   {
+    "module": "Mathlib.MeasureTheory.Function.LpSpace.Basic",
+    "line": 855,
+    "error": "Type mismatch: `LinearMap.mkContinuous₂_norm_le …` has type ‖LinearMap.mkContinuous₂ …‖ ≤ … but is expected to have type ‖compLpL₂ p μ B‖ ≤ …",
+    "log": "closure_logs/Mathlib.MeasureTheory.Function.LpSpace.Basic.log",
+    "wall_s": 20.9
+   },
+   {
+    "module": "Mathlib.RingTheory.TensorProduct.Maps",
+    "line": 291,
+    "error": "`simp` made no progress in lemma tmul_one_tmul_one_tmul",
+    "log": "closure_logs/Mathlib.RingTheory.TensorProduct.Maps.log",
+    "wall_s": 36.0
+   }
+  ],
+  "diagnosis": [
+   "both modules are absent from every available cache (D58 cache, pilot lib, iso_root)",
+   "cached modules DO recompile from the pinned sources (Mathlib.Order.Basic, Mathlib.Data.Nat.Log: rc=0), so this is not a general cache/source mismatch",
+   "lake-manifest.json pins mathlib rev c5ea00351c28e24afc9f0f84379aa41082b1188f as required",
+   "the two failures are proof-level and look like definitional skew inside the ODE closure; they block 58 successors and therefore Mathlib.Analysis.ODE.PicardLindelof itself"
+  ],
+  "positive_validation": "the repair pass added the missing dependency Mathlib.Data.Nat.NthRoot.Defs and Mathlib.Analysis.SpecialFunctions.Pow.Real then compiled successfully (9.3 s), confirming the dynamic need-set repair",
+  "status": "CLOSED",
+  "remaining": 0,
+  "olean_sha256": "3a9025c2f05e670a5611f79e3a9126dfc763232c18c70f4db797c3053bd91cdd"
+ },
+ "modules": [
+  {
+   "module": "Rho5.ExternalV43Existence.Geometry",
+   "exit_code": 0,
+   "peak_rss_kib": 2758360,
+   "src_sha256": "8101afbc09439934a728d27c78f67b4fa3589477262b5f637d2933e3facf8d0e",
+   "as_delivered_sha256": "ee6adfd98e91816e8bdeacd4d0a90413228c5d8940514c0a8dc93969eb4a43d9",
+   "olean_sha256": "03f82b08036254c0ec4674ded78652345e7ff1deef8d8494cbcd5ad9301a4699",
+   "adaptation": "dropped unused import Mathlib.Analysis.Normed.Module.FiniteDimension"
+  },
+  {
+   "module": "Rho5.ExternalV43Existence.Regularity",
+   "exit_code": 0,
+   "peak_rss_kib": 2931608,
+   "src_sha256": "67a889a63aa56f7ce48f78b5980aaf6a45dfb970886ff1718dd7ffb450cb4bad",
+   "as_delivered_sha256": "0e98651017a4174aa4497a93758970b6a8c1bc1993c82194bc5b633988fbfba7",
+   "olean_sha256": "bfeae8e78cde40dd2541e4aaa0138e43b7693c55f75dd0cf531ac48aa737e7ec",
+   "adaptation": "open scoped NNReal; (1 : WithTop ℕ∞) ≠ 0 annotation"
+  },
+  {
+   "module": "Rho5.ExternalV43Existence.LayerAudit",
+   "exit_code": 0,
+   "peak_rss_kib": 2902664,
+   "src_sha256": "fa32301e97788dd912b666f16d8527e8be79f55d4df7cb2767cbfbfc94434612",
+   "olean_sha256": "fca74456a5f127ee9d1ad0872aad4b7714e994091300c7f713ba61b82e710f63",
+   "note": "lane-added audit (the package's Audit.lean needs the aggregate)"
+  }
+ ]
+}

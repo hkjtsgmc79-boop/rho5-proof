@@ -1,0 +1,347 @@
+{
+  "status": "CORRECTED_AND_VERIFIED",
+  "modules": [
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P061",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P061.lean",
+      "source_sha256": "3fc3a478244cb3ad3a3a1441e2bfbada4b744cea31487b9a167b98fba4747136",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.JetBounds.P060"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P061.lean": "def9176f18f72252cbc096b2171c6b867e70c8da3d64961213e49317aace0e06",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P061.lean": "3fc3a478244cb3ad3a3a1441e2bfbada4b744cea31487b9a167b98fba4747136"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P061.lean",
+      "remote_source_sha256": "3fc3a478244cb3ad3a3a1441e2bfbada4b744cea31487b9a167b98fba4747136",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P061.olean",
+      "olean_sha256": "8f7f401426cd902c57802d5604188006b4862ff97cdd2bfe1fa598cdbf638449",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P061.olean",
+        "owner_olean_sha256": "8f7f401426cd902c57802d5604188006b4862ff97cdd2bfe1fa598cdbf638449",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "3fc3a478244cb3ad3a3a1441e2bfbada4b744cea31487b9a167b98fba4747136",
+        "receipt_olean_sha256": "8f7f401426cd902c57802d5604188006b4862ff97cdd2bfe1fa598cdbf638449",
+        "proof_only_stripback_evidence_reused": true
+      }
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P011",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P011.lean",
+      "source_sha256": "6d320f14cdff1b0ceebf4619014045b525602a9dd110897d1ba92d5bf3433f2a",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.JetBounds.P010"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P011.lean": "7ce658263e06a99884bf22bc4640fd3fc88400073b2b26ddfefa8db5611595b2",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P011.lean": "6d320f14cdff1b0ceebf4619014045b525602a9dd110897d1ba92d5bf3433f2a"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P011.lean",
+      "remote_source_sha256": "6d320f14cdff1b0ceebf4619014045b525602a9dd110897d1ba92d5bf3433f2a",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P011.olean",
+      "olean_sha256": "f3af0231b0575300450d7c357fd9e07bb0422f14e9b9478f823f046855e4e3be",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P011.olean",
+        "owner_olean_sha256": "f3af0231b0575300450d7c357fd9e07bb0422f14e9b9478f823f046855e4e3be",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "6d320f14cdff1b0ceebf4619014045b525602a9dd110897d1ba92d5bf3433f2a",
+        "receipt_olean_sha256": "f3af0231b0575300450d7c357fd9e07bb0422f14e9b9478f823f046855e4e3be",
+        "proof_only_stripback_evidence_reused": true
+      }
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P010",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P010.lean",
+      "source_sha256": "1bd66e26e6d98d0b5bb1deff9736392c93f3a5dbca1a08321e41cfcfc6862477",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.JetBounds.P009"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P010.lean": "02ab2b1dac33e3cf5f7a24eabf2a86a731a0402a42820c2d88929311eb58ad5d",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P010.lean": "1bd66e26e6d98d0b5bb1deff9736392c93f3a5dbca1a08321e41cfcfc6862477"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P010.lean",
+      "remote_source_sha256": "1bd66e26e6d98d0b5bb1deff9736392c93f3a5dbca1a08321e41cfcfc6862477",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P010.olean",
+      "olean_sha256": "ddda74d266add812234c152f70c178ce96709e88584bf651209842e085e81dbb",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P010.olean",
+        "owner_olean_sha256": "ddda74d266add812234c152f70c178ce96709e88584bf651209842e085e81dbb",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "1bd66e26e6d98d0b5bb1deff9736392c93f3a5dbca1a08321e41cfcfc6862477",
+        "receipt_olean_sha256": "ddda74d266add812234c152f70c178ce96709e88584bf651209842e085e81dbb",
+        "proof_only_stripback_evidence_reused": true
+      }
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P009",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P009.lean",
+      "source_sha256": "5812dd13d45a37112fd38738eea15e530dc639722f80c4425bc99796357689fd",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.JetBounds.P008"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P009.lean": "e3789c0094cb0e70dc867d7967fa1f7fce17a28b4a0c4f747503a3d1d44e9100",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P009.lean": "5812dd13d45a37112fd38738eea15e530dc639722f80c4425bc99796357689fd"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P009.lean",
+      "remote_source_sha256": "5812dd13d45a37112fd38738eea15e530dc639722f80c4425bc99796357689fd",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P009.olean",
+      "olean_sha256": "45671596d01e6c615dfcd24cc5e832625b9f854c14742bbc95d7bd8f9c44adfe",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P009.olean",
+        "owner_olean_sha256": "45671596d01e6c615dfcd24cc5e832625b9f854c14742bbc95d7bd8f9c44adfe",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "5812dd13d45a37112fd38738eea15e530dc639722f80c4425bc99796357689fd",
+        "receipt_olean_sha256": "45671596d01e6c615dfcd24cc5e832625b9f854c14742bbc95d7bd8f9c44adfe",
+        "proof_only_stripback_evidence_reused": true
+      }
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P008",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P008.lean",
+      "source_sha256": "24181047bd4105d70d62b8dd9f120bb9b0a80c3a21a708d2792f2e9c90da6642",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.JetBounds.P007"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P008.lean": "c6d06b6bda4a4955c938495ddaa6e9a2a482382f0905bcfc1f04cb13815a0fa8",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P008.lean": "24181047bd4105d70d62b8dd9f120bb9b0a80c3a21a708d2792f2e9c90da6642"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P008.lean",
+      "remote_source_sha256": "24181047bd4105d70d62b8dd9f120bb9b0a80c3a21a708d2792f2e9c90da6642",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P008.olean",
+      "olean_sha256": "f7f82ff604662d3e4a9157a7ae7f31ed154d618279404c44f411d47c43cd9359",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P008.olean",
+        "owner_olean_sha256": "f7f82ff604662d3e4a9157a7ae7f31ed154d618279404c44f411d47c43cd9359",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "24181047bd4105d70d62b8dd9f120bb9b0a80c3a21a708d2792f2e9c90da6642",
+        "receipt_olean_sha256": "f7f82ff604662d3e4a9157a7ae7f31ed154d618279404c44f411d47c43cd9359",
+        "proof_only_stripback_evidence_reused": true
+      }
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P007",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P007.lean",
+      "source_sha256": "db0429900f0e889b3720cd31dc3e65f3cebb333b41a50b469e09bf9aa984d431",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.JetBounds.P006"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P007.lean": "71a60fd027a3d574bca4484542c44386dbf5f8caac0ae9f00c2f10a29d6c75bc",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P007.lean": "db0429900f0e889b3720cd31dc3e65f3cebb333b41a50b469e09bf9aa984d431"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P007.lean",
+      "remote_source_sha256": "db0429900f0e889b3720cd31dc3e65f3cebb333b41a50b469e09bf9aa984d431",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P007.olean",
+      "olean_sha256": "5b675f275fea98601727b60c7aaa6cb48f5ca45ace156c0a32423ff153eeb472",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P007.olean",
+        "owner_olean_sha256": "5b675f275fea98601727b60c7aaa6cb48f5ca45ace156c0a32423ff153eeb472",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "db0429900f0e889b3720cd31dc3e65f3cebb333b41a50b469e09bf9aa984d431",
+        "receipt_olean_sha256": "5b675f275fea98601727b60c7aaa6cb48f5ca45ace156c0a32423ff153eeb472",
+        "proof_only_stripback_evidence_reused": true
+      }
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P006",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P006.lean",
+      "source_sha256": "81039631d85e9a42dbcd1c00c96f6879bec1b7bc00a683b45d076ccd027e7422",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.JetBounds.P005"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P006.lean": "eadf396e4a91720b284aaafdd47219978ac0b5ff657b7de9a0ad85545f943971",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P006.lean": "81039631d85e9a42dbcd1c00c96f6879bec1b7bc00a683b45d076ccd027e7422"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P006.lean",
+      "remote_source_sha256": "81039631d85e9a42dbcd1c00c96f6879bec1b7bc00a683b45d076ccd027e7422",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P006.olean",
+      "olean_sha256": "d77a0b57eabc662487a55151754be733e77fd8e603ff29bde62cf5bc5cf41333",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P006.olean",
+        "owner_olean_sha256": "d77a0b57eabc662487a55151754be733e77fd8e603ff29bde62cf5bc5cf41333",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "81039631d85e9a42dbcd1c00c96f6879bec1b7bc00a683b45d076ccd027e7422",
+        "receipt_olean_sha256": "d77a0b57eabc662487a55151754be733e77fd8e603ff29bde62cf5bc5cf41333",
+        "proof_only_stripback_evidence_reused": true
+      }
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P005",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P005.lean",
+      "source_sha256": "39f0ce1c8bb44a215efcc57621e8bb559eef12376c715ba75a0da786d9b35b38",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.JetBounds.P004"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P005.lean": "baa522b8879ac797a781341e989bacfe414dd457b3139cfc8837cf97434eeee3",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P005.lean": "39f0ce1c8bb44a215efcc57621e8bb559eef12376c715ba75a0da786d9b35b38"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P005.lean",
+      "remote_source_sha256": "39f0ce1c8bb44a215efcc57621e8bb559eef12376c715ba75a0da786d9b35b38",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P005.olean",
+      "olean_sha256": "f50b2350973911c63010e48a76fe8b741a2046c3cc6ae8f5dc900170fca8b574",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P005.olean",
+        "owner_olean_sha256": "f50b2350973911c63010e48a76fe8b741a2046c3cc6ae8f5dc900170fca8b574",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "39f0ce1c8bb44a215efcc57621e8bb559eef12376c715ba75a0da786d9b35b38",
+        "receipt_olean_sha256": "f50b2350973911c63010e48a76fe8b741a2046c3cc6ae8f5dc900170fca8b574",
+        "proof_only_stripback_evidence_reused": true
+      }
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P004",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P004.lean",
+      "source_sha256": "617206b60bf3be4a4afbea0c454279ae82402d23f57eb59d6946aa288f033bf1",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.JetBounds.P003"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P004.lean": "7c122c19b4341dd6450a262e844ecbee005ab708805658a90f840096aa3c23f0",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P004.lean": "617206b60bf3be4a4afbea0c454279ae82402d23f57eb59d6946aa288f033bf1"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P004.lean",
+      "remote_source_sha256": "617206b60bf3be4a4afbea0c454279ae82402d23f57eb59d6946aa288f033bf1",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P004.olean",
+      "olean_sha256": "49eaae8919a4d6b88a1af926eaf942b10d8856f8c044cfd39d64376b1b7d35a4",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P004.olean",
+        "owner_olean_sha256": "49eaae8919a4d6b88a1af926eaf942b10d8856f8c044cfd39d64376b1b7d35a4",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "617206b60bf3be4a4afbea0c454279ae82402d23f57eb59d6946aa288f033bf1",
+        "receipt_olean_sha256": "49eaae8919a4d6b88a1af926eaf942b10d8856f8c044cfd39d64376b1b7d35a4",
+        "proof_only_stripback_evidence_reused": true
+      }
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P003",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P003.lean",
+      "source_sha256": "3055c334e6edc6843b248a80653a5ecd8c34f524e69df6374945f8ceed4dade3",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.JetBounds.P002"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P003.lean": "bc208ee044715dcdcd036b31a3d2f91b319d214fe6a48904a9dac066f73603a1",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P003.lean": "3055c334e6edc6843b248a80653a5ecd8c34f524e69df6374945f8ceed4dade3"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P003.lean",
+      "remote_source_sha256": "3055c334e6edc6843b248a80653a5ecd8c34f524e69df6374945f8ceed4dade3",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P003.olean",
+      "olean_sha256": "5f77c3e0934c7d3c71b925f0737780c4ec0def62e95245f914f21c36f4a89f96",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P003.olean",
+        "owner_olean_sha256": "5f77c3e0934c7d3c71b925f0737780c4ec0def62e95245f914f21c36f4a89f96",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "3055c334e6edc6843b248a80653a5ecd8c34f524e69df6374945f8ceed4dade3",
+        "receipt_olean_sha256": "5f77c3e0934c7d3c71b925f0737780c4ec0def62e95245f914f21c36f4a89f96",
+        "proof_only_stripback_evidence_reused": true
+      }
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P002",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P002.lean",
+      "source_sha256": "9f3a85a6f790f87faf652d6d01a182c20646f496b4d29368e576fe9cce6aadac",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.JetBounds.P001"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P002.lean": "dbb0a602539af8f2e96dd07b03af8cb313e7d72e346723e410ba8d0cdcbcaecc",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P002.lean": "9f3a85a6f790f87faf652d6d01a182c20646f496b4d29368e576fe9cce6aadac"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P002.lean",
+      "remote_source_sha256": "9f3a85a6f790f87faf652d6d01a182c20646f496b4d29368e576fe9cce6aadac",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P002.olean",
+      "olean_sha256": "4ccdf6a015fac00deae13e3b921d62e54a3e8fcb5f5d4fcb126739c0b7f30934",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P002.olean",
+        "owner_olean_sha256": "4ccdf6a015fac00deae13e3b921d62e54a3e8fcb5f5d4fcb126739c0b7f30934",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "9f3a85a6f790f87faf652d6d01a182c20646f496b4d29368e576fe9cce6aadac",
+        "receipt_olean_sha256": "4ccdf6a015fac00deae13e3b921d62e54a3e8fcb5f5d4fcb126739c0b7f30934",
+        "proof_only_stripback_evidence_reused": true
+      }
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P001",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P001.lean",
+      "source_sha256": "4d11a37f428fc217650d2dd152bb6bedab67c0ecfdd62abd37327966a285d865",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.JetBounds.P000"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P001.lean": "c2c30b4066457a4ee1e219ab8b6dab0d94e23851b7abae75387b974405fff75f",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P001.lean": "4d11a37f428fc217650d2dd152bb6bedab67c0ecfdd62abd37327966a285d865"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P001.lean",
+      "remote_source_sha256": "4d11a37f428fc217650d2dd152bb6bedab67c0ecfdd62abd37327966a285d865",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P001.olean",
+      "olean_sha256": "288dfdb9f1df71c4b10ccf126c626898d3a2ba0afb9f67320cdd35d458cbf522",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P001.olean",
+        "owner_olean_sha256": "288dfdb9f1df71c4b10ccf126c626898d3a2ba0afb9f67320cdd35d458cbf522",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "4d11a37f428fc217650d2dd152bb6bedab67c0ecfdd62abd37327966a285d865",
+        "receipt_olean_sha256": "288dfdb9f1df71c4b10ccf126c626898d3a2ba0afb9f67320cdd35d458cbf522",
+        "proof_only_stripback_evidence_reused": true
+      }
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P000",
+      "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P000.lean",
+      "source_sha256": "55a0dd38e62f99bd89c29668e60e15ad4a215f91831b70ec6483c12b28e4f536",
+      "imports": [
+        "Rho5.Algebraic.CriticalExistence.Circuit"
+      ],
+      "candidates": {
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D30/src/Rho5/Algebraic/CriticalExistence/JetBounds/P000.lean": "919e061a2c86e90377dc6aa53bf86eaa7a96a315a4c5955f32efaf495d5d51ab",
+        "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P000.lean": "55a0dd38e62f99bd89c29668e60e15ad4a215f91831b70ec6483c12b28e4f536"
+      },
+      "remote_source": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/src/Rho5/Algebraic/CriticalExistence/JetBounds/P000.lean",
+      "remote_source_sha256": "55a0dd38e62f99bd89c29668e60e15ad4a215f91831b70ec6483c12b28e4f536",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Algebraic/CriticalExistence/JetBounds/P000.olean",
+      "olean_sha256": "eaceb506793304f7588fc98930b7e72769784121819786762fc41c30f92f670e",
+      "source_conflict_resolution": {
+        "owner_olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D39/build/lib/lean/Rho5/Algebraic/CriticalExistence/JetBounds/P000.olean",
+        "owner_olean_sha256": "eaceb506793304f7588fc98930b7e72769784121819786762fc41c30f92f670e",
+        "matches": true,
+        "compiled_source_owner": "D39",
+        "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+        "receipt_source_sha256": "55a0dd38e62f99bd89c29668e60e15ad4a215f91831b70ec6483c12b28e4f536",
+        "receipt_olean_sha256": "eaceb506793304f7588fc98930b7e72769784121819786762fc41c30f92f670e",
+        "proof_only_stripback_evidence_reused": true
+      }
+    }
+  ],
+  "source": "D39 repaired source; D30 object directory is later mirror",
+  "recompilation": false,
+  "proof_only_stripback_count": 167,
+  "receipt_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1"
+}

@@ -1,0 +1,500 @@
+{
+ "Rho5.PhaseOne.Examples": {
+  "binding": {
+   "Rho5.ExternalBFibreCapacity": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity.olean",
+    "olean_sha256": "a292589aaac4e3c8b01b2a1e5b2d8b479af4f2e68d37d24273f2e65cdcea6af8",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity.lean",
+    "source_sha256": "6fd5f93bc61bf45164ccf15bb8b61112d834f3d6aba3d5c30718005fd9653d8a"
+   },
+   "Rho5.ExternalBFibreCapacity.Attainment": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Attainment.olean",
+    "olean_sha256": "261166cd452b4cc51ccbdc8f56b4720a6facfb56055f4030e1decf1230448e32",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Attainment.lean",
+    "source_sha256": "5c71803deb9067a52080272433acaeaa8d0e227bc37096a0b13a444b5418eb09"
+   },
+   "Rho5.ExternalBFibreCapacity.Beta": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Beta.olean",
+    "olean_sha256": "eb31523ac657fc5a2493d680a48f77ffd7b2dcf22f46791f5ce14d7c8d321115",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Beta.lean",
+    "source_sha256": "89be0e6ba7359df44b96933f2fda15de22a57bbfe887dd54ee3fa5c928412402"
+   },
+   "Rho5.ExternalBFibreCapacity.CapacityCount": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/CapacityCount.olean",
+    "olean_sha256": "cc4a99d57d0c1ec4d44fd1d9c2dabab2d466209c2d0b300b067bcd9df7df1786",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/CapacityCount.lean",
+    "source_sha256": "5afdd559bd0d30d7499733472a28d724cd230f75991b75aba1433f57eac2d5c9"
+   },
+   "Rho5.ExternalBFibreCapacity.FiniteBounds": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/FiniteBounds.olean",
+    "olean_sha256": "78190e5fd4b4e4c642be6c19ff2e3d8293eaf037cb0fd28d03af4e4c9394bb12",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/FiniteBounds.lean",
+    "source_sha256": "16efff267512872cf33d612beb0e61d0feacd2fca3301c68350113f635d4b028"
+   },
+   "Rho5.ExternalBFibreCapacity.Maximum": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Maximum.olean",
+    "olean_sha256": "79509369921a5e9e8cced511eda2b15315548a76fde1a92a60878e4bc056dc14",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Maximum.lean",
+    "source_sha256": "106881450262a25182e195775adde39e1ea343db65b352e13f36fa0b308bd92f"
+   },
+   "Rho5.ExternalBFibreCapacity.Model": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Model.olean",
+    "olean_sha256": "389d357468392ff889cb2258aaf95b0c5b66a64aee9432dced72003c82d65fff",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Model.lean",
+    "source_sha256": "feb3effa21a52fdb08827b2ccd80159a319df1fcc296ab3b0da004a9c46e8b41"
+   },
+   "Rho5.ExternalBFibreCapacity.Nonempty": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Nonempty.olean",
+    "olean_sha256": "6e4a4d46ab9cf9ac7eb1ce400fd1a615dcfa7319836cf438846a3bf7b4b0c8f9",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Nonempty.lean",
+    "source_sha256": "f3cbb77fd9af922c575f06a53ec4cebbbfb98588debd548ff7474dc75d343dd1"
+   },
+   "Rho5.ExternalBFibreCapacity.Paths": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Paths.olean",
+    "olean_sha256": "5c9ce5af3dfd94b9464d93e95f06e831c2b1bc1d8ea2a4bd9fdd9343d899fab4",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Paths.lean",
+    "source_sha256": "475ad696bcac4edc5d0984f665011cf8675faccb199dcd317b8210b2cb68c5f5"
+   },
+   "Rho5.ExternalBFibreCapacity.Prefix": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Prefix.olean",
+    "olean_sha256": "4f7a723b78f7b0a25b464c8fc9d99b2e683a4c7848e55c10110fc0640dc911e9",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Prefix.lean",
+    "source_sha256": "1ea1f26f969e3d08b8de14035117dfb1314d7b362c5248a5ef6d0f525d00041a"
+   },
+   "Rho5.ExternalBFibreCapacity.PrefixPaths": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/PrefixPaths.olean",
+    "olean_sha256": "18d5df9a96de03e2e96fb787e99506b5d8790fe49b22a62ade7db6ae2f2656a7",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/PrefixPaths.lean",
+    "source_sha256": "377ca5ba2de4ce74b60dea58cafbccade8695c3d1af44ff7eaf593ebebd05b7f"
+   },
+   "Rho5.ExternalBFibreCapacity.RowCapacity": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/RowCapacity.olean",
+    "olean_sha256": "ffc6180275b8eaa8285a6f71258c183e5ed2968f7c0fef4adfaed993d64aa619",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/RowCapacity.lean",
+    "source_sha256": "9818a42f06689d7ddf1d76351f470c1d06bb5bfd410a208f1e7f56ff9d7ec914"
+   },
+   "Rho5.ExternalBFibreCapacity.TailIntervals": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/TailIntervals.olean",
+    "olean_sha256": "6dd0a29f3e760b8d2465670807ee052086c1ed199d2531c78b1def66a80599f6",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/TailIntervals.lean",
+    "source_sha256": "1f9235cf4bd56cdde9fb431b5d6bd0a1bb242fc64ad698852065a808b17a1d37"
+   },
+   "Rho5.Integration.StagedAssembly.Baseline": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Integration/StagedAssembly/Baseline.olean",
+    "olean_sha256": "a44816be7fc9255e257d5d9b6f63f24b64891b9070a7508b8ac85ca863602d6f",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Integration/StagedAssembly/Baseline.lean",
+    "source_sha256": "66e5c18220d5783822d1dd5dc80013f6559f9f53482d981767215239cf04fa9e"
+   },
+   "Rho5.Integration.StagedAssembly.Conditional": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Integration/StagedAssembly/Conditional.olean",
+    "olean_sha256": "631cd2f1a85955753a4299f1e3d01382d6f55ca532916d8aef63651eac6332d2",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Integration/StagedAssembly/Conditional.lean",
+    "source_sha256": "836b304cc5e6187ffc4edd93b7fc930a082df4493957c2d8ed5b9e5382e5dec8"
+   },
+   "Rho5.Integration.StagedAssembly.RootReduction": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Integration/StagedAssembly/RootReduction.olean",
+    "olean_sha256": "84da9b8da7de12a91a33f742988265b373beef764b2e551428b551d7d0d3595f",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Integration/StagedAssembly/RootReduction.lean",
+    "source_sha256": "d52b3613a86483e92ddfb6872306e9c5a65c64f9816051ab4e62f87a16b0c560"
+   },
+   "Rho5.PhaseOne.Examples": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/PhaseOne/Examples.olean",
+    "olean_sha256": "2e9619f76eca553facb84adf075bab93a9dac6eb23fb8727e0a7c9475a66b654",
+    "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/src/Rho5/PhaseOne/Examples.lean",
+    "source_sha256": "e4dde61d14ca7caf9cbd0dd7490c40f56bd8a39f813a1fedebd9832e6a4d7a23"
+   },
+   "Rho5.Shared.ActualBRootEntry.Assembly": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/ActualBRootEntry/Assembly.olean",
+    "olean_sha256": "885aa8e6219a82c50805a0db6e628ca969719465363ae2727eb6f237bc0e8038",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/ActualBRootEntry/Assembly.lean",
+    "source_sha256": "dbd422fe1091ba1c623350ecb91f5b546691523f394b4ef6b0c598e8b810c9aa"
+   },
+   "Rho5.Shared.ActualBRootEntry.Basic": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/ActualBRootEntry/Basic.olean",
+    "olean_sha256": "852d275c5382bd6ac112ed1ae5dd05a71085ff70f3feba15fa526f6ab7e0d9b3",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/ActualBRootEntry/Basic.lean",
+    "source_sha256": "9a2668e2ef77df11ccbf35b7cbf7cbba8c0356fe8d9f8dbb8e16f945294512d7"
+   },
+   "Rho5.Shared.BFibreGlobalEndpoint": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BFibreGlobalEndpoint.olean",
+    "olean_sha256": "ff619b595341a811285773cefb00e80c491930c2d474fe6b45f843fba2e5fee4",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BFibreGlobalEndpoint.lean",
+    "source_sha256": "14a54ba7c97671642a0f996079a73490c456027f503b30629b1ce091068a8c18"
+   },
+   "Rho5.Shared.BFibreGlobalEndpoint.Basic": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BFibreGlobalEndpoint/Basic.olean",
+    "olean_sha256": "5f3545c2969a60fc37c3bbdb33fba793b075e3e26358679cf003a225ebcea502",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BFibreGlobalEndpoint/Basic.lean",
+    "source_sha256": "c7955d439738b3b0561f03974e677cba4eb99016d3749b73c6639a471001303c"
+   },
+   "Rho5.Shared.BFibreGlobalEndpoint.GlobalMax": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BFibreGlobalEndpoint/GlobalMax.olean",
+    "olean_sha256": "790f085629655270d9cbcc41cb0cb07cb888f13194fe3f2237258292158ba8c4",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BFibreGlobalEndpoint/GlobalMax.lean",
+    "source_sha256": "84fc5593e01114b82723d2e6a4b7f79d49ad3da001f779a822bdb767ddd32847"
+   },
+   "Rho5.Shared.BHeadSign": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BHeadSign.olean",
+    "olean_sha256": "105c99d155ece687b3ee52267d6e47e5800fe1939d8d744960cc308b226ff59b",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BHeadSign.lean",
+    "source_sha256": "5cb6d4670a15b9ee1834ade32b4c222e919dfaa7c23e265e923ce0016c3f34a6"
+   },
+   "Rho5.Shared.BHeadSign.Action": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BHeadSign/Action.olean",
+    "olean_sha256": "697debb9061f4fa531ea3973eda7f45dfbed989ddb492039e8478402c478adc5",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BHeadSign/Action.lean",
+    "source_sha256": "c1b15a9afe0ec1a221e45f95d472988769b8a1ed4a5a414084ebbc4e3e5f3d2d"
+   },
+   "Rho5.Shared.BHeadSign.Matrix": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BHeadSign/Matrix.olean",
+    "olean_sha256": "9fed07ad5740012c98d8e6c8c8b8800dd717c4d4240d2a826640d5baf2f66f0c",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BHeadSign/Matrix.lean",
+    "source_sha256": "ff5906e448492aa0acf920da2781a000d690f8c09bc88356b00fcb0ef526004b"
+   },
+   "Rho5.Shared.BHeadSign.Representative": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BHeadSign/Representative.olean",
+    "olean_sha256": "71d2e538051d0277c5dab1c4b268712eb6e26b5574ac165ccbeca35c440731a8",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BHeadSign/Representative.lean",
+    "source_sha256": "693ee93d26fdc46bd600c597275ab04146d14e896d69b9eacef7bf508d6d11f4"
+   },
+   "Rho5.Shared.BHeadSign.Signs": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BHeadSign/Signs.olean",
+    "olean_sha256": "67b23d7806c7369e318265d9ba4319e358713d7f394ec560b85e7e1c1c704942",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BHeadSign/Signs.lean",
+    "source_sha256": "f6ad570ca0a6483a9f4e0738802b537750d47f0a28d1e6efbd62584eea230417"
+   },
+   "Rho5.Shared.BNormalizationInterface.Bridge": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BNormalizationInterface/Bridge.olean",
+    "olean_sha256": "0a78262cb53b59178ca44182fbd7f095450cb9204e4b1c772e99ddbcab1017d3",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BNormalizationInterface/Bridge.lean",
+    "source_sha256": "749286a5346bc3efa080d0585b5a4c8d97fc7c3c358af47a547aef523fe8b0a8"
+   },
+   "Rho5.Shared.BNormalizationInterface.Defs": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BNormalizationInterface/Defs.olean",
+    "olean_sha256": "c224c2b2b709946be445c1a9839a082fd714bdecffcc690e8a3e2fc29e0d6221",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BNormalizationInterface/Defs.lean",
+    "source_sha256": "de2303db1392b0c638d6f21676e47e87589484409abb54fb2d0255766e131279"
+   },
+   "Rho5.Shared.BNormalizationInterface.HeadBound": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BNormalizationInterface/HeadBound.olean",
+    "olean_sha256": "f9f4b8cc4e6ccdb191069ecd210f0597ac2ae12555d6ca73561747d17c99e562",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BNormalizationInterface/HeadBound.lean",
+    "source_sha256": "a8bce0fb6cec6070716bd135f339eff4ad8da1cd83d2e0ecdb9c2faf8a0cb227"
+   },
+   "Rho5.Shared.BRootCapacityEndpoint.Basic": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BRootCapacityEndpoint/Basic.olean",
+    "olean_sha256": "919a593ecd6041acbfe844f46fa23771e91051afb0f307cc42151e4a9d22d3c6",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BRootCapacityEndpoint/Basic.lean",
+    "source_sha256": "9f65c7de75f7d5e6ce1b05beff9c006b6a1fbe8d83b9e5abbfd4b84302e3f70a"
+   },
+   "Rho5.Shared.BRootCapacityEndpoint.Refutation": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BRootCapacityEndpoint/Refutation.olean",
+    "olean_sha256": "1b7886c3007b6f68c7e4ee59c82823712a026c52d295e5d8846dd7a21f2c8fe3",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BRootCapacityEndpoint/Refutation.lean",
+    "source_sha256": "d3c94029090e6466c1e875258d21ab3c79fd9a54390d5ead5139e7acf6f34761"
+   },
+   "Rho5.Shared.PaperB17RootEntry.Bounds": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17RootEntry/Bounds.olean",
+    "olean_sha256": "abf978df1e24f65b0fc3404e3ef5a426b1a33f6abdbfb1c343457bec9000109c",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17RootEntry/Bounds.lean",
+    "source_sha256": "4a10e38e1d5888097ba1af678133cf705b2399e138956d7fb82418841a84f5df"
+   },
+   "Rho5.Shared.PaperB17RootEntry.Defs": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17RootEntry/Defs.olean",
+    "olean_sha256": "d6a530cd6a1609e3280690c4dfe3799a148607368a39d1709a06c7e5787a7c36",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17RootEntry/Defs.lean",
+    "source_sha256": "3c2987298da5b28f487d9bec3c5468d0145f3853db55b1de3dbfbdaab1dec8a7"
+   },
+   "Rho5.Shared.PaperB17RootEntry.Entry": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17RootEntry/Entry.olean",
+    "olean_sha256": "92dad979c9a06ea8319179900df11f690391566ebaa04dcf46488fbec94abae6",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17RootEntry/Entry.lean",
+    "source_sha256": "501f1a47f39df9e7c6576dc68a741a008babcb6d4c226ee11ad0b6e9ac373584"
+   },
+   "Rho5.Shared.PaperB17Signs": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17Signs.olean",
+    "olean_sha256": "257ef8080c8a731d1641637032920a72f0080295f68d0dd214cbac68150b2791",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17Signs.lean",
+    "source_sha256": "8445a2153400d3e4bdd2fea949e69e1fca0dee19773f5c76445eaeee47693156"
+   },
+   "Rho5.Shared.PaperB17Signs.Action": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17Signs/Action.olean",
+    "olean_sha256": "615c7fb1df5b4b5bd663c2323d95b4d15d15039b527e56e4a2e7502866ea063f",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17Signs/Action.lean",
+    "source_sha256": "6b0860253ed9798fb835928e71679a3d54b78d95691be81072ca39a96834f047"
+   },
+   "Rho5.Shared.PaperB17Signs.Matrix": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17Signs/Matrix.olean",
+    "olean_sha256": "ee7e5d5e9da80bf48b373f7acc931914a7f3ea13e2de23e4063b3357378b73df",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17Signs/Matrix.lean",
+    "source_sha256": "ff88f130d5ab8968af7a363bb342b7640d14a82093223e27dde0d35da1be6c7c"
+   },
+   "Rho5.Shared.PaperB17Signs.Representative": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17Signs/Representative.olean",
+    "olean_sha256": "f294d8c567a4c29e2678bbff4e7c8ffe49fd6e09eb601ade4802ed3eef074990",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17Signs/Representative.lean",
+    "source_sha256": "f44cf7bceb575c83d37b576c13a0beda9d5a2718b8f5394ae43238073d7e34b2"
+   },
+   "Rho5.Shared.PaperB17Signs.Signs": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17Signs/Signs.olean",
+    "olean_sha256": "b247fbacbf0d0c45f36e47af340006f4f2b6dbdeb39c7d16ca87d17ac1ce03e0",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17Signs/Signs.lean",
+    "source_sha256": "41ee0a7d5ca65a29d05b21271ed46e93f3ed72de91aaa221215b3527ae98ecb1"
+   }
+  },
+  "closure": 40,
+  "missing_oleans": []
+ },
+ "Rho5.PhaseOne.ExamplesAudit": {
+  "binding": {
+   "Rho5.ExternalBFibreCapacity": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity.olean",
+    "olean_sha256": "a292589aaac4e3c8b01b2a1e5b2d8b479af4f2e68d37d24273f2e65cdcea6af8",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity.lean",
+    "source_sha256": "6fd5f93bc61bf45164ccf15bb8b61112d834f3d6aba3d5c30718005fd9653d8a"
+   },
+   "Rho5.ExternalBFibreCapacity.Attainment": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Attainment.olean",
+    "olean_sha256": "261166cd452b4cc51ccbdc8f56b4720a6facfb56055f4030e1decf1230448e32",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Attainment.lean",
+    "source_sha256": "5c71803deb9067a52080272433acaeaa8d0e227bc37096a0b13a444b5418eb09"
+   },
+   "Rho5.ExternalBFibreCapacity.Beta": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Beta.olean",
+    "olean_sha256": "eb31523ac657fc5a2493d680a48f77ffd7b2dcf22f46791f5ce14d7c8d321115",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Beta.lean",
+    "source_sha256": "89be0e6ba7359df44b96933f2fda15de22a57bbfe887dd54ee3fa5c928412402"
+   },
+   "Rho5.ExternalBFibreCapacity.CapacityCount": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/CapacityCount.olean",
+    "olean_sha256": "cc4a99d57d0c1ec4d44fd1d9c2dabab2d466209c2d0b300b067bcd9df7df1786",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/CapacityCount.lean",
+    "source_sha256": "5afdd559bd0d30d7499733472a28d724cd230f75991b75aba1433f57eac2d5c9"
+   },
+   "Rho5.ExternalBFibreCapacity.FiniteBounds": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/FiniteBounds.olean",
+    "olean_sha256": "78190e5fd4b4e4c642be6c19ff2e3d8293eaf037cb0fd28d03af4e4c9394bb12",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/FiniteBounds.lean",
+    "source_sha256": "16efff267512872cf33d612beb0e61d0feacd2fca3301c68350113f635d4b028"
+   },
+   "Rho5.ExternalBFibreCapacity.Maximum": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Maximum.olean",
+    "olean_sha256": "79509369921a5e9e8cced511eda2b15315548a76fde1a92a60878e4bc056dc14",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Maximum.lean",
+    "source_sha256": "106881450262a25182e195775adde39e1ea343db65b352e13f36fa0b308bd92f"
+   },
+   "Rho5.ExternalBFibreCapacity.Model": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Model.olean",
+    "olean_sha256": "389d357468392ff889cb2258aaf95b0c5b66a64aee9432dced72003c82d65fff",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Model.lean",
+    "source_sha256": "feb3effa21a52fdb08827b2ccd80159a319df1fcc296ab3b0da004a9c46e8b41"
+   },
+   "Rho5.ExternalBFibreCapacity.Nonempty": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Nonempty.olean",
+    "olean_sha256": "6e4a4d46ab9cf9ac7eb1ce400fd1a615dcfa7319836cf438846a3bf7b4b0c8f9",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Nonempty.lean",
+    "source_sha256": "f3cbb77fd9af922c575f06a53ec4cebbbfb98588debd548ff7474dc75d343dd1"
+   },
+   "Rho5.ExternalBFibreCapacity.Paths": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Paths.olean",
+    "olean_sha256": "5c9ce5af3dfd94b9464d93e95f06e831c2b1bc1d8ea2a4bd9fdd9343d899fab4",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Paths.lean",
+    "source_sha256": "475ad696bcac4edc5d0984f665011cf8675faccb199dcd317b8210b2cb68c5f5"
+   },
+   "Rho5.ExternalBFibreCapacity.Prefix": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/Prefix.olean",
+    "olean_sha256": "4f7a723b78f7b0a25b464c8fc9d99b2e683a4c7848e55c10110fc0640dc911e9",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/Prefix.lean",
+    "source_sha256": "1ea1f26f969e3d08b8de14035117dfb1314d7b362c5248a5ef6d0f525d00041a"
+   },
+   "Rho5.ExternalBFibreCapacity.PrefixPaths": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/PrefixPaths.olean",
+    "olean_sha256": "18d5df9a96de03e2e96fb787e99506b5d8790fe49b22a62ade7db6ae2f2656a7",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/PrefixPaths.lean",
+    "source_sha256": "377ca5ba2de4ce74b60dea58cafbccade8695c3d1af44ff7eaf593ebebd05b7f"
+   },
+   "Rho5.ExternalBFibreCapacity.RowCapacity": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/RowCapacity.olean",
+    "olean_sha256": "ffc6180275b8eaa8285a6f71258c183e5ed2968f7c0fef4adfaed993d64aa619",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/RowCapacity.lean",
+    "source_sha256": "9818a42f06689d7ddf1d76351f470c1d06bb5bfd410a208f1e7f56ff9d7ec914"
+   },
+   "Rho5.ExternalBFibreCapacity.TailIntervals": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/ExternalBFibreCapacity/TailIntervals.olean",
+    "olean_sha256": "6dd0a29f3e760b8d2465670807ee052086c1ed199d2531c78b1def66a80599f6",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/ExternalBFibreCapacity/TailIntervals.lean",
+    "source_sha256": "1f9235cf4bd56cdde9fb431b5d6bd0a1bb242fc64ad698852065a808b17a1d37"
+   },
+   "Rho5.Integration.StagedAssembly.Baseline": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Integration/StagedAssembly/Baseline.olean",
+    "olean_sha256": "a44816be7fc9255e257d5d9b6f63f24b64891b9070a7508b8ac85ca863602d6f",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Integration/StagedAssembly/Baseline.lean",
+    "source_sha256": "66e5c18220d5783822d1dd5dc80013f6559f9f53482d981767215239cf04fa9e"
+   },
+   "Rho5.Integration.StagedAssembly.Conditional": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Integration/StagedAssembly/Conditional.olean",
+    "olean_sha256": "631cd2f1a85955753a4299f1e3d01382d6f55ca532916d8aef63651eac6332d2",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Integration/StagedAssembly/Conditional.lean",
+    "source_sha256": "836b304cc5e6187ffc4edd93b7fc930a082df4493957c2d8ed5b9e5382e5dec8"
+   },
+   "Rho5.Integration.StagedAssembly.RootReduction": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Integration/StagedAssembly/RootReduction.olean",
+    "olean_sha256": "84da9b8da7de12a91a33f742988265b373beef764b2e551428b551d7d0d3595f",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Integration/StagedAssembly/RootReduction.lean",
+    "source_sha256": "d52b3613a86483e92ddfb6872306e9c5a65c64f9816051ab4e62f87a16b0c560"
+   },
+   "Rho5.PhaseOne.Examples": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/PhaseOne/Examples.olean",
+    "olean_sha256": "2e9619f76eca553facb84adf075bab93a9dac6eb23fb8727e0a7c9475a66b654",
+    "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/src/Rho5/PhaseOne/Examples.lean",
+    "source_sha256": "e4dde61d14ca7caf9cbd0dd7490c40f56bd8a39f813a1fedebd9832e6a4d7a23"
+   },
+   "Rho5.PhaseOne.ExamplesAudit": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/PhaseOne/ExamplesAudit.olean",
+    "olean_sha256": "74280f632cdfc69b66e58e27f24b3aa033fd6733ef48e625262ce4fc98700b2b",
+    "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/src/Rho5/PhaseOne/ExamplesAudit.lean",
+    "source_sha256": "934d0f56bfd322bc60ddd2815b2377b549a4d318dc75f52f354d2e3e4720cc8b"
+   },
+   "Rho5.Shared.ActualBRootEntry.Assembly": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/ActualBRootEntry/Assembly.olean",
+    "olean_sha256": "885aa8e6219a82c50805a0db6e628ca969719465363ae2727eb6f237bc0e8038",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/ActualBRootEntry/Assembly.lean",
+    "source_sha256": "dbd422fe1091ba1c623350ecb91f5b546691523f394b4ef6b0c598e8b810c9aa"
+   },
+   "Rho5.Shared.ActualBRootEntry.Basic": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/ActualBRootEntry/Basic.olean",
+    "olean_sha256": "852d275c5382bd6ac112ed1ae5dd05a71085ff70f3feba15fa526f6ab7e0d9b3",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/ActualBRootEntry/Basic.lean",
+    "source_sha256": "9a2668e2ef77df11ccbf35b7cbf7cbba8c0356fe8d9f8dbb8e16f945294512d7"
+   },
+   "Rho5.Shared.BFibreGlobalEndpoint": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BFibreGlobalEndpoint.olean",
+    "olean_sha256": "ff619b595341a811285773cefb00e80c491930c2d474fe6b45f843fba2e5fee4",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BFibreGlobalEndpoint.lean",
+    "source_sha256": "14a54ba7c97671642a0f996079a73490c456027f503b30629b1ce091068a8c18"
+   },
+   "Rho5.Shared.BFibreGlobalEndpoint.Basic": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BFibreGlobalEndpoint/Basic.olean",
+    "olean_sha256": "5f3545c2969a60fc37c3bbdb33fba793b075e3e26358679cf003a225ebcea502",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BFibreGlobalEndpoint/Basic.lean",
+    "source_sha256": "c7955d439738b3b0561f03974e677cba4eb99016d3749b73c6639a471001303c"
+   },
+   "Rho5.Shared.BFibreGlobalEndpoint.GlobalMax": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BFibreGlobalEndpoint/GlobalMax.olean",
+    "olean_sha256": "790f085629655270d9cbcc41cb0cb07cb888f13194fe3f2237258292158ba8c4",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BFibreGlobalEndpoint/GlobalMax.lean",
+    "source_sha256": "84fc5593e01114b82723d2e6a4b7f79d49ad3da001f779a822bdb767ddd32847"
+   },
+   "Rho5.Shared.BHeadSign": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BHeadSign.olean",
+    "olean_sha256": "105c99d155ece687b3ee52267d6e47e5800fe1939d8d744960cc308b226ff59b",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BHeadSign.lean",
+    "source_sha256": "5cb6d4670a15b9ee1834ade32b4c222e919dfaa7c23e265e923ce0016c3f34a6"
+   },
+   "Rho5.Shared.BHeadSign.Action": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BHeadSign/Action.olean",
+    "olean_sha256": "697debb9061f4fa531ea3973eda7f45dfbed989ddb492039e8478402c478adc5",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BHeadSign/Action.lean",
+    "source_sha256": "c1b15a9afe0ec1a221e45f95d472988769b8a1ed4a5a414084ebbc4e3e5f3d2d"
+   },
+   "Rho5.Shared.BHeadSign.Matrix": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BHeadSign/Matrix.olean",
+    "olean_sha256": "9fed07ad5740012c98d8e6c8c8b8800dd717c4d4240d2a826640d5baf2f66f0c",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BHeadSign/Matrix.lean",
+    "source_sha256": "ff5906e448492aa0acf920da2781a000d690f8c09bc88356b00fcb0ef526004b"
+   },
+   "Rho5.Shared.BHeadSign.Representative": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BHeadSign/Representative.olean",
+    "olean_sha256": "71d2e538051d0277c5dab1c4b268712eb6e26b5574ac165ccbeca35c440731a8",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BHeadSign/Representative.lean",
+    "source_sha256": "693ee93d26fdc46bd600c597275ab04146d14e896d69b9eacef7bf508d6d11f4"
+   },
+   "Rho5.Shared.BHeadSign.Signs": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BHeadSign/Signs.olean",
+    "olean_sha256": "67b23d7806c7369e318265d9ba4319e358713d7f394ec560b85e7e1c1c704942",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BHeadSign/Signs.lean",
+    "source_sha256": "f6ad570ca0a6483a9f4e0738802b537750d47f0a28d1e6efbd62584eea230417"
+   },
+   "Rho5.Shared.BNormalizationInterface.Bridge": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BNormalizationInterface/Bridge.olean",
+    "olean_sha256": "0a78262cb53b59178ca44182fbd7f095450cb9204e4b1c772e99ddbcab1017d3",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BNormalizationInterface/Bridge.lean",
+    "source_sha256": "749286a5346bc3efa080d0585b5a4c8d97fc7c3c358af47a547aef523fe8b0a8"
+   },
+   "Rho5.Shared.BNormalizationInterface.Defs": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BNormalizationInterface/Defs.olean",
+    "olean_sha256": "c224c2b2b709946be445c1a9839a082fd714bdecffcc690e8a3e2fc29e0d6221",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BNormalizationInterface/Defs.lean",
+    "source_sha256": "de2303db1392b0c638d6f21676e47e87589484409abb54fb2d0255766e131279"
+   },
+   "Rho5.Shared.BNormalizationInterface.HeadBound": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BNormalizationInterface/HeadBound.olean",
+    "olean_sha256": "f9f4b8cc4e6ccdb191069ecd210f0597ac2ae12555d6ca73561747d17c99e562",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BNormalizationInterface/HeadBound.lean",
+    "source_sha256": "a8bce0fb6cec6070716bd135f339eff4ad8da1cd83d2e0ecdb9c2faf8a0cb227"
+   },
+   "Rho5.Shared.BRootCapacityEndpoint.Basic": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BRootCapacityEndpoint/Basic.olean",
+    "olean_sha256": "919a593ecd6041acbfe844f46fa23771e91051afb0f307cc42151e4a9d22d3c6",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BRootCapacityEndpoint/Basic.lean",
+    "source_sha256": "9f65c7de75f7d5e6ce1b05beff9c006b6a1fbe8d83b9e5abbfd4b84302e3f70a"
+   },
+   "Rho5.Shared.BRootCapacityEndpoint.Refutation": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/BRootCapacityEndpoint/Refutation.olean",
+    "olean_sha256": "1b7886c3007b6f68c7e4ee59c82823712a026c52d295e5d8846dd7a21f2c8fe3",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/BRootCapacityEndpoint/Refutation.lean",
+    "source_sha256": "d3c94029090e6466c1e875258d21ab3c79fd9a54390d5ead5139e7acf6f34761"
+   },
+   "Rho5.Shared.PaperB17RootEntry.Bounds": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17RootEntry/Bounds.olean",
+    "olean_sha256": "abf978df1e24f65b0fc3404e3ef5a426b1a33f6abdbfb1c343457bec9000109c",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17RootEntry/Bounds.lean",
+    "source_sha256": "4a10e38e1d5888097ba1af678133cf705b2399e138956d7fb82418841a84f5df"
+   },
+   "Rho5.Shared.PaperB17RootEntry.Defs": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17RootEntry/Defs.olean",
+    "olean_sha256": "d6a530cd6a1609e3280690c4dfe3799a148607368a39d1709a06c7e5787a7c36",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17RootEntry/Defs.lean",
+    "source_sha256": "3c2987298da5b28f487d9bec3c5468d0145f3853db55b1de3dbfbdaab1dec8a7"
+   },
+   "Rho5.Shared.PaperB17RootEntry.Entry": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17RootEntry/Entry.olean",
+    "olean_sha256": "92dad979c9a06ea8319179900df11f690391566ebaa04dcf46488fbec94abae6",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17RootEntry/Entry.lean",
+    "source_sha256": "501f1a47f39df9e7c6576dc68a741a008babcb6d4c226ee11ad0b6e9ac373584"
+   },
+   "Rho5.Shared.PaperB17Signs": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17Signs.olean",
+    "olean_sha256": "257ef8080c8a731d1641637032920a72f0080295f68d0dd214cbac68150b2791",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17Signs.lean",
+    "source_sha256": "8445a2153400d3e4bdd2fea949e69e1fca0dee19773f5c76445eaeee47693156"
+   },
+   "Rho5.Shared.PaperB17Signs.Action": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17Signs/Action.olean",
+    "olean_sha256": "615c7fb1df5b4b5bd663c2323d95b4d15d15039b527e56e4a2e7502866ea063f",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17Signs/Action.lean",
+    "source_sha256": "6b0860253ed9798fb835928e71679a3d54b78d95691be81072ca39a96834f047"
+   },
+   "Rho5.Shared.PaperB17Signs.Matrix": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17Signs/Matrix.olean",
+    "olean_sha256": "ee7e5d5e9da80bf48b373f7acc931914a7f3ea13e2de23e4063b3357378b73df",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17Signs/Matrix.lean",
+    "source_sha256": "ff88f130d5ab8968af7a363bb342b7640d14a82093223e27dde0d35da1be6c7c"
+   },
+   "Rho5.Shared.PaperB17Signs.Representative": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17Signs/Representative.olean",
+    "olean_sha256": "f294d8c567a4c29e2678bbff4e7c8ffe49fd6e09eb601ade4802ed3eef074990",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17Signs/Representative.lean",
+    "source_sha256": "f44cf7bceb575c83d37b576c13a0beda9d5a2718b8f5394ae43238073d7e34b2"
+   },
+   "Rho5.Shared.PaperB17Signs.Signs": {
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean/Rho5/Shared/PaperB17Signs/Signs.olean",
+    "olean_sha256": "b247fbacbf0d0c45f36e47af340006f4f2b6dbdeb39c7d16ca87d17ac1ce03e0",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Shared/PaperB17Signs/Signs.lean",
+    "source_sha256": "41ee0a7d5ca65a29d05b21271ed46e93f3ed72de91aaa221215b3527ae98ecb1"
+   }
+  },
+  "closure": 41,
+  "missing_oleans": []
+ }
+}

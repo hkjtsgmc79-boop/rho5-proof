@@ -1,0 +1,50 @@
+{
+  "status": "ACCEPTED_DECLARED_SCOPE",
+  "time": "2026-09-12T07:32:34.333325+08:00",
+  "scope": "Actual explicit candidate LegalTrace attainment at actual AlphaRoot.alpha, alpha in GrowthValues and alpha <= rho5Trace, with no RootSpec/CP/extra result hypotheses. All original candidate entry-bound responsibilities retained. No sharp global upper/equality.",
+  "sources_sha256": {
+    "src/Rho5/ExternalAttainment/Interval.lean": "37ba1a1f49d1adf1c77174b89dd7352e325012c6e46480e393b0465336d1b7fb",
+    "src/Rho5/ExternalAttainment/Formulas.lean": "b54869ac8da466a8c1c3e8f8b1f4ab4a538cf161e524952ec2dcfcc44d54a247",
+    "src/Rho5/ExternalAttainment/Box.lean": "4165c613fdf9700830ae6e3ce0f7058f1d6a8207f5fbe1686be7a55e0e2d01a0",
+    "src/Rho5/ExternalAttainment/IntervalData.lean": "2ad680e9e7148a6cee3385f47a5d5d0f190d78eaa3fe5bc9b05eb017ad19c1b8",
+    "src/Rho5/ExternalAttainment/Denominators.lean": "c8dd23ccbb5ceac1593d3022909ab3799e4466958e86c0d80cb0549c5b26ae5e",
+    "src/Rho5/ExternalAttainment/SchurAux.lean": "d9c40b7f1b96368a74844fcdfeda6806b54bb6ed079c6069cd49d56f13c194d1",
+    "src/Rho5/ExternalAttainment/SchurIdentities.lean": "df942c1dc6f0e2d9ddac57f79f536618587129bdbaf8f0db3307d8ffd494df43",
+    "src/Rho5/ExternalAttainment/TailEquations.lean": "bbb776742a1acf25af055ec35dde98ebb38be5fa2b940d9a325661e4f41419c5",
+    "src/Rho5/ExternalAttainment/EntryBounds.lean": "3400a8de28d2108bc97367811cb709da66cfa9006ba9502b34f1998ea2ef9d51",
+    "src/Rho5/ExternalAttainment/LegalTrace.lean": "390d77357fc74665904963a7f6ce3df9dc603c64010378eff4cbe16f230048b4",
+    "src/Rho5/ExternalAttainment/Attainment.lean": "d641664c8371668d5e584285e4f43e7cf7ac2b2c57e6befd648d2337ee1b5b9e",
+    "src/Rho5/ExternalAttainment.lean": "c98091fc5583323aba247f06c8b6c5a5b88f8f58cb3af9a50b5b97663e908296",
+    "src/Rho5/ExternalAttainment/Audit.lean": "b762d18d7a883f91bae50c7148629d82dccb1c785d51479e524ab5de3267ea7a",
+    "src/Rho5/ExternalAttainment/ActualAlpha.lean": "e42b4c437c8566e9d13570611b8547671ac941a26f5d9ddd2cd2879c0552993a",
+    "src/Rho5/ExternalAttainment/AuditActualAlpha.lean": "e7b2c2c73a79a940a3927e7aef0122e27934436b63595669759058cfc1216bda"
+  },
+  "success_logs_sha256": {},
+  "actual_axiom_records": 9,
+  "axiom_names": [
+    "Rho5.ExternalAttainment.numerics_of_candidateBox",
+    "Rho5.ExternalAttainment.candidate_attainment",
+    "Rho5.ExternalAttainment.candidate_mem_GrowthValues",
+    "Rho5.ExternalAttainment.candidate_mem_GrowthValues_of_critical",
+    "Rho5.ExternalAttainment.actualAlpha_attainment",
+    "Rho5.ExternalAttainment.actualAlpha_mem_GrowthValues",
+    "Rho5.ExternalAttainment.actualAlpha_mem_NormalizedGrowthValues",
+    "Rho5.ExternalAttainment.actualAlpha_le_rho5Trace",
+    "Rho5.ExternalAttainment.exists_actualAlpha_attainment"
+  ],
+  "ready_sha256": {
+    "results/ATTAINMENT_READY.json": "a3c23fe3c9e825240f5024fff59057305b76552969e10196d14254a1be777b93",
+    "results/ACTUAL_ALPHA_READY.json": "b6479e0405638d7040e56310625fcc0c76f67f9df92d9a8a0ca73504ac9714a5"
+  },
+  "build_evidence": {
+    "module_count": 15,
+    "current_X_source_and_olean_bindings": 15,
+    "success_basis": "Owner structured per-module exit records + X success-only persisted runner bindings, exact current source/olean identities; clean stdout may be empty. Runner persists binding only for real exit_code=0. No recompile by coordinator."
+  },
+  "notes": [
+    "BUILD_STATUS.artifacts contains stale report/log aliases (including absent audit_Attainment.log); intake uses actual module audit logs from X and current structured source bindings instead. Original metadata preserved; no proof rebuild needed.",
+    "D89 polynomial identities are independent support; D82 unchanged TailEquations compiled without consuming D89. Do not force redundant rebuild to use them."
+  ],
+  "root_lean_runs": 0,
+  "review": "Reused owner self-review and external math checks. Current hashes, successful evidence, actual axiom outputs and exact interface scope checked; no duplicate full mathematical audit."
+}

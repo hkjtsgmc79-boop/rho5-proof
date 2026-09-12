@@ -1,0 +1,306 @@
+{
+  "status": "PASS",
+  "targets_checked": 33,
+  "records": [
+    {
+      "canonical_target": "Rho5.Integration.StagedAssembly.baseline",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Integration.StagedAssembly.exists_global_max_X_or_root_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Integration.StagedAssembly.exists_X_or_root_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Integration.StagedAssembly.XGlobalSafety",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Integration.StagedAssembly.rho5Trace_eq_alpha_of_safety",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Integration.StagedAssembly.legal_growth_le_alpha_of_safety",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Integration.StagedAssembly.fifth_readout_le_alpha_of_safety",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Integration.StagedAssembly.legal_growth_le_alpha_via_fifth_of_safety",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Integration.StagedAssembly.high_path_fifth_of_safety",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Integration.StagedAssembly.det_endpoint_of_safety",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Shared.BRootCapacityEndpoint.IsRootCapacityEndpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Algebraic.AlphaRoot.exists_root_in_exact_interval",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Algebraic.AlphaRoot.alpha_in_exact_interval",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Algebraic.AlphaRoot.alpha_is_root",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Algebraic.AlphaRoot.exists_unique_root",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Algebraic.AlphaRoot.root_unique",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Algebraic.AlphaRoot.alpha_gt_four",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.Algebraic.AlphaRoot.alpha_lt_five",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalAttainment.actualAlpha_attainment",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalAttainment.exists_actualAlpha_attainment",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalAttainment.actualAlpha_le_rho5Trace",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalFourthPivot.early_pivot_bounds_including_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalFourthPivot.growth_above_four_is_fifth",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalFourthPivot.growth_le_of_fifth_readout_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalV43Existence.exists_actual_trajectory_on_time_neighborhood",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalV43Existence.exists_actual_trajectory",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalV43Existence.exists_physical_trajectory",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalV43Existence.exists_resource_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalV43Existence.exists_exhaustion_at_own_resource",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalV43Existence.exists_guard_boundary_trajectory",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalV43Existence.exists_zero_time_actual_derivative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "canonical_target": "Rho5.ExternalV43Existence.height_le_of_actual_trip",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "public_aliases": [
+    "Rho5.PhaseOne.baseline",
+    "Rho5.PhaseOne.exists_global_max_X_or_root_endpoint",
+    "Rho5.PhaseOne.exists_X_or_root_endpoint",
+    "Rho5.PhaseOne.XGlobalSafety",
+    "Rho5.PhaseOne.rho5Trace_eq_alpha_of_safety",
+    "Rho5.PhaseOne.legal_growth_le_alpha_of_safety",
+    "Rho5.PhaseOne.fifth_readout_le_alpha_of_safety",
+    "Rho5.PhaseOne.legal_growth_le_alpha_via_fifth_of_safety",
+    "Rho5.PhaseOne.high_path_fifth_of_safety",
+    "Rho5.PhaseOne.det_endpoint_of_safety",
+    "Rho5.PhaseOne.IsRootCapacityEndpoint",
+    "Rho5.PhaseOne.RootEndpointSafety",
+    "Rho5.PhaseOne.exists_root_in_exact_interval",
+    "Rho5.PhaseOne.alpha_in_exact_interval",
+    "Rho5.PhaseOne.alpha_is_root",
+    "Rho5.PhaseOne.exists_unique_root",
+    "Rho5.PhaseOne.root_unique",
+    "Rho5.PhaseOne.alpha_gt_four",
+    "Rho5.PhaseOne.alpha_lt_five",
+    "Rho5.PhaseOne.actualAlpha_attainment",
+    "Rho5.PhaseOne.exists_actualAlpha_attainment",
+    "Rho5.PhaseOne.actualAlpha_le_rho5Trace",
+    "Rho5.PhaseOne.early_pivot_bounds_including_zero",
+    "Rho5.PhaseOne.growth_above_four_is_fifth",
+    "Rho5.PhaseOne.growth_le_of_fifth_readout_le",
+    "Rho5.PhaseOne.exists_actual_trajectory_on_time_neighborhood",
+    "Rho5.PhaseOne.exists_actual_trajectory",
+    "Rho5.PhaseOne.exists_physical_trajectory",
+    "Rho5.PhaseOne.exists_resource_endpoint",
+    "Rho5.PhaseOne.exists_exhaustion_at_own_resource",
+    "Rho5.PhaseOne.exists_guard_boundary_trajectory",
+    "Rho5.PhaseOne.exists_zero_time_actual_derivative",
+    "Rho5.PhaseOne.height_le_of_actual_trip"
+  ],
+  "note": "Lean export names resolve to the original declarations; no duplicate proof declarations are introduced."
+}

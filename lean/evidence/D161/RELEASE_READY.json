@@ -1,0 +1,148 @@
+{
+ "schema": "D161_PHASE1_RELEASE_READY_V1",
+ "receipt": "D161_RELEASE_READY",
+ "lane": "D161",
+ "card": "parallel/D161/TASK.md",
+ "stage": "第一阶段非大规模计算总装准备：实际使用示例与构建说明",
+ "status": "READY",
+ "ready": true,
+ "published_at": "2026-09-12T16:40:00+08:00",
+ "claim": "交付可编译的第一阶段使用示例与迁移/使用说明：`Rho5.PhaseOne.Examples`（仅 import 已验 C02 修订入口 `Rho5.Integration.StagedAssembly.Conditional`）给出 12 个真实可用 theorem/example —— 无条件可用的实际 α 根身份/区间、上确界语义、实际达到、`α ≤ rho5Trace ≤ 81/16`、`4 < rho5Trace`、原全局最大者存在；以及在**显式** `hX : XGlobalSafety` 与 `hB : RootEndpointSafety` 下的条件 sharp 等式 `rho5Trace = α`、原任意非零矩阵/合法路径的增长端点、第五读数端点与行列式端点。示例不含 axiom/sorry/admit/native_decide，且**不提供**任何无条件版本的 `rho5Trace = α`。",
+ "deliverables": {
+  "usage": "USAGE.md（哪些零参数可用、哪些需要全域安全证明、外部计算不自动成为 Lean 证明、常见误用）",
+  "building": "BUILDING.md（固定 Lean/mathlib/manifest pin、依赖获取、X 增量实测与尚未做的 fresh-machine 冷构建）",
+  "lean": [
+   "src/Rho5/PhaseOne/Examples.lean",
+   "src/Rho5/PhaseOne/ExamplesAudit.lean"
+  ],
+  "audit": "SELF_REVIEW.md",
+  "sums": "SHA256SUMS",
+  "logs": [
+   "logs_x/mod_Rho5_PhaseOne_Examples.log",
+   "logs_x/mod_Rho5_PhaseOne_ExamplesAudit.log"
+  ],
+  "binding": "results/GATE_BINDING.json"
+ },
+ "compile_evidence": {
+  "date": "2026-09-12T16:35+08:00",
+  "lean_path": [
+   "/root/microscope_ws/rho5_lean_dsh_20260911/D161/build/lib/lean",
+   "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build",
+   "/root/microscope_ws/rho5_lean_dsh_20260911/D141/cache/lean",
+   "/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/{batteries,Qq,aesop,proofwidgets,importGraph,LeanSearchClient,plausible}/.lake/build/lib/lean"
+  ],
+  "lane_root": "本卡 build/lib/lean 以**符号链接**（930 个）汇总 C02 修订根的项目 olean，未复制、未重编；这是本项目 Lean 构建的前缀解析要求（顶层前缀 `Rho5` 解析到第一个含该目录的搜索项，见 D151 REPORT.md 的实测记录）",
+  "modules": [
+   {
+    "name": "Rho5.PhaseOne.Examples",
+    "source_sha256": "e4dde61d14ca7caf9cbd0dd7490c40f56bd8a39f813a1fedebd9832e6a4d7a23",
+    "olean_sha256": "2e9619f76eca553facb84adf075bab93a9dac6eb23fb8727e0a7c9475a66b654",
+    "exit_code": 0,
+    "wall_seconds": 6.011,
+    "child_peak_rss_kib": 4261016,
+    "rss_guard_killed": false,
+    "log": "logs_x/mod_Rho5_PhaseOne_Examples.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "log_note": "空日志 = 零警告零错误（Lean 只在有输出时写日志）"
+   },
+   {
+    "name": "Rho5.PhaseOne.ExamplesAudit",
+    "source_sha256": "934d0f56bfd322bc60ddd2815b2377b549a4d318dc75f52f354d2e3e4720cc8b",
+    "olean_sha256": "74280f632cdfc69b66e58e27f24b3aa033fd6733ef48e625262ce4fc98700b2b",
+    "exit_code": 0,
+    "wall_seconds": 6.01,
+    "child_peak_rss_kib": 1741448,
+    "rss_guard_killed": false,
+    "log": "logs_x/mod_Rho5_PhaseOne_ExamplesAudit.log",
+    "log_sha256": "539bca6ff11caf12dd4d8d7aef64c8b5c206a464093928ebe75d8b3272e3e1f9"
+   }
+  ],
+  "guard": "nice 10、-j1 -M8192、RLIMIT_AS 12 GiB、RSS 8 GiB 看门狗（未触发）、每模块 preflight MemAvailable ≥ 16 GiB 且磁盘 ≥ 10 GiB；本 owner 同时仅一个 Lean",
+  "audit": {
+   "targets": 13,
+   "axiom_records": 12,
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "sorryAx_occurrences": 0,
+   "label": "ACTUAL_PASSES_FROM_REAL_LEAN_RUNS",
+   "note": "审计文件另列 3 条 C02 条件入口 `#check`，确认 `XGlobalSafety`/`RootEndpointSafety` 仍是显式前提"
+  }
+ },
+ "import_boundary": {
+  "entry_import": "Rho5.PhaseOne.Examples 只 import `Rho5.Integration.StagedAssembly.Conditional`（其自身经 RootReduction←Baseline 覆盖三层总装）",
+  "argument": "因此本卡入口的对象闭包 ⊆ C02 记录的 Conditional 闭包，未新增任何其它项目依赖",
+  "source_walk_check": "在可用 C02 源树上做有限源码游走：Examples 40 模块 / ExamplesAudit 41 模块，`missing_oleans` 全空（results/GATE_BINDING.json）",
+  "phase2_pattern_check": "复用 C02 记录的 495 源节点闭包（未重扫）：Tree/Checker/Census/Subtree/V31/Mainline/CertificateContraction/G01–G03/C10–C12/Sample 命中数 **0**；C02 记录实际加载 4788 个对象",
+  "not_imported": "本卡不导入任何具体树实例、后期检查器或计算样本目录"
+ },
+ "reused_evidence": {
+  "c02_root": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build（930 个 Rho5 olean；本卡只读符号链接，未重编）",
+  "c02_receipts": [
+   "outputs/relay_1345_delivery_20260912/C02/INTAKE_RECEIPT.json（ACCEPTED_SCOPED；三门前已接收）",
+   "outputs/relay_1345_delivery_20260912/C02/results/FULL_TARGET_TYPES.txt（被引用定理的完整公开类型）",
+   "outputs/relay_1345_delivery_20260912/C02/results/IMPORT_SOURCE_OLEAN_BINDING.json（495 源节点 / 4788 加载对象 / 锁文件与 mathlib pin）"
+  ],
+  "docs_reused": [
+   "outputs/phase1_noncomputational_assembly_20260912/ACCEPTED_CORE_MAP.md",
+   "outputs/phase1_noncomputational_assembly_20260912/PACKAGING_BOUNDARY.md"
+  ],
+  "consumed_oleans": {
+   "Rho5.Integration.StagedAssembly.Conditional": "631cd2f1a85955753a4299f1（sha256 前缀）",
+   "Rho5.Integration.StagedAssembly.Baseline": "a44816be7fc9255e257d5d9b",
+   "Rho5.Shared.BRootCapacityEndpoint.Basic": "919a593ecd6041acbfe844f4"
+  },
+  "this_card_new": "仅 USAGE.md、BUILDING.md、Examples.lean、ExamplesAudit.lean、RELEASE_READY.json、SELF_REVIEW.md、SHA256SUMS、GATE_BINDING.json 及两个编译日志；未重证数学、未重编 C02、未重跑任何计算证书"
+ },
+ "environment_pins": {
+  "lean": "Lean (version 4.30.0, x86_64-unknown-linux-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+  "mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "lake_manifest_sha256": "6fa600a652ca1ef77814e08127d1078febb38e3018ed9f8b1c5683b92427b789（本卡在 X 上独立复核，与 PACKAGING_BOUNDARY 记录一致）",
+  "fresh_machine_cold_build": "未做（见 BUILDING.md §5）",
+  "mac_compiled": false
+ },
+ "not_claimed": [
+  "无条件 `rho5Trace = α`（需要未付的 hX/hB）",
+  "XGlobalSafety / RootEndpointSafety 的任何证明或近似替代（axiom/Bool/有限样本/外部 PASS 均不算）",
+  "81/16 是 sharp α 上界",
+  "任何具体树/检查器/样本实例属于本阶段默认入口",
+  "fresh-machine 或 Mac 上的冷构建",
+  "本卡新增数学（示例只是既有定理的投影/调用）"
+ ],
+ "integrity": {
+  "frozen_inputs_modified": 0,
+  "c02_rebuilt": false,
+  "lake_build_run": false,
+  "deleted": 0,
+  "kills": 0,
+  "services": 0,
+  "new_agents": 0,
+  "network": false,
+  "shared_status_touched": false,
+  "other_lanes_touched": false,
+  "d160_files_touched": false,
+  "tmp_dir_used": false
+ },
+ "updated_at": "2026-09-12T16:40:00+08:00",
+ "delivery": {
+  "card_target": "outputs/phase1_noncomputational_assembly_20260912/D161/",
+  "status": "PENDING_COORDINATOR_COPY（本会话无权写 outputs/）",
+  "detail": "本会话文件沙箱为 workspace-write：对 outputs/phase1_noncomputational_assembly_20260912/D161/ 子目录的 mkdir 被拒绝（Operation not permitted）；按规则只重试一次并申请更宽权限，申请被拒绝，故不再尝试、也不绕行。且 AGENTS.md 既定规则为 outputs 归协调者。",
+  "workspace_copies": [
+   "parallel/D161/USAGE.md",
+   "parallel/D161/BUILDING.md",
+   "parallel/D161/RELEASE_READY.json",
+   "parallel/D161/SELF_REVIEW.md",
+   "parallel/D161/SHA256SUMS",
+   "parallel/D161/src/Rho5/PhaseOne/Examples.lean",
+   "parallel/D161/src/Rho5/PhaseOne/ExamplesAudit.lean",
+   "parallel/D161/results/GATE_BINDING.json",
+   "parallel/D161/logs_x/mod_Rho5_PhaseOne_Examples.log",
+   "parallel/D161/logs_x/mod_Rho5_PhaseOne_ExamplesAudit.log"
+  ],
+  "x_copies": "/root/microscope_ws/rho5_lean_dsh_20260911/D161/{src/Rho5/PhaseOne,results,logs,tools}",
+  "coordinator_action": "cp work/dsh-main/parallel/D161/{USAGE.md,BUILDING.md,RELEASE_READY.json,SELF_REVIEW.md,SHA256SUMS} outputs/phase1_noncomputational_assembly_20260912/D161/ 并复制 src/、logs_x/、results/ 三个子目录"
+ }
+}

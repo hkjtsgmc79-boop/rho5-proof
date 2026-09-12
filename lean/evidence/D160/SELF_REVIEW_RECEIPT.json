@@ -1,0 +1,462 @@
+{
+ "card": "D160",
+ "receipt": "SELF_REVIEW_RECEIPT",
+ "status": "WHOLE_CARD_PACKAGING_COMPLETE",
+ "issued": "2026-09-12T16:48:20+0800",
+ "deliverable_root": "work/dsh-main/parallel/D160/deliverable",
+ "transport": "协调者负责最终搬运；卡面输出位置已更正，本卡不再请求放宽权限、不再复制到 outputs/",
+ "superseded_copy_note": "早前一次经批准复制到 outputs/phase1_noncomputational_assembly_20260912/D160 的副本已被本次重标定取代；本卡不删除它。",
+ "verified_package": {
+  "lean_modules": 642,
+  "groups": {
+   "c02_conditional_closure": 495,
+   "nondefault_d84_lane_umbrella_audit": 4,
+   "p01_new_upstream_default": 138,
+   "nondefault_aggregate": 1,
+   "nondefault_audit": 4
+  },
+  "default_source_set_in_package": 633,
+  "default_total_with_product_module": 634,
+  "product_module": "Rho5.PhaseOne（总装 Codex 写，不在本包）",
+  "nondefault_modules": [
+   "Rho5.ExternalV43Existence",
+   "Rho5.ExternalV43Existence.Audit",
+   "Rho5.ExternalV43Existence.LayerAudit",
+   "Rho5.ExternalV43Existence.Smoke",
+   "Rho5.Integration.StagedAssembly",
+   "Rho5.Integration.StagedAssembly.Audit",
+   "Rho5.Integration.StagedAssembly.BaselineAudit",
+   "Rho5.Integration.StagedAssembly.ImportAudit",
+   "Rho5.Integration.StagedAssembly.RootReductionAudit"
+  ],
+  "nondefault_policy": "保留在包内但不属于默认来源集，也不进产品默认 import；协调者搬运/默认 roots 可只取 default_set=true 的 633 个模块。"
+ },
+ "p01_calibration": {
+  "source": "work/codex-parallel/P01/results/ACTUAL_NEW_UPSTREAM_MODULES.json",
+  "canonical_C02_count": 495,
+  "new_upstream_count": 138,
+  "missing_from_C02": 0,
+  "p01_thin_ready": {
+   "gate": "P01_THIN_PRODUCT_AND_PUBLIC_AUDIT_READY",
+   "loaded_Rho5": 634,
+   "default_module": "Rho5.PhaseOne",
+   "portable_source_package_ready": false
+  },
+  "check": "495 + 138 + 1 = 634 = P01 loaded_Rho5；本包提供其中的 633 个模块源（产品模块 Rho5.PhaseOne 由总装 Codex 提供）",
+  "p01_new_all_present_in_package": true
+ },
+ "verification": {
+  "verdict": "PASS",
+  "problems_count": 0,
+  "hashes_ok": true,
+  "sha256sums_ok": true,
+  "import_closure": {
+   "unresolved_rho5_imports": {},
+   "closed": true
+  },
+  "token_scan": {
+   "scanned": 642,
+   "raw_hits": {
+    "files_with_hits": 55,
+    "total_hits": 111
+   },
+   "raw_detail": [
+    {
+     "module": "Rho5.Shared.BorderedTailMinors",
+     "hits": 3
+    },
+    {
+     "module": "Rho5.Shared.PivotReindex.Reindex",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.MatrixNormalization",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.TraceDeterminant",
+     "hits": 1
+    },
+    {
+     "module": "Rho5.Shared.LeadingMinorFour",
+     "hits": 3
+    },
+    {
+     "module": "Rho5.Shared.MatrixStage",
+     "hits": 1
+    },
+    {
+     "module": "Rho5.Shared.GrowthModel",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.GrowthModel.TracePeak",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.GrowthModel.Scalar",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.GrowthModel.Unit",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.GrowthModel.NormalizeSet",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.LeadingTrace",
+     "hits": 1
+    },
+    {
+     "module": "Rho5.Shared.MinorThreeBound.Core",
+     "hits": 1
+    },
+    {
+     "module": "Rho5.Shared.MinorThreeBound.Vertex",
+     "hits": 1
+    },
+    {
+     "module": "Rho5.Shared.CanonicalTail.Defs",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.HighGrowthTail",
+     "hits": 3
+    },
+    {
+     "module": "Rho5.Shared.TraceGrowth",
+     "hits": 1
+    },
+    {
+     "module": "Rho5.Shared.PivotGrowth",
+     "hits": 1
+    },
+    {
+     "module": "Rho5.Shared.TailEnvelope",
+     "hits": 3
+    },
+    {
+     "module": "Rho5.Shared.LeadingSigns",
+     "hits": 1
+    },
+    {
+     "module": "Rho5.Shared.TraceSigns.Audit",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.CanonicalTail",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.CanonicalMaximizer",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.CanonicalMaximizer.GlobalMax",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.TraceAttainment",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.TraceAttainment.Graph",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.PaddedTrace",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.PaddedTrace.Basic",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.PivotSchurContinuity",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.PivotSchurContinuity.CPDomain",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.FirstPivotCompact.Domain",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.FirstPivotDomain.Domain",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.PivotSchurContinuity.Continuous",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.TraceAttainment.FiberCompact",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.TraceAttainment.PeakCompact",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.TraceAttainment.GrowthAttainment",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.FirstPivotCompact.Schur",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.FirstPivotCompact.Compact",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.FirstPivotDomain",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.FirstPivotDomain.PivotEntry",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.FirstPivotDomain.Reduce",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.FirstPivotDomain.SetEquality",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.CanonicalMaximizer.LeadingRepresentative",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.CanonicalMaximizer.CanonicalRepresentative",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.TailSignNormalization",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.TailSignNormalization.Signs",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.TailSignNormalization.Transport",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Algebraic.CriticalExistence.CenterBoundReady",
+     "hits": 3
+    },
+    {
+     "module": "Rho5.Shared.TraceTranspose",
+     "hits": 1
+    },
+    {
+     "module": "Rho5.Shared.LastPivotUpperReduction.Common",
+     "hits": 3
+    },
+    {
+     "module": "Rho5.Shared.LastPivotUpperReduction.StageA",
+     "hits": 3
+    },
+    {
+     "module": "Rho5.Shared.LastPivotUpperReduction.StageB",
+     "hits": 3
+    },
+    {
+     "module": "Rho5.Shared.TailBoundaryReduction.StageB",
+     "hits": 2
+    },
+    {
+     "module": "Rho5.Shared.LastPivotUpperReduction.StageC",
+     "hits": 3
+    },
+    {
+     "module": "Rho5.Shared.LastPivotUpperReduction.StageD",
+     "hits": 3
+    }
+   ],
+   "code_hits": [],
+   "note": "机械文本扫描（去注释后仍命中者列在 code_hits）；供复查，未重审上游数学，本卡未新增任何此类记号"
+  },
+  "self_reference": {
+   "logs/verify_run.log": "b1dae554b4710b2d42bd9ab2fa12c2aedd24005d1fd6dc22e5784500da65ad92",
+   "evidence/VERIFY.json": "e69fd4b0f216c96094be09f0627601a712ff0c37658e73db751a041fa0f0d6bb",
+   "note": "SHA256SUMS 不收录复核脚本自身输出（logs/verify_run.log、evidence/VERIFY.json），其当前哈希见本字段"
+  }
+ },
+ "evidence_classes": {
+  "reused": [
+   "C02 最终 binding 的 source/olean 配对与哈希",
+   "D84 receipt/BUILD_STATUS 的源与对象哈希",
+   "D39 source_conflict_resolution",
+   "C02 lake_manifest_sha256 / mathlib pin"
+  ],
+  "new_in_this_card": [
+   "495+142 源文件的复制后 sha256 重算",
+   "D84 增量 139 模块的候选一致性比对（D109 包 vs lean-pilot 哈希相同）",
+   "lake-manifest.json 与 binding 记录哈希比对",
+   "项目闭包重算（正则）与 D84 计数对照"
+  ],
+  "not_done": [
+   "未重编任何模块",
+   "未重跑证书/树",
+   "未调用 Lean",
+   "未升级锁文件",
+   "未验证 X 上 495 对象的逐字节哈希（直接复用 binding 记录）"
+  ]
+ },
+ "unresolved_conflicts": [
+  {
+   "module": "Rho5.ExternalV43Existence.Geometry",
+   "detail": "交付原件 ee6adfd98e91816e8bdeacd4d0a90413228c5d8940514c0a8dc93969eb4a43d9（含未用 import Mathlib.Analysis.Normed.Module.FiniteDimension）与实际编译源 8101afbc09439934a728d27c78f67b4fa3589477262b5f637d2933e3facf8d0e 不同；按 D84 receipt/BUILD_STATUS 的 src_sha256 选实际编译源。",
+   "decision": "use_compiled_src",
+   "evidence": "D84 INTAKE_RECEIPT.sources_sha256 + BUILD_STATUS.modules[].src_sha256"
+  },
+  {
+   "module": "Rho5.ExternalV43Existence.Regularity",
+   "detail": "交付原件 0e98651017… 与实际编译源 67a889a63aa56f7ce48f78b5980aaf6a45dfb970886ff1718dd7ffb450cb4bad 不同；同样选实际编译源。",
+   "decision": "use_compiled_src",
+   "evidence": "D84 INTAKE_RECEIPT.sources_sha256 + BUILD_STATUS.modules[].src_sha256"
+  }
+ ],
+ "fixed_environment": {
+  "lean-toolchain": {
+   "project_path": "project/lean-toolchain",
+   "sha256": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+  },
+  "lakefile.toml": {
+   "project_path": "project/lakefile.toml",
+   "sha256": "7e0c59794cf2053b0918374160b859e5d200f6943b3854df43c63fa69bb9fab8"
+  },
+  "lake-manifest.json": {
+   "project_path": "project/lake-manifest.json",
+   "sha256": "6fa600a652ca1ef77814e08127d1078febb38e3018ed9f8b1c5683b92427b789"
+  },
+  "manifest_matches_binding": true,
+  "binding_lake_manifest_sha256": "6fa600a652ca1ef77814e08127d1078febb38e3018ed9f8b1c5683b92427b789",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "lean_version": "Lean (version 4.30.0, x86_64-unknown-linux-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+  "upgrade_performed": false
+ },
+ "revisions_preserved": {
+  "d120_finitebounds": {
+   "module": "Rho5.ExternalBFibreCapacity.FiniteBounds",
+   "source": "work/dsh-main/parallel/D120/src/Rho5/ExternalBFibreCapacity/FiniteBounds.lean",
+   "source_sha256": "16efff267512872cf33d612beb0e61d0feacd2fca3301c68350113f635d4b028",
+   "verified_olean_sha256": "78190e5fd4b4e4c642be6c19ff2e3d8293eaf037cb0fd28d03af4e4c9394bb12",
+   "evidence": "C02 final binding（object root rebuild_01）"
+  },
+  "d39_jetbounds_13": {
+   "modules": [
+    "Rho5.Algebraic.CriticalExistence.JetBounds",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P061",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P060",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P059",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P058",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P057",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P056",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P055",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P054",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P053",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P052",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P051",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P050",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P049",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P048",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P047",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P046",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P045",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P044",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P043",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P042",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P041",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P040",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P039",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P038",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P037",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P036",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P035",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P034",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P033",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P032",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P031",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P030",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P029",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P028",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P027",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P026",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P025",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P024",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P023",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P022",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P021",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P020",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P019",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P018",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P017",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P016",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P015",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P014",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P013",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P012",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P011",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P010",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P009",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P008",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P007",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P006",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P005",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P004",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P003",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P002",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P001",
+    "Rho5.Algebraic.CriticalExistence.JetBounds.P000"
+   ],
+   "note": "P000–P011 与 P061；每项带 source_conflict_resolution.owner_olean 与 olean 哈希一致证据（D39 built）",
+   "evidence": "C02 final binding source_conflict_resolution + D39_SOURCE_PROVENANCE_CORRECTION.json"
+  }
+ },
+ "honest_limits": [
+  "未调用 Lean、未重编、未重跑证书或树；包内 olean_sha256 为 C02/D84 回执复用证据，非本次重算。",
+  "134 个共享增量模块仅有复制时哈希（上游回执覆盖 8 个 D84 源）；与 D109 owner 包一致处已比对。",
+  "两项同名冲突（Geometry/Regularity 交付原件 vs 实际编译源）按 D84 receipt/BUILD_STATUS 选实际编译源，原件哈希留档。",
+  "完成 XGlobalSafety 与原 D142 RootEndpointSafety 仍未付，本包不声称无条件 rho5Trace = alpha。"
+ ],
+ "boundaries": {
+  "product_entry_owner": "Rho5.PhaseOne 由总装 Codex 编写；本卡不创建该模块",
+  "default_import": "C02 Conditional（聚合与审计文件仅供复查，不进产品默认 import）",
+  "readme_coverage_owner": "D158/D159/D161",
+  "not_claimed": [
+   "完整 XGlobalSafety",
+   "原 D142 RootEndpointSafety",
+   "全树/海量证书重跑",
+   "Linux 对象已在 Mac 验证"
+  ]
+ },
+ "reproducible_tools": [
+  {
+   "path": "tools/d160_package.py",
+   "role": "归集 + 复制哈希核验"
+  },
+  {
+   "path": "tools/d160_recalibrate_p01.py",
+   "role": "按 P01 138 校准默认来源集"
+  },
+  {
+   "path": "tools/d160_verify.py",
+   "role": "独立复核（哈希/闭包/锁文件/记号扫描/SHA256SUMS）"
+  },
+  {
+   "path": "tools/d160_finalize.py",
+   "role": "最终 SHA256SUMS（排除自引用产物）"
+  }
+ ],
+ "tools_note": "脚本实体位于 work/dsh-main/parallel/D160/tools/（本卡工作区）；将其复制进本包 tools/ 需要再次放宽写权限（此前被拒），故未包含；搬运时可一并复制，不影响包内 SHA256SUMS 对现有条目的核验。"
+}

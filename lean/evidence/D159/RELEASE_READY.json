@@ -1,0 +1,71 @@
+{
+  "schema": "RHO5_D159_RELEASE_READY_V1",
+  "lane": "D159",
+  "card": "第一阶段：外部计算责任与来源覆盖交接表",
+  "status": "READY",
+  "scope": "external-computation obligation registry for the two top-level obligations (XGlobalSafety of C02 and the original D142 RootEndpointSafety); documentation only, no Lean invocation, no certificate replay, no tree scan",
+  "artifacts": [
+    {
+      "name": "EXTERNAL_COMPUTATION_OBLIGATIONS.md",
+      "sha256": "0a6ea69346364abf1fcc82469abcca1c25f4d599a34bc8be37bebd1e10e1edc9",
+      "content": "two obligations with verbatim Lean Props; 7 X-side rows + 9 B-side rows (16 total) with logical responsibility, Lean type/source condition, model/coverage, existing computation model/certificate/verifier/run-notes with path+hash provenance, what the receipt proves, what is still owed; four-way classification; frozen/optional registry; to-be-verified list; must-not-claim list"
+    },
+    {
+      "name": "OBLIGATIONS.json",
+      "sha256": "bfebfc8025a582b2edcabf1fe42378a3853c460c3f29fab5d44e1ab4667a0fba",
+      "content": "machine-readable form of the same 16 rows plus status legend, frozen items (6), to-be-verified items (5) and the must-not-claim list"
+    },
+    {
+      "name": "REPRODUCIBILITY_INDEX.md",
+      "sha256": "9ac8f7d69465a0137670d65fa6b40fbbd91ededdb7c057d017d546b713305151",
+      "content": "fixed toolchain, frozen runtime paths+hashes, computation model/data inputs, receipt provenance table, X object roots, availability of run instructions, and the explicit boundary of this pass"
+    },
+    {
+      "name": "SELF_REVIEW.md",
+      "sha256": "ebf0bc49da0d5b66f019b63f2b082f8c847c6260eddba0d1aa90b3be3c92dff7",
+      "content": "what was actually read/hashed this session vs reused; the discipline self-check; the exact sandbox denial for the delivery path; to-be-verified list; reuse vs new-verification split"
+    },
+    {
+      "name": "SHA256SUMS",
+      "sha256": "self-referential, computed over the other files only"
+    }
+  ],
+  "headline_findings": {
+    "hX_unpaid": true,
+    "hB_unpaid": true,
+    "unconditional_rho5Trace_eq_alpha": "NOT claimed",
+    "full_V31_closed": false,
+    "payload_replay_of_original_tree": "NOT_RECEIVED (IDENTITY.json: unreceived_original_tree_replayed_here false)",
+    "leaf_counts_or_local_PASS_used_as_global_proof": false,
+    "python_PASS_used_as_Lean_proof": false
+  },
+  "reused_evidence": "all cited Lean receipts, owner self-reviews and computation deliveries were reused read-only; none of their mathematics was re-reviewed",
+  "new_verification_this_pass": [
+    "sha256 of the seven frozen-runtime files (five .py, IDENTITY.json, the LIGHT zip)",
+    "source line locations of both obligation Props",
+    "verbatim comparison of the runtime wave/propagation order against the D153 Lean orders",
+    "the classification and cross-referencing in the three deliverables"
+  ],
+  "delivery_location": {
+    "requested_by_card": "outputs/phase1_noncomputational_assembly_20260912/D159/",
+    "actual": "work/dsh-main/parallel/D159/",
+    "reason": "the requested path is outside the session workspace; the workspace-write sandbox denied the write and the escalation request was rejected by the user, so no alternate execution path was used",
+    "action_needed": "coordinator/user moves or re-writes these files into the card's delivery directory"
+  },
+  "remaining_work_in_this_card": [],
+  "to_be_verified_handed_over": [
+    "original tree payload provenance",
+    "C11 oracle domain vs the full IsRootCapacityEndpoint domain",
+    "C09/M02 frontier-list coalescing receipt",
+    "Python-Lean parser/executable equivalence",
+    "C06 runtime strict and C13 receipts"
+  ],
+  "checked_at": "2026-09-12T16:40:00+0800",
+  "row_counts": {
+    "X_side": 7,
+    "B_side": 9,
+    "total": 16,
+    "frozen_or_optional": 6,
+    "to_be_verified": 5
+  }
+}

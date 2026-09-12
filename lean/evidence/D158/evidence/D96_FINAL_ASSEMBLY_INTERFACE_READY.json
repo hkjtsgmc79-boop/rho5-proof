@@ -1,0 +1,192 @@
+{
+  "schema": "D96_FINAL_ASSEMBLY_INTERFACE_READY_V1",
+  "lane": "D96",
+  "card": "parallel/D96/TASK.md",
+  "namespace": "Rho5.Shared.FinalEndpointAssembly",
+  "module_root": "Rho5/Shared/FinalEndpointAssembly",
+  "x_root": "/root/microscope_ws/rho5_lean_dsh_20260911/D96",
+  "evidence_status": "CONDITIONAL_ENDPOINT_INTERFACE",
+  "evidence_status_means": "装配定理本身已在 X 上真实编译并通过公理审计；但它依赖四条仍未支付的端点义务。本卡不声称 rho5Trace = alpha 已经成立，也不声称 FINAL_RHO_EQUALITY_DONE。",
+  "not_final_rho_equality_done": true,
+  "toolchain": {
+    "lean": "4.30.0",
+    "lean_commit": "d024af099ca4bf2c86f649261ebf59565dc8c622",
+    "mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+    "mathlib_observed_on_x": "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+  },
+  "goal_A": {
+    "theorem_global": "Rho5.Shared.FinalEndpointAssembly.rho5Trace_eq_alpha_iff_det_endpoint",
+    "type_global": "rho5Trace = AlphaRoot.alpha ↔ ∀ M : Matrix5, M 0 0 = 1 → PolyCP M → |M.det| ≤ AlphaRoot.alpha * C M",
+    "theorem_sorted": "Rho5.Shared.FinalEndpointAssembly.rho5Trace_eq_alpha_iff_sorted_det_endpoint",
+    "type_sorted": "rho5Trace = AlphaRoot.alpha ↔ ∀ M : Matrix5, M 0 0 = 1 → PolyCP M → 0 ≤ m4 M 0 1 → m4 M 0 1 ≤ m4 M 1 0 → BoundaryFace M → |M.det| ≤ AlphaRoot.alpha * C M",
+    "right_hand_side_is_explicit": "原矩阵 Matrix5、M 0 0 = 1、实际多项式域 PolyCP (D62)、原行列式 M.det、D67 的实际四阶边框子式 C M；没有 RootSpec、没有抽象未定义模型、没有抽象上确界参数",
+    "paid_by": [
+      "D90 Rho5.LastPivotUpperReduction.global_upper_alpha_iff_endpoint (已编)",
+      "D90 Rho5.LastPivotUpperReduction.global_upper_alpha_iff_endpoint_sorted (已编)",
+      "D82 Rho5.ExternalAttainment.actualAlpha_le_rho5Trace (已验收的实际达到性下界)",
+      "D09 Rho5.Algebraic.AlphaRoot.alpha_gt_four (4 < alpha)"
+    ]
+  },
+  "goal_B": {
+    "interface_structure": "Rho5.Shared.FinalEndpointAssembly.FourFaceEndpointBounds",
+    "fields": ["face1", "face2", "face3", "face4"],
+    "assembly_theorem": "Rho5.Shared.FinalEndpointAssembly.rho5Trace_eq_alpha_of_four_face_endpoints",
+    "assembly_type": "FourFaceEndpointBounds → rho5Trace = AlphaRoot.alpha",
+    "exact_iff_theorem": "Rho5.Shared.FinalEndpointAssembly.rho5Trace_eq_alpha_iff_four_face_endpoints",
+    "exact_iff_type": "rho5Trace = AlphaRoot.alpha ↔ FourFaceEndpointBounds",
+    "four_faces_kept_separate": true,
+    "merged_balanced_face": false,
+    "v43_cube_assumed": false,
+    "stronger_unified_alternatives": [
+      "Rho5.Shared.FinalEndpointAssembly.rho5Trace_eq_alpha_of_sorted_det_endpoint (排序四面域单一 det 界 ⇒ 等式)",
+      "Rho5.Shared.FinalEndpointAssembly.rho5Trace_eq_alpha_of_det_endpoint (全域单一 det 界 ⇒ 等式)",
+      "Rho5.Shared.FinalEndpointAssembly.fourFaceEndpointBounds_of_boundaryFace_bound / _of_det_endpoint (强形态 ⇒ 四条义务)"
+    ],
+    "assembled_by": [
+      "D74 Rho5.BoundaryUpperReduction.rho5Trace_le_of_four_face_bounds (四面装配)",
+      "D90 Rho5.LastPivotUpperReduction.C_le_T_mul_B (每条义务的主元部分，消费 D86 r ≤ 4)",
+      "D82 Rho5.ExternalAttainment.actualAlpha_le_rho5Trace (反向)"
+    ]
+  },
+  "unpaid_endpoint_obligations": {
+    "count": 4,
+    "how_to_supply": "证明 Rho5.Shared.FinalEndpointAssembly.FourFaceEndpointBounds 的四个字段（或提供上面任一条更强的统一定理）",
+    "common_hypotheses": "M : Matrix5，M 0 0 = 1，PolyCP M，0 ≤ m4 M 0 1，m4 M 0 1 ≤ m4 M 1 0",
+    "common_conclusion": "|M.det| ≤ Rho5.Algebraic.AlphaRoot.alpha * Rho5.MinorGrowthThreshold.C M",
+    "obligations": [
+      {
+        "field": "face1",
+        "face_equation": "M 4 4 = -1",
+        "actual_object": "原矩阵 M 本身（D70 face1）",
+        "type": "∀ M, M 0 0 = 1 → PolyCP M → 0 ≤ m4 M 0 1 → m4 M 0 1 ≤ m4 M 1 0 → M 4 4 = -1 → |M.det| ≤ alpha * C M"
+      },
+      {
+        "field": "face2",
+        "face_equation": "S4 M 3 3 = -p M",
+        "actual_object": "S4 M = Rho5.PivotReindex.pivotSchur M 0 0（实际第一步完整主元 Schur 更新，4×4）",
+        "type": "∀ M, M 0 0 = 1 → PolyCP M → 0 ≤ m4 M 0 1 → m4 M 0 1 ≤ m4 M 1 0 → S4 M 3 3 = -p M → |M.det| ≤ alpha * C M"
+      },
+      {
+        "field": "face3",
+        "face_equation": "S3 M 2 2 = -k M",
+        "actual_object": "S3 M = pivotSchur (S4 M) 0 0（实际第二步，3×3）",
+        "type": "∀ M, M 0 0 = 1 → PolyCP M → 0 ≤ m4 M 0 1 → m4 M 0 1 ≤ m4 M 1 0 → S3 M 2 2 = -k M → |M.det| ≤ alpha * C M"
+      },
+      {
+        "field": "face4",
+        "face_equation": "T2 M 1 1 = -r M",
+        "actual_object": "T2 M = pivotSchur (S3 M) 0 0（实际第三步尾块，2×2）",
+        "type": "∀ M, M 0 0 = 1 → PolyCP M → 0 ≤ m4 M 0 1 → m4 M 0 1 ≤ m4 M 1 0 → T2 M 1 1 = -r M → |M.det| ≤ alpha * C M"
+      }
+    ],
+    "relation_to_polynomial_faces": "D70 已验收 Rho5.MinorBoundaryFaces.boundaryFace_iff_schurFaces_of_polyCP 证明多形式 face1..face4 与这里的 Schur 形式在 M 0 0 = 1 且 PolyCP M 下等价；本接口用 D74 的 Schur 形式（与 rho5Trace_le_of_four_face_bounds 的前提逐字一致）"
+  },
+  "goal_C": {
+    "four_lt_rho": "Rho5.Shared.FinalEndpointAssembly.four_lt_rho5Trace",
+    "four_lt_rho_type": "4 < Rho5.GrowthSupremum.rho5Trace",
+    "unconditional_witness": "Rho5.Shared.FinalEndpointAssembly.exists_last_pivot_eq_rho_unconditional",
+    "unconditional_witness_type": "∃ P values, SortedBoundaryMaximizerFacts P values ∧ 0 ≤ s P ∧ s P ≤ t P ∧ (P 4 4 = -1 ∨ S4 P 3 3 = -p P ∨ S3 P 2 2 = -k P ∨ T2 P 1 1 = -r P) ∧ |Rho5.CanonicalTail.delta P| = rho5Trace",
+    "hypotheses": "none (the D90 premise 4 < rho5Trace was eliminated)",
+    "same_object_as_D68": true,
+    "paid_by": [
+      "D09 Rho5.Algebraic.AlphaRoot.alpha_gt_four",
+      "D82 Rho5.ExternalAttainment.actualAlpha_le_rho5Trace",
+      "D90 Rho5.LastPivotUpperReduction.exists_last_pivot_eq_rho"
+    ],
+    "D92_needed": false,
+    "D92_note": "本卡的 4 < rho5Trace 完全由 D09 + D82 支付；D92 的全局区间/紧域非空结论未被读取、未被复制"
+  },
+  "axioms": {
+    "checked_by": "named #print axioms on 11 targets, no expanded proof terms, no kernel replay",
+    "standard_subset": ["propext", "Classical.choice", "Quot.sound"],
+    "targets_checked": 11,
+    "outside_standard_subset": []
+  },
+  "compilation": {
+    "mode": "one Lean process, -j 1 -M 8192, nice 10, BLAS/OMP/MKL single threaded; 复用上一卡已验证的 8 GiB RSS / 12 GiB AS 守卫（未重复 hog 测试）",
+    "chain": [
+      "Rho5/Shared/FinalEndpointAssembly/Defs",
+      "Rho5/Shared/FinalEndpointAssembly/Endpoints",
+      "Rho5/Shared/FinalEndpointAssembly/FourFaces",
+      "Rho5/Shared/FinalEndpointAssembly/Witness",
+      "Rho5/Shared/FinalEndpointAssembly",
+      "Rho5/Shared/FinalEndpointAssembly/Audit"
+    ],
+    "success_log": "results/logs_x/module1.out",
+    "per_module_logs": "results/logs_x/{Defs,Endpoints,FourFaces,Witness,FinalEndpointAssembly,Audit}.log",
+    "exit_codes": {"Defs": 0, "Endpoints": 0, "FourFaces": 0, "Witness": 0, "aggregate": 0, "Audit": 0},
+    "wall_seconds": {"Defs": 3.240, "Endpoints": 3.821, "FourFaces": 3.741, "Witness": 4.079, "aggregate": 3.550, "Audit": 3.967},
+    "max_peak_rss_kib": 4212956,
+    "rss_guard_fired": false,
+    "timed_out": false,
+    "idempotence": "second module pass: all six FRESH; staleness mode: all six FRESH",
+    "deps_hash": "5aa88923e9642ec4a418808c5e79d25892dd6ccb3e9283526facebad39bbd952",
+    "probe": {
+      "file": "probe/D96_types.lean",
+      "log": "results/logs_x/probe.out",
+      "exit_code": 0,
+      "wall_seconds": 3.603,
+      "checks": 30,
+      "note": "first probe run passed; no mirror gap this time"
+    }
+  },
+  "input_binding": {
+    "file": "results/INPUT_BINDING.json",
+    "ok": true,
+    "mirrored_dep_oleans": 451,
+    "mirror_matched": 451,
+    "mirror_missing": 0,
+    "mirror_mismatched": 0,
+    "consumed_modules_identical": "55/55",
+    "cross_lane_identity_ok": true,
+    "frozen_lane_sources": {
+      "D90": "7/7 byte-identical to the accepted D90 lane source",
+      "D82": "15/15 byte-identical to the accepted external D82 source",
+      "D09": "6/6 byte-identical to the accepted D09 AlphaRoot source",
+      "D68": "5/5 byte-identical to the accepted D68_FULL source",
+      "D86": "5/5 byte-identical to the frozen D86 lane source",
+      "D85": "3/3 byte-identical to the accepted external D85 source"
+    },
+    "mathlib_sidecar": "D63 cache hardlinks verified byte/inode identical to the pilot mathlib (sample), 7844 artifacts"
+  },
+  "static_audit": {
+    "file": "results/STATIC_AUDIT.json",
+    "ok": true,
+    "violations": 0,
+    "highlights": [
+      "四条义务是四个独立字段 face1..face4，没有合并的 balanced/单面字段",
+      "四个面方程逐字出现：M 4 4 = -1、S4 M 3 3 = -p M、S3 M 2 2 = -k M、T2 M 1 1 = -r M",
+      "无 RootSpec、无 V43 立方体、无平衡假设",
+      "等式结论一律带义务前提或为 iff（无无条件 rho5Trace = alpha 声明）",
+      "exists_last_pivot_eq_rho_unconditional 的头确实无任何前提"
+    ]
+  },
+  "resources": {
+    "x_new_disk_bytes_mib": 1.2,
+    "x_new_files": 35,
+    "note": "du 显示整个 lane 根约 1.6 GB，其中绝大多数是硬链接目标；真实新增仅 1.2 MiB"
+  },
+  "upstream_untouched": {
+    "note": "D82/D90/D74/D68/D86/D85/D44/D09 全部只读复用（硬链接 + 逐字节核对）；未重编、未修改；outputs/** 未写入"
+  },
+  "hashes": {
+    "sources": "results/SOURCE_SHA256SUMS",
+    "own_oleans": {
+      "Rho5/Shared/FinalEndpointAssembly/Defs.olean": "0a80f0ade16c5a4f7ca00af2fed7771025e82c36529f9790b6fc5426779b7ae1",
+      "Rho5/Shared/FinalEndpointAssembly/Endpoints.olean": "42a6cd9f8ee3b51bc253c410d8ac7a92d471a211ea32cdaecc509229ec1ce015",
+      "Rho5/Shared/FinalEndpointAssembly/FourFaces.olean": "aecd2320b40eb33b7268ef6016785434926c482e11aa02ae15599e3f0150be2d",
+      "Rho5/Shared/FinalEndpointAssembly/Witness.olean": "1552ea1eab79f47474cb943d0cceaa936895bba780064f94c9296ac8bb1e0627",
+      "Rho5/Shared/FinalEndpointAssembly.olean": "724de525f6f0626f63adf8d7ced6f5d6865c9e315a083d53fb77366f910eee1e",
+      "Rho5/Shared/FinalEndpointAssembly/Audit.olean": "d571bf93634545e0e4c1405d977c1f5b483e06de092867dd930da724a9e8be54"
+    },
+    "consumed_modules": "results/CONSUMED_OLEAN_SHA256.json (55 modules)"
+  },
+  "handoff_note": "外脑核心留待用户转包：只需填 FourFaceEndpointBounds（或给出任一条更强的统一定理）。本回执不发送给 mainline 或外脑，不重复求解核心。",
+  "not_claimed": [
+    "rho5Trace = alpha 本身（四条端点义务未付）",
+    "任何单条端点义务",
+    "FINAL_RHO_EQUALITY_DONE",
+    "平衡尾部、V43 立方体成员、RootSpec 或任何抽象模型",
+    "D92 的全局区间/紧域非空结论（未读取、未复制）"
+  ]
+}

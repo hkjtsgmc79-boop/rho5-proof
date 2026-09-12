@@ -1,0 +1,60 @@
+{
+  "schema": "RHO5_ASSEMBLY_INTAKE_V1",
+  "lane": "D141",
+  "snapshot": "D141",
+  "status": "ACCEPTED_FOR_ASSEMBLY_WITH_EXPLICIT_PREMISES",
+  "created_at": "2026-09-12T04:47:35.666003+00:00",
+  "scope": "Actual LeadingInput + ProperB + alpha < height gives a real sign-conjugate NormalizedB representative in the complete B17 root, preserving height. No whole-root safety or global equality claim.",
+  "sources": {
+    "src/Rho5/Shared/ActualBRootEntry.lean": "2e3429503989da546b97b0e285138c0ebcfd6952f0947bced3784ee633731169",
+    "src/Rho5/Shared/ActualBRootEntry/Basic.lean": "9a2668e2ef77df11ccbf35b7cbf7cbba8c0356fe8d9f8dbb8e16f945294512d7",
+    "src/Rho5/Shared/ActualBRootEntry/Assembly.lean": "dbd422fe1091ba1c623350ecb91f5b546691523f394b4ef6b0c598e8b810c9aa",
+    "src/Rho5/Shared/ActualBRootEntry/Audit.lean": "1780feaf32fbae4d7364d8c32dda9760506ff2740ffe5799136de5a34d803410"
+  },
+  "live_binding_checks": 8,
+  "all_live_binding_checks_match": true,
+  "actual_axiom_records": 11,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "build_evidence": {
+    "independently_retained_zero_exits": 4,
+    "owner_successful_modules": 4
+  },
+  "dependencies": [
+    {
+      "provider": "D130",
+      "receipt": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/outputs/heartbeat_1124_delivery_20260912/D130_STAGE_A/results/GAP_MAP_READY.json",
+      "sha256": "a645d7477831ccf4802b10d3e5d25089cf2fa74407e62daf976899e3b7ed9ad4",
+      "reuse": "Previously accepted owner review; no recompilation or mathematical re-audit."
+    },
+    {
+      "provider": "D134",
+      "receipt": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/outputs/heartbeat_1149_delivery_20260912/D134/PAPER_B17_ROOT_ENTRY_READY.json",
+      "sha256": "640c4539ac12782d725001f373aed2508f7a6838cf9f63232ae0cda67358bb6e",
+      "reuse": "Previously accepted owner review; no recompilation or mathematical re-audit."
+    },
+    {
+      "provider": "D137",
+      "receipt": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/outputs/progress_1204_delivery_20260912/D137/results/B_HEAD_SIGN_READY.json",
+      "sha256": "cf9ee7453ebdea7756d16d45343893d9e6efa3d28b0f708f59d07ed43fc15cea",
+      "reuse": "Previously accepted owner review; no recompilation or mathematical re-audit."
+    },
+    {
+      "provider": "D138",
+      "receipt": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/outputs/progress_1204_delivery_20260912/D138/results/SCHUR_FOUR_PIVOT_READY.json",
+      "sha256": "2c757122d085148a855ae6cf1c5f871712476e1933188fea53a49a050acdd12d",
+      "reuse": "Previously accepted owner review; no recompilation or mathematical re-audit."
+    }
+  ],
+  "owner_receipts": [
+    "ACTUAL_PROPER_B_ROOT_READY.json"
+  ],
+  "limits": [
+    "This is evidence and interface intake only; no Lean invocation, no mathematics re-audit, no upstream edits.",
+    "No terminal coverage, whole-X/whole-B safety, or final rho5Trace = alpha is inferred from these modules.",
+    "Historical sections in owner REPORT are retained verbatim. Latest READY and this intake scope govern the accepted stage."
+  ]
+}

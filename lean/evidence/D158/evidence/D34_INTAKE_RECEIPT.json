@@ -1,0 +1,11 @@
+{
+  "lane": "D34",
+  "status": "ACCEPTED_IMPLEMENTER_SELF_REVIEW_REUSED",
+  "accepted_at": "2026-09-12T02:03:39.424858+08:00",
+  "source_hash_matches": 3,
+  "actual_allowed_axiom_records": 6,
+  "root_lean_invocations": 0,
+  "root_mathematical_reaudit": false,
+  "proved": "CandidateBox plus original P1=P2=P3=J=0 implies g=actual AlphaRoot.alpha, without RootSpec assumption",
+  "not_proved": "Existence of the original critical point or matrix/growth optimum; G04 and other work remain."
+}

@@ -1,0 +1,24 @@
+{
+  "ready": true,
+  "gate": "P01_THIN_PRODUCT_AND_PUBLIC_AUDIT_READY",
+  "portable_source_package_ready": false,
+  "default_module": "Rho5.PhaseOne",
+  "product_and_audit_modules": 2,
+  "public_exported_names": 33,
+  "loaded_Rho5": 634,
+  "inherited_C02_modules": 495,
+  "new_D84_upstream_modules": 138,
+  "new_final_compile_wall_seconds": 8.0513596534729,
+  "standard_axioms_only": true,
+  "safety_parameters": [
+    "Rho5.Integration.StagedAssembly.XGlobalSafety",
+    "Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety"
+  ],
+  "pending": [
+    "D158 final delivery",
+    "D159 final delivery",
+    "D160 final source project",
+    "D161 final examples delivery",
+    "final packaging and hash checks"
+  ]
+}

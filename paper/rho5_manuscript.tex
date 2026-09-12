@@ -1,0 +1,1271 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{xurl}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
+\usepackage{microtype}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mx}[1]{\left\|#1\right\|_{\max}}
+\newcommand{\iin}[1]{\left\|#1\right\|_\infty}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\amin}{\alpha_-}
+\newcommand{\gam}{\gamma}
+\newcommand{\cB}{\mathcal B}
+\DeclareMathOperator{\sgn}{sgn}
+\title[The exact growth factor for complete pivoting]
+{The exact maximum growth factor for\\
+complete pivoting on real \(5\times5\) matrices}
+% Author order updated by the user on 12 September 2026: 马千里, 吴超.
+\author{Qianli Ma}
+\address{Zhejiang University}
+\address{WUJIE AI}
+\email{qianli.ma@zju.edu.cn}
+\author{Chao Wu}
+\address{Zhejiang University}
+\hypersetup{pdfauthor={Qianli Ma, Chao Wu},
+pdftitle={The exact maximum growth factor for complete pivoting on real 5 x 5 matrices}}
+\date{11 September 2026}
+\begin{document}
+
+\begin{abstract}
+Let \(\rho_5^{\R}\) be the largest element growth possible in exact
+Gaussian elimination with complete pivoting on real \(5\times5\) matrices,
+with every legal choice at a pivot tie allowed. We prove
+\[
+\rho_5^{\R}=\alpha
+=4.132517078632472854223346853277\ldots,
+\]
+where \(\alpha\) is the algebraic lower bound identified by
+Chen, Edelman, and Urschel, specified by their degree-\(61\) polynomial and
+a rational isolating interval. Our contribution is the global upper bound.
+An exact two-step inverse-elimination representation retains all initial
+and intermediate entry bounds. A constructive diagonal contraction sends
+every positive final-pivot value to one of two saturated tail geometries,
+without changing that value. One geometry admits a complete certified
+bound; in the remaining geometry, three feasible paths eliminate six
+variables and produce a seventeen-variable common framework with an
+attained fibre maximum. Finite rational certificates cover that framework.
+The terminal rules distinguish infeasibility above a rational threshold
+from safety at the exact algebraic bound. Their final composition binds
+every remaining source to its original root and has no uncovered region.
+The proof combines exact rational certificate verification with
+source-preserving composition of the resulting bounds.
+\end{abstract}
+
+\maketitle
+
+\section{The problem and the result}
+
+Complete pivoting selects a largest-modulus entry of the current Schur
+complement at every step of Gaussian elimination. Although this rule
+controls local multipliers, successive Schur updates can generate entries
+larger than those in the input. Sharp growth factors in small dimensions
+provide concrete tests of what global information is retained, or lost,
+by general pivot-growth estimates.
+
+The values in dimensions three and four are \(9/4\) and \(4\),
+respectively; classical work includes Cryer~\cite{Cryer1968} and
+Cohen~\cite{Cohen1974}. Numerical evidence for a fifth-pivot value near
+\(4.1325\) was reported by Day and Peterson~\cite{DayPeterson1988}
+and subsequently reproduced by Gould~\cite{Gould1991}.
+Chen, Edelman, and Urschel~\cite{ChenEdelmanUrschel2026} identified the
+specific degree-\(61\) algebraic value \(\alpha\) and proved a lower bound
+by a completely pivoted matrix. Their Theorem~2.2 proves optimality within
+a prescribed equality family and supplies the lower-bound direction used
+here; their Theorem~3.5 gives the global upper bound \(4.84\).
+Theorem~\ref{thm:main} establishes the equality in their Conjecture~2.1.
+The constant, its defining polynomial, and the equality pattern are
+due to Chen, Edelman, and Urschel; the advance here is the matching
+global upper bound.
+
+The present result concerns a fixed dimension and the real field.
+It is separate from estimates as the dimension tends to infinity,
+including the recent results of
+Bisain, Edelman, and Urschel~\cite{BisainEdelmanUrschel2025} and
+Shah and Urschel~\cite{ShahUrschel2026}.
+Background on growth and its relation to numerical error can be found in
+Day and Peterson~\cite{DayPeterson1988} and
+Higham and Higham~\cite{HighamHigham1989}.
+
+\begin{definition}
+For \(0\ne A\in\R^{n\times n}\), let \(\pi\) denote a legal complete-pivoting
+path in exact arithmetic. Write \(A^{(j)}_\pi\) for the trailing Schur
+matrix at stage \(j\), before its leading pivot is eliminated. Define
+\[
+\rho(A,\pi)=
+\frac{\max_j\mx{A^{(j)}_\pi}}{\mx A},
+\qquad
+\rho_n^\R=\sup_{A\ne0}\ \sup_{\pi\ {\rm legal}}\rho(A,\pi).
+\]
+If the current pivot is zero, the trailing matrix is zero and elimination
+terminates; all subsequent pivot magnitudes are taken to be zero.
+\end{definition}
+
+We normalize \(\mx A=1\). The first pivot magnitude is then one, and
+complete pivoting gives
+\begin{equation}\label{eq:growthpivots}
+\rho(A,\pi)=\max_{1\le j\le n}p_j,
+\end{equation}
+where \(p_j\) is the magnitude of the chosen pivot. Row and column
+permutations may be absorbed into the original matrix. Thus it suffices
+to prove the upper bound for every matrix that is completely pivoted in
+the fixed diagonal order. This does not assume uniqueness of a largest
+entry, nor equality of the results of different tied paths.
+
+\begin{theorem}\label{thm:main}
+For exact complete-pivoting Gaussian elimination on real \(5\times5\)
+matrices, \(\rho_5^\R=\alpha\).
+Here \(\alpha\) is the root specified in
+Section~\ref{sec:alpha}. The upper bound holds for every legal pivot path,
+including paths with ties and inputs for which elimination terminates
+early.
+\end{theorem}
+
+The proof has two analytic reductions and two computational components.
+First, the first four pivot magnitudes are at most \(4<\alpha\).
+Second, every positive fifth-pivot value has a same-value representative
+whose last \(2\times2\) Schur block lies on a diagonal-saturated or
+cross-saturated boundary. The cross-saturated domain is covered by
+Proposition~\ref{prop:X}. The remaining negative diagonal domain is
+covered by Proposition~\ref{prop:B}, after the exact fibre reduction in
+Section~\ref{sec:fibre}. Section~\ref{sec:certificates} states the
+certificate semantics and composition argument. The proof does not
+require a classification of all equality matrices.
+
+\section{The constant and an attained lower bound}\label{sec:alpha}
+
+Let
+\begin{equation}\label{eq:P61}
+P_{61}(g)=\sum_{i=0}^{61}c_i g^i
+\end{equation}
+be the polynomial of Chen, Edelman, and
+Urschel~\cite{ChenEdelmanUrschel2026}. Its leading coefficient is \(59049\)
+and its constant coefficient is
+\[
+-400768351683901408958416200638054732473753927680.
+\]
+Supplementary Material~S1 gives the full ascending coefficient list
+and exact decimal rational endpoints \(L<U\), with
+\(U-L=10^{-200}\), isolating one real root. Throughout, \(\alpha\) means this root and \(\amin=L\).
+There is also a short exact identification with the published constant.
+All \(62\) integer coefficients agree with the published polynomial.
+For
+\[
+Q(t)=(1+t)^{61}P_{61}\!\left(\frac{4+5t}{1+t}\right),
+\]
+the coefficients of degrees \(0,\ldots,8\) are negative and those
+of degrees \(9,\ldots,61\) are positive.
+Descartes' rule of signs therefore gives at most one positive root
+of \(Q\), hence at most one root of \(P_{61}\) in \((4,5)\).
+Exact evaluation gives \(P_{61}(L)<0<P_{61}(U)\).
+Consequently \(\alpha\) is the unique root in \((4,5)\).
+The exact coefficient comparison, transformed coefficients, and
+endpoint signs are recorded in Supplementary Material~S1.
+For orientation,
+\[
+\begin{gathered}
+4.132517078632472854223346853277<\alpha,\\
+\alpha<4.132517078632472854223346853278.
+\end{gathered}
+\]
+All certificate comparisons use the full rational endpoints, not these
+truncated decimals. We also use
+\begin{equation}\label{eq:thresholds}
+\Lambda=\frac{1653}{400},\qquad
+\gam=\frac{4132517}{10^6},\qquad
+4<\Lambda<\gam<\amin<\alpha.
+\end{equation}
+
+The lower bound is already a theorem of
+\cite[Theorem~2.2]{ChenEdelmanUrschel2026}. To identify the constant
+unambiguously in the computational archive, a supplementary foundational
+module also reconstructs that candidate independently.
+It uses integer polynomials \(P_1,P_2,P_3\) in \((x,y,z,g)\) and
+\[
+J=\det\frac{\partial(P_1,P_2,P_3)}{\partial(x,y,z)}.
+\]
+A rational Krawczyk enclosure isolates a unique zero of
+\((P_1,P_2,P_3,J)\) in an explicit box. The \(x,y,z\) radii are
+\(10^{-180}\); the \(g\)-interval is \([L,U]\).
+An exact elimination identity, exclusion of the other resultant factors,
+and a Sturm count identify \(g=\alpha\).
+
+Rational reconstruction at this zero gives
+\begin{equation}\label{eq:candidate}
+A_*=
+\begin{pmatrix}
+1&1&-z/y&-z&z(x+z)/(x+1)\\
+x&x+z+1&b_{23}&-1&1\\
+-1&z&b_{33}&-1&-1\\
+y&T&1&1&1\\
+z&-1&1&-1&1
+\end{pmatrix}.
+\end{equation}
+The exact rational functions \(T,b_{23},b_{33}\), the defining equations,
+and the isolating box are archived with the reconstruction code.
+For orientation,
+\[
+\begin{aligned}
+(x,y,z)\approx\bigl(&-0.6175326768818271,-0.7791507422163111,\\
+&\phantom{-}0.4532249098468375\bigr).
+\end{aligned}
+\]
+These decimal approximations are not substituted into the certificate.
+All reconstruction denominators are separated from zero. Entry bounds at
+equality follow from rational identities and the root equations;
+the other bounds have strictly positive rational interval margins.
+The pivot magnitudes are
+\[
+1,\quad 1+z,\quad p_{3,*},\quad \alpha/2,\quad\alpha,
+\]
+with \(1.453<1+z<1.454\) and \(2.074<p_{3,*}<2.075\).
+In particular, the final \(2\times2\) tail is exactly
+\[
+\frac{\alpha}{2}
+\begin{pmatrix}1&1\\-1&1\end{pmatrix}.
+\]
+This is an attained lower bound, not a conclusion drawn solely
+from a polynomial factor or floating-point optimization.
+
+\section{An elementary reduction to the fifth pivot}\label{sec:scalar}
+
+We include the small-dimensional bounds used in all root domains.
+This also handles earlier-stage growth without an extra hypothesis.
+
+\begin{lemma}\label{lem:Phi}
+For a normalized real \(3\times3\) matrix completely pivoted in
+the indicated order, let its pivot magnitudes be \(1,t,g\). Then
+\[
+0\le t\le2,\qquad g\le\Phi(t),\qquad
+\Phi(t)=
+\begin{cases}
+2t,&0\le t\le1,\\
+t(3-t),&1\le t\le2.
+\end{cases}
+\]
+Each branch is sharp. In particular, \(g\le9/4\).
+\end{lemma}
+
+\begin{proof}
+The first Schur update is a difference of two quantities of magnitude at
+most one, so \(t\le2\). If \(t=0\), its whole trailing block is zero.
+Otherwise the last update gives \(g\le2t\), proving the first branch.
+
+For \(1<t\le2\), normalize the first row and column to be nonnegative by
+independent sign changes. A positive entry of the first Schur complement
+is at most one, so the second pivot is negative. Write the tail as
+\[
+\begin{pmatrix}-t&\gamma_0\\\eta_0&\zeta_0\end{pmatrix}.
+\]
+Let the relevant first-row and first-column coordinates be
+\(x,u,y,v\in[0,1]\), and set
+\[
+c=t-1,\quad s=xv,\quad z=uy,\quad r=uv,\quad w=xy.
+\]
+The original entry at the pivot is \(w-t\), whence \(w\ge c\).
+Furthermore \(sz=wr\) and \(r\ge sz\). Intersecting the original entry
+bounds with the Schur pivot bounds gives
+\begin{equation}\label{eq:threeintervals}
+\begin{split}
+\gamma_0&\in[-1-\min(c,s),\,1-s],\\
+\eta_0&\in[-1-\min(c,z),\,1-z],\\
+\zeta_0&\in[-1-\min(c,r),\,1-r].
+\end{split}
+\end{equation}
+We claim that, with \(M=t^2(3-t)\),
+\begin{align}
+t(1-r)+(1+\min(c,s))(1+\min(c,z))&\le M,\label{eq:aux1}\\
+t(1+\min(c,r))+(1+\min(c,s))(1-z)&\le M.\label{eq:aux2}
+\end{align}
+For \eqref{eq:aux1}, replace \(r\) by \(sz\). When \(s,z\le c\)
+the resulting function increases in either variable, since its
+corresponding derivative is \(1-cz\) or \(1-cs\); its maximum is at
+\(s=z=c\). If \(s\le c\le z\), it is
+\(t[2+s(1-z)]\le t[2+c(1-c)]=M\).
+The other mixed case is symmetric. If \(s,z\ge c\), the bound is
+\(t(1-c^2)+t^2=M\).
+
+For \eqref{eq:aux2}, the shared-product relations imply
+\(z\ge cr\), and also \(z\ge r\) whenever \(s\le c\).
+The latter includes \(s=0\): then \(sz=wr\) and \(w\ge c>0\)
+force \(r=0\). Thus no division by \(s\) is needed.
+Separate four closed cases.
+If \(r\ge c,s\ge c\), then \(z\ge cr\ge c^2\), and the expression is at
+most \(t^2+t(1-c^2)=M\).
+If \(r\ge c,s\le c\), then \(z\ge r\ge c\), and the bound
+\(t^2+t(1-c)=2t\le M\) suffices.
+If \(r\le c,s\le c\), the expression is at most
+\[
+t(1+r)+(1+s)(1-r)\le2t\le M;
+\]
+the first difference is \((c-s)(1-r)\ge0\), and
+\(M-2t=tc(1-c)\ge0\).
+Finally, if \(r\le c,s\ge c\), then
+\(r-z\le r(1-c)\le c(1-c)\).
+The expression is at most \(t[2+c(1-c)]=M\).
+Interchanging \(s,z\) gives the symmetric form of \eqref{eq:aux2}.
+
+Put \(A_s=1+\min(c,s)\), \(B_s=1-s\), and similarly for \(z,r\).
+By \eqref{eq:threeintervals},
+\[
+t\zeta_0+\gamma_0\eta_0
+\le tB_r+\max(A_sA_z,B_sB_z)\le M.
+\]
+The first product uses \eqref{eq:aux1}; the second is at most
+\(t+1\le M\). On the other side,
+\[
+-(t\zeta_0+\gamma_0\eta_0)
+\le tA_r+\max(A_sB_z,B_sA_z)\le M
+\]
+by \eqref{eq:aux2} and its symmetric version.
+Thus the magnitude of the tail determinant is at most \(M\), and
+division by \(t\) proves \(g\le t(3-t)\).
+
+Sharp examples are
+\[
+\begin{pmatrix}1&0&0\\0&t&t\\0&-t&t\end{pmatrix}
+\quad(0\le t\le1),\qquad
+\begin{pmatrix}1&1&c\\1&-c&-1\\c&-1&1\end{pmatrix},
+\quad c=t-1\quad(1\le t\le2).
+\]
+Finally \(9/4-t(3-t)=(t-3/2)^2\).
+\end{proof}
+
+\begin{corollary}\label{cor:firstfour}
+The first four pivot magnitudes of a normalized real completely pivoted
+matrix of order at most five satisfy
+\[
+p_1=1,\qquad p_2\le2,\qquad p_3\le9/4,\qquad p_4\le4.
+\]
+Consequently \(\rho(A,\pi)>\alpha\) implies \(p_5>\alpha\).
+\end{corollary}
+
+\begin{proof}
+Any leading submatrix in the chosen pivot order is completely
+pivoted, and a Schur tail divided by its first pivot magnitude is
+normalized and completely pivoted. Put \(x=p_2\), \(y=p_3/p_2\)
+when these denominators are nonzero. Lemma~\ref{lem:Phi} gives
+\[
+xy\le\Phi(x),\qquad p_4\le x\Phi(y).
+\]
+If \(x\le1\), the second bound is at most \(9/4\). If
+\(1\le x\le3/2\), it is at most \(27/8\). If \(3/2\le x\le2\),
+then \(y\le3-x\le3/2\). The function \(\Phi\) is nondecreasing on
+\([0,3/2]\), so
+\[
+p_4\le x\Phi(3-x)=x^2(3-x)\le4,
+\]
+using \(4-x^2(3-x)=(2-x)^2(x+1)\).
+Zero pivots imply zero subsequent growth.
+Equation~\eqref{eq:growthpivots} and \(\alpha>4\) finish the proof.
+\end{proof}
+
+\section{A complete two-step lift}\label{sec:lift}
+
+All subsequent variables describe one common matrix. Let
+\(u,x,v,q\in\R^3\), \(p,k>0\), and \(e,\beta\in\R\).
+Set
+\begin{equation}\label{eq:lift}
+M=
+\begin{pmatrix}
+1&-e&v^T\\
+\beta&p-e\beta&(q+\beta v)^T\\
+u&px-eu&D+xq^T+uv^T
+\end{pmatrix},\qquad D=kC,\quad C_{00}=1.
+\end{equation}
+Subscripts on \(3\times3\) blocks run from zero to two.
+Its first two Schur tails are
+\begin{equation}\label{eq:schurtails}
+M^{(2)}=
+\begin{pmatrix}p&q^T\\px&D+xq^T\end{pmatrix},
+\qquad M^{(3)}=D.
+\end{equation}
+
+\begin{proposition}\label{prop:lift}
+Suppose \(C\) is completely pivoted in the fixed order, with
+\(\mx C=1\). Then \eqref{eq:lift} is normalized and completely pivoted,
+with first three pivot magnitudes \(1,p,k\), if and only if
+\begin{align}
+|e|,|\beta|,\iin u,\iin v,\iin x&\le1,\label{eq:bands1}\\
+|p-e\beta|,\ \iin{px-eu},\ \iin{q+\beta v}&\le1,\label{eq:bands2}\\
+\iin q\le p,\qquad \mx{D+xq^T}&\le p,\label{eq:bands3}\\
+\mx{D+xq^T+uv^T}&\le1.\label{eq:bands4}
+\end{align}
+Every normalized fixed-order completely pivoted matrix with three
+nonzero leading pivots has this representation after row-sign
+normalization of those pivots.
+\end{proposition}
+
+\begin{proof}
+The identities \eqref{eq:schurtails} show sufficiency: the first matrix
+has entries bounded by one, the first tail by \(p\), and the second tail
+is \(kC\). Conversely recover \(e,\beta,u,v\) from the initial matrix,
+then \(p,x,q\) from its first Schur tail. The remaining tail is uniquely
+\(D\); division by its positive leading pivot gives \(C\).
+The inequalities are precisely the initial and first-stage bounds.
+No independent completion is chosen for different inequalities.
+\end{proof}
+
+The alternative notation \(q=py\) makes the bottom block
+\(kC+uv^T+pxy^T\). The actual variable \(q\), rather than \(y\), will be
+used in the seventeen-dimensional reduction.
+Write
+\begin{equation}\label{eq:core}
+C=
+\begin{pmatrix}
+1&a&b\\
+c&ca+\rho&cb+\sigma\\
+d&da+\tau&db+\omega
+\end{pmatrix}.
+\end{equation}
+The fixed-order core conditions are
+\(\mx C\le1\) and \(|\sigma|,|\tau|,|\omega|\le|\rho|\).
+For \(\rho\ne0\), set
+\[
+h(C)=\omega-\tau\sigma/\rho,\qquad F=k|h(C)|.
+\]
+If \(\rho=0\), the final tail is zero; set \(h(C)=F=0\).
+Lemma~\ref{lem:Phi} also yields
+\begin{equation}\label{eq:necessaryscalars}
+k\le9/4,\quad |h(C)|\le9/4,\quad k\le2p,\quad
+|h(C)|\le2|\rho|.
+\end{equation}
+All these quantities belong to the same source.
+
+\section{Constructive saturation of the last tail}\label{sec:saturation}
+
+The next reduction is an existence statement about representatives.
+It does not assert that every maximizer is already saturated.
+
+\begin{lemma}[Same-height diagonal saturation]\label{lem:saturation}
+Every complete lift \eqref{eq:lift} with \(F>0\) has another complete
+lift with the same \(p,k,F\) whose normalized tail satisfies either
+\[
+D:\quad |\omega|=|\rho|,\quad |\sigma|,|\tau|\le|\rho|,
+\]
+or
+\[
+X:\quad |\sigma|=|\tau|=|\rho|,\quad |\omega|\le|\rho|.
+\]
+The construction is valid on every legal tied pivot path.
+\end{lemma}
+
+\begin{proof}
+For \(0\le\lambda,\mu\le1\), let
+\(R_\lambda=\diag(1,\lambda,1)\), \(K_\mu=\diag(1,\mu,1)\).
+Replace
+\[
+C\mapsto R_\lambda C K_\mu,\quad
+(u,x)\mapsto(R_\lambda u,R_\lambda x),\quad
+(v,q)\mapsto(K_\mu v,K_\mu q).
+\]
+The new full matrix is
+\(\diag(I_2,R_\lambda)M\diag(I_2,K_\mu)\).
+Its initial and first-tail entries are only contracted in magnitude,
+while the pivots \(1,p,k\) do not change.
+The core tail transforms as
+\begin{equation}\label{eq:sattransform}
+(\rho,\sigma,\tau,\omega)
+\mapsto(\lambda\mu\rho,\lambda\sigma,\mu\tau,\omega).
+\end{equation}
+Since \(F>0\), \(\rho\ne0\). Put
+\[
+S_0=|\sigma/\rho|,\quad T_0=|\tau/\rho|,\quad
+W_0=|\omega/\rho|,\qquad S_0,T_0,W_0\in[0,1].
+\]
+If \(W_0\ge S_0T_0\), choose
+\(\lambda=\max(T_0,W_0)\), \(\mu=W_0/\lambda\).
+If \(W_0\) vanished, then \(S_0T_0=0\) and the original height would
+be zero. Thus the division is valid and \(\lambda\mu>0\).
+Now \(\lambda\ge T_0\), \(\mu\ge S_0\), and
+\(\lambda\mu=W_0\), so the new completely pivoted tail lies on \(D\).
+If \(W_0\le S_0T_0\), take \(\lambda=T_0,\mu=S_0\).
+Positivity of the original height again excludes \(\lambda\mu=0\);
+the new tail lies on \(X\). At the positive-product junction
+\(W_0=S_0T_0>0\), the constructions agree.
+Finally,
+\[
+\omega-\frac{(\mu\tau)(\lambda\sigma)}{\lambda\mu\rho}
+=\omega-\frac{\tau\sigma}{\rho}.
+\]
+This preserves \(F\) and all the complete early-stage conditions.
+No exchange of unequal pivots is introduced.
+\end{proof}
+
+Zero fifth pivots are already safe by Corollary~\ref{cor:firstfour}.
+They need not have a zero fourth-stage tail: a nonzero rank-one
+\(2\times2\) tail can have zero last pivot. In contrast, a zero
+fourth pivot under complete pivoting does force the entire current
+tail to vanish. The lemma requires neither a zero-target extension
+nor equality of the two full-matrix constructions at a zero-product
+junction.
+
+Actual sign changes on the final rows and columns reduce every
+\(X\)-tail to
+\begin{equation}\label{eq:Xtail}
+H=\begin{pmatrix}r&r\\r&w\end{pmatrix},
+\qquad r>0,\quad |w|\le r,\quad F=r-w.
+\end{equation}
+Here \(H\) is the \emph{actual} fourth-stage tail, whose entries are
+\(k\) times the normalized core-tail entries.
+Indeed, for
+\((\begin{smallmatrix}\epsilon_1r&\epsilon_2r\\
+\epsilon_3r&W\end{smallmatrix})\),
+multiply rows by \((\epsilon_1,\epsilon_3)\) and columns by
+\((1,\epsilon_1\epsilon_2)\). This gives \eqref{eq:Xtail}, with
+\(w=\epsilon_1\epsilon_2\epsilon_3W\), and preserves all absolute
+matrix bounds.
+Similarly every \(D\)-tail has a form
+\begin{equation}\label{eq:Dtail}
+H=\begin{pmatrix}r&s\\t&\chi r\end{pmatrix},
+\quad r>0,\quad0\le s,t\le r,\quad\chi\in\{-1,1\}.
+\end{equation}
+If \(\chi=1\), its height is \(r-st/r\le r\le4\); a zero arm
+also gives height \(r\le4\).
+If \(s=r\) or \(t=r\), exchanging the corresponding tied final
+columns or rows and normalizing signs gives \eqref{eq:Xtail} at the
+same height. The sole additional domain is therefore
+\begin{equation}\label{eq:properB}
+H=\begin{pmatrix}r&s\\t&-r\end{pmatrix},
+\qquad0<s,t<r,\qquad F=r+\frac{st}{r}.
+\end{equation}
+We call this the proper negative diagonal domain.
+
+\section{The complete cross-saturated bound}\label{sec:X}
+
+For \eqref{eq:Xtail}, the actual core matrix is
+\begin{equation}\label{eq:XD}
+D=\begin{pmatrix}
+k&A&B\\
+ck&r+cA&r+cB\\
+dk&r+dA&w+dB
+\end{pmatrix}.
+\end{equation}
+All of \eqref{eq:bands1}--\eqref{eq:bands4} and \(\mx D\le k\) are
+retained. No rank, cofactor-sign, or auxiliary entry condition is assumed.
+
+\begin{proposition}[Certified complete \(X\) bound]\label{prop:X}
+Every real complete lift with \eqref{eq:XD}, \(p,k,r>0\), and
+\(|w|\le r\), satisfies \(F=r-w\le\alpha\).
+\end{proposition}
+
+The proposition is assembled from four certified components.
+Appendix~\ref{app:artifacts} and Supplementary Material~S4
+identify the component certificates and their source domains.
+\begin{center}
+\begin{tabular}{@{}p{.53\linewidth}p{.33\linewidth}@{}}
+\toprule
+Complete source domain&Certified bound\\
+\midrule
+\(0<k\le2\)&\(F<1653/400\)\\
+\(k\ge21/10\)&\(F<\gam\)\\
+\(2<k\le21/10,\ r>k\)&\(F<\gam\)\\
+\(\gam/2\le k\le21/10,\ r\le k,\ F\ge\gam\)&\(F\le\alpha\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{proof}[Assembly]
+The first three rows leave \(2<k<21/10,\ r\le k\).
+If \(F<\gam\), \eqref{eq:thresholds} suffices. Otherwise
+\(\gam\le F\le2r\le2k\), hence \(k\ge\gam/2\), and the last row
+applies. The boundary \(r=k\) lies in the last row; \(k=2,21/10\)
+have closed coverage. Internal sign and transpose normalizations are
+actual matrix operations imposing no extra rank or cofactor hypothesis.
+\end{proof}
+
+The small-\(k\) certificate has \(268817\) nodes, \(134409\)
+contradiction leaves, and no open leaf. The accepted two low-\(r\)
+roots have the following counts:
+\begin{center}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Root&Nodes&Contradiction leaves&\(\alpha\)-safe leaves&Open\\
+\midrule
+I&3450095&1725047&1&0\\
+II&5920895&2873490&86958&0\\
+\bottomrule
+\end{tabular}
+\end{center}
+The counts identify accepted objects, rather than replacing their
+acceptance rules and domain maps. An \(\alpha\)-safe leaf can contain
+feasible points; it is not an infeasibility certificate at \(\gam\).
+
+A canonical near-peak component establishes its exact height
+by finite localization, invertible slack coordinates, and the same
+algebraic root \(\alpha\). It consumes previously proved
+canonical-representative and row-scale reconstruction lemmas.
+Their original proofs and earlier exclusion trees remain explicit
+dependencies. The \(X\) assembly does not treat a canonical
+representative as an unproved global-entry assumption.
+Supplementary Materials~S3 and~S4 identify these modules, their exact
+verification records, and their roles in the complete bound.
+
+\section{Exact reduction of the negative diagonal domain}\label{sec:fibre}
+
+Replace \eqref{eq:XD} by
+\begin{equation}\label{eq:BD}
+D=
+\begin{pmatrix}
+k&A&B\\
+ck&r+cA&s+cB\\
+dk&t+dA&-r+dB
+\end{pmatrix}.
+\end{equation}
+We initially allow \(0\le s,t\le r\), so the safe boundary is included.
+A \emph{complete source} means \eqref{eq:lift},
+\eqref{eq:bands1}--\eqref{eq:bands4}, \(\mx D\le k\), and these tail
+conditions.
+The normalized first Schur tail is a real \(4\times4\) completely
+pivoted matrix. Corollary~\ref{cor:firstfour} gives
+\begin{equation}\label{eq:F4p}
+F\le4p.
+\end{equation}
+Hence \(F>4\) requires \(p>1\). The head bound implies
+\(e\beta\ge p-1>0\). A simultaneous sign flip of the second row and
+column gives \(e,\beta>0\). Simultaneously reversing all three remaining
+rows and columns leaves \(D\) fixed and reverses \(x\), allowing
+\(x_0\ge0\). Simultaneously reversing just the last two rows and
+columns reverses \(A,B,c,d\), leaves \(x_0\) fixed, and leaves the
+last tail fixed, allowing \(A\le0\).
+No sign is imposed on the other
+receivers or on \(c,d\).
+
+Fix the seventeen-coordinate common framework
+\begin{equation}\label{eq:frame}
+\vartheta=(k,A,B,c,d,u_0,u_1,u_2,x_0,x_1,x_2,
+v_0,v_1,v_2,q_0,q_1,q_2).
+\end{equation}
+We maximize over the six remaining actual variables
+\((\beta,p,e,r,s,t)\), in the normalized range
+\(p\ge1\), \(0\le e,\beta\le1\). Every high source has such a
+representative by the preceding argument.
+The constructions give feasible paths, not
+independent necessary relaxations.
+
+\subsection{The right-prefix interval}
+Define
+\[
+I_\beta=[0,1]\cap\bigcap_{j=0}^2\{b:|q_j+bv_j|\le1\}.
+\]
+If \(v_j=0\), this condition is \(|q_j|\le1\); otherwise its endpoints
+are \((-1-q_j)/v_j\) and \((1-q_j)/v_j\), sorted in increasing order.
+An empty interval rules out the fibre. When it is nonempty, set
+\(\bar\beta=\max I_\beta\).
+
+\begin{lemma}\label{lem:beta}
+For a complete source with \(p\ge1\), \(0\le e,\beta\le1\),
+increasing \(\beta\) linearly to \(\bar\beta\), while fixing the
+other variables, preserves complete feasibility and \(F\).
+\end{lemma}
+\begin{proof}
+The right-prefix bands define the convex interval \(I_\beta\).
+The head upper bound \(p-e\beta\le1\) improves, and its lower bound is
+automatic because \(p\ge1\) and \(e\beta\le1\).
+No other condition or height depends on \(\beta\).
+\end{proof}
+
+\subsection{The attained \texorpdfstring{\(p,e\)}{p,e} capacity}
+If \(\bar\beta=0\), the head forces \(p=1\), safe by \eqref{eq:F4p}.
+Suppose \(\bar\beta>0\). Form the head row
+\((a_0,b_0)=(1,\bar\beta)\). For every \(x_i\ne0\), add the row
+\[
+a_i=|x_i|>0,\qquad b_i=\sgn(x_i)u_i.
+\]
+When \(x_i=0\), its prefix bound is automatic.
+There are at most four rows, with \(0<a_i\le1\), \(|b_i|\le1\).
+The complete remaining prefix system is
+\begin{equation}\label{eq:prefixpolygon}
+a_ip-b_ie\le1,\qquad0\le e\le1,\qquad p\ge1.
+\end{equation}
+The reverse bound is automatic from \(a_ip\ge0\) and \(b_ie\le1\).
+Define capacities for \(b_i\ge0\) and for \(b_i>0>b_j\), respectively:
+\[
+C_i=\frac{1+b_i}{a_i},\qquad
+C_{ij}=\frac{b_i-b_j}{a_jb_i-a_ib_j}.
+\]
+All denominators are positive. Put
+\begin{equation}\label{eq:Pestar}
+P=\min(C_i,C_{ij}),\qquad
+e_*=\max\left(0,\max_{b_i>0}\frac{a_iP-1}{b_i}\right).
+\end{equation}
+
+\begin{lemma}\label{lem:prefixcap}
+The maximum \(p\) in \eqref{eq:prefixpolygon} is \(P\);
+\((P,e_*)\) is feasible. Furthermore \(1\le P\le2\), and at most six
+capacities occur.
+\end{lemma}
+\begin{proof}
+Writing \(\ell_i=1-a_ip+b_ie\ge0\), feasibility implies
+\[
+1+b_i-a_ip=\ell_i+b_i(1-e)\ge0\quad(b_i\ge0),
+\]
+and
+\[
+b_i-b_j-(a_jb_i-a_ib_j)p=b_i\ell_j-b_j\ell_i\ge0
+\quad(b_i>0>b_j).
+\]
+Thus every capacity is necessary.
+Conversely positive \(b_i\) give lower bounds for \(e\), negative
+\(b_j\) give upper bounds, and zero \(b_i\) constrain only \(p\).
+The \(C_i\) make all lower bounds at most one; the \(C_{ij}\) make
+each lower bound at most each upper bound.
+A negative row additionally requires a nonnegative upper bound,
+namely \(p\le1/a_j\). Its pairing with the head implies this:
+\[
+\frac{\bar\beta-b_j}{a_j\bar\beta-b_j}\le\frac1{a_j},
+\]
+since \(a_j\le1\), \(b_j<0\).
+The head lower bound \((P-1)/\bar\beta\) is nonnegative.
+Therefore \eqref{eq:Pestar} satisfies every row.
+Each capacity is at least one, and the head capacity is
+\(1+\bar\beta\le2\). If the numbers of positive, zero, and negative
+rows are \(m,z,n\), then their number of capacities is \(m+z+mn\),
+where \(m\ge1\), \(m+z+n\le4\), and hence at most six.
+\end{proof}
+
+After Lemma~\ref{lem:beta}, move \((p,e)\) along the segment to
+\((P,e_*)\). The prefix polygon is convex and \(p\) increases.
+The actual matrices
+\[
+D,\qquad S=D+xq^T,\qquad O=D+xq^T+uv^T
+\]
+stay fixed. Thus \(|q_j|\le p\), \(|S_{ij}|\le p\) improve, and
+all other bands remain valid. This second path preserves \(F\);
+it does not require \(e\) itself to vary monotonically.
+
+\subsection{The attained tail maximum}
+At \(p=P\), form joint intervals for the entries of \(D\):
+\begin{equation}\label{eq:entrycaps}
+\begin{split}
+\ell_{ij}&=\max(-k,-P-x_iq_j,-1-x_iq_j-u_iv_j),\\
+U_{ij}&=\min(k,P-x_iq_j,1-x_iq_j-u_iv_j).
+\end{split}
+\end{equation}
+The five entries in the zeroth row or column of \(D\) are fixed.
+Check their intervals and \(|q_j|\le P\). Failure makes the fibre
+empty: decreasing \(p\) cannot repair a failed stage bound, while
+original-matrix and core bounds do not depend on \(p\).
+For the other entries put
+\begin{align*}
+r_-&=\max(0,\ell_{11}-cA,dB-U_{22}),
+&R&=\min(U_{11}-cA,dB-\ell_{22}),\\
+s_-&=\max(0,\ell_{12}-cB),
+&s_+&=U_{12}-cB,\\
+t_-&=\max(0,\ell_{21}-dA),
+&t_+&=U_{21}-dA,\\
+S_*&=\min(R,s_+),
+&T_*&=\min(R,t_+).
+\end{align*}
+
+\begin{theorem}[Complete six-variable fibre maximum]\label{thm:fibre}
+For a nonempty high-value fibre at fixed \(\vartheta\), the
+construction yields a complete source with
+\[
+(\beta,p,e,r,s,t)=(\bar\beta,P,e_*,R,S_*,T_*),
+\]
+and
+\begin{equation}\label{eq:Bcap}
+\cB(\vartheta)=R+\frac{S_*T_*}{R}
+=\max_{\text{complete six-variable fibre}} F.
+\end{equation}
+The tail fibre is nonempty exactly when the fixed checks pass and
+\[
+R>0,\qquad R\ge r_-,\qquad S_*\ge s_-,\qquad T_*\ge t_-.
+\]
+Every original source reaches the maximum by three complete feasible
+paths with nondecreasing height.
+\end{theorem}
+
+\begin{proof}
+The first two paths have been established. At their endpoint the
+tail feasible set is exactly
+\[
+r_-\le r\le R,\quad s_-\le s\le s_+,\quad
+t_-\le t\le t_+,\quad r>0,\quad0\le s,t\le r.
+\]
+The intervals are computed simultaneously from the same \(u,x,v,q\).
+Nonemptiness implies \(R\ge r>0\), \(S_*\ge s\), \(T_*\ge t\);
+then \((R,S_*,T_*)\) satisfies every interval. The stated conditions
+are therefore necessary and sufficient. For any feasible tail,
+\begin{align}
+Rr(\cB-F)
+={}&(R-r)(Rr-st)+rt(S_*-s)+rS_*(T_*-t)\ge0.\label{eq:taildifference}
+\end{align}
+The factors have the required signs because \(R\ge r\) and
+\(st\le r^2\). The segment to this maximum stays in the convex
+feasible set, with all three coordinates nondecreasing. Along it,
+\[
+\partial_rF=1-st/r^2\ge0,\qquad
+\partial_sF=t/r\ge0,\qquad \partial_tF=s/r\ge0.
+\]
+This proves the last path and the attained maximum.
+\end{proof}
+
+Every hypothetical \(F>\alpha\) source has its framework in the closed
+box
+\begin{equation}\label{eq:Broot}
+\begin{gathered}
+\frac{4\gam}{9}\le k\le\frac94,\quad
+-\frac94\le A\le0,\quad-\frac94\le B\le\frac94,\quad
+|c|,|d|\le1,\\
+|u_i|,|v_i|\le1,\quad0\le x_0\le1,\quad
+|x_1|,|x_2|\le1,\quad |q_i|\le2.
+\end{gathered}
+\end{equation}
+The lower bound on \(k\) follows from \(F\le(9/4)k\), and the other
+bounds from the complete bands and actual sign normalizations.
+The root retains the complete fibre conditions, not merely the box.
+In particular it does not discard the proper negative domain with
+\(k\le2\). An additional shared head budget \(pk\le4\), when used,
+follows from the leading \(3\times3\) determinant: its magnitude is
+\(pk\), and the maximum determinant on the real unit-entry cube is
+\(4\). For completeness, multilinearity reduces that maximum to
+sign matrices; their \(3\times3\) determinants are multiples of
+four, while the Hadamard bound is \(3\sqrt3<8\).
+
+All intersections, minima, and maxima include ties.
+Zero coefficients are handled before division. The point \(R=0\)
+cannot support a high source and is rejected as an empty
+positive-tail fibre. No early generic-position restriction is needed.
+
+\section{Rational certificates and mixed-height coverage}
+\label{sec:certificates}
+
+The remaining finite proof obligation on \eqref{eq:Broot} is that every
+complete framework has \(\cB(\vartheta)\le\alpha\).
+Discovery proposes subdivisions and terminal certificates.
+Acceptance checks them by exact rational arithmetic on their
+complete declared sources. Floating-point optimization may guide
+discovery but is not an acceptance criterion.
+
+\subsection{Necessary outer systems}
+Each actual source gives all coordinates and products simultaneously.
+Necessary polynomial inequalities may be relaxed over a rational box,
+provided the relaxation contains this same source. For example, for
+\(L_x\le x\le U_x\), \(L_y\le y\le U_y\), the shared product \(z=xy\)
+satisfies
+\begin{align*}
+z&\ge L_xy+L_yx-L_xL_y,&
+z&\ge U_xy+U_yx-U_xU_y,\\
+z&\le L_xy+U_yx-L_xU_y,&
+z&\le U_xy+L_yx-U_xL_y.
+\end{align*}
+A product appearing in several rows is not assigned independent
+physical values. Enclosures are outward. Sign-sensitive division or
+use of a selected min/max formula requires qualification on the entire
+box, or subdivision that retains every alternative.
+
+If the necessary rows are \(a_j\cdot z\le b_j\), exact nonnegative
+weights give
+\[
+a=\sum_j\lambda_ja_j,\quad
+B=\sum_j\lambda_jb_j,\quad
+a\cdot z\le B,\quad\lambda_j\ge0.
+\]
+A box lower bound for \(a\cdot z\) greater than \(B\) rules out the
+source. The acceptor checks all weights, row identities, endpoints,
+and strict comparisons as rationals.
+An interval contradiction is the one-expression case.
+The actual height can be introduced as a shared coordinate through
+\[
+rF-r^2-st=0,
+\]
+using both inequality directions. It must not be replaced by the
+\(X\)-specific objective \(r-w\).
+
+\subsection{Height certificates and feasible transports}
+Suppose \(F=h\cdot z\), after introducing a height coordinate if
+necessary. For \(t>0\), let \(c=a-th\) and
+\[
+m=\sum_i\min(c_iL_i,c_iU_i).
+\]
+Then
+\begin{equation}\label{eq:heightcert}
+tF=a\cdot z-c\cdot z\le B-m.
+\end{equation}
+Thus \(B-m\le t\amin\) proves \(F\le\alpha\).
+It does not establish infeasibility.
+
+Other safe terminals use feasible transformations to a domain already
+bounded by \(\alpha\). If every source \(z\) in a box has a complete
+image \(T(z)\) with \(F(T(z))\ge F(z)\), and
+\(F(T(z))\le\alpha\), that box is safe.
+The transformation must preserve the actual coupled matrix bands,
+rather than changing unrelated abstract capacities.
+
+A uniformly certified family near cross-saturated tails illustrates
+this rule. Introduce nonnegative gaps \(\sigma=r-s,\tau=r-t\) in
+\[
+H=\begin{pmatrix}r&r-\sigma\\r-\tau&w\end{pmatrix},
+\qquad
+F=\frac{(r-\sigma)(r-\tau)}r-w.
+\]
+At fixed \(p\), twenty actual band slacks and
+\((r+w,\sigma,\tau)\) form twenty-three coordinates.
+For each of four rational centres \(c_j\), an exact preconditioner
+\(C_j\) and the full Jacobian \(J\) satisfy, throughout
+\(\iin{z-c_j}\le1/1250\),
+\[
+\iin{I-C_jJ}<1/25.
+\]
+Whole-box certificates also bound the two inverse-coordinate
+directions \(J^{-1}e_\sigma,J^{-1}e_\tau\) in infinity norm by \(3\),
+their height derivatives by \(-1/10\), and all unselected physical
+slacks strictly away from zero. Hence a source satisfying
+\[
+\iin{z-c_j}+3(\sigma+\tau)<1/1250
+\]
+can follow the negative \(\sigma\), then negative \(\tau\), direction
+to a complete \(X\) source inside the same certified box.
+The selected slacks and \(p,r+w\) remain fixed.
+Uniform inverse-Jacobian and strict distance bounds ensure existence
+to the endpoint. Integration gives
+\begin{equation}\label{eq:gapsafe}
+F(z)\le\alpha-\frac{\sigma+\tau}{10}.
+\end{equation}
+The rational centres and matrices are archived proof data; no
+numerical trajectory establishes the assertion. In particular there
+is no exchange of unequal pivots before reaching a tied boundary.
+Further safe transformations obey the same source and
+height-direction requirements.
+
+\subsection{Complete composition}
+\begin{lemma}[Mixed threshold and algebraic coverage]\label{lem:mixed}
+Let \(\gam<\alpha\). Let a rational root \(Q_0\) contain a canonical
+image of every hypothetical source with \(F>\alpha\), with
+height at least that of the source.
+Suppose a finite acyclic rooted proof graph covers \(Q_0\) by exact
+subdivisions, qualified contractions, and source-preserving coordinate
+changes that do not decrease the height of a hypothetical source.
+Suppose every terminal establishes either:
+\begin{enumerate}
+\item no complete source with \(F\ge\gam\) exists in its region; or
+\item every complete source in its region has \(F\le\alpha\).
+\end{enumerate}
+If every child is accounted for and each terminal source is bound
+to its declared root path, then no original source has \(F>\alpha\).
+\end{lemma}
+\begin{proof}
+A hypothetical source has a canonical image in \(Q_0\) with no
+smaller height, still exceeding \(\alpha>\gam\).
+At a subdivision it belongs to a closed child; overlaps on boundaries
+are harmless. A qualified contraction has already certified its
+discarded region impossible or safe. A coordinate change maps the
+same source into its declared image at no smaller height.
+Following these relations through the finite complete graph reaches
+a terminal and contradicts either terminal assertion.
+\end{proof}
+
+Previously accepted subproofs may be composed by this lemma, but only
+on the same mathematical sources. A matching dimension or a cached
+success label is insufficient. The implementation binds model,
+parent, path, endpoints, transformation prefix, rule implementation,
+and proof payload. The final traversal reconstructs the original
+root boxes and verifies every grafted subproof's source.
+Hashes establish byte identity; mathematical validity comes from
+the accepted subproof and its declared rule.
+
+\section{The complete negative-diagonal certificate}\label{sec:Bcomplete}
+
+\begin{proposition}[Certified complete negative-diagonal bound]
+\label{prop:B}
+Every complete real source with \eqref{eq:BD},
+\(p,k,r>0\), and \(0<s,t<r\), satisfies
+\[
+F=r+st/r\le\alpha.
+\]
+\end{proposition}
+
+The computation uses the full seventeen-variable root \eqref{eq:Broot}
+with Theorem~\ref{thm:fibre}'s exact framework semantics.
+Its model contains every hypothetical \(F>\alpha\) source after
+the three actual paths; it imposes no selected tail-contact equation
+on all canonical images. Supplementary Materials~S5--S7 specify the
+model, acceptance rules, and complete certificate data.
+
+\subsection{Base certificate and remaining source domains}
+Exact rational verification of the base certificate accepted
+\(749693\) nodes: \(374846\) splits, \(374839\) contradiction terminals,
+four safe terminals, and four open terminals. Its \(750\) enclosed
+continuation certificates had no internal open terminal.
+The four remaining domains are closed dyadic boxes reconstructed
+from the original seventeen-dimensional root. Denote them by
+\(Q_1,Q_2,Q_3,Q_4\), in the order specified in Supplementary Material~S7.
+The base certificate proves the required bound outside their union.
+
+Complete certificates for \(Q_1,Q_3,Q_4\) cover, respectively,
+\(111\), \(159\), and \(56\) constituent sources.
+The certificate for \(Q_2\) has \(240\) constituent sources;
+\(239\) are covered by its component certificates and the remaining
+one by the local completion described below. Every constituent
+source retains its complete ancestor transformation prefix.
+
+\subsection{Local completion}
+The remaining source in \(Q_2\) is covered by a binary subtree with
+\(54\) distinct, prefix-free terminal paths. Their union exhausts
+that subtree. The terminal justifications are
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Terminal justification&Count\\
+\midrule
+Contradiction certificates&48\\
+Height and feasible-transport certificates&3\\
+Canonical-source threshold exclusions&3\\
+\midrule
+Total&54\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each canonical-source threshold exclusion covers both qualified
+charts of its declared source. The three height or transport
+certificates establish safety at \(\alpha\).
+The mathematical verifiers and source-prefix checks were executed
+for this local completion. It covers one constituent source of
+\(Q_2\); full coverage of \(Q_2\) also uses the other \(239\) sources.
+
+\subsection{Composition at the original root}
+The local completion is attached to its exact source in \(Q_2\),
+preserving the already verified complement. The four complete
+certificates are then attached to the four open terminals of the
+base certificate. The composition traverses the actual base-root
+structure and reconstructs its entire set of open boxes.
+For each attachment it checks the original model, root path,
+box endpoints, and full transformation prefix against the
+corresponding complete certificate.
+The reconstructed boxes coincide with \(Q_1,Q_2,Q_3,Q_4\).
+Thus every open base-root source is covered by a matching complete
+proof, and the assembled certificate has no uncovered source.
+
+The original-parent coverage count is \(469/469\).
+This count provides a consistency check; coverage follows from
+the complete root traversal and exact source comparisons.
+Supplementary Material~S7 records the paths, endpoints, certificate
+identities, and composition results needed to check these bindings.
+
+\begin{proof}[Proof of Proposition~\ref{prop:B}]
+A hypothetical \(F>\alpha\) source has \(p>1\) by \eqref{eq:F4p}.
+Its actual sign normalization and Theorem~\ref{thm:fibre}'s paths
+produce a complete framework in \eqref{eq:Broot} with
+\(\cB>\alpha\). The accepted base proof and the four full-parent
+completions form the finite complete cover just described.
+Each contradiction terminal excludes this high source, and each
+safe terminal bounds its height by \(\alpha\). All original root
+paths and transformed sources are accounted for.
+Lemma~\ref{lem:mixed} therefore excludes the hypothetical source.
+\end{proof}
+
+\begin{remark}[Verification and composition]
+The final composer reuses identified, previously accepted complete-root
+and parent receipts. It verifies their producer and payload identities
+and exact source bindings; it does not rerun every terminal's
+mathematics. The base tree retains four open records, each discharged by an
+attached complete certificate. The records retain their original
+meaning in this composition.
+Likewise a source safe at \(\alpha\) need not be infeasible at
+the lower threshold \(\gam\).
+\end{remark}
+
+\section{Completion of the global proof}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The lower bound is \cite[Theorem~2.2]{ChenEdelmanUrschel2026};
+Section~\ref{sec:alpha} describes the exact corresponding witness
+in the archive.
+
+For the upper bound, fix an arbitrary nonzero real matrix and
+arbitrary legal complete-pivoting path. Normalize its maximum initial
+entry to one and absorb the path's permutations into the matrix.
+If a pivot vanishes, its whole trailing block vanishes.
+Corollary~\ref{cor:firstfour} bounds all growth through the fourth
+stage by \(4<\alpha\). It remains to exclude a fifth-pivot value
+larger than \(\alpha\).
+
+Proposition~\ref{prop:lift} gives the complete two-step lift.
+Lemma~\ref{lem:saturation} gives a same-height complete source on
+the \(D\) or \(X\) saturated boundary. Actual sign changes put every
+\(X\) source into \eqref{eq:Xtail}, bounded by
+Proposition~\ref{prop:X}.
+For a \(D\) source, \eqref{eq:Dtail} with positive sign or a zero
+arm has height at most \(r\le4\); a tied arm goes to \(X\).
+Every remaining source belongs to \eqref{eq:properB}, so
+Proposition~\ref{prop:B} applies.
+No fifth pivot exceeds \(\alpha\).
+Since the matrix and legal path were arbitrary,
+\(\rho_5^\R\le\alpha\), proving equality.
+\end{proof}
+
+\section{Reproducibility and scope}\label{sec:reproducibility}
+The computational proof separates discovery, verification, and
+composition. Discovery constructs cuts, subdivisions, and feasible
+transformations. Verification checks finite rational inequalities
+and qualified analytic rules on complete sources. Composition
+establishes that verified pieces cover the original domain with
+matching source data. This separation allows component proofs to
+be checked and reused independently.
+
+The supplementary documentation is organized into eight modules,
+listed in Appendix~\ref{app:artifacts}. It identifies the polynomial
+and algebraic witness, analytic reductions, complete \(X\) certificates,
+negative-diagonal model, terminal rules, and final coverage graph.
+The accompanying source and dependency index specifies exact file
+identities, source domains, verification entry points, and the scope
+of each recorded run. Large certificate payloads are separate from
+the readable documentation; full verification requires those payloads
+and all referenced component dependencies.
+
+The base-root verification used exact rational arithmetic and took
+\(22815.35\) recorded seconds. The final local verification took
+approximately \(184.37\) seconds. These are the times for their
+respective verification scopes, not the total cost of discovery
+or of checking the entire proof. Later parent and root compositions
+reuse the identified component verification records while checking
+exact source bindings. A fresh end-to-end verification therefore
+requires execution of every necessary component verifier as well
+as the final composition. Checking a file's hash alone establishes
+identity, not mathematical validity.
+
+A companion Lean development formalizes the algebraic constant and its
+attainment, key analytic reductions, and a conditional final theorem.
+The latter retains two explicit global safety hypotheses, for the
+physical \(X\) domain and the original \(B\)-root capacity endpoints.
+The present proof addresses these obligations through the written
+analytic arguments, exact certificates, and source-composition logic;
+their complete discharge in Lean, including the remaining model and
+coverage connections, is not claimed. The Python/C++ verifier
+implementations are not formally verified. This is a computer-assisted
+proof with partial Lean formalization. Component verifications and
+final composition are distinguished in Supplementary Material~S8;
+composition does not re-execute every earlier verifier.
+
+\paragraph{Data and code availability.}
+The supplementary documentation accompanies the manuscript and
+identifies the code, models, and certificate payloads used in the proof.
+Requests for the full computational materials may be directed to
+\href{mailto:qianli.ma@zju.edu.cn}{\texttt{qianli.ma@zju.edu.cn}}.
+
+The theorem determines the maximum value and supplies an attaining
+matrix. Classification of all maximizers, uniqueness modulo symmetry,
+and the analogous complex-matrix value remain separate questions.
+
+\section*{Acknowledgments}
+Qianli Ma led and coordinated the research program, managed its
+progress and budget, and made the final decisions on the selection,
+continuation, or termination of research approaches. He organized
+the allocation of scientific tasks and responsibilities among the
+research agents.
+
+AI models and tools, including GPT, Claude, Wujie AI AGENT, and
+Deepseek Harness, played substantial roles in developing the proof.
+We acknowledge their important contributions to the research process.
+The authors retain responsibility for the mathematical claims,
+supporting evidence, and final manuscript.
+
+\appendix
+% Replacement appendix section; insert after the manuscript's \appendix.
+\section{Proof modules and supplementary material}\label{app:artifacts}
+
+Supplementary Materials S1--S8 organize the analytic and computational
+dependencies by their mathematical role. The theorem statements in the
+text specify the domains on which each component is used.
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.08}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.21\linewidth}
+                        >{\raggedright\arraybackslash}p{.75\linewidth}@{}}
+\toprule
+Supplementary unit&Mathematical content and role\\
+\midrule
+\endhead
+S1: Constant and attainment&
+The degree-\(61\) polynomial, exact isolating interval, identity with
+the constant of \cite{ChenEdelmanUrschel2026}, and supplementary
+algebraic reconstruction of an attaining matrix. The lower bound is
+\cite[Theorem~2.2]{ChenEdelmanUrschel2026}.\\[1mm]
+
+S2: Scalar bounds and complete coordinates&
+The conditional three-pivot envelope, the first-four-pivot bound,
+the complete two-step lift, and the same-height \(D/X\) saturation
+proved in Sections~\ref{sec:scalar}--\ref{sec:saturation}.
+The saturation statement used here requires positive fifth-pivot height.\\[1mm]
+
+S3: Canonical representative and height&
+Qualified representative existence, exact row-scale reconstruction,
+and canonical localization and height certificates, established
+independently of the final negative-diagonal bound.
+Six complete exclusion trees contain \(228542\) nodes and \(114274\)
+contradiction leaves. The subsequent \(152467\)-record localization
+uses \(208274\) contraction certificates; its three terminal
+boxes are covered by the algebraic height theorem.\\[1mm]
+
+S4: Complete cross-saturated domain&
+The four source domains and exact sign and transpose maps of
+Proposition~\ref{prop:X}, including their shared boundaries.
+The low-\(r\) component uses S3.
+All statements concern complete real matrices; no rank, cofactor-sign,
+or auxiliary entry assumption is added.\\[1mm]
+
+S5: Negative-diagonal framework&
+The three complete feasible paths, attained six-variable maximum,
+and seventeen-variable root of Section~\ref{sec:fibre}.
+Zero factors, capacity ties, and the proper negative-diagonal
+range \(k\le2\) are retained.\\[1mm]
+
+S6: Exact acceptance rules&
+Rational interval and nonnegative-combination certificates, qualified
+contractions, algebraic-height rules, and complete feasible transports.
+Contradictions above \(\gam\) and safety at \(\alpha\) have the
+distinct semantics of Lemma~\ref{lem:mixed}.\\[1mm]
+
+S7: Complete negative-diagonal cover&
+The accepted base proof, complete parent proofs, and exact source
+bindings of Section~\ref{sec:Bcomplete}.
+The final \(54\)-terminal source completes the last parent's
+\(240/240\) responsibilities and the total \(469/469\) original
+parents. Four source-bound completions cover the base tree's four
+retained open records; no original source region remains uncovered.\\[1mm]
+
+S8: Reproduction and dependency index&
+Model and payload identities, acceptance records, executable
+dependencies, and source-composition maps.
+The final composition's \(357\) direct dependencies are supplemented
+by their recursive dependencies; the direct list alone is not the
+complete proof archive.\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+The dependency direction is S3 to S4, and then S4 to the
+cross-saturated safety rules used in S6--S7; the final
+negative-diagonal cover is not an input to S3 or S4.
+Counts identify accepted objects, while their rules and exact
+source bindings establish validity and coverage.
+An \(\alpha\)-safe region may contain feasible matrices.
+
+Component acceptance and final composition are separate operations.
+The latter reuses identified acceptance records and checks their
+source bindings; it does not rerun every component's mathematics.
+Accordingly, the completed composition is not claimed to be a new
+from-scratch replay of the entire dependency chain.
+The supplementary index distinguishes the recorded acceptance runs,
+the checks performed during composition, and the materials required
+for independent reproduction.
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

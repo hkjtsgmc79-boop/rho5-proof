@@ -1,0 +1,28 @@
+{
+  "status": "ACCEPTED_DECLARED_SCOPE",
+  "at": "2026-09-12T10:24:17.832257+08:00",
+  "scope": "For arbitrary original Matrix5 and arbitrary original LegalTrace, early readouts have the 1,2,9/4,4 scale bounds includingzero/short/tied paths. Actual growth>4 is the original fifth readout; fifth upper bound still an explicit input to any cap theorem.",
+  "source_sha256": {
+    "src/Rho5/ExternalFourthPivot/Readout.lean": "328d677a437bda3215459611f7e5bfa7d6244d3ada3654b7ed99b08dbb4b1690",
+    "src/Rho5/ExternalFourthPivot/Transport.lean": "2c92b723ab9b2d34ed16fb7e6522214c71343414099cac5718443ab719295058",
+    "src/Rho5/ExternalFourthPivot/NormalizedFourth.lean": "9f032ca617f4adca91265ae6c9beb14e095f845e1ad97bcc7429f87a6a58c632",
+    "src/Rho5/ExternalFourthPivot/Main.lean": "5062a730e57e28b8e02ff540abadf83f13830ade1ea95043fe54cb1764e80fc9",
+    "src/Rho5/ExternalFourthPivot/Smoke.lean": "3781d4145f59060eb2f178e82a0f92fe67c47ae31098b308cb147cb4a3907061",
+    "src/Rho5/ExternalFourthPivot/SharpEarly.lean": "73595ea64c061bd85ffc0056f5419fed18dabe38257fe5aa636e36a7c09e52db",
+    "src/Rho5/ExternalFourthPivot/FifthReduction.lean": "7d2bf3ebe86f3674dfd71943b9d426b15bebfe986261537cc6532189ccbe4f98",
+    "src/Rho5/ExternalFourthPivot.lean": "dcb1ce4ba6a67c618fea3921bb6ee8251b4d9a9c2f44ac3e2462e4f7e4ee6402",
+    "src/Rho5/ExternalFourthPivot/Regression.lean": "4fdb0beeac5479316d667c29fa96671fcf8501ac89034cada22666ed79484cc0",
+    "src/Rho5/ExternalFourthPivot/Audit.lean": "d36e4b9adabf5b73c474484651a2f7013982711b6c2729a6e2f7eca0faa4d3d4"
+  },
+  "success_logs_sha256": {
+    "results/actual_success_logs/build_all_stdout.log": "e415efc977ca5cf7d2d6402c386d700554059baefe6afa416dc2d1c43d27a4f6",
+    "results/actual_success_logs/mod_Rho5_ExternalFourthPivot_Audit.log": "4dd2ede836a69e7994d65aada38c493a7701937aa5ff22fc62529bcfa987722f"
+  },
+  "actual_named_axioms": 18,
+  "ready_sha256": "bcf3794c3d462be0e42f278b7b5294b07e688b292112c312acbf8c3af3d8ffb2",
+  "notes": [
+    "10 actual successes/18 named axiom outputs; same18 targets as external Audit; no proof-body expansion. Eight external source files unchanged, Regression ordinary API/proof-body repairs, Audit type-output change. 82 frozen ancestor source bindings reused from full successful driver/self-review."
+  ],
+  "root_lean_runs": 0,
+  "review": "Owner full self-review reused; exact artifacts, actual successful compiler and axiom evidence, statement scope and assembly checks only."
+}

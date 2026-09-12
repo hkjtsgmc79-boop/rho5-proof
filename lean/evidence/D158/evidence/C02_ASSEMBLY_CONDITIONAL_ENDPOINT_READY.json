@@ -1,0 +1,81 @@
+{
+  "schema": "RHO5_C02_STAGE_READY_V1",
+  "stage": "ASSEMBLY_CONDITIONAL_ENDPOINT_READY",
+  "created_at": "2026-09-12T05:41:46.050817+00:00",
+  "ready": true,
+  "coordinator_acceptance": "PENDING",
+  "target_names": [
+    "Rho5.Integration.StagedAssembly.rho5Trace_eq_alpha_of_safety",
+    "Rho5.Integration.StagedAssembly.legal_growth_le_alpha_of_safety",
+    "Rho5.Integration.StagedAssembly.fifth_readout_le_alpha_of_safety",
+    "Rho5.Integration.StagedAssembly.legal_growth_le_alpha_via_fifth_of_safety",
+    "Rho5.Integration.StagedAssembly.high_path_fifth_of_safety",
+    "Rho5.Integration.StagedAssembly.det_endpoint_of_safety"
+  ],
+  "full_actual_types": "results/FULL_TARGET_TYPES.txt",
+  "types_sha256": "1495c245fe170a91bdd65d668c848723faf2adfee7235cc906a8932b2d2046b4",
+  "axioms": {
+    "rho5Trace_eq_alpha_of_safety": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "actual_log": "Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+      "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2"
+    },
+    "legal_growth_le_alpha_of_safety": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "actual_log": "Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+      "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2"
+    },
+    "fifth_readout_le_alpha_of_safety": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "actual_log": "Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+      "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2"
+    },
+    "legal_growth_le_alpha_via_fifth_of_safety": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "actual_log": "Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+      "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2"
+    },
+    "high_path_fifth_of_safety": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "actual_log": "Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+      "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2"
+    },
+    "det_endpoint_of_safety": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "actual_log": "Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+      "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2"
+    }
+  },
+  "build_status": "results/BUILD_STATUS.json",
+  "actual_import_source_olean_binding": "results/IMPORT_SOURCE_OLEAN_BINDING.json",
+  "binding_sha256": "fe61675a87ff3c329e423f3758d4f51e32de4dda48d98faf5886c47453b4c36d",
+  "remaining_premises": [
+    "∀ x : Rho5.LocalAnalysis.X, Rho5.LocalAnalysis.V43.Physical x → Rho5.LocalAnalysis.height x ≤ Rho5.Algebraic.AlphaRoot.alpha",
+    "∀ zStar : Rho5.Certificate.B16.Point, Rho5.Shared.BRootCapacityEndpoint.IsRootCapacityEndpoint zStar → zStar 23 ≤ Rho5.Algebraic.AlphaRoot.alpha"
+  ],
+  "unconditional_final_ready": false
+}

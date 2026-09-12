@@ -1,0 +1,85 @@
+{
+  "module_count": 646,
+  "source_bytes": 35027225,
+  "default_imports_present": true,
+  "selected_revision_checks": [
+    {
+      "module": "Rho5.ExternalBFibreCapacity.FiniteBounds",
+      "source_sha256": "16efff267512872cf33d612beb0e61d0feacd2fca3301c68350113f635d4b028",
+      "expected_olean_sha256": "78190e5fd4b4e4c642be6c19ff2e3d8293eaf037cb0fd28d03af4e4c9394bb12"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P000",
+      "source_sha256": "55a0dd38e62f99bd89c29668e60e15ad4a215f91831b70ec6483c12b28e4f536",
+      "expected_olean_sha256": "eaceb506793304f7588fc98930b7e72769784121819786762fc41c30f92f670e"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P001",
+      "source_sha256": "4d11a37f428fc217650d2dd152bb6bedab67c0ecfdd62abd37327966a285d865",
+      "expected_olean_sha256": "288dfdb9f1df71c4b10ccf126c626898d3a2ba0afb9f67320cdd35d458cbf522"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P002",
+      "source_sha256": "9f3a85a6f790f87faf652d6d01a182c20646f496b4d29368e576fe9cce6aadac",
+      "expected_olean_sha256": "4ccdf6a015fac00deae13e3b921d62e54a3e8fcb5f5d4fcb126739c0b7f30934"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P003",
+      "source_sha256": "3055c334e6edc6843b248a80653a5ecd8c34f524e69df6374945f8ceed4dade3",
+      "expected_olean_sha256": "5f77c3e0934c7d3c71b925f0737780c4ec0def62e95245f914f21c36f4a89f96"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P004",
+      "source_sha256": "617206b60bf3be4a4afbea0c454279ae82402d23f57eb59d6946aa288f033bf1",
+      "expected_olean_sha256": "49eaae8919a4d6b88a1af926eaf942b10d8856f8c044cfd39d64376b1b7d35a4"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P005",
+      "source_sha256": "39f0ce1c8bb44a215efcc57621e8bb559eef12376c715ba75a0da786d9b35b38",
+      "expected_olean_sha256": "f50b2350973911c63010e48a76fe8b741a2046c3cc6ae8f5dc900170fca8b574"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P006",
+      "source_sha256": "81039631d85e9a42dbcd1c00c96f6879bec1b7bc00a683b45d076ccd027e7422",
+      "expected_olean_sha256": "d77a0b57eabc662487a55151754be733e77fd8e603ff29bde62cf5bc5cf41333"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P007",
+      "source_sha256": "db0429900f0e889b3720cd31dc3e65f3cebb333b41a50b469e09bf9aa984d431",
+      "expected_olean_sha256": "5b675f275fea98601727b60c7aaa6cb48f5ca45ace156c0a32423ff153eeb472"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P008",
+      "source_sha256": "24181047bd4105d70d62b8dd9f120bb9b0a80c3a21a708d2792f2e9c90da6642",
+      "expected_olean_sha256": "f7f82ff604662d3e4a9157a7ae7f31ed154d618279404c44f411d47c43cd9359"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P009",
+      "source_sha256": "5812dd13d45a37112fd38738eea15e530dc639722f80c4425bc99796357689fd",
+      "expected_olean_sha256": "45671596d01e6c615dfcd24cc5e832625b9f854c14742bbc95d7bd8f9c44adfe"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P010",
+      "source_sha256": "1bd66e26e6d98d0b5bb1deff9736392c93f3a5dbca1a08321e41cfcfc6862477",
+      "expected_olean_sha256": "ddda74d266add812234c152f70c178ce96709e88584bf651209842e085e81dbb"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P011",
+      "source_sha256": "6d320f14cdff1b0ceebf4619014045b525602a9dd110897d1ba92d5bf3433f2a",
+      "expected_olean_sha256": "f3af0231b0575300450d7c357fd9e07bb0422f14e9b9478f823f046855e4e3be"
+    },
+    {
+      "module": "Rho5.Algebraic.CriticalExistence.JetBounds.P061",
+      "source_sha256": "3fc3a478244cb3ad3a3a1441e2bfbada4b744cea31487b9a167b98fba4747136",
+      "expected_olean_sha256": "8f7f401426cd902c57802d5604188006b4862ff97cdd2bfe1fa598cdbf638449"
+    }
+  ],
+  "default_lake_library": "Rho5",
+  "local_module_root": "Rho5",
+  "default_library_globs": [
+    "Rho5.PhaseOne"
+  ],
+  "manifest_unchanged": true,
+  "toolchain_unchanged": true,
+  "source_copy_hashes_verified": 646
+}

@@ -1,0 +1,21 @@
+{
+  "status": "ACCEPTED_DECLARED_SCOPE",
+  "at": "2026-09-12T08:40:13.137647+08:00",
+  "scope": "Actual positive-resource local escape with arbitrarily small displacement; local Physical maximum inside strict cube implies consumed=0. No global cube coverage or alpha upper.",
+  "sources_sha256": {
+    "src/Rho5/Shared/V43PositiveResourceEscape.lean": "0396e76b1793a4535cd4cfb35b68e18d62e428d4d51a4e4f1be8123ae535e7fc",
+    "src/Rho5/Shared/V43PositiveResourceEscape/Audit.lean": "9c90e96e95ae03659b837da9fbf1a59b2a5e6447d6ece6e01176955fc9743a27"
+  },
+  "success_logs_sha256": {
+    "logs/Escape.log": "885aacd798f028e3986b73d9d24e2cf5323a61c24ccd66e6a1aa1420a1ba59b5",
+    "logs/Audit.log": "8d228cd9b758b5caaefc900f2931dfb320bd0a1b833a33e9921718b48e3644e7"
+  },
+  "actual_named_axiom_records": 6,
+  "ready": "results/POSITIVE_RESOURCE_ESCAPE_READY.json",
+  "ready_sha256": "0a492e449db742543b8306279be582d9e9396c68b7d6346eea92017b9e36a656",
+  "notes": [
+    "ODE dependencies reused; prospective ODE-import-only AS32GiB, RSS8GiB unchanged; not a global budget increase."
+  ],
+  "root_lean_runs": 0,
+  "review": "Reused owner/external self-review. Necessary exact interface/source-binding and actual successful compile/standard axiom evidence only; no repeated mathematical audit or kernel replay."
+}

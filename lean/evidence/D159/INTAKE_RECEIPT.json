@@ -1,0 +1,10 @@
+{
+  "status": "ACCEPTED_SCOPED",
+  "card": "D159",
+  "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D159",
+  "hashes_checked": 5,
+  "checks_pass": true,
+  "review": "Reused owner self-review; local published artifact hashes and required scope checked. No root Lean rebuild or second mathematical audit.",
+  "role": "Phase1 external obligation registry; not verification of original computations",
+  "delivery_issue": "Owner sandbox disallowed shared outputs; coordinator copied existing files within authorized project workspace."
+}

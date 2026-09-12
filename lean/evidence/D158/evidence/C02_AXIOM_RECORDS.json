@@ -1,0 +1,83 @@
+{
+  "Rho5.Integration.StagedAssembly.baseline": {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "actual_log": "Rho5.Integration.StagedAssembly.BaselineAudit_1789189203392537512.log",
+    "log_sha256": "1e1a4b727ecfa71ed8bba083a14a6c0600e4b75177e17cb09c0e4ee99b60e6de"
+  },
+  "Rho5.Integration.StagedAssembly.exists_global_max_X_or_root_endpoint": {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "actual_log": "Rho5.Integration.StagedAssembly.RootReductionAudit_1789191075370226902.log",
+    "log_sha256": "efcb96df6e7ad862ce354d25b431e88490dd626da8a162c136466574d4a99e05"
+  },
+  "Rho5.Integration.StagedAssembly.exists_X_or_root_endpoint": {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "actual_log": "Rho5.Integration.StagedAssembly.RootReductionAudit_1789191075370226902.log",
+    "log_sha256": "efcb96df6e7ad862ce354d25b431e88490dd626da8a162c136466574d4a99e05"
+  },
+  "Rho5.Integration.StagedAssembly.rho5Trace_eq_alpha_of_safety": {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "actual_log": "Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+    "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2"
+  },
+  "Rho5.Integration.StagedAssembly.legal_growth_le_alpha_of_safety": {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "actual_log": "Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+    "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2"
+  },
+  "Rho5.Integration.StagedAssembly.fifth_readout_le_alpha_of_safety": {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "actual_log": "Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+    "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2"
+  },
+  "Rho5.Integration.StagedAssembly.legal_growth_le_alpha_via_fifth_of_safety": {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "actual_log": "Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+    "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2"
+  },
+  "Rho5.Integration.StagedAssembly.high_path_fifth_of_safety": {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "actual_log": "Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+    "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2"
+  },
+  "Rho5.Integration.StagedAssembly.det_endpoint_of_safety": {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "actual_log": "Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+    "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2"
+  }
+}

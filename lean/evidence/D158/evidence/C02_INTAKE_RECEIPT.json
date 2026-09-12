@@ -1,0 +1,51 @@
+{
+  "schema": "RHO5_COORDINATOR_SCOPED_INTAKE_V1",
+  "status": "ACCEPTED_SCOPED",
+  "accepted_at_utc": "2026-09-12T05:50:27.117509+00:00",
+  "intake_method": "Bounded source/build-log/axiom/hash intake; owner mathematical and dependency reviews reused; no Lean invocation, no cold build and no rescan of external dependency manifests.",
+  "accepted_gates": [
+    "ASSEMBLY_BASELINE_READY",
+    "ASSEMBLY_X_B_ROOT_REDUCTION_READY",
+    "ASSEMBLY_CONDITIONAL_ENDPOINT_READY"
+  ],
+  "scope": "Three conditional assembly stages only; exact XGlobalSafety and original D142 RootEndpointSafety remain unpaid.",
+  "modules": 8,
+  "named_standard_axiom_targets": 9,
+  "source_root": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/codex-parallel/C02/src",
+  "x_object_root": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build",
+  "remaining": [
+    "∀ x : Rho5.LocalAnalysis.X, Rho5.LocalAnalysis.V43.Physical x → Rho5.LocalAnalysis.height x ≤ Rho5.Algebraic.AlphaRoot.alpha",
+    "∀ zStar : Rho5.Certificate.B16.Point, Rho5.Shared.BRootCapacityEndpoint.IsRootCapacityEndpoint zStar → zStar 23 ≤ Rho5.Algebraic.AlphaRoot.alpha"
+  ],
+  "unconditional_final_ready": false,
+  "old_C02_PENDING_dependency_binding_resolved": true,
+  "supersedes": "Preliminary C02_staged_assembly only; consume rebound delivery.",
+  "corrections": {
+    "FiniteBounds": {
+      "canonical_source": "16efff267512872cf33d612beb0e61d0feacd2fca3301c68350113f635d4b028",
+      "reproduced_olean": "78190e5fd4b4e4c642be6c19ff2e3d8293eaf037cb0fd28d03af4e4c9394bb12",
+      "actual_exit0_receipts": 42,
+      "affected_upstream": 36,
+      "C02_successors": 6,
+      "all_42_source_and_success_log_hashes_match": true,
+      "all_42_live_X_objects_match": true,
+      "old_023_source_binding_still_unknown_and_not_consumed": true
+    },
+    "JetBounds": {
+      "source_owner": "D39",
+      "corrected_modules": 13,
+      "all_13_actual_local_sources_and_live_X_oleans_match": true,
+      "JET_READY_sha256": "fba4de155feb4946f1a15d871151c4c82ed8297dc2e6de9fe91e142595b0a6b1",
+      "owner_proof_stripback_review_reused": 167
+    }
+  },
+  "local_source_hashes_checked": true,
+  "module_actual_exit_codes_checked": true,
+  "standard_axioms_verified_from_success_logs": true,
+  "live_X_checks": {
+    "status": "PASS",
+    "paths": 57,
+    "single_batched_hash_command": true
+  },
+  "coordinator_recompiled_modules": 0
+}

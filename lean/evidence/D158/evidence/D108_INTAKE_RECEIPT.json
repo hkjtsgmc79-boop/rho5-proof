@@ -1,0 +1,21 @@
+{
+  "status": "ACCEPTED_DECLARED_SCOPE",
+  "at": "2026-09-12T09:04:38.537766+08:00",
+  "scope": "Actual local cube/Physical intersection is compact. A supplied member gives a height maximizer; each maximizer is resource-exhausted or on cube boundary. Nonemptiness and global coverage not supplied.",
+  "source_hashes": {
+    "src/Rho5/Shared/V43CompactBoundary.lean": "9ae87912bd9901d972bb1daf3a93d2191a758a01a1b0b832b4b692aaa5c4649d",
+    "src/Rho5/Shared/V43CompactBoundary/Audit.lean": "67cbd2b52838115938ef4da17e13627fffa27f62356bed71c3ef1fecf414322b"
+  },
+  "actual_named_axiom_records": 13,
+  "success_logs_sha256": {
+    "logs/Boundary.log": "56e06b90366776eec6aa69f294bc1207aacc9276d175bfd7341afde76e40499d",
+    "logs/Audit.log": "059262470902f22ee85bb27297a90fb46191d24b327f48bfb5040d927bc31636"
+  },
+  "ready": "results/LOCAL_COMPACT_BOUNDARY_READY.json",
+  "ready_sha256": "6fa82840c12ffc90616a4386630e3a6f3929088255a6b51daa4e0c977ad94ee7",
+  "notes": [
+    "ODE imports reused; authorized AS32 GiB for this chain with unchanged physical RSS8 GiB."
+  ],
+  "root_lean_runs": 0,
+  "review": "Reused owner/external self-review; necessary exact source/interface and successful compile/standard axiom evidence only. No repeated mathematical audit or kernel replay."
+}

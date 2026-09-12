@@ -1,0 +1,28 @@
+{
+  "schema": "RHO5_C02_STAGE_READY_V1",
+  "stage": "ASSEMBLY_BASELINE_READY",
+  "created_at": "2026-09-12T05:41:46.050817+00:00",
+  "ready": true,
+  "coordinator_acceptance": "PENDING",
+  "target_names": [
+    "Rho5.Integration.StagedAssembly.baseline"
+  ],
+  "full_actual_types": "results/FULL_TARGET_TYPES.txt",
+  "types_sha256": "1495c245fe170a91bdd65d668c848723faf2adfee7235cc906a8932b2d2046b4",
+  "axioms": {
+    "baseline": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "actual_log": "Rho5.Integration.StagedAssembly.BaselineAudit_1789189203392537512.log",
+      "log_sha256": "1e1a4b727ecfa71ed8bba083a14a6c0600e4b75177e17cb09c0e4ee99b60e6de"
+    }
+  },
+  "build_status": "results/BUILD_STATUS.json",
+  "actual_import_source_olean_binding": "results/IMPORT_SOURCE_OLEAN_BINDING.json",
+  "binding_sha256": "fe61675a87ff3c329e423f3758d4f51e32de4dda48d98faf5886c47453b4c36d",
+  "remaining_premises": [],
+  "unconditional_final_ready": false
+}

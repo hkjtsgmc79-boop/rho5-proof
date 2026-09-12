@@ -1,0 +1,13 @@
+/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/src/Rho5/PhaseOne.lean:1:0: error: object file '/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Mathlib/Analysis/SpecialFunctions/Log/Deriv.olean' of module Mathlib.Analysis.SpecialFunctions.Log.Deriv does not exist
+=== metrics ===
+lean_args: ['-j1', '-M8192', '-R', '/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/src', '-o', '/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/PhaseOne.olean', '/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/src/Rho5/PhaseOne.lean']
+exit_code: 1
+wall_seconds: 1.930
+child_user_cpu_seconds: 0.207
+child_sys_cpu_seconds: 1.692
+peak_rss_kib: 1028744
+child_vmpeak_kib: 6641016
+rss_watchdog_limit_kib: 8388608
+rss_watchdog_triggered: False
+as_limit_bytes: 12884901888
+as_limit_gib: 12.00

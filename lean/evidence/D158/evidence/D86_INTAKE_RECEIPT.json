@@ -1,0 +1,23 @@
+{
+  "status": "ACCEPTED_FULL_A_AND_B",
+  "time": "2026-09-12T07:04:55.785193+08:00",
+  "scope": "Actual fourth pivot r<=4 from M00=1 and PolyCP only; pays former D66 blocker. Not rho<=4 or rho=alpha.",
+  "sources_sha256": {
+    "src/Rho5/Shared/NestedThreePivot/Defs.lean": "e0c51e259679701d64b9582d04551d07e6971bc958819f0bc2233d17d7c1b5a7",
+    "src/Rho5/Shared/NestedThreePivot/StageA.lean": "24eb193bdf0d634283504ef7dd2a20da1cf58769137c2a04da36a6866d9291bd",
+    "src/Rho5/Shared/NestedThreePivot/StageB.lean": "4bfa06b21318820eda1ce628e6f0b4e54d4d13b752dd4b5912582cff1aafe7f8",
+    "src/Rho5/Shared/NestedThreePivot.lean": "8738f05053f494987b9657689e451051593e5e9a2d61248e5643a943d998bd95",
+    "src/Rho5/Shared/NestedThreePivot/Audit.lean": "f89d68819340fe19c0224db80159b363fd6e767531e739648e58bba28a5a95a9"
+  },
+  "success_logs_sha256": {
+    "results/logs/runA/Defs.log": "28b8a4ff227bfb5b77bf7bcd92ce73096d8d5c67e494e0007afc5935dd56867e",
+    "results/logs/runF/StageA.log": "de01ab7e9fe44acd1a25029741d1d5ef6b33f2d5cac954a8fa59543362c293a8",
+    "results/logs/runH/NestedThreePivot.log": "813d258ddf5c0f040e54970f0747c5ce8a0935ec2cfe93464c07b0a730450b13",
+    "results/logs/runH/Audit.log": "d859547cc7a66eef62ca5cc96a2bc3fc66143e9d2c5dd55ee6db98035036edc5",
+    "results/logs/runH/StageB.log": "acde7728be53a4c13415985763959541693ba71ccf21a36101d11713123f32c3"
+  },
+  "actual_axiom_records": 12,
+  "ready_sha256": "5ecd3e5061027a2df011ad87c14e379ee3fdd3079ad4cca7e08d694222477f25",
+  "root_lean_runs": 0,
+  "review": "Reused owner self-review; checked current hashes, real successful logs, actual named standard axioms and exact final interface."
+}

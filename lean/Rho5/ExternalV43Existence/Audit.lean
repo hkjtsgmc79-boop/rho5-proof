@@ -1,0 +1,25 @@
+import Rho5.ExternalV43Existence
+
+set_option pp.proofs false
+
+#print Rho5.ExternalV43Existence.exists_actual_trajectory_on_time_neighborhood
+#print Rho5.ExternalV43Existence.exists_actual_trajectory
+#print Rho5.ExternalV43Existence.exists_physical_trajectory
+#print Rho5.ExternalV43Existence.exists_resource_endpoint
+#print Rho5.ExternalV43Existence.exists_exhaustion_at_own_resource
+#print Rho5.ExternalV43Existence.exists_zero_time_actual_derivative
+#print Rho5.ExternalV43Existence.exists_guard_boundary_trajectory
+#print Rho5.ExternalV43Existence.height_le_of_actual_trip
+
+#print axioms Rho5.ExternalV43Existence.actual_jacobian_contDiff_one
+#print axioms Rho5.ExternalV43Existence.inverseFormula_eq_certifiedField
+#print axioms Rho5.ExternalV43Existence.inverseFormula_contDiffAt
+#print axioms Rho5.ExternalV43Existence.certifiedField_lipschitz_on_closedBall
+#print axioms Rho5.ExternalV43Existence.exists_actual_trajectory_on_time_neighborhood
+#print axioms Rho5.ExternalV43Existence.exists_actual_trajectory
+#print axioms Rho5.ExternalV43Existence.exists_physical_trajectory
+#print axioms Rho5.ExternalV43Existence.exists_resource_endpoint
+#print axioms Rho5.ExternalV43Existence.exists_exhaustion_at_own_resource
+#print axioms Rho5.ExternalV43Existence.exists_zero_time_actual_derivative
+#print axioms Rho5.ExternalV43Existence.exists_guard_boundary_trajectory
+#print axioms Rho5.ExternalV43Existence.height_le_of_actual_trip

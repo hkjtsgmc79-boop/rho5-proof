@@ -1,0 +1,54 @@
+{
+  "receipt": "GLOBAL_RANGE_READY",
+  "lane": "D92",
+  "phase": "A",
+  "ready": true,
+  "namespace": "Rho5.Shared.GlobalAttainedWitness",
+  "module": "Rho5.Shared.GlobalAttainedWitness.Range",
+  "goal": "4 < rho5Trace and alpha ≤ rho5Trace ≤ 81/16, with the original rho5Trace semantics untouched",
+  "consumed_accepted_inputs": [
+    "D09 Rho5.Algebraic.AlphaRoot.alpha_gt_four : 4 < alpha",
+    "D82 Rho5.ExternalAttainment.actualAlpha_le_rho5Trace : alpha ≤ rho5Trace",
+    "D87 Rho5.LastThreePivotEnvelope.rho5Trace_le_eighty_one_sixteenth : rho5Trace ≤ 81/16",
+    "D18 Rho5.GrowthSupremum.rho5Trace_eq : rho5Trace = sSup GrowthValues (semantics only)"
+  ],
+  "delivered": {
+    "rho5Trace_semantics": "Rho5.GrowthSupremum.rho5Trace = sSup Rho5.GrowthModel.GrowthValues",
+    "alpha_gt_four": "(4:ℝ) < Rho5.Algebraic.AlphaRoot.alpha",
+    "alpha_le_rho5Trace": "alpha ≤ rho5Trace",
+    "rho5Trace_le_eighty_one_sixteenth": "rho5Trace ≤ 81/16",
+    "four_lt_rho5Trace": "(4:ℝ) < rho5Trace",
+    "alpha_le_eighty_one_sixteenth": "alpha ≤ 81/16",
+    "rho5Trace_mem_range": "4 < rho5Trace ∧ rho5Trace ≤ 81/16",
+    "alpha_mem_range": "4 < alpha ∧ alpha ≤ 81/16"
+  },
+  "no_extra_hypotheses": [
+    "none of the phase A theorems has a hypothesis"
+  ],
+  "module_evidence": {
+    "module": "Rho5.Shared.GlobalAttainedWitness.Range",
+    "file": "Rho5/Shared/GlobalAttainedWitness/Range.lean",
+    "exit_code": 0,
+    "wall_seconds": 4.024,
+    "closure_size": 359,
+    "source_sha256": "a511dfef1dec4fffcc54adad63503c27a5c989527cac48b41924d4b6e463a7ed",
+    "source_sha256_remote_prefix": "a511dfef1dec4fffcc54",
+    "olean_sha256": "b8e484e8cfc551ef25b6",
+    "dependency_hash_prefix": "a1446ab1f05d41a2d5fe"
+  },
+  "axioms": {
+    "records": 2,
+    "audited": [
+      "four_lt_rho5Trace",
+      "rho5Trace_mem_range"
+    ],
+    "distinct_sets": [
+      "[propext, Classical.choice, Quot.sound]"
+    ],
+    "sorryAx_present": false
+  },
+  "not_claimed": [
+    "no rho5Trace = alpha claim (D96 owns that equivalence)",
+    "no new rho5Trace definition"
+  ]
+}

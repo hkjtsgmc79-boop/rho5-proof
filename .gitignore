@@ -1,0 +1,10 @@
+.lake/
+downloads/
+replay-output/
+__pycache__/
+*.pyc
+*.olean
+*.ilean
+*.download
+*.assembling
+.DS_Store

@@ -1,0 +1,20 @@
+{
+  "status": "ACCEPTED_SCOPED",
+  "card": "D160",
+  "source": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D160/deliverable",
+  "verified_artifact_hash_count": 660,
+  "copied_modules": 642,
+  "default_upstream": 633,
+  "p01_new_upstream": 138,
+  "nondefault_extras": 9,
+  "product_entry_provided_by_P01": true,
+  "owner_self_review_reused": true,
+  "root_math_review": false,
+  "root_Lean_rebuild": false,
+  "source_selection_limitations": {
+    "binding_source_sha256": 495,
+    "d84_receipt_sources_sha256": 8,
+    "copy_time_only": 134
+  },
+  "scope": "Portable source collection and default import calibration; does not attest fresh-machine cold build"
+}

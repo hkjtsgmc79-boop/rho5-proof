@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper and identify this fixed release when using its source or certificates."
+title: "The exact maximum growth factor for complete pivoting on real 5 x 5 matrices: source and certificates"
+type: software
+authors:
+  - family-names: Ma
+    given-names: Qianli
+    affiliation: "Zhejiang University; WUJIE AI"
+    email: qianli.ma@zju.edu.cn
+  - family-names: Wu
+    given-names: Chao
+    affiliation: "Zhejiang University"
+version: 1.0.0
+date-released: 2026-09-12
+repository-code: "https://github.com/hkjtsgmc79-boop/rho5-proof"
+url: "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/tag/v1.0.0"

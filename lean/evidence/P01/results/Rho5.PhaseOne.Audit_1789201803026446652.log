@@ -1,0 +1,990 @@
+/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/src/Rho5/PhaseOne/Audit.lean:6:0: error: Unknown option `pp.width`
+Rho5.Integration.StagedAssembly.baseline : And
+  (Eq.{1} Rho5.GrowthSupremum.rho5Trace (SupSet.sSup.{0} Rho5.GrowthModel.GrowthValues))
+  (And (Eq.{1} (Rho5.matrixEntryMax Rho5.ExternalAttainment.actualAlphaMatrix) 1)
+    (And
+      (Rho5.CompletePivotPath.LegalTrace Rho5.ExternalAttainment.actualAlphaMatrix
+        Rho5.ExternalAttainment.actualAlphaValues)
+      (And
+        (Eq.{1}
+          (Rho5.GrowthModel.growthRatio Rho5.ExternalAttainment.actualAlphaMatrix
+            Rho5.ExternalAttainment.actualAlphaValues)
+          Rho5.Algebraic.AlphaRoot.alpha)
+        (And (LE.le.{0} Rho5.Algebraic.AlphaRoot.alpha Rho5.GrowthSupremum.rho5Trace)
+          (And (LE.le.{0} Rho5.GrowthSupremum.rho5Trace (81 / 16))
+            (∃ P values,
+              And (Rho5.BoundaryMaximizer.SortedBoundaryMaximizerFacts P values)
+                (And (Rho5.ExternalTailSaturation.LeadingInput P)
+                  (And (Eq.{1} (Rho5.ExternalTailSaturation.height P) Rho5.GrowthSupremum.rho5Trace)
+                    (And (LT.lt.{0} 4 (Rho5.ExternalTailSaturation.height P))
+                      (And (Eq.{1} (Rho5.matrixEntryMax P) 1)
+                        (And
+                          (Rho5.CompletePivotPath.LegalTrace P
+                            (List.cons.{0} 1
+                              (List.cons.{0} (Rho5.Certificate.B24Extraction.p P)
+                                (List.cons.{0} (Rho5.Certificate.B24Extraction.k P)
+                                  (List.cons.{0} (abs.{0} (Rho5.Certificate.B24Extraction.r P))
+                                    (List.cons.{0} (Rho5.ExternalTailSaturation.height P) List.nil.{0}))))))
+                          (And (Eq.{1} (Rho5.GrowthModel.growthRatio P values) Rho5.GrowthSupremum.rho5Trace)
+                            (∀ (M : Rho5.Matrix5),
+                              Ne.{1} M 0 →
+                                ∀ (ws : List.{0} Real),
+                                  Rho5.CompletePivotPath.LegalTrace M ws →
+                                    LE.le.{0} (Rho5.GrowthModel.growthRatio M ws)
+                                      (Rho5.GrowthModel.growthRatio P values))))))))))))))
+'Rho5.Integration.StagedAssembly.baseline' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.Integration.StagedAssembly.exists_global_max_X_or_root_endpoint : LT.lt.{0} Rho5.Algebraic.AlphaRoot.alpha
+    Rho5.GrowthSupremum.rho5Trace →
+  ∃ P values N,
+    And (Rho5.Integration.StagedAssembly.GlobalMaximizerReductionFacts P values N)
+      (Or (Rho5.Integration.StagedAssembly.ActualXBranch P N)
+        (Rho5.Integration.StagedAssembly.ActualBRootEndpointBranch N))
+'Rho5.Integration.StagedAssembly.exists_global_max_X_or_root_endpoint' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.Integration.StagedAssembly.exists_X_or_root_endpoint : LT.lt.{0} Rho5.Algebraic.AlphaRoot.alpha
+    Rho5.GrowthSupremum.rho5Trace →
+  Or (∃ x, And (Rho5.LocalAnalysis.V43.Physical x) (Eq.{1} (Rho5.LocalAnalysis.height x) Rho5.GrowthSupremum.rho5Trace))
+    (∃ zStar,
+      And (Rho5.Shared.BRootCapacityEndpoint.IsRootCapacityEndpoint zStar)
+        (Eq.{1} (zStar 23) Rho5.GrowthSupremum.rho5Trace))
+'Rho5.Integration.StagedAssembly.exists_X_or_root_endpoint' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.Integration.StagedAssembly.XGlobalSafety : Prop
+'Rho5.Integration.StagedAssembly.XGlobalSafety' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.Integration.StagedAssembly.rho5Trace_eq_alpha_of_safety : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    Eq.{1} Rho5.GrowthSupremum.rho5Trace Rho5.Algebraic.AlphaRoot.alpha
+'Rho5.Integration.StagedAssembly.rho5Trace_eq_alpha_of_safety' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.Integration.StagedAssembly.legal_growth_le_alpha_of_safety : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    ∀ (A : Rho5.Matrix5) (values : List.{0} Real),
+      Ne.{1} A 0 →
+        Rho5.CompletePivotPath.LegalTrace A values →
+          LE.le.{0} (Rho5.GrowthModel.growthRatio A values) Rho5.Algebraic.AlphaRoot.alpha
+'Rho5.Integration.StagedAssembly.legal_growth_le_alpha_of_safety' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.Integration.StagedAssembly.fifth_readout_le_alpha_of_safety : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    ∀ (A : Rho5.Matrix5) (values : List.{0} Real),
+      Ne.{1} A 0 →
+        Rho5.CompletePivotPath.LegalTrace A values →
+          LE.le.{0} (List.getD.{0} values 4 0)
+            (HMul.hMul.{0, 0, 0} Rho5.Algebraic.AlphaRoot.alpha (Rho5.matrixEntryMax A))
+'Rho5.Integration.StagedAssembly.fifth_readout_le_alpha_of_safety' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.Integration.StagedAssembly.legal_growth_le_alpha_via_fifth_of_safety : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    ∀ (A : Rho5.Matrix5) (values : List.{0} Real),
+      Ne.{1} A 0 →
+        Rho5.CompletePivotPath.LegalTrace A values →
+          LE.le.{0} (Rho5.GrowthModel.growthRatio A values) Rho5.Algebraic.AlphaRoot.alpha
+'Rho5.Integration.StagedAssembly.legal_growth_le_alpha_via_fifth_of_safety' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.Integration.StagedAssembly.high_path_fifth_of_safety : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    ∀ (A : Rho5.Matrix5) (values : List.{0} Real),
+      Ne.{1} A 0 →
+        Rho5.CompletePivotPath.LegalTrace A values →
+          LT.lt.{0} 4 (Rho5.GrowthModel.growthRatio A values) →
+            And (Eq.{1} (List.length.{0} values) 5)
+              (And (Eq.{1} (List.getD.{0} values 4 0) (Rho5.GrowthModel.tracePeak values))
+                (And (LT.lt.{0} (HMul.hMul.{0, 0, 0} 4 (Rho5.matrixEntryMax A)) (List.getD.{0} values 4 0))
+                  (LE.le.{0} (List.getD.{0} values 4 0)
+                    (HMul.hMul.{0, 0, 0} Rho5.Algebraic.AlphaRoot.alpha (Rho5.matrixEntryMax A)))))
+'Rho5.Integration.StagedAssembly.high_path_fifth_of_safety' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.Integration.StagedAssembly.det_endpoint_of_safety : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    ∀ (M : Rho5.Matrix5),
+      Eq.{1} (M 0 0) 1 →
+        Rho5.MinorCPDomain.PolyCP M →
+          LE.le.{0} (abs.{0} (Matrix.det.{0, 0} M))
+            (HMul.hMul.{0, 0, 0} Rho5.Algebraic.AlphaRoot.alpha (Rho5.MinorGrowthThreshold.C M))
+'Rho5.Integration.StagedAssembly.det_endpoint_of_safety' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.Shared.BRootCapacityEndpoint.IsRootCapacityEndpoint : Rho5.Certificate.B16.Point → Prop
+'Rho5.Shared.BRootCapacityEndpoint.IsRootCapacityEndpoint' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety : Prop
+'Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.Algebraic.AlphaRoot.exists_root_in_exact_interval : ∃ a,
+  And (LT.lt.{0} Rho5.Algebraic.AlphaRoot.alphaLower a)
+    (And (LT.lt.{0} a Rho5.Algebraic.AlphaRoot.alphaUpper) (Eq.{1} (Rho5.Algebraic.AlphaRoot.rootPolynomial a) 0))
+'Rho5.Algebraic.AlphaRoot.exists_root_in_exact_interval' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.Algebraic.AlphaRoot.alpha_in_exact_interval : And
+  (LT.lt.{0} Rho5.Algebraic.AlphaRoot.alphaLower Rho5.Algebraic.AlphaRoot.alpha)
+  (LT.lt.{0} Rho5.Algebraic.AlphaRoot.alpha Rho5.Algebraic.AlphaRoot.alphaUpper)
+'Rho5.Algebraic.AlphaRoot.alpha_in_exact_interval' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.Algebraic.AlphaRoot.alpha_is_root : Eq.{1} (Rho5.Algebraic.AlphaRoot.rootPolynomial Rho5.Algebraic.AlphaRoot.alpha)
+  0
+'Rho5.Algebraic.AlphaRoot.alpha_is_root' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.Algebraic.AlphaRoot.exists_unique_root : ExistsUnique.{1} fun a =>
+  And (LT.lt.{0} 4 a) (And (LT.lt.{0} a 5) (Eq.{1} (Rho5.Algebraic.AlphaRoot.rootPolynomial a) 0))
+'Rho5.Algebraic.AlphaRoot.exists_unique_root' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.Algebraic.AlphaRoot.root_unique : ∀ (t : Real),
+  LT.lt.{0} 4 t →
+    LT.lt.{0} t 5 → Eq.{1} (Rho5.Algebraic.AlphaRoot.rootPolynomial t) 0 → Eq.{1} t Rho5.Algebraic.AlphaRoot.alpha
+'Rho5.Algebraic.AlphaRoot.root_unique' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.Algebraic.AlphaRoot.alpha_gt_four : LT.lt.{0} 4 Rho5.Algebraic.AlphaRoot.alpha
+'Rho5.Algebraic.AlphaRoot.alpha_gt_four' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.Algebraic.AlphaRoot.alpha_lt_five : LT.lt.{0} Rho5.Algebraic.AlphaRoot.alpha 5
+'Rho5.Algebraic.AlphaRoot.alpha_lt_five' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.ExternalAttainment.actualAlpha_attainment : And
+  (Eq.{1} (Rho5.matrixEntryMax Rho5.ExternalAttainment.actualAlphaMatrix) 1)
+  (And
+    (Rho5.CompletePivotPath.LegalTrace Rho5.ExternalAttainment.actualAlphaMatrix
+      Rho5.ExternalAttainment.actualAlphaValues)
+    (And
+      (Eq.{1}
+        (Rho5.GrowthModel.growthRatio Rho5.ExternalAttainment.actualAlphaMatrix
+          Rho5.ExternalAttainment.actualAlphaValues)
+        Rho5.Algebraic.AlphaRoot.alpha)
+      (And (Membership.mem.{0, 0} Rho5.GrowthModel.GrowthValues Rho5.Algebraic.AlphaRoot.alpha)
+        (Membership.mem.{0, 0} Rho5.GrowthModel.NormalizedGrowthValues Rho5.Algebraic.AlphaRoot.alpha))))
+'Rho5.ExternalAttainment.actualAlpha_attainment' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.ExternalAttainment.exists_actualAlpha_attainment : ∃ x y z,
+  And (Eq.{1} (Rho5.matrixEntryMax (Rho5.ExternalAttainment.candidateMatrix x y z Rho5.Algebraic.AlphaRoot.alpha)) 1)
+    (And
+      (Rho5.CompletePivotPath.LegalTrace (Rho5.ExternalAttainment.candidateMatrix x y z Rho5.Algebraic.AlphaRoot.alpha)
+        (Rho5.ExternalAttainment.candidateValues x y z Rho5.Algebraic.AlphaRoot.alpha))
+      (And
+        (Eq.{1}
+          (Rho5.GrowthModel.growthRatio (Rho5.ExternalAttainment.candidateMatrix x y z Rho5.Algebraic.AlphaRoot.alpha)
+            (Rho5.ExternalAttainment.candidateValues x y z Rho5.Algebraic.AlphaRoot.alpha))
+          Rho5.Algebraic.AlphaRoot.alpha)
+        (And (Membership.mem.{0, 0} Rho5.GrowthModel.GrowthValues Rho5.Algebraic.AlphaRoot.alpha)
+          (And (Membership.mem.{0, 0} Rho5.GrowthModel.NormalizedGrowthValues Rho5.Algebraic.AlphaRoot.alpha)
+            (LE.le.{0} Rho5.Algebraic.AlphaRoot.alpha Rho5.GrowthSupremum.rho5Trace)))))
+'Rho5.ExternalAttainment.exists_actualAlpha_attainment' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.ExternalAttainment.actualAlpha_le_rho5Trace : LE.le.{0} Rho5.Algebraic.AlphaRoot.alpha
+  Rho5.GrowthSupremum.rho5Trace
+'Rho5.ExternalAttainment.actualAlpha_le_rho5Trace' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.ExternalFourthPivot.early_pivot_bounds_including_zero : ∀ (A : Rho5.Matrix5) (values : List.{0} Real),
+  Rho5.CompletePivotPath.LegalTrace A values →
+    And (Eq.{1} (List.getD.{0} values 0 0) (Rho5.matrixEntryMax A))
+      (And (LE.le.{0} (List.getD.{0} values 1 0) (HMul.hMul.{0, 0, 0} 2 (Rho5.matrixEntryMax A)))
+        (And (LE.le.{0} (List.getD.{0} values 2 0) (HMul.hMul.{0, 0, 0} (9 / 4) (Rho5.matrixEntryMax A)))
+          (LE.le.{0} (List.getD.{0} values 3 0) (HMul.hMul.{0, 0, 0} 4 (Rho5.matrixEntryMax A)))))
+'Rho5.ExternalFourthPivot.early_pivot_bounds_including_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.ExternalFourthPivot.growth_above_four_is_fifth : ∀ (A : Rho5.Matrix5) (values : List.{0} Real),
+  Ne.{1} A 0 →
+    Rho5.CompletePivotPath.LegalTrace A values →
+      LT.lt.{0} 4 (Rho5.GrowthModel.growthRatio A values) →
+        And (Eq.{1} (List.length.{0} values) 5)
+          (And (Eq.{1} (List.getD.{0} values 4 0) (Rho5.GrowthModel.tracePeak values))
+            (LT.lt.{0} (HMul.hMul.{0, 0, 0} 4 (Rho5.matrixEntryMax A)) (List.getD.{0} values 4 0)))
+'Rho5.ExternalFourthPivot.growth_above_four_is_fifth' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.ExternalFourthPivot.growth_le_of_fifth_readout_le : ∀ (A : Rho5.Matrix5) (values : List.{0} Real),
+  Ne.{1} A 0 →
+    Rho5.CompletePivotPath.LegalTrace A values →
+      ∀ (cap : Real),
+        LE.le.{0} 4 cap →
+          LE.le.{0} (List.getD.{0} values 4 0) (HMul.hMul.{0, 0, 0} cap (Rho5.matrixEntryMax A)) →
+            LE.le.{0} (Rho5.GrowthModel.growthRatio A values) cap
+'Rho5.ExternalFourthPivot.growth_le_of_fifth_readout_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.ExternalV43Existence.exists_actual_trajectory_on_time_neighborhood : ∀ (z0 : Rho5.LocalAnalysis.X) {T d : Real},
+  LE.le.{0} 0 T →
+    Membership.mem.{0, 0} (Rho5.LocalAnalysis.cube Rho5.LocalAnalysis.V43.center d) z0 →
+      LT.lt.{0} (HAdd.hAdd.{0, 0, 0} d (HMul.hMul.{0, 0, 0} (9 / 4) T)) Rho5.LocalAnalysis.V43.radius →
+        ∃ ε,
+          And (LT.lt.{0} 0 ε)
+            (∃ γ,
+              And (Eq.{1} (γ 0) z0)
+                (∀ (t : Real),
+                  Membership.mem.{0, 0} (Set.Ioo.{0} (Neg.neg.{0} ε) (HAdd.hAdd.{0, 0, 0} T ε)) t →
+                    HasDerivAt.{0, 0} γ (Rho5.LocalAnalysis.V43.certifiedField (γ t)) t))
+'Rho5.ExternalV43Existence.exists_actual_trajectory_on_time_neighborhood' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.ExternalV43Existence.exists_actual_trajectory : ∀ (z0 : Rho5.LocalAnalysis.X) {T d : Real},
+  LE.le.{0} 0 T →
+    Membership.mem.{0, 0} (Rho5.LocalAnalysis.cube Rho5.LocalAnalysis.V43.center d) z0 →
+      LT.lt.{0} (HAdd.hAdd.{0, 0, 0} d (HMul.hMul.{0, 0, 0} (9 / 4) T)) Rho5.LocalAnalysis.V43.radius →
+        ∃ γ,
+          And (Eq.{1} (γ 0) z0)
+            (∀ (t : Real),
+              Membership.mem.{0, 0} (Set.Icc.{0} 0 T) t →
+                HasDerivAt.{0, 0} γ (Rho5.LocalAnalysis.V43.certifiedField (γ t)) t)
+'Rho5.ExternalV43Existence.exists_actual_trajectory' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.ExternalV43Existence.exists_physical_trajectory : ∀ (z0 : Rho5.LocalAnalysis.X) {T d : Real},
+  LE.le.{0} 0 T →
+    Membership.mem.{0, 0} (Rho5.LocalAnalysis.cube Rho5.LocalAnalysis.V43.center d) z0 →
+      LT.lt.{0} (HAdd.hAdd.{0, 0, 0} d (HMul.hMul.{0, 0, 0} (9 / 4) T)) Rho5.LocalAnalysis.V43.radius →
+        Rho5.LocalAnalysis.V43.Physical z0 →
+          LE.le.{0} T (Rho5.LocalAnalysis.consumed z0) →
+            ∃ γ,
+              And (Eq.{1} (γ 0) z0)
+                (And
+                  (∀ (t : Real),
+                    Membership.mem.{0, 0} (Set.Icc.{0} 0 T) t →
+                      HasDerivAt.{0, 0} γ (Rho5.LocalAnalysis.V43.certifiedField (γ t)) t)
+                  (∀ (t : Real),
+                    Membership.mem.{0, 0} (Set.Icc.{0} 0 T) t →
+                      And
+                        (Membership.mem.{0, 0}
+                          (Rho5.LocalAnalysis.cube Rho5.LocalAnalysis.V43.center Rho5.LocalAnalysis.V43.radius) (γ t))
+                        (And (LE.le.{0} (Norm.norm.{0} (HSub.hSub.{0, 0, 0} (γ t) z0)) (HMul.hMul.{0, 0, 0} (9 / 4) t))
+                          (And
+                            (LE.le.{0} (HAdd.hAdd.{0, 0, 0} (Rho5.LocalAnalysis.height z0) (HDiv.hDiv.{0, 0, 0} t 16))
+                              (Rho5.LocalAnalysis.height (γ t)))
+                            (And (Eq.{1} (Rho5.LocalAnalysis.heldGuard (γ t)) (Rho5.LocalAnalysis.heldGuard z0))
+                              (And
+                                (LE.le.{0}
+                                  (HAdd.hAdd.{0, 0, 0} (Rho5.LocalAnalysis.releasedGuard z0)
+                                    (HMul.hMul.{0, 0, 0} (2 / 5) t))
+                                  (Rho5.LocalAnalysis.releasedGuard (γ t)))
+                                (And
+                                  (Eq.{1} (Rho5.LocalAnalysis.consumed (γ t))
+                                    (HSub.hSub.{0, 0, 0} (Rho5.LocalAnalysis.consumed z0) t))
+                                  (And (Eq.{1} (γ t 7) (z0 7)) (Rho5.LocalAnalysis.V43.Physical (γ t))))))))))
+'Rho5.ExternalV43Existence.exists_physical_trajectory' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.ExternalV43Existence.exists_resource_endpoint : ∀ (z0 : Rho5.LocalAnalysis.X) {T d : Real},
+  LE.le.{0} 0 T →
+    Membership.mem.{0, 0} (Rho5.LocalAnalysis.cube Rho5.LocalAnalysis.V43.center d) z0 →
+      LT.lt.{0} (HAdd.hAdd.{0, 0, 0} d (HMul.hMul.{0, 0, 0} (9 / 4) T)) Rho5.LocalAnalysis.V43.radius →
+        Rho5.LocalAnalysis.V43.Physical z0 →
+          Eq.{1} T (Rho5.LocalAnalysis.consumed z0) →
+            ∃ γ,
+              And (Eq.{1} (γ 0) z0)
+                (And
+                  (∀ (t : Real),
+                    Membership.mem.{0, 0} (Set.Icc.{0} 0 T) t →
+                      HasDerivAt.{0, 0} γ (Rho5.LocalAnalysis.V43.certifiedField (γ t)) t)
+                  (And (Eq.{1} (Rho5.LocalAnalysis.consumed (γ T)) 0) (Rho5.LocalAnalysis.V43.Physical (γ T))))
+'Rho5.ExternalV43Existence.exists_resource_endpoint' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.ExternalV43Existence.exists_exhaustion_at_own_resource : ∀ (z0 : Rho5.LocalAnalysis.X) {d : Real},
+  LE.le.{0} 0 (Rho5.LocalAnalysis.consumed z0) →
+    Membership.mem.{0, 0} (Rho5.LocalAnalysis.cube Rho5.LocalAnalysis.V43.center d) z0 →
+      LT.lt.{0} (HAdd.hAdd.{0, 0, 0} d (HMul.hMul.{0, 0, 0} (9 / 4) (Rho5.LocalAnalysis.consumed z0)))
+          Rho5.LocalAnalysis.V43.radius →
+        Rho5.LocalAnalysis.V43.Physical z0 →
+          ∃ γ,
+            And (Eq.{1} (γ 0) z0)
+              (And
+                (∀ (t : Real),
+                  Membership.mem.{0, 0} (Set.Icc.{0} 0 (Rho5.LocalAnalysis.consumed z0)) t →
+                    HasDerivAt.{0, 0} γ (Rho5.LocalAnalysis.V43.certifiedField (γ t)) t)
+                (And (Eq.{1} (Rho5.LocalAnalysis.consumed (γ (Rho5.LocalAnalysis.consumed z0))) 0)
+                  (Rho5.LocalAnalysis.V43.Physical (γ (Rho5.LocalAnalysis.consumed z0)))))
+'Rho5.ExternalV43Existence.exists_exhaustion_at_own_resource' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.ExternalV43Existence.exists_guard_boundary_trajectory : ∀ (z0 : Rho5.LocalAnalysis.X) {T d : Real},
+  LE.le.{0} 0 T →
+    Membership.mem.{0, 0} (Rho5.LocalAnalysis.cube Rho5.LocalAnalysis.V43.center d) z0 →
+      LT.lt.{0} (HAdd.hAdd.{0, 0, 0} d (HMul.hMul.{0, 0, 0} (9 / 4) T)) Rho5.LocalAnalysis.V43.radius →
+        Rho5.LocalAnalysis.V43.Physical z0 →
+          LE.le.{0} T (Rho5.LocalAnalysis.consumed z0) →
+            Eq.{1} (Rho5.LocalAnalysis.heldGuard z0) 0 →
+              ∃ γ,
+                And (Eq.{1} (γ 0) z0)
+                  (And
+                    (∀ (t : Real),
+                      Membership.mem.{0, 0} (Set.Icc.{0} 0 T) t →
+                        HasDerivAt.{0, 0} γ (Rho5.LocalAnalysis.V43.certifiedField (γ t)) t)
+                    (∀ (t : Real),
+                      Membership.mem.{0, 0} (Set.Icc.{0} 0 T) t →
+                        And (Eq.{1} (Rho5.LocalAnalysis.heldGuard (γ t)) 0) (Rho5.LocalAnalysis.V43.Physical (γ t))))
+'Rho5.ExternalV43Existence.exists_guard_boundary_trajectory' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.ExternalV43Existence.exists_zero_time_actual_derivative : ∀ (z0 : Rho5.LocalAnalysis.X) {d : Real},
+  Membership.mem.{0, 0} (Rho5.LocalAnalysis.cube Rho5.LocalAnalysis.V43.center d) z0 →
+    LT.lt.{0} d Rho5.LocalAnalysis.V43.radius →
+      ∃ γ, And (Eq.{1} (γ 0) z0) (HasDerivAt.{0, 0} γ (Rho5.LocalAnalysis.V43.certifiedField z0) 0)
+'Rho5.ExternalV43Existence.exists_zero_time_actual_derivative' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.ExternalV43Existence.height_le_of_actual_trip : ∀ (z0 : Rho5.LocalAnalysis.X) {T d loss sourceHeight α : Real},
+  LE.le.{0} 0 T →
+    Membership.mem.{0, 0} (Rho5.LocalAnalysis.cube Rho5.LocalAnalysis.V43.center d) z0 →
+      LT.lt.{0} (HAdd.hAdd.{0, 0, 0} d (HMul.hMul.{0, 0, 0} (9 / 4) T)) Rho5.LocalAnalysis.V43.radius →
+        Rho5.LocalAnalysis.V43.Physical z0 →
+          LE.le.{0} T (Rho5.LocalAnalysis.consumed z0) →
+            (∀ (z : Rho5.LocalAnalysis.X),
+                Membership.mem.{0, 0}
+                    (Rho5.LocalAnalysis.cube Rho5.LocalAnalysis.V43.center Rho5.LocalAnalysis.V43.radius) z →
+                  Rho5.LocalAnalysis.V43.Physical z → LE.le.{0} (Rho5.LocalAnalysis.height z) α) →
+              LE.le.{0} (HMul.hMul.{0, 0, 0} 16 loss) T →
+                Eq.{1} sourceHeight (HAdd.hAdd.{0, 0, 0} (Rho5.LocalAnalysis.height z0) loss) → LE.le.{0} sourceHeight α
+'Rho5.ExternalV43Existence.height_le_of_actual_trip' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def Rho5.Integration.StagedAssembly.XGlobalSafety : Prop :=
+∀ (x : Rho5.LocalAnalysis.X),
+  Rho5.LocalAnalysis.V43.Physical x → LE.le.{0} (Rho5.LocalAnalysis.height x) Rho5.Algebraic.AlphaRoot.alpha
+def Rho5.Shared.BRootCapacityEndpoint.IsRootCapacityEndpoint : Rho5.Certificate.B16.Point → Prop :=
+fun zStar =>
+  ∃ y,
+    And (Rho5.ExternalBFibreCapacity.NormalizedB y)
+      (And (Rho5.Shared.PaperB17RootEntry.B17Root (Rho5.ExternalBFibreCapacity.frameOf y))
+        (Eq.{1} zStar (Rho5.ExternalBFibreCapacity.canonicalPoint (Rho5.ExternalBFibreCapacity.frameOf y))))
+def Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety : Prop :=
+∀ (zStar : Rho5.Certificate.B16.Point),
+  Rho5.Shared.BRootCapacityEndpoint.IsRootCapacityEndpoint zStar → LE.le.{0} (zStar 23) Rho5.Algebraic.AlphaRoot.alpha
+P01_LOADED_MODULE Rho5.Shared.Conventions
+P01_LOADED_MODULE Rho5.Shared.Pivot
+P01_LOADED_MODULE Rho5.Shared.MatrixNormalization
+P01_LOADED_MODULE Rho5.Shared.PivotReindex.Reindex
+P01_LOADED_MODULE Rho5.Shared.PivotReindex.MovePivot
+P01_LOADED_MODULE Rho5.Shared.PivotReindex.Remaining
+P01_LOADED_MODULE Rho5.Shared.PivotReindex.Schur
+P01_LOADED_MODULE Rho5.Shared.PivotReindex.Matrix5
+P01_LOADED_MODULE Rho5.Shared.PivotReindex
+P01_LOADED_MODULE Rho5.Shared.CompletePivotPath.Basic
+P01_LOADED_MODULE Rho5.Shared.CompletePivotPath.Head
+P01_LOADED_MODULE Rho5.Shared.CompletePivotPath.Scaling
+P01_LOADED_MODULE Rho5.Shared.CompletePivotPath.Normalize
+P01_LOADED_MODULE Rho5.Shared.CompletePivotPath
+P01_LOADED_MODULE Rho5.Shared.TraceDeterminant
+P01_LOADED_MODULE Rho5.Shared.MatrixStage
+P01_LOADED_MODULE Rho5.Shared.GrowthModel.TracePeak
+P01_LOADED_MODULE Rho5.Shared.GrowthModel.Scalar
+P01_LOADED_MODULE Rho5.Shared.GrowthModel.Unit
+P01_LOADED_MODULE Rho5.Shared.GrowthModel.NormalizeSet
+P01_LOADED_MODULE Rho5.Shared.GrowthModel
+P01_LOADED_MODULE Rho5.Shared.TracePermutation.Permute
+P01_LOADED_MODULE Rho5.Shared.TracePermutation.Remaining
+P01_LOADED_MODULE Rho5.Shared.TracePermutation.Schur
+P01_LOADED_MODULE Rho5.Shared.TracePermutation.Trace
+P01_LOADED_MODULE Rho5.Shared.TracePermutation.Matrix5
+P01_LOADED_MODULE Rho5.Shared.TracePermutation
+P01_LOADED_MODULE Rho5.Shared.LeadingTrace
+P01_LOADED_MODULE Rho5.Certificate.B16Model
+P01_LOADED_MODULE Rho5.Certificate.B24Reconstruction.Basic
+P01_LOADED_MODULE Rho5.Certificate.B24Reconstruction.FirstPivot
+P01_LOADED_MODULE Rho5.Certificate.B24Reconstruction.SecondPivot
+P01_LOADED_MODULE Rho5.Certificate.B24Reconstruction.PivotLegal
+P01_LOADED_MODULE Rho5.Certificate.B24Reconstruction
+P01_LOADED_MODULE Rho5.Certificate.B24Trace.Steps
+P01_LOADED_MODULE Rho5.Certificate.B24Trace.Legality
+P01_LOADED_MODULE Rho5.Certificate.B24Trace.Trace
+P01_LOADED_MODULE Rho5.Certificate.B24Trace.Growth
+P01_LOADED_MODULE Rho5.Certificate.B24Trace
+P01_LOADED_MODULE Rho5.Certificate.B24Extraction.Extract
+P01_LOADED_MODULE Rho5.Shared.LeadingMinorFour
+P01_LOADED_MODULE Rho5.Shared.BorderedTailMinors
+P01_LOADED_MODULE Rho5.Shared.MinorCPDomain.Tail
+P01_LOADED_MODULE Rho5.Shared.PrefixBorderedMinors.Defs
+P01_LOADED_MODULE Rho5.Shared.MinorThreeBound.Core
+P01_LOADED_MODULE Rho5.Shared.MinorThreeBound.Vertex
+P01_LOADED_MODULE Rho5.Shared.MinorThreeBound.Block
+P01_LOADED_MODULE Rho5.Shared.MinorThreeBound
+P01_LOADED_MODULE Rho5.Shared.PrefixBorderedMinors.Identities
+P01_LOADED_MODULE Rho5.Shared.PrefixBorderedMinors
+P01_LOADED_MODULE Rho5.Shared.MinorCPDomain.Poly
+P01_LOADED_MODULE Rho5.Shared.PivotGrowth
+P01_LOADED_MODULE Rho5.Shared.TraceGrowth
+P01_LOADED_MODULE Rho5.Shared.HighGrowthTail
+P01_LOADED_MODULE Rho5.Shared.TailEnvelope
+P01_LOADED_MODULE Rho5.Shared.TraceSigns.Definitions
+P01_LOADED_MODULE Rho5.Shared.TraceSigns.Trace
+P01_LOADED_MODULE Rho5.Shared.TraceSigns.Normalize
+P01_LOADED_MODULE Rho5.Shared.TraceSigns.Audit
+P01_LOADED_MODULE Rho5.Shared.TraceSigns
+P01_LOADED_MODULE Rho5.Shared.TraceSigns.GrowthAdapter
+P01_LOADED_MODULE Rho5.Shared.LeadingSigns
+P01_LOADED_MODULE Rho5.Shared.CanonicalTail.Defs
+P01_LOADED_MODULE Rho5.ExternalThreePivot.Definitions
+P01_LOADED_MODULE Rho5.ExternalThreePivot.ProductEnvelope
+P01_LOADED_MODULE Rho5.ExternalThreePivot.HighBranch
+P01_LOADED_MODULE Rho5.ExternalThreePivot.TailBounds
+P01_LOADED_MODULE Rho5.ExternalThreePivot.Envelope
+P01_LOADED_MODULE Rho5.ExternalThreePivot.MatrixDefinitions
+P01_LOADED_MODULE Rho5.ExternalThreePivot.SignNormalization
+P01_LOADED_MODULE Rho5.ExternalThreePivot.MatrixEnvelope
+P01_LOADED_MODULE Rho5.Shared.LastThreePivotEnvelope.Defs
+P01_LOADED_MODULE Rho5.Shared.LastThreePivotEnvelope.StageA
+P01_LOADED_MODULE Rho5.Shared.NestedThreePivot.Defs
+P01_LOADED_MODULE Rho5.Shared.NestedThreePivot.StageA
+P01_LOADED_MODULE Rho5.Shared.MinorCPDomain
+P01_LOADED_MODULE Rho5.Shared.TailDeterminant
+P01_LOADED_MODULE Rho5.Shared.HighGrowthMargins.OneStep
+P01_LOADED_MODULE Rho5.Shared.CanonicalTail.Prefix
+P01_LOADED_MODULE Rho5.Shared.CanonicalTail.TailValues
+P01_LOADED_MODULE Rho5.Shared.CanonicalTail.Envelope
+P01_LOADED_MODULE Rho5.Shared.PaddedTrace.Basic
+P01_LOADED_MODULE Rho5.Shared.PaddedTrace.Bridge
+P01_LOADED_MODULE Rho5.Shared.PaddedTrace.Peak
+P01_LOADED_MODULE Rho5.Shared.PaddedTrace.Examples
+P01_LOADED_MODULE Rho5.Shared.PaddedTrace
+P01_LOADED_MODULE Rho5.Shared.FirstPivotDomain.Domain
+P01_LOADED_MODULE Rho5.Shared.FirstPivotCompact.Domain
+P01_LOADED_MODULE Rho5.Shared.PivotSchurContinuity.CPDomain
+P01_LOADED_MODULE Rho5.Shared.PivotSchurContinuity.Bound
+P01_LOADED_MODULE Rho5.Shared.PivotSchurContinuity.Continuous
+P01_LOADED_MODULE Rho5.Shared.PivotSchurContinuity.CompactImage
+P01_LOADED_MODULE Rho5.Shared.PivotSchurContinuity
+P01_LOADED_MODULE Rho5.Shared.TraceAttainment.Graph
+P01_LOADED_MODULE Rho5.Shared.TraceAttainment.FiberCompact
+P01_LOADED_MODULE Rho5.Shared.TraceAttainment.PeakCompact
+P01_LOADED_MODULE Rho5.Shared.FirstPivotCompact.Compact
+P01_LOADED_MODULE Rho5.Shared.FirstPivotCompact.Schur
+P01_LOADED_MODULE Rho5.Shared.FirstPivotDomain.PivotEntry
+P01_LOADED_MODULE Rho5.Shared.FirstPivotDomain.Reduce
+P01_LOADED_MODULE Rho5.Shared.FirstPivotDomain.SetEquality
+P01_LOADED_MODULE Rho5.Shared.FirstPivotDomain
+P01_LOADED_MODULE Rho5.Shared.FirstPivotCompact.Bridge
+P01_LOADED_MODULE Rho5.Shared.TraceExistence.Existence
+P01_LOADED_MODULE Rho5.Shared.TraceExistence.Chosen
+P01_LOADED_MODULE Rho5.Shared.TraceExistence.Matrix5
+P01_LOADED_MODULE Rho5.Shared.TraceExistence
+P01_LOADED_MODULE Rho5.Shared.GrowthSupremum.Nonempty
+P01_LOADED_MODULE Rho5.Shared.GrowthSupremum.Bounds
+P01_LOADED_MODULE Rho5.Shared.GrowthSupremum.Supremum
+P01_LOADED_MODULE Rho5.Shared.GrowthSupremum.Normalized
+P01_LOADED_MODULE Rho5.Shared.GrowthSupremum
+P01_LOADED_MODULE Rho5.Shared.TraceAttainment.GrowthAttainment
+P01_LOADED_MODULE Rho5.Shared.TraceAttainment
+P01_LOADED_MODULE Rho5.Shared.CanonicalMaximizer.GlobalMax
+P01_LOADED_MODULE Rho5.Shared.CanonicalMaximizer.LeadingRepresentative
+P01_LOADED_MODULE Rho5.Shared.CanonicalMaximizer.CanonicalRepresentative
+P01_LOADED_MODULE Rho5.Shared.CanonicalMaximizer
+P01_LOADED_MODULE Rho5.Shared.CanonicalTail.Witness
+P01_LOADED_MODULE Rho5.Shared.CanonicalTail
+P01_LOADED_MODULE Rho5.Shared.HighGrowthMargins.GrowthMargin
+P01_LOADED_MODULE Rho5.Shared.HighGrowthMargins.Package
+P01_LOADED_MODULE Rho5.Shared.TailSignNormalization.Signs
+P01_LOADED_MODULE Rho5.Shared.TailSignNormalization.Transport
+P01_LOADED_MODULE Rho5.Shared.TailSignNormalization.Normalize
+P01_LOADED_MODULE Rho5.Shared.TailSignNormalization.Witness
+P01_LOADED_MODULE Rho5.Shared.TailSignNormalization
+P01_LOADED_MODULE Rho5.Shared.HighGrowthMargins.Witness
+P01_LOADED_MODULE Rho5.Shared.HighGrowthMargins
+P01_LOADED_MODULE Rho5.Shared.MinorGrowthThreshold.Defs
+P01_LOADED_MODULE Rho5.Shared.MinorGrowthThreshold.Threshold
+P01_LOADED_MODULE Rho5.Shared.MinorGrowthThreshold
+P01_LOADED_MODULE Rho5.Certificate.B24Extraction.Bands
+P01_LOADED_MODULE Rho5.Certificate.B24Extraction.Trace
+P01_LOADED_MODULE Rho5.Certificate.B24Extraction
+P01_LOADED_MODULE Rho5.Shared.BottomRightVariation.Basic
+P01_LOADED_MODULE Rho5.Shared.BottomRightVariation.Feasible
+P01_LOADED_MODULE Rho5.Shared.BottomRightVariation.Trace
+P01_LOADED_MODULE Rho5.Shared.BottomRightVariation
+P01_LOADED_MODULE Rho5.Shared.GlobalMinorReduction.Basic
+P01_LOADED_MODULE Rho5.Shared.GlobalMinorReduction.Main
+P01_LOADED_MODULE Rho5.Shared.LastThreePivotEnvelope.GlobalBound
+P01_LOADED_MODULE Rho5.Shared.LastThreePivotEnvelope.Audit
+P01_LOADED_MODULE Rho5.Shared.LastThreePivotEnvelope
+P01_LOADED_MODULE Rho5.ExternalAttainment.Formulas
+P01_LOADED_MODULE Rho5.Algebraic.Core
+P01_LOADED_MODULE Rho5.Algebraic.CandidateSystem
+P01_LOADED_MODULE Rho5.Algebraic.EliminationData
+P01_LOADED_MODULE Rho5.Algebraic.CandidateBox
+P01_LOADED_MODULE Rho5.ExternalAttainment.Interval
+P01_LOADED_MODULE Rho5.ExternalAttainment.Box
+P01_LOADED_MODULE Rho5.ExternalAttainment.IntervalData
+P01_LOADED_MODULE Rho5.ExternalAttainment.Denominators
+P01_LOADED_MODULE Rho5.ExternalAttainment.SchurAux
+P01_LOADED_MODULE Rho5.ExternalAttainment.SchurIdentities
+P01_LOADED_MODULE Rho5.ExternalAttainment.TailEquations
+P01_LOADED_MODULE Rho5.ExternalAttainment.EntryBounds
+P01_LOADED_MODULE Rho5.ExternalAttainment.LegalTrace
+P01_LOADED_MODULE Rho5.ExternalAttainment.Attainment
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Expression
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P000
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P001
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P002
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P003
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P004
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P005
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P006
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P007
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P008
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P009
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P010
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P011
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P012
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P013
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P014
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P015
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P016
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P017
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P018
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P019
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P020
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P021
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P022
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P023
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P024
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P025
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P026
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P027
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P028
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P029
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit.P030
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Interval
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Contraction
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Data
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Circuit
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P000
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P001
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P002
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P003
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P004
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P005
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P006
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P007
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P008
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P009
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P010
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P011
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P012
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P013
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P014
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P015
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P016
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P017
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P018
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P019
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P020
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P021
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P022
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P023
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P024
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P025
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P026
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P027
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P028
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P029
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P030
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P031
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P032
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P033
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P034
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P035
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P036
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P037
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P038
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P039
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P040
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P041
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P042
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P043
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P044
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P045
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P046
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P047
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P048
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P049
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P050
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P051
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P052
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P053
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P054
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P055
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P056
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P057
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P058
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P059
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P060
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds.P061
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.JetBounds
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P000
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P001
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P002
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P003
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P004
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P005
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P006
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P007
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P008
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P009
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P010
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P011
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P012
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P013
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P014
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P015
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P016
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P017
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P018
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P019
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P020
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P021
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P022
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P023
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P024
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P025
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P026
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P027
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P028
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P029
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P030
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P031
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P032
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P033
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P034
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P035
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P036
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P037
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P038
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P039
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P040
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P041
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P042
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P043
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P044
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P045
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P046
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P047
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P048
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P049
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P050
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P051
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P052
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P053
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P054
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P055
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P056
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P057
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P058
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P059
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P060
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds.P061
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBounds
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.CenterBoundReady
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.SlopeBoundReady
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.SlopeBoundReady.ConcreteSlopes
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Instance
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Compatibility.Identities
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.Compatibility
+P01_LOADED_MODULE Rho5.Algebraic.CriticalBridge
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffData
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.Assemble
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C0
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C1
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C2
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C3
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C4
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C5
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C6
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C7
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C8
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C9
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C10
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C11
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C12
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C13
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C14
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C15
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C16
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C17
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.CoeffChecks.C18
+P01_LOADED_MODULE Rho5.Algebraic.BezoutChecks.BezoutIdentity
+P01_LOADED_MODULE Rho5.Algebraic.AlphaRoot.Horner
+P01_LOADED_MODULE Rho5.Algebraic.AlphaRoot.Data
+P01_LOADED_MODULE Rho5.Algebraic.AlphaRoot.EndpointSigns
+P01_LOADED_MODULE Rho5.Algebraic.AlphaRoot.TransformData
+P01_LOADED_MODULE Rho5.Algebraic.AlphaRoot.Uniqueness
+P01_LOADED_MODULE Rho5.Algebraic.AlphaRoot.Root
+P01_LOADED_MODULE Rho5.Algebraic.ScalarAlphaBridge.Bridge
+P01_LOADED_MODULE Rho5.Algebraic.ScalarCandidateAlpha.CoeffBridge
+P01_LOADED_MODULE Rho5.Algebraic.ScalarCandidateAlpha
+P01_LOADED_MODULE Rho5.Algebraic.CriticalExistence.ActualAlpha
+P01_LOADED_MODULE Rho5.ExternalAttainment.ActualAlpha
+P01_LOADED_MODULE Rho5.Shared.GlobalAttainedWitness.Range
+P01_LOADED_MODULE Rho5.Shared.MinorBoundaryFaces.Defs
+P01_LOADED_MODULE Rho5.Shared.MinorBoundaryFaces.Equiv
+P01_LOADED_MODULE Rho5.Shared.TraceTranspose
+P01_LOADED_MODULE Rho5.Shared.DominantLastPivot
+P01_LOADED_MODULE Rho5.Shared.TailTransposeOrder
+P01_LOADED_MODULE Rho5.Shared.MinorBoundaryFaces.TailOrder
+P01_LOADED_MODULE Rho5.Shared.MinorBoundaryFaces.BalancedDet
+P01_LOADED_MODULE Rho5.Shared.MinorBoundaryFaces
+P01_LOADED_MODULE Rho5.Shared.FinalEndpointAssembly.Defs
+P01_LOADED_MODULE Rho5.ExternalThreePivot.Sharpness
+P01_LOADED_MODULE Rho5.ExternalThreePivot
+P01_LOADED_MODULE Rho5.Shared.DoubleThreePivotEnvelope.Scalar
+P01_LOADED_MODULE Rho5.Shared.DoubleThreePivotEnvelope
+P01_LOADED_MODULE Rho5.Shared.NestedThreePivot.StageB
+P01_LOADED_MODULE Rho5.Shared.LastPivotUpperReduction.Common
+P01_LOADED_MODULE Rho5.Shared.GlobalMinorReduction
+P01_LOADED_MODULE Rho5.Shared.GrowthFour
+P01_LOADED_MODULE Rho5.Shared.LastPivotUpperReduction.StageA
+P01_LOADED_MODULE Rho5.Shared.BoundaryMaximizer.Core
+P01_LOADED_MODULE Rho5.Shared.TailBoundaryReduction.Scalar
+P01_LOADED_MODULE Rho5.Shared.TailBoundaryReduction.ListPeak
+P01_LOADED_MODULE Rho5.Shared.TailBoundaryReduction.StageB
+P01_LOADED_MODULE Rho5.Shared.TailBoundaryReduction.Witness
+P01_LOADED_MODULE Rho5.Shared.BoundaryMaximizer.Sorted
+P01_LOADED_MODULE Rho5.Shared.BoundaryUpperReduction.Forward
+P01_LOADED_MODULE Rho5.Shared.BoundaryUpperReduction.Main
+P01_LOADED_MODULE Rho5.Shared.BoundaryUpperReduction
+P01_LOADED_MODULE Rho5.Shared.LastPivotUpperReduction.StageB
+P01_LOADED_MODULE Rho5.Shared.LastPivotUpperReduction.StageC
+P01_LOADED_MODULE Rho5.Certificate.BalancedMaximizer.Height
+P01_LOADED_MODULE Rho5.Certificate.BalancedMaximizer.GrowthValue
+P01_LOADED_MODULE Rho5.Certificate.BalancedMaximizer.Physical
+P01_LOADED_MODULE Rho5.Certificate.BalancedMaximizer.Maximizer
+P01_LOADED_MODULE Rho5.Certificate.BalancedMaximizer.Frame
+P01_LOADED_MODULE Rho5.Shared.BoundaryMaximizer.Balanced
+P01_LOADED_MODULE Rho5.Shared.BoundaryMaximizer
+P01_LOADED_MODULE Rho5.Shared.LastPivotUpperReduction.StageD
+P01_LOADED_MODULE Rho5.Shared.LastPivotUpperReduction
+P01_LOADED_MODULE Rho5.Shared.FinalEndpointAssembly.Witness
+P01_LOADED_MODULE Rho5.ExternalTailSaturation.Basic
+P01_LOADED_MODULE Rho5.Shared.GlobalXBMaximizer.Basic
+P01_LOADED_MODULE Rho5.Integration.StagedAssembly.Baseline
+P01_LOADED_MODULE Rho5.LocalAnalysis.Model
+P01_LOADED_MODULE Rho5.LocalAnalysis.InverseBound
+P01_LOADED_MODULE Rho5.LocalAnalysis.SampleData
+P01_LOADED_MODULE Rho5.LocalAnalysis.PhysicalCover
+P01_LOADED_MODULE Rho5.Shared.V43ActualMatrix.Matrix
+P01_LOADED_MODULE Rho5.Shared.V43ActualMatrix.Schur
+P01_LOADED_MODULE Rho5.Shared.V43ActualMatrix.Audit
+P01_LOADED_MODULE Rho5.Shared.V43ActualMatrix.SchurAudit
+P01_LOADED_MODULE Rho5.Shared.V43ActualMatrix.Pivot
+P01_LOADED_MODULE Rho5.Shared.V43ActualMatrix.PivotAudit
+P01_LOADED_MODULE Rho5.Shared.V43ActualMatrix.Trace
+P01_LOADED_MODULE Rho5.Shared.V43ActualMatrix.TraceAudit
+P01_LOADED_MODULE Rho5.Shared.V43ActualMatrix.Frame
+P01_LOADED_MODULE Rho5.Shared.V43ActualMatrix.FrameAudit
+P01_LOADED_MODULE Rho5.Shared.V43ActualMatrix
+P01_LOADED_MODULE Rho5.Shared.V43MatrixRoundTrip.Defs
+P01_LOADED_MODULE Rho5.Shared.V43MatrixRoundTrip.DefsAudit
+P01_LOADED_MODULE Rho5.Shared.V43MatrixRoundTrip.Readings
+P01_LOADED_MODULE Rho5.Shared.V43MatrixRoundTrip.ReadingsAudit
+P01_LOADED_MODULE Rho5.Shared.V43MatrixRoundTrip.Physical
+P01_LOADED_MODULE Rho5.Shared.V43MatrixRoundTrip.PhysicalAudit
+P01_LOADED_MODULE Rho5.Shared.V43MatrixRoundTrip.Height
+P01_LOADED_MODULE Rho5.Shared.V43MatrixRoundTrip.HeightAudit
+P01_LOADED_MODULE Rho5.Shared.V43MatrixRoundTrip.Inverse
+P01_LOADED_MODULE Rho5.Shared.V43MatrixRoundTrip.InverseAudit
+P01_LOADED_MODULE Rho5.Shared.V43MatrixRoundTrip
+P01_LOADED_MODULE Rho5.Shared.ActualXBReduction.Basic
+P01_LOADED_MODULE Rho5.Shared.ActualXBReduction.BasicAudit
+P01_LOADED_MODULE Rho5.ExternalTailSaturation.FullMatrixContraction
+P01_LOADED_MODULE Rho5.ExternalTailSaturation.FactorChoice
+P01_LOADED_MODULE Rho5.ExternalTailSaturation.Saturation
+P01_LOADED_MODULE Rho5.ExternalTailSaturation.Signs
+P01_LOADED_MODULE Rho5.ExternalTailSaturation.Ties
+P01_LOADED_MODULE Rho5.ExternalTailSaturation.Classification
+P01_LOADED_MODULE Rho5.ExternalTailSaturation.Growth
+P01_LOADED_MODULE Rho5.ExternalFourthPivot.Readout
+P01_LOADED_MODULE Rho5.ExternalFourthPivot.Transport
+P01_LOADED_MODULE Rho5.ExternalFourthPivot.NormalizedFourth
+P01_LOADED_MODULE Rho5.ExternalFourthPivot.Main
+P01_LOADED_MODULE Rho5.ExternalFourthPivot.SharpEarly
+P01_LOADED_MODULE Rho5.Shared.TailSaturationBounds.InputBounds
+P01_LOADED_MODULE Rho5.Shared.TailSaturationBounds.HighGrowth
+P01_LOADED_MODULE Rho5.Shared.ActualXBReduction.CanonicalXB
+P01_LOADED_MODULE Rho5.Shared.ActualXBReduction.CanonicalXBAudit
+P01_LOADED_MODULE Rho5.Shared.ActualXBReduction
+P01_LOADED_MODULE Rho5.Shared.GlobalXBMaximizer.StageB
+P01_LOADED_MODULE Rho5.Certificate.B24MinorBridge.Schur
+P01_LOADED_MODULE Rho5.Certificate.B24MinorBridge.Minors
+P01_LOADED_MODULE Rho5.Certificate.B24MinorBridge.Witness
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity.FiniteBounds
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity.Model
+P01_LOADED_MODULE Rho5.Shared.BNormalizationInterface.Defs
+P01_LOADED_MODULE Rho5.Shared.BNormalizationInterface.Bridge
+P01_LOADED_MODULE Rho5.Shared.BNormalizationInterface.HeadBound
+P01_LOADED_MODULE Rho5.Shared.SchurFourPivotBound.Embed
+P01_LOADED_MODULE Rho5.Shared.SchurFourPivotBound.Bound
+P01_LOADED_MODULE Rho5.Shared.BHeadSign.Signs
+P01_LOADED_MODULE Rho5.Shared.BHeadSign.Action
+P01_LOADED_MODULE Rho5.Shared.BHeadSign.Matrix
+P01_LOADED_MODULE Rho5.Shared.BHeadSign.Representative
+P01_LOADED_MODULE Rho5.Shared.BHeadSign
+P01_LOADED_MODULE Rho5.Shared.PaperB17RootEntry.Defs
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity.Beta
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity.RowCapacity
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity.Prefix
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity.CapacityCount
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity.PrefixPaths
+P01_LOADED_MODULE Rho5.Shared.PaperB17RootEntry.Bounds
+P01_LOADED_MODULE Rho5.Shared.PaperB17Signs.Signs
+P01_LOADED_MODULE Rho5.Shared.PaperB17Signs.Action
+P01_LOADED_MODULE Rho5.Shared.PaperB17Signs.Matrix
+P01_LOADED_MODULE Rho5.Shared.PaperB17Signs.Representative
+P01_LOADED_MODULE Rho5.Shared.PaperB17Signs
+P01_LOADED_MODULE Rho5.Shared.PaperB17RootEntry.Entry
+P01_LOADED_MODULE Rho5.Shared.ActualBRootEntry.Basic
+P01_LOADED_MODULE Rho5.Shared.ActualBRootEntry.Assembly
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity.TailIntervals
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity.Maximum
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity.Paths
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity.Attainment
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity.Nonempty
+P01_LOADED_MODULE Rho5.ExternalBFibreCapacity
+P01_LOADED_MODULE Rho5.Shared.BFibreGlobalEndpoint.Basic
+P01_LOADED_MODULE Rho5.Shared.BFibreGlobalEndpoint.GlobalMax
+P01_LOADED_MODULE Rho5.Shared.BFibreGlobalEndpoint
+P01_LOADED_MODULE Rho5.Shared.BRootCapacityEndpoint.Basic
+P01_LOADED_MODULE Rho5.Shared.BRootCapacityEndpoint.Refutation
+P01_LOADED_MODULE Rho5.Integration.StagedAssembly.RootReduction
+P01_LOADED_MODULE Rho5.ExternalFourthPivot.FifthReduction
+P01_LOADED_MODULE Rho5.Shared.FinalEndpointAssembly.Endpoints
+P01_LOADED_MODULE Rho5.Integration.StagedAssembly.Conditional
+P01_LOADED_MODULE Rho5.ExternalV43Existence.Geometry
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualTerms
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row00
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row01
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row02
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row03
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row04
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row05
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row06
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row07
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row08
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row09
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row10
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row11
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row12
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row13
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row14
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row15
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row16
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row17
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row18
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row19
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualRows.Row20
+P01_LOADED_MODULE Rho5.LocalAnalysis.ResidualCertificate
+P01_LOADED_MODULE Rho5.LocalAnalysis.MatrixBounds
+P01_LOADED_MODULE Rho5.LocalAnalysis.QuadraticBounds
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row00
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row01
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row02
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row03
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row04
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row05
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row06
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row07
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row08
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row09
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row10
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row11
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row12
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row13
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row14
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row15
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row16
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row17
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row18
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row19
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row20
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row21
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row22
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row23
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row24
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row25
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row26
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row27
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row28
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row29
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row30
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row31
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row32
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row33
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row34
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row35
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row36
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row37
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row38
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row39
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row40
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row41
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row42
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row43
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row44
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row45
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row46
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row47
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row48
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row49
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row50
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row51
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row52
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row53
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row54
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row55
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row56
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row57
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row58
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row59
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row60
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row61
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row62
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row63
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row64
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row65
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row66
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row67
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row68
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row69
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row70
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row71
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row72
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row73
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row74
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row75
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row76
+P01_LOADED_MODULE Rho5.LocalAnalysis.Inactive.Row77
+P01_LOADED_MODULE Rho5.LocalAnalysis.InactiveCertificate
+P01_LOADED_MODULE Rho5.LocalAnalysis.LocalInverse
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Common
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row00
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row01
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row02
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row03
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row04
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row05
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row06
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row07
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row08
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row09
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row10
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row11
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row12
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row13
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row14
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row15
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row16
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row17
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row18
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row19
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.Row20
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.ApproxBound
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.HeightBound
+P01_LOADED_MODULE Rho5.LocalAnalysis.Direction.GuardBound
+P01_LOADED_MODULE Rho5.LocalAnalysis.DirectionCertificate
+P01_LOADED_MODULE Rho5.LocalAnalysis.FiniteTrip
+P01_LOADED_MODULE Rho5.LocalAnalysis.GuardedTrip
+P01_LOADED_MODULE Rho5.LocalAnalysis.Pilot
+P01_LOADED_MODULE Rho5.ExternalV43Existence.Regularity
+P01_LOADED_MODULE Rho5.ExternalV43Existence.Trajectory
+P01_LOADED_MODULE Rho5.ExternalV43Existence.PhysicalTrip
+P01_LOADED_MODULE Rho5.PhaseOne
+=== metrics ===
+lean_args: ['-j1', '-M8192', '-R', '/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/src', '-o', '/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/PhaseOne/Audit.olean', '/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/src/Rho5/PhaseOne/Audit.lean']
+exit_code: 1
+wall_seconds: 4.044
+child_user_cpu_seconds: 2.109
+child_sys_cpu_seconds: 2.033
+peak_rss_kib: 4667416
+child_vmpeak_kib: 11299004
+rss_watchdog_limit_kib: 8388608
+rss_watchdog_triggered: False
+as_limit_bytes: 12884901888
+as_limit_gib: 12.00

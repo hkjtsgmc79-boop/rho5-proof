@@ -1,0 +1,7 @@
+D160 package run 2026-09-12T16:35:24+0800
+modules copied: 642  mismatches: 0  missing: 0
+c02 closure: 495  d84 increment: 142  overlap: 4
+aggregate+audits: 5
+lake manifest sha256: 6fa600a652ca1ef77814e08127d1078febb38e3018ed9f8b1c5683b92427b789 (binding match: True)
+unresolved imports in D84 source closure: []
+no Lean invoked; no rebuild; no certificate rerun

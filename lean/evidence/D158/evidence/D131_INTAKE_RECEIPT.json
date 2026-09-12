@@ -1,0 +1,30 @@
+{
+  "status": "ACCEPTED_DECLARED_SCOPE_OWNER_COMPILATION_REVIEW_REUSED",
+  "at": "2026-09-12T11:13:55.633766+08:00",
+  "source_sha256": {
+    "src/Rho5/Shared/GlobalXBMaximizer/Basic.lean": "75db249d6d5bfd46c8bdb57ff0d9fd4f57e98f242a0c21a2c37670122d946801",
+    "src/Rho5/Shared/GlobalXBMaximizer.lean": "543aaf8556226f36dac11a4d0b4e528f97fe41b9e3d77196ed5c9bc86337b888",
+    "src/Rho5/Shared/GlobalXBMaximizer/Audit.lean": "7ad0e13e76336096f19efb4c547fd98d2ec58bc514b7316bb5d33d90957d6819",
+    "src/Rho5/Shared/GlobalXBMaximizer/StageB.lean": "e1e7b04927a4f9a9f8adb7ff6773c5c8d953b5f016f21a91eb202ff3d052dfc1",
+    "src/Rho5/Shared/GlobalXBMaximizer/StageBAudit.lean": "f3f353a34cbf51d56074a7a4eab832c7bc857aedac360eacf461cea997d297c2"
+  },
+  "log_sha256": {
+    "logs_x/Basic.log": "8956be30bb4de708420f2cc41acffde001936540bde6c8fae59dd2a8af863e44",
+    "logs_x/GlobalXBMaximizer.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs_x/Audit.log": "45c55b965910b361ab9cf1cbe998c348a889d8eb97fe9712c9aadc7ad0d20dda",
+    "logs_x/evidence_stageA.txt": "8546cbe1278d80aff0f26003237a999d742ef5bb7ae4e3b49f58c95166a202fc",
+    "logs_x/DEP_BINDING.json": "627fb849c5b8d7eb47656a560027a021bb7f4f90c3f583a5f6b77685b3132ee3",
+    "logs_x/StageB.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs_x/StageBAudit.log": "d1fda733816569277e86fc849f03bb78393f0ca4fe64e1efb2104ad76a2523af",
+    "logs_x/evidence_stageB.txt": "6e358bbf5cf25ef9cd0114c7bf8e902e4e24457df24bb49547e04688855fed5f"
+  },
+  "actual_named_axioms": 10,
+  "owner_reported_real_compiles": 5,
+  "scope": "Unconditional global maximizer supplies actual LeadingInput and same-height X Physical or ProperB classification. No B normalization, original root or global alpha upper paid.",
+  "notes": [
+    "Stage B supersedes stage A historical PENDING_GATE text.",
+    "Owner future 11:12 timestamp is not intake time.",
+    "Owner compiler exit and source/olean binding receipts reused. Raw Lean stdout and exact axiom/hash outputs verified; no root recompile or repeat math audit."
+  ],
+  "root_lean_runs": 0
+}

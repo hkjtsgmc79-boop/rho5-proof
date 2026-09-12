@@ -1,0 +1,9 @@
+{
+  "degree": 61,
+  "content": 1,
+  "P5_L_sign": -1,
+  "P5_U_sign": 1,
+  "roots_in_interval": 1,
+  "interval_decimal_width": "1e-200",
+  "elapsed_seconds": 32.18455410003662
+}

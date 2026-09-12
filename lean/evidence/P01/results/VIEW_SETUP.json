@@ -1,0 +1,8 @@
+{
+  "canonical_Rho5": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build",
+  "top_level_links": [],
+  "mathlib_view": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/iso_root/Mathlib",
+  "method": "Reuse accepted D84 Mathlib view; retain C02 canonical Rho5 namespace",
+  "full_closure_scan": false,
+  "upstream_rebuilds": 0
+}

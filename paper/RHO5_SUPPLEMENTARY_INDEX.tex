@@ -1,0 +1,395 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,longtable,array}
+\usepackage[margin=22mm]{geometry}
+\usepackage{xurl}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{microtype}
+\hypersetup{pdftitle={Supplementary material: proof objects and reproducibility},pdfauthor={Qianli Ma, Chao Wu}}
+\title{Supplementary material\\[3pt]\large The exact maximum growth factor for complete pivoting\\on real \(5\times5\) matrices}
+\author{Qianli Ma, Chao Wu\\[3pt]\small \href{mailto:qianli.ma@zju.edu.cn}{\texttt{qianli.ma@zju.edu.cn}}}
+\date{11 September 2026}
+\begin{document}
+\maketitle
+% LaTeX body fragment. Requires amsmath, booktabs, longtable, array, and xurl.
+% Provenance transcription only: no certificate replay was performed to write it.
+\section*{Proof objects and reproducibility index}
+
+This supplement identifies the mathematical modules used in the article,
+their proof objects, and the scopes of the recorded exact acceptances.
+Historical labels beginning R, V, B, or Round identify archived sources;
+they are not additional mathematical hypotheses. File and collection
+names are manifest labels, not public URLs. Relative locations refer to
+the companion analytical collection or to the named extracted archive,
+as specified in S8. Hashes identify bytes; mathematical validity depends
+on the analytic arguments, exact acceptances, and source-composition
+rules. Large certificate payloads may be requested from the authors
+using the email address given in the article.
+
+\section*{S1. The constant and attainment}
+
+\path{supplement/alpha_exact.json} contains all 62 ascending integer
+coefficients of the degree-61 polynomial and rational isolating endpoints
+\(L<U\), with \(U-L=10^{-200}\). The published lower bound and its
+attaining equality family are due to Chen, Edelman, and Urschel.
+The identity record \path{evidence/v54/rho5_v54_alpha_identity.json}
+compares all coefficients and records the endpoint signs and the
+one-sign-change transformation
+\((1+t)^{61}P_{61}((4+5t)/(1+t))\). This identifies the same unique
+root in \((4,5)\); it is not a separate global upper-bound proof.
+
+The retained foundational reconstruction is in
+\path{supplement/foundations/}. R2 supplies coefficient and resultant
+reconstruction; R5 supplies rational Krawczyk isolation; R7 proves that
+the reconstructed matrix is actually completely pivoted and attains
+\(\alpha\). The readable attainment record is also copied to
+\path{supplement/R7_candidate_primal_cp.md}.
+Within the foundational directory the corresponding files are:
+\path{outputs/P5_coefficients_ascending.csv},
+\path{outputs/P5_exact_verification.json},
+\path{outputs/R2_free_CAS_reproduction_report.md},
+\path{outputs/R5_candidate_interval_newton.md}, and
+\path{outputs/R7_candidate_primal_cp.md}.
+The actual entry points, preserving their original relative inputs, are
+\path{work/verify_p5_exact.py},
+\path{work/candidate_interval_newton.py}, and
+\path{work/candidate_primal_cp_certificate.py}.
+They use \path{work/rational_interval.py} and the three polynomial
+files \path{work/sympy_recompute/p1.txt},
+\path{work/sympy_recompute/p2.txt}, and \path{work/sympy_recompute/p3.txt}.
+The primal entry already rechecks the Krawczyk enclosure; running every
+entry separately is not required for every review.
+
+\section*{S2. Early bounds, complete lift, and saturation}
+
+The scalar and saturation sources are
+\path{supplement/R8_scalar_root_bounds.md} and
+\path{supplement/R8_global_chart_coverage.md}.
+The complete two-step lift is R3,
+\path{supplement/foundations/outputs/R3_exact_lift_chebyshev_reduction.md}.
+The early bounds apply after normalization of the largest initial
+entry to one. The D/X saturation used in the article preserves a
+nonzero fifth-pivot magnitude and the complete earlier pivoting bands;
+zero fifth pivots are handled by the early bounds.
+
+\begin{samepage}
+The preserved historical R8 saturation text is accompanied by
+\path{supplement/R8_SATURATION_ERRATA_V55.md}.
+A zero fifth pivot need not mean a zero fourth-stage tail, and the two
+full-matrix constructions are asserted equal only at a positive-product
+junction. The immutable historical text has SHA-256
+\begin{quote}
+\path{0ffdc19be82c27f3e7d660bb915ce1bcc051908c89c246fbea60cfe2b4ebecf0}.
+\end{quote}
+\end{samepage}
+The corrections, analytic proof map, and bounded checks are retained in
+\path{evidence/v55/ANALYTIC_AUDIT.md},
+\path{evidence/v55/PROOF_DEPENDENCY_MAP.md}, and
+\path{evidence/v55/LOCAL_ACCEPTANCE_RECEIPT.json}.
+Those finite checks are not a replacement for the universal written
+arguments or a replay of the X and negative-D certificates.
+
+\section*{S3. Canonical representative, reconstruction, and height}
+
+The canonical-height dependency has three distinct components.
+Their historical acceptance records must not be merged into a claim
+that the final composer re-executed all three.
+
+\textbf{Canonical representative (V24/T24).}
+The original package is
+\path{RHO5_V24_Exact_Verification_2026-09-06.zip}.
+Its six complete exclusion trees contain 228,542 nodes and 114,274
+contradiction leaves, with no open leaf. The package retains the
+mathematical theorem, model, exact acceptor, and nested earlier inputs.
+Its SHA-256 is
+\begin{quote}
+\path{2478b3d6c8d9189fd508e2af4695bb2086c6628d5049c75cef759bd3e455dfa8}.
+\end{quote}
+Here T24 denotes the canonical target proved in this package.
+
+\textbf{Row-scale reconstruction (V25).}
+The original nested object is
+\path{RHO5_V26_Exact_Verification_REBUILT/V25_DEPENDENCY.zip}
+inside
+\path{RHO5_V26_Canonical_Global_Alpha_Exact_Verification_2026-09-07.zip}.
+The SHA-256 of the nested ZIP bytes is
+\begin{quote}
+\path{2ee17e8eb8ff5d21716675ce86eea2cc791dc2a9454d820c90bd481e164a47ca}.
+\end{quote}
+The universal equivalence is analytic. Its 28 symbolic checks and
+rational regressions test implementation and reconstruction; they are
+not a sweep of all parameter values.
+
+\textbf{Canonical exact height (V28).}
+The preserved package is
+\path{rho5_v28_exact.zip},
+with SHA-256
+\begin{quote}
+\path{bec88339a158920d9dacb15341b02f359af83c4bf0e977721d9bdb2764fa0668}.
+\end{quote}
+All thirteen localization fronts were continued. The proof has
+152,467 records and 208,274 contraction certificates; its three
+terminal boxes in the peak neighborhood are paid by the analytic and
+algebraic height module. The independent replay used the earlier
+V24/V25 mathematical inputs without rerunning every older tree.
+V27 entrance dictionaries and other earlier dependencies are retained
+where the frozen component manifests require them.
+
+\section*{S4. The complete cross-saturated domain}
+
+The complete X certificate collection comprises the following archive
+objects. The table gives their exact filenames and replay entry points;
+commands are run from the named extracted package root. Individual
+archive instructions specify their input dependencies.
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.20\linewidth}>{\raggedright\arraybackslash}p{.48\linewidth}>{\raggedright\arraybackslash}p{.25\linewidth}@{}}
+\toprule
+Domain and source&Archive filename&Exact entry\\
+\midrule
+\endhead
+\(0<k\le2\), V31&
+\path{rho5_v31_exact.zip}&
+\texttt{python} \path{verify_all.py}\\[2mm]
+\(k\ge2.2\), Round43&
+\path{ROUND43_MINIMAL_REPLAY.zip}&
+\texttt{bash} \path{repro/replay.sh}, in \path{RHO5_CQG_ROUND43}\\[2mm]
+\(2.15\le k\le2.2\), and strict high \(r\) for \(2.1\le k\le2.2\), Round44&
+\path{ROUND44_MINIMAL_REPLAY.zip}&
+\texttt{python3} \path{repro/replay_new.py} \texttt{.}\\[2mm]
+\(2.14\le k\le2.15\), \(r\le k\), V33&
+\path{rho5_v33_exact.zip}&
+\texttt{python} \path{verify_all.py}\\[2mm]
+\(2.1\le k\le2.14\), \(r\le k\), Round45&
+\path{RHO5_ROUND45_EXACT.zip}&
+\path{rho5_round45_exact/replay.py}\\[2mm]
+\(2<k\le2.1\), \(r>k\), corrected V34/Round46&
+\path{RHO5_V34_HIGH_EXACT_FULL.zip}&
+\path{rho5_v34_high/replay_high.py}\\[2mm]
+\(\gamma/2\le k\le2.1\), \(r\le k\), \(F\ge\gamma\), Round47&
+\path{RHO5_ROUND47_ALPHA_FULL.zip}&
+\path{rho5_round47_alpha/replay.py}\\
+\bottomrule
+\end{longtable}
+The last three ZIPs have respectively 222,151,979, 131,835,895, and
+367,175,732 bytes. The last package, comprising complete roots I and II,
+has SHA-256
+\begin{quote}
+\path{ddab67679b4faf3338beddaaea25dce99edfabeab937a0da07aa534c7a866de8}.
+\end{quote}
+Round46 uses the corrected exact factor-graph implementation, not the
+superseded one. V36 assembles the unrestricted complete X theorem:
+\path{supplement/V36_THEOREMS.md}, with its full source at
+\path{rho5_v36_exact/THEOREMS.md}.
+The package instructions specify Python/SymPy, C++17, and Boost
+requirements. Their previously recorded acceptances are not represented
+as new runs performed in preparing this index.
+
+\section*{S5. Six-variable maximum in the negative diagonal domain}
+
+V36 gives the attained actual-tail maximum and qualified double-gap
+flow. V37 eliminates \((\beta,p,e,r,s,t)\) at a fixed seventeen-coordinate
+framework, on each nonempty high-value fibre in the normalized
+\(p\ge1\) range. These are same-source feasibility statements, without
+packet-rank assumptions. The preserved texts are
+\path{supplement/V36_THEOREMS.md} and
+\path{supplement/V37_SIX_VARIABLE_ELIMINATION.md}; the full V37 source is
+\path{rho5_v37_exact/theory/SIX_VARIABLE_ELIMINATION.md}.
+The complete framework model is \path{supplement/B17_FULL.json}, SHA-256
+\begin{quote}
+\path{39a65f2cbd6089dab3a403c6a72f365a02003737a641be86c3cf73cb70e76de3}.
+\end{quote}
+The model contains canonical images of every hypothetical source above
+\(\alpha\), including the proper negative domain with \(k\le2\).
+It is not restricted globally to a selected contact equation.
+
+\section*{S6. Acceptance rules and their thresholds}
+
+Let \(\gamma=4132517/10^6<\alpha\). Contradiction rules exclude complete
+sources with \(F\ge\gamma\); height and qualified transport rules may
+instead establish only \(F\le\alpha\). An alpha-safe source need not
+be infeasible at the lower threshold. Exact nonnegative-weight,
+interval, contraction, and ancestor-image checks are part of acceptance,
+not merely discovery output or hash comparison.
+
+The final local record has 47 old contradiction leaves, three alpha-safe
+leaves (H, A, B14), one V53 contradiction, one B15 canonical-source
+threshold exclusion, and two B16 canonical-source threshold exclusions.
+Each B15/B16 source covers both qualified conditional charts. The joint
+conclusion is alpha safety, not whole-anchor gamma infeasibility.
+
+Within the complete B preservation archive, the actual mathematical
+interfaces include \path{deep_math.py},
+\path{alpha_cover.py}, and the frozen depth500 verifier; source assembly
+uses \path{alpha_parent_cover.py} and
+\path{final_overlay_accept.py}. The final local mathematical producer
+\path{verify_joint_anchor.py} has SHA-256
+\begin{quote}
+\path{548de0119a5d69ff543ab4da4c5c7c5fd6a63e7f5707c4c5c70a7af4ad548bba}.
+\end{quote}
+The source composer \path{final_overlay_accept.py} has SHA-256
+\begin{quote}
+\path{974b79b97732b02008207fec847a8a68796fcb939c5acf862340cb6c5acc0a13}.
+\end{quote}
+The joint producer executes its frozen child verifiers; the later
+composer consumes identified earlier mathematical receipts and checks
+their source bindings. It does not re-execute all inherited mathematics.
+
+\section*{S7. Complete negative-diagonal coverage and binding}
+
+The preserved base tree is
+\path{rho5_independent_acceptance_20260911_11/checkpoint/B17_ROOT.json}
+inside the historical-root archive. It has 2,102,766,386 bytes and SHA-256
+\begin{quote}
+\path{8e138dce9a65e49252a1f4714229b1ca95227943913f1eeefdf51714810a563c}.
+\end{quote}
+Its exact cold replay accepted 749,693 nodes: 374,846 splits,
+374,839 contradiction terminals, four alpha-safe terminals, and four
+explicit old-rule open terminals. The 750 enclosed B44 continuations
+have no internal open terminal. The cold record
+\path{rho5_independent_acceptance_20260911_11/COLD_REPLAY.json}
+has SHA-256
+\begin{quote}
+\path{55f3a9dd5090cfd9e21c479444d5cca1fc15fde2b5c22b8180bbd1c834156b37}.
+\end{quote}
+The recorded Fraction replay used eight workers and took 22,815.35
+seconds. That is a historical mathematical acceptance, not the runtime
+of the final composition.
+
+The article's \(Q_1,Q_2,Q_3,Q_4\) are the following actual old-root
+boxes; the historical indices are retained here to locate their payloads:
+\begin{center}
+\begin{tabular}{@{}lrll@{}}
+\toprule
+Article&Index&Original-root path&Paid responsibilities\\
+\midrule
+\(Q_1\)&338726&\texttt{10011000010101010}&111/111\\
+\(Q_2\)&435003&\texttt{10111000001100011000010111011}&240/240\\
+\(Q_3\)&563285&\texttt{1101000101111}&159/159\\
+\(Q_4\)&675104&\texttt{1110101001111}&56/56\\
+\bottomrule
+\end{tabular}
+\end{center}
+The last local subtree, at relative path \texttt{10011101}, covers
+54 terminal positions and pays only the final one of the 240
+responsibilities of parent 435003. The original-parent accounting is
+465 old accepted parents plus these four completions, hence 469/469
+and effective open count zero. The old root bytes still contain four
+O records; they are paid by the separate cover, not relabelled.
+The article combines the historical types from S6 into 48 contradiction
+terminals, three height or transport terminals, and three canonical-source
+threshold exclusions. These are the same 54 terminal responsibilities,
+not additional proof objects.
+
+\textbf{Final local proof.}
+\path{evidence/joint/ANCHOR_COMPLETE.json} and
+\path{evidence/joint/COMPLETED_ANCHOR_LEDGER.json} record the B15/B16/V53
+joint acceptance. The former, from the recorded 184.37-second run,
+has SHA-256
+\begin{quote}
+\path{648aa5322cfd518d1eaa549bf806b3daab67123078c2aa64909ba97831dd11d1}.
+\end{quote}
+\textbf{Last parent.}
+\path{evidence/final_overlay/PARENT_435003_COMPLETE.json} has SHA-256
+\begin{quote}
+\path{6451a87db7383915b58bb3174581a4c81c38eca9a8aae32641d00083ad6cacb9}.
+\end{quote}
+\textbf{Actual root cover.}
+\path{evidence/final_overlay/ROOT_COMPLETE_OVERLAY.json} has SHA-256
+\begin{quote}
+\path{43dbb784c871ecad4b6ff10047f39a2dad7a69a0b6eb392b40c9a56306e6ea34}.
+\end{quote}
+Its 357 direct dependencies are enumerated in
+\path{FINAL_OVERLAY_DIRECT_DEPENDENCIES.json}. Recursive runtime and
+upstream theorem dependencies are additional objects; this list alone
+is not the complete proof archive.
+
+\section*{S8. Artifact collections and reproducibility scope}
+
+The manifest groups the proof objects into the following logical
+collections. These names identify sets of retained files, not public
+repositories or newly assigned archive identifiers.
+\begin{description}
+\item[Companion analytical collection.]
+The relative \path{supplement/} and \path{evidence/} locations used in
+S1--S7 contain the analytical sources, selected exact inputs, and
+acceptance records. The foundational \path{work/} and \path{outputs/}
+inputs retain their relative structure under
+\path{supplement/foundations/}; their identities are listed in
+\path{FOUNDATIONAL_MINIMUM_MANIFEST.json}.
+\item[Canonical and complete X certificates.]
+The archive objects named in S3--S4 include their frozen mathematical
+inputs and acceptors. Their manifests determine the nested dependencies.
+\item[Complete negative-diagonal certificates.]
+The historical-root and final-cover archives below contain the base
+root, its exact runtime, and the four complete source compositions.
+\end{description}
+
+The two complete negative-diagonal archives are:
+\begin{description}
+\item[\path{historical_root.tar.gz}]
+2,189,588,699 bytes; SHA-256
+\path{15ef795e85d0d295e92fdd629f313b9c284cc6519388011862aee3c1e18e3f73}.
+\item[\path{final_cover.tar.gz}]
+1,385,430,364 bytes; SHA-256
+\path{1c9fb99d184eaf9d79b44d33826e4db8fbced8db41ee2b46ec2e1616bd12361c}.
+\end{description}
+Their retained copies have passed whole-archive hash checks, recorded
+in the preservation collection's \path{LOCAL_ARCHIVE_RECEIPT.json}.
+This verifies byte identity, not a further mathematical replay.
+The second archive retains the relative locations
+\path{rho5_deep500_all_open_20260910_08/},
+\path{rho5_b16_v53_closure_20260911_18/},
+\path{rho5_b16_20260911_17/}, and
+\path{rho5_cqg_continuous_20260910/run_01/runtime/models/B17_FULL.json}.
+The first contains the base tree and its
+\path{runtime/R54_SOURCE_MANIFEST.json}, listing 959 runtime sources,
+under \path{rho5_independent_acceptance_20260911_11/}.
+These are archive-relative locations. Frozen absolute-location bindings
+require an explicit replay mapping that retains every mathematical
+input identity and source check.
+
+\textbf{Final local source.}
+The 18,292,611-byte final-anchor review bundle, SHA-256
+\path{88a05ffe78a54d0c552aa6c5f2294e8614b7f78296efbbfb0cd5332322d21e15},
+contains a standard-library-only short replay for Python 3.10 or later:
+\begin{verbatim}
+python -S restore_inputs.py
+python -S verify_joint_anchor.py --v53-dir rho5_v53_exact \
+  --b16-dir B_STRUCTURE_16_DELIVERY --output-dir replayed_anchor
+\end{verbatim}
+The output directory must be empty or absent. The result pays the
+54-leaf anchor only; its standalone whole-parent and whole-domain
+flags correctly remain false.
+
+\textbf{Complete negative-diagonal domain.}
+From the extracted historical-root directory, the exact root entry is:
+\begin{verbatim}
+python -B -S runtime/r54_replay.py --tree checkpoint/B17_ROOT.json \
+  --out REPLAY_ROOT_NEW.json --workers 8 --backend fraction --allow-open
+\end{verbatim}
+The new output must not already exist. Its four expected O records
+are covered by the separately accepted parent proofs.
+\path{deep_math.verify_branch} and \path{alpha_cover.verify_cut} are
+mathematical interfaces; \path{alpha_parent_cover.py} and
+\path{final_overlay_accept.py} compose accepted sources without
+rerunning all the mathematics of their input receipts. A complete
+independent replay therefore includes both the parent mathematics
+and the final source binding. The frozen 239/240 baseline must be
+preserved when attaching the last local proof, with a hash-bound replay
+configuration and fresh output locations. Python assertion optimization
+must not be enabled.
+
+\textbf{Full real-matrix theorem.}
+The global conclusion also uses S1--S5, including the complete X
+certificates, attained lower bound, and analytic quantifier and boundary
+arguments. The recorded computation consists of exact component
+acceptances and verified compositions. It is not a new single-command
+fresh-environment replay of the entire dependency chain.
+\path{REPRODUCIBILITY.md} specifies the recorded entry points and their
+scopes; \path{THEOREM_CHAIN.md} gives the dependency map. The identities
+and acceptance scopes in this supplement distinguish preservation,
+mathematical replay, and composition. They do not assert an existing
+public deposition or a newly completed independent replay of every
+historical component.
+
+\end{document}

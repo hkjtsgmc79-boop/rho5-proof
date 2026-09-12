@@ -1,0 +1,10 @@
+{
+  "state": "independent_alpha_module_return_evidence_matched",
+  "sources_matched": 6,
+  "audit_source_matched": true,
+  "self_review_reused": true,
+  "repeat_math_audit_or_compile": false,
+  "target_scope": "root existence in exact interval, uniqueness on (4,5), alpha chosen from proved existence",
+  "not_accepted": "top-level adapter/rootPolynomial_eq_P61/root_spec/candidate_system_eq_actual_alpha pending D05 chain",
+  "full_global_theorem_completed": false
+}

@@ -1,0 +1,42 @@
+{
+  "status": "ACCEPTED_A_AND_B_FULL_SCOPE",
+  "at": "2026-09-12T09:42:35.674820+08:00",
+  "scope": "Every V43 Physical X22 point reconstructs to actual normalized M with four complete pivots, actual LegalTrace, growth>=height and height<=rho5Trace, PolyCP(M); general w retained, no additional LeadingTracePos premise. No global cube coverage or alpha upper.",
+  "source_sha256": {
+    "src/Rho5/Shared/V43ActualMatrix.lean": "50aadaffeb1e144e413db75cef5decbedc95f0382c41d664b65f9ff7e3d83e00",
+    "src/Rho5/Shared/V43ActualMatrix/Matrix.lean": "9345fa109f592b7318bd38c6b36e5aa36f8509c9e09da74d8921e82234749f7f",
+    "src/Rho5/Shared/V43ActualMatrix/Schur.lean": "58333a3f04e92ca4420f3b175c7337ccdaf4a147c7e98e1b1eee0c4187a476b5",
+    "src/Rho5/Shared/V43ActualMatrix/Audit.lean": "a44dfd5764e609ad533eda508e4e1d4a125b5961b4c98308433bed96b1f60fe5",
+    "src/Rho5/Shared/V43ActualMatrix/SchurAudit.lean": "367441477788b432e20c83f381e4357432461346b25184342df9fc99f2a80cd1",
+    "src/Rho5/Shared/V43ActualMatrix/Pivot.lean": "a081623e34319a341e9d909b2f75a0dac0fdda3666e9f111a07c45af68f5379f",
+    "src/Rho5/Shared/V43ActualMatrix/PivotAudit.lean": "72d6cd189b184cea41feecdb952eea8fa0eddf522a03bbee1427627f0661a624",
+    "src/Rho5/Shared/V43ActualMatrix/Trace.lean": "d39747f29b12a7cc46831cb0c789240a85b8defd9983e21bc4721d58776bd6b2",
+    "src/Rho5/Shared/V43ActualMatrix/TraceAudit.lean": "4eb1a1294db1f6ea8e2367c5ccb1c1c337c3b538b33f849bfa051156fe7aeee9",
+    "src/Rho5/Shared/V43ActualMatrix/Frame.lean": "6593014003bfae76643d756b45d9681520cb651a31152f0a28a92e407fd99f97",
+    "src/Rho5/Shared/V43ActualMatrix/FrameAudit.lean": "87b1d4e1a0b0360a2bb52c57fe442790aa7beb1ccb352e1080b0182d584c3cd1"
+  },
+  "actual_success_logs_sha256": {
+    "logs/mod_Rho5.Shared.V43ActualMatrix.Pivot_run4.log": "445ceb5843e69d2d70b8604599f1a45e98a1a433c54b38a06b694e187cc8f6ad",
+    "logs/mod_Rho5.Shared.V43ActualMatrix.Trace_run6.log": "b2f5aab79cb7bd5a93be5d3675a76cbec463e67437510a938a630beae23ba4bc",
+    "logs/mod_Rho5.Shared.V43ActualMatrix.Frame_run1.log": "45711d456505b15be8bbcf4ca01ac3533bc0aab066997c4ed15f4586c775f072",
+    "logs/mod_Rho5.Shared.V43ActualMatrix.PivotAudit_run1.log": "1116abdae4f0d9a23e8a0da3fb543053117c9deb65f0bd444505138e6884c788",
+    "logs/mod_Rho5.Shared.V43ActualMatrix.TraceAudit_run3.log": "dee076df2bb3cfd17985e820ceb31aab0cfc1ad14a0cc61b004953ea0fe81f2a",
+    "logs/mod_Rho5.Shared.V43ActualMatrix.FrameAudit_run1.log": "a422aff4051f8b7f1fb87e146ee93fd54d5fb8b4409a57d7620676ce739851a7",
+    "logs/mod_Rho5.Shared.V43ActualMatrix_run6.log": "824dbfb60a2039a9408de583edcdebdec125960d29e2ef7327a91b14401afd2a",
+    "logs/audit_Audit_run2.log": "b606f0b1667d53994b2c60a4b90037077e63a8d6958cc1f98cc8f525e4310d47",
+    "logs/audit_SchurAudit_run2.log": "24985c042251017ef8d488eec86b2ddecabc73f237fa397c443f1153caaa46ed",
+    "logs/audit_PivotAudit_run2.log": "266f2b8e8dd44090ae6aaa7367eb4799ebed4bd6acc8baab0079e6b132266938",
+    "logs/audit_TraceAudit_run3.log": "b89e063ecec75e14d13175ea565fe58aab57196cb37a00a02bf8e158bd6af745",
+    "logs/audit_FrameAudit_run2.log": "2be99c68cf0f518e978b3a58d7d5dc391d2f6fed7c25f6b66c3958eb51e0319a"
+  },
+  "actual_named_axioms": 40,
+  "stage_A_source_unchanged": 4,
+  "ready_sha256": "f4b8a2fd705b026897b72d628ebed64dfe3f401e6414fc06b97e90bc4d9277e7",
+  "root_lean_runs": 0,
+  "notes": [
+    "Final Trace docstring now bound to updated successful run6. Earlier transient mismatch was not accepted.",
+    "Final owner receipt correctly counts40 distinct named records; earlier52 mistakenly added prior12 again. Actual40/40 checked.",
+    "Owner restored truncated mirror bookkeeping, added8 D65 frame dependencies and reanchored unchanged artifacts. No root replay. Mirror category counts overlap.",
+    "Stepwise trace and D65 reuse both preserved; no root repeated mathematical review. Browser present-files failed but exact files are present and valid."
+  ]
+}

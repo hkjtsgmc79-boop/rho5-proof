@@ -1,0 +1,27 @@
+{
+  "status": "ACCEPTED_DECLARED_SCOPE",
+  "at": "2026-09-12T11:06:48.527104+08:00",
+  "scope": "Actual LeadingInput with height>4 has a same-height actual X Physical reconstruction or ProperB alternative; no B normalization or global cube coverage.",
+  "source_sha256": {
+    "src/Rho5/Shared/ActualXBReduction.lean": "74d3af43c048f736c5625779b62e2035539c363a5f26541a87c0f8237efdfdc5",
+    "src/Rho5/Shared/ActualXBReduction/Basic.lean": "56d9b2ccc70a694325d57ad969cd2345adae02f5cb2db0b3486f352c133cf8a7",
+    "src/Rho5/Shared/ActualXBReduction/BasicAudit.lean": "21c07b0ed5da4313d41d47072e5db36ccd5b1c41ff23af0d6e9fa60e173d406c",
+    "src/Rho5/Shared/ActualXBReduction/CanonicalXB.lean": "e7e25d632fac23f1bad9abd378fa65262c2caead53704c14000c43a4e4805b13",
+    "src/Rho5/Shared/ActualXBReduction/CanonicalXBAudit.lean": "bec5e910460ca023aeb8e1ae862df886dc0beb8530cdc355fa1d3d14cd8eb347"
+  },
+  "success_logs_sha256": {
+    "logs/mod_Rho5.Shared.ActualXBReduction.Basic_run5.log": "90db678c0aacd4afdac46e9d3b917c290b2eb0fc9c6a35bb75981cbc634a86f7",
+    "logs/mod_Rho5.Shared.ActualXBReduction.BasicAudit_run2.log": "b9c10a8d8331a8f2c4623591df5ebbe32a0a8c2a93c14b119e802ad577de1d60",
+    "logs/mod_Rho5.Shared.ActualXBReduction.CanonicalXB_run3.log": "d5f0ba380ca85763085ed6a9983934af416a2c35ccf5d71f697da88ddc493155",
+    "logs/mod_Rho5.Shared.ActualXBReduction.CanonicalXBAudit_run1.log": "2feafba57bb3c7cad8ff0546bcbaa90b4f0868c6235ecebecc3ee9aba19d0a2f",
+    "logs/mod_Rho5.Shared.ActualXBReduction_run1.log": "398d979b8d468fd6eb1b34060d89804710d7226f4811ba516709acfba9404cac"
+  },
+  "axiom_logs_sha256": {
+    "logs/audit_BasicAudit_run2.log": "3b052eb1cbf1ba09cc55cadd28b09834efc59ae7d45ef622493c686499b54228",
+    "logs/audit_CanonicalXBAudit_run1.log": "c813580842e71865bdf8e52b2103b440120de71bb8f48d0bdd44005b4beb4cbc"
+  },
+  "actual_named_axioms": 18,
+  "ready_sha256": "fff1d859959e235ee39b6fa2941fab1eb5c29b3f4ca86ff3dc7ce51af4027c1a",
+  "review": "Owner self-review and compiler/source/olean dependency binding reused; root exact-file, true compiler and axiom output checks only. No repeat mathematical audit.",
+  "root_lean_runs": 0
+}

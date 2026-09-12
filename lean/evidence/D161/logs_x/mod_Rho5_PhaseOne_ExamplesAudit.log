@@ -1,0 +1,140 @@
+Rho5.PhaseOne.Examples.alpha_unique_root_in_four_five : ExistsUnique.{1} fun a =>
+  And (LT.lt.{0} 4 a) (And (LT.lt.{0} a 5) (Eq.{1} (Rho5.Algebraic.AlphaRoot.rootPolynomial a) 0))
+'Rho5.PhaseOne.Examples.alpha_unique_root_in_four_five' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.PhaseOne.Examples.alpha_readings : And (LT.lt.{0} 4 Rho5.Algebraic.AlphaRoot.alpha)
+  (And (LT.lt.{0} Rho5.Algebraic.AlphaRoot.alpha 5)
+    (Eq.{1} (Rho5.Algebraic.AlphaRoot.rootPolynomial Rho5.Algebraic.AlphaRoot.alpha) 0))
+'Rho5.PhaseOne.Examples.alpha_readings' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.PhaseOne.Examples.rho5Trace_is_sSup : Eq.{1} Rho5.GrowthSupremum.rho5Trace (sSup.{0} Rho5.GrowthModel.GrowthValues)
+'Rho5.PhaseOne.Examples.rho5Trace_is_sSup' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.PhaseOne.Examples.actual_alpha_attained : And
+  (Eq.{1} (Rho5.matrixEntryMax Rho5.ExternalAttainment.actualAlphaMatrix) 1)
+  (And
+    (Rho5.CompletePivotPath.LegalTrace Rho5.ExternalAttainment.actualAlphaMatrix
+      Rho5.ExternalAttainment.actualAlphaValues)
+    (And
+      (Eq.{1}
+        (Rho5.GrowthModel.growthRatio Rho5.ExternalAttainment.actualAlphaMatrix
+          Rho5.ExternalAttainment.actualAlphaValues)
+        Rho5.Algebraic.AlphaRoot.alpha)
+      (Membership.mem.{0, 0} Rho5.GrowthModel.GrowthValues Rho5.Algebraic.AlphaRoot.alpha)))
+'Rho5.PhaseOne.Examples.actual_alpha_attained' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.PhaseOne.Examples.alpha_le_rho5Trace_le_eighty_one_sixteenth : And
+  (LE.le.{0} Rho5.Algebraic.AlphaRoot.alpha Rho5.GrowthSupremum.rho5Trace)
+  (LE.le.{0} Rho5.GrowthSupremum.rho5Trace (81 / 16))
+'Rho5.PhaseOne.Examples.alpha_le_rho5Trace_le_eighty_one_sixteenth' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Rho5.PhaseOne.Examples.four_lt_rho5Trace : LT.lt.{0} 4 Rho5.GrowthSupremum.rho5Trace
+'Rho5.PhaseOne.Examples.four_lt_rho5Trace' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.PhaseOne.Examples.exists_global_maximizer : ∃ P values,
+  And (Rho5.BoundaryMaximizer.SortedBoundaryMaximizerFacts P values)
+    (And (Rho5.ExternalTailSaturation.LeadingInput P)
+      (And (Eq.{1} (Rho5.ExternalTailSaturation.height P) Rho5.GrowthSupremum.rho5Trace)
+        (And (LT.lt.{0} 4 (Rho5.ExternalTailSaturation.height P))
+          (And (Eq.{1} (Rho5.matrixEntryMax P) 1)
+            (And
+              (Rho5.CompletePivotPath.LegalTrace P
+                (List.cons.{0} 1
+                  (List.cons.{0} (Rho5.Certificate.B24Extraction.p P)
+                    (List.cons.{0} (Rho5.Certificate.B24Extraction.k P)
+                      (List.cons.{0} (abs.{0} (Rho5.Certificate.B24Extraction.r P))
+                        (List.cons.{0} (Rho5.ExternalTailSaturation.height P) List.nil.{0}))))))
+              (And (Eq.{1} (Rho5.GrowthModel.growthRatio P values) Rho5.GrowthSupremum.rho5Trace)
+                (∀ (M : Rho5.Matrix5),
+                  Ne.{1} M 0 →
+                    ∀ (ws : List.{0} Real),
+                      Rho5.CompletePivotPath.LegalTrace M ws →
+                        LE.le.{0} (Rho5.GrowthModel.growthRatio M ws) (Rho5.GrowthModel.growthRatio P values))))))))
+'Rho5.PhaseOne.Examples.exists_global_maximizer' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.PhaseOne.Examples.rho5Trace_eq_alpha : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    Eq.{1} Rho5.GrowthSupremum.rho5Trace Rho5.Algebraic.AlphaRoot.alpha
+'Rho5.PhaseOne.Examples.rho5Trace_eq_alpha' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.PhaseOne.Examples.legal_growth_le_alpha : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    ∀ (A : Rho5.Matrix5) (values : List.{0} Real),
+      Ne.{1} A 0 →
+        Rho5.CompletePivotPath.LegalTrace A values →
+          LE.le.{0} (Rho5.GrowthModel.growthRatio A values) Rho5.Algebraic.AlphaRoot.alpha
+'Rho5.PhaseOne.Examples.legal_growth_le_alpha' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.PhaseOne.Examples.fifth_readout_le_alpha : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    ∀ (A : Rho5.Matrix5) (values : List.{0} Real),
+      Ne.{1} A 0 →
+        Rho5.CompletePivotPath.LegalTrace A values →
+          LE.le.{0} (List.getD.{0} values 4 0)
+            (HMul.hMul.{0, 0, 0} Rho5.Algebraic.AlphaRoot.alpha (Rho5.matrixEntryMax A))
+'Rho5.PhaseOne.Examples.fifth_readout_le_alpha' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.PhaseOne.Examples.high_path_fifth : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    ∀ (A : Rho5.Matrix5) (values : List.{0} Real),
+      Ne.{1} A 0 →
+        Rho5.CompletePivotPath.LegalTrace A values →
+          LT.lt.{0} 4 (Rho5.GrowthModel.growthRatio A values) →
+            And (Eq.{1} (List.length.{0} values) 5)
+              (And (Eq.{1} (List.getD.{0} values 4 0) (Rho5.GrowthModel.tracePeak values))
+                (And (LT.lt.{0} (HMul.hMul.{0, 0, 0} 4 (Rho5.matrixEntryMax A)) (List.getD.{0} values 4 0))
+                  (LE.le.{0} (List.getD.{0} values 4 0)
+                    (HMul.hMul.{0, 0, 0} Rho5.Algebraic.AlphaRoot.alpha (Rho5.matrixEntryMax A)))))
+'Rho5.PhaseOne.Examples.high_path_fifth' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.PhaseOne.Examples.det_endpoint : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    ∀ (M : Rho5.Matrix5),
+      Eq.{1} (M 0 0) 1 →
+        Rho5.MinorCPDomain.PolyCP M →
+          LE.le.{0} (abs.{0} (Matrix.det.{0, 0} M))
+            (HMul.hMul.{0, 0, 0} Rho5.Algebraic.AlphaRoot.alpha (Rho5.MinorGrowthThreshold.C M))
+'Rho5.PhaseOne.Examples.det_endpoint' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.PhaseOne.Examples.xGlobalSafety_shape : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  ∀ (x : Rho5.LocalAnalysis.X),
+    Rho5.LocalAnalysis.V43.Physical x → LE.le.{0} (Rho5.LocalAnalysis.height x) Rho5.Algebraic.AlphaRoot.alpha
+'Rho5.PhaseOne.Examples.xGlobalSafety_shape' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.PhaseOne.Examples.rootEndpointSafety_shape : Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+  ∀ (zStar : Rho5.Certificate.B16.Point),
+    Rho5.Shared.BRootCapacityEndpoint.IsRootCapacityEndpoint zStar → LE.le.{0} (zStar 23) Rho5.Algebraic.AlphaRoot.alpha
+'Rho5.PhaseOne.Examples.rootEndpointSafety_shape' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Rho5.Integration.StagedAssembly.rho5Trace_eq_alpha_of_safety : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    Eq.{1} Rho5.GrowthSupremum.rho5Trace Rho5.Algebraic.AlphaRoot.alpha
+Rho5.Integration.StagedAssembly.legal_growth_le_alpha_of_safety : Rho5.Integration.StagedAssembly.XGlobalSafety →
+  Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety →
+    ∀ (A : Rho5.Matrix5) (values : List.{0} Real),
+      Ne.{1} A 0 →
+        Rho5.CompletePivotPath.LegalTrace A values →
+          LE.le.{0} (Rho5.GrowthModel.growthRatio A values) Rho5.Algebraic.AlphaRoot.alpha
+Rho5.Integration.StagedAssembly.baseline : And
+  (Eq.{1} Rho5.GrowthSupremum.rho5Trace (sSup.{0} Rho5.GrowthModel.GrowthValues))
+  (And (Eq.{1} (Rho5.matrixEntryMax Rho5.ExternalAttainment.actualAlphaMatrix) 1)
+    (And
+      (Rho5.CompletePivotPath.LegalTrace Rho5.ExternalAttainment.actualAlphaMatrix
+        Rho5.ExternalAttainment.actualAlphaValues)
+      (And
+        (Eq.{1}
+          (Rho5.GrowthModel.growthRatio Rho5.ExternalAttainment.actualAlphaMatrix
+            Rho5.ExternalAttainment.actualAlphaValues)
+          Rho5.Algebraic.AlphaRoot.alpha)
+        (And (LE.le.{0} Rho5.Algebraic.AlphaRoot.alpha Rho5.GrowthSupremum.rho5Trace)
+          (And (LE.le.{0} Rho5.GrowthSupremum.rho5Trace (81 / 16))
+            (∃ P values,
+              And (Rho5.BoundaryMaximizer.SortedBoundaryMaximizerFacts P values)
+                (And (Rho5.ExternalTailSaturation.LeadingInput P)
+                  (And (Eq.{1} (Rho5.ExternalTailSaturation.height P) Rho5.GrowthSupremum.rho5Trace)
+                    (And (LT.lt.{0} 4 (Rho5.ExternalTailSaturation.height P))
+                      (And (Eq.{1} (Rho5.matrixEntryMax P) 1)
+                        (And
+                          (Rho5.CompletePivotPath.LegalTrace P
+                            (List.cons.{0} 1
+                              (List.cons.{0} (Rho5.Certificate.B24Extraction.p P)
+                                (List.cons.{0} (Rho5.Certificate.B24Extraction.k P)
+                                  (List.cons.{0} (abs.{0} (Rho5.Certificate.B24Extraction.r P))
+                                    (List.cons.{0} (Rho5.ExternalTailSaturation.height P) List.nil.{0}))))))
+                          (And (Eq.{1} (Rho5.GrowthModel.growthRatio P values) Rho5.GrowthSupremum.rho5Trace)
+                            (∀ (M : Rho5.Matrix5),
+                              Ne.{1} M 0 →
+                                ∀ (ws : List.{0} Real),
+                                  Rho5.CompletePivotPath.LegalTrace M ws →
+                                    LE.le.{0} (Rho5.GrowthModel.growthRatio M ws)
+                                      (Rho5.GrowthModel.growthRatio P values))))))))))))))

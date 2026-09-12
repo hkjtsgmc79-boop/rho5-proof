@@ -1,0 +1,543 @@
+{
+  "schema": "RHO5_PHASE1_THEOREM_CATALOG_V1",
+  "card": "D158",
+  "title_zh": "第一阶段已验解析成果定理目录（发布用）",
+  "title_en": "Phase-1 accepted analytic results: theorem catalog for the release source package",
+  "generated_at_local": "2026-09-12",
+  "provenance_policy": {
+    "declaration_names": "每个 public_names 条目都已在本卡抽查中于所指交付目录的源码/回执中出现（见 SELF_REVIEW.md 的抽查表）；未出现者不写入。",
+    "types": "C02 默认主线的完整公开类型直接引用编译器输出 evidence/C02_FULL_TARGET_TYPES.txt，不重新 print 全库；其余条目引用原模块声明与接收回执。",
+    "no_new_proofs": "本卡不写新证明、不改源码、不调用 Lean；本文件只是可引用清单。"
+  },
+  "toolchain": {
+    "lean": "4.30.0",
+    "lean_commit": "d024af099ca4bf2c86f649261ebf59565dc8c622",
+    "platform": "x86_64-unknown-linux-gnu (X)",
+    "mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+    "lake_manifest_sha256": "6fa600a652ca1ef77814e08127d1078febb38e3018ed9f8b1c5683b92427b789"
+  },
+  "default_entry": {
+    "import": "Rho5.PhaseOne",
+    "direct_imports": [
+      "Rho5.Integration.StagedAssembly.Conditional",
+      "Rho5.ExternalV43Existence.PhysicalTrip"
+    ],
+    "loaded_Rho5_modules": 634
+  },
+  "default_closure": {
+    "project_loaded_modules": {
+      "Baseline": 404,
+      "RootReduction": 492,
+      "Conditional": 495,
+      "with_public_aggregate": 496
+    },
+    "source_closure_entries": 495,
+    "source": "relay_1345_delivery_20260912/C02/results/IMPORT_SOURCE_OLEAN_BINDING.json (source_closure)",
+    "explicitly_not_imported_in_default_entry": [
+      "G01/G02/G03 数据入口",
+      "M01/M02、C10 树核/样本总装",
+      "C13–D157 后期收紧级联",
+      "V31/Mainline/Census/Subtree/Tree/Checker/Leaf、CertificateContraction（C02 修订图中名称匹配为 0）"
+    ],
+    "registered_but_not_imported": [
+      "D136_SOURCE_SYSTEM",
+      "M01",
+      "C01"
+    ]
+  },
+  "class_legend": {
+    "A_unconditional": "无待提供的数学假设（标准逻辑公理照原回执披露）",
+    "B_parameter_retained": "结论已证但公开类型保留显式数学前提",
+    "C_not_formalized": "尚未在 Lean 建立；登记精确 Prop 前提与覆盖清单",
+    "D_deferred": "延后的大规模计算/树实例，默认不导入"
+  },
+  "items": [
+    {
+      "id": "ALPHA.ROOT.IDENTITY",
+      "class": "A_unconditional",
+      "title_zh": "实际 alpha 的真实根身份（存在、精确隔离区间、唯一性）",
+      "module": "Rho5.Algebraic.AlphaRoot.Root",
+      "namespace": "Rho5.Algebraic.AlphaRoot",
+      "public_names": [
+        "exists_root_in_exact_interval",
+        "alpha_in_exact_interval",
+        "alpha_is_root",
+        "exists_unique_root",
+        "root_unique",
+        "alpha_gt_four",
+        "alpha_lt_five"
+      ],
+      "premises": "无 RootSpec、无外部存在性或唯一性假设",
+      "conclusion": "在精确隔离区间内存在实根；alpha 由已证存在选择，在 (4,5) 中唯一",
+      "type_provenance": "原模块声明 + D09 独立回执 target_scope；当前 C02 闭包再次实际消费",
+      "receipt": {
+        "path": "outputs/d09_alpha_independent_20260911/COORDINATOR_RECEIPT.json",
+        "status": "independent_alpha_module_return_evidence_matched",
+        "local_copy": "evidence/D09_COORDINATOR_RECEIPT.json"
+      },
+      "default_entry": true,
+      "notes": [
+        "D09 回执中 not_accepted 一行（top-level adapter/root_spec/candidate bridge pending）是历史状态，已被 D34/D30/D82 覆盖，不作为当前欠账。"
+      ]
+    },
+    {
+      "id": "ALPHA.CANDIDATE.BRIDGE",
+      "class": "A_unconditional",
+      "title_zh": "原候选方程与实际 alpha 接通；原系统在候选盒中的存在唯一性；实际 alpha 临界元组存在",
+      "module": "Rho5.Algebraic.ScalarCandidateAlpha; Rho5.Algebraic.CriticalExistence.Compatibility; Rho5.Algebraic.CriticalExistence.ActualAlpha",
+      "namespace": "Rho5.Algebraic",
+      "public_names": [
+        "candidate_system_eq_actual_alpha",
+        "exists_unique_original_system",
+        "criticalPoint_g_eq_alpha",
+        "exists_critical_at_actual_alpha"
+      ],
+      "premises": "无；候选存在不再是外部输入",
+      "conclusion": "候选盒加原 P1=P2=P3=J=0 推出 g = alpha；原系统在候选盒中存在唯一，且实际 alpha 临界元组存在",
+      "type_provenance": "原模块声明 + D34 回执（ACCEPTED_IMPLEMENTER_SELF_REVIEW_REUSED）+ D30 两级 READY",
+      "receipt": {
+        "path": "outputs/d34_actual_alpha_bridge_20260912/INTAKE_RECEIPT.json",
+        "status": "ACCEPTED_IMPLEMENTER_SELF_REVIEW_REUSED",
+        "local_copy": "evidence/D34_INTAKE_RECEIPT.json",
+        "secondary": [
+          {
+            "path": "outputs/heartbeat_0420_delivery_20260912/D30/results/ORIGINAL_READY.json",
+            "stage": "ORIGINAL_READY",
+            "local_copy": "evidence/D30_ORIGINAL_READY.json"
+          },
+          {
+            "path": "outputs/heartbeat_0420_delivery_20260912/D30/results/ALPHA_READY.json",
+            "stage": "ALPHA_READY",
+            "local_copy": "evidence/D30_ALPHA_READY.json"
+          }
+        ]
+      },
+      "default_entry": true
+    },
+    {
+      "id": "ALPHA.ATTAINMENT",
+      "class": "A_unconditional",
+      "title_zh": "实际矩阵达到 alpha",
+      "module": "Rho5.ExternalAttainment.ActualAlpha",
+      "namespace": "Rho5.ExternalAttainment",
+      "public_names": [
+        "actualAlpha_attainment",
+        "exists_actualAlpha_attainment",
+        "actualAlpha_le_rho5Trace"
+      ],
+      "premises": "无候选存在、CP 或元素界外部前提",
+      "conclusion": "actualAlphaMatrix 元素最大值 = 1，原 LegalTrace 成立，实际增长等于真实 alpha，且属于增长值集合，故 alpha ≤ rho5Trace",
+      "type_provenance": "原模块声明 + D82 回执",
+      "receipt": {
+        "path": "outputs/external_three_returns_20260912/accepted/D82/INTAKE_RECEIPT.json",
+        "status": "ACCEPTED_DECLARED_SCOPE",
+        "local_copy": "evidence/D82_INTAKE_RECEIPT.json"
+      },
+      "default_entry": true
+    },
+    {
+      "id": "GLOBAL.SUPREMUM.COARSE_BOUND.MAXIMIZER",
+      "class": "A_unconditional",
+      "title_zh": "原上确界语义、粗界与原全局最大者存在",
+      "module": "Rho5.Shared.GlobalAttainedWitness.Range; Rho5.Shared.GlobalAttainedWitness.Attained",
+      "namespace": "Rho5.Shared.GlobalAttainedWitness",
+      "public_names": [
+        "rho5Trace_semantics",
+        "alpha_le_rho5Trace",
+        "rho5Trace_le_eighty_one_sixteenth",
+        "four_lt_rho5Trace",
+        "global_max_exists"
+      ],
+      "premises": "无外部安全假设",
+      "conclusion": "rho5Trace = sSup GrowthValues；alpha ≤ rho5Trace ≤ 81/16；存在原实际矩阵/合法路径的全局最大者",
+      "type_provenance": "原模块声明 + D92 两个 READY 门 + C02 回执",
+      "receipt": {
+        "path": "outputs/heartbeat_0748_delivery_20260912/D92/results/GLOBAL_RANGE_READY.json",
+        "status": "GLOBAL_RANGE_READY",
+        "local_copy": "evidence/D92_GLOBAL_RANGE_READY.json",
+        "secondary": [
+          {
+            "path": "outputs/heartbeat_0748_delivery_20260912/D92/results/GLOBAL_ATTAINED_READY.json",
+            "status": "GLOBAL_ATTAINED_READY",
+            "local_copy": "evidence/D92_GLOBAL_ATTAINED_READY.json"
+          }
+        ]
+      },
+      "default_entry": true,
+      "notes": [
+        "81/16 是粗上界，不是 sharp alpha 上界；上确界达到性不再欠缺。"
+      ]
+    },
+    {
+      "id": "PIVOT.EARLY_FOUR_AND_FIFTH",
+      "class": "A_unconditional",
+      "title_zh": "原任意矩阵/路径的前四 pivot 与第五归约",
+      "module": "Rho5.ExternalFourthPivot.SharpEarly; Rho5.ExternalFourthPivot.FifthReduction",
+      "namespace": "Rho5.ExternalFourthPivot",
+      "public_names": [
+        "early_pivot_bounds_including_zero",
+        "growth_above_four_is_fifth",
+        "growth_le_of_fifth_readout_le"
+      ],
+      "premises": "无（一般原矩阵与原 LegalTrace）；growth_le_of_fifth_readout_le 额外需要该第五读数的上界，该上界由 C02 的两项安全命题提供，见 C02.CONDITIONAL",
+      "conclusion": "前四读数满足 1, 2, 9/4, 4 倍元素最大值（覆盖零、短路径、并列 pivot）；原增长大于 4 时第五原读数即峰值且路径长 5",
+      "type_provenance": "原模块声明 + D124 回执；D86 为已验上游（完整第四 pivot）",
+      "receipt": {
+        "path": "outputs/heartbeat_1019_delivery_20260912/D124/INTAKE_RECEIPT.json",
+        "status": "ACCEPTED_DECLARED_SCOPE",
+        "local_copy": "evidence/D124_INTAKE_RECEIPT.json",
+        "upstream": [
+          {
+            "path": "outputs/heartbeat_0658_delivery_20260912/D86_FULL/INTAKE_RECEIPT.json",
+            "status": "ACCEPTED_FULL_A_AND_B",
+            "local_copy": "evidence/D86_INTAKE_RECEIPT.json"
+          }
+        ]
+      },
+      "default_entry": true,
+      "notes": [
+        "本项三个名字中，early_pivot_bounds_including_zero 与 growth_above_four_is_fifth 无条件；growth_le_of_fifth_readout_le 保留第五读数上界前提，属 B 类消费路径，见 C02.CONDITIONAL 与 B1。"
+      ]
+    },
+    {
+      "id": "V43.PHYSICAL.TRACE_BRIDGE",
+      "class": "A_unconditional",
+      "title_zh": "Physical X 与原实际矩阵/合法路径对应（保留一般 w）",
+      "module": "Rho5.Shared.V43ActualMatrix.Trace; Rho5.Shared.V43ActualMatrix.Frame",
+      "namespace": "Rho5.Shared.V43ActualMatrix",
+      "public_names": [
+        "legalTrace_M",
+        "growthRatio_ge_height",
+        "height_le_rho5Trace",
+        "polyCP_M"
+      ],
+      "premises": "无额外 LeadingTracePos 输入；保留一般 w",
+      "conclusion": "任意 V43.Physical x 构造真实归一化矩阵 M x 与真实轨迹读数 [1, pOf x, kOf x, rOf x, |wOf x − rOf x|]，实际增长至少 height，故 height ≤ rho5Trace",
+      "type_provenance": "原模块声明 + D103_FULL 回执；已含在 C02 最终绑定",
+      "receipt": {
+        "path": "outputs/heartbeat_0923_delivery_20260912/D103_FULL/INTAKE_RECEIPT.json",
+        "status": "ACCEPTED_A_AND_B_FULL_SCOPE",
+        "local_copy": "evidence/D103_INTAKE_RECEIPT.json"
+      },
+      "default_entry": true,
+      "notes": [
+        "该方向给出 height ≤ rho5Trace，不给出 height ≤ alpha。"
+      ]
+    },
+    {
+      "id": "XB.MAXIMIZER_REDUCTION",
+      "class": "A_unconditional",
+      "title_zh": "原全局最大者 → 实际 X 或 B（保留 P/values/N/同高来源）",
+      "module": "Rho5.Shared.GlobalXBMaximizer.Basic; Rho5.Shared.GlobalXBMaximizer.StageB; Rho5.Shared.ActualXBReduction.CanonicalXB",
+      "namespace": "Rho5.Shared.GlobalXBMaximizer; Rho5.Shared.ActualXBReduction",
+      "public_names": [
+        "exists_global_ts_maximizer",
+        "exists_global_max_X_or_properB",
+        "CanonicalXB"
+      ],
+      "premises": "无外部最大者存在假设",
+      "conclusion": "保留实际原最大者 P、合法路径、实际 tail 代表 N 与同高关系；X 是重构回 N 的 Physical 点，B 是实际 ProperB",
+      "type_provenance": "原模块声明 + D131/D126 回执",
+      "receipt": {
+        "path": "outputs/g05_local_takeover_20260912/D131/INTAKE_RECEIPT.json",
+        "status": "ACCEPTED_DECLARED_SCOPE_OWNER_COMPILATION_REVIEW_REUSED",
+        "local_copy": "evidence/D131_INTAKE_RECEIPT.json",
+        "secondary": [
+          {
+            "path": "outputs/g05_local_takeover_20260912/D126/INTAKE_RECEIPT.json",
+            "status": "ACCEPTED_DECLARED_SCOPE",
+            "local_copy": "evidence/D126_INTAKE_RECEIPT.json"
+          }
+        ]
+      },
+      "default_entry": true,
+      "notes": [
+        "未声称 B 已进入最终全树安全域；B 分支的符号变换止于 N→z→y，y→zStar 是同框 canonical 容量构造。"
+      ]
+    },
+    {
+      "id": "B.ROOT_CAPACITY_ENDPOINT",
+      "class": "A_unconditional",
+      "title_zh": "B 原来源 → 原 B17 根容量端点（完整原根）",
+      "module": "Rho5.Shared.ActualBRootEntry.Assembly; Rho5.Shared.BRootCapacityEndpoint.Basic",
+      "namespace": "Rho5.Shared.ActualBRootEntry; Rho5.Shared.BRootCapacityEndpoint",
+      "public_names": [
+        "actual_properB_high_has_root_representative",
+        "root_capacity_endpoint"
+      ],
+      "premises": "无（LeadingInput N 与同高运输由既有 TailReduction 支付）",
+      "conclusion": "原最大者 → N → 实际符号代表 → 同框 canonical 容量端点得证；端点是完整原根上的 IsRootCapacityEndpoint",
+      "type_provenance": "原模块声明 + D141/D142/D139 回执；C02 修订闭包消费",
+      "receipt": {
+        "path": "outputs/assembly_intake_20260912/D141/INTAKE_RECEIPT.json",
+        "status": "ACCEPTED_FOR_ASSEMBLY_WITH_EXPLICIT_PREMISES",
+        "local_copy": "evidence/D141_INTAKE_RECEIPT.json",
+        "secondary": [
+          {
+            "path": "outputs/assembly_intake_20260912/D142/INTAKE_RECEIPT.json",
+            "status": "ACCEPTED_FOR_ASSEMBLY_WITH_EXPLICIT_PREMISES",
+            "local_copy": "evidence/D142_INTAKE_RECEIPT.json"
+          },
+          {
+            "path": "outputs/progress_1204_delivery_20260912/D139/INTAKE_RECEIPT.json",
+            "status": "ACCEPTED_SCOPED_CARD",
+            "local_copy": "evidence/D139_INTAKE_RECEIPT.json"
+          }
+        ]
+      },
+      "default_entry": true,
+      "notes": [
+        "容量端点根的上界 RootEndpointSafety 未付，见 SAFETY.ROOT_ENDPOINT。"
+      ]
+    },
+    {
+      "id": "C02.BASELINE",
+      "class": "A_unconditional",
+      "title_zh": "C02 baseline：rho5Trace 语义、粗界、实际最大者与任意路径增长上界的组合接口",
+      "module": "Rho5.Integration.StagedAssembly.Baseline",
+      "namespace": "Rho5.Integration.StagedAssembly",
+      "public_names": [
+        "baseline"
+      ],
+      "premises": "无",
+      "conclusion": "rho5Trace = sSup GrowthValues；actualAlphaMatrix 元素最大 = 1 且原 LegalTrace 成立；growthRatio actualAlphaMatrix actualAlphaValues = alpha；alpha ≤ rho5Trace ≤ 81/16；存在 P, values（SortedBoundaryMaximizerFacts ∧ LeadingInput P ∧ height P = rho5Trace ∧ 4 < height P ∧ matrixEntryMax P = 1 ∧ 原 LegalTrace 五点读数 ∧ 任意 M ≠ 0 的原合法路径 growthRatio M ws ≤ growthRatio P values）",
+      "type_provenance": "编译器实际输出 evidence/C02_FULL_TARGET_TYPES.txt（完整类型逐字保留）",
+      "receipt": {
+        "path": "outputs/relay_1345_delivery_20260912/C02/results/ASSEMBLY_BASELINE_READY.json",
+        "status": "ASSEMBLY_BASELINE_READY (accepted gate)",
+        "local_copy": "evidence/C02_ASSEMBLY_BASELINE_READY.json",
+        "intake": {
+          "path": "outputs/relay_1345_delivery_20260912/C02/INTAKE_RECEIPT.json",
+          "status": "ACCEPTED_SCOPED",
+          "local_copy": "evidence/C02_INTAKE_RECEIPT.json"
+        }
+      },
+      "default_entry": true
+    },
+    {
+      "id": "C02.X_B_ROOT_REDUCTION",
+      "class": "B_parameter_retained",
+      "title_zh": "C02 强归约：超 alpha 原最大者归约到实际 X 或 B 根容量端点",
+      "module": "Rho5.Integration.StagedAssembly.RootReduction",
+      "namespace": "Rho5.Integration.StagedAssembly",
+      "public_names": [
+        "exists_global_max_X_or_root_endpoint",
+        "exists_X_or_root_endpoint"
+      ],
+      "premises": "显式反证分支 alpha < rho5Trace；不引入新的外部存在性假设",
+      "conclusion": "保留原 P、values、N、原合法路径与代表关系，得到实际 X 或 IsRootCapacityEndpoint 端点；投影 exists_X_or_root_endpoint 会丢失来源信息",
+      "type_provenance": "编译器实际输出 evidence/C02_FULL_TARGET_TYPES.txt",
+      "receipt": {
+        "path": "outputs/relay_1345_delivery_20260912/C02/results/ASSEMBLY_X_B_ROOT_REDUCTION_READY.json",
+        "status": "ASSEMBLY_X_B_ROOT_REDUCTION_READY (accepted gate)",
+        "local_copy": "evidence/C02_ASSEMBLY_X_B_ROOT_REDUCTION_READY.json"
+      },
+      "default_entry": true,
+      "notes": [
+        "消费时应使用强归约 exists_global_max_X_or_root_endpoint，而不是只看投影。"
+      ]
+    },
+    {
+      "id": "C02.CONDITIONAL",
+      "class": "B_parameter_retained",
+      "title_zh": "C02 条件 sharp 等式与原终点（保留 hX/hB）",
+      "module": "Rho5.Integration.StagedAssembly.Conditional",
+      "namespace": "Rho5.Integration.StagedAssembly",
+      "public_names": [
+        "rho5Trace_eq_alpha_of_safety",
+        "legal_growth_le_alpha_of_safety",
+        "legal_growth_le_alpha_via_fifth_of_safety",
+        "fifth_readout_le_alpha_of_safety",
+        "high_path_fifth_of_safety",
+        "det_endpoint_of_safety"
+      ],
+      "premises": "hX : Rho5.Integration.StagedAssembly.XGlobalSafety；hB : Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety；两者都是公开证明参数，当前没有无条件证明",
+      "conclusion": "在同一 hX/hB 下 rho5Trace = alpha；任意 A ≠ 0 与原 LegalTrace 给出 growthRatio A values ≤ alpha；第五读数端点与 det 端点 |M.det| ≤ alpha * MinorGrowthThreshold.C M",
+      "type_provenance": "编译器实际输出 evidence/C02_FULL_TARGET_TYPES.txt（三条 det/legal/eq 类型逐字保留）",
+      "receipt": {
+        "path": "outputs/relay_1345_delivery_20260912/C02/results/ASSEMBLY_CONDITIONAL_ENDPOINT_READY.json",
+        "status": "ASSEMBLY_CONDITIONAL_ENDPOINT_READY (accepted gate)",
+        "local_copy": "evidence/C02_ASSEMBLY_CONDITIONAL_ENDPOINT_READY.json"
+      },
+      "default_entry": true,
+      "notes": [
+        "禁止新增 axiom hX / axiom hB / sorry；不得以 Python PASS、Bool、有限样本或逐叶占位前提填入；不得把条件等式改名为无条件结果。"
+      ]
+    },
+    {
+      "id": "TRIP.ACTUAL_AND_PHYSICAL",
+      "class": "B_parameter_retained",
+      "title_zh": "真实解析轨迹（D84 PhysicalTrip，有限新增到默认主线）",
+      "module": "Rho5.ExternalV43Existence.Trajectory; Rho5.ExternalV43Existence.PhysicalTrip",
+      "namespace": "Rho5.ExternalV43Existence",
+      "public_names": [
+        "exists_actual_trajectory",
+        "exists_physical_trajectory",
+        "exists_resource_endpoint",
+        "exists_exhaustion_at_own_resource",
+        "exists_guard_boundary_trajectory",
+        "height_le_of_actual_trip"
+      ],
+      "premises": "exists_actual_trajectory: 0 ≤ T, z0 ∈ cube center d, d + (9/4)*T < radius；exists_physical_trajectory 另需 Physical z0 与 T ≤ consumed z0；exists_resource_endpoint 取 T = consumed z0；height_le_of_actual_trip 仍显式输入局部 cube 的 height 上界与补偿/时间关系",
+      "conclusion": "ODE 轨迹存在是结论：γ 0 = z0 且闭时间区间上 HasDerivAt γ (certifiedField (γ t)) t；物理轨迹同时给出留 cube、位移 ≤ (9/4)t、高度至少增 t/16、held guard 不变、released guard 至少增 (2/5)t、资源按 consumed z0 − t 下降、坐标 7 不变与 Physical 保持；资源终点资源为零且 Physical",
+      "type_provenance": "原模块声明（D84 交付源码，抽查 6/6 名称命中）+ D84 回执",
+      "receipt": {
+        "path": "outputs/heartbeat_0807_delivery_20260912/D84/INTAKE_RECEIPT.json",
+        "status": "ACCEPTED_DECLARED_SCOPE",
+        "local_copy": "evidence/D84_INTAKE_RECEIPT.json"
+      },
+      "default_entry": true,
+      "notes": [
+        "不自证局部或全域 alpha 上界；不能用于凭空支付 XGlobalSafety。"
+      ]
+    },
+    {
+      "id": "OPT.RESOURCE_ESCAPE",
+      "class": "B_parameter_retained",
+      "title_zh": "可选：局部严格内部正资源点逃离（不进入默认闭包）",
+      "module": "Rho5.Shared.V43PositiveResourceEscape",
+      "namespace": "Rho5.V43PositiveResourceEscape",
+      "public_names": [
+        "exists_escape_with_small_displacement",
+        "not_isLocalHeightMaxOnPhysical",
+        "consumed_eq_zero_of_isLocalHeightMaxOnPhysical"
+      ],
+      "premises": "局部图/严格内部资格",
+      "conclusion": "已证局部严格内部的正资源点可逃离局部极大；不是全 X 覆盖",
+      "type_provenance": "原模块声明 + D100 回执",
+      "receipt": {
+        "path": "outputs/heartbeat_0835_delivery_20260912/D100/INTAKE_RECEIPT.json",
+        "status": "ACCEPTED_DECLARED_SCOPE",
+        "local_copy": "evidence/D100_INTAKE_RECEIPT.json"
+      },
+      "default_entry": false
+    },
+    {
+      "id": "OPT.COMPACT_BOUNDARY",
+      "class": "B_parameter_retained",
+      "title_zh": "可选：局部紧集最大点与边界/耗尽二择（不进入默认闭包）",
+      "module": "Rho5.Shared.V43CompactBoundary",
+      "namespace": "Rho5.V43CompactBoundary",
+      "public_names": [
+        "isCompact_K",
+        "exists_height_maxOn",
+        "maximizer_boundary_or_exhausted"
+      ],
+      "premises": "仍需其 K 的源成员/非空资格",
+      "conclusion": "特定局部紧集 K 的最大点存在，及边界/资源耗尽二择",
+      "type_provenance": "原模块声明 + D108 回执",
+      "receipt": {
+        "path": "outputs/heartbeat_0857_delivery_20260912/D108/INTAKE_RECEIPT.json",
+        "status": "ACCEPTED_DECLARED_SCOPE",
+        "local_copy": "evidence/D108_INTAKE_RECEIPT.json"
+      },
+      "default_entry": false
+    },
+    {
+      "id": "SAFETY.XGLOBAL",
+      "class": "C_not_formalized",
+      "title_zh": "完整 XGlobalSafety（未付）",
+      "module": "Rho5.Integration.StagedAssembly (definition site: Conditional/XGlobalSafety)",
+      "namespace": "Rho5.Integration.StagedAssembly",
+      "public_names": [
+        "XGlobalSafety"
+      ],
+      "premises": "—",
+      "conclusion": "∀ x : Rho5.LocalAnalysis.X, Rho5.LocalAnalysis.V43.Physical x → Rho5.LocalAnalysis.height x ≤ Rho5.Algebraic.AlphaRoot.alpha",
+      "type_provenance": "C02/PACKAGING_BOUNDARY.md §1 的原文类型 + C02 Conditional 源码引用",
+      "receipt": {
+        "path": null,
+        "status": "UNPAID",
+        "cross_reference": "D159（原始计算证书/树覆盖溯源，同一 ID 不重复登记）"
+      },
+      "default_entry": false,
+      "notes": [
+        "未付，不构成默认入口；它作为 hX 参数出现在默认入口 C02.CONDITIONAL 的公开类型中。",
+        "已付的是 height ≤ rho5Trace（V43.PHYSICAL.TRACE_BRIDGE）与 alpha ≤ rho5Trace（GLOBAL.SUPREMUM…），方向相反，不能合成 height ≤ alpha。"
+      ]
+    },
+    {
+      "id": "SAFETY.ROOT_ENDPOINT",
+      "class": "C_not_formalized",
+      "title_zh": "原 D142 RootEndpointSafety（未付）",
+      "module": "Rho5.Shared.BRootCapacityEndpoint (Basic)",
+      "namespace": "Rho5.Shared.BRootCapacityEndpoint",
+      "public_names": [
+        "IsRootCapacityEndpoint",
+        "RootEndpointSafety"
+      ],
+      "premises": "—",
+      "conclusion": "∀ zStar : Rho5.Certificate.B16.Point, IsRootCapacityEndpoint zStar → zStar 23 ≤ Rho5.Algebraic.AlphaRoot.alpha，其中 IsRootCapacityEndpoint zStar := ∃ y, NormalizedB y ∧ PaperB17RootEntry.B17Root (frameOf y) ∧ zStar = canonicalPoint (frameOf y)",
+      "type_provenance": "ACCEPTED_CORE_MAP.md §3 原文类型（B 侧使用原 D142 定义）",
+      "receipt": {
+        "path": null,
+        "status": "UNPAID",
+        "cross_reference": "D159（同 XGlobalSafety）"
+      },
+      "default_entry": false,
+      "notes": [
+        "未付，不构成默认入口；它作为 hB 参数出现在默认入口 C02.CONDITIONAL 的公开类型中。",
+        "不得替换为抽象 completeX/completeB 布尔标记、单个局部叶或有限样本。"
+      ]
+    },
+    {
+      "id": "WIRING.LOCAL_COVERAGE",
+      "class": "C_not_formalized",
+      "title_zh": "局部图资格/起始区域/时间资源预算的全域接线（未付）",
+      "module": "cross-cutting",
+      "namespace": "cross-cutting",
+      "public_names": [],
+      "premises": "—",
+      "conclusion": "各局部图起始区域与严格资格（cube、内部性、LeadingTracePos 类结构前提）；D84 轨迹的严格时间/空间预算；所有实际相关源 → 完整检查域/根覆盖的消费链（含 BASE106、动态传播、有限收缩各自的来源限定）",
+      "type_provenance": "ACCEPTED_CORE_MAP.md §4 三类责任表",
+      "receipt": {
+        "path": null,
+        "status": "UNPAID"
+      },
+      "default_entry": false,
+      "notes": [
+        "部分局部来源已由后续门支付，但没有一个局部门等于两项完整全域安全；不以启动大量叶实例代替定义范围。"
+      ]
+    },
+    {
+      "id": "DEFERRED.TREE_AND_CHECKERS",
+      "class": "D_deferred",
+      "title_zh": "延后：完整相关根/树与全域排除内核证书、后期收紧检查器实例",
+      "module": "G01/G02/G03; M01/M02; C10; C13–D157 cascade",
+      "namespace": "—",
+      "public_names": [],
+      "premises": "—",
+      "conclusion": "默认不导入具体树实例；未来证明通过原 hX/hB 接口接入",
+      "type_provenance": "PACKAGING_BOUNDARY.md §2 与 C02/DEPENDENCIES.json（ACCEPTED_AVAILABLE_NOT_IMPORTED: D136_SOURCE_SYSTEM, M01, C01）",
+      "receipt": {
+        "path": "outputs/relay_1345_delivery_20260912/C02/DEPENDENCIES.json",
+        "status": "registered, not imported"
+      },
+      "default_entry": false
+    },
+    {
+      "id": "KEEP.FINITE_DATA",
+      "class": "D_deferred",
+      "title_zh": "保留：已有解析证明的有限精确数据（不重生成、不冷编）",
+      "module": "Rho5.Algebraic.AlphaRoot.*; Rho5.LocalAnalysis.SampleData; Rho5.Certificate.B16Model 等",
+      "namespace": "—",
+      "public_names": [],
+      "premises": "—",
+      "conclusion": "实际 alpha/G04 的隔离、候选、Bézout、Jet/Center 有限证书是当前达到性的真实依赖，保留其已有证明；LocalAnalysis 有限 chart 常量不升格为全域覆盖",
+      "type_provenance": "PACKAGING_BOUNDARY.md §2 保留依赖表 + ACCEPTED_CORE_MAP.md §5 末段",
+      "receipt": {
+        "path": "outputs/relay_1345_delivery_20260912/C02/results/REBUILD_REVIEW.json",
+        "status": "reused, no regeneration"
+      },
+      "default_entry": false
+    }
+  ],
+  "upstream_default_entry": {
+    "import": "Rho5.Integration.StagedAssembly.Conditional",
+    "equivalent_aggregate": "Rho5.Integration.StagedAssembly",
+    "plus_finite_increment": "Rho5.ExternalV43Existence.PhysicalTrip",
+    "canonical_x_object_root": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build",
+    "rule": "默认 roots 只选本目录 default_entry=true 的模块；不得自动发现全部 Rho5.Integration.* 或导入阶段二树实例。"
+  },
+  "assembly_note": "Original evidence is under evidence/D158; item count is 19. Optional catalog entries do not imply they are included in the default source set."
+}

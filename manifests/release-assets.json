@@ -1,0 +1,323 @@
+{
+  "schema": "RHO5_PUBLIC_RELEASE_ASSETS_V1",
+  "release": "v1.0.0",
+  "repository": "https://github.com/hkjtsgmc79-boop/rho5-proof",
+  "scope": "First-phase Lean source, original exact certificate archives and verifier source mirrors. No new all-components cold replay or complete Lean proof is claimed.",
+  "objects": [
+    {
+      "id": "lean",
+      "group": "lean",
+      "filename": "rho5-lean-phase-one.zip",
+      "bytes": 6428728,
+      "sha256": "ddb1e4300ed03464024f2a2a227cee060b6b38de96a02043f9233f0412e28f56",
+      "assets": [
+        {
+          "name": "rho5-lean-phase-one.zip",
+          "bytes": 6428728,
+          "sha256": "ddb1e4300ed03464024f2a2a227cee060b6b38de96a02043f9233f0412e28f56",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/rho5-lean-phase-one.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 40620705
+    },
+    {
+      "id": "sample",
+      "group": "sample",
+      "filename": "rho5-final-anchor-example.zip",
+      "bytes": 18292611,
+      "sha256": "88a05ffe78a54d0c552aa6c5f2294e8614b7f78296efbbfb0cd5332322d21e15",
+      "assets": [
+        {
+          "name": "rho5-final-anchor-example.zip",
+          "bytes": 18292611,
+          "sha256": "88a05ffe78a54d0c552aa6c5f2294e8614b7f78296efbbfb0cd5332322d21e15",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/rho5-final-anchor-example.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 41650025
+    },
+    {
+      "id": "rho5_v31_exact",
+      "group": "x",
+      "filename": "rho5_v31_exact.zip",
+      "bytes": 15799622,
+      "sha256": "733afdacfc1c87ea77b4cfdd864ec71d3df03cb43b1ed025e8df04fe777c1302",
+      "assets": [
+        {
+          "name": "rho5_v31_exact.zip",
+          "bytes": 15799622,
+          "sha256": "733afdacfc1c87ea77b4cfdd864ec71d3df03cb43b1ed025e8df04fe777c1302",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/rho5_v31_exact.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 15954119
+    },
+    {
+      "id": "ROUND43_MINIMAL_REPLAY",
+      "group": "x",
+      "filename": "ROUND43_MINIMAL_REPLAY.zip",
+      "bytes": 12187652,
+      "sha256": "6e865dbf836621c5c379dcc5ad2af964411b718d971cd60f192b220f68bf0267",
+      "assets": [
+        {
+          "name": "ROUND43_MINIMAL_REPLAY.zip",
+          "bytes": 12187652,
+          "sha256": "6e865dbf836621c5c379dcc5ad2af964411b718d971cd60f192b220f68bf0267",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/ROUND43_MINIMAL_REPLAY.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 36812376
+    },
+    {
+      "id": "ROUND44_MINIMAL_REPLAY",
+      "group": "x",
+      "filename": "ROUND44_MINIMAL_REPLAY.zip",
+      "bytes": 79488937,
+      "sha256": "51188a9e63aab7cd8c4adefff6c93ffbd52b9433e99d904be9f9d1ea965c1068",
+      "assets": [
+        {
+          "name": "ROUND44_MINIMAL_REPLAY.zip",
+          "bytes": 79488937,
+          "sha256": "51188a9e63aab7cd8c4adefff6c93ffbd52b9433e99d904be9f9d1ea965c1068",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/ROUND44_MINIMAL_REPLAY.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 250757403
+    },
+    {
+      "id": "rho5_v33_exact",
+      "group": "x",
+      "filename": "rho5_v33_exact.zip",
+      "bytes": 51801145,
+      "sha256": "1dbc557b6db83abd1926ab569b0d07d57171f4354e4bd4504a091c8bde08e33b",
+      "assets": [
+        {
+          "name": "rho5_v33_exact.zip",
+          "bytes": 51801145,
+          "sha256": "1dbc557b6db83abd1926ab569b0d07d57171f4354e4bd4504a091c8bde08e33b",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/rho5_v33_exact.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 53160559
+    },
+    {
+      "id": "RHO5_ROUND45_EXACT",
+      "group": "x",
+      "filename": "RHO5_ROUND45_EXACT.zip",
+      "bytes": 222151979,
+      "sha256": "ef214c3dec945cf5a81a03ad735e4955ded5c128634eda1e4635fd3f023c1a58",
+      "assets": [
+        {
+          "name": "RHO5_ROUND45_EXACT.zip",
+          "bytes": 222151979,
+          "sha256": "ef214c3dec945cf5a81a03ad735e4955ded5c128634eda1e4635fd3f023c1a58",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/RHO5_ROUND45_EXACT.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 222603879
+    },
+    {
+      "id": "RHO5_V34_HIGH_EXACT_FULL",
+      "group": "x",
+      "filename": "RHO5_V34_HIGH_EXACT_FULL.zip",
+      "bytes": 131835895,
+      "sha256": "736ce26e428e3f8b4a741cda8d9983887194cfa4a679d0360766e1b70e6a45b2",
+      "assets": [
+        {
+          "name": "RHO5_V34_HIGH_EXACT_FULL.zip",
+          "bytes": 131835895,
+          "sha256": "736ce26e428e3f8b4a741cda8d9983887194cfa4a679d0360766e1b70e6a45b2",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/RHO5_V34_HIGH_EXACT_FULL.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 133463407
+    },
+    {
+      "id": "RHO5_ROUND47_ALPHA_FULL",
+      "group": "x",
+      "filename": "RHO5_ROUND47_ALPHA_FULL.zip",
+      "bytes": 367175732,
+      "sha256": "ddab67679b4faf3338beddaaea25dce99edfabeab937a0da07aa534c7a866de8",
+      "assets": [
+        {
+          "name": "RHO5_ROUND47_ALPHA_FULL.zip",
+          "bytes": 367175732,
+          "sha256": "ddab67679b4faf3338beddaaea25dce99edfabeab937a0da07aa534c7a866de8",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/RHO5_ROUND47_ALPHA_FULL.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 371033641
+    },
+    {
+      "id": "final_cover.tar",
+      "group": "b",
+      "filename": "final_cover.tar.gz",
+      "bytes": 1385430364,
+      "sha256": "1c9fb99d184eaf9d79b44d33826e4db8fbced8db41ee2b46ec2e1616bd12361c",
+      "assets": [
+        {
+          "name": "final_cover.tar.gz",
+          "bytes": 1385430364,
+          "sha256": "1c9fb99d184eaf9d79b44d33826e4db8fbced8db41ee2b46ec2e1616bd12361c",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/final_cover.tar.gz"
+        }
+      ],
+      "outer_tar_payload_bytes": 3704015393,
+      "tar_members": 2584
+    },
+    {
+      "id": "historical_root.tar",
+      "group": "b",
+      "filename": "historical_root.tar.gz",
+      "bytes": 2189588699,
+      "sha256": "15ef795e85d0d295e92fdd629f313b9c284cc6519388011862aee3c1e18e3f73",
+      "assets": [
+        {
+          "name": "historical_root.tar.gz.part01",
+          "bytes": 536870912,
+          "sha256": "94aa7b2056725e1abb7b62f7399693b3433eeb76a5756a4e165518cffc1f9ce6",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/historical_root.tar.gz.part01"
+        },
+        {
+          "name": "historical_root.tar.gz.part02",
+          "bytes": 536870912,
+          "sha256": "cd9e45d05207ed4df0f1e70618cd5bfdc717edcf0b9782d6b13d6be8c234f5d8",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/historical_root.tar.gz.part02"
+        },
+        {
+          "name": "historical_root.tar.gz.part03",
+          "bytes": 536870912,
+          "sha256": "fe1e0ad4e1dfeda9001c0f1ba8ba91af19748ad9bf6580ac883f925b61290c03",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/historical_root.tar.gz.part03"
+        },
+        {
+          "name": "historical_root.tar.gz.part04",
+          "bytes": 536870912,
+          "sha256": "92642dc848e7bcf1b4a7d823cd960328a1f8a6f463cd1ccdb32406954f9d3e5c",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/historical_root.tar.gz.part04"
+        },
+        {
+          "name": "historical_root.tar.gz.part05",
+          "bytes": 42105051,
+          "sha256": "e716ecc32f20612668174b9444b5222d500dd3fbb35e767254cb43362a1c3f78",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/historical_root.tar.gz.part05"
+        }
+      ],
+      "outer_tar_payload_bytes": 17835893857,
+      "tar_members": 3699
+    },
+    {
+      "id": "canonical-v24",
+      "group": "upstream",
+      "filename": "RHO5_V24_Exact_Verification_2026-09-06.zip",
+      "bytes": 7764604,
+      "sha256": "2478b3d6c8d9189fd508e2af4695bb2086c6628d5049c75cef759bd3e455dfa8",
+      "assets": [
+        {
+          "name": "RHO5_V24_Exact_Verification_2026-09-06.zip",
+          "bytes": 7764604,
+          "sha256": "2478b3d6c8d9189fd508e2af4695bb2086c6628d5049c75cef759bd3e455dfa8",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/RHO5_V24_Exact_Verification_2026-09-06.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 16165122
+    },
+    {
+      "id": "canonical-v26",
+      "group": "upstream",
+      "filename": "RHO5_V26_Canonical_Global_Alpha_Exact_Verification_2026-09-07.zip",
+      "bytes": 65714,
+      "sha256": "45dfbf283abdf0a700c5257009d3ef87d1399be141fdab9e90112c88c5049681",
+      "assets": [
+        {
+          "name": "RHO5_V26_Canonical_Global_Alpha_Exact_Verification_2026-09-07.zip",
+          "bytes": 65714,
+          "sha256": "45dfbf283abdf0a700c5257009d3ef87d1399be141fdab9e90112c88c5049681",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/RHO5_V26_Canonical_Global_Alpha_Exact_Verification_2026-09-07.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 85509
+    },
+    {
+      "id": "entrance-v27",
+      "group": "upstream",
+      "filename": "rho5_v27_verify.zip",
+      "bytes": 35431,
+      "sha256": "cfa9fd4471c8bcc69265e2e8598253f86b5c194de588abbafb6dfacd316357b5",
+      "assets": [
+        {
+          "name": "rho5_v27_verify.zip",
+          "bytes": 35431,
+          "sha256": "cfa9fd4471c8bcc69265e2e8598253f86b5c194de588abbafb6dfacd316357b5",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/rho5_v27_verify.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 92098
+    },
+    {
+      "id": "canonical-v28",
+      "group": "upstream",
+      "filename": "rho5_v28_exact.zip",
+      "bytes": 3745779,
+      "sha256": "bec88339a158920d9dacb15341b02f359af83c4bf0e977721d9bdb2764fa0668",
+      "assets": [
+        {
+          "name": "rho5_v28_exact.zip",
+          "bytes": 3745779,
+          "sha256": "bec88339a158920d9dacb15341b02f359af83c4bf0e977721d9bdb2764fa0668",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/rho5_v28_exact.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 4256106
+    },
+    {
+      "id": "assembly-v36",
+      "group": "upstream",
+      "filename": "rho5_v36_exact.zip",
+      "bytes": 826930,
+      "sha256": "d2e1132c7e6638c468b17dff9c6e2d53f4317ce7b78e780c1cc6c98a239f67e2",
+      "assets": [
+        {
+          "name": "rho5_v36_exact.zip",
+          "bytes": 826930,
+          "sha256": "d2e1132c7e6638c468b17dff9c6e2d53f4317ce7b78e780c1cc6c98a239f67e2",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/rho5_v36_exact.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 5032041
+    },
+    {
+      "id": "reduction-v37",
+      "group": "upstream",
+      "filename": "rho5_v37_exact.zip",
+      "bytes": 898843,
+      "sha256": "3bfc645d393c1e724ed05714be964533008c6297fc2a4ac9a3e2388d7beb16f9",
+      "assets": [
+        {
+          "name": "rho5_v37_exact.zip",
+          "bytes": 898843,
+          "sha256": "3bfc645d393c1e724ed05714be964533008c6297fc2a4ac9a3e2388d7beb16f9",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/rho5_v37_exact.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 1993454
+    },
+    {
+      "id": "paper-evidence",
+      "group": "analytic",
+      "filename": "RHO5_PAPER_REVIEW_PHASE1_20260912.zip",
+      "bytes": 863707,
+      "sha256": "b4aa23911d25250399332410e1474f6360480ff1c7f7717296243da39105e4da",
+      "assets": [
+        {
+          "name": "RHO5_PAPER_REVIEW_PHASE1_20260912.zip",
+          "bytes": 863707,
+          "sha256": "b4aa23911d25250399332410e1474f6360480ff1c7f7717296243da39105e4da",
+          "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/RHO5_PAPER_REVIEW_PHASE1_20260912.zip"
+        }
+      ],
+      "outer_zip_payload_bytes": 4302240
+    }
+  ],
+  "total_download_bytes": 4494382372
+}

@@ -1,0 +1,182 @@
+{
+  "card": "D84",
+  "title": "External V43 trajectory integration — REGULARITY layer + corrected ODE gate",
+  "status": "ALL_THREE_LAYERS_READY (REGULARITY + ACTUAL_TRAJECTORY + PHYSICAL_TRIP)",
+  "status_detail": {
+    "regularity_layer": "COMPILED_AND_AUDITED (Geometry, Regularity, LayerAudit; exit 0; 11 declarations, standard-3 axioms)",
+    "actual_trajectory_layer": "COMPILED_AND_AUDITED (Smoke, Trajectory; rc 0)",
+    "physical_trip_layer": "COMPILED_AND_AUDITED (PhysicalTrip, aggregate, Audit; rc 0; 12 axiom records, all standard-3)",
+    "package_audit_layer": "NOT_YET — depends on the aggregate",
+    "ode_available": true,
+    "sampling_success_is_not_ode_availability": true,
+    "ode_closure_built": 78
+  },
+  "namespace": "Rho5.ExternalV43Existence",
+  "lane": {
+    "local_root": "parallel/D84",
+    "x_root": "/root/microscope_ws/rho5_lean_dsh_20260911/D84",
+    "paid_modules_recompiled": 0,
+    "upstream_rebuilt": false,
+    "deleted_files": 0,
+    "mathlib_source": "read-only hardlinks of the pilot mathlib sources (iso_root) + cache oleans/sidecars/IR"
+  },
+  "runner_guards": {
+    "script": "scripts/d84_run_lean.py",
+    "sha256": "f2a93b3c203bc0e01043393141ec9a732e692a23b2c7c571ba6aa0bc63380910",
+    "rss_watchdog_kib": 8388608,
+    "as_cap_bytes": 12884901888,
+    "default_timeout_s": 180,
+    "extended_timeout_s": 900,
+    "extension_policy": "only on measured progress (single logged retry on timeout)"
+  },
+  "modules": [
+    {
+      "module": "Rho5.ExternalV43Existence.Geometry",
+      "exit_code": 0,
+      "peak_rss_kib": 2758360,
+      "src_sha256": "8101afbc09439934a728d27c78f67b4fa3589477262b5f637d2933e3facf8d0e",
+      "as_delivered_sha256": "ee6adfd98e91816e8bdeacd4d0a90413228c5d8940514c0a8dc93969eb4a43d9",
+      "olean_sha256": "03f82b08036254c0ec4674ded78652345e7ff1deef8d8494cbcd5ad9301a4699",
+      "adaptation": "dropped unused import Mathlib.Analysis.Normed.Module.FiniteDimension"
+    },
+    {
+      "module": "Rho5.ExternalV43Existence.Regularity",
+      "exit_code": 0,
+      "peak_rss_kib": 2931608,
+      "src_sha256": "67a889a63aa56f7ce48f78b5980aaf6a45dfb970886ff1718dd7ffb450cb4bad",
+      "as_delivered_sha256": "0e98651017a4174aa4497a93758970b6a8c1bc1993c82194bc5b633988fbfba7",
+      "olean_sha256": "bfeae8e78cde40dd2541e4aaa0138e43b7693c55f75dd0cf531ac48aa737e7ec",
+      "adaptation": "open scoped NNReal; (1 : WithTop ℕ∞) ≠ 0 annotation"
+    },
+    {
+      "module": "Rho5.ExternalV43Existence.LayerAudit",
+      "exit_code": 0,
+      "peak_rss_kib": 2902664,
+      "src_sha256": "fa32301e97788dd912b666f16d8527e8be79f55d4df7cb2767cbfbfc94434612",
+      "olean_sha256": "fca74456a5f127ee9d1ad0872aad4b7714e994091300c7f713ba61b82e710f63",
+      "note": "lane-added audit (the package's Audit.lean needs the aggregate)"
+    }
+  ],
+  "axioms": {
+    "checked": 11,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "violations": [],
+    "evidence": "logs/LayerAudit.log (sha256 0e91596198b975dd9e75a22c4f2641656b80c48476e2aba14d4fb02e9951cefd)"
+  },
+  "ode_gate": {
+    "root": "Mathlib.Analysis.ODE.PicardLindelof",
+    "missing_from": [
+      "D58/cache/lean",
+      "pilot project build lib",
+      "D30 lane lib",
+      "D74 lane lib",
+      "/root/rho5_canary",
+      "/root/rho5_tier1"
+    ],
+    "real_lane_mathlib_roots": [
+      "Mathlib.Analysis.Calculus.ContDiff.Operations",
+      "Mathlib.Analysis.Calculus.ContDiff.RCLike",
+      "Mathlib.Analysis.ODE.PicardLindelof",
+      "Mathlib.Tactic.Linarith"
+    ],
+    "missing_roots": 1,
+    "corrected_minimal_closure": 441,
+    "unknown_sources": 0,
+    "umbrella_importers": [],
+    "azumaya_matrix_in_closure": false,
+    "earlier_wrong_count": 6123,
+    "bug": "first scan matched `import` lines inside block comments/doc examples and mis-parsed `import all Foo`",
+    "measured_rate_s_per_module": "3-5 (observed 21 modules in ~80 s)",
+    "estimate": "25-45 min single process; 0.3-0.6 GiB new disk",
+    "artifacts": [
+      "results/closure_audit.json",
+      "results/CLOSURE_REPAIR_STATUS.json",
+      "deps_map.json",
+      "repair_state.json"
+    ],
+    "authoritative_closure_via_lean_deps": 80,
+    "regex_closure_441": "over-inclusive (matched imports inside comments/doc examples); superseded",
+    "comment_blind_first_scan_6123": "superseded; retained only as the record of the corrected mistake",
+    "built": 78,
+    "hard_failures": 0,
+    "blocked_successors": 58,
+    "hard_failure_details": [
+      {
+        "module": "Mathlib.MeasureTheory.Function.LpSpace.Basic",
+        "line": 855,
+        "error": "Type mismatch: `LinearMap.mkContinuous₂_norm_le …` has type ‖LinearMap.mkContinuous₂ …‖ ≤ … but is expected to have type ‖compLpL₂ p μ B‖ ≤ …",
+        "log": "closure_logs/Mathlib.MeasureTheory.Function.LpSpace.Basic.log",
+        "wall_s": 20.9
+      },
+      {
+        "module": "Mathlib.RingTheory.TensorProduct.Maps",
+        "line": 291,
+        "error": "`simp` made no progress in lemma tmul_one_tmul_one_tmul",
+        "log": "closure_logs/Mathlib.RingTheory.TensorProduct.Maps.log",
+        "wall_s": 36.0
+      }
+    ],
+    "diagnosis": [
+      "both modules are absent from every available cache (D58 cache, pilot lib, iso_root)",
+      "cached modules DO recompile from the pinned sources (Mathlib.Order.Basic, Mathlib.Data.Nat.Log: rc=0), so this is not a general cache/source mismatch",
+      "lake-manifest.json pins mathlib rev c5ea00351c28e24afc9f0f84379aa41082b1188f as required",
+      "the two failures are proof-level and look like definitional skew inside the ODE closure; they block 58 successors and therefore Mathlib.Analysis.ODE.PicardLindelof itself"
+    ],
+    "positive_validation": "the repair pass added the missing dependency Mathlib.Data.Nat.NthRoot.Defs and Mathlib.Analysis.SpecialFunctions.Pow.Real then compiled successfully (9.3 s), confirming the dynamic need-set repair",
+    "status": "CLOSED",
+    "remaining": 0,
+    "olean_sha256": "3a9025c2f05e670a5611f79e3a9126dfc763232c18c70f4db797c3053bd91cdd"
+  },
+  "builder": {
+    "script": "scripts/d84_build_closure_v2.py",
+    "pid_file": "builder.pid",
+    "launched_pid": 2119304,
+    "progress_log": "closure_build_progress.log",
+    "progress_at_report": "21/441, 0 failures, free 16.7 GiB",
+    "guards": [
+      "disk stop below 10 GiB",
+      "25 real failures",
+      "3 h wall cap",
+      "RSS 8 GiB watchdog",
+      "12 GiB AS"
+    ],
+    "detached": true,
+    "v2_end": "built=364 fails=2 elapsed_s=2526 bytes=70018472",
+    "v2_total_seen": 441,
+    "repair_pass": "built 22/80 then stopped at 'no buildable frontier; remaining=58 hard=2'",
+    "final": "closure complete; Smoke/Trajectory/PhysicalTrip/aggregate/Audit all rc 0"
+  },
+  "process_ops_record": {
+    "v1_builder_stopped_by": "exact PID SIGTERM (lean child 2066305/2066308, then 1876195, then 1876193) after verifying /proc/<pid>/cwd == D84",
+    "unrelated_process_left_alone": "pid 2066967 (cwd /root) matched a loose lean grep and was not touched",
+    "ssh_255_cause": "pkill/pgrep -f patterns matched my own ssh shell command line",
+    "other_lanes": "no other lane's process was identified as affected by my commands; the only matching processes inspected had cwd under D84; retroactive verification is limited to the patterns and PIDs inspected",
+    "retry_spin": "scripts/d84_retry_failed.py span on Pow.Real because the frontier treated 'dependency not in NEEDSET' as satisfied; stopped gently by exact PID (2379439 + wrapper 2379437 + its runner 2380120, all verified cwd=D84), then replaced by scripts/d84_repair.py which uses lean --deps and grows the need set from real errors",
+    "log_retention_fix": "builder v2 and later scripts now write closure_logs/<module>.log per module",
+    "log_retention_history": "the v1/v2 builder wrote a single closure_build_last.log overwritten per module, so the ORIGINAL error text of the first two failures was lost; the retained per-module logs come from the later retry/repair passes (this is stated as fact, not reconstructed)"
+  },
+  "not_claimed": [
+    "A1 actual trajectory",
+    "A2 physical trip",
+    "A3 resource endpoint",
+    "ODE module availability",
+    "the package's 12 designated axiom outputs",
+    "full-rho or Matrix5→X22 bridge",
+    "any change to the fixed model/certificate/fields"
+  ],
+  "artifacts": {
+    "regularity_receipt": "results/REGULARITY_READY.json",
+    "report": "results/REPORT.md",
+    "integration": "results/INTEGRATION.md",
+    "layer_log": "logs/LayerAudit.log",
+    "closure_audit": "results/closure_audit.json",
+    "actual_trajectory_receipt": "results/ACTUAL_TRAJECTORY_READY.json",
+    "physical_trip_receipt": "results/PHYSICAL_TRIP_READY.json",
+    "option_differential": "results/LEAN_OPTION_DIFFERENTIAL.json",
+    "audit_log": "logs/Audit.log"
+  }
+}

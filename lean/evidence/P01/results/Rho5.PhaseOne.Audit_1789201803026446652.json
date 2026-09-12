@@ -1,0 +1,183 @@
+{
+  "module": "Rho5.PhaseOne.Audit",
+  "exit_code": 1,
+  "wall_seconds": 4.083629608154297,
+  "source_sha256": "96509f398b89706f316ed70a949860ec869139fb6f81dd9b0c925e53baff041d",
+  "source_sha256_after": "96509f398b89706f316ed70a949860ec869139fb6f81dd9b0c925e53baff041d",
+  "olean_sha256": null,
+  "source_bytes": 3872,
+  "olean_bytes": null,
+  "log": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/results/Rho5.PhaseOne.Audit_1789201803026446652.log",
+  "log_sha256": "604485f7b16e75c35cf99b46c665f18c79390d0efe70322fbcd79500d95d0831",
+  "command": [
+    "nice",
+    "-n",
+    "10",
+    "python3",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/tools/guard.py",
+    "180",
+    "-j1",
+    "-M8192",
+    "-R",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/src",
+    "-o",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/PhaseOne/Audit.olean",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/src/Rho5/PhaseOne/Audit.lean"
+  ],
+  "LEAN_PATH": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build:/root/microscope_ws/rho5_lean_dsh_20260911/D141/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+  "lean_version": "Lean (version 4.30.0, x86_64-unknown-linux-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+  "before_snapshot": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/results/Rho5.PhaseOne.Audit_1789201803026446652.before.json",
+  "before_snapshot_sha256": "0dff57544c843c55d51a622683c1e70506ac195ff780aa7dbd0422a0085b4863",
+  "direct_imports": [
+    "Rho5.PhaseOne"
+  ],
+  "dependency_snapshot_before": [
+    {
+      "module": "Mathlib.Analysis.ODE.PicardLindelof",
+      "source": "/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/Mathlib/Analysis/ODE/PicardLindelof.lean",
+      "source_sha256": "c7d98e66cd3358fa0eaf3936f781f7ab91c6e43b2fe28e32870041c4af84cf62",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Mathlib/Analysis/ODE/PicardLindelof.olean",
+      "olean_sha256": "3a9025c2f05e670a5611f79e3a9126dfc763232c18c70f4db797c3053bd91cdd"
+    },
+    {
+      "module": "Rho5.ExternalBFibreCapacity.FiniteBounds",
+      "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D120/src/Rho5/ExternalBFibreCapacity/FiniteBounds.lean",
+      "source_sha256": "16efff267512872cf33d612beb0e61d0feacd2fca3301c68350113f635d4b028",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/ExternalBFibreCapacity/FiniteBounds.olean",
+      "olean_sha256": "78190e5fd4b4e4c642be6c19ff2e3d8293eaf037cb0fd28d03af4e4c9394bb12"
+    },
+    {
+      "module": "Rho5.ExternalV43Existence.Geometry",
+      "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/Geometry.lean",
+      "source_sha256": "8101afbc09439934a728d27c78f67b4fa3589477262b5f637d2933e3facf8d0e",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/ExternalV43Existence/Geometry.olean",
+      "olean_sha256": "03f82b08036254c0ec4674ded78652345e7ff1deef8d8494cbcd5ad9301a4699"
+    },
+    {
+      "module": "Rho5.ExternalV43Existence.PhysicalTrip",
+      "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/PhysicalTrip.lean",
+      "source_sha256": "6c15f4204126451a31919589f084b20abb83a7642f1fbb111853566da93a5f01",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/ExternalV43Existence/PhysicalTrip.olean",
+      "olean_sha256": "20cc31ead7aea6af2f965d5ef41436523e5876d28084156562aa83370bdcede0"
+    },
+    {
+      "module": "Rho5.ExternalV43Existence.Regularity",
+      "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/Regularity.lean",
+      "source_sha256": "67a889a63aa56f7ce48f78b5980aaf6a45dfb970886ff1718dd7ffb450cb4bad",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/ExternalV43Existence/Regularity.olean",
+      "olean_sha256": "bfeae8e78cde40dd2541e4aaa0138e43b7693c55f75dd0cf531ac48aa737e7ec"
+    },
+    {
+      "module": "Rho5.ExternalV43Existence.Trajectory",
+      "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/Trajectory.lean",
+      "source_sha256": "ed5f432d9dc18db721ee7da0c8b093a2cb4896fdb6bb2a32fdcd6e3686ab9bae",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/ExternalV43Existence/Trajectory.olean",
+      "olean_sha256": "155a5eece0ff4b89415aa7f6f3387d56f4ae2300c120cd9cdfc7321edeeee45a"
+    },
+    {
+      "module": "Rho5.Integration.StagedAssembly.Conditional",
+      "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Integration/StagedAssembly/Conditional.lean",
+      "source_sha256": "836b304cc5e6187ffc4edd93b7fc930a082df4493957c2d8ed5b9e5382e5dec8",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/Integration/StagedAssembly/Conditional.olean",
+      "olean_sha256": "631cd2f1a85955753a4299f1e3d01382d6f55ca532916d8aef63651eac6332d2"
+    },
+    {
+      "module": "Rho5.LocalAnalysis.Model",
+      "source": "/root/microscope_ws/rho5_lean_pilot_20260911/project/Rho5/LocalAnalysis/Model.lean",
+      "source_sha256": "523b02db827adfb40d0479894247ad747520438e71b72e195a0f690b743eb289",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/LocalAnalysis/Model.olean",
+      "olean_sha256": "13380de65d3ad3a72432d527e3abedf1d0bc88b043cb4aba86ac945aed79a6d3"
+    },
+    {
+      "module": "Rho5.LocalAnalysis.Pilot",
+      "source": "/root/microscope_ws/rho5_lean_pilot_20260911/project/Rho5/LocalAnalysis/Pilot.lean",
+      "source_sha256": "97dd914c93f993f6d44050e913443d7a432ee2b5bab4bc23038cf145cf8ebbca",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/LocalAnalysis/Pilot.olean",
+      "olean_sha256": "c2aae5184861b95078dba65dd1aa9e9e196c285ea889f5529f80956f7c0843b2"
+    },
+    {
+      "module": "Rho5.PhaseOne",
+      "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/src/Rho5/PhaseOne.lean",
+      "source_sha256": "08f1e7f3f92115ae548002f23081d237a68a3504804755efe1613c1d3f66277f",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/PhaseOne.olean",
+      "olean_sha256": "fa49c07d666f46a27e7ace1fcc0799c6d8651d51cb6823841670c3b8271eb16c"
+    }
+  ],
+  "dependency_snapshot_after": [
+    {
+      "module": "Mathlib.Analysis.ODE.PicardLindelof",
+      "source": "/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/Mathlib/Analysis/ODE/PicardLindelof.lean",
+      "source_sha256": "c7d98e66cd3358fa0eaf3936f781f7ab91c6e43b2fe28e32870041c4af84cf62",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Mathlib/Analysis/ODE/PicardLindelof.olean",
+      "olean_sha256": "3a9025c2f05e670a5611f79e3a9126dfc763232c18c70f4db797c3053bd91cdd"
+    },
+    {
+      "module": "Rho5.ExternalBFibreCapacity.FiniteBounds",
+      "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D120/src/Rho5/ExternalBFibreCapacity/FiniteBounds.lean",
+      "source_sha256": "16efff267512872cf33d612beb0e61d0feacd2fca3301c68350113f635d4b028",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/ExternalBFibreCapacity/FiniteBounds.olean",
+      "olean_sha256": "78190e5fd4b4e4c642be6c19ff2e3d8293eaf037cb0fd28d03af4e4c9394bb12"
+    },
+    {
+      "module": "Rho5.ExternalV43Existence.Geometry",
+      "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/Geometry.lean",
+      "source_sha256": "8101afbc09439934a728d27c78f67b4fa3589477262b5f637d2933e3facf8d0e",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/ExternalV43Existence/Geometry.olean",
+      "olean_sha256": "03f82b08036254c0ec4674ded78652345e7ff1deef8d8494cbcd5ad9301a4699"
+    },
+    {
+      "module": "Rho5.ExternalV43Existence.PhysicalTrip",
+      "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/PhysicalTrip.lean",
+      "source_sha256": "6c15f4204126451a31919589f084b20abb83a7642f1fbb111853566da93a5f01",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/ExternalV43Existence/PhysicalTrip.olean",
+      "olean_sha256": "20cc31ead7aea6af2f965d5ef41436523e5876d28084156562aa83370bdcede0"
+    },
+    {
+      "module": "Rho5.ExternalV43Existence.Regularity",
+      "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/Regularity.lean",
+      "source_sha256": "67a889a63aa56f7ce48f78b5980aaf6a45dfb970886ff1718dd7ffb450cb4bad",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/ExternalV43Existence/Regularity.olean",
+      "olean_sha256": "bfeae8e78cde40dd2541e4aaa0138e43b7693c55f75dd0cf531ac48aa737e7ec"
+    },
+    {
+      "module": "Rho5.ExternalV43Existence.Trajectory",
+      "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/Trajectory.lean",
+      "source_sha256": "ed5f432d9dc18db721ee7da0c8b093a2cb4896fdb6bb2a32fdcd6e3686ab9bae",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/ExternalV43Existence/Trajectory.olean",
+      "olean_sha256": "155a5eece0ff4b89415aa7f6f3387d56f4ae2300c120cd9cdfc7321edeeee45a"
+    },
+    {
+      "module": "Rho5.Integration.StagedAssembly.Conditional",
+      "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Integration/StagedAssembly/Conditional.lean",
+      "source_sha256": "836b304cc5e6187ffc4edd93b7fc930a082df4493957c2d8ed5b9e5382e5dec8",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/Integration/StagedAssembly/Conditional.olean",
+      "olean_sha256": "631cd2f1a85955753a4299f1e3d01382d6f55ca532916d8aef63651eac6332d2"
+    },
+    {
+      "module": "Rho5.LocalAnalysis.Model",
+      "source": "/root/microscope_ws/rho5_lean_pilot_20260911/project/Rho5/LocalAnalysis/Model.lean",
+      "source_sha256": "523b02db827adfb40d0479894247ad747520438e71b72e195a0f690b743eb289",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/LocalAnalysis/Model.olean",
+      "olean_sha256": "13380de65d3ad3a72432d527e3abedf1d0bc88b043cb4aba86ac945aed79a6d3"
+    },
+    {
+      "module": "Rho5.LocalAnalysis.Pilot",
+      "source": "/root/microscope_ws/rho5_lean_pilot_20260911/project/Rho5/LocalAnalysis/Pilot.lean",
+      "source_sha256": "97dd914c93f993f6d44050e913443d7a432ee2b5bab4bc23038cf145cf8ebbca",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/LocalAnalysis/Pilot.olean",
+      "olean_sha256": "c2aae5184861b95078dba65dd1aa9e9e196c285ea889f5529f80956f7c0843b2"
+    },
+    {
+      "module": "Rho5.PhaseOne",
+      "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/src/Rho5/PhaseOne.lean",
+      "source_sha256": "08f1e7f3f92115ae548002f23081d237a68a3504804755efe1613c1d3f66277f",
+      "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/p01/build/Rho5/PhaseOne.olean",
+      "olean_sha256": "fa49c07d666f46a27e7ace1fcc0799c6d8651d51cb6823841670c3b8271eb16c"
+    }
+  ],
+  "dependencies_unchanged": true,
+  "source_unchanged": true,
+  "preflight_lean_jobs": [],
+  "available_mem_kib": 83335308,
+  "free_disk_bytes": 16043130880
+}

@@ -1,0 +1,79 @@
+{
+  "receipt": "RELEASE_READY",
+  "card": "D158",
+  "phase": "phase1_noncomputational_assembly_20260912",
+  "status": "READY",
+  "title_zh": "第一阶段已验解析成果正式覆盖清单交付就绪",
+  "title_en": "Phase-1 accepted analytic results: release coverage set ready",
+  "canonical_path": "outputs/phase1_noncomputational_assembly_20260912/D158/",
+  "produced_at": "work/dsh-main/parallel/D158/deliverables/",
+  "placement_note": "卡片路径在会话沙箱之外且写操作被拒；经用户确认先写入 produced_at，由协调者原样复制到 canonical_path（SHA256SUMS 可校验）。",
+  "deliverables": {
+    "FORMALIZATION_COVERAGE.md": {
+      "sha256": "cfa53e37c7d7a33071dd353271fa58de7d1cbb94c5fd39fd7a1653c4a33dc871",
+      "content": "四类覆盖清单（A 无条件 / B 保留参数 / C 未形式化来源连接 / D 延后大规模计算；与 THEOREM_CATALOG 的 20 项一一对应：A 9 / B 5 / C 3 / D 2），含实际 alpha、候选存在唯一性、达到、粗界、全局最大者、前四 pivot、X/B 根归约与真实解析轨迹定位"
+    },
+    "THEOREM_CATALOG.json": {
+      "sha256": "54e86f4a4416d72d99da5e1f9c9bb565cf54986248876f136bedd8182f57e1a0",
+      "content": "19 个 item（A 9 / B 5 / C 3 / D 2），每项含稳定 ID、模块、命名空间、真实公开名、前提、结论、类型出处、接收回执、default_entry"
+    },
+    "ACCEPTED_EVIDENCE_INDEX.md": {
+      "sha256": "4ef1250fc360af2abbecdba520f69658c8cbb69fa9261cd499ddbedd6276d350",
+      "content": "可迁移相对路径 ↔ 回执映射、必须携带路径清单、与 D159 的接口划分"
+    },
+    "SELF_REVIEW.md": {
+      "sha256": "8decf195fb2eb1b4e6edce8d12b0251f3e0fbf9367625f83c8cb908a75316756",
+      "content": "新增核验 vs 复用证据分离、52 个声明名抽查、事实一致性核对、未核验项、边界复核"
+    },
+    "evidence/": {
+      "files": 26,
+      "content": "少量核心原回执与 C02 编译器公开类型副本（168 KB）",
+      "manifest": "SHA256SUMS"
+    }
+  },
+  "toolchain": {
+    "lean": "4.30.0",
+    "lean_commit": "d024af099ca4bf2c86f649261ebf59565dc8c622",
+    "mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+    "lake_manifest_sha256": "6fa600a652ca1ef77814e08127d1078febb38e3018ed9f8b1c5683b92427b789",
+    "canonical_x_object_root": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build"
+  },
+  "default_entry": {
+    "main": "Rho5.Integration.StagedAssembly.Conditional",
+    "aggregate_equivalent": "Rho5.Integration.StagedAssembly",
+    "finite_increment": "Rho5.ExternalV43Existence.PhysicalTrip",
+    "optional_not_in_default": [
+      "Rho5.Shared.V43PositiveResourceEscape (D100)",
+      "Rho5.Shared.V43CompactBoundary (D108)"
+    ]
+  },
+  "unpaid_declared": {
+    "SAFETY.XGLOBAL": "完整 XGlobalSafety 未付（接口已登记，D159 交叉引用）",
+    "SAFETY.ROOT_ENDPOINT": "原 D142 RootEndpointSafety 未付（D159 交叉引用）",
+    "WIRING.LOCAL_COVERAGE": "局部图资格/起始区域/时间资源预算的全域接线未付",
+    "DEFERRED": "海量树/内核证书与后期收紧检查器实例延后（默认不导入）"
+  },
+  "verification_this_card": {
+    "lean_invocations": 0,
+    "compiles": 0,
+    "certificate_replays": 0,
+    "math_reaudits": 0,
+    "declaration_name_probes": 52,
+    "groups_checked": 17,
+    "receipts_read": 17,
+    "c02_compiler_targets_cross_checked": 9,
+    "reused_evidence": "原 owner 自审与协调者接收回执 + C02 FULL_TARGET_TYPES / AXIOM_RECORDS / BUILD_STATUS / IMPORT_SOURCE_OLEAN_BINDING"
+  },
+  "not_claimed": [
+    "无条件 rho5Trace = alpha",
+    "whole X 安全或 alpha 安全目标完成",
+    "完整项目完成百分比",
+    "外部 PASS/Bool/有限样本作为全域证明",
+    "D159/D160/D161 的工作"
+  ],
+  "next_consumers": {
+    "D159": "两项全域安全 ID 的原始计算证书溯源（本卡只交叉引用）",
+    "D160": "按 IMPORT_SOURCE_OLEAN_BINDING.source_closure 收源码包",
+    "D161": "使用示例（本卡不含）"
+  }
+}

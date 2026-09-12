@@ -1,0 +1,607 @@
+import Rho5.Algebraic.CriticalExistence.Circuit.P029
+
+namespace Rho5.Algebraic.CriticalExistence
+noncomputable section
+set_option maxHeartbeats 0
+set_option maxRecDepth 262144
+
+def e12000 : Expr := .add e11996 e11999
+
+def e12001 : Expr := .mul e00444 e04846
+
+def e12002 : Expr := .add e11189 e12001
+
+def e12003 : Expr := .neg e12002
+
+def e12004 : Expr := .add e12000 e12003
+
+def e12005 : Expr := .mul e02004 e04766
+
+def e12006 : Expr := .add e11193 e12005
+
+def e12007 : Expr := .neg e12006
+
+def e12008 : Expr := .add e12004 e12007
+
+def e12009 : Expr := .mul e02028 e04717
+
+def e12010 : Expr := .add e11199 e12009
+
+def e12011 : Expr := .neg e12010
+
+def e12012 : Expr := .add e12008 e12011
+
+def e12013 : Expr := .mul e02033 e04706
+
+def e12014 : Expr := .add e11205 e12013
+
+def e12015 : Expr := .add e12012 e12014
+
+def e12016 : Expr := .mul e02037 e04703
+
+def e12017 : Expr := .add e11210 e12016
+
+def e12018 : Expr := .add e12015 e12017
+
+def e12019 : Expr := .mul e02041 e04700
+
+def e12020 : Expr := .add e11215 e12019
+
+def e12021 : Expr := .neg e12020
+
+def e12022 : Expr := .add e12018 e12021
+
+def e12023 : Expr := .mul e02046 e04697
+
+def e12024 : Expr := .add e11221 e12023
+
+def e12025 : Expr := .neg e12024
+
+def e12026 : Expr := .add e12022 e12025
+
+def e12027 : Expr := .mul e02051 e04694
+
+def e12028 : Expr := .add e11227 e12027
+
+def e12029 : Expr := .add e12026 e12028
+
+def e12030 : Expr := .mul e02055 e00002
+
+def e12031 : Expr := .add e11232 e12030
+
+def e12032 : Expr := .add e12029 e12031
+
+def e12033 : Expr := .add e12032 e11235
+
+def e12034 : Expr := .mul e05304 e00067
+
+def e12035 : Expr := .mul e00559 e04766
+
+def e12036 : Expr := .add e12034 e12035
+
+def e12037 : Expr := .neg e12036
+
+def e12038 : Expr := .add e12033 e12037
+
+def e12039 : Expr := .add e11241 e10173
+
+def e12040 : Expr := .mul e12039 e00025
+
+def e12041 : Expr := .mul e02063 e04717
+
+def e12042 : Expr := .add e12040 e12041
+
+def e12043 : Expr := .neg e12042
+
+def e12044 : Expr := .add e12038 e12043
+
+def e12045 : Expr := .add e11249 e10183
+
+def e12046 : Expr := .mul e12045 e00020
+
+def e12047 : Expr := .mul e02068 e04706
+
+def e12048 : Expr := .add e12046 e12047
+
+def e12049 : Expr := .add e12044 e12048
+
+def e12050 : Expr := .mul e05277 e00019
+
+def e12051 : Expr := .mul e00536 e04703
+
+def e12052 : Expr := .add e12050 e12051
+
+def e12053 : Expr := .add e12049 e12052
+
+def e12054 : Expr := .add e12053 e08899
+
+def e12055 : Expr := .mul e05304 e00017
+
+def e12056 : Expr := .mul e00559 e04697
+
+def e12057 : Expr := .add e12055 e12056
+
+def e12058 : Expr := .neg e12057
+
+def e12059 : Expr := .add e12054 e12058
+
+def e12060 : Expr := .add e11263 e10200
+
+def e12061 : Expr := .mul e12060 e00016
+
+def e12062 : Expr := .mul e02077 e04694
+
+def e12063 : Expr := .add e12061 e12062
+
+def e12064 : Expr := .add e12059 e12063
+
+def e12065 : Expr := .add e11269 e10207
+
+def e12066 : Expr := .mul e12065 e00138
+
+def e12067 : Expr := .mul e02080 e04846
+
+def e12068 : Expr := .add e12066 e12067
+
+def e12069 : Expr := .neg e12068
+
+def e12070 : Expr := .add e12064 e12069
+
+def e12071 : Expr := .add e11278 e10217
+
+def e12072 : Expr := .mul e12071 e00067
+
+def e12073 : Expr := .mul e02085 e04766
+
+def e12074 : Expr := .add e12072 e12073
+
+def e12075 : Expr := .neg e12074
+
+def e12076 : Expr := .add e12070 e12075
+
+def e12077 : Expr := .add e11286 e10227
+
+def e12078 : Expr := .mul e12077 e00025
+
+def e12079 : Expr := .mul e02090 e04717
+
+def e12080 : Expr := .add e12078 e12079
+
+def e12081 : Expr := .add e12076 e12080
+
+def e12082 : Expr := .add e11294 e10236
+
+def e12083 : Expr := .mul e12082 e00020
+
+def e12084 : Expr := .mul e02094 e04706
+
+def e12085 : Expr := .add e12083 e12084
+
+def e12086 : Expr := .add e12081 e12085
+
+def e12087 : Expr := .add e11301 e10245
+
+def e12088 : Expr := .mul e12087 e00019
+
+def e12089 : Expr := .mul e02098 e04703
+
+def e12090 : Expr := .add e12088 e12089
+
+def e12091 : Expr := .add e12086 e12090
+
+def e12092 : Expr := .add e11309 e10254
+
+def e12093 : Expr := .mul e12092 e00018
+
+def e12094 : Expr := .mul e02103 e04700
+
+def e12095 : Expr := .add e12093 e12094
+
+def e12096 : Expr := .neg e12095
+
+def e12097 : Expr := .add e12091 e12096
+
+def e12098 : Expr := .add e11318 e10264
+
+def e12099 : Expr := .mul e12098 e00017
+
+def e12100 : Expr := .mul e02109 e04697
+
+def e12101 : Expr := .add e12099 e12100
+
+def e12102 : Expr := .neg e12101
+
+def e12103 : Expr := .add e12097 e12102
+
+def e12104 : Expr := .add e11327 e10274
+
+def e12105 : Expr := .mul e12104 e00016
+
+def e12106 : Expr := .mul e02114 e04694
+
+def e12107 : Expr := .add e12105 e12106
+
+def e12108 : Expr := .add e12103 e12107
+
+def e12109 : Expr := .add e11334 e10283
+
+def e12110 : Expr := .mul e12109 e00014
+
+def e12111 : Expr := .mul e02118 e00002
+
+def e12112 : Expr := .add e12110 e12111
+
+def e12113 : Expr := .add e12108 e12112
+
+def e12114 : Expr := .mul e00498 e04846
+
+def e12115 : Expr := .add e11340 e12114
+
+def e12116 : Expr := .neg e12115
+
+def e12117 : Expr := .add e12113 e12116
+
+def e12118 : Expr := .mul e00574 e04766
+
+def e12119 : Expr := .add e11344 e12118
+
+def e12120 : Expr := .neg e12119
+
+def e12121 : Expr := .add e12117 e12120
+
+def e12122 : Expr := .mul e02127 e04717
+
+def e12123 : Expr := .add e11350 e12122
+
+def e12124 : Expr := .add e12121 e12123
+
+def e12125 : Expr := .mul e02093 e04706
+
+def e12126 : Expr := .add e11353 e12125
+
+def e12127 : Expr := .add e12124 e12126
+
+def e12128 : Expr := .mul e00596 e04703
+
+def e12129 : Expr := .add e11356 e12128
+
+def e12130 : Expr := .neg e12129
+
+def e12131 : Expr := .add e12127 e12130
+
+def e12132 : Expr := .mul e02136 e04700
+
+def e12133 : Expr := .add e11362 e12132
+
+def e12134 : Expr := .neg e12133
+
+def e12135 : Expr := .add e12131 e12134
+
+def e12136 : Expr := .mul e00596 e04697
+
+def e12137 : Expr := .add e11366 e12136
+
+def e12138 : Expr := .neg e12137
+
+def e12139 : Expr := .add e12135 e12138
+
+def e12140 : Expr := .mul e02144 e04694
+
+def e12141 : Expr := .add e11372 e12140
+
+def e12142 : Expr := .add e12139 e12141
+
+def e12143 : Expr := .add e11375 e11335
+
+def e12144 : Expr := .add e12142 e12143
+
+def e12145 : Expr := .add e12144 e11380
+
+def e12146 : Expr := .add e12145 e09021
+
+def e12147 : Expr := .add e12146 e05427
+
+def e12148 : Expr := .mul e02154 e04717
+
+def e12149 : Expr := .add e10343 e12148
+
+def e12150 : Expr := .add e12147 e12149
+
+def e12151 : Expr := .mul e02154 e04706
+
+def e12152 : Expr := .add e10347 e12151
+
+def e12153 : Expr := .add e12150 e12152
+
+def e12154 : Expr := .mul e01457 e04703
+
+def e12155 : Expr := .add e10351 e12154
+
+def e12156 : Expr := .neg e12155
+
+def e12157 : Expr := .add e12153 e12156
+
+def e12158 : Expr := .mul e01457 e04700
+
+def e12159 : Expr := .add e10356 e12158
+
+def e12160 : Expr := .neg e12159
+
+def e12161 : Expr := .add e12157 e12160
+
+def e12162 : Expr := .mul e00663 e04697
+
+def e12163 : Expr := .add e10361 e12162
+
+def e12164 : Expr := .add e12161 e12163
+
+def e12165 : Expr := .add e12164 e09043
+
+def e12166 : Expr := .mul e00705 e04846
+
+def e12167 : Expr := .add e10366 e12166
+
+def e12168 : Expr := .neg e12167
+
+def e12169 : Expr := .add e12165 e12168
+
+def e12170 : Expr := .mul e00705 e04766
+
+def e12171 : Expr := .add e10371 e12170
+
+def e12172 : Expr := .neg e12171
+
+def e12173 : Expr := .add e12169 e12172
+
+def e12174 : Expr := .mul e02174 e04717
+
+def e12175 : Expr := .add e10377 e12174
+
+def e12176 : Expr := .add e12173 e12175
+
+def e12177 : Expr := .mul e02177 e04706
+
+def e12178 : Expr := .add e10382 e12177
+
+def e12179 : Expr := .add e12176 e12178
+
+def e12180 : Expr := .mul e02180 e04703
+
+def e12181 : Expr := .add e10388 e12180
+
+def e12182 : Expr := .neg e12181
+
+def e12183 : Expr := .add e12179 e12182
+
+def e12184 : Expr := .mul e02184 e04700
+
+def e12185 : Expr := .add e10394 e12184
+
+def e12186 : Expr := .neg e12185
+
+def e12187 : Expr := .add e12183 e12186
+
+def e12188 : Expr := .mul e01478 e04697
+
+def e12189 : Expr := .add e10399 e12188
+
+def e12190 : Expr := .add e12187 e12189
+
+def e12191 : Expr := .mul e02190 e04694
+
+def e12192 : Expr := .add e10404 e12191
+
+def e12193 : Expr := .add e12190 e12192
+
+def e12194 : Expr := .mul e00709 e00002
+
+def e12195 : Expr := .add e10408 e12194
+
+def e12196 : Expr := .add e12193 e12195
+
+def e12197 : Expr := .neg e09076
+
+def e12198 : Expr := .add e12196 e12197
+
+def e12199 : Expr := .neg e05487
+
+def e12200 : Expr := .add e12198 e12199
+
+def e12201 : Expr := .mul e00141 e04717
+
+def e12202 : Expr := .add e03550 e12201
+
+def e12203 : Expr := .add e12200 e12202
+
+def e12204 : Expr := .mul e00700 e04706
+
+def e12205 : Expr := .add e03554 e12204
+
+def e12206 : Expr := .add e12203 e12205
+
+def e12207 : Expr := .mul e00872 e04703
+
+def e12208 : Expr := .add e03559 e12207
+
+def e12209 : Expr := .neg e12208
+
+def e12210 : Expr := .add e12206 e12209
+
+def e12211 : Expr := .mul e00822 e04700
+
+def e12212 : Expr := .add e03564 e12211
+
+def e12213 : Expr := .neg e12212
+
+def e12214 : Expr := .add e12210 e12213
+
+def e12215 : Expr := .mul e00877 e04697
+
+def e12216 : Expr := .add e03568 e12215
+
+def e12217 : Expr := .add e12214 e12216
+
+def e12218 : Expr := .mul e00242 e04694
+
+def e12219 : Expr := .add e06935 e12218
+
+def e12220 : Expr := .add e12217 e12219
+
+def e12221 : Expr := .add e02250 e03332
+
+def e12222 : Expr := .neg e12221
+
+def e12223 : Expr := .add e12220 e12222
+
+def e12224 : Expr := .add e12223 e10439
+
+def e12225 : Expr := .mul e08155 e12224
+
+def e12226 : Expr := .mul e09100 e11450
+
+def e12227 : Expr := .neg e12226
+
+def e12228 : Expr := .add e12225 e12227
+
+def e12229 : Expr := .mul e03571 e12228
+
+def e12230 : Expr := .mul e06939 e12224
+
+def e12231 : Expr := .mul e09100 e10440
+
+def e12232 : Expr := .neg e12231
+
+def e12233 : Expr := .add e12230 e12232
+
+def e12234 : Expr := .mul e04688 e12233
+
+def e12235 : Expr := .neg e12234
+
+def e12236 : Expr := .add e12229 e12235
+
+def e12237 : Expr := .mul e06939 e11450
+
+def e12238 : Expr := .mul e08155 e10440
+
+def e12239 : Expr := .neg e12238
+
+def e12240 : Expr := .add e12237 e12239
+
+def e12241 : Expr := .mul e05505 e12240
+
+def e12242 : Expr := .add e12236 e12241
+
+def e12243 : Expr := .rat ((-32790780544572707727395115028363746351802044658329831959899874771905815829929947 : ℚ) / 100000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12244 : Expr := .mul e12243 e00728
+
+def e12245 : Expr := .add e02218 e12244
+
+def e12246 : Expr := .rat ((68475824862491840101860562796943988762842155678169487030303695388481840159966563 : ℚ) / 50000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12247 : Expr := .mul e12246 e01504
+
+def e12248 : Expr := .add e12245 e12247
+
+def e12249 : Expr := .rat ((-8261692922962646652046754313923036212723875846661114364271274875177517872715009 : ℚ) / 25000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12250 : Expr := .mul e12249 e02217
+
+def e12251 : Expr := .add e12248 e12250
+
+def e12252 : Expr := .rat ((-7732315598744633083577135283054603284032700150470195300027654810759857109879943 : ℚ) / 100000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12253 : Expr := .mul e12252 e12242
+
+def e12254 : Expr := .add e12251 e12253
+
+def e12255 : Expr := .neg e12254
+
+def e12256 : Expr := .add e00001 e12255
+
+def e12257 : Expr := .rat ((-28453945983897161823063490495150926699582214730668279882210396682387715236959297 : ℚ) / 50000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12258 : Expr := .mul e12257 e00728
+
+def e12259 : Expr := .add e02218 e12258
+
+def e12260 : Expr := .rat ((7104122010344603155119539484095755582691211710591922172200287183081503761133573 : ℚ) / 100000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12261 : Expr := .mul e12260 e01504
+
+def e12262 : Expr := .add e12259 e12261
+
+def e12263 : Expr := .rat ((-5083615048486557737791009734838546398160085734125448593495126265335203391612733 : ℚ) / 25000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12264 : Expr := .mul e12263 e02217
+
+def e12265 : Expr := .add e12262 e12264
+
+def e12266 : Expr := .rat ((-4757876660868394667754069959442902636751691743529822899235727043366172053282173 : ℚ) / 100000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12267 : Expr := .mul e12266 e12242
+
+def e12268 : Expr := .add e12265 e12267
+
+def e12269 : Expr := .neg e12268
+
+def e12270 : Expr := .add e00010 e12269
+
+def e12271 : Expr := .rat ((-18645385014895976718816608627077624605798549235325887055716784004173023948424173 : ℚ) / 100000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12272 : Expr := .mul e12271 e00728
+
+def e12273 : Expr := .add e02218 e12272
+
+def e12274 : Expr := .rat ((-36323931632427371848702495854519365554598407775969712703114215887449142068210341 : ℚ) / 25000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12275 : Expr := .mul e12274 e01504
+
+def e12276 : Expr := .add e12273 e12275
+
+def e12277 : Expr := .rat ((1602823134789150180162351900753200967273049804383527215895598314576029269339767 : ℚ) / 3125000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12278 : Expr := .mul e12277 e02217
+
+def e12279 : Expr := .add e12276 e12278
+
+def e12280 : Expr := .rat ((12000963427446868356915936526602628147900989805842708324516888445468539528266731 : ℚ) / 100000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12281 : Expr := .mul e12280 e12242
+
+def e12282 : Expr := .add e12279 e12281
+
+def e12283 : Expr := .neg e12282
+
+def e12284 : Expr := .add e00014 e12283
+
+def e12285 : Expr := .rat ((-1305819627258861582809877845778742221391974197820796689288235274454751095968559 : ℚ) / 6250000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12286 : Expr := .mul e12285 e00728
+
+def e12287 : Expr := .add e02218 e12286
+
+def e12288 : Expr := .rat ((-4741105237362604007325593612182477420680006356269893849205536304454530414536997 : ℚ) / 10000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12289 : Expr := .mul e12288 e01504
+
+def e12290 : Expr := .add e12287 e12289
+
+def e12291 : Expr := .rat ((24073330748490974688311831325549562709565934883480827005493654143043779747206453 : ℚ) / 100000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12292 : Expr := .mul e12291 e02217
+
+def e12293 : Expr := .add e12290 e12292
+
+def e12294 : Expr := .rat ((-1 : ℚ) / 100000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+def e12295 : Expr := .mul e12294 e12242
+
+def e12296 : Expr := .add e12293 e12295
+
+def e12297 : Expr := .neg e12296
+
+def e12298 : Expr := .add e01505 e12297
+
+end
+end Rho5.Algebraic.CriticalExistence

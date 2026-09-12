@@ -1,0 +1,19 @@
+{
+ "lean-toolchain": {
+  "project_path": "project/lean-toolchain",
+  "sha256": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+ },
+ "lakefile.toml": {
+  "project_path": "project/lakefile.toml",
+  "sha256": "7e0c59794cf2053b0918374160b859e5d200f6943b3854df43c63fa69bb9fab8"
+ },
+ "lake-manifest.json": {
+  "project_path": "project/lake-manifest.json",
+  "sha256": "6fa600a652ca1ef77814e08127d1078febb38e3018ed9f8b1c5683b92427b789"
+ },
+ "manifest_matches_binding": true,
+ "binding_lake_manifest_sha256": "6fa600a652ca1ef77814e08127d1078febb38e3018ed9f8b1c5683b92427b789",
+ "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+ "lean_version": "Lean (version 4.30.0, x86_64-unknown-linux-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+ "upgrade_performed": false
+}

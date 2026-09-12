@@ -1,0 +1,28 @@
+{
+  "status": "ACCEPTED_DECLARED_SCOPE",
+  "time": "2026-09-12T08:11:41.933370+08:00",
+  "scope": "Returned V43 actual local trajectories, physical trip and resource endpoint, with explicit start-cube/strict time-space budget/Physical hypotheses. No global chart/cube coverage or sharp alpha upper.",
+  "sources_sha256": {
+    "src/Rho5/ExternalV43Existence/Audit.lean": "3e6430b2d4bf8ab383fffc0216ea137f88fabf896266d45a917d5e36776e1a25",
+    "src/Rho5/ExternalV43Existence/Geometry.lean": "8101afbc09439934a728d27c78f67b4fa3589477262b5f637d2933e3facf8d0e",
+    "src/Rho5/ExternalV43Existence/LayerAudit.lean": "fa32301e97788dd912b666f16d8527e8be79f55d4df7cb2767cbfbfc94434612",
+    "src/Rho5/ExternalV43Existence/PhysicalTrip.lean": "6c15f4204126451a31919589f084b20abb83a7642f1fbb111853566da93a5f01",
+    "src/Rho5/ExternalV43Existence/Regularity.lean": "67a889a63aa56f7ce48f78b5980aaf6a45dfb970886ff1718dd7ffb450cb4bad",
+    "src/Rho5/ExternalV43Existence/Smoke.lean": "a694be4d889fc87b03b4fd2b10d25669e1c9672d576e507868bb7b02be5dd752",
+    "src/Rho5/ExternalV43Existence/Trajectory.lean": "ed5f432d9dc18db721ee7da0c8b093a2cb4896fdb6bb2a32fdcd6e3686ab9bae",
+    "src/Rho5/ExternalV43Existence.lean": "a2d46c13615ad362a3ea467fb31936e524fce082bc93761e234ecd9c63f769a1"
+  },
+  "success_logs_sha256": {},
+  "actual_axiom_records": 12,
+  "ready_sha256": {
+    "results/ACTUAL_TRAJECTORY_READY.json": "832fd8e941704ad4d410b7f7047edaf9f97e1cfab395218bfe358921bb15a89b",
+    "results/PHYSICAL_TRIP_READY.json": "754065adfb3daa4607d1ae1f88fc0ade719adce5b6afe179af8bba1c0c991318"
+  },
+  "notes": [
+    "Source identity checked against live compiled lane_root and 8 actual success logs. Prior regularity self-review reused.",
+    "BUILD_STATUS.package_audit_layer still says NOT_YET; actual latest Audit log has exit0 and all12 targets. Stale metadata does not supersede actual evidence.",
+    "Owner raised virtual address cap12→32GiB after measured legitimate thread-allocation failure, RSS guard remains8GiB. No prior coordinator approval was recorded for that change. Coordinator allows measured D84/ODE-import-only calibration prospectively; never a global physical-memory budget increase."
+  ],
+  "root_lean_runs": 0,
+  "review": "Owner/external self-review reused; necessary source/live binding, actual success and named standard axiom evidence and exact interface only. No full math audit or kernel replay."
+}

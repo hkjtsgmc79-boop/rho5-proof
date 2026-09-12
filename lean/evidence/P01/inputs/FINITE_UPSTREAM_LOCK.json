@@ -1,0 +1,58 @@
+[
+  {
+    "module": "Rho5.Integration.StagedAssembly.Conditional",
+    "source": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/src/Rho5/Integration/StagedAssembly/Conditional.lean",
+    "source_sha256": "836b304cc5e6187ffc4edd93b7fc930a082df4493957c2d8ed5b9e5382e5dec8",
+    "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/Integration/StagedAssembly/Conditional.olean",
+    "olean_sha256": "631cd2f1a85955753a4299f1e3d01382d6f55ca532916d8aef63651eac6332d2",
+    "evidence": "C02 final source/olean binding"
+  },
+  {
+    "module": "Rho5.ExternalBFibreCapacity.FiniteBounds",
+    "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D120/src/Rho5/ExternalBFibreCapacity/FiniteBounds.lean",
+    "source_sha256": "16efff267512872cf33d612beb0e61d0feacd2fca3301c68350113f635d4b028",
+    "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/ExternalBFibreCapacity/FiniteBounds.olean",
+    "olean_sha256": "78190e5fd4b4e4c642be6c19ff2e3d8293eaf037cb0fd28d03af4e4c9394bb12",
+    "evidence": "C02 final source/olean binding"
+  },
+  {
+    "module": "Rho5.LocalAnalysis.Model",
+    "source": "/root/microscope_ws/rho5_lean_pilot_20260911/project/Rho5/LocalAnalysis/Model.lean",
+    "source_sha256": "523b02db827adfb40d0479894247ad747520438e71b72e195a0f690b743eb289",
+    "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/LocalAnalysis/Model.olean",
+    "olean_sha256": "13380de65d3ad3a72432d527e3abedf1d0bc88b043cb4aba86ac945aed79a6d3",
+    "evidence": "C02 final source/olean binding"
+  },
+  {
+    "module": "Rho5.ExternalV43Existence.PhysicalTrip",
+    "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/PhysicalTrip.lean",
+    "source_sha256": "6c15f4204126451a31919589f084b20abb83a7642f1fbb111853566da93a5f01",
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/PhysicalTrip.olean",
+    "olean_sha256": "20cc31ead7aea6af2f965d5ef41436523e5876d28084156562aa83370bdcede0",
+    "evidence": "D84 accepted live snapshot"
+  },
+  {
+    "module": "Rho5.ExternalV43Existence.Trajectory",
+    "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/Trajectory.lean",
+    "source_sha256": "ed5f432d9dc18db721ee7da0c8b093a2cb4896fdb6bb2a32fdcd6e3686ab9bae",
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/Trajectory.olean",
+    "olean_sha256": "155a5eece0ff4b89415aa7f6f3387d56f4ae2300c120cd9cdfc7321edeeee45a",
+    "evidence": "D84 accepted live snapshot"
+  },
+  {
+    "module": "Rho5.ExternalV43Existence.Regularity",
+    "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/Regularity.lean",
+    "source_sha256": "67a889a63aa56f7ce48f78b5980aaf6a45dfb970886ff1718dd7ffb450cb4bad",
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/Regularity.olean",
+    "olean_sha256": "bfeae8e78cde40dd2541e4aaa0138e43b7693c55f75dd0cf531ac48aa737e7ec",
+    "evidence": "D84 accepted live snapshot"
+  },
+  {
+    "module": "Rho5.ExternalV43Existence.Geometry",
+    "source": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/Geometry.lean",
+    "source_sha256": "8101afbc09439934a728d27c78f67b4fa3589477262b5f637d2933e3facf8d0e",
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/lane_root/Rho5/ExternalV43Existence/Geometry.olean",
+    "olean_sha256": "03f82b08036254c0ec4674ded78652345e7ff1deef8d8494cbcd5ad9301a4699",
+    "evidence": "D84 accepted live snapshot"
+  }
+]

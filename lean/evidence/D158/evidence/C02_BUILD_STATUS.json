@@ -1,0 +1,177 @@
+{
+  "schema": "RHO5_C02_BUILD_STATUS_V1",
+  "created_at": "2026-09-12T05:41:46.050817+00:00",
+  "status": "ALL_THREE_SCOPED_STAGES_READY",
+  "coordinator_acceptance": "PENDING",
+  "lean_version": "Lean (version 4.30.0, x86_64-unknown-linux-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "modules": {
+    "Rho5.Integration.StagedAssembly.Audit": {
+      "source": "src/Rho5/Integration/StagedAssembly/Audit.lean",
+      "source_sha256": "03dd563e9cdbc7ffbd7243b398479092cee633512a65c84f0ffdcc50648c30b6",
+      "olean": "compiled/Rho5/Integration/StagedAssembly/Audit.olean",
+      "olean_sha256": "6614b054db597cd49a10ebcdb92caa338cc2f1fd1a96bcf8944a33cecc591531",
+      "direct_imports": [
+        "Rho5.Integration.StagedAssembly.Conditional"
+      ],
+      "build_record": "results/Rho5.Integration.StagedAssembly.Audit_1789191079508052981.json",
+      "success_log": "results/Rho5.Integration.StagedAssembly.Audit_1789191079508052981.log",
+      "log_sha256": "1d0f4cca3a76f71f4caac37fab1f4eaeb580780c30160e238f48464e208beee2",
+      "exit_code": 0,
+      "wall_seconds": 4.070361137390137
+    },
+    "Rho5.Integration.StagedAssembly.Baseline": {
+      "source": "src/Rho5/Integration/StagedAssembly/Baseline.lean",
+      "source_sha256": "66e5c18220d5783822d1dd5dc80013f6559f9f53482d981767215239cf04fa9e",
+      "olean": "compiled/Rho5/Integration/StagedAssembly/Baseline.olean",
+      "olean_sha256": "a44816be7fc9255e257d5d9b6f63f24b64891b9070a7508b8ac85ca863602d6f",
+      "direct_imports": [
+        "Rho5.Shared.GlobalAttainedWitness.Range",
+        "Rho5.Shared.GlobalXBMaximizer.Basic"
+      ],
+      "build_record": "results/Rho5.Integration.StagedAssembly.Baseline_1789189124529213915.json",
+      "success_log": "results/Rho5.Integration.StagedAssembly.Baseline_1789189124529213915.log",
+      "log_sha256": "071a7e1bec009eea6fdbc12c7205b399a91d0774977e69c9e9bac9c6b5e25b7f",
+      "exit_code": 0,
+      "wall_seconds": 4.586577653884888
+    },
+    "Rho5.Integration.StagedAssembly.BaselineAudit": {
+      "source": "src/Rho5/Integration/StagedAssembly/BaselineAudit.lean",
+      "source_sha256": "8a7b442c7cc7b6e760efb5455a4da33627164c5f246ee431fc60c63bff9ddc65",
+      "olean": "compiled/Rho5/Integration/StagedAssembly/BaselineAudit.olean",
+      "olean_sha256": "639acaab20d24fb3c17b88eba66d00e149f8de13e8999f66e40de598d9a856cf",
+      "direct_imports": [
+        "Rho5.Integration.StagedAssembly.Baseline"
+      ],
+      "build_record": "results/Rho5.Integration.StagedAssembly.BaselineAudit_1789189203392537512.json",
+      "success_log": "results/Rho5.Integration.StagedAssembly.BaselineAudit_1789189203392537512.log",
+      "log_sha256": "1e1a4b727ecfa71ed8bba083a14a6c0600e4b75177e17cb09c0e4ee99b60e6de",
+      "exit_code": 0,
+      "wall_seconds": 4.321124792098999
+    },
+    "Rho5.Integration.StagedAssembly.Conditional": {
+      "source": "src/Rho5/Integration/StagedAssembly/Conditional.lean",
+      "source_sha256": "836b304cc5e6187ffc4edd93b7fc930a082df4493957c2d8ed5b9e5382e5dec8",
+      "olean": "compiled/Rho5/Integration/StagedAssembly/Conditional.olean",
+      "olean_sha256": "631cd2f1a85955753a4299f1e3d01382d6f55ca532916d8aef63651eac6332d2",
+      "direct_imports": [
+        "Rho5.Integration.StagedAssembly.RootReduction",
+        "Rho5.ExternalFourthPivot.FifthReduction",
+        "Rho5.Shared.FinalEndpointAssembly.Endpoints"
+      ],
+      "build_record": "results/Rho5.Integration.StagedAssembly.Conditional_1789191071126959526.json",
+      "success_log": "results/Rho5.Integration.StagedAssembly.Conditional_1789191071126959526.log",
+      "log_sha256": "d9164794bdfa393544debf47ee07de917fe262cf5d9f19a59092747bbc8db5df",
+      "exit_code": 0,
+      "wall_seconds": 4.232035875320435
+    },
+    "Rho5.Integration.StagedAssembly.ImportAudit": {
+      "source": "src/Rho5/Integration/StagedAssembly/ImportAudit.lean",
+      "source_sha256": "3212369c3cc13fa77ee5c1e6a593cc56799b2b6bde3f9d4241d66dc55b28b965",
+      "olean": "compiled/Rho5/Integration/StagedAssembly/ImportAudit.olean",
+      "olean_sha256": "e6d4b090e241371951495ee33622c06f91d6fa50cad9654d8553a60c9db81393",
+      "direct_imports": [
+        "Rho5.Integration.StagedAssembly"
+      ],
+      "build_record": "results/Rho5.Integration.StagedAssembly.ImportAudit_1789191087574235261.json",
+      "success_log": "results/Rho5.Integration.StagedAssembly.ImportAudit_1789191087574235261.log",
+      "log_sha256": "310c9b859ce64623eb1a9f137824bd5b07478ba5bdfe3c2d938faaa708a54a18",
+      "exit_code": 0,
+      "wall_seconds": 4.136291980743408
+    },
+    "Rho5.Integration.StagedAssembly.RootReduction": {
+      "source": "src/Rho5/Integration/StagedAssembly/RootReduction.lean",
+      "source_sha256": "d52b3613a86483e92ddfb6872306e9c5a65c64f9816051ab4e62f87a16b0c560",
+      "olean": "compiled/Rho5/Integration/StagedAssembly/RootReduction.olean",
+      "olean_sha256": "84da9b8da7de12a91a33f742988265b373beef764b2e551428b551d7d0d3595f",
+      "direct_imports": [
+        "Rho5.Integration.StagedAssembly.Baseline",
+        "Rho5.Shared.GlobalXBMaximizer.StageB",
+        "Rho5.Shared.ActualBRootEntry.Assembly",
+        "Rho5.Shared.BRootCapacityEndpoint.Refutation"
+      ],
+      "build_record": "results/Rho5.Integration.StagedAssembly.RootReduction_1789191066579899010.json",
+      "success_log": "results/Rho5.Integration.StagedAssembly.RootReduction_1789191066579899010.log",
+      "log_sha256": "fcf3c26fa118376a46f44e57f4928a677a50c33e55cb876c3e3e206f7fff99fe",
+      "exit_code": 0,
+      "wall_seconds": 4.536670684814453
+    },
+    "Rho5.Integration.StagedAssembly.RootReductionAudit": {
+      "source": "src/Rho5/Integration/StagedAssembly/RootReductionAudit.lean",
+      "source_sha256": "c5434446847e940f3e531d98f1f4db5cfb548f3778166a10ac05c1317f23bae4",
+      "olean": "compiled/Rho5/Integration/StagedAssembly/RootReductionAudit.olean",
+      "olean_sha256": "abb6c760d1241118ffed4fc53f99b386d6d6192fac6610c63307b7315e003bfc",
+      "direct_imports": [
+        "Rho5.Integration.StagedAssembly.RootReduction"
+      ],
+      "build_record": "results/Rho5.Integration.StagedAssembly.RootReductionAudit_1789191075370226902.json",
+      "success_log": "results/Rho5.Integration.StagedAssembly.RootReductionAudit_1789191075370226902.log",
+      "log_sha256": "efcb96df6e7ad862ce354d25b431e88490dd626da8a162c136466574d4a99e05",
+      "exit_code": 0,
+      "wall_seconds": 4.127887964248657
+    },
+    "Rho5.Integration.StagedAssembly": {
+      "source": "src/Rho5/Integration/StagedAssembly.lean",
+      "source_sha256": "7975974bc7733a3ee67f20f42cee6304539510167a913a10d15d657c8f3853ca",
+      "olean": "compiled/Rho5/Integration/StagedAssembly.olean",
+      "olean_sha256": "2d0bcf4488ddc9f5814296a013f64be6fd63b523034bf3f03b6bfd9804fe53ac",
+      "direct_imports": [
+        "Rho5.Integration.StagedAssembly.Baseline",
+        "Rho5.Integration.StagedAssembly.RootReduction",
+        "Rho5.Integration.StagedAssembly.Conditional"
+      ],
+      "build_record": "results/Rho5.Integration.StagedAssembly_1789191083587794338.json",
+      "success_log": "results/Rho5.Integration.StagedAssembly_1789191083587794338.log",
+      "log_sha256": "d52930815f22a6493e0efd31236cc09d84d9f1ffa2da28ad642d3c6b7341f618",
+      "exit_code": 0,
+      "wall_seconds": 3.977499485015869
+    }
+  },
+  "all_invocation_count": 54,
+  "successful_current_modules": 8,
+  "failed_attempts_retained": 2,
+  "failure_explanations": [
+    "Initial baseline import root layout shadowed the dependency root; fixed by one complete Rho5 root.",
+    "Initial Conditional used ambiguous relative open declarations; fixed with fully qualified namespace opens and autoImplicit false."
+  ],
+  "named_axiom_targets": 9,
+  "axiom_union": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "all_attempt_wall_seconds": 302.11981773376465,
+  "successful_current_wall_seconds": 33.988449573516846,
+  "peak_rss_kib": 5047260,
+  "disk": {
+    "exclusive_file_bytes": 28040522,
+    "exclusive_allocated_bytes": 28631040,
+    "shared_hardlink_entries": 2737
+  },
+  "actual_loaded_object_count": 4788,
+  "project_source_graph_count": 495,
+  "project_loaded_object_count": 496,
+  "upstream_recompiled": true,
+  "targeted_upstream_rebuild_count": 36,
+  "integration_successor_rebuild_count": 6,
+  "rebuild_review": "rebuild_01/results/REBUILD_REVIEW.json",
+  "rebuild_wall_seconds": 255.73077011108398,
+  "rebuild_all_objects_reproduced": true,
+  "mathlib_rebuilt": false,
+  "local_lean_invocations": 0,
+  "resource_guards": {
+    "single_Lean_per_card": true,
+    "shared_Lean_cap": 6,
+    "preflight_max_other_Lean_observed": 1,
+    "nice_at_least": 10,
+    "jobs": 1,
+    "Lean_MiB": 8192,
+    "RSS_GiB": 8,
+    "AS_GiB": 12,
+    "numerical_library_threads": 1,
+    "child_stdout_stderr_drained": true,
+    "mem_min_GiB": 16,
+    "disk_min_GiB": 10
+  },
+  "unconditional_final_ready": false
+}

@@ -1,0 +1,112 @@
+{
+  "accepted_at": "2026-09-12T12:04:50.918375+08:00",
+  "status": "ACCEPTED_SCOPED_CARD",
+  "source_count": 4,
+  "source_hashes": {
+    "src/Rho5/Shared/BFibreGlobalEndpoint.lean": "14a54ba7c97671642a0f996079a73490c456027f503b30629b1ce091068a8c18",
+    "src/Rho5/Shared/BFibreGlobalEndpoint/Basic.lean": "c7955d439738b3b0561f03974e677cba4eb99016d3749b73c6639a471001303c",
+    "src/Rho5/Shared/BFibreGlobalEndpoint/GlobalMax.lean": "84fc5593e01114b82723d2e6a4b7f79d49ad3da001f779a822bdb767ddd32847",
+    "src/Rho5/Shared/BFibreGlobalEndpoint/Audit.lean": "7f09d06fb7042b26d3b9e31a38448fbfcd8b6378da4cdd85f92ceead91ae4433"
+  },
+  "olean_hashes": {
+    "lane_root/Rho5/Shared/BFibreGlobalEndpoint/Basic.olean": "5f3545c2969a60fc37c3bbdb33fba793b075e3e26358679cf003a225ebcea502",
+    "lane_root/Rho5/Shared/BFibreGlobalEndpoint/GlobalMax.olean": "790f085629655270d9cbcc41cb0cb07cb888f13194fe3f2237258292158ba8c4",
+    "lane_root/Rho5/Shared/BFibreGlobalEndpoint.olean": "ff619b595341a811285773cefb00e80c491930c2d474fe6b45f843fba2e5fee4",
+    "lane_root/Rho5/Shared/BFibreGlobalEndpoint/Audit.olean": "00ef754da9524574e48d2af4623d99b99f574dc96d3f1ceb4ce345e1eed9f241"
+  },
+  "live_X_all_hashes_match": true,
+  "actual_named_axioms": {
+    "Rho5.Shared.BFibreGlobalEndpoint.four_lt_capF": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.BFibreGlobalEndpoint.prefixP_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.BFibreGlobalEndpoint.k_le_nine_quarters": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.BFibreGlobalEndpoint.canonical_endpoint_matrix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.BFibreGlobalEndpoint.capF_le_rho5Trace": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.BFibreGlobalEndpoint.growth_eq_capF_of_four_lt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.BFibreGlobalEndpoint.high_value_capacity_endpoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.BFibreGlobalEndpoint.capF_eq_rho5Trace": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.BFibreGlobalEndpoint.global_max_growth_eq_rho5Trace": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.BFibreGlobalEndpoint.normalizedB_global_max_has_canonical_fibre_endpoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.BFibreGlobalEndpoint.exists_global_max_canonical_fibre_endpoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": {
+    "high_value_premise": {
+      "four_lt_capF": "∀ z, NormalizedB z → 4 < z 23 → 4 < capF (frameOf z)   (D121 height_le_capF)",
+      "one_le_capF": "∀ z, NormalizedB z → 4 < z 23 → 1 ≤ capF (frameOf z)   (first explicit premise)",
+      "prefixP_le_two": "∀ z, NormalizedB z → prefixP (frameOf z) ≤ 2   (D120 prefix_maximum at the decoded source)",
+      "prefixP_lt_capF": "∀ z, NormalizedB z → 4 < z 23 → prefixP (frameOf z) < capF (frameOf z)   (second explicit premise)",
+      "k_le_nine_quarters": "∀ z, NormalizedB z → (frameOf z).k ≤ 9/4   (D87 k_le_nine_quarters at the real reconstruct, read back with k_reconstruct)",
+      "k_lt_capF": "∀ z, NormalizedB z → 4 < z 23 → (frameOf z).k < capF (frameOf z)   (third explicit premise)"
+    },
+    "canonical_endpoint": {
+      "canonical_endpoint_normalized": "∀ z h, NormalizedB (canonicalPoint (frameOf z))",
+      "canonical_endpoint_frame": "∀ z h, frameOf (canonicalPoint (frameOf z)) = frameOf z",
+      "canonical_endpoint_height": "∀ z h, canonicalPoint (frameOf z) 23 = capF (frameOf z)",
+      "canonical_endpoint_dominates": "∀ z h w, NormalizedB w → frameOf w = frameOf z → w 23 ≤ canonicalPoint (frameOf z) 23",
+      "canonical_endpoint_matrix": "∀ z h, matrixEntryMax (reconstruct (canonicalPoint (frameOf z))) = 1 ∧ LegalTrace (reconstruct (canonicalPoint (frameOf z))) (canonicalPivots (frameOf z)) ∧ PolyCP (reconstruct (canonicalPoint (frameOf z))) ∧ capF (frameOf z) ≤ growthRatio (reconstruct (canonicalPoint (frameOf z))) (canonicalPivots (frameOf z))"
+    },
+    "capacity_below_global_trace": {
+      "capF_le_rho5Trace": "∀ z, NormalizedB z → capF (frameOf z) ≤ Rho5.GrowthSupremum.rho5Trace",
+      "route": "the capacity height is realised by the ACTUAL reconstruction reconstruct (canonicalPoint (frameOf z)) with the ACTUAL pivot list canonicalPivots (frameOf z); via matrixEntryMax = 1, LegalTrace and ne_zero_of_matrixEntryMax_eq_one its growth ratio is a member of Rho5.GrowthModel.GrowthValues, so Rho5.GrowthSupremum.le_rho5Trace applies. No matrix or trace is replaced by an abstract sequence."
+    },
+    "actual_growth": {
+      "growth_eq_capF_of_four_lt": "∀ z, NormalizedB z → 4 < z 23 → growthRatio (reconstruct (canonicalPoint (frameOf z))) (canonicalPivots (frameOf z)) = capF (frameOf z)",
+      "premises_paid": "1 ≤ capF (one_le_capF), prefixP ≤ 2 < 4 < capF (prefixP_le_two + four_lt_capF), k ≤ 9/4 < 4 < capF (k_le_nine_quarters + four_lt_capF); r's dominance is D121's canonical_r_le_height, consumed inside actual_growth_eq_capacity",
+      "high_value_capacity_endpoint": "the conjunction of: NormalizedB endpoint, frame preservation, endpoint height = capF, 4 < capF, capF ≤ rho5Trace, actual growth = capF, LegalTrace, PolyCP"
+    },
+    "global_maximizer_endpoint": {
+      "capF_eq_rho5Trace": "∀ z, NormalizedB z → z 23 = rho5Trace → capF (frameOf z) = rho5Trace",
+      "four_lt_of_eq_rho5Trace": "∀ z, z 23 = rho5Trace → 4 < z 23   (reuses D92 Rho5.Shared.GlobalAttainedWitness.four_lt_rho5Trace)",
+      "global_max_growth_eq_rho5Trace": "∀ z, NormalizedB z → z 23 = rho5Trace → growthRatio (reconstruct (canonicalPoint (frameOf z))) (canonicalPivots (frameOf z)) = rho5Trace",
+      "normalizedB_global_max_has_canonical_fibre_endpoint": "∀ z, NormalizedB z → z 23 = rho5Trace → capF (frameOf z) = rho5Trace ∧ frameOf (canonicalPoint (frameOf z)) = frameOf z ∧ canonicalPoint (frameOf z) 23 = rho5Trace ∧ NormalizedB (canonicalPoint (frameOf z)) ∧ (∀ w, NormalizedB w → frameOf w = frameOf z → w 23 ≤ canonicalPoint (frameOf z) 23) ∧ (∀ w, NormalizedB w → frameOf w = frameOf z → w 23 ≤ rho5Trace) ∧ LegalTrace (reconstruct (canonicalPoint (frameOf z))) (canonicalPivots (frameOf z)) ∧ PolyCP (reconstruct (canonicalPoint (frameOf z))) ∧ growthRatio (reconstruct (canonicalPoint (frameOf z))) (canonicalPivots (frameOf z)) = rho5Trace",
+      "exists_global_max_canonical_fibre_endpoint": "existence form with zStar := canonicalPoint (frameOf z): NormalizedB, same frame, height rho5Trace, matrixEntryMax = 1, the explicit LegalTrace [1, p zStar, zStar 0, zStar 1, zStar 23], and domination of the fibre"
+    }
+  },
+  "remaining": null,
+  "review": "Reused owner self-review, dependency binding and exact actual success/audit logs; root verified source+olean identity and public theorem premises, no repeated mathematics or compilation. D136 raw logs do not contain exit metrics: exit-zero report reused.",
+  "root_Lean_invocations": 0,
+  "whole_rho_equals_alpha_complete": false
+}

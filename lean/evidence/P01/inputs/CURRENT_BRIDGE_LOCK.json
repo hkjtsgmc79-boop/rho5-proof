@@ -1,0 +1,18 @@
+[
+  {
+    "module": "Rho5.LocalAnalysis.Pilot",
+    "source": "/root/microscope_ws/rho5_lean_pilot_20260911/project/Rho5/LocalAnalysis/Pilot.lean",
+    "source_sha256": "97dd914c93f993f6d44050e913443d7a432ee2b5bab4bc23038cf145cf8ebbca",
+    "olean": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build/Rho5/LocalAnalysis/Pilot.olean",
+    "olean_sha256": "c2aae5184861b95078dba65dd1aa9e9e196c285ea889f5529f80956f7c0843b2",
+    "evidence": "P01 current finite bridge fingerprint; upstream evidence inherited"
+  },
+  {
+    "module": "Mathlib.Analysis.ODE.PicardLindelof",
+    "source": "/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/Mathlib/Analysis/ODE/PicardLindelof.lean",
+    "source_sha256": "c7d98e66cd3358fa0eaf3936f781f7ab91c6e43b2fe28e32870041c4af84cf62",
+    "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D84/iso_root/Mathlib/Analysis/ODE/PicardLindelof.olean",
+    "olean_sha256": "3a9025c2f05e670a5611f79e3a9126dfc763232c18c70f4db797c3053bd91cdd",
+    "evidence": "P01 current finite bridge fingerprint; upstream evidence inherited"
+  }
+]

@@ -1,0 +1,556 @@
+{
+  "schema": "RHO5_PHASE1_EXTERNAL_COMPUTATION_OBLIGATIONS_V1",
+  "lane": "D159",
+  "issued": "2026-09-12",
+  "method": "bounded read of existing receipts, lane results and finite entry sources; no Lean invocation, no certificate replay, no archive-wide expansion, no tree scan, no math re-review",
+  "delivery_note": "card asked for outputs/phase1_noncomputational_assembly_20260912/D159/ ; that path is outside the session workspace and the write was denied by the workspace-write sandbox (see SELF_REVIEW.md). All artifacts are complete in work/dsh-main/parallel/D159/ and only need to be moved into the delivery directory.",
+  "top_level_obligations": [
+    {
+      "id": "OBL-X",
+      "name": "Rho5.Integration.StagedAssembly.XGlobalSafety",
+      "lean_type": "def Rho5.Integration.StagedAssembly.XGlobalSafety : Prop := ∀ x : LocalAnalysis.X, LocalAnalysis.V43.Physical x → LocalAnalysis.height x ≤ alpha",
+      "source": "outputs/relay_1345_delivery_20260912/C02/src/Rho5/Integration/StagedAssembly/Conditional.lean:16",
+      "meaning": "every actual physical X state has height at most the real alpha",
+      "paid": false,
+      "consumed_by": "Rho5.Integration.StagedAssembly.rho5Trace_eq_alpha_of_safety (hX) (hB) : rho5Trace = alpha",
+      "forbidden_substitutes": [
+        "axiom hX",
+        "sorry",
+        "native_decide",
+        "Python PASS",
+        "a single Bool",
+        "finite sample without counterexample",
+        "leaf counts",
+        "local PASS"
+      ]
+    },
+    {
+      "id": "OBL-B",
+      "name": "Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety",
+      "lean_type": "def Rho5.Shared.BRootCapacityEndpoint.RootEndpointSafety : Prop := ∀ zStar : Point, Rho5.Shared.BRootCapacityEndpoint.IsRootCapacityEndpoint zStar → zStar 23 ≤ Rho5.Algebraic.AlphaRoot.alpha",
+      "source": "work/dsh-main/parallel/D142/src/Rho5/Shared/BRootCapacityEndpoint/Refutation.lean:37",
+      "companion_definition": "IsRootCapacityEndpoint zStar := ∃ y, Rho5.ExternalBFibreCapacity.NormalizedB y ∧ Rho5.Shared.PaperB17RootEntry.B17Root (Rho5.ExternalBFibreCapacity.frameOf y) ∧ zStar = Rho5.ExternalBFibreCapacity.canonicalPoint (Rho5.ExternalBFibreCapacity.frameOf y)",
+      "meaning": "every same-frame canonical root capacity endpoint has coordinate 23 at most the real alpha",
+      "paid": false
+    }
+  ],
+  "status_legend": {
+    "REDUCTION_PROVEN": "the mathematical reduction step is proved in Lean (formal intake receipt + named axiom record)",
+    "COMPUTE_RECEIPT": "a specific computation receipt exists (model/certificate/verifier/run notes with path+hash)",
+    "PAYLOAD_REPLAY": "VERIFIED | UNKNOWN | NOT_RECEIVED",
+    "WIRING_OPEN": "the step to global source-to-cover / semantic wiring is not yet formalized"
+  },
+  "rows": [
+    {
+      "id": "X1",
+      "obligation": "OBL-X",
+      "logical_responsibility": "source-to-cover wiring: connect every Physical x to one complete check domain",
+      "lean_type_or_source_condition": "XGlobalSafety itself; input Physical x only (no other hypotheses)",
+      "model_coverage": "the whole LocalAnalysis.X",
+      "computation_materials": [
+        {
+          "kind": "index",
+          "path": "outputs/phase1_noncomputational_assembly_20260912/ACCEPTED_CORE_MAP.md",
+          "section": "4 (尚未完成的来源/语义接线)"
+        }
+      ],
+      "receipt_proves": "paid: original global maximizer -> actual X or B (D131/D126); Physical X -> original matrix/legal trace (D103_FULL). NOT paid: starting regions of the local charts, strict eligibility, time/resource budgets, and the consumption chain from all relevant actual sources to the complete check domain",
+      "still_owed": "formalized global source-to-cover consumption chain; no single local gate equals full global safety",
+      "status": [
+        "WIRING_OPEN"
+      ]
+    },
+    {
+      "id": "X2",
+      "obligation": "OBL-X",
+      "logical_responsibility": "real-valued semantics of the finite linear certificate rules",
+      "lean_type_or_source_condition": "Rho5.Shared.CertificateRules (nonnegCheck / Rational.check)",
+      "model_coverage": "rule layer only (no domain cover)",
+      "computation_materials": [
+        {
+          "path": "work/dsh-main/parallel/D135/results/CERTIFICATE_RULES_REAL_SOUNDNESS_READY.json",
+          "role": "real soundness receipt"
+        },
+        {
+          "path": "work/dsh-main/parallel/D135/results/CERTIFICATE_RULES_SCOPE_CORRECTION.json",
+          "role": "scope correction: frozen stage-A statements quantified rational points only"
+        },
+        {
+          "path": "work/dsh-main/parallel/D135/results/CERTIFICATE_RULES_CORE_READY.json",
+          "role": "core rules"
+        },
+        {
+          "path": "work/dsh-main/parallel/D135/results/CERTIFICATE_RULES_SAMPLES_READY.json",
+          "role": "two actual samples"
+        },
+        {
+          "path": "/root/microscope_ws/rho5_lean_dsh_20260911/D135",
+          "role": "X lane root"
+        }
+      ],
+      "receipt_proves": "the unchanged exact checkers with nonnegative weights exclude ALL assignments whose coordinates are real (not merely rational points); two new leaf modules carry the real-valued argument; the scope correction records that earlier prose was broader than the compiled types",
+      "still_owed": "application of the rules to a complete global domain cover (belongs to X1/X6)",
+      "status": [
+        "REDUCTION_PROVEN",
+        "WIRING_OPEN"
+      ]
+    },
+    {
+      "id": "X3",
+      "obligation": "OBL-X",
+      "logical_responsibility": "actual X source rows and root box",
+      "lean_type_or_source_condition": "Rho5.Shared.XSmallKBranch: SourceSystem, chartState, boxLo/boxHi, 106 RowProp rows, 22-dim root box, first C map",
+      "model_coverage": "actual SatFrame class with explicit sign/positivity/high-value/small-k/u0 premises",
+      "computation_materials": [
+        {
+          "path": "work/dsh-main/parallel/D136/results/X_V31_ACTUAL_MATRIX_106_ROWS_READY.json",
+          "role": "106 rows paid"
+        },
+        {
+          "path": "work/dsh-main/parallel/D136/results/X_V31_FIRST_C_SOURCE_READY.json",
+          "role": "first C source map"
+        },
+        {
+          "path": "/root/microscope_ws/rho5_lean_dsh_20260911/D136",
+          "role": "X lane root"
+        }
+      ],
+      "receipt_proves": "the 106 rows and the root box are conclusions (not assumptions); sourceSystem_of_satFrame builds the source system under the explicit premises",
+      "still_owed": "those explicit premises are not global; D143 discharges them only on the high-value small-k branch",
+      "status": [
+        "REDUCTION_PROVEN"
+      ]
+    },
+    {
+      "id": "X4",
+      "obligation": "OBL-X",
+      "logical_responsibility": "actual matrix -> M02 model source bridge and actual M01 root entry",
+      "lean_type_or_source_condition": "Rho5.Shared.XV31ModelEntry: matrixPoint, liftedPoint_matrixPoint, rowProp_iff_toRow (106/106), sameSource_of_rows, matrix_has_v31_source_representative, matrixPoint_remaining_frontier",
+      "model_coverage": "high-value small-k branch only: SatFrame M, qstar ≤ height M, k M ≤ 2",
+      "computation_materials": [
+        {
+          "path": "work/dsh-main/parallel/D148/results/X_SMALLK_ACTUAL_MATRIX_V31_MODEL_ENTRY_READY.json",
+          "role": "gate publication"
+        },
+        {
+          "path": "/root/microscope_ws/rho5_lean_dsh_20260911/D148",
+          "role": "X lane root; mirror 1995 upstream Rho5 objects, 0 conflicts"
+        },
+        {
+          "path": "outputs/relay_1408_delivery_20260912/M02_G01/build/lib/lean",
+          "role": "frozen M02_G01 delivery root; 27/27 objects byte-identical in the D148 build root"
+        }
+      ],
+      "receipt_proves": "from only three original hypotheses: a real same-height representative N with Model.SameSource (matrixPoint N), matrixPoint N in V31Prefix.root.denote, and matrixPoint N inside one of FiveTree.remainingSeven",
+      "still_owed": "branch-scoped; the remaining frontiers are open; nothing about arbitrary Physical x",
+      "status": [
+        "REDUCTION_PROVEN"
+      ]
+    },
+    {
+      "id": "X5",
+      "obligation": "OBL-X",
+      "logical_responsibility": "dynamic cycle wave runtime rules",
+      "lean_type_or_source_condition": "Rho5.Shared.CertificateContraction.CycleRuntime*: waveRows, waveRows_holds, dynamicWaveStep, dynamicWaveStep_wavePreserves, runWaves, runRecordBatches, runRecordBatches_preserves, runRecordBatches_empty",
+      "model_coverage": "runtime rule layer (per-wave dynamic row count, real wave order, C07/C03 post-processing)",
+      "computation_materials": [
+        {
+          "path": "work/dsh-main/parallel/D153/results/DYNAMIC_CYCLE_WAVE_PROPAGATION_REAL_READY.json",
+          "role": "gate publication"
+        },
+        {
+          "path": "/root/microscope_ws/rho5_lean_dsh_20260911/D153",
+          "role": "X lane root"
+        },
+        {
+          "path": "/root/microscope_ws/rho5_deep500_all_open_20260910_08/runtime/deep500/v44/frozen/v41/dual_box.py",
+          "sha256": "d396322514e6b2ced8caae02cae81664a6d8ce0b79a2fee3231561542fb9f0df",
+          "role": "reference wave order and propagation order"
+        }
+      ],
+      "receipt_proves": "wave table in the real order BASE -> CHARTS -> WINDOW(pivot) -> 4 McCormick per pair -> this wave's cycle rows; propagation fixed order CHARTS -> BASE -> WINDOW with no cycle rows; dynamic m validates List RawRecord; bad records give an explicit error; same-point preservation and the EMPTY consumer",
+      "still_owed": "it is a runtime-rule implementation, not a global cover; no real trace is instantiated for the global domain",
+      "status": [
+        "REDUCTION_PROVEN",
+        "WIRING_OPEN"
+      ]
+    },
+    {
+      "id": "X6",
+      "obligation": "OBL-X",
+      "logical_responsibility": "tree/leaf instances (M01, M02 G01, C10 G02, C12 G03, C09)",
+      "lean_type_or_source_condition": "Rho5.Shared.MainlineTreeCover (M01); Rho5.Shared.MainlineTreeCover.V31Batch (M02); Rho5.Integration.V31BatchKernel (C10); Rho5.Integration.ActualSmallKFrontier (C09)",
+      "model_coverage": "specific subtrees/batches, never the whole tree",
+      "computation_materials": [
+        {
+          "path": "/Users/mike/Documents/Codex/2026-09-07/rho5-mainline-v2/work/lean_mainline_tree_cover_20260912/READY.json",
+          "role": "M01 status",
+          "input": "V31_FIRST_PREFIX_SAMPLE.json sha256 883ee574053f16c3b0923fee0429aad68f088282027fa713cedcbad3abfa142a"
+        },
+        {
+          "path": "outputs/relay_1408_delivery_20260912/M02_G01/INTAKE_RECEIPT.json",
+          "role": "M02 G01 intake, 27 modules, 408 named axiom targets, gate V31_BATCH_REAL_EMPTY_READY"
+        },
+        {
+          "path": "outputs/relay_1408_delivery_20260912/M02_G01/BATCH_LEDGER.json",
+          "role": "paid 5 leaves; unpaid M01 frontier; actual_matrix_to_polynomial_bridge: EXTERNAL_OBLIGATION; full_V31: OPEN"
+        },
+        {
+          "path": "work/codex-parallel/C10/results/INTEGER_DATA_PROVENANCE.json",
+          "role": "G02 provenance: root path 000001, records 17..37, 21 nodes, scale 4800, raw_g02_sha256 572eea3d24abea5f46832c470f6b7576d5fc3ce868e98497a90e53edda64245d"
+        },
+        {
+          "path": "work/codex-parallel/C10/results/INDEPENDENT_KERNEL_REVIEW.md",
+          "role": "independent source review: no soundness gap found; does not replace successful compile receipts or the final named-axiom audit"
+        },
+        {
+          "path": "work/codex-parallel/C12/COMPUTE_FREEZE.json",
+          "role": "FROZEN at 2026-09-12T08:10:56Z; large tree checking belongs to stage two"
+        },
+        {
+          "path": "work/codex-parallel/C12/results/GENERATOR_CONTROL_RESULTS.json",
+          "role": "EXTERNAL_ADAPTER_CONTROLS_PASSED_NOT_LEAN_PROOFS"
+        },
+        {
+          "path": "/Users/mike/Documents/Codex/2026-09-12/rho5-lean-staged-assembly/outputs/C09_actual_smallk_frontier/ACTUAL_SMALLK_FIVE_FRONTIERS_READY.json",
+          "role": "3 original paths closed, 5 frontiers remain"
+        }
+      ],
+      "receipt_proves": "M01: PASS_FINITE_COVER_AND_ACTUAL_PREFIX_NOT_GLOBAL_CLOSURE, full_V31_closed false, 8 frontier obligations retained, 0 terminal obligations discharged. M02_G01: five leaves paid, subtree_model_empty, 7 frontiers remain. C10: 21-node G02 kernel. C12: frozen. C09: 3 closed / 5 remaining on the small-k branch.",
+      "still_owed": "the whole V31 tree and global exclusion are open; C10/C12 are optional frozen samples; leaf counts, local PASS and Python controls never constitute hX",
+      "status": [
+        "COMPUTE_RECEIPT",
+        "WIRING_OPEN"
+      ],
+      "payload_replay": "UNKNOWN"
+    },
+    {
+      "id": "X7",
+      "obligation": "OBL-X",
+      "logical_responsibility": "frozen runtime = reference certificate/verifier semantics",
+      "lean_type_or_source_condition": "reference implementation (not Lean): dual_box.py {rows_and_bounds, coefficients, bound_value, apply_wave, common_contract, replay_trace}; pivot_windows.py {WINDOW_ROWS, PACKS, cycle_rows}; source_access.py",
+      "model_coverage": "reference semantics and certificate format",
+      "computation_materials": [
+        {
+          "path": "/root/microscope_ws/rho5_deep500_all_open_20260910_08/runtime/deep500/v44/frozen/v41/dual_box.py",
+          "sha256": "d396322514e6b2ced8caae02cae81664a6d8ce0b79a2fee3231561542fb9f0df"
+        },
+        {
+          "path": ".../pivot_windows.py",
+          "sha256": "e42100e5611bc8c18bee918687892669d84658adb7921ed8aaf686dac2a8b0cc"
+        },
+        {
+          "path": ".../source_access.py",
+          "sha256": "7c1160a34dcbf4d33523734546670fda0d263fb7aa95e09b907ecd910cf7ee42"
+        },
+        {
+          "path": ".../discovery.py",
+          "sha256": "91eede9b51258ff93e1d1c6866117696d4794bcc9a6a49a06e1fdba39a4722d3"
+        },
+        {
+          "path": ".../v41_protocol.py",
+          "sha256": "55ee6ae862e754691810578c8b5c4d77f92df87f69aace414cde0d014b30000c"
+        },
+        {
+          "path": ".../dependency/IDENTITY.json",
+          "sha256": "dbf81847ef46f4f054354b01f1771e84d5e1780f789109666350ad5e992e1843",
+          "fields": {
+            "received_zip_sha256": "65e5bd5e7586fb9d1cd47324447ef06ac35f55e74ad76a1d1fa09e2aa8ebfa7d",
+            "reported_root_sha256": "d350fc632f317f2a3f0c5dd60eb9506cd64ab5e83e636939b5266dbcf25eca31",
+            "b17_model_sha256": "39a65f2cbd6089dab3a403c6a72f365a02003737a641be86c3cf73cb70e76de3",
+            "unreceived_original_tree_replayed_here": false
+          }
+        },
+        {
+          "path": ".../dependency/RHO5_ROUND50_V40_LIGHT.zip",
+          "sha256": "65e5bd5e7586fb9d1cd47324447ef06ac35f55e74ad76a1d1fa09e2aa8ebfa7d",
+          "bytes": 6520765
+        }
+      ],
+      "receipt_proves": "wave order and propagation order were checked verbatim this session (rows_and_bounds lines 39-63; common_contract line 22 = CHARTS -> BASE -> WINDOW, no cycle rows). IDENTITY.json states unreceived_original_tree_replayed_here false: the original tree was never received or replayed here",
+      "still_owed": "parser/executable equivalence between Python and Lean is not formalized; the original-tree payload is unavailable, so complete replay is neither verified nor verifiable from this material",
+      "status": [
+        "COMPUTE_RECEIPT"
+      ],
+      "payload_replay": "NOT_RECEIVED"
+    },
+    {
+      "id": "B1",
+      "obligation": "OBL-B",
+      "logical_responsibility": "capacity-endpoint predicate and the safety proposition",
+      "lean_type_or_source_condition": "Rho5.Shared.BRootCapacityEndpoint.{Basic,Refutation}",
+      "model_coverage": "the complete original B17 root",
+      "computation_materials": [
+        {
+          "path": "work/dsh-main/parallel/D142/results/B_ROOT_CAPACITY_ENDPOINT_READY.json",
+          "role": "gate publication"
+        },
+        {
+          "path": "outputs/assembly_intake_20260912/D142/INTAKE_RECEIPT.json",
+          "role": "ACCEPTED_FOR_ASSEMBLY_WITH_EXPLICIT_PREMISES; 4 source hashes; 23 live binding checks; 5 named axioms; axiom union propext/Classical.choice/Quot.sound"
+        }
+      ],
+      "receipt_proves": "the predicate and the same-frame canonical capacity-endpoint construction are paid; the receipt states RootEndpointSafety remains an explicit unpaid premise and claims no global upper bound or rho5Trace = alpha",
+      "still_owed": "the safety proposition itself",
+      "status": [
+        "REDUCTION_PROVEN"
+      ]
+    },
+    {
+      "id": "B2",
+      "obligation": "OBL-B",
+      "logical_responsibility": "B17 root entry bounds",
+      "lean_type_or_source_condition": "Rho5.Shared.PaperB17RootEntry.root_of_normalizedB_high : NormalizedB z -> 0 ≤ z 14 -> z 4 ≤ 0 -> alpha < z 23 -> B17Root (frameOf z)",
+      "model_coverage": "high NormalizedB branch",
+      "computation_materials": [
+        {
+          "path": "work/dsh-main/parallel/D134/results/B17_ROOT_BOUNDS_READY.json",
+          "role": "17 closed-root bounds from the real reconstruction, without D133"
+        },
+        {
+          "path": "work/dsh-main/parallel/D134/results/BUILD_STATUS.json",
+          "role": "7 modules, 7/7 exit 0, 21 named axiom prints, 0 nonstandard, staleness FRESH x7"
+        }
+      ],
+      "receipt_proves": "seventeen closed root bounds from the real reconstruction; the sign representative is consumed from the accepted D133 gate",
+      "still_owed": "this is a sufficient condition for entering the root; only its contrapositive bears on safety, and the universal cover/contrapositive wiring is not connected",
+      "status": [
+        "REDUCTION_PROVEN"
+      ]
+    },
+    {
+      "id": "B3",
+      "obligation": "OBL-B",
+      "logical_responsibility": "actual ProperB -> representative inside the complete B17 root",
+      "lean_type_or_source_condition": "Rho5.Shared.ActualBRootEntry.Assembly.actual_properB_high_has_root_representative",
+      "model_coverage": "actual LeadingInput + ProperB with alpha < height",
+      "computation_materials": [
+        {
+          "path": "work/dsh-main/parallel/D141/results/ACTUAL_PROPER_B_ROOT_READY.json",
+          "role": "gate publication"
+        },
+        {
+          "path": "outputs/assembly_intake_20260912/D141/INTAKE_RECEIPT.json",
+          "role": "4 source hashes; 8 live binding checks; 11 named axioms"
+        },
+        {
+          "path": "/root/microscope_ws/rho5_lean_dsh_20260911/D141",
+          "role": "X lane root"
+        }
+      ],
+      "receipt_proves": "actual ProperB with alpha < height yields a real sign-conjugate NormalizedB representative inside the complete B17 root, preserving height",
+      "still_owed": "only the alpha < height refutation branch; no whole-root safety and no global equality",
+      "status": [
+        "REDUCTION_PROVEN"
+      ]
+    },
+    {
+      "id": "B4",
+      "obligation": "OBL-B",
+      "logical_responsibility": "same-frame canonical capacity endpoint",
+      "lean_type_or_source_condition": "Rho5.Shared.BRootCapacityEndpoint.root_capacity_endpoint; C02 exists_global_max_X_or_root_endpoint",
+      "model_coverage": "original maximizer -> N -> root capacity endpoint",
+      "computation_materials": [
+        {
+          "path": "outputs/relay_1345_delivery_20260912/C02/results/FULL_TARGET_TYPES.txt",
+          "role": "full compiler types"
+        }
+      ],
+      "receipt_proves": "the original maximizer reaches a canonical capacity endpoint inside the original root through the same-height transport; y -> zStar is a same-frame construction, NOT another sign conjugation of the original matrix",
+      "still_owed": "the upper bound on that root, i.e. hB itself",
+      "status": [
+        "REDUCTION_PROVEN"
+      ]
+    },
+    {
+      "id": "B5",
+      "obligation": "OBL-B",
+      "logical_responsibility": "high-value contraction contract",
+      "lean_type_or_source_condition": "C08_high_value_contract: 9 modules, 123 public declarations, 73 theorems",
+      "model_coverage": "high_value_contraction.contract only",
+      "computation_materials": [
+        {
+          "path": "/Users/mike/Documents/Codex/2026-09-12/rho5-lean-certificate-contraction/outputs/C08_high_value_contract.delivery.json",
+          "archive_sha256": "b04e5ae2f9472c7dfa22aca16d5a6f3aa94feb5acce30c1b1bea1c47fe0635b9",
+          "ready_sha256": "e18d2527ef9e20fa3d5b842d79e2b7c51b3ae10403ff4e6eeb6e918acad2ef57"
+        },
+        {
+          "path": "/Users/mike/Documents/Codex/2026-09-12/rho5-lean-certificate-contraction/outputs/C08_high_value_contract/",
+          "role": "delivery directory plus archive"
+        }
+      ],
+      "receipt_proves": "the high-value contract branch compiled; the archive manifest is verified",
+      "still_owed": "branch level; not whole-root coverage",
+      "status": [
+        "COMPUTE_RECEIPT"
+      ]
+    },
+    {
+      "id": "B6",
+      "obligation": "OBL-B",
+      "logical_responsibility": "base oracle gap",
+      "lean_type_or_source_condition": "BASE_ORACLE_GAP_REAL_READY under the frozen round48 high_value_contraction.oracle_from_base(base, local_ports=False)",
+      "model_coverage": "default8 C08, ordered gap rebuild/reintersection, actual image/count/height, exact threshold statuses",
+      "computation_materials": [
+        {
+          "path": "/Users/mike/Documents/Codex/2026-09-12/rho5-lean-certificate-contraction/outputs/C11_base_oracle_gap/results/BASE_ORACLE_GAP_REAL_READY.json",
+          "role": "gate publication; frozen_runtime_sha256 f159497cf5a767bbec10139219b28c4feaaa182241d7b063e9f4cf92bf1fc5ec"
+        },
+        {
+          "path": ".../results/BASE_ORACLE_RUNTIME_INPUTS.json",
+          "role": "C08 source binding reuse; outer zip 65e5bd5e..., nested zip 5197e72293fdb7e893cb0d3c0e001a183004f0bf050d17d77802b0edc59fa2df"
+        },
+        {
+          "path": ".../results/C11_ACTUAL_IMPORTS.json",
+          "role": "4368 modules inherited from C08"
+        },
+        {
+          "path": ".../C11_base_oracle_gap_DELIVERY.json",
+          "role": "97 delivery files, 48 theorem checks, archive_sha256 787894d09270c067ff44c7862aab1cdde70508c84354225136ecb4345baf48f4"
+        }
+      ],
+      "receipt_proves": "same z retained, F(z) <= exact threshold; source predicate: same NormalizedB z, input aux.Contains z, old gap slots 22/23 contain z1-z2 and z1-z3; inherited_EMPTY_qualification states CertifiedBase.ofEmpty requires a prior exclusion proof and an opaque payload alone is not evidence",
+      "still_owed": "no coalescing with the full IsRootCapacityEndpoint domain; the oracle parameter range is not the complete root (to be verified)",
+      "status": [
+        "COMPUTE_RECEIPT",
+        "WIRING_OPEN"
+      ]
+    },
+    {
+      "id": "B7",
+      "obligation": "OBL-B",
+      "logical_responsibility": "certificate assembly (lifted trace source frontier)",
+      "lean_type_or_source_condition": "Rho5.Integration.CertificateAssembly; LIFTED_TRACE_SOURCE_FRONTIER_ASSEMBLY_READY (READY_SCOPED)",
+      "model_coverage": "source frontier of the lifted trace",
+      "computation_materials": [
+        {
+          "path": "/Users/mike/Documents/Codex/2026-09-12/rho5-lean-staged-assembly/outputs/C04_certificate_assembly/",
+          "role": "delivery; canonical base /root/microscope_ws/rho5_codex_c02_assembly_20260912/rebuild_01/build"
+        }
+      ],
+      "receipt_proves": "lifted-trace source-frontier assembly paid, scoped",
+      "still_owed": "beyond the frontier; not the whole root",
+      "status": [
+        "COMPUTE_RECEIPT"
+      ]
+    },
+    {
+      "id": "B8",
+      "obligation": "OBL-B",
+      "logical_responsibility": "actual small-k five frontiers (parallel route)",
+      "lean_type_or_source_condition": "Rho5.Integration.ActualSmallKFrontier.matrix_has_actual_five_frontier_representative; inputs only SatFrame M, qstar <= height M, k M <= 2",
+      "model_coverage": "high-value small-k branch",
+      "computation_materials": [
+        {
+          "path": "/Users/mike/Documents/Codex/2026-09-12/rho5-lean-staged-assembly/outputs/C09_actual_smallk_frontier/ACTUAL_SMALLK_FIVE_FRONTIERS_READY.json",
+          "role": "gate READY; closed 0000000/0000001/000001; remaining 00001/0001/001/01/1; per-module source/olean/log hashes with exit 0"
+        }
+      ],
+      "receipt_proves": "three original paths closed and five frontiers remain on the small-k branch; the same real representative preserves SatFrame/height/k/r/w",
+      "still_owed": "the five frontiers are open; branch-scoped only; no receipt coalesces this route with the M02 remaining-frontier list (to be verified)",
+      "status": [
+        "COMPUTE_RECEIPT",
+        "WIRING_OPEN"
+      ]
+    },
+    {
+      "id": "B9",
+      "obligation": "OBL-B",
+      "logical_responsibility": "original B16 deep11 source (wave chains of both charts)",
+      "lean_type_or_source_condition": "Rho5.Shared.B16Branch.{Defs,DefsAudit,Data,DataAudit,Qualification,...}",
+      "model_coverage": "original B16 deep11 record 10011101101 (two graphs B1|N:L1-:L0+ and B1|N:L1-:L2+, each 2 waves x 12 bounds)",
+      "computation_materials": [
+        {
+          "path": "work/dsh-main/parallel/D140/results/PHASE1_FROZEN.json",
+          "role": "freeze receipt with per-module source/olean hashes and exit_code 0 (e.g. Defs source 15933047b9ec4e48541e70d62668f2c0c2bee3391ec165f3f6f0fa91ff5a7cff, olean 65facbfc60ce32ee871f6a0543bbfb41a64094edbebef86d4af5aff46c2e4a23)"
+        },
+        {
+          "path": "work/dsh-main/parallel/D140/results/firstwave_paid_gate.json",
+          "role": "first wave cycle rows discharged; the only remaining premise is the contracted box"
+        },
+        {
+          "path": "/root/microscope_ws/rho5_lean_dsh_20260911/D140",
+          "role": "X lane root"
+        }
+      ],
+      "receipt_proves": "the WaveChain stage reached its natural boundary (compiled, audited) and is frozen; the first wave's cycle rows are paid",
+      "still_owed": "deliberately not done and listed verbatim by the receipt: curBox containment instantiation as a proved statement; second waves of the two charts; actual two-chart coverage (the coverage premise); the connection of the two C terminals (D135 chart-1 50-row sample, D146 chart-2 51-row instance); the full B16_DEEP11_SOURCE_READY self-review",
+      "status": [
+        "COMPUTE_RECEIPT",
+        "WIRING_OPEN"
+      ]
+    }
+  ],
+  "frozen_or_optional": [
+    {
+      "item": "C10 G02 batch kernel",
+      "path": "work/codex-parallel/C10/",
+      "handling": "optional frozen sample; not a default entry, not rerun"
+    },
+    {
+      "item": "C12 G03 batch scale",
+      "path": "work/codex-parallel/C12/",
+      "handling": "FROZEN; generator controls are external adapter controls, not Lean proofs"
+    },
+    {
+      "item": "M01 prefix / finite cover",
+      "path": "X /root/microscope_ws/mainline_v31_tree_cover_20260912",
+      "handling": "accepted; 8 frontiers retained"
+    },
+    {
+      "item": "M02 G01 five leaves",
+      "path": "outputs/relay_1408_delivery_20260912/M02_G01/",
+      "handling": "accepted (scoped); 7 frontiers retained"
+    },
+    {
+      "item": "C13, D154-D157, further leaf expansion",
+      "path": "work/dsh-main/tasks/DISPATCH_QUEUE.json (policy PHASE1_NONCOMPUTATIONAL_LEAN_ASSEMBLY)",
+      "handling": "stopped at stage two; registered only, not started"
+    },
+    {
+      "item": "D140 B16 deep11 wave chain",
+      "path": "work/dsh-main/parallel/D140/results/PHASE1_FROZEN.json",
+      "handling": "frozen at its natural boundary; the five deliberately-undone items are listed in row B9"
+    }
+  ],
+  "to_be_verified": [
+    {
+      "id": "T1",
+      "topic": "original tree payload",
+      "evidence": "IDENTITY.json states unreceived_original_tree_replayed_here false; no replay receipt exists",
+      "consequence": "complete payload/portable replay cannot be claimed verified for any global conclusion; recorded NOT_RECEIVED",
+      "status": "待核对"
+    },
+    {
+      "id": "T2",
+      "topic": "C11 oracle domain vs the full IsRootCapacityEndpoint domain",
+      "evidence": "no receipt states whether both cover the same NormalizedB domain",
+      "status": "待核对"
+    },
+    {
+      "id": "T3",
+      "topic": "coalescing the C09 and M02 remaining-frontier lists",
+      "evidence": "the lists can be compared by hand but no receipt performs the coalescing",
+      "status": "待核对"
+    },
+    {
+      "id": "T4",
+      "topic": "Python runtime vs Lean semantics",
+      "evidence": "wave order and propagation order were checked verbatim this session; parser/executable equivalence is not formalized",
+      "status": "not formalized"
+    },
+    {
+      "id": "T5",
+      "topic": "C06 runtime strict and C13 receipts",
+      "evidence": "not read in this pass",
+      "status": "待核对"
+    }
+  ],
+  "must_not_claim": [
+    "hX or hB from leaf counts or local PASS of M01/M02/C10/C12/C09",
+    "Python PASS, check=true, or a finite sample without counterexample as a global proof",
+    "branch-level results (high_value_contraction.contract, oracle_from_base, small-k branch, first C) as global",
+    "the y -> zStar same-frame canonical construction as another sign conjugation of the original matrix",
+    "the conditional rho5Trace_eq_alpha_of_safety hX hB as an unconditional rho5Trace = alpha"
+  ]
+}

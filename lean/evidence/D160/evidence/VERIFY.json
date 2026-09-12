@@ -1,0 +1,278 @@
+{
+ "card": "D160",
+ "verified_at": "2026-09-12T16:48:20+0800",
+ "staged_root": "work/dsh-main/parallel/D160/deliverable",
+ "modules": 642,
+ "groups": {
+  "c02_conditional_closure": 495,
+  "nondefault_d84_lane_umbrella_audit": 4,
+  "p01_new_upstream_default": 138,
+  "nondefault_aggregate": 1,
+  "nondefault_audit": 4
+ },
+ "default_set_in_package": 633,
+ "p01_calibration_check": {
+  "new_upstream_count": 138,
+  "all_present": true,
+  "default_total_with_product_module": 634
+ },
+ "hashes_ok": true,
+ "lake": {
+  "lean-toolchain": {
+   "match": true,
+   "manifest_matches_binding": true
+  },
+  "lakefile.toml": {
+   "match": true,
+   "manifest_matches_binding": true
+  },
+  "lake-manifest.json": {
+   "match": true,
+   "manifest_matches_binding": true
+  }
+ },
+ "import_closure": {
+  "unresolved_rho5_imports": {},
+  "closed": true
+ },
+ "token_scan": {
+  "scanned": 642,
+  "raw_hits": {
+   "files_with_hits": 55,
+   "total_hits": 111
+  },
+  "raw_detail": [
+   {
+    "module": "Rho5.Shared.BorderedTailMinors",
+    "hits": 3
+   },
+   {
+    "module": "Rho5.Shared.PivotReindex.Reindex",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.MatrixNormalization",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.TraceDeterminant",
+    "hits": 1
+   },
+   {
+    "module": "Rho5.Shared.LeadingMinorFour",
+    "hits": 3
+   },
+   {
+    "module": "Rho5.Shared.MatrixStage",
+    "hits": 1
+   },
+   {
+    "module": "Rho5.Shared.GrowthModel",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.GrowthModel.TracePeak",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.GrowthModel.Scalar",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.GrowthModel.Unit",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.GrowthModel.NormalizeSet",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.LeadingTrace",
+    "hits": 1
+   },
+   {
+    "module": "Rho5.Shared.MinorThreeBound.Core",
+    "hits": 1
+   },
+   {
+    "module": "Rho5.Shared.MinorThreeBound.Vertex",
+    "hits": 1
+   },
+   {
+    "module": "Rho5.Shared.CanonicalTail.Defs",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.HighGrowthTail",
+    "hits": 3
+   },
+   {
+    "module": "Rho5.Shared.TraceGrowth",
+    "hits": 1
+   },
+   {
+    "module": "Rho5.Shared.PivotGrowth",
+    "hits": 1
+   },
+   {
+    "module": "Rho5.Shared.TailEnvelope",
+    "hits": 3
+   },
+   {
+    "module": "Rho5.Shared.LeadingSigns",
+    "hits": 1
+   },
+   {
+    "module": "Rho5.Shared.TraceSigns.Audit",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.CanonicalTail",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.CanonicalMaximizer",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.CanonicalMaximizer.GlobalMax",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.TraceAttainment",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.TraceAttainment.Graph",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.PaddedTrace",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.PaddedTrace.Basic",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.PivotSchurContinuity",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.PivotSchurContinuity.CPDomain",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.FirstPivotCompact.Domain",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.FirstPivotDomain.Domain",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.PivotSchurContinuity.Continuous",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.TraceAttainment.FiberCompact",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.TraceAttainment.PeakCompact",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.TraceAttainment.GrowthAttainment",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.FirstPivotCompact.Schur",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.FirstPivotCompact.Compact",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.FirstPivotDomain",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.FirstPivotDomain.PivotEntry",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.FirstPivotDomain.Reduce",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.FirstPivotDomain.SetEquality",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.CanonicalMaximizer.LeadingRepresentative",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.CanonicalMaximizer.CanonicalRepresentative",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.TailSignNormalization",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.TailSignNormalization.Signs",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.TailSignNormalization.Transport",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Algebraic.CriticalExistence.CenterBoundReady",
+    "hits": 3
+   },
+   {
+    "module": "Rho5.Shared.TraceTranspose",
+    "hits": 1
+   },
+   {
+    "module": "Rho5.Shared.LastPivotUpperReduction.Common",
+    "hits": 3
+   },
+   {
+    "module": "Rho5.Shared.LastPivotUpperReduction.StageA",
+    "hits": 3
+   },
+   {
+    "module": "Rho5.Shared.LastPivotUpperReduction.StageB",
+    "hits": 3
+   },
+   {
+    "module": "Rho5.Shared.TailBoundaryReduction.StageB",
+    "hits": 2
+   },
+   {
+    "module": "Rho5.Shared.LastPivotUpperReduction.StageC",
+    "hits": 3
+   },
+   {
+    "module": "Rho5.Shared.LastPivotUpperReduction.StageD",
+    "hits": 3
+   }
+  ],
+  "code_hits": [],
+  "note": "机械文本扫描（去注释后仍命中者列在 code_hits）；供复查，未重审上游数学，本卡未新增任何此类记号"
+ },
+ "sha256sums_ok": true,
+ "self_reference": {
+  "logs/verify_run.log": "d7f9c4c4e71ddc300ae3b222d824db38ae3ffe47d6862ad2756a52ef16d19a0b",
+  "evidence/VERIFY.json": "6387a8b7193d1ac485145b58e6d819ee870e6405831423c89caf6c51eae31078",
+  "note": "SHA256SUMS 不收录复核脚本自身输出（logs/verify_run.log、evidence/VERIFY.json），其当前哈希见本字段"
+ },
+ "problems": [],
+ "problems_count": 0,
+ "verdict": "PASS"
+}

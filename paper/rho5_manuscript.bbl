@@ -1,0 +1,51 @@
+\begin{thebibliography}{1}
+
+\bibitem{BisainEdelmanUrschel2025}
+Ankit Bisain, Alan Edelman, and John Urschel.
+\newblock A new upper bound for the growth factor in {Gaussian} elimination
+  with complete pivoting.
+\newblock {\em Bulletin of the London Mathematical Society}, 57(5):1369--1387,
+  2025.
+
+\bibitem{ChenEdelmanUrschel2026}
+James Chen, Alan Edelman, and John Urschel.
+\newblock The largest 5th pivot may be the root of a 61st degree polynomial.
+\newblock {\em IMA Journal of Numerical Analysis}, 2026.
+\newblock Advance article, drag039; published online 7 September 2026.
+  \url{https://doi.org/10.1093/imanum/drag039}. Theorem numbering follows
+  \url{https://arxiv.org/abs/2602.20390v2}.
+
+\bibitem{Cohen1974}
+A.~M. Cohen.
+\newblock A note on pivot size in {Gaussian} elimination.
+\newblock {\em Linear Algebra and its Applications}, 8(4):361--368, 1974.
+
+\bibitem{Cryer1968}
+C.~W. Cryer.
+\newblock Pivot size in {Gaussian} elimination.
+\newblock {\em Numerische Mathematik}, 12:335--345, 1968.
+
+\bibitem{DayPeterson1988}
+Jane Day and Brian Peterson.
+\newblock Growth in {Gaussian} elimination.
+\newblock {\em The American Mathematical Monthly}, 95(6):489--513, 1988.
+
+\bibitem{Gould1991}
+Nick Gould.
+\newblock On growth in {Gaussian} elimination with complete pivoting.
+\newblock {\em SIAM Journal on Matrix Analysis and Applications},
+  12(2):354--361, 1991.
+
+\bibitem{HighamHigham1989}
+Nicholas~J. Higham and Desmond~J. Higham.
+\newblock Large growth factors in {Gaussian} elimination with pivoting.
+\newblock {\em SIAM Journal on Matrix Analysis and Applications},
+  10(2):155--164, 1989.
+
+\bibitem{ShahUrschel2026}
+Rikhav Shah and John Urschel.
+\newblock Entry growth in {Gaussian} elimination.
+\newblock \url{https://arxiv.org/abs/2608.19189v4}, 2026.
+\newblock Preprint; version 4, 31 August 2026; first submitted 19 August 2026.
+
+\end{thebibliography}

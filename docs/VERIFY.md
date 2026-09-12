@@ -5,13 +5,13 @@ This guide separates **Lean proof checking**, **exact certificate checking**, an
 ## 1. Obtain the fixed source version
 
 ```sh
-git clone --branch v1.0.0 --depth 1 https://github.com/hkjtsgmc79-boop/rho5-proof.git
+git clone --branch v1.0.1 --depth 1 https://github.com/hkjtsgmc79-boop/rho5-proof.git
 cd rho5-proof
 git rev-parse HEAD
 python3 scripts/fetch.py --list
 ```
 
-Keep the printed commit hash with your verification records. The repository contains source and instructions; the large certificates are separate release assets. [DOWNLOADS.md](DOWNLOADS.md) gives exact sizes and resource allowances.
+Keep the printed commit hash with your verification records. The v1.0.1 checkout indexes the unchanged v1.0.0 certificate assets; the downloader retains their fixed URLs and hashes. The repository contains source and instructions; the large certificates are separate release assets. [DOWNLOADS.md](DOWNLOADS.md) gives exact sizes and resource allowances.
 
 The helper uses only Python's standard library. Downloads are selected explicitly; it checks SHA-256 and rejoins transport parts. Rerunning the same command resumes partial downloads. Download success is not a mathematical result.
 
@@ -24,10 +24,7 @@ cd lean
 elan toolchain install leanprover/lean4:v4.30.0
 lake --version
 lake exe cache get
-lake build +Rho5.PhaseOne:olean
-lake build +Rho5.PhaseOne.Audit:olean
-lake build +Rho5.PhaseOne.Examples:olean
-lake build +Rho5.PhaseOne.ExamplesAudit:olean
+# Project compilation: read the cold-build note below before proceeding.
 ```
 
 The fixed mathlib revision is `c5ea00351c28e24afc9f0f84379aa41082b1188f`. Preserve the committed lock file; do not upgrade dependencies as a workaround for a failed build. `cache get` obtains third-party precompiled dependencies, not a substitute for checking the project source.
@@ -45,7 +42,7 @@ Rho5.PhaseOne.rho5Trace_eq_alpha_of_safety
 
 Successful compilation does not remove those hypotheses. Their full global discharge, including the remaining model and coverage connections, is not supplied as a Lean proof in this first-phase release.
 
-The recorded new-entry/audit/example builds reused accepted X caches. A fresh-machine cold build of the entire published source closure was not performed during publication. See [the original build notes](../lean/docs/BUILDING.md) for provenance and limitations.
+**Cold-build update.** The frozen product has now passed a project cold rebuild: 634 modules, three additional modules, and 47 named axiom checks. The successful route used an explicit dependency-order driver, with third-party caches reused and supplemented. The original `lake build +Rho5.PhaseOne:olean` command failed in the cold state; it is not presented here as a working cold-start recipe. The published receipt archive does not include the successful driver. See [the complete build record and scope](LEAN_COLD_REBUILD.md) before reproducing the Lean build. Cached entry builds in the original notes remain historical results, not substitutes for this distinction.
 
 ## 3. A small real certificate
 

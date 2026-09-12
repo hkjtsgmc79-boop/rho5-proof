@@ -30,6 +30,6 @@ The release contains no assertion that a Python PASS directly constructs a Lean 
 
 ## What is deferred
 
-Full-tree Lean instances, a fully verified executable checker, a new-machine cold build of the whole Lean source closure, and a tested single-command complete mathematical replay are not claimed by this release. Existing partial Lean tree experiments are not included in the default product.
+Full-tree Lean instances, a fully verified executable checker, a fresh-machine build of Lean and all third-party dependencies, and a tested single-command complete mathematical replay are not claimed by this release. A cold rebuild of the frozen project itself has completed with third-party caches reused and supplemented; see [the recorded scope](LEAN_COLD_REBUILD.md). Existing partial Lean tree experiments are not included in the default product.
 
 The real-field theorem does not claim a complex-field result or a classification of all maximizing matrices.

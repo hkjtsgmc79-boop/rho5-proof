@@ -1,0 +1,101 @@
+{
+  "archive_sha256": "2478b3d6c8d9189fd508e2af4695bb2086c6628d5049c75cef759bd3e455dfa8",
+  "started_utc": "2026-09-12T13:25:09.432581+00:00",
+  "python": "3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0]",
+  "platform": "Linux-5.15.0-161-generic-x86_64-with-glibc2.31",
+  "command": [
+    "/root/miniconda3/envs/myconda/bin/python3",
+    "-u",
+    "verify.py",
+    "--jobs",
+    "4",
+    "--full-chain"
+  ],
+  "working_directory": "/root/microscope_ws/rho5_review3_v24_20260912_2125/fresh/RHO5_V24",
+  "workers": 4,
+  "niceness": 10,
+  "scope": "Unmodified frozen V24 acceptance and its packaged full V22-to-V11 legacy chain. This validates the finite/algebraic components actually invoked; it does not mechanically prove all narrative analytic theorems or the global rho5 theorem.",
+  "global_rho5_theorem_verified": false,
+  "exit_code": 0,
+  "wall_seconds": 862.8452582359314,
+  "child_max_rss_kb": 118108,
+  "static_inputs_unchanged": true,
+  "required_output_markers": {
+    "PASS unchanged source replay and complete V22 legacy chain": true,
+    "V24 EXACT ACCEPTANCE PASS": true
+  },
+  "status": "V24_FRESH_FULL_CHAIN_PASS",
+  "frozen_v24_expected_counts": {
+    "systems": [
+      {
+        "key": "PX1",
+        "nodes": 28073,
+        "leaves": 14037,
+        "interval_leaves": 7481,
+        "farkas_leaves": 6556,
+        "max_depth": 40,
+        "min_exact_farkas_separation": "79764846375329371925398225200292719090038050587038275791778420126672298320804811745399171334324551543804656071925927447533/80001402410605197322313312088845501090651239475807213383145936747045077071605647437638951710872832146903571120873537536",
+        "seconds": 43.35815930366516
+      },
+      {
+        "key": "PX2",
+        "nodes": 38039,
+        "leaves": 19020,
+        "interval_leaves": 8968,
+        "farkas_leaves": 10052,
+        "max_depth": 40,
+        "min_exact_farkas_separation": "519466127719213319669180002946436422557676451246060479542367427675042831254090489693321815438102474293229286254344697739715130643/5162044714822968727514771916945999295949994889815093379151907883462915461758780806767778656492762193054206219349846349211238400",
+        "seconds": 60.81500005722046
+      },
+      {
+        "key": "PY1",
+        "nodes": 42425,
+        "leaves": 21213,
+        "interval_leaves": 5749,
+        "farkas_leaves": 15464,
+        "max_depth": 51,
+        "min_exact_farkas_separation": "51582159517380210447687389287582592219824103960028151099015102610099266523971446594436085707750459155311137949075061928833231859686672326205468138141527/6862272106031080305236969582526895924830043780277062914687477988979995351246464967527464985285884315791684106330285958458977788581628267407307964416000",
+        "seconds": 70.2095947265625
+      },
+      {
+        "key": "PY2",
+        "nodes": 49053,
+        "leaves": 24527,
+        "interval_leaves": 5790,
+        "farkas_leaves": 18737,
+        "max_depth": 52,
+        "min_exact_farkas_separation": "92299555054229726457225159653064314705531730599583592272047569194494978357460814268063929103089445937740269755639074220808062329028149/2739281114329891313379761774078461283834725158681133000485447737560308849875236434035106623260148024189636479899387145714160526950400",
+        "seconds": 83.12726855278015
+      },
+      {
+        "key": "EX1",
+        "nodes": 29989,
+        "leaves": 14995,
+        "interval_leaves": 7840,
+        "farkas_leaves": 7155,
+        "max_depth": 41,
+        "min_exact_farkas_separation": "2640659288697485253048527272395492666869732656977259997987127029426833773903207868200521628929735339461659242330194703/230902937957627489509680432504663864137065413990358326381008568421788422791926538651332781672448041720227834101760000",
+        "seconds": 50.6683087348938
+      },
+      {
+        "key": "EX2",
+        "nodes": 40963,
+        "leaves": 20482,
+        "interval_leaves": 9444,
+        "farkas_leaves": 11038,
+        "max_depth": 41,
+        "min_exact_farkas_separation": "114095544961930101828172578895230484603670749394124115212888746152253730912680701328398972449749117195479626370781216873102177018480228892415942842942111989/660912107798657670334100425586323183766343825901023692709909727239213445979900421955365849973413580016805832335022577785663196225851622995595874847948800",
+        "seconds": 70.2014889717102
+      }
+    ],
+    "total": {
+      "nodes": 228542,
+      "leaves": 114274,
+      "interval_leaves": 45272,
+      "farkas_leaves": 69002
+    },
+    "max_depth": 52,
+    "open_leaves": 0,
+    "threshold": "1653/400"
+  }
+}

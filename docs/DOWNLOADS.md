@@ -1,6 +1,6 @@
 # Downloads, disk space and computing time
 
-**Fixed release: v1.0.0.** File identities are recorded in [release-assets.json](../manifests/release-assets.json). MB and GB below are decimal; GiB is binary.
+**Current documents: v1.0.1. Frozen certificate inventory: v1.0.0.** The newer release links the original assets; it does not duplicate or change them. The [current release index](../manifests/v1.0.1.json) lists the new document/evidence attachments and the inherited certificate inventory. File identities are recorded in [release-assets.json](../manifests/release-assets.json). MB and GB below are decimal; GiB is binary.
 
 ## Choose what to download
 
@@ -44,11 +44,12 @@ The historical-root archive exceeds GitHub’s per-asset limit. Five byte-transp
 | Recorded check | Wall time | Scope and environment |
 |---|---:|---|
 | PhaseOne entry and audit | 8.051 seconds | X, reusing accepted upstream caches |
+| Frozen project cold-rebuild session | About 4 hours 11 minutes | Linux, 634 + 3 modules and 47 checks; includes recovery and dependency work, not a clean benchmark |
 | Examples and example audit | 12.021 seconds | Separate cached X run |
 | Final 54-leaf anchor | 184.37 seconds | Historical exact X run of the named anchor |
 | Original B root | 22,815.35 seconds (6.34 hours) | Historical X run, 8 processes, Fraction backend |
 
-The first two rows are not a cold build of the whole source closure. The last row excludes the additional parent/alpha-cover checks and source composition. These wall times are not summed CPU seconds or total discovery cost. No whole-proof runtime is inferred from them.
+The entry/audit and example timings are cached runs. The cold-rebuild row records a separate completed session; fixed third-party caches were reused and supplemented. See [the build scope](LEAN_COLD_REBUILD.md). The last row excludes the additional parent/alpha-cover checks and source composition. These wall times are not summed CPU seconds or total discovery cost. No whole-proof runtime is inferred from them.
 
 ## Provisional resource allowances
 
@@ -57,7 +58,7 @@ These are practical planning allowances, **not measured minimum requirements or 
 | Route | Planning allowance | Timing guidance |
 |---|---|---|
 | Small exact anchor | Standard CPU machine, Python 3.10+, about 1 GB free working disk | About 3 minutes in the historical X run; other machines vary |
-| Lean first-phase build | Prefer Linux x86-64 for the first documented reproduction; reserve 32 GB RAM and 30–50 GB disk for toolchain/caches/output; start with low concurrency | Fresh-machine cold time is unmeasured; do not assume the cached 20-second figure |
+| Lean first-phase build | Prefer Linux x86-64 for the first documented reproduction; reserve 32 GB RAM and 30–50 GB disk for toolchain/caches/output; start with low concurrency | Project cold session recorded at about 4 h 11 min; full dependency-from-scratch time remains unmeasured. Read the known command limitation before attempting a cold build |
 | Full exact computational collection | Plan for an 8-process CPU machine, 32 GB RAM and **at least 50 GB free working disk** for data and output; allow more if retaining all transport copies | Base-root component alone took 6.34 hours; schedule a day or longer for the whole chain, not as a proven upper bound |
 | Keeping Lean and all exact materials together | **80–100 GB free disk** is a provisional allowance for downloads, extracted data, toolchains/caches and working output | Final measured peak usage remains open |
 

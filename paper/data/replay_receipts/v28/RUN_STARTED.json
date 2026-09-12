@@ -1,0 +1,15 @@
+{
+  "archive_sha256": "bec88339a158920d9dacb15341b02f359af83c4bf0e977721d9bdb2764fa0668",
+  "started_utc": "2026-09-12T13:17:08.189286+00:00",
+  "python": "3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0]",
+  "platform": "Linux-5.15.0-161-generic-x86_64-with-glibc2.31",
+  "command": [
+    "/root/miniconda3/envs/myconda/bin/python3",
+    "-u",
+    "verify_v28_all.py"
+  ],
+  "working_directory": "/root/microscope_ws/rho5_review3_v28_20260912_2110/fresh/rho5_v28_exact",
+  "workers": 1,
+  "niceness": 10,
+  "scope": "Fresh execution of the frozen V28 verifier and all 11 required components; inherited V24/T24, V25 and high-value analytic premises are not independently discharged by this execution."
+}

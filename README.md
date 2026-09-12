@@ -1,67 +1,82 @@
-# The exact growth factor for complete pivoting on real 5 × 5 matrices
+<p align="center"><img src="docs/assets/rho5-banner.svg" alt="RHO5 — Complete pivoting, exact growth. Paper, partial Lean formalization and exact certificates." width="100%"></p>
 
-**Qianli Ma · Chao Wu**  
-Zhejiang University; Qianli Ma also affiliated with WUJIE AI  
-Contact: [qianli.ma@zju.edu.cn](mailto:qianli.ma@zju.edu.cn)
+<p align="center">
+  <a href="paper/rho5_manuscript.pdf"><b>Read the paper</b></a> ·
+  <a href="paper/RHO5_SUPPLEMENTARY_INDEX.pdf"><b>Supplementary index</b></a> ·
+  <a href="docs/VERIFY.md"><b>Verify the results</b></a> ·
+  <a href="README.zh-CN.md"><b>中文</b></a>
+</p>
 
-This repository accompanies the computer-assisted proof of
+# The exact maximum growth factor for complete pivoting on real 5 × 5 matrices
+
+**Qianli Ma · Chao Wu**<br>
+Zhejiang University · Qianli Ma also affiliated with WUJIE AI<br>
+[qianli.ma@zju.edu.cn](mailto:qianli.ma@zju.edu.cn) · [chao.wu@zju.edu.cn](mailto:chao.wu@zju.edu.cn)
 
 $$
 \rho_5^{\mathbb R}=\alpha=4.132517078632472854223346853277\ldots.
 $$
 
-The algebraic constant and attained lower bound are due to Chen, Edelman and Urschel. The accompanying paper establishes the matching global upper bound, allowing every legal pivot tie and singular termination.
+The algebraic candidate and attained lower bound are due to Chen, Edelman and Urschel. Our paper establishes the matching **global upper bound**, including every legal pivot tie and singular termination, through written analysis and exact computational certificates. The companion Lean development formalizes substantial analytic parts; its sharp equality retains two explicit global safety hypotheses.
 
-The release combines **partial Lean formalization**, **exact computational certificates**, and **Python/C++ verification source**. It does not claim a complete Lean proof of the global bound or formally verified Python/C++ executables.
+**v1.0.1** — expanded 56-page article, 7-page supplementary index, and the completed first-phase Lean project cold-rebuild record. [Release and downloads](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/tag/v1.0.1) · [What changed](CHANGELOG.md)
 
-| Start here | What you obtain |
-|---|---|
-| [Step-by-step verification](docs/VERIFY.md) | Fixed-version build, small real example, and complete-certificate routes |
-| [Downloads and computing requirements](docs/DOWNLOADS.md) | Exact file sizes, checksums, measured times and planning allowances |
-| [Proof and trust map](docs/PROOF_MAP.md) | What Lean proves, what remains external, and how the components fit |
-| [Paper](paper/rho5_manuscript.pdf) | The mathematical argument and reproducibility scope |
-| [Supplementary index](paper/RHO5_SUPPLEMENTARY_INDEX.pdf) | S1–S8 proof objects, original filenames and verifier entry points |
-| [Release v1.0.0](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/tag/v1.0.0) | Original source bundle and certificate assets, including large B archives |
-| [中文导读](README.zh-CN.md) | 中文验证路线与范围说明 |
+## Three ways into the proof
 
-## Two independent starting points
+| Read the mathematics | Understand the evidence | Reproduce a result |
+| :--- | :--- | :--- |
+| **[Article · 56 pages](paper/rho5_manuscript.pdf)** | **[Supplementary index · 7 pages](paper/RHO5_SUPPLEMENTARY_INDEX.pdf)** | **[Step-by-step verification](docs/VERIFY.md)** |
+| The theorem, global reductions, boundary cases, and an actual certificate example. | S1–S8 connect the proof to exact inputs, original sources and acceptance rules. | Begin with an 18.29 MB real certificate, then choose the larger components. |
 
-**Lean analytic development.** The `lean/` project contains 646 canonical source modules (35.03 MB); the default entry loads 634. The original downloadable source ZIP is about 6.43 MB. Lean and mathlib are pinned, and caches are obtained separately.
+## Proof architecture
+
+1. **Fix the exact target.** Identify the algebraic constant and a real matrix attaining it.
+2. **Cover every input.** Normalize legal elimination paths and account for pivot ties and degenerate boundaries.
+3. **Control the remaining domains.** Combine analytic safety arguments with exact certificates for the X and B responsibilities.
+4. **Compose the coverage.** Bind each accepted component to its actual source and combine the complete covers with the attained lower bound.
+
+The [proof map](docs/PROOF_MAP.md) explains the role of each layer. Readers can follow the argument and the acceptance mechanism in the paper before running any program.
+
+## Verification status
+
+| Layer | Recorded result | Scope |
+| :--- | :--- | :--- |
+| Written proof + exact certificates | Complete real-field bound in the paper | Relies on the analytic arguments, exact acceptors and complete source/domain composition |
+| Lean project cold rebuild | **634 product modules + 3 additional modules; 47 named axiom checks** | Explicit dependency-order driver; fixed third-party caches reused and supplemented |
+| Final Lean equality | Conditional sharp endpoint | `XGlobalSafety` and `RootEndpointSafety` remain explicit |
+
+See [the cold-rebuild record](docs/LEAN_COLD_REBUILD.md) for the successful route and retained evidence. The original packaged Lake cold-build command failed; the guide distinguishes it from the successful driver. A complete dependency-from-scratch build, a new all-components certificate replay, and a fully kernel-checked global theorem are separate responsibilities.
+
+## Try one real certificate
+
+From the repository root, list the available inputs or fetch the small example:
 
 ```sh
-cd lean
-elan toolchain install leanprover/lean4:v4.30.0
-lake exe cache get
-lake build +Rho5.PhaseOne:olean
-```
-
-**A real exact certificate.** The final 54-leaf anchor is an approximately 18.3 MB, standard-library Python example. Start from the repository root:
-
-```sh
+python3 scripts/fetch.py --list
 python3 scripts/fetch.py --group sample
 ```
 
-Then follow [the anchor walkthrough](docs/VERIFY.md#3-a-small-real-certificate). Its successful result covers that named anchor, not the whole B domain.
+Continue with [the 54-leaf anchor walkthrough](docs/VERIFY.md#3-a-small-real-certificate). It checks a named part of the proof in approximately three minutes in the recorded X run; it does not rerun the original search or verify the entire domain. The downloader checks file identity; the subsequent verifier checks the mathematics.
 
-## What has been checked
+**Download only what you need.** Lean source: **6.43 MB**. Small example: **18.29 MB**. Original archive collection: **4.494 GB**. [Sizes, disk space and measured timings](docs/DOWNLOADS.md).
 
-The published first-phase Lean assembly has successful cached builds of its new entry, audit and usage examples, with recorded standard-axiom checks. The actual alpha constant, its attainment and key analytic/source reductions are included. The sharp equality remains conditional on `XGlobalSafety` and the original `RootEndpointSafety`; those premises are displayed in the public theorem types.
+The original 24 release assets remain immutable under **v1.0.0**. **v1.0.1** publishes the revised documents and indexes those exact same assets. The downloader retains their original URLs and SHA-256 identities, so existing downloads remain valid. GitHub’s automatic “Source code” ZIP does not include the large certificates.
 
-The computational archives preserve the original exact verification code, input data, source bindings and recorded component acceptances. Reproducing the entire proof requires the necessary component checks and the final source-cover composition. A matching file hash or an old PASS receipt alone is not a new mathematical verification.
+<details>
+<summary><b>Repository layout</b></summary>
 
-**This publication operation does not constitute a new-machine Lean cold build or a new all-components mathematical replay.** The guide records the existing entry points and the remaining portability limitations explicitly. No search campaign or GPU is needed to use the documented exact verification paths.
+| Directory | Contents |
+| :--- | :--- |
+| [`paper/`](paper/) | Current article, supplementary index, typesetting source and selected evidence |
+| [`lean/`](lean/) | Frozen first-phase formalization and original build provenance |
+| [`analytic/foundations/`](analytic/foundations/) | Exact constant, candidate and foundational source materials |
+| [`verifiers/`](verifiers/) | Byte-identical verifier source mirrors; run with their original archive inputs |
+| [`docs/`](docs/) | Verification guides, proof map, downloads and cold-rebuild scope |
+| [`manifests/`](manifests/) | Original certificate identities and current release index |
+| [`scripts/`](scripts/) | Downloader with resume, SHA-256 checks and multipart restoration |
 
-## Repository layout
+</details>
 
-- `lean/`: canonical first-phase project, fixed dependencies, original scope and build documentation.
-- `analytic/foundations/`: retained exact constant, candidate and foundational source materials.
-- `verifiers/`: byte-identical source mirrors from named certificate archives for online inspection. Run each verifier with its original archive inputs.
-- `manifests/`: release asset identities and source-mirror provenance.
-- `scripts/`: standard-library downloader with resumable downloads, SHA-256 checks and multipart reconstruction.
-- `paper/` and `docs/`: paper, supplement, instructions and scope map.
+## Cite and contact
 
-Large certificates are Release attachments and are not included by GitHub's automatic “Source code” ZIP. Use the download manifest and helper. The original archives retain historical filenames and scope labels; later source-bound covers discharge the original remaining leaves.
-
-## Citation and versions
-
-Use the fixed release and source commit when citing these materials; see [CITATION.cff](CITATION.cff). GitHub publication precedes Zenodo archival. No Zenodo DOI is claimed for this release at present. Existing third-party notices remain applicable; the repository does not assign a new blanket licence to the collected historical materials.
+Please cite the paper and identify the fixed release when using the materials; [CITATION.cff](CITATION.cff) provides machine-readable metadata. [GitHub v1.0.1](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/tag/v1.0.1) is the current document release. Zenodo archival will follow; no DOI is claimed here. Existing third-party notices remain applicable.

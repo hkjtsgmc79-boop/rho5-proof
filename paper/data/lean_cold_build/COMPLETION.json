@@ -1,0 +1,41 @@
+{
+  "status": "COMPLETE_WITH_DOCUMENTED_BUILD_ROUTE_AND_CONDITIONS",
+  "verified_at": "2026-09-12T22:03:30.612116+08:00",
+  "finished_at": "2026-09-12T21:58:48+08:00",
+  "product": {
+    "passed": 634,
+    "required": 634
+  },
+  "extras": {
+    "passed": 3,
+    "required": 3
+  },
+  "named_checks": {
+    "passed": 47,
+    "required": 47
+  },
+  "archive": "/Users/mike/Documents/Codex/2026-09-11/rho5-lean-formalization/outputs/d162_phase1_cold_rebuild_20260912/D162_COLD_REBUILD_RECEIPTS_20260912.tgz",
+  "archive_sha256": "c0ec1be2dc8b2aff26f987d13be34a20f0f2e92a4d2389523e9fe88c9c980415",
+  "remote_local_archive_hash_equal": true,
+  "owner_self_review_reused": true,
+  "root_recompiled_lean": false,
+  "source_zip_sha256": "ddb1e4300ed03464024f2a2a227cee060b6b38de96a02043f9233f0412e28f56",
+  "three_state_result": {
+    "original_package_direct_lake": "FAILED_COLD rc=1 missing Conditional.olean — evidence/attempt_01_doc_command_cold_failure.txt",
+    "config_revision_lake": "DISCOVERY_FIXED_ONLY (globs=['Rho5.+'] ⇒ 2056 jobs; stopped per single-Lean policy) — evidence/attempt_02_* + config_revision.realdiff",
+    "alternative_explicit_topo_single_lean": "SUCCESS"
+  },
+  "conditions_preserved": {
+    "XGlobalSafety_and_RootEndpointSafety_are_parameters": true,
+    "evidence": {
+      "check_rc": 0,
+      "arrow_shape": true,
+      "named_binders": true,
+      "source_declaration": true,
+      "stdout": "/root/microscope_ws/rho5_lean_dsh_20260911/D162/lanes/P0/logs/lean_finalize3_HxB_check.stdout"
+    },
+    "note": "以真实 #check/#print 类型 + 原 Conditional 源声明核验；非 #print axioms 行 grep"
+  },
+  "phase2_started": false,
+  "monitor_status": "DELETED_ON_COMPLETION"
+}

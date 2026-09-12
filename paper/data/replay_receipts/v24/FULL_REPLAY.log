@@ -1,0 +1,130 @@
+PASS file hashes and frozen V23 archive
+PASS six exact systems, all symbolic derivatives and computational graphs; max polynomial degree 6
+PASS 33 exact algebra identities and rational root-bound comparisons
+PASS PX1 {'nodes': 28073, 'leaves': 14037, 'farkas_leaves': 6556, 'max_depth': 40}
+PASS PX2 {'nodes': 38039, 'leaves': 19020, 'farkas_leaves': 10052, 'max_depth': 40}
+PASS PY1 {'nodes': 42425, 'leaves': 21213, 'farkas_leaves': 15464, 'max_depth': 51}
+PASS PY2 {'nodes': 49053, 'leaves': 24527, 'farkas_leaves': 18737, 'max_depth': 52}
+PASS EX1 {'nodes': 29989, 'leaves': 14995, 'farkas_leaves': 7155, 'max_depth': 41}
+PASS EX2 {'nodes': 40963, 'leaves': 20482, 'farkas_leaves': 11038, 'max_depth': 41}
+PASS four existing-head target compatibility tests; two full exact wall matrices; float rejection
+PASS false interval leaf, false dual multiplier and truncated-tree rejection
+Exact algebra components: 15 PASS
+No interval-tree exclusion or final alpha theorem is certified by this script.
+RESEARCH VERDICT: ANALYTIC GLOBAL_REDUCTION; ledger 11/15.
+V22 file hashes: 54 PASS
+V22 symbolic identities: 40 ; exact rational bound checks: 10 PASS
+V22 system P1A 24 equalities + 50 inequalities: regenerated PASS
+V22 system P1B 23 equalities + 49 inequalities: regenerated PASS
+V22 system P2A 24 equalities + 50 inequalities: regenerated PASS
+V22 system P2B 23 equalities + 49 inequalities: regenerated PASS
+V22 system E1A 24 equalities + 50 inequalities: regenerated PASS
+V22 system E1B 23 equalities + 49 inequalities: regenerated PASS
+V22 system E2A 24 equalities + 50 inequalities: regenerated PASS
+V22 system E2B 23 equalities + 49 inequalities: regenerated PASS
+V22 P1A {'nodes': 21341, 'leaves': 10671, 'max_depth': 39} PASS_CPP_INTEGER
+V22 P1B {'nodes': 31141, 'leaves': 15571, 'max_depth': 40} PASS_CPP_INTEGER
+V22 P2A {'nodes': 101533, 'leaves': 50767, 'max_depth': 49} PASS_CPP_INTEGER
+V22 P2B {'nodes': 313597, 'leaves': 156799, 'max_depth': 55} PASS_CPP_INTEGER
+V22 E1A {'nodes': 21593, 'leaves': 10797, 'max_depth': 39} PASS_CPP_INTEGER
+V22 E1B {'nodes': 30615, 'leaves': 15308, 'max_depth': 40} PASS_CPP_INTEGER
+V22 E2A {'nodes': 106077, 'leaves': 53039, 'max_depth': 49} PASS_CPP_INTEGER
+V22 E2B {'nodes': 284869, 'leaves': 142435, 'max_depth': 54} PASS_CPP_INTEGER
+V22 false root leaf / truncated tree: REJECTED
+V22 ALL d<=0 SYSTEMS: 910766 nodes; 455387 contradiction leaves; ZERO unresolved
+V22 three-endpoint compatibility: 6 existing-input point comparisons + scope/float rejection: PASS
+V22 unchanged V21 -> GO V20 -> V19 dependency replay BEGIN
+V21 manifest 37 PASS
+V21 generic identities 19 generic degree checks 14 PASS
+V21 full beta interval source_above {'status': 'EMPTY', 'cells': 26, 'points': 27, 'sat_cells': 0, 'sat_points': 0, 'interval_comparisons': 130, 'algebraic_sign_queries': 353, 'actual_max_degree': 3} PASS
+V21 full beta interval source_below {'status': 'EMPTY', 'cells': 26, 'points': 27, 'sat_cells': 0, 'sat_points': 0, 'interval_comparisons': 130, 'algebraic_sign_queries': 353, 'actual_max_degree': 3} PASS
+V21 matrix source_sat field degree 1 91 rows, five CP stages PASS
+V21 full beta interval source_sat {'status': 'SAT', 'cells': 26, 'points': 27, 'sat_cells': 1, 'sat_points': 2, 'interval_comparisons': 153, 'algebraic_sign_queries': 413, 'actual_max_degree': 3} PASS
+V21 matrix source_tight_sat field degree 1 91 rows, five CP stages PASS
+V21 full beta interval source_tight_sat {'status': 'SAT', 'cells': 26, 'points': 27, 'sat_cells': 1, 'sat_points': 2, 'interval_comparisons': 153, 'algebraic_sign_queries': 413, 'actual_max_degree': 3} PASS
+V21 full beta interval source_tight_empty {'status': 'EMPTY', 'cells': 26, 'points': 27, 'sat_cells': 0, 'sat_points': 0, 'interval_comparisons': 130, 'algebraic_sign_queries': 353, 'actual_max_degree': 3} PASS
+V21 matrix source_tight_algebraic_boundary field degree 2 91 rows, five CP stages PASS
+V21 full beta interval source_tight_algebraic_boundary {'status': 'SAT', 'cells': 26, 'points': 27, 'sat_cells': 1, 'sat_points': 2, 'interval_comparisons': 153, 'algebraic_sign_queries': 413, 'actual_max_degree': 3} PASS
+V21 matrix source_tight_cubic_witness field degree 3 91 rows, five CP stages PASS
+V21 full beta interval source_tight_cubic_witness {'status': 'SAT', 'cells': 26, 'points': 27, 'sat_cells': 1, 'sat_points': 2, 'interval_comparisons': 153, 'algebraic_sign_queries': 413, 'actual_max_degree': 3} PASS
+V21 negative control deleted boundary REJECTED
+V21 negative control altered common E formula REJECTED
+V21 negative control false boundary status REJECTED
+V21 negative control witness at excluded beta endpoint REJECTED
+V21 negative control floating point head REJECTED
+V21 exact lower witness / strict per-state upper target chain PASS
+V21 DISTINCT coverage: 1 six-head; 5 targets; {'cells': 130, 'points': 135, 'interval_comparisons': 696, 'algebraic_sign_queries': 1885} four matrices; rational old-wall crosschecks 2
+V21 unchanged V20 complete default replay BEGIN
+V20 manifest: 43 PASS
+V20 fraction-free/symbolic identities: 23 PASS
+V20 eight exact systems: 18 equalities + 60 inequalities each; regenerated PASS
+V20 X1_X {'nodes': 17317, 'leaves': 8659, 'max_depth': 32} PASS_CPP_INTEGER
+V20 X1_Y {'nodes': 9111, 'leaves': 4556, 'max_depth': 30} PASS_CPP_INTEGER
+V20 X2_X {'nodes': 42915, 'leaves': 21458, 'max_depth': 37} PASS_CPP_INTEGER
+V20 X2_Y {'nodes': 22627, 'leaves': 11314, 'max_depth': 34} PASS_CPP_INTEGER
+V20 Y1_X {'nodes': 8781, 'leaves': 4391, 'max_depth': 31} PASS_CPP_INTEGER
+V20 Y1_Y {'nodes': 4825, 'leaves': 2413, 'max_depth': 29} PASS_CPP_INTEGER
+V20 Y2_X {'nodes': 20223, 'leaves': 10112, 'max_depth': 35} PASS_CPP_INTEGER
+V20 Y2_Y {'nodes': 10711, 'leaves': 5356, 'max_depth': 33} PASS_CPP_INTEGER
+V20 rejection controls: unproved root leaf and truncated tree REJECTED
+V20 all continuous C19 cases: 136510 nodes; 68259 contradiction leaves; ZERO unresolved leaves
+V20 unchanged V19 default replay BEGIN
+V19 file hashes: 22 PASS
+V19 symbolic/degree components: 34 PASS
+V19 fixed-frame maxima: 17 HIGH; 1 BELOW; strict removed-capacity checks: 136
+V19 target tests: 8 wall/whole-head, 1 fixed-r: PASS
+V19 complete states: 21 checks, 20 distinct matrices; each 91 rows and 5 CP pivots: PASS
+V19 contact derivatives and low-scope/invalid-input controls: PASS
+Running unchanged V18 default verifier and its full dependency chain
+PASS SHA256 32 files
+PASS symbolic equalities and degree bounds: 28
+PASS target source_above {'status': 'EMPTY', 'cells': 63, 'points': 64, 'sat_cells': 0, 'sat_points': 0, 'interval_comparisons': 703, 'algebraic_sign_queries': 1735, 'actual_max_degree': 3}
+PASS target source_below {'status': 'SAT', 'cells': 64, 'points': 65, 'sat_cells': 1, 'sat_points': 2, 'interval_comparisons': 769, 'algebraic_sign_queries': 1941, 'actual_max_degree': 3}
+PASS target source_equal {'status': 'SAT', 'cells': 63, 'points': 64, 'sat_cells': 0, 'sat_points': 1, 'interval_comparisons': 703, 'algebraic_sign_queries': 1862, 'actual_max_degree': 3}
+PASS target X_before_above {'status': 'EMPTY', 'cells': 62, 'points': 63, 'sat_cells': 0, 'sat_points': 0, 'interval_comparisons': 699, 'algebraic_sign_queries': 1743, 'actual_max_degree': 3}
+PASS target source_algebraic_witness {'status': 'SAT', 'cells': 64, 'points': 65, 'sat_cells': 1, 'sat_points': 2, 'interval_comparisons': 769, 'algebraic_sign_queries': 1941, 'actual_max_degree': 3}
+PASS wall target tests 17 complete wall matrices 6
+PASS isolated target r + singleton E + original fixed-frame maximum
+PASS scope control: fixed-E maximum need not have the double E-contact
+PASS exact U6 direction regression: eight heads, four nonconstant denominator types
+PASS negative control: deleting the isolated feasible point is rejected
+V18 NEW TOTALS {"algebraic_sign_queries": 9222, "cells": 316, "certificates_checked": 5, "cp_stages": 5, "distinct_head_target_questions": 4, "interval_comparisons": 3643, "physical_rows": 91, "points": 321, "sat_cells": 2, "sat_points": 5, "symbolic_groups": 28, "target_complete_matrices": 3, "target_field_degrees": [1, 1, 2], "wall_complete_matrices": 6, "wall_tests": 17}
+SHA-256 manifest: PASS
+Universal symbolic and degree components: {'symbolic_identities': 13, 'generic_budget_comparisons': 30, 'generic_derivative_checks': 12, 'max_budget_comparison_degree': 4, 'max_stationarity_degree': 4}
+source_V9: entire E interval + optimal matrix PASS; {'pieces': 9, 'candidate_count': 10, 'interval_comparisons': 234, 'algebraic_sign_checks': 909, 'root_isolations': 139, 'optimum_degree': 1}
+monotonicity_t_before: entire E interval + optimal matrix PASS; {'pieces': 9, 'candidate_count': 10, 'interval_comparisons': 234, 'algebraic_sign_checks': 909, 'root_isolations': 143, 'optimum_degree': 1}
+monotonicity_t_after: entire E interval + optimal matrix PASS; {'pieces': 9, 'candidate_count': 10, 'interval_comparisons': 234, 'algebraic_sign_checks': 909, 'root_isolations': 143, 'optimum_degree': 1}
+monotonicity_X_before: entire E interval + optimal matrix PASS; {'pieces': 8, 'candidate_count': 9, 'interval_comparisons': 208, 'algebraic_sign_checks': 809, 'root_isolations': 145, 'optimum_degree': 2}
+monotonicity_X_after: entire E interval + optimal matrix PASS; {'pieces': 8, 'candidate_count': 9, 'interval_comparisons': 208, 'algebraic_sign_checks': 809, 'root_isolations': 145, 'optimum_degree': 2}
+monotonicity_Z_before: entire E interval + optimal matrix PASS; {'pieces': 7, 'candidate_count': 8, 'interval_comparisons': 182, 'algebraic_sign_checks': 709, 'root_isolations': 143, 'optimum_degree': 2}
+monotonicity_Z_after: entire E interval + optimal matrix PASS; {'pieces': 7, 'candidate_count': 8, 'interval_comparisons': 182, 'algebraic_sign_checks': 709, 'root_isolations': 143, 'optimum_degree': 2}
+sigma_zero: entire E interval + optimal matrix PASS; {'pieces': 9, 'candidate_count': 10, 'interval_comparisons': 234, 'algebraic_sign_checks': 909, 'root_isolations': 177, 'optimum_degree': 1}
+Rational E improvement and E-optimized X obstruction: PASS
+V17 totals: {'pieces': 66, 'candidate_count': 74, 'interval_comparisons': 1716, 'heads': 8, 'matrices': 8, 'physical_rows_per_matrix': 91, 'cp_stages_per_matrix': 5, 'rational_optima': 4, 'quadratic_optima': 4}
+PASS SHA256 20 files
+PASS certificate H4_derivative degree 4 minimum 33
+PASS certificate P7_low degree 7 minimum 52615035/16384
+PASS certificate P7_middle degree 7 minimum 31756901/17920
+PASS certificate P7_high degree 7 minimum 43980727/559872
+PASS symbolic identity groups 37
+PASS exact example regeneration
+PASS 15 high-value frames; 31 full-state checks; 19 distinct full states; 91 rows and five CP stages each
+PASS 3 exact coordinate-monotonicity obstructions; positive/zero/negative sigma; low L=0 example
+PASS unmodified V15 default replay (including its V14/V13/V11 chain)
+V16 ACCEPTED: GLOBAL_REDUCTION. The eight-parameter alpha bound is NOT claimed.
+Unmodified V16 default dependency replay: PASS
+V17 DEFAULT ACCEPTANCE: PASS
+PASS unmodified V17 complete default dependency replay
+V18 DEFAULT ACCEPTANCE: PASS. GLOBAL_REDUCTION; final seven-parameter alpha bound not proved.
+V19 DEFAULT ACCEPTANCE: PASS. GLOBAL_REDUCTION; final seven-parameter alpha bound NOT proved.
+V20 unchanged V19 default replay PASS
+V20 FULL ACCEPTANCE PASS: GO for C19 nonwall-necessary E-optimal branch. Final alpha wall bound NOT proved; ledger 11/15.
+V21 unchanged V20 complete default replay PASS
+V21 FULL ACCEPTANCE PASS. GLOBAL_REDUCTION: exact beta/E target elimination; final six-parameter alpha theorem NOT proved; ledger 11/15.
+V22 unchanged complete baseline replay PASS
+V22 FULL ACCEPTANCE PASS: d<=0 high responsibility excluded; three increasing wall endpoints. GLOBAL_REDUCTION; final alpha theorem NOT proved; ledger 11/15.
+PASS unchanged source replay and complete V22 legacy chain
+V24 EXACT ACCEPTANCE PASS {"nodes": 228542, "leaves": 114274, "interval_leaves": 45272, "farkas_leaves": 69002}
+VERDICT: exceptional representative contacts excluded for F >= 1653/400. Canonical E=L_D, unique K24, five middle budgets in this layer.
+FINAL alpha WALL THEOREM: NOT PROVED. MACRO LEDGER: 11/15.
+Elapsed seconds: 862.739166021347

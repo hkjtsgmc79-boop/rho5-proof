@@ -1,0 +1,19 @@
+{
+  "archive_sha256": "2478b3d6c8d9189fd508e2af4695bb2086c6628d5049c75cef759bd3e455dfa8",
+  "started_utc": "2026-09-12T13:25:09.432581+00:00",
+  "python": "3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0]",
+  "platform": "Linux-5.15.0-161-generic-x86_64-with-glibc2.31",
+  "command": [
+    "/root/miniconda3/envs/myconda/bin/python3",
+    "-u",
+    "verify.py",
+    "--jobs",
+    "4",
+    "--full-chain"
+  ],
+  "working_directory": "/root/microscope_ws/rho5_review3_v24_20260912_2125/fresh/RHO5_V24",
+  "workers": 4,
+  "niceness": 10,
+  "scope": "Unmodified frozen V24 acceptance and its packaged full V22-to-V11 legacy chain. This validates the finite/algebraic components actually invoked; it does not mechanically prove all narrative analytic theorems or the global rho5 theorem.",
+  "global_rho5_theorem_verified": false
+}

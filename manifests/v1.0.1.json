@@ -1,0 +1,56 @@
+{
+  "schema": "RHO5_DOCUMENT_RELEASE_V1",
+  "release": "v1.0.1",
+  "paper_pages": 56,
+  "supplementary_index_pages": 7,
+  "new_release_artifacts": [
+    {
+      "name": "D162_COLD_REBUILD_RECEIPTS_20260912.tgz",
+      "bytes": 107995,
+      "sha256": "c0ec1be2dc8b2aff26f987d13be34a20f0f2e92a4d2389523e9fe88c9c980415",
+      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.1/D162_COLD_REBUILD_RECEIPTS_20260912.tgz"
+    },
+    {
+      "name": "RHO5_SUPPLEMENTARY_INDEX.pdf",
+      "bytes": 80743,
+      "sha256": "5f29e1e3f321895aa612d7d3e96a70df2477a72557fdce5e165383c3fdccdfbe",
+      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.1/RHO5_SUPPLEMENTARY_INDEX.pdf"
+    },
+    {
+      "name": "certificate-SHA256SUMS.txt",
+      "bytes": 2071,
+      "sha256": "edad7363099792683120ed139ef06c28f26a5d4b4e35506a8b4c337c5614241a",
+      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.1/certificate-SHA256SUMS.txt"
+    },
+    {
+      "name": "release-assets.json",
+      "bytes": 12387,
+      "sha256": "e87b54adf2b26d6cb1d03c2e2399f029a2ee2a41f51f8708fe4cffe04f69d2ac",
+      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.1/release-assets.json"
+    },
+    {
+      "name": "rho5-paper-v1.0.1.zip",
+      "bytes": 971541,
+      "sha256": "d991f4041069d959d5f8d67155e7f381d7ea8621745e3eb010929365cf5ec42d",
+      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.1/rho5-paper-v1.0.1.zip"
+    },
+    {
+      "name": "rho5_manuscript.pdf",
+      "bytes": 326074,
+      "sha256": "d98b516af0549c04b49250bfb551e7ec946131766b090c5e741fc04baae0045b",
+      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.1/rho5_manuscript.pdf"
+    }
+  ],
+  "inherited_certificate_release": "v1.0.0",
+  "inherited_release_url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/tag/v1.0.0",
+  "inherited_source_commit": "4b8814c094a89ad8cc74603795f9bd94ebafd0fe",
+  "inherited_release_assets_count": 24,
+  "inherited_archive_inventory_bytes": 4494382372,
+  "certificate_asset_manifest_sha256": "e87b54adf2b26d6cb1d03c2e2399f029a2ee2a41f51f8708fe4cffe04f69d2ac",
+  "certificate_asset_manifest_url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/release-assets.json",
+  "certificate_bytes_unchanged": true,
+  "lean_math_source_unchanged": true,
+  "publication_runs_new_mathematical_replay": false,
+  "cold_rebuild_record_scope": "Completed frozen project rebuild: 634 + 3 modules, 47 named checks. Third-party caches reused and supplemented. Successful explicit dependency-order route; original Lake cold-build entry failed.",
+  "lean_final_theorem_remains_conditional": true
+}

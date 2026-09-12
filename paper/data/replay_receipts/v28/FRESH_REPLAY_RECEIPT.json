@@ -1,0 +1,274 @@
+{
+  "archive_sha256": "bec88339a158920d9dacb15341b02f359af83c4bf0e977721d9bdb2764fa0668",
+  "started_utc": "2026-09-12T13:17:08.189286+00:00",
+  "python": "3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0]",
+  "platform": "Linux-5.15.0-161-generic-x86_64-with-glibc2.31",
+  "command": [
+    "/root/miniconda3/envs/myconda/bin/python3",
+    "-u",
+    "verify_v28_all.py"
+  ],
+  "working_directory": "/root/microscope_ws/rho5_review3_v28_20260912_2110/fresh/rho5_v28_exact",
+  "workers": 1,
+  "niceness": 10,
+  "scope": "Fresh execution of the frozen V28 verifier and all 11 required components; inherited V24/T24, V25 and high-value analytic premises are not independently discharged by this execution.",
+  "exit_code": 0,
+  "wall_seconds": 44.93769454956055,
+  "child_max_rss_kb": 144248,
+  "static_inputs_unchanged": true,
+  "global_rho5_theorem_verified": false,
+  "status": "V28_FRESH_FULL_REPLAY_PASS",
+  "component_result": {
+    "status": "V28_COMPLETE_CANONICAL_BOUND_CERTIFICATES_PASS",
+    "assumed_inputs": "Frozen V24/T24, V25 equivalence, and stated high-value lemmas; see REPORT.md",
+    "full_global_localization": true,
+    "open_frontiers": 0,
+    "runs": [
+      {
+        "script": "verify_v28_symbolic_bridge.py",
+        "seconds": 0.6923131942749023
+      },
+      {
+        "script": "verify_v28_kernel.py",
+        "seconds": 4.0132880210876465
+      },
+      {
+        "script": "verify_v28_coverage.py",
+        "seconds": 23.79220747947693
+      },
+      {
+        "script": "verify_v28_negative_controls.py",
+        "seconds": 3.632655143737793
+      },
+      {
+        "script": "verify_v28_bridges.py",
+        "seconds": 0.03343653678894043
+      },
+      {
+        "script": "verify_jacobian_recovered.py",
+        "seconds": 0.7605552673339844
+      },
+      {
+        "script": "verify_upper_tree_recovered.py",
+        "seconds": 5.6098313331604
+      },
+      {
+        "script": "verify_v28_carrier.py",
+        "seconds": 4.572865724563599
+      },
+      {
+        "script": "verify_alpha_interval.py",
+        "seconds": 0.053234100341796875
+      },
+      {
+        "script": "verify_resultant.py",
+        "seconds": 1.6280357837677002
+      },
+      {
+        "script": "verify_p61_root.py",
+        "seconds": 0.09518003463745117
+      }
+    ],
+    "seconds": 44.88474130630493,
+    "whole_R_closed": false,
+    "macro_ledger": "11/15"
+  },
+  "coverage_result": {
+    "status": "V28_FULL_GLOBAL_LOCALIZATION_EXACT_PASS",
+    "f": "4132517/1000000",
+    "prefix": {
+      "nodes": 1513,
+      "combo": 587,
+      "interval": 157,
+      "inside": 0,
+      "open": 13
+    },
+    "grafts": [
+      {
+        "front": 3,
+        "nodes": 70152,
+        "counts": {
+          "I": 1066,
+          "F": 15276,
+          "C": 37463,
+          "B": 16344,
+          "Q": 3,
+          "E": 0,
+          "cut_certificates": 98226
+        },
+        "seconds": 13.59683632850647
+      },
+      {
+        "front": 5,
+        "nodes": 47761,
+        "counts": {
+          "I": 1169,
+          "F": 9576,
+          "C": 26272,
+          "B": 10744,
+          "Q": 0,
+          "E": 0,
+          "cut_certificates": 66770
+        },
+        "seconds": 3.787809371948242
+      },
+      {
+        "front": 9,
+        "nodes": 62,
+        "counts": {
+          "I": 0,
+          "F": 8,
+          "C": 47,
+          "B": 7,
+          "Q": 0,
+          "E": 0,
+          "cut_certificates": 107
+        },
+        "seconds": 0.00586390495300293
+      },
+      {
+        "front": 17,
+        "nodes": 22394,
+        "counts": {
+          "I": 614,
+          "F": 4568,
+          "C": 12031,
+          "B": 5181,
+          "Q": 0,
+          "E": 0,
+          "cut_certificates": 28551
+        },
+        "seconds": 1.763721227645874
+      },
+      {
+        "front": 67,
+        "nodes": 6,
+        "counts": {
+          "I": 0,
+          "F": 1,
+          "C": 5,
+          "B": 0,
+          "Q": 0,
+          "E": 0,
+          "cut_certificates": 19
+        },
+        "seconds": 0.0009050369262695312
+      },
+      {
+        "front": 133,
+        "nodes": 8430,
+        "counts": {
+          "I": 220,
+          "F": 1403,
+          "C": 5185,
+          "B": 1622,
+          "Q": 0,
+          "E": 0,
+          "cut_certificates": 11552
+        },
+        "seconds": 0.6965286731719971
+      },
+      {
+        "front": 265,
+        "nodes": 1918,
+        "counts": {
+          "I": 107,
+          "F": 273,
+          "C": 1159,
+          "B": 379,
+          "Q": 0,
+          "E": 0,
+          "cut_certificates": 2689
+        },
+        "seconds": 0.15579986572265625
+      },
+      {
+        "front": 529,
+        "nodes": 16,
+        "counts": {
+          "I": 0,
+          "F": 2,
+          "C": 13,
+          "B": 1,
+          "Q": 0,
+          "E": 0,
+          "cut_certificates": 26
+        },
+        "seconds": 0.0016853809356689453
+      },
+      {
+        "front": 4231,
+        "nodes": 26,
+        "counts": {
+          "I": 1,
+          "F": 3,
+          "C": 19,
+          "B": 3,
+          "Q": 0,
+          "E": 0,
+          "cut_certificates": 32
+        },
+        "seconds": 0.0024580955505371094
+      },
+      {
+        "front": 8461,
+        "nodes": 154,
+        "counts": {
+          "I": 4,
+          "F": 22,
+          "C": 103,
+          "B": 25,
+          "Q": 0,
+          "E": 0,
+          "cut_certificates": 231
+        },
+        "seconds": 0.013514041900634766
+      },
+      {
+        "front": 67687,
+        "nodes": 40,
+        "counts": {
+          "I": 0,
+          "F": 7,
+          "C": 27,
+          "B": 6,
+          "Q": 0,
+          "E": 0,
+          "cut_certificates": 61
+        },
+        "seconds": 0.003669261932373047
+      },
+      {
+        "front": 1082991,
+        "nodes": 7,
+        "counts": {
+          "I": 0,
+          "F": 2,
+          "C": 4,
+          "B": 1,
+          "Q": 0,
+          "E": 0,
+          "cut_certificates": 10
+        },
+        "seconds": 0.0007469654083251953
+      },
+      {
+        "front": 8663927,
+        "nodes": 1,
+        "counts": {
+          "I": 0,
+          "F": 1,
+          "C": 0,
+          "B": 0,
+          "Q": 0,
+          "E": 0,
+          "cut_certificates": 0
+        },
+        "seconds": 0.00022673606872558594
+      }
+    ],
+    "seconds": 20.18166422843933,
+    "global_coverage": true,
+    "open_grafts": 0
+  }
+}

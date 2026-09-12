@@ -1,0 +1,38 @@
+[
+  {
+    "source": "/Users/mike/Documents/Codex/2026-09-03/rho5-cqg-cofactor-calibration/outputs/b16_v53_closure_20260911/joint/frozen_evidence/v53/proof/TERMINAL_DETAILS.json",
+    "included": "data/certificate_example/TERMINAL_DETAILS.json",
+    "bytes": 30516,
+    "sha256": "11d3e273fff5673cc9cb3ed9673860f388e685bd7ae3b769de0f89d39e20ecc1"
+  },
+  {
+    "source": "/Users/mike/Documents/Codex/2026-09-03/rho5-cqg-cofactor-calibration/outputs/b16_v53_closure_20260911/joint/frozen_evidence/v53/proof/SOURCE_CERTIFICATE.json",
+    "included": "data/certificate_example/SOURCE_CERTIFICATE.json",
+    "bytes": 1479,
+    "sha256": "b73d868dcc6e76fc2a28e79103064e4440296b83bc5f2994b3af10606ffdcbe0"
+  },
+  {
+    "source": "/Users/mike/Documents/Codex/2026-09-03/rho5-cqg-cofactor-calibration/outputs/b16_v53_closure_20260911/joint/frozen_evidence/v53/proof/DEPTH19_COMPLETE_SOURCE_PROJECTION.json",
+    "included": "data/certificate_example/DEPTH19_COMPLETE_SOURCE_PROJECTION.json",
+    "bytes": 5085003,
+    "sha256": "0f379c67fe1c75522c45f512c1ea43414abb8a896a282c2ea5aca48ab64bcf3a"
+  },
+  {
+    "source": "outputs/v36_review_20260908/rho5_v36_exact/two_gap_certificate.json",
+    "included": "data/two_gap_certificate.json",
+    "bytes": 64986,
+    "sha256": "bd221f71917e45295ac3d136be84e188c1358be40e70dbe1d13672f69dd61f51"
+  },
+  {
+    "source": "outputs/reviewer_revision_20260912/SOURCE_ACCOUNTING_566_TO_469.json",
+    "included": "SOURCE_ACCOUNTING_566_TO_469.json",
+    "bytes": 991977,
+    "sha256": "1a5dd9f14d165cd26496a6134b458e90ef65d4353363a7da0ca819f2fda2bc62"
+  },
+  {
+    "source": "outputs/reviewer_revision_20260912/SOURCE_ACCOUNTING_README.md",
+    "included": "SOURCE_ACCOUNTING_README.md",
+    "bytes": 5263,
+    "sha256": "262e85e0e4a22a0f604cc2ea863b0769ed7add23b933ad6763519bcf0f0a83cf"
+  }
+]

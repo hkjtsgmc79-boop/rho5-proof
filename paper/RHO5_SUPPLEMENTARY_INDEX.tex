@@ -8,7 +8,10 @@
 \usepackage{microtype}
 \hypersetup{pdftitle={Supplementary material: proof objects and reproducibility},pdfauthor={Qianli Ma, Chao Wu}}
 \title{Supplementary material\\[3pt]\large The exact maximum growth factor for complete pivoting\\on real \(5\times5\) matrices}
-\author{Qianli Ma, Chao Wu\\[3pt]\small \href{mailto:qianli.ma@zju.edu.cn}{\texttt{qianli.ma@zju.edu.cn}}}
+\author{Qianli Ma\textsuperscript{1,2}, Chao Wu\textsuperscript{1}\\[3pt]
+\small \textsuperscript{1}Zhejiang University\quad\textsuperscript{2}WUJIE AI\\[3pt]
+\small \href{mailto:qianli.ma@zju.edu.cn}{\texttt{qianli.ma@zju.edu.cn}}\quad
+\href{mailto:chao.wu@zju.edu.cn}{\texttt{chao.wu@zju.edu.cn}}}
 \date{11 September 2026}
 \begin{document}
 \maketitle
@@ -22,7 +25,7 @@ Historical labels beginning R, V, B, or Round identify archived sources;
 they are not additional mathematical hypotheses. File and collection
 names identify manifest objects. The public repository is
 \url{https://github.com/hkjtsgmc79-boop/rho5-proof}; fixed release
-\texttt{v1.0.0} supplies the downloadable archives and verification guide.
+\texttt{v1.0.1} supplies the downloadable archives and verification guide.
 Relative locations refer to
 the companion analytical collection or to the named extracted archive,
 as specified in S8. Hashes identify bytes; mathematical validity depends
@@ -30,6 +33,32 @@ on the analytic arguments, exact acceptances, and source-composition
 rules. Large certificate payloads, including transport parts for the
 historical-root archive, are supplied as release attachments. The
 repository documents exact sizes, checksums and computing requirements.
+
+\section*{Reading this revision}
+The accompanying article now gives a mathematical reading guide, an
+explicit complete-fibre predicate, a detailed canonical-height argument,
+and a quantitative two-gap transport lemma. Its appendices expand the
+canonical coordinates and the transport data and trace an actual local
+certificate through its source hierarchy. This index connects those
+statements with their frozen mathematical inputs; it is not itself a
+replacement for the large proof objects.
+
+Release \texttt{v1.0.1} indexes the unchanged proof data frozen in \texttt{v1.0.0}.
+This manuscript revision does not alter those certificates, their
+thresholds, or their identities, and it does not report a new
+whole-chain mathematical replay. A completed first-phase Lean project
+cold rebuild is documented separately in S8. The paper distinguishes
+three responsibilities:
+\begin{enumerate}
+\item universal analytic implications, including complete-matrix
+reconstruction and feasibility of the motions;
+\item exact local verification of the supplied finite instances;
+\item complete coverage and agreement of all inherited source domains.
+\end{enumerate}
+The third responsibility includes recursive dependencies and cannot be
+inferred from file counts or hashes alone. The public verification guide
+specifies which component commands execute mathematics and which later
+commands compose previously checked results.
 
 \section*{S1. The constant and attainment}
 
@@ -111,6 +140,21 @@ Its SHA-256 is
 \path{2478b3d6c8d9189fd508e2af4695bb2086c6628d5049c75cef759bd3e455dfa8}.
 \end{quote}
 Here T24 denotes the canonical target proved in this package.
+Its primary statement is \path{RHO5_V24/THEOREM.md}, Sections
+7--8, and the exceptional representative domain is defined in
+Section 2. The nested V20 theorem, Section 7, supplies an attained
+same-head wall maximum; V18, Section 5, and V16, Section 4.2,
+supply the complete reconstruction at any prescribed attainable
+high target. V15, Sections 2 and 4--5, retains a common framework
+for all columns. Appendix B now proves compactness of the complete
+fixed-head high-value fiber and attainment of its exact-target wall
+minimum in E, before any strict endpoint qualifications are imposed.
+The V25 handoff restates these inputs but does not replace their
+original proofs. To replay the six V24 exclusions together with
+the nested earlier acceptances, run \texttt{python verify.py
+--jobs 4 --full-chain} in \path{RHO5_V24/}; omitting
+\texttt{--full-chain} runs only V23's algebra after the new V24
+checks, and does not re-execute the V22/V20 exclusions.
 
 \textbf{Row-scale reconstruction (V25).}
 The original nested object is
@@ -139,6 +183,62 @@ algebraic height module. The independent replay used the earlier
 V24/V25 mathematical inputs without rerunning every older tree.
 V27 entrance dictionaries and other earlier dependencies are retained
 where the frozen component manifests require them.
+
+\textbf{Additional upstream replay, 12 September 2026.}
+The unmodified V24 entry with \texttt{--full-chain} was executed in
+a fresh directory. All 22 V20/V22/V24 exclusion trees passed:
+1,275,818 nodes, 637,920 contradiction leaves, and no unresolved
+leaf, together with the invoked nested algebra and reconstruction
+checks. A separate fresh V28 run passed all eleven required modules,
+including all thirteen localization grafts and the remaining analytic
+and algebraic interfaces. The respective elapsed times were
+862.85 and 44.94 seconds; the frozen static inputs were unchanged.
+Logs, identities, environment details, and precise scopes are retained
+in \path{data/replay_receipts/}. These are fresh executions of the
+frozen acceptors, not independently rewritten acceptors or a new
+full-theorem replay; the universal analytical source-to-model
+arguments remain separate mathematical responsibilities.
+
+\textbf{Readable height argument.}
+Appendix~B of the revised article expands the mathematical chain:
+qualified representative existence, necessary and sufficient row-scale
+reconstruction, complete localization, a constrained maximum, forced
+contact equalities, and the exact algebraic height. The equality pattern
+is a conclusion of the maximum argument, not an assumption on all
+physical sources. A common polynomial root or an isolated stationary
+point does not replace these steps.
+
+The statements inherited by the representative theorem retain their
+full head budgets, positivity qualifications, and reconstruction ranges.
+The frozen older inputs supply those qualifications; the low-\(r\)
+certificate consumes the resulting bound through a separately qualified
+local transport. The dependency direction is canonical height to complete
+\(X\), and then complete \(X\) to negative-diagonal safety. Final
+negative-diagonal coverage is not used to establish its own upstream
+canonical-height input.
+
+\textbf{Canonical-height replay interfaces.}
+The V28 entry \path{verify_v28_all.py} checks the hash manifest,
+integer interval routines, rejection controls, and all required modules.
+The component \path{verify_v28_coverage.py} attaches thirteen
+\path{certs/front_*.jsonl.gz} payloads to the preserved partial
+localization tree. It verifies original and child boxes, contractions,
+conditional rows, and the three actual containments in the peak box.
+The resulting 152,467-record cover must not be confused with its
+incomplete earlier checkpoint.
+
+The entry \path{verify_v28_symbolic_bridge.py} checks the 37-expression
+guard dictionary, while \path{verify_v28_bridges.py} checks 42 rational
+transport and qualification statements and their match with the
+Jacobian box. Under \path{RHO5_V26_REBUILT/},
+\path{verify_upper_tree_recovered.py} accepts the 169-node upper-target
+tree, and \path{verify_jacobian_recovered.py} accepts the uniform
+nine-variable certificate. The recovered certificates are equivalent
+repaired proof objects, not a claim to reproduce lost earlier bytes.
+The entries \path{verify_v28_carrier.py} and the rebuilt
+\path{verify_resultant.py} check the carrier identities and resultant
+against the complete defining polynomial. Root uniqueness in the
+article also follows from the separately established root in $(4,5)$.
 
 \section*{S4. The complete cross-saturated domain}
 
@@ -187,6 +287,21 @@ superseded one. V36 assembles the unrestricted complete X theorem:
 The package instructions specify Python/SymPy, C++17, and Boost
 requirements. Their previously recorded acceptances are not represented
 as new runs performed in preparing this index.
+
+\textbf{Two distinct analytic entry rules.}
+The low-r package's \path{source/THEORY.md}, Theorem V35-local,
+and \path{source/FLOW_TUBE_THEOREM.md} describe the 22-coordinate
+X-to-room wall flow. It decreases \(r+w\), then applies an actual
+signed tail permutation at \(w=-r\); all sixteen strict room
+conditions are certified at the endpoint. Its upstream room bound
+uses the original two-face normalization (V10, Sections 2--6),
+the tail bound (V11, T11), the middle-face reduction (V12), and
+the independent canonical-height result in S3. The separate A4
+exit invokes V27, Theorem 4.1, with all six weak cofactors.
+The 24-coordinate two-gap transport in V36, Section 6, instead
+preserves \(r+w\) while eliminating the two cross gaps and consumes
+the complete X bound. Neither it nor the later V43 guard flow
+is an upstream assumption of the low-r certificate.
 
 \section*{S5. Six-variable maximum in the negative diagonal domain}
 
@@ -238,6 +353,36 @@ The joint producer executes its frozen child verifiers; the later
 composer consumes identified earlier mathematical receipts and checks
 their source bindings. It does not re-execute all inherited mathematics.
 
+\textbf{Quantitative two-gap transport.}
+The article's expanded transport lemma and Appendix~C use the V36
+\path{two_gap_certificate.json},
+\path{verify_two_gap_certificate.py}, \path{gap_model.py}, and
+\path{support/x_local_model.py} from \path{rho5_v36_exact.zip}.
+They use twenty-three differentiation variables at fixed \(p\), with
+bounds proved on the full twenty-four-dimensional box, including
+variation of \(p\). All four boxes have the common parameter range
+\[
+\frac{726212331}{500000000}\le p\le
+\frac{727012331}{500000000}.
+\]
+The strict entrance condition applies to the whole accepted source
+region. An equality case of that entrance test is not accepted by this
+lemma unless an additional proved rule handles it.
+
+\textbf{Actual necessary-row example.}
+The revised article displays a genuine 49-row contradiction on a
+67-coordinate lift. The complete rows and bounds are in
+\path{rho5_v53_exact/proof/TERMINAL_DETAILS.json}, inside the public
+\path{rho5-final-anchor-example.zip}. Its source binding is recorded in
+\path{SOURCE_CERTIFICATE.json} and
+\path{DEPTH19_COMPLETE_SOURCE_PROJECTION.json} in the same directory.
+Byte-identical copies of these three small inputs accompany this
+revision under \path{data/certificate_example/}; the corresponding
+V36 transport input is \path{data/two_gap_certificate.json}.
+These extracts make the displayed arithmetic and coordinate tables
+easy to inspect. Full source verification still uses the frozen
+archive and its acceptors.
+
 \section*{S7. Complete negative-diagonal coverage and binding}
 
 The preserved base tree is
@@ -273,6 +418,17 @@ Article&Index&Original-root path&Paid responsibilities\\
 \bottomrule
 \end{tabular}
 \end{center}
+The sum \(111+240+159+56=566\) counts constituent sources inside
+these four original-parent obligations. It is distinct from the
+\(465+4=469\) count of original parents. Appendix~D explains the source
+hierarchy. The revision's
+\path{SOURCE_ACCOUNTING_566_TO_469.json} gives a record-by-record index
+into the four frozen parent receipts, together with the actual root
+bindings and original file identities. It is an index of existing
+records, not an additional mathematical acceptance. Relative paths
+inside a transformed parent must be interpreted through their full
+inherited source maps, rather than concatenated to root paths.
+
 The last local subtree, at relative path \texttt{10011101}, covers
 54 terminal positions and pays only the final one of the 240
 responsibilities of parent 435003. The original-parent accounting is
@@ -310,8 +466,8 @@ is not the complete proof archive.
 \section*{S8. Artifact collections and reproducibility scope}
 
 The manifest groups the proof objects into the following logical
-collections. These names identify sets of retained files, not public
-repositories or newly assigned archive identifiers.
+collections. Each collection groups the retained files by its
+mathematical role; the public asset names are given below.
 \begin{description}
 \item[Companion analytical collection.]
 The relative \path{supplement/} and \path{evidence/} locations used in
@@ -383,17 +539,65 @@ preserved when attaching the last local proof, with a hash-bound replay
 configuration and fresh output locations. Python assertion optimization
 must not be enabled.
 
-\textbf{Full real-matrix theorem.}
-The global conclusion also uses S1--S5, including the complete X
-certificates, attained lower bound, and analytic quantifier and boundary
-arguments. The recorded computation consists of exact component
-acceptances and verified compositions. It is not a new single-command
-fresh-environment replay of the entire dependency chain.
-\path{REPRODUCIBILITY.md} specifies the recorded entry points and their
-scopes; \path{THEOREM_CHAIN.md} gives the dependency map. The identities
-and acceptance scopes in this supplement distinguish preservation,
-mathematical replay, and composition. The public GitHub deposit preserves
-these materials; its publication does not constitute a newly completed
-independent replay of every historical component.
+\textbf{Public download and environment guide.}
+The published inventory totals 4,494,382,372 bytes, including intentional
+asset overlap. This is not a transitive dependency-closure claim.
+\path{docs/DOWNLOADS.md} separates download size, extracted size and
+working-space estimates. The helper \path{scripts/fetch.py} verifies
+asset hashes and reconstructs the multipart root archive; downloading
+is separate from mathematical acceptance.
+
+C++ components require a compatible C++17 compiler and the specified
+Boost headers. Python dependencies, working directories and migration
+constraints are given in \path{docs/VERIFY.md} and
+\path{docs/VERIFY.zh-CN.md}. The global theorem also uses S1--S5,
+including the complete X certificates, attained lower bound and
+analytic boundary arguments. \path{THEOREM_CHAIN.md} and
+\path{REPRODUCIBILITY.md} specify dependencies, entry points and scopes.
+Recorded component acceptances and source compositions are preserved;
+a tested, new-machine single-command replay of the entire theorem is
+not claimed. Publication and hash checks do not constitute that replay.
+
+\textbf{First-phase Lean project cold rebuild.}
+The frozen project was rebuilt on Linux on 12 September 2026, starting
+with no compiled Rho5 project objects. All 634 product modules,
+three additional example/audit modules, and 47 named axiom checks
+passed. The toolchain was Lean 4.30.0 with Mathlib revision
+\path{c5ea00351c28e24afc9f0f84379aa41082b1188f}. Pinned third-party
+caches were reused and missing dependency modules were rebuilt;
+this was a project cold rebuild, not a new installation and rebuild
+of the entire dependency environment.
+
+The accepted route used an explicit dependency-order driver with
+per-module Lean invocations. The originally documented
+\texttt{lake build +Rho5.PhaseOne:olean} command failed in the
+cold state; a configuration-only repair was not counted as a completed
+build. The retained records distinguish that failure from the
+successful alternative route. The final \texttt{\#check}/\texttt{\#print}
+output still has the type
+\begin{quote}
+\texttt{XGlobalSafety}\(\ \longrightarrow\ \)
+\texttt{RootEndpointSafety}\(\ \longrightarrow\ \)
+\texttt{rho5Trace = alpha}.
+\end{quote}
+The 47 axiom lists agree with the frozen records. The only axioms
+appearing in them are \texttt{propext}, \path{Classical.choice}, and
+\path{Quot.sound}. This check does not discharge the two explicit
+safety parameters. The large tree and certificate stage was not
+replayed by this build.
+
+The frozen project source ZIP has SHA-256
+\begin{quote}
+\path{ddb1e4300ed03464024f2a2a227cee060b6b38de96a02043f9233f0412e28f56}.
+\end{quote}
+The 107,995-byte cold-build receipt archive has SHA-256
+\begin{quote}
+\path{c0ec1be2dc8b2aff26f987d13be34a20f0f2e92a4d2389523e9fe88c9c980415}.
+\end{quote}
+This revision includes that archive and the completion summary under
+\path{data/lean_cold_build/}. It preserves the source/object manifest,
+finalization and axiom/type logs, and failed-build evidence; it is not
+a standalone replay package and does not contain all module logs,
+compiled objects, dependency caches, or the successful build drivers.
 
 \end{document}

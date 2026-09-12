@@ -10,7 +10,8 @@ authors:
   - family-names: Wu
     given-names: Chao
     affiliation: "Zhejiang University"
-version: 1.0.0
+    email: chao.wu@zju.edu.cn
+version: 1.0.1
 date-released: 2026-09-12
 repository-code: "https://github.com/hkjtsgmc79-boop/rho5-proof"
-url: "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/tag/v1.0.0"
+url: "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/tag/v1.0.1"

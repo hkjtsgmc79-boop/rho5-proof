@@ -1,0 +1,16 @@
+{
+ "expected_targets": 47,
+ "product_targets": 33,
+ "example_targets": 14,
+ "observed_targets": 47,
+ "ok": 47,
+ "missing": [],
+ "nonstandard": [],
+ "frozen_mismatch": [],
+ "allowed_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "pass": true
+}

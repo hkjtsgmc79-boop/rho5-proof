@@ -5,13 +5,13 @@
 ## 1. 获取固定版本
 
 ```sh
-git clone --branch v1.0.0 --depth 1 https://github.com/hkjtsgmc79-boop/rho5-proof.git
+git clone --branch v1.0.1 --depth 1 https://github.com/hkjtsgmc79-boop/rho5-proof.git
 cd rho5-proof
 git rev-parse HEAD
 python3 scripts/fetch.py --list
 ```
 
-保留输出的提交哈希。Git 仓库包含 Lean、验证器源码、论文和说明；大证书在 Release 附件中。GitHub 自动生成的 “Source code” ZIP 不包含这些大附件。
+保留输出的提交哈希。v1.0.1 索引未改动的 v1.0.0 证书附件；下载器保留原地址和哈希。Git 仓库包含 Lean、验证器源码、论文和说明；大证书在 Release 附件中。GitHub 自动生成的 “Source code” ZIP 不包含这些大附件。
 
 下载器只使用 Python 标准库，会验证 SHA-256、续传并重组运输分片。下载成功仅说明文件身份正确，尚未执行数学检查。
 
@@ -32,10 +32,7 @@ cd lean
 elan toolchain install leanprover/lean4:v4.30.0
 lake --version
 lake exe cache get
-lake build +Rho5.PhaseOne:olean
-lake build +Rho5.PhaseOne.Audit:olean
-lake build +Rho5.PhaseOne.Examples:olean
-lake build +Rho5.PhaseOne.ExamplesAudit:olean
+# Project compilation: read the cold-build note below before proceeding.
 ```
 
 保留提交的 `lean-toolchain` 和 `lake-manifest.json`。固定 mathlib 提交为 `c5ea00351c28e24afc9f0f84379aa41082b1188f`。不要通过升级依赖掩盖构建失败。
@@ -51,7 +48,7 @@ Rho5.PhaseOne.rho5Trace_eq_alpha_of_safety
 
 编译成功不会消去这两个前提。它们的完整全域支付仍由论文解析论证、外部精确验证和来源覆盖承担，不能把本版本称为完整 Lean 证明。完整类型和公理记录见 [FINAL_THEOREM_TYPES.txt](../lean/FINAL_THEOREM_TYPES.txt) 和 [AXIOMS.json](../lean/AXIOMS.json)。
 
-已有入口与审计的 8.051 秒、例子与审计的 12.021 秒是两次利用上游缓存的运行；不是整项目从零冷编译时间。本次发布没有重新执行完整新机器冷编译。
+**冷重建更新：** 冻结产品现已完成 634 个模块、3 个附加模块和 47 项具名公理检查。成功采用显式依赖顺序的逐模块驱动，第三方缓存复用并补齐。原命令 `lake build +Rho5.PhaseOne:olean` 在冷状态失败，不能将其列为已验证的冷启动方法。公开回执不包含成功驱动。继续构建前请先看[完整记录与范围](LEAN_COLD_REBUILD.md)。旧记录的 8.051 秒和 12.021 秒仅是缓存运行，不能当作冷编译时间。
 
 ## 3. 跑一个真实的 54 叶证书
 

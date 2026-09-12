@@ -1,0 +1,104 @@
+V28_HASH_MANIFEST_PASS
+==> verify_v28_symbolic_bridge.py
+V28_SYMBOLIC_BRIDGE_PASS 37 guards x 2 dictionaries; 6 parametric identities
+==> verify_v28_kernel.py
+V28_INTEGER_INTERVAL_KERNEL_TESTS_PASS 3000 arithmetic tests; 56 rational points; 3936 affine-majorant checks
+==> verify_v28_coverage.py
+PREFIX_EXACT_PASS {'nodes': 1513, 'combo': 587, 'interval': 157, 'inside': 0, 'open': 13}
+GRAFT_EXACT_PASS 3 70152 {'I': 1066, 'F': 15276, 'C': 37463, 'B': 16344, 'Q': 3, 'E': 0, 'cut_certificates': 98226} 13.597
+GRAFT_EXACT_PASS 5 47761 {'I': 1169, 'F': 9576, 'C': 26272, 'B': 10744, 'Q': 0, 'E': 0, 'cut_certificates': 66770} 3.788
+GRAFT_EXACT_PASS 9 62 {'I': 0, 'F': 8, 'C': 47, 'B': 7, 'Q': 0, 'E': 0, 'cut_certificates': 107} 0.006
+GRAFT_EXACT_PASS 17 22394 {'I': 614, 'F': 4568, 'C': 12031, 'B': 5181, 'Q': 0, 'E': 0, 'cut_certificates': 28551} 1.764
+GRAFT_EXACT_PASS 67 6 {'I': 0, 'F': 1, 'C': 5, 'B': 0, 'Q': 0, 'E': 0, 'cut_certificates': 19} 0.001
+GRAFT_EXACT_PASS 133 8430 {'I': 220, 'F': 1403, 'C': 5185, 'B': 1622, 'Q': 0, 'E': 0, 'cut_certificates': 11552} 0.696
+GRAFT_EXACT_PASS 265 1918 {'I': 107, 'F': 273, 'C': 1159, 'B': 379, 'Q': 0, 'E': 0, 'cut_certificates': 2689} 0.156
+GRAFT_EXACT_PASS 529 16 {'I': 0, 'F': 2, 'C': 13, 'B': 1, 'Q': 0, 'E': 0, 'cut_certificates': 26} 0.002
+GRAFT_EXACT_PASS 4231 26 {'I': 1, 'F': 3, 'C': 19, 'B': 3, 'Q': 0, 'E': 0, 'cut_certificates': 32} 0.002
+GRAFT_EXACT_PASS 8461 154 {'I': 4, 'F': 22, 'C': 103, 'B': 25, 'Q': 0, 'E': 0, 'cut_certificates': 231} 0.013
+GRAFT_EXACT_PASS 67687 40 {'I': 0, 'F': 7, 'C': 27, 'B': 6, 'Q': 0, 'E': 0, 'cut_certificates': 61} 0.004
+GRAFT_EXACT_PASS 1082991 7 {'I': 0, 'F': 2, 'C': 4, 'B': 1, 'Q': 0, 'E': 0, 'cut_certificates': 10} 0.001
+GRAFT_EXACT_PASS 8663927 1 {'I': 0, 'F': 1, 'C': 0, 'B': 0, 'Q': 0, 'E': 0, 'cut_certificates': 0} 0.0
+V28_FULL_GLOBAL_LOCALIZATION_EXACT_PASS
+==> verify_v28_negative_controls.py
+V28_NEGATIVE_CONTROLS_PASS 9 invalid artifacts rejected
+==> verify_v28_bridges.py
+V28_EXACT_TRANSPORT_AND_COMPACTNESS_BRIDGES_PASS 42
+Q_old_transport 0.20297064251701644 0.20608077122692403
+A_to_b_lower 2.0741895665096 2.0747452295816
+B0_to_b_upper 2.07424136 2.07468883
+hA_to_h_lower 0.4513916880287226 0.4550803241893631
+hS_to_h_upper 0.44998149984505403 0.4565334654251745
+one_minus_j_minus_beta_g 0.0017959556234365562 0.003538851563088369
+p_minus_S00 0.007656185427141704 0.026103001648094752
+==> verify_jacobian_recovered.py
+{
+  "status": "PASS",
+  "certificate": "reconstructed equivalent V26 global 9-parameter Jacobian interval certificate",
+  "max_contraction_inf_row_norm": "2321174903888101865035726400633935752500374674633866698042895711950315422681421540807350919998258674562850728014804331717771970130239706742611351453968345736515560767470780225685072504035380302408259242093028485022956942785270100141395447339302466369367211387070159923692976742605463693/16639896422535871996956073763298909560598109567512056443768843134361302202917865983948826089986644933595551787937273526866081906578505272799244438073104480223888836852388364817049893462304598202502886143551183285737702206792729734762582678217414073930054720000000000000000000000000000000",
+  "max_contraction_inf_row_norm_decimal": 0.13949455242668882,
+  "max_self_map_ratio_decimal": 0.9579870737938052,
+  "height_response_upper_bounds": [
+    "-31023639/1000000000",
+    "-184717889/1000000000",
+    "-47423419/500000000",
+    "-5888171/25000000",
+    "-380657/25000000",
+    "-834537/62500000",
+    "-9580477/200000000",
+    "-4195499/500000000"
+  ],
+  "claimed_response_bound": "all < -1/250",
+  "box": {
+    "be": [
+      "617/1000",
+      "6181/10000"
+    ],
+    "V": [
+      "1947/2500",
+      "1559/2000"
+    ],
+    "ss": [
+      "181/400",
+      "227/500"
+    ],
+    "Y": [
+      "12169/12500",
+      "97361/100000"
+    ],
+    "Z": [
+      "49999/50000",
+      "1"
+    ],
+    "v": [
+      "243/1250",
+      "19501/100000"
+    ],
+    "h": [
+      "4513/10000",
+      "2283/5000"
+    ],
+    "b": [
+      "20741/10000",
+      "5187/2500"
+    ],
+    "R": [
+      "2132517/2000000",
+      "53313/50000"
+    ]
+  }
+}
+V26_RECONSTRUCTED_GLOBAL_JACOBIAN_CERTIFICATE_PASSED
+==> verify_upper_tree_recovered.py
+V26_REGENERATED_FPLUS_UPPER_TREE_EXACT_REPLAY_PASSED
+nodes 169 combo_leaves 85 open_leaves 0
+least_negative_exact_margin -56514120341976074273346970716192474987157330460025913231361088831/268435456000000000000000000000000000000000000000000000000000000000000
+==> verify_v28_carrier.py
+V28_CONTACT_CARRIER_DICTIONARY_PASS 11 identities
+==> verify_alpha_interval.py
+V28_FULL_DECIMAL_ISOLATING_INTERVAL_EXACT_SIGNS_PASS
+==> verify_resultant.py
+RESULTANT_P61_IDENTITY_PASSED
+==> verify_p61_root.py
+P61_ROOT_CERTIFICATE_PASSED
+bernstein_coefficients: 61 all_strictly_positive
+V28_COMPLETE_CANONICAL_BOUND_CERTIFICATES_PASS

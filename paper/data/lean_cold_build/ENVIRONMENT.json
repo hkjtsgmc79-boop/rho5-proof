@@ -1,0 +1,16 @@
+{
+ "run_id": "run20260912T174733",
+ "lean_version": "Lean (version 4.30.0, x86_64-unknown-linux-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+ "mathlib_rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+ "lake_manifest_sha256": "6fa600a652ca1ef77814e08127d1078febb38e3018ed9f8b1c5683b92427b789",
+ "lakefile_sha256": "bb06bd656723ce3c57074d9bf2c028540baaf87e43469cb186ac16ce4d35a358",
+ "budgets": {
+  "rss_kib": 8388608,
+  "as_bytes": 34359738368,
+  "module_cap_s": 900,
+  "disk_floor_kib": 5242880,
+  "run_started": "2026-09-12T17:47+08:00",
+  "deadline": "2026-09-13T01:47+08:00",
+  "single_lean": true
+ }
+}

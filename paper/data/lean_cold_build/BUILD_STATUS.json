@@ -1,0 +1,78 @@
+{
+ "run_id": "run20260912T174733",
+ "product_ok": 634,
+ "product_closure": 634,
+ "previous_full_verification": "2026-09-12T21:51:49+0800 gate satisfied at 2026-09-12T21:51:49+0800; verified_634=634 bad=0",
+ "extras": [
+  {
+   "tag": "extras2_Examples",
+   "rc": 0,
+   "timedout": false,
+   "wall_ms": 5011,
+   "max_rss_kib": 4219904,
+   "stdout": "/root/microscope_ws/rho5_lean_dsh_20260911/D162/lanes/P0/logs/lean_extras2_Examples.stdout",
+   "stderr": "/root/microscope_ws/rho5_lean_dsh_20260911/D162/lanes/P0/logs/lean_extras2_Examples.stderr",
+   "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D162/attempt_03_seq/rho5-phase-one/.lake/build/lib/lean/Rho5/PhaseOne/Examples.olean",
+   "olean_exists": true,
+   "olean_sha256": "2e9619f76eca553facb84adf075bab93a9dac6eb23fb8727e0a7c9475a66b654",
+   "olean_bytes": 80304,
+   "success": true,
+   "module": "Rho5.PhaseOne.Examples"
+  },
+  {
+   "tag": "extras2_Audit",
+   "rc": 0,
+   "timedout": false,
+   "wall_ms": 6014,
+   "max_rss_kib": 4542964,
+   "stdout": "/root/microscope_ws/rho5_lean_dsh_20260911/D162/lanes/P0/logs/lean_extras2_Audit.stdout",
+   "stderr": "/root/microscope_ws/rho5_lean_dsh_20260911/D162/lanes/P0/logs/lean_extras2_Audit.stderr",
+   "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D162/attempt_03_seq/rho5-phase-one/.lake/build/lib/lean/Rho5/PhaseOne/Audit.olean",
+   "olean_exists": true,
+   "olean_sha256": "b40749ffe3d1e7eac973480e7d44a19cafc280929f2efb23b2d5c20b529f50cd",
+   "olean_bytes": 1704,
+   "success": true,
+   "module": "Rho5.PhaseOne.Audit"
+  },
+  {
+   "tag": "extras2_ExamplesAudit",
+   "rc": 0,
+   "timedout": false,
+   "wall_ms": 5013,
+   "max_rss_kib": 4218088,
+   "stdout": "/root/microscope_ws/rho5_lean_dsh_20260911/D162/lanes/P0/logs/lean_extras2_ExamplesAudit.stdout",
+   "stderr": "/root/microscope_ws/rho5_lean_dsh_20260911/D162/lanes/P0/logs/lean_extras2_ExamplesAudit.stderr",
+   "olean": "/root/microscope_ws/rho5_lean_dsh_20260911/D162/attempt_03_seq/rho5-phase-one/.lake/build/lib/lean/Rho5/PhaseOne/ExamplesAudit.olean",
+   "olean_exists": true,
+   "olean_sha256": "74280f632cdfc69b66e58e27f24b3aa033fd6733ef48e625262ce4fc98700b2b",
+   "olean_bytes": 2344,
+   "success": true,
+   "module": "Rho5.PhaseOne.ExamplesAudit"
+  }
+ ],
+ "check47": {
+  "expected_targets": 47,
+  "product_targets": 33,
+  "example_targets": 14,
+  "observed_targets": 47,
+  "ok": 47,
+  "missing": [],
+  "nonstandard": [],
+  "frozen_mismatch": [],
+  "allowed_axioms": [
+   "Classical.choice",
+   "Quot.sound",
+   "propext"
+  ],
+  "pass": true
+ },
+ "hX_hB": {
+  "check_rc": 0,
+  "arrow_shape_two_params": true,
+  "named_binders_in_print": true,
+  "source_declaration_has_both": true,
+  "safety_props_checked_as_Prop": true,
+  "pass": true
+ },
+ "finished": "2026-09-12T21:58:48+0800"
+}

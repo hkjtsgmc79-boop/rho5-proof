@@ -6,9 +6,9 @@ Contact: [qianli.ma@zju.edu.cn](mailto:qianli.ma@zju.edu.cn)
 
 This repository accompanies the computer-assisted proof of
 
-\[
+$$
 \rho_5^{\mathbb R}=\alpha=4.132517078632472854223346853277\ldots.
-\]
+$$
 
 The algebraic constant and attained lower bound are due to Chen, Edelman and Urschel. The accompanying paper establishes the matching global upper bound, allowing every legal pivot tie and singular termination.
 

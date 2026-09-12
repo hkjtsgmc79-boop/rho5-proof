@@ -1,0 +1,89 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage[margin=19mm]{geometry}
+\usepackage{xurl}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{microtype}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\pagestyle{empty}
+\hypersetup{pdftitle={RHO5: note for expert review},pdfauthor={Qianli Ma, Chao Wu}}
+\begin{document}
+{\Large\bfseries RHO5: note for expert review}\par
+Qianli Ma\textsuperscript{1,2}, Chao Wu\textsuperscript{1}\quad---\quad11 September 2026\\
+\textsuperscript{1}Zhejiang University\qquad\textsuperscript{2}WUJIE AI\\
+\textit{Email address (Qianli Ma):} \href{mailto:qianli.ma@zju.edu.cn}{\texttt{qianli.ma@zju.edu.cn}}
+
+\textbf{Purpose.} We would appreciate a critical reading of the attached
+manuscript and supplementary index, particularly the global reduction and the interfaces
+between analytic lemmas and exact computational certificates.
+
+\textbf{Claim.} For real \(5\times5\) matrices, exact Gaussian elimination
+with complete pivoting has maximum element growth
+\[
+\rho_5^{\mathbb R}=\alpha
+=4.132517078632472854223346853277\ldots.
+\]
+The upper bound quantifies over every legal pivot path, including ties
+and singular termination. The constant is the unique root in \((4,5)\)
+of the degree-61 polynomial identified by Chen, Edelman, and Urschel.
+Their attained lower bound is prior work; the manuscript supplies the
+global upper bound and hence the equality in their Conjecture~2.1
+(arXiv version~2 numbering).
+
+\textbf{Proof route and reading order.}
+\begin{enumerate}
+\setlength{\itemsep}{2pt}
+\item \textit{Sections 3--5: analytic global entry.}
+After max-entry normalization, the first four pivot magnitudes are
+at most~4. Actual diagonal contractions
+preserve a nonzero fifth pivot and all earlier complete-pivoting
+conditions, producing one of two saturated tail geometries, \(D\) or \(X\).
+Zero and tied boundary cases are treated explicitly.
+\item \textit{Sections 6--7: the two remaining domains.}
+The complete \(X\) bound is assembled from identified exact components.
+For each nonempty high-value fibre in the normalized range \(p\ge1\),
+the remaining negative \(D\) domain admits an attained maximum over six
+variables at a fixed seventeen-variable framework; no
+historical rank classification is an extra premise of this reduction.
+\item \textit{Sections 8--10: finite acceptance and assembly.}
+Exact certificates establish either infeasibility of
+\(F\ge\gamma=4132517/10^6<\alpha\), or safety at \(\alpha\).
+Verified source bindings compose their domains into a complete cover.
+The accepted \(X\) and negative-\(D\) bounds then apply to every original
+matrix and combine with the attained lower bound.
+\end{enumerate}
+
+\textbf{Questions on which feedback would be especially useful.}
+\begin{itemize}
+\setlength{\itemsep}{2pt}
+\item Do the analytic reductions retain the full quantifiers,
+including zero coordinates, ties, and common-matrix feasibility?
+\item Are the certificate rules and their stated source domains
+sufficiently explicit to support the global inference?
+What additional presentation or independent checking would you require?
+\item Is the claimed advance over the existing fifth-pivot result
+correctly positioned, and are important references or qualifications missing?
+\end{itemize}
+
+\textbf{Evidence and present scope.} The manuscript and supplementary index identify the exact
+polynomial, model, accepted components, and final coverage records.
+Historical exact acceptances are reused with explicit identities;
+the final composition is not a fresh replay of every earlier tree.
+The final \(B\) archives have been preserved locally and hash-checked;
+the full theorem also requires the identified upstream \(X\) payloads.
+Source, certificate downloads and step-by-step instructions are public at
+\url{https://github.com/hkjtsgmc79-boop/rho5-proof} (release v1.0.0).
+The guide states the remaining full-chain portability limitations.
+The material is supplied for expert feedback. A companion Lean development
+formalizes key analytic results and a conditional final theorem; full
+global safety still relies on the written arguments and exact certificates.
+
+\textbf{Related paper.} Chen--Edelman--Urschel,
+\textit{IMA Journal of Numerical Analysis} (2026), advance article drag039,
+published online 7 September 2026.\par
+\url{https://doi.org/10.1093/imanum/drag039}\quad
+Open manuscript: \url{https://arxiv.org/abs/2602.20390v2}.
+\end{document}

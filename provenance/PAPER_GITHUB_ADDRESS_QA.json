@@ -1,0 +1,31 @@
+{
+  "operation": "Update public availability addresses; retain two-author first-phase scope",
+  "compiler": "Tectonic 0.17.0",
+  "visual_review": {
+    "rho5_manuscript.pdf": [
+      17,
+      18,
+      19,
+      20
+    ],
+    "RHO5_SUPPLEMENTARY_INDEX.pdf": [
+      1,
+      5
+    ],
+    "RHO5_REVIEW_NOTE.pdf": [
+      1
+    ]
+  },
+  "pages": {
+    "rho5_manuscript.pdf": 20,
+    "RHO5_SUPPLEMENTARY_INDEX.pdf": 5,
+    "RHO5_REVIEW_NOTE.pdf": 1
+  },
+  "changed_pages_visual_review": "PASS",
+  "new_mathematical_replay": false,
+  "files": {
+    "rho5_manuscript.pdf": "a14ba787488cd039828dd254d240b171b8b8c0bd18f0100598b01c55775e00e6",
+    "RHO5_SUPPLEMENTARY_INDEX.pdf": "c3629b17175be8025ba51a11be7518aa31c123d2a4fe5cbd1b3e3bcdc18f58ec",
+    "RHO5_REVIEW_NOTE.pdf": "e5c42a3f1924fbcc1c7402b3672ba9615516587110924bf605f0456cdbabea95"
+  }
+}

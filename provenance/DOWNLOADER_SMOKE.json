@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "completed-partial recovery",
+    "multipart reconstruction and whole hash",
+    "existing-archive repeat",
+    "corrupt existing asset refusal"
+  ],
+  "status": "PASS",
+  "scope": "small local transport fixtures; no mathematical certificate replay"
+}

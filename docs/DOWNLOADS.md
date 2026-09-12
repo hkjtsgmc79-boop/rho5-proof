@@ -29,6 +29,8 @@ Use `python3 scripts/fetch.py --list` to list object ids. Choose `--group sample
 
 The published archive inventory totals **4,494,382,372 bytes (4.494 GB)**. It contains intentional overlap (for example, the small final-anchor example and corresponding B material). Do not interpret a sum of package sizes as a proof of transitive dependency closure.
 
+`RHO5_PAPER_REVIEW_PHASE1_20260912.zip` preserves the original pre-GitHub review collection byte for byte, including its historical publication-status fields. The current paper with the public repository address is in [paper/](../paper/); the old review record is not a statement about the present availability of this release.
+
 Outer extracted sizes sum regular archive-member sizes. They exclude nested compressed-tree expansion, third-party packages, build caches, filesystem overhead and new verification outputs. The two B archives alone contain approximately **21.54 GB** of outer regular-file payload. Retained hard links may reduce actual disk use.
 
 The historical-root archive exceeds GitHub’s per-asset limit. Five byte-transport parts reproduce the original 2,189,588,699-byte archive exactly. Keep room for both parts and the reconstructed archive until you choose to remove transport copies. The mathematical tree has not been changed.

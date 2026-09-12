@@ -9,7 +9,7 @@
 
 | 入口 | 内容 |
 |---|---|
-| [逐步验证教程](docs/VERIFY.md) | 固定版本、Lean 构建、小证书和完整计算路线 |
+| [中文逐步验证教程](docs/VERIFY.zh-CN.md) | 固定版本、Lean 构建、小证书和完整计算路线 |
 | [大小与计算资源](docs/DOWNLOADS.md) | 下载量、解压空间、已有耗时及未测量事项 |
 | [证明范围对应表](docs/PROOF_MAP.md) | Lean 已证明什么，哪些责任仍由外部计算和书面论证承担 |
 | [论文](paper/rho5_manuscript.pdf) | 主论证 |

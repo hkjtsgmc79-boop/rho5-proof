@@ -49,7 +49,7 @@ python3 scripts/fetch.py --group sample
 
 之后按[54 叶真实证书教程](docs/VERIFY.zh-CN.md#3-跑一个真实的-54-叶证书)运行数学检查。小例子约 **18.29 MB**，历史 X 运行约三分钟；一期 Lean 归档约 **6.43 MB**，原始完整归档约 **4.494 GB**。[文件大小、磁盘与耗时说明](docs/DOWNLOADS.md)。
 
-[v1.0.2 的六个附件](docs/DOWNLOADS.md#new-v102-attachments)包括与 Zenodo 相同的 PDF、对应源码与小规模检查、重放证据、另行标注范围的二期 Lean 源码快照及其依赖补充包；[新版清单](manifests/v1.0.2.json)固定其大小和哈希。
+[v1.0.2 的五个附件及独立依赖补充包](docs/DOWNLOADS.md#new-v102-attachments)包括与 Zenodo 相同的 PDF、对应源码与小规模检查、重放证据、另行标注范围的二期 Lean 源码快照及其依赖补充包；[新版清单](manifests/v1.0.2.json)固定其大小和哈希。
 
 **版本安排：** 新版论文、索引和本轮重放记录属于 `v1.0.2`；原来 24 个大型证书附件仍冻结在 `v1.0.0`。下载器核对哈希、续传并还原运输分片；下载成功本身不等于数学验证通过。GitHub 自动生成的源码 ZIP 不包含大证书附件。
 

@@ -63,7 +63,7 @@ Continue with [the 54-leaf anchor walkthrough](docs/VERIFY.md#3-a-small-real-cer
 
 **Download only what you need.** First-phase Lean archive: **6.43 MB**. Small example: **18.29 MB**. Original archive collection: **4.494 GB**. [Sizes, disk space and measured timings](docs/DOWNLOADS.md).
 
-The [six v1.0.2 attachments](docs/DOWNLOADS.md#new-v102-attachments) include PDFs matching Zenodo, corresponding source and bounded checks, the dated replay evidence, a separately labeled second-phase Lean source snapshot, and its additive dependency supplement. Their exact sizes and hashes are in [the release index](manifests/v1.0.2.json).
+The [five v1.0.2 attachments and separate dependency supplement](docs/DOWNLOADS.md#new-v102-attachments) include PDFs matching Zenodo, corresponding source and bounded checks, the dated replay evidence, a separately labeled second-phase Lean source snapshot, and its additive dependency supplement. Their exact sizes and hashes are in [the release index](manifests/v1.0.2.json).
 
 The original 24 release assets remain immutable under **v1.0.0**. **v1.0.2** adds new documents and dated replay evidence while retaining the original certificate URLs and SHA-256 identities. Existing verified certificate downloads remain valid. GitHub’s automatic “Source code” ZIP does not include the large certificates.
 

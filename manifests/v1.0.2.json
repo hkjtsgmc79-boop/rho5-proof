@@ -26,7 +26,8 @@
       "sha256": "3c4dcb433ad5af1deee9c2f18531e862110c62c501cdbe5c54ed2a9d06d97fc7",
       "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_Lean_Phase2_B366_SOURCE_ONLY_v1.0.2.zip",
       "id": "phase2_source",
-      "group": "lean"
+      "group": "lean",
+      "release_tag": "v1.0.2"
     },
     {
       "name": "RHO5_SUPPLEMENTARY_INDEX_v1.0.2.pdf",
@@ -34,7 +35,8 @@
       "sha256": "9014ff830c87b1d1695bb40ac82b5325753a60b8689286c7f75829ffab3a261e",
       "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_SUPPLEMENTARY_INDEX_v1.0.2.pdf",
       "id": "index_v102",
-      "group": "paper"
+      "group": "paper",
+      "release_tag": "v1.0.2"
     },
     {
       "name": "RHO5_v1.0.2_replay_evidence.zip",
@@ -42,7 +44,8 @@
       "sha256": "b64e10e02ab09094c26a4e876a25dc0797e3b5f7a4e9dea11223cea94aab69a8",
       "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_v1.0.2_replay_evidence.zip",
       "id": "replay_v102",
-      "group": "replay"
+      "group": "replay",
+      "release_tag": "v1.0.2"
     },
     {
       "name": "RHO5_v1.0.2_source_and_checks.zip",
@@ -50,7 +53,8 @@
       "sha256": "341ce24537f8d95d1a10ecc5121426f40729018b3c641aaa8730581a34a7cd2c",
       "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_v1.0.2_source_and_checks.zip",
       "id": "paper_source_v102",
-      "group": "paper"
+      "group": "paper",
+      "release_tag": "v1.0.2"
     },
     {
       "name": "rho5_manuscript_v1.0.2.pdf",
@@ -58,15 +62,17 @@
       "sha256": "0789c855cdadf909bfc31d4346b384bd2564b42bb90258eaad3721e950095d7a",
       "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/rho5_manuscript_v1.0.2.pdf",
       "id": "paper_v102",
-      "group": "paper"
+      "group": "paper",
+      "release_tag": "v1.0.2"
     },
     {
       "name": "RHO5_Lean_Phase2_B366_DEPENDENCY_SUPPLEMENT_v1.0.2.zip",
       "bytes": 520455,
       "sha256": "feef442da639bb9ddffc26136c9393223d6a888e8eadd7c788de9ab82d9594f0",
-      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_Lean_Phase2_B366_DEPENDENCY_SUPPLEMENT_v1.0.2.zip",
+      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2-lean-deps.1/RHO5_Lean_Phase2_B366_DEPENDENCY_SUPPLEMENT_v1.0.2.zip",
       "id": "phase2_dependencies",
-      "group": "lean"
+      "group": "lean",
+      "release_tag": "v1.0.2-lean-deps.1"
     }
   ],
   "inherited_certificate_release": "v1.0.0",
@@ -88,6 +94,10 @@
     "dependency_manifest_sha256": "00348c9d0508a364e3b6ffed51957a896592891ef25d0677c77095cb31d54a67",
     "static_status": "STATIC_SOURCE_CLOSURE_PASS_NOT_COMPILATION",
     "new_combined_lean_build_claimed": false,
-    "large_tree_execution": false
-  }
+    "large_tree_execution": false,
+    "asset_release_tag": "v1.0.2-lean-deps.1",
+    "separate_release_reason": "Original v1.0.2 release has immutable assets; dependency ZIP is a separate source supplement, not a new paper version."
+  },
+  "original_release_asset_count": 5,
+  "indexed_artifact_count": 6
 }

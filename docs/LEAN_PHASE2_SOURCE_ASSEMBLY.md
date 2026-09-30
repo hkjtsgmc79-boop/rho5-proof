@@ -6,9 +6,9 @@ The B366 source snapshot and its dependency supplement are **source review mater
 
 - The [frozen first-phase base](../lean/) retains the source/configuration identities in the original `v1.0.2` commit `007ac53dbd6194b56b6fc2d120b3ab1e294aa64a`. The current main branch adds publication material without changing those base files.
 - The original [B366 source ZIP](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_Lean_Phase2_B366_SOURCE_ONLY_v1.0.2.zip) has SHA-256 `3c4dcb433ad5af1deee9c2f18531e862110c62c501cdbe5c54ed2a9d06d97fc7`.
-- The [dependency supplement ZIP](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_Lean_Phase2_B366_DEPENDENCY_SUPPLEMENT_v1.0.2.zip) has SHA-256 `feef442da639bb9ddffc26136c9393223d6a888e8eadd7c788de9ab82d9594f0`. Its source files, historical evidence and helper are also browsable under [lean-phase2-support/](../lean-phase2-support/).
+- The [dependency supplement ZIP](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2-lean-deps.1/RHO5_Lean_Phase2_B366_DEPENDENCY_SUPPLEMENT_v1.0.2.zip) has SHA-256 `feef442da639bb9ddffc26136c9393223d6a888e8eadd7c788de9ab82d9594f0`. Its source files, historical evidence and helper are also browsable under [lean-phase2-support/](../lean-phase2-support/).
 
-The fixed original tag and five original attachments remain unchanged. The sixth attachment and current main-branch index were added on 30 September 2026. Thus the fixed tag's original download script does not know about the new attachment; use current main or the direct URLs.
+The fixed original tag and five original attachments remain unchanged. The separate `v1.0.2-lean-deps.1` dependency release and current main-branch index were added on 30 September 2026. GitHub locks the original release assets, so this source supplement uses a separate tag; it does not change the paper version. Thus the fixed tag's original download script does not know about the new attachment; use current main or the direct URLs.
 
 ## Actually tested static route
 

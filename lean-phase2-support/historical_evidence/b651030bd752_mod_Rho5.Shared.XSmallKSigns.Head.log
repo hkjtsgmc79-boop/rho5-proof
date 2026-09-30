@@ -1,0 +1,27 @@
+/root/microscope_ws/rho5_lean_dsh_20260911/D143/src/Rho5/Shared/XSmallKSigns/Head.lean:27:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/root/microscope_ws/rho5_lean_dsh_20260911/D143/src/Rho5/Shared/XSmallKSigns/Head.lean:29:42: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/root/microscope_ws/rho5_lean_dsh_20260911/D143/src/Rho5/Shared/XSmallKSigns/Head.lean:38:84: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/root/microscope_ws/rho5_lean_dsh_20260911/D143/src/Rho5/Shared/XSmallKSigns/Head.lean:41:91: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/root/microscope_ws/rho5_lean_dsh_20260911/D143/src/Rho5/Shared/XSmallKSigns/Head.lean:41:91: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/root/microscope_ws/rho5_lean_dsh_20260911/D143/src/Rho5/Shared/XSmallKSigns/Head.lean:66:25: warning: unused variable `hk`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+=== metrics ===
+lean_args: -j 1 -M 8192 -R /root/microscope_ws/rho5_lean_dsh_20260911/D143/src -o /root/microscope_ws/rho5_lean_dsh_20260911/D143/build/lib/lean/Rho5/Shared/XSmallKSigns/Head.olean /root/microscope_ws/rho5_lean_dsh_20260911/D143/src/Rho5/Shared/XSmallKSigns/Head.lean
+exit_code: 0
+rss_killed_by_wrapper: False  (ceiling 8388608 KiB)
+watched_vmhwm_kib: 2986044
+wall_seconds: 4.294
+child_user_cpu_seconds: 2.667
+child_sys_cpu_seconds: 1.594
+peak_rss_kib: 2998592

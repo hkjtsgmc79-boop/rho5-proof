@@ -1,0 +1,28 @@
+{
+  "module": "Rho5.Integration.V31BatchKernel.TreeKernel",
+  "exit_code": 0,
+  "wall_seconds": 3.173300266265869,
+  "source_sha256": "a52972e95b95fd626c4a189025261d1f2e69989fe215a5bf927aec1aa5c267ef",
+  "olean_sha256": "9f3ae5e41d9bced2ca4f1f908ad07221d1ce7a15c2df016d2e0110288d80aae2",
+  "log": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/results/Rho5.Integration.V31BatchKernel.TreeKernel_1789197991424310559.log",
+  "log_sha256": "c0088e16e5cfe195451748d63c91b1422a6308358e0a523baca3f4b874d0a2b8",
+  "command": [
+    "nice",
+    "-n",
+    "10",
+    "python3",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/tools/guard.py",
+    "180",
+    "-j1",
+    "-M8192",
+    "-R",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/src",
+    "-o",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/build/Rho5/Integration/V31BatchKernel/TreeKernel.olean",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/src/Rho5/Integration/V31BatchKernel/TreeKernel.lean"
+  ],
+  "LEAN_PATH": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/build:/root/microscope_ws/rho5_lean_dsh_20260911/D141/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+  "preflight_lean_jobs": [],
+  "available_mem_kib": 83443660,
+  "free_disk_bytes": 16124747776
+}

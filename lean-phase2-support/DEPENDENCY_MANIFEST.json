@@ -1,0 +1,1561 @@
+{
+  "schema": "RHO5_B366_SOURCE_DEPENDENCY_SUPPLEMENT_V1",
+  "created_date": "2026-09-30",
+  "original_public_tag": "v1.0.2",
+  "original_public_commit": "007ac53dbd6194b56b6fc2d120b3ab1e294aa64a",
+  "original_b366_zip_sha256": "3c4dcb433ad5af1deee9c2f18531e862110c62c501cdbe5c54ed2a9d06d97fc7",
+  "adopted_b366_module_count": 1452,
+  "support_modules_not_additional_adoptions": 4,
+  "dependency_sources_count": 76,
+  "static_recursive_closure_modules": 2027,
+  "new_lean_compilation": false,
+  "large_tree_execution": false,
+  "scope": "Exact historical source identities and static source import closure only; not an integrated cold build or unconditional paper theorem.",
+  "sources": [
+    {
+      "module": "Rho5.Certificate.B16.LiftBox.IntervalMul",
+      "path": "dependency_sources/Rho5/Certificate/B16/LiftBox/IntervalMul.lean",
+      "sha256": "1bbf7cb0857dd5a14c2079a805897a9eb895fac4202c57857c31ca07e26eecf0",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/outputs/d16_b16_from_base_20260912/src/Rho5/Certificate/B16/LiftBox/IntervalMul.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/244f7dfe1120_BUILD_STATUS.json",
+          "sha256": "244f7dfe112021f6506ebd3314b41de3f6e7845e153bd0f3a28ed48ebd2fd060",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/outputs/d16_b16_from_base_20260912/results/BUILD_STATUS.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; D16 accepted real interval multiplication support, not B16 full-tree closure."
+    },
+    {
+      "module": "Rho5.ExternalTailSaturation.LiftCoordinates",
+      "path": "dependency_sources/Rho5/ExternalTailSaturation/LiftCoordinates.lean",
+      "sha256": "183d4dd452566289aebbcd8005998f50a0393a1645d9ca13c16d14fa9851cdf5",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D122/src/Rho5/ExternalTailSaturation/LiftCoordinates.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/de47a0ae1556_BUILD_STATUS.json",
+          "sha256": "de47a0ae155616775437d0917d5ad40f1db3f6ad0e11b594d34b790a806745d0",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D122/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/a662a13f18d9_build_all_stdout.log",
+          "sha256": "a662a13f18d992b4e7e4deb925500325dd5ff3664e47e4101a310b206330d32b",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D122/results/actual_success_logs/build_all_stdout.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical 8-module core compilation. Last-pivot growth equality retains explicit dominance premises; no global equality claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Integration.V31BatchKernel.IntegerModel",
+      "path": "dependency_sources/Rho5/Integration/V31BatchKernel/IntegerModel.lean",
+      "sha256": "f471a4e83ff629d75896127166336a2aa615a6ed97e2a1cbeb3367f036df0e6a",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C10/final_evidence/src/Rho5/Integration/V31BatchKernel/IntegerModel.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/9f6a54eb01c9_Rho5.Integration.V31BatchKernel.IntegerModel_1789197887210202701.json",
+          "sha256": "9f6a54eb01c9c146f1f3f0d34ceceaa101b3d3370cda5028185b10e0d2dd7fb9",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C10/final_evidence/results/Rho5.Integration.V31BatchKernel.IntegerModel_1789197887210202701.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; C10 accepted final frozen source; generic integer kernel only, no whole V31 proof."
+    },
+    {
+      "module": "Rho5.Integration.V31BatchKernel.IntegerRows",
+      "path": "dependency_sources/Rho5/Integration/V31BatchKernel/IntegerRows.lean",
+      "sha256": "a14219797debb267d24862898cde623becc912aab27ad627906f92812aa59bd0",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C10/final_evidence/src/Rho5/Integration/V31BatchKernel/IntegerRows.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/65077f328aa9_Rho5.Integration.V31BatchKernel.IntegerRows_1789197981246434302.json",
+          "sha256": "65077f328aa9b575c67330e95c28fe68e4be47376a271297b5b92901b7e86c2d",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C10/final_evidence/results/Rho5.Integration.V31BatchKernel.IntegerRows_1789197981246434302.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; C10 accepted final frozen source; generic integer kernel only, no whole V31 proof."
+    },
+    {
+      "module": "Rho5.Integration.V31BatchKernel.IntegerSyntax",
+      "path": "dependency_sources/Rho5/Integration/V31BatchKernel/IntegerSyntax.lean",
+      "sha256": "f6870a3d4435f2ebe0960555f5fe2b84032ff4be5eb9d893b700efaee8f689c1",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C10/final_evidence/src/Rho5/Integration/V31BatchKernel/IntegerSyntax.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/b5552056ef2d_Rho5.Integration.V31BatchKernel.IntegerSyntax_1789197803985239839.json",
+          "sha256": "b5552056ef2d16c612cd0b2d9125142d9bcd3465064c81b0a5ed693924e2682b",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C10/final_evidence/results/Rho5.Integration.V31BatchKernel.IntegerSyntax_1789197803985239839.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; C10 accepted final frozen source; generic integer kernel only, no whole V31 proof."
+    },
+    {
+      "module": "Rho5.Integration.V31BatchKernel.SparseKernel",
+      "path": "dependency_sources/Rho5/Integration/V31BatchKernel/SparseKernel.lean",
+      "sha256": "a2bdb14757e4d331d9a01dc20bf7ef33e4fb8799fa8e22bdbe65f667929c84c3",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C10/final_evidence/src/Rho5/Integration/V31BatchKernel/SparseKernel.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/722a7fa8f934_Rho5.Integration.V31BatchKernel.SparseKernel_1789197845634973680.json",
+          "sha256": "722a7fa8f9348cb1032423dfd66659d9b852e089eccdc153e8113a6a6249a2cb",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C10/final_evidence/results/Rho5.Integration.V31BatchKernel.SparseKernel_1789197845634973680.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; C10 accepted final frozen source; generic integer kernel only, no whole V31 proof."
+    },
+    {
+      "module": "Rho5.Integration.V31BatchKernel.TreeKernel",
+      "path": "dependency_sources/Rho5/Integration/V31BatchKernel/TreeKernel.lean",
+      "sha256": "a52972e95b95fd626c4a189025261d1f2e69989fe215a5bf927aec1aa5c267ef",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C10/final_evidence/src/Rho5/Integration/V31BatchKernel/TreeKernel.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/1a02f3f98f6d_Rho5.Integration.V31BatchKernel.TreeKernel_1789197991424310559.json",
+          "sha256": "1a02f3f98f6df7ff29c8ff7dda401426ce36d0a456f0478d0b9a040d98e79342",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C10/final_evidence/results/Rho5.Integration.V31BatchKernel.TreeKernel_1789197991424310559.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; C10 accepted final frozen source; generic integer kernel only, no whole V31 proof."
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.Composition",
+      "path": "dependency_sources/Rho5/Shared/CertificateContraction/Composition.lean",
+      "sha256": "6dccee2f67c6bcd0edaac4bc7b6c19fc248066eb1ccb65f958c39f6199ae80ab",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C01/src/Rho5/Shared/CertificateContraction/Composition.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/40a0e5ed2529_FINAL_BUILD.json",
+          "sha256": "40a0e5ed252916dbe9787803a2cea4cfa4e9210d24695f2707e1ce0f674c9253",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C01/results/FINAL_BUILD.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; C01 accepted contraction foundation; runtime operations under explicitly retained source semantics."
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.Coordinate",
+      "path": "dependency_sources/Rho5/Shared/CertificateContraction/Coordinate.lean",
+      "sha256": "57ff0bbb69c15d2dcaddd71c75365f4a95138a6cc5be7e6a2c25d5ca2dd84eb8",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C01/src/Rho5/Shared/CertificateContraction/Coordinate.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/40a0e5ed2529_FINAL_BUILD.json",
+          "sha256": "40a0e5ed252916dbe9787803a2cea4cfa4e9210d24695f2707e1ce0f674c9253",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C01/results/FINAL_BUILD.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; C01 accepted contraction foundation; runtime operations under explicitly retained source semantics."
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.IntervalArithmetic",
+      "path": "dependency_sources/Rho5/Shared/CertificateContraction/IntervalArithmetic.lean",
+      "sha256": "dc5d6924b6728e4933be7b9611572a5d260676e8e0db949895cbab83282d0028",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C03/src/Rho5/Shared/CertificateContraction/IntervalArithmetic.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/aebb77d4f321_QUADRATIC_LIFT_REAL_READY.json",
+          "sha256": "aebb77d4f321f2f05e19b4b77bbd6f5710a601604a5104deb90c87aee144fe53",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C03/results/QUADRATIC_LIFT_REAL_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; C03 accepted stage A; same-source lifting and real interval arithmetic, transcription/whole-tree obligations retained."
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.QuadraticLift",
+      "path": "dependency_sources/Rho5/Shared/CertificateContraction/QuadraticLift.lean",
+      "sha256": "5dab61bc3cdae3c24ec7f85ab5673bd6e54a1e22f8f4516fce3a041dbb19a72f",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C03/src/Rho5/Shared/CertificateContraction/QuadraticLift.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/aebb77d4f321_QUADRATIC_LIFT_REAL_READY.json",
+          "sha256": "aebb77d4f321f2f05e19b4b77bbd6f5710a601604a5104deb90c87aee144fe53",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C03/results/QUADRATIC_LIFT_REAL_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; C03 accepted stage A; same-source lifting and real interval arithmetic, transcription/whole-tree obligations retained."
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.QuadraticSyntax",
+      "path": "dependency_sources/Rho5/Shared/CertificateContraction/QuadraticSyntax.lean",
+      "sha256": "f173a11cd57f04112ae6fab97096c58e2d9463977b4bfb90b197f3d937cf0008",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C03/src/Rho5/Shared/CertificateContraction/QuadraticSyntax.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/aebb77d4f321_QUADRATIC_LIFT_REAL_READY.json",
+          "sha256": "aebb77d4f321f2f05e19b4b77bbd6f5710a601604a5104deb90c87aee144fe53",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C03/results/QUADRATIC_LIFT_REAL_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; C03 accepted stage A; same-source lifting and real interval arithmetic, transcription/whole-tree obligations retained."
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.Runtime",
+      "path": "dependency_sources/Rho5/Shared/CertificateContraction/Runtime.lean",
+      "sha256": "2f2a2f877c2eb20c99c5ac5eb6a40d683f8930380566fce883b66f7407435373",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C01/src/Rho5/Shared/CertificateContraction/Runtime.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/40a0e5ed2529_FINAL_BUILD.json",
+          "sha256": "40a0e5ed252916dbe9787803a2cea4cfa4e9210d24695f2707e1ce0f674c9253",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C01/results/FINAL_BUILD.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; C01 accepted contraction foundation; runtime operations under explicitly retained source semantics."
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.Wave",
+      "path": "dependency_sources/Rho5/Shared/CertificateContraction/Wave.lean",
+      "sha256": "011302de09028ce888b4c8c1c6775c6e170a14d415ef5affe5e5e99056ceacc3",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C01/src/Rho5/Shared/CertificateContraction/Wave.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/40a0e5ed2529_FINAL_BUILD.json",
+          "sha256": "40a0e5ed252916dbe9787803a2cea4cfa4e9210d24695f2707e1ce0f674c9253",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/codex-parallel/C01/results/FINAL_BUILD.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; C01 accepted contraction foundation; runtime operations under explicitly retained source semantics."
+    },
+    {
+      "module": "Rho5.Shared.CertificateRules.Linear",
+      "path": "dependency_sources/Rho5/Shared/CertificateRules/Linear.lean",
+      "sha256": "6b27cf43c248bdc55880a938a680997f96b105256db119c7035b8661c7b09866",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D135/src/Rho5/Shared/CertificateRules/Linear.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/048d160419e3_CERTIFICATE_RULES_CORE_READY.json",
+          "sha256": "048d160419e3078f055ead0cb9ccec60e2f6afc4c00cc193e11e3f4d919bd92c",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D135/results/CERTIFICATE_RULES_CORE_READY.json"
+        },
+        {
+          "path": "historical_evidence/9da4cc3a05c4_CERTIFICATE_RULES_SCOPE_CORRECTION.json",
+          "sha256": "9da4cc3a05c4364a05b7f5c3f4a4b65bea4f8de83c44d71e80c06f0af7758b39",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D135/results/CERTIFICATE_RULES_SCOPE_CORRECTION.json"
+        },
+        {
+          "path": "historical_evidence/daa7d5bf4204_CERTIFICATE_RULES_REAL_SOUNDNESS_READY.json",
+          "sha256": "daa7d5bf42049bc438c0a10dc12007615dd25770364a44bfc202830aae26f433",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D135/results/CERTIFICATE_RULES_REAL_SOUNDNESS_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; D135 rational feasibility foundation; real soundness is in separate RealSoundness module, historical core prose superseded by scope correction."
+    },
+    {
+      "module": "Rho5.Shared.CertificateRules.ListCheck",
+      "path": "dependency_sources/Rho5/Shared/CertificateRules/ListCheck.lean",
+      "sha256": "2e35d5b2249e00eb5331a9a5e43a61d349567225c23e2feb6166cd83865b546e",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D135/src/Rho5/Shared/CertificateRules/ListCheck.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/7dd1c9a12771_CERTIFICATE_RULES_SAMPLES_READY.json",
+          "sha256": "7dd1c9a1277187275b6044c045c4de5b8bedcee7dece1c4254961c0f56edebb1",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D135/results/CERTIFICATE_RULES_SAMPLES_READY.json"
+        },
+        {
+          "path": "historical_evidence/9da4cc3a05c4_CERTIFICATE_RULES_SCOPE_CORRECTION.json",
+          "sha256": "9da4cc3a05c4364a05b7f5c3f4a4b65bea4f8de83c44d71e80c06f0af7758b39",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D135/results/CERTIFICATE_RULES_SCOPE_CORRECTION.json"
+        },
+        {
+          "path": "historical_evidence/daa7d5bf4204_CERTIFICATE_RULES_REAL_SOUNDNESS_READY.json",
+          "sha256": "daa7d5bf42049bc438c0a10dc12007615dd25770364a44bfc202830aae26f433",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D135/results/CERTIFICATE_RULES_REAL_SOUNDNESS_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; D135 symbolic list-to-Finset computational bridge and list checker, no whole-root result. Receipt historical broader prose corrected by CERTIFICATE_RULES_SCOPE_CORRECTION and REAL_SOUNDNESS_READY."
+    },
+    {
+      "module": "Rho5.Shared.CertificateRules.RealSoundness",
+      "path": "dependency_sources/Rho5/Shared/CertificateRules/RealSoundness.lean",
+      "sha256": "7c756c3a9b269e163416bdc8bce2b73b67a8be9987c8ad47dedaa48c0ff92e45",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D135/src/Rho5/Shared/CertificateRules/RealSoundness.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/daa7d5bf4204_CERTIFICATE_RULES_REAL_SOUNDNESS_READY.json",
+          "sha256": "daa7d5bf42049bc438c0a10dc12007615dd25770364a44bfc202830aae26f433",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D135/results/CERTIFICATE_RULES_REAL_SOUNDNESS_READY.json"
+        },
+        {
+          "path": "historical_evidence/9da4cc3a05c4_CERTIFICATE_RULES_SCOPE_CORRECTION.json",
+          "sha256": "9da4cc3a05c4364a05b7f5c3f4a4b65bea4f8de83c44d71e80c06f0af7758b39",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D135/results/CERTIFICATE_RULES_SCOPE_CORRECTION.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; D135 real-valued linear-certificate soundness; no original-matrix transcription or full cover closure."
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.Box",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/Box.lean",
+      "sha256": "2456e93bffd254d728a024b96009e04491e79c44e4d94e7606a320dfb3d5434c",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/outputs/assembly_intake_20260912/M01/src/Rho5/Shared/MainlineTreeCover/Box.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/5e0b8c93a490_Rho5_Shared_MainlineTreeCover_Box_20260912T042401.180162Z.json",
+          "sha256": "5e0b8c93a490afa3730013678b715498c4399e1280c41316f4483f164c8de46b",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/outputs/assembly_intake_20260912/M01/evidence/Rho5_Shared_MainlineTreeCover_Box_20260912T042401.180162Z.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_HASH_BOUND_COMPILE_PASS_NOT_FRESH_BUILD; M01 finite rational-box and split-cover generic API, not root closure."
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.Tree",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/Tree.lean",
+      "sha256": "d956f5858aa5720d6c75ef3dd10e7a2d4b01fcee4d019739efee1abfa6825143",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/outputs/assembly_intake_20260912/M01/src/Rho5/Shared/MainlineTreeCover/Tree.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/11ed2b2a033e_Rho5_Shared_MainlineTreeCover_Tree_20260912T042404.114790Z.json",
+          "sha256": "11ed2b2a033e75bc413816879d34a9c262dd7af52997ee9e929fe4419cb3fe33",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/outputs/assembly_intake_20260912/M01/evidence/Rho5_Shared_MainlineTreeCover_Tree_20260912T042404.114790Z.json"
+        },
+        {
+          "path": "historical_evidence/88629207fde8_INTAKE_RECEIPT.json",
+          "sha256": "88629207fde8f2df35b7b8ed82f7dc2ab5b58c21a9e2cecd1124610533aef2a4",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/outputs/assembly_intake_20260912/M01/INTAKE_RECEIPT.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE_AND_INTAKE; finite prefix/coverage, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Binding000",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Binding000.lean",
+      "sha256": "abcd131093d43c76ddef5e882040d080f6a5f9d400cc09d837b3a095ddfdf91d",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Binding000.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/376223891254_Rho5_Shared_MainlineTreeCover_V31Batch_Binding000_20260912T060603.651715Z.json",
+          "sha256": "376223891254412dec6bed2430524cb7823451efad0f7b84b201ea983bbc7abe",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding000_20260912T060603.651715Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Binding001",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Binding001.lean",
+      "sha256": "f51dd9b23bf4316cc03d91da03fc8e00dfcb880237285331bf7d91ab375eef1c",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Binding001.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/13e405ce39f6_Rho5_Shared_MainlineTreeCover_V31Batch_Binding001_20260912T060617.167915Z.json",
+          "sha256": "13e405ce39f620c66f45a7bb06cf0968b144eeaf77f7e9d42f7ae67c6532b261",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding001_20260912T060617.167915Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Binding002",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Binding002.lean",
+      "sha256": "77f68c4abc883213be81828a6013616cee7ed6526b86ff413e73b9449649ec90",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Binding002.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/d8953a39e259_Rho5_Shared_MainlineTreeCover_V31Batch_Binding002_20260912T060630.719970Z.json",
+          "sha256": "d8953a39e259ba3c9d90b46a95b028790379d1c7223fd9047c18688265d2b2d2",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding002_20260912T060630.719970Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Binding003",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Binding003.lean",
+      "sha256": "6922f22950da4c3a3329148d431b0051305ccda066398b9cc37bdd6bd94f550d",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Binding003.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/9f9e74f4a0d5_Rho5_Shared_MainlineTreeCover_V31Batch_Binding003_20260912T060644.229898Z.json",
+          "sha256": "9f9e74f4a0d5f3df69d82eefdcf0642b8bcabe743e23616bcc02c8a7889ef9b6",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding003_20260912T060644.229898Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Binding004",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Binding004.lean",
+      "sha256": "cef9fa00a884deac311274c91fbcee4f307fd76c5a5d0a72dd929ea60acedb26",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Binding004.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/df122019f660_Rho5_Shared_MainlineTreeCover_V31Batch_Binding004_20260912T060658.000348Z.json",
+          "sha256": "df122019f660b9c5c983c20a6a48876d272edf8bb6f61f8179c61066576cbc8d",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding004_20260912T060658.000348Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.FiveSource",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/FiveSource.lean",
+      "sha256": "1bcb7504645f1d03d2b90936187c57a2f9103ff8890cafe67e65c1a48070b523",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/FiveSource.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/bf63d9c96c6f_Rho5_Shared_MainlineTreeCover_V31Batch_FiveSource_20260912T060711.425788Z.json",
+          "sha256": "bf63d9c96c6f92890342c91f23b74855cc36df176931f056e4935580defc94dd",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_FiveSource_20260912T060711.425788Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/FiveTree.lean",
+      "sha256": "5e1a043837c53510ee3f98acf8ef133f8ba303b628e9b0164dc2bc1515da7c60",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/FiveTree.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/aa0dc104815c_Rho5_Shared_MainlineTreeCover_V31Batch_FiveTree_20260912T052103.883613Z.json",
+          "sha256": "aa0dc104815c12c92ed8c0e469fac2ee89ab031297e628db145f6c415c5584b8",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_FiveTree_20260912T052103.883613Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.GenericSourceBridge",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/GenericSourceBridge.lean",
+      "sha256": "aa8b58cd31f090cce596cd3ed0b2dd197fa65008fb277977882fb9762909fee3",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/GenericSourceBridge.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/61734a144125_Rho5_Shared_MainlineTreeCover_V31Batch_GenericSourceBridge_20260912T055332.398324Z.json",
+          "sha256": "61734a144125c7c318bb24ba1e95bfee3d7526cfaa904566de458a298a33e9c5",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_GenericSourceBridge_20260912T055332.398324Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBindings.lean",
+      "sha256": "b4885ec92026d3669056eef6e887c979f3556eab173e792be29c4a71d35a9a4a",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBindings.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/d92648c46f82_Rho5_Shared_MainlineTreeCover_V31Batch_GeometryBindings_20260912T060454.795519Z.json",
+          "sha256": "d92648c46f821773d79f4f912e825f0777844802d741579613309230363af765",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_GeometryBindings_20260912T060454.795519Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBoxes",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.lean",
+      "sha256": "1a7c967f8e76d9dfcaf6c25e4d855367fb389de413dfbe5c2f2027ae0d8f762c",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/435ed95ffa3c_Rho5_Shared_MainlineTreeCover_V31Batch_GeometryBoxes_20260912T060000.212071Z.json",
+          "sha256": "435ed95ffa3cc747a2d85ec6616e8896eb3dc87a7b5001f23732c856bb367389",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_GeometryBoxes_20260912T060000.212071Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf000.lean",
+      "sha256": "ae1bcff67471465c3cd2a80b3fd780351ad4efae1fa21f3e7402eb59a16f9813",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf000.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/8ddc5fed46e4_Rho5_Shared_MainlineTreeCover_V31Batch_Leaf000_20260912T052859.986200Z.json",
+          "sha256": "8ddc5fed46e470a31d5f63deaa8cb194accd250ba05fcec6b4d860fdb5248093",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf000_20260912T052859.986200Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf001.lean",
+      "sha256": "9ee163f79640a5b04554bb686913978387a865cd4ca56cf5127504e4cd3b0c5e",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf001.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/6a6718a8bf63_Rho5_Shared_MainlineTreeCover_V31Batch_Leaf001_20260912T054614.640711Z.json",
+          "sha256": "6a6718a8bf63fbe6c0079f99ef2553c52c7828178e8d292afb981723cfbecf58",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf001_20260912T054614.640711Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf002.lean",
+      "sha256": "29034ba2c4f3d778f2d81d55b9174f2080cc978e50ab58ea15d8ee0f92daed49",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf002.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/7fc5cd726902_Rho5_Shared_MainlineTreeCover_V31Batch_Leaf002_20260912T054619.481413Z.json",
+          "sha256": "7fc5cd726902bf91cc9be80572a75473938a3429db98536be0b34e561caf6554",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf002_20260912T054619.481413Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf003.lean",
+      "sha256": "06e6a5eb9375b598c09e3a293956900ed443a936b641946ece533f963477c62c",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf003.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/755c715e1f47_Rho5_Shared_MainlineTreeCover_V31Batch_Leaf003_20260912T054639.738007Z.json",
+          "sha256": "755c715e1f478ab2c4c1799005ebdb006b1763ca58667413532eb1838f40312f",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf003_20260912T054639.738007Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf004.lean",
+      "sha256": "7b8e9e4bedca989d87420e7eb890c2010b257c7c6a342e472d08fdb612d83755",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf004.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/605c0b347e59_Rho5_Shared_MainlineTreeCover_V31Batch_Leaf004_20260912T054653.800634Z.json",
+          "sha256": "605c0b347e5927320b5a23b9fe541a942b603b02ebfa0d2a4a87a12533c0f1cd",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf004_20260912T054653.800634Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Model",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Model.lean",
+      "sha256": "4f5f6b7d6357d2a8fb7c9b3f9f22fd453387a1d9f9eb120136d7614318a09469",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Model.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/88107507e1d8_Rho5_Shared_MainlineTreeCover_V31Batch_Model_20260912T054833.458000Z.json",
+          "sha256": "88107507e1d8c49d2cdb799e77e6d89fc4023691bd59f04787736165a368109a",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Model_20260912T054833.458000Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Rows000.lean",
+      "sha256": "623fe681c3f1d35bcf319a1caafc7a5230df2c310c5e66ece7e5ad586a6c3865",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Rows000.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/53cc0b606905_Rho5_Shared_MainlineTreeCover_V31Batch_Rows000_20260912T060213.052013Z.json",
+          "sha256": "53cc0b60690567b068b198c7803996dfa7358afd6ce093599cd7b78b23988846",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows000_20260912T060213.052013Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Rows001",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Rows001.lean",
+      "sha256": "1292266003720fe41f2a51270c5885e41e461e00946bbbae7c8226ad424fd5a8",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Rows001.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/75ef2a3d0c32_Rho5_Shared_MainlineTreeCover_V31Batch_Rows001_20260912T060209.896796Z.json",
+          "sha256": "75ef2a3d0c3222c5b56249d9ab81084c4d1362bd0fd35e387361f07cc23ade0d",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows001_20260912T060209.896796Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Rows002.lean",
+      "sha256": "84e4094551b38057af1a162b47b7d09ba999602de5b79b635e1e7e095126b9fe",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Rows002.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/ec83d899f18b_Rho5_Shared_MainlineTreeCover_V31Batch_Rows002_20260912T060252.528849Z.json",
+          "sha256": "ec83d899f18b988ac69748b71a96ec257c0acffd70f3d9f7348d7d6e3f3c592b",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows002_20260912T060252.528849Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Rows003.lean",
+      "sha256": "a6ddd5df665b8ea0950055618f21e47d5e022b4310f19bdddaae86f83c3366fc",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Rows003.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/6334b8931ddd_Rho5_Shared_MainlineTreeCover_V31Batch_Rows003_20260912T060338.092213Z.json",
+          "sha256": "6334b8931ddd795684e3cec7716b0dd27d2577a56548afae772b9940ef3f6155",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows003_20260912T060338.092213Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Rows004.lean",
+      "sha256": "7cd4d8c485b64af559e7c51bf87c37cb2b01ed12a2550dfe77378569deea3a50",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Rows004.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/4b52dc13c710_Rho5_Shared_MainlineTreeCover_V31Batch_Rows004_20260912T060405.585190Z.json",
+          "sha256": "4b52dc13c7103b2117af390daaafe0ae8e01749a967c6052c58e368d26b2a70f",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows004_20260912T060405.585190Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.Scaling",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.lean",
+      "sha256": "b17e8d90bf79e21ec1d293aaaf6d991536f30212aeb781e091b38c2ff62f2d42",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/89cf91149f1f_Rho5_Shared_MainlineTreeCover_V31Batch_Scaling_20260912T052303.636999Z.json",
+          "sha256": "89cf91149f1f5543ec1bc8090c6e93d26875c5bfd3802c06c3979c446e4be026",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Scaling_20260912T052303.636999Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.SparseIntegerScaling",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/SparseIntegerScaling.lean",
+      "sha256": "0a14a6ec65d3fa90878c50e40acaa6b9a76fdd2792d54e0477b5748150f0a15a",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/SparseIntegerScaling.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/4dd6360afc0a_Rho5_Shared_MainlineTreeCover_V31Batch_SparseIntegerScaling_20260912T055817.884512Z.json",
+          "sha256": "4dd6360afc0af5148c26907c5ad4422bd4be23bc1fdacf5b0f24c8cb0f8be0fc",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_SparseIntegerScaling_20260912T055817.884512Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Batch.TerminalBridge",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Batch/TerminalBridge.lean",
+      "sha256": "3b9ed84f9716936457d2a15c1e2923d92ec05b040a187c66c47eeed115b1fdd9",
+      "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src/Rho5/Shared/MainlineTreeCover/V31Batch/TerminalBridge.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/65b8192953f3_Rho5_Shared_MainlineTreeCover_V31Batch_TerminalBridge_20260912T050855.876164Z.json",
+          "sha256": "65b8192953f39bbc847e9da52018b2b19b657afadce375a408c44c7e12868faa",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/evidence/Rho5_Shared_MainlineTreeCover_V31Batch_TerminalBridge_20260912T050855.876164Z.json"
+        },
+        {
+          "path": "historical_evidence/76d1f5e04057_V31_BATCH_REAL_EMPTY_READY.json",
+          "sha256": "76d1f5e04057c6dfcda44b867e486ae4a6706e2ea3d9a9ebf08c32db26823107",
+          "original_project_path": "2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/V31_BATCH_REAL_EMPTY_READY.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE; original five-leaf small subtree, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.MainlineTreeCover.V31Prefix",
+      "path": "dependency_sources/Rho5/Shared/MainlineTreeCover/V31Prefix.lean",
+      "sha256": "d4371738bbf876f989e2bf13c4908e168c12ce361ad6775d1d4e672f7a354d44",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/outputs/assembly_intake_20260912/M01/src/Rho5/Shared/MainlineTreeCover/V31Prefix.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/9c397d7b5cb4_Rho5_Shared_MainlineTreeCover_V31Prefix_20260912T044759.660554Z.json",
+          "sha256": "9c397d7b5cb4e20330cff0982f79045f6d20c32f9c5cfad2c0af813a8806640f",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/outputs/assembly_intake_20260912/M01/evidence/Rho5_Shared_MainlineTreeCover_V31Prefix_20260912T044759.660554Z.json"
+        },
+        {
+          "path": "historical_evidence/88629207fde8_INTAKE_RECEIPT.json",
+          "sha256": "88629207fde8f2df35b7b8ed82f7dc2ab5b58c21a9e2cecd1124610533aef2a4",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/outputs/assembly_intake_20260912/M01/INTAKE_RECEIPT.json"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "HISTORICAL_SOURCE_BOUND_COMPILE_AND_INTAKE; finite prefix/coverage, not whole V31"
+    },
+    {
+      "module": "Rho5.Shared.SchurFourPivotBound",
+      "path": "dependency_sources/Rho5/Shared/SchurFourPivotBound.lean",
+      "sha256": "9ac3c59c6dc729863e3295f2d254b4087656a9449b7993c1aae14a5271c76713",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D138/src/Rho5/Shared/SchurFourPivotBound.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/2c757122d085_SCHUR_FOUR_PIVOT_READY.json",
+          "sha256": "2c757122d085148a855ae6cf1c5f871712476e1933188fea53a49a050acdd12d",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D138/results/SCHUR_FOUR_PIVOT_READY.json"
+        },
+        {
+          "path": "historical_evidence/a4914d183328_mod_Rho5.Shared.SchurFourPivotBound.log",
+          "sha256": "a4914d183328b22fc937f0eecfc6863cef99526f88794c054e940a8fceb2edd6",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D138/results/actual_success_logs/mod_Rho5.Shared.SchurFourPivotBound.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical fourth-pivot/Schur envelope compilation; no global RHO5 equality claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XHighRPhysicalRows.CoreSlacks",
+      "path": "dependency_sources/Rho5/Shared/XHighRPhysicalRows/CoreSlacks.lean",
+      "sha256": "e990c91f1cbc1139793f4019cda4578d03d6beac7672d094199afb879ba0abd9",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D149/src/Rho5/Shared/XHighRPhysicalRows/CoreSlacks.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/f02a2da38db8_X_HIGH_R_PHYSICAL_ROWS_READY.json",
+          "sha256": "f02a2da38db820f49bd402ac662c3e5c3bc2f6e09bebd4efda6ef058bb949622",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D149/results/X_HIGH_R_PHYSICAL_ROWS_READY.json"
+        },
+        {
+          "path": "historical_evidence/48c8cbb9ea52_BUILD_STATUS.json",
+          "sha256": "48c8cbb9ea521450e9ca75667454d4c15642fc96df652a30ef5547374b5614d1",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D149/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/a3261e83e622_CoreSlacks.log",
+          "sha256": "a3261e83e622dab1c9e9489fb618330398f99a795a49420d8381d1a41558302c",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D149/results/SUCCESS_LOGS/CoreSlacks.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical high-r physical-row chain compilation; no whole-theorem claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XHighRPhysicalRows.Head",
+      "path": "dependency_sources/Rho5/Shared/XHighRPhysicalRows/Head.lean",
+      "sha256": "fc8c6ec7dfcf236806d84ad2da51e3ace0bfef0f68f7438ffca1905eef72bf73",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D149/src/Rho5/Shared/XHighRPhysicalRows/Head.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/f02a2da38db8_X_HIGH_R_PHYSICAL_ROWS_READY.json",
+          "sha256": "f02a2da38db820f49bd402ac662c3e5c3bc2f6e09bebd4efda6ef058bb949622",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D149/results/X_HIGH_R_PHYSICAL_ROWS_READY.json"
+        },
+        {
+          "path": "historical_evidence/48c8cbb9ea52_BUILD_STATUS.json",
+          "sha256": "48c8cbb9ea521450e9ca75667454d4c15642fc96df652a30ef5547374b5614d1",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D149/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/23caf8528497_Head.log",
+          "sha256": "23caf85284979966ba06f4b8abb083de86a871b631b0e18a1c05a3d6f6db44ac",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D149/results/SUCCESS_LOGS/Head.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical high-r physical-row chain compilation; no whole-theorem claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XHighRSource.CoordTransport",
+      "path": "dependency_sources/Rho5/Shared/XHighRSource/CoordTransport.lean",
+      "sha256": "21448640e936741e506080d8cccab5c6e9a9d338e8ddf5b8795c437966c55a36",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/src/Rho5/Shared/XHighRSource/CoordTransport.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/0b76ea8e5bc3_BUILD_STATUS.json",
+          "sha256": "0b76ea8e5bc363853a5c6519fb82ba161afdcceea39c1c68d5d876f67510df6a",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/5be6bdc66561_X_HIGH_R_SOURCE_READY.json",
+          "sha256": "5be6bdc66561aa9bfd96906adf4868f75dd5e9e35dc01cde3771fc7771567b47",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/X_HIGH_R_SOURCE_READY.json"
+        },
+        {
+          "path": "historical_evidence/a26a740bc51e_SOURCE_SHA256SUMS.txt",
+          "sha256": "a26a740bc51edc1a9f291251741e23e5ed4edebb1054243859b809173aa50c31",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/SOURCE_SHA256SUMS.txt"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical high-r same-source coordinate/packet chain compilation; retained downstream domain safety obligations unchanged. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XHighRSource.Defs",
+      "path": "dependency_sources/Rho5/Shared/XHighRSource/Defs.lean",
+      "sha256": "bf68278f0d657f287a5089d21d1dd4459e043fd39ce97d034d1262b7dedaebdb",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/src/Rho5/Shared/XHighRSource/Defs.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/0b76ea8e5bc3_BUILD_STATUS.json",
+          "sha256": "0b76ea8e5bc363853a5c6519fb82ba161afdcceea39c1c68d5d876f67510df6a",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/5be6bdc66561_X_HIGH_R_SOURCE_READY.json",
+          "sha256": "5be6bdc66561aa9bfd96906adf4868f75dd5e9e35dc01cde3771fc7771567b47",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/X_HIGH_R_SOURCE_READY.json"
+        },
+        {
+          "path": "historical_evidence/a26a740bc51e_SOURCE_SHA256SUMS.txt",
+          "sha256": "a26a740bc51edc1a9f291251741e23e5ed4edebb1054243859b809173aa50c31",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/SOURCE_SHA256SUMS.txt"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical high-r same-source coordinate/packet chain compilation; retained downstream domain safety obligations unchanged. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XHighRSource.DiagramPackets",
+      "path": "dependency_sources/Rho5/Shared/XHighRSource/DiagramPackets.lean",
+      "sha256": "5b3d7f4e33417c1b394464b8ea08bffd9ae111e34071c00286969a59acacb79d",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/src/Rho5/Shared/XHighRSource/DiagramPackets.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/0b76ea8e5bc3_BUILD_STATUS.json",
+          "sha256": "0b76ea8e5bc363853a5c6519fb82ba161afdcceea39c1c68d5d876f67510df6a",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/5be6bdc66561_X_HIGH_R_SOURCE_READY.json",
+          "sha256": "5be6bdc66561aa9bfd96906adf4868f75dd5e9e35dc01cde3771fc7771567b47",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/X_HIGH_R_SOURCE_READY.json"
+        },
+        {
+          "path": "historical_evidence/a26a740bc51e_SOURCE_SHA256SUMS.txt",
+          "sha256": "a26a740bc51edc1a9f291251741e23e5ed4edebb1054243859b809173aa50c31",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/SOURCE_SHA256SUMS.txt"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical high-r same-source coordinate/packet chain compilation; retained downstream domain safety obligations unchanged. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XHighRSource.Height",
+      "path": "dependency_sources/Rho5/Shared/XHighRSource/Height.lean",
+      "sha256": "9ac0f8012c11609a3f6a501d23ddf280b1a25c86d82de0d21500c8853ea077f1",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/src/Rho5/Shared/XHighRSource/Height.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/0b76ea8e5bc3_BUILD_STATUS.json",
+          "sha256": "0b76ea8e5bc363853a5c6519fb82ba161afdcceea39c1c68d5d876f67510df6a",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/5be6bdc66561_X_HIGH_R_SOURCE_READY.json",
+          "sha256": "5be6bdc66561aa9bfd96906adf4868f75dd5e9e35dc01cde3771fc7771567b47",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/X_HIGH_R_SOURCE_READY.json"
+        },
+        {
+          "path": "historical_evidence/a26a740bc51e_SOURCE_SHA256SUMS.txt",
+          "sha256": "a26a740bc51edc1a9f291251741e23e5ed4edebb1054243859b809173aa50c31",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/SOURCE_SHA256SUMS.txt"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical high-r same-source coordinate/packet chain compilation; retained downstream domain safety obligations unchanged. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XHighRSource.PRules",
+      "path": "dependency_sources/Rho5/Shared/XHighRSource/PRules.lean",
+      "sha256": "7f283817590638a2663a1aac80e1fcbe77c5f7cd54110f73579ed4be11f702cc",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/src/Rho5/Shared/XHighRSource/PRules.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/0b76ea8e5bc3_BUILD_STATUS.json",
+          "sha256": "0b76ea8e5bc363853a5c6519fb82ba161afdcceea39c1c68d5d876f67510df6a",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/5be6bdc66561_X_HIGH_R_SOURCE_READY.json",
+          "sha256": "5be6bdc66561aa9bfd96906adf4868f75dd5e9e35dc01cde3771fc7771567b47",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/X_HIGH_R_SOURCE_READY.json"
+        },
+        {
+          "path": "historical_evidence/a26a740bc51e_SOURCE_SHA256SUMS.txt",
+          "sha256": "a26a740bc51edc1a9f291251741e23e5ed4edebb1054243859b809173aa50c31",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/SOURCE_SHA256SUMS.txt"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical high-r same-source coordinate/packet chain compilation; retained downstream domain safety obligations unchanged. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XHighRSource.SchurTransport",
+      "path": "dependency_sources/Rho5/Shared/XHighRSource/SchurTransport.lean",
+      "sha256": "484b35e63557a74c6fdc8ddddb9e3d86698b9472b255acdd55e83903545db3cb",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/src/Rho5/Shared/XHighRSource/SchurTransport.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/0b76ea8e5bc3_BUILD_STATUS.json",
+          "sha256": "0b76ea8e5bc363853a5c6519fb82ba161afdcceea39c1c68d5d876f67510df6a",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/5be6bdc66561_X_HIGH_R_SOURCE_READY.json",
+          "sha256": "5be6bdc66561aa9bfd96906adf4868f75dd5e9e35dc01cde3771fc7771567b47",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/X_HIGH_R_SOURCE_READY.json"
+        },
+        {
+          "path": "historical_evidence/a26a740bc51e_SOURCE_SHA256SUMS.txt",
+          "sha256": "a26a740bc51edc1a9f291251741e23e5ed4edebb1054243859b809173aa50c31",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/SOURCE_SHA256SUMS.txt"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical high-r same-source coordinate/packet chain compilation; retained downstream domain safety obligations unchanged. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XHighRSource.SourceRows",
+      "path": "dependency_sources/Rho5/Shared/XHighRSource/SourceRows.lean",
+      "sha256": "a67629ab741a9457f5f5159e07f7a8cc556adca6245f1e28e3164b4229898595",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/src/Rho5/Shared/XHighRSource/SourceRows.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/0b76ea8e5bc3_BUILD_STATUS.json",
+          "sha256": "0b76ea8e5bc363853a5c6519fb82ba161afdcceea39c1c68d5d876f67510df6a",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/5be6bdc66561_X_HIGH_R_SOURCE_READY.json",
+          "sha256": "5be6bdc66561aa9bfd96906adf4868f75dd5e9e35dc01cde3771fc7771567b47",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/X_HIGH_R_SOURCE_READY.json"
+        },
+        {
+          "path": "historical_evidence/a26a740bc51e_SOURCE_SHA256SUMS.txt",
+          "sha256": "a26a740bc51edc1a9f291251741e23e5ed4edebb1054243859b809173aa50c31",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/SOURCE_SHA256SUMS.txt"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical high-r same-source coordinate/packet chain compilation; retained downstream domain safety obligations unchanged. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XHighRSource.Transpose",
+      "path": "dependency_sources/Rho5/Shared/XHighRSource/Transpose.lean",
+      "sha256": "c091f39dbcf587e52db54f9078a96887ce9962ec60b4c6ba90100678d4754b8e",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/src/Rho5/Shared/XHighRSource/Transpose.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/0b76ea8e5bc3_BUILD_STATUS.json",
+          "sha256": "0b76ea8e5bc363853a5c6519fb82ba161afdcceea39c1c68d5d876f67510df6a",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/5be6bdc66561_X_HIGH_R_SOURCE_READY.json",
+          "sha256": "5be6bdc66561aa9bfd96906adf4868f75dd5e9e35dc01cde3771fc7771567b47",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/X_HIGH_R_SOURCE_READY.json"
+        },
+        {
+          "path": "historical_evidence/a26a740bc51e_SOURCE_SHA256SUMS.txt",
+          "sha256": "a26a740bc51edc1a9f291251741e23e5ed4edebb1054243859b809173aa50c31",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D145/results/SOURCE_SHA256SUMS.txt"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical high-r same-source coordinate/packet chain compilation; retained downstream domain safety obligations unchanged. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKBranch.MatrixBridge",
+      "path": "dependency_sources/Rho5/Shared/XSmallKBranch/MatrixBridge.lean",
+      "sha256": "03e3b6dca91023578a1888b293088e797244820a1c49463d6778a20f50dda128",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/src/Rho5/Shared/XSmallKBranch/MatrixBridge.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/06daabb4dab7_X_V31_SOURCE_ROWS_BRIDGE_READY.json",
+          "sha256": "06daabb4dab757cd1f60e2096a39dca7eb6e72bdd6042f14146685cdc8cad3c7",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/X_V31_SOURCE_ROWS_BRIDGE_READY.json"
+        },
+        {
+          "path": "historical_evidence/ae5aa2fb00e7_BUILD_STATUS.json",
+          "sha256": "ae5aa2fb00e7b9e35949c076574b9e6d405ef106f0fe47e677316e33f502f986",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/769ae72cf7dd_REPORT.md",
+          "sha256": "769ae72cf7ddb7dc38d1630fa19dd2e3ff0b573099d37632c934897910cfa369",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/REPORT.md"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical actual-matrix source/root-box bridge compilation; whole V31 tree and residual frontiers remain unclosed by this lane. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKBranch.Model",
+      "path": "dependency_sources/Rho5/Shared/XSmallKBranch/Model.lean",
+      "sha256": "6a88898b0aadb4edbf44632b6d90afba423128e9b11327e3462db5f2660a0b67",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/src/Rho5/Shared/XSmallKBranch/Model.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/f0cffeeeaf2b_X_V31_SOURCE_ROWS_READY.json",
+          "sha256": "f0cffeeeaf2bc7d9d67804d8028b2d455a0769d9addf91567a86778ea69d6385",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/X_V31_SOURCE_ROWS_READY.json"
+        },
+        {
+          "path": "historical_evidence/ae5aa2fb00e7_BUILD_STATUS.json",
+          "sha256": "ae5aa2fb00e7b9e35949c076574b9e6d405ef106f0fe47e677316e33f502f986",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/769ae72cf7dd_REPORT.md",
+          "sha256": "769ae72cf7ddb7dc38d1630fa19dd2e3ff0b573099d37632c934897910cfa369",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/REPORT.md"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical actual-matrix source/root-box bridge compilation; whole V31 tree and residual frontiers remain unclosed by this lane. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKBranch.NoRho4",
+      "path": "dependency_sources/Rho5/Shared/XSmallKBranch/NoRho4.lean",
+      "sha256": "c11363e94e577a90c659ad108963e61aa19005bebe03e1d0f8dd2c4cbf56f5b8",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/src/Rho5/Shared/XSmallKBranch/NoRho4.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/8ef80ce91adf_X_V31_ROOTBOX_READY.json",
+          "sha256": "8ef80ce91adf234f36d3aa34abce42d2a4e377b5a222fb763881f95b5af6a3f8",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/X_V31_ROOTBOX_READY.json"
+        },
+        {
+          "path": "historical_evidence/ae5aa2fb00e7_BUILD_STATUS.json",
+          "sha256": "ae5aa2fb00e7b9e35949c076574b9e6d405ef106f0fe47e677316e33f502f986",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/769ae72cf7dd_REPORT.md",
+          "sha256": "769ae72cf7ddb7dc38d1630fa19dd2e3ff0b573099d37632c934897910cfa369",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/REPORT.md"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical actual-matrix source/root-box bridge compilation; whole V31 tree and residual frontiers remain unclosed by this lane. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKBranch.PhysicalBridge",
+      "path": "dependency_sources/Rho5/Shared/XSmallKBranch/PhysicalBridge.lean",
+      "sha256": "2fcc50d014489778deeb53313a323aa9cd876cc16e84a64517c7160cd3c3d609",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/src/Rho5/Shared/XSmallKBranch/PhysicalBridge.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/2b06ad60a930_X_V31_ACTUAL_MATRIX_106_ROWS_READY.json",
+          "sha256": "2b06ad60a930b7acdc16c9bc147b128b0da5649b7ec93469ab72c6dfeebcefd2",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/X_V31_ACTUAL_MATRIX_106_ROWS_READY.json"
+        },
+        {
+          "path": "historical_evidence/ae5aa2fb00e7_BUILD_STATUS.json",
+          "sha256": "ae5aa2fb00e7b9e35949c076574b9e6d405ef106f0fe47e677316e33f502f986",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/769ae72cf7dd_REPORT.md",
+          "sha256": "769ae72cf7ddb7dc38d1630fa19dd2e3ff0b573099d37632c934897910cfa369",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/REPORT.md"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical actual-matrix source/root-box bridge compilation; whole V31 tree and residual frontiers remain unclosed by this lane. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKBranch.RootBox",
+      "path": "dependency_sources/Rho5/Shared/XSmallKBranch/RootBox.lean",
+      "sha256": "a2e8539d5bdcf4492f55cd399587d8f39ba88f0249dffb93fbe63569b6d5560d",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/src/Rho5/Shared/XSmallKBranch/RootBox.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/8ef80ce91adf_X_V31_ROOTBOX_READY.json",
+          "sha256": "8ef80ce91adf234f36d3aa34abce42d2a4e377b5a222fb763881f95b5af6a3f8",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/X_V31_ROOTBOX_READY.json"
+        },
+        {
+          "path": "historical_evidence/ae5aa2fb00e7_BUILD_STATUS.json",
+          "sha256": "ae5aa2fb00e7b9e35949c076574b9e6d405ef106f0fe47e677316e33f502f986",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/769ae72cf7dd_REPORT.md",
+          "sha256": "769ae72cf7ddb7dc38d1630fa19dd2e3ff0b573099d37632c934897910cfa369",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/REPORT.md"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical actual-matrix source/root-box bridge compilation; whole V31 tree and residual frontiers remain unclosed by this lane. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKBranch.Sound",
+      "path": "dependency_sources/Rho5/Shared/XSmallKBranch/Sound.lean",
+      "sha256": "558b297128cd3417a11350837c9638ae664a57a48095c8732c634b3f819a25a2",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/src/Rho5/Shared/XSmallKBranch/Sound.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/f0cffeeeaf2b_X_V31_SOURCE_ROWS_READY.json",
+          "sha256": "f0cffeeeaf2bc7d9d67804d8028b2d455a0769d9addf91567a86778ea69d6385",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/X_V31_SOURCE_ROWS_READY.json"
+        },
+        {
+          "path": "historical_evidence/ae5aa2fb00e7_BUILD_STATUS.json",
+          "sha256": "ae5aa2fb00e7b9e35949c076574b9e6d405ef106f0fe47e677316e33f502f986",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/769ae72cf7dd_REPORT.md",
+          "sha256": "769ae72cf7ddb7dc38d1630fa19dd2e3ff0b573099d37632c934897910cfa369",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/REPORT.md"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical actual-matrix source/root-box bridge compilation; whole V31 tree and residual frontiers remain unclosed by this lane. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKBranch.SourceSystem",
+      "path": "dependency_sources/Rho5/Shared/XSmallKBranch/SourceSystem.lean",
+      "sha256": "65c445b54d4f5701fcbbc36b9e01f22c7c5d86fd6c16a789e7f194cc270fac0e",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/src/Rho5/Shared/XSmallKBranch/SourceSystem.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/ce1d9e3e7390_X_V31_SOURCE_SYSTEM_READY.json",
+          "sha256": "ce1d9e3e7390fbb02b62d3dc1f371c1b0171f84fb605d051dfeabcc57c4683a8",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/X_V31_SOURCE_SYSTEM_READY.json"
+        },
+        {
+          "path": "historical_evidence/ae5aa2fb00e7_BUILD_STATUS.json",
+          "sha256": "ae5aa2fb00e7b9e35949c076574b9e6d405ef106f0fe47e677316e33f502f986",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/769ae72cf7dd_REPORT.md",
+          "sha256": "769ae72cf7ddb7dc38d1630fa19dd2e3ff0b573099d37632c934897910cfa369",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D136/results/REPORT.md"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical actual-matrix source/root-box bridge compilation; whole V31 tree and residual frontiers remain unclosed by this lane. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKSigns.Adapt",
+      "path": "dependency_sources/Rho5/Shared/XSmallKSigns/Adapt.lean",
+      "sha256": "b6ea96d4748486dad7709eaf167742d55206f72429334fe0e88329a0dd3ace23",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/src/Rho5/Shared/XSmallKSigns/Adapt.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/a5c05a87a4d8_BUILD_STATUS.json",
+          "sha256": "a5c05a87a4d895629982aa0f19373559878eb3fb248677b96211a81b47d5f558",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/eb6361f887f2_mod_Rho5.Shared.XSmallKSigns.Adapt.log",
+          "sha256": "eb6361f887f22adacc76a255cc64f3fb769527afaeef4c7f83c61040478881b6",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/actual_success_logs/mod_Rho5.Shared.XSmallKSigns.Adapt.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical sign normalization/representative compilation; no unconditional whole-X safety claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKSigns.Bridge",
+      "path": "dependency_sources/Rho5/Shared/XSmallKSigns/Bridge.lean",
+      "sha256": "cfdd77e72e7a7648fc4f42c7f4e42a7cfe3fd18bf910b488ca3ed43ab7d0f212",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/src/Rho5/Shared/XSmallKSigns/Bridge.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/a5c05a87a4d8_BUILD_STATUS.json",
+          "sha256": "a5c05a87a4d895629982aa0f19373559878eb3fb248677b96211a81b47d5f558",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/67e4e505d932_mod_Rho5.Shared.XSmallKSigns.Bridge.log",
+          "sha256": "67e4e505d9326875cb1346f5ac804263dea63c2d615c52fd995cfcbc02401c80",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/actual_success_logs/mod_Rho5.Shared.XSmallKSigns.Bridge.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical sign normalization/representative compilation; no unconditional whole-X safety claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKSigns.Core",
+      "path": "dependency_sources/Rho5/Shared/XSmallKSigns/Core.lean",
+      "sha256": "c27a10377336501540728d2fa6ae463d79c999556230baaaf1e8f5043cfa6592",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/src/Rho5/Shared/XSmallKSigns/Core.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/a5c05a87a4d8_BUILD_STATUS.json",
+          "sha256": "a5c05a87a4d895629982aa0f19373559878eb3fb248677b96211a81b47d5f558",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/2c9913981cab_mod_Rho5.Shared.XSmallKSigns.Core.log",
+          "sha256": "2c9913981cabdf03605de4f090614d5a45a79b1e934b3d4086ee4d1a9603ac53",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/actual_success_logs/mod_Rho5.Shared.XSmallKSigns.Core.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical sign normalization/representative compilation; no unconditional whole-X safety claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKSigns.Defs",
+      "path": "dependency_sources/Rho5/Shared/XSmallKSigns/Defs.lean",
+      "sha256": "399a6e0f05ff95904400cd84de60a08c0b705f51bc053460c3c02490c31eb509",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/src/Rho5/Shared/XSmallKSigns/Defs.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/a5c05a87a4d8_BUILD_STATUS.json",
+          "sha256": "a5c05a87a4d895629982aa0f19373559878eb3fb248677b96211a81b47d5f558",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/1843b7d8bbb2_mod_Rho5.Shared.XSmallKSigns.Defs.log",
+          "sha256": "1843b7d8bbb2ed1ee76f9d30d62b025aa92a0e0f0402fd683877abbc4b9c42d0",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/actual_success_logs/mod_Rho5.Shared.XSmallKSigns.Defs.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical sign normalization/representative compilation; no unconditional whole-X safety claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKSigns.Flip",
+      "path": "dependency_sources/Rho5/Shared/XSmallKSigns/Flip.lean",
+      "sha256": "f351101cf4b7df26828ed69f1e42c6b0867efc511f10561aef3e028fca453154",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/src/Rho5/Shared/XSmallKSigns/Flip.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/a5c05a87a4d8_BUILD_STATUS.json",
+          "sha256": "a5c05a87a4d895629982aa0f19373559878eb3fb248677b96211a81b47d5f558",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/bc18e1d85376_mod_Rho5.Shared.XSmallKSigns.Flip.log",
+          "sha256": "bc18e1d8537629b31a3129b04864b9b3e268cdd37c118a9101c23c89a2c742ca",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/actual_success_logs/mod_Rho5.Shared.XSmallKSigns.Flip.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical sign normalization/representative compilation; no unconditional whole-X safety claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKSigns.FlipWIP",
+      "path": "dependency_sources/Rho5/Shared/XSmallKSigns/FlipWIP.lean",
+      "sha256": "00b73ac6106560291db9517009555c5a3a04d9c143fd747ddaf0014e1884b354",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/src/Rho5/Shared/XSmallKSigns/FlipWIP.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/a5c05a87a4d8_BUILD_STATUS.json",
+          "sha256": "a5c05a87a4d895629982aa0f19373559878eb3fb248677b96211a81b47d5f558",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/9e0192b091a1_mod_Rho5.Shared.XSmallKSigns.FlipWIP.log",
+          "sha256": "9e0192b091a1490dcc0b9ef5f71407fd26164344206ca42941d479c64b722ba1",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/actual_success_logs/mod_Rho5.Shared.XSmallKSigns.FlipWIP.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical sign normalization/representative compilation; no unconditional whole-X safety claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKSigns.Head",
+      "path": "dependency_sources/Rho5/Shared/XSmallKSigns/Head.lean",
+      "sha256": "ef98d589c122450b64459856a55f86e3225a18d558024e2e3b6f77103a757be4",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/src/Rho5/Shared/XSmallKSigns/Head.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/a5c05a87a4d8_BUILD_STATUS.json",
+          "sha256": "a5c05a87a4d895629982aa0f19373559878eb3fb248677b96211a81b47d5f558",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/b651030bd752_mod_Rho5.Shared.XSmallKSigns.Head.log",
+          "sha256": "b651030bd75217ec5d7f6fe2c99730eb93bcefe037cb54866517d18e15fdb45f",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/actual_success_logs/mod_Rho5.Shared.XSmallKSigns.Head.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical sign normalization/representative compilation; no unconditional whole-X safety claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKSigns.Representative",
+      "path": "dependency_sources/Rho5/Shared/XSmallKSigns/Representative.lean",
+      "sha256": "eb3f9235a66747dfe00633e1acac0f88a062f4539abf33e391d05968ad598060",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/src/Rho5/Shared/XSmallKSigns/Representative.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/a5c05a87a4d8_BUILD_STATUS.json",
+          "sha256": "a5c05a87a4d895629982aa0f19373559878eb3fb248677b96211a81b47d5f558",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/61b6d2ee1604_mod_Rho5.Shared.XSmallKSigns.Representative.log",
+          "sha256": "61b6d2ee1604a8859e24ef7ec11a014115c2258b1b38c32eb33ef37e6eaffc60",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/actual_success_logs/mod_Rho5.Shared.XSmallKSigns.Representative.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical sign normalization/representative compilation; no unconditional whole-X safety claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKSigns.Signs",
+      "path": "dependency_sources/Rho5/Shared/XSmallKSigns/Signs.lean",
+      "sha256": "58794de320b3cbd895e6be5d5e9407d52cea2db75439cb71bc889e22631e6ef2",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/src/Rho5/Shared/XSmallKSigns/Signs.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/a5c05a87a4d8_BUILD_STATUS.json",
+          "sha256": "a5c05a87a4d895629982aa0f19373559878eb3fb248677b96211a81b47d5f558",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/4a95fab3ec23_mod_Rho5.Shared.XSmallKSigns.Signs.log",
+          "sha256": "4a95fab3ec23d7fd994f0f24f6d96d432d04496c180e93d607a31304890962e9",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/actual_success_logs/mod_Rho5.Shared.XSmallKSigns.Signs.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical sign normalization/representative compilation; no unconditional whole-X safety claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XSmallKSigns.Tail",
+      "path": "dependency_sources/Rho5/Shared/XSmallKSigns/Tail.lean",
+      "sha256": "73b33e278aa6610748a278ceec49deabe769b94306a92ee8fc5c48fe3986306e",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/src/Rho5/Shared/XSmallKSigns/Tail.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/a5c05a87a4d8_BUILD_STATUS.json",
+          "sha256": "a5c05a87a4d895629982aa0f19373559878eb3fb248677b96211a81b47d5f558",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/5dc0b492eece_mod_Rho5.Shared.XSmallKSigns.Tail.log",
+          "sha256": "5dc0b492eece4a8b53e290cae4986d112230fef9397d50bab45c72bdff695178",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D143/results/actual_success_logs/mod_Rho5.Shared.XSmallKSigns.Tail.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical sign normalization/representative compilation; no unconditional whole-X safety claim. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XV31ModelEntry.Coordinates",
+      "path": "dependency_sources/Rho5/Shared/XV31ModelEntry/Coordinates.lean",
+      "sha256": "5cf134ba6d432fbd05654280c04b52a142d31c406ca02631e377250825b20c0a",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D148/src/Rho5/Shared/XV31ModelEntry/Coordinates.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/e7e3aa34582c_BUILD_STATUS.json",
+          "sha256": "e7e3aa34582c2b75222712ed318b826ee222c5afcebb9a163f0336d05d185cad",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D148/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/ecc2436c4575_mod_Rho5.Shared.XV31ModelEntry.Coordinates.log",
+          "sha256": "ecc2436c4575c70aaef9a94b6641c88f87375842efed3d09698799048b200702",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D148/results/actual_success_logs/mod_Rho5.Shared.XV31ModelEntry.Coordinates.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical actual small-k matrix entry and exact retained-frontier connection compilation; remaining seven frontiers not claimed safe. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XV31ModelEntry.Entry",
+      "path": "dependency_sources/Rho5/Shared/XV31ModelEntry/Entry.lean",
+      "sha256": "3c22dc0526b7dcb1d805d4be79d75af5ee09eb7ce7f5bacc482bfa8f72e7ae24",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D148/src/Rho5/Shared/XV31ModelEntry/Entry.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/e7e3aa34582c_BUILD_STATUS.json",
+          "sha256": "e7e3aa34582c2b75222712ed318b826ee222c5afcebb9a163f0336d05d185cad",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D148/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/aac923190261_mod_Rho5.Shared.XV31ModelEntry.Entry.log",
+          "sha256": "aac923190261a3040dc6dc436e67e9aa96c4b88c12162d0846232072752245bf",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D148/results/actual_success_logs/mod_Rho5.Shared.XV31ModelEntry.Entry.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical actual small-k matrix entry and exact retained-frontier connection compilation; remaining seven frontiers not claimed safe. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XV31ModelEntry.Frontier",
+      "path": "dependency_sources/Rho5/Shared/XV31ModelEntry/Frontier.lean",
+      "sha256": "d47aa8c8cc247c415c9acd915608e2b250f70dcfe8798d2e8725975418054d8e",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D148/src/Rho5/Shared/XV31ModelEntry/Frontier.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/e7e3aa34582c_BUILD_STATUS.json",
+          "sha256": "e7e3aa34582c2b75222712ed318b826ee222c5afcebb9a163f0336d05d185cad",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D148/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/3dc64e065e18_mod_Rho5.Shared.XV31ModelEntry.Frontier.log",
+          "sha256": "3dc64e065e184d3e0c73b1a74a02e067d0491fbc120df9ca903eeec871c39a22",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D148/results/actual_success_logs/mod_Rho5.Shared.XV31ModelEntry.Frontier.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical actual small-k matrix entry and exact retained-frontier connection compilation; remaining seven frontiers not claimed safe. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    },
+    {
+      "module": "Rho5.Shared.XV31ModelEntry.Rows",
+      "path": "dependency_sources/Rho5/Shared/XV31ModelEntry/Rows.lean",
+      "sha256": "b3db57789457568205a8f85d163213b38eff711b3ff8a443af588aa77919d297",
+      "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D148/src/Rho5/Shared/XV31ModelEntry/Rows.lean",
+      "historical_evidence": [
+        {
+          "path": "historical_evidence/e7e3aa34582c_BUILD_STATUS.json",
+          "sha256": "e7e3aa34582c2b75222712ed318b826ee222c5afcebb9a163f0336d05d185cad",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D148/results/BUILD_STATUS.json"
+        },
+        {
+          "path": "historical_evidence/2c8ed7463c64_mod_Rho5.Shared.XV31ModelEntry.Rows.log",
+          "sha256": "2c8ed7463c647c9124438b1874b2fe341fa8a89332b27fb1765c3025313306f4",
+          "original_project_path": "2026-09-11/rho5-lean-formalization/work/dsh-main/parallel/D148/results/actual_success_logs/mod_Rho5.Shared.XV31ModelEntry.Rows.log"
+        }
+      ],
+      "historical_compile_exit_code": 0,
+      "status_scope": "Historical actual small-k matrix entry and exact retained-frontier connection compilation; remaining seven frontiers not claimed safe. Selected exact existing source with matching historical SHA-256; no new compilation performed."
+    }
+  ]
+}

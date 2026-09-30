@@ -1,0 +1,251 @@
+{
+  "receipt": "QUADRATIC_LIFT_REAL_READY",
+  "task": "C03",
+  "stage": "A",
+  "status": "READY",
+  "modules": [
+    {
+      "module": "Rho5.Shared.CertificateContraction.IntervalArithmetic",
+      "exit_code": 0,
+      "wall_seconds": 5.632799386978149,
+      "source_sha256": "dc5d6924b6728e4933be7b9611572a5d260676e8e0db949895cbab83282d0028",
+      "olean_sha256": "932bc8a26bc02ad4334bb7ef17aa54c7ab3690555e7fd635735ffa9fb8d04421",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/results/Rho5.Shared.CertificateContraction.IntervalArithmetic_1789190372698739524.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/build/Rho5/Shared/CertificateContraction/IntervalArithmetic.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/src/Rho5/Shared/CertificateContraction/IntervalArithmetic.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/build:/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/inputs/lib:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [
+        "1112337 1112336  10 2235348 lean"
+      ],
+      "available_mem_kib": 83344600,
+      "free_disk_bytes": 16912740352,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/results/Rho5.Shared.CertificateContraction.IntervalArithmetic_1789190372698739524.json",
+      "external_dependencies_sha256": "3e30a79ae3aae7102b9cb01f712288961c366a4add779a35a4956d3a6dfab88b",
+      "direct_own_imports": [
+        {
+          "module": "Rho5.Shared.CertificateContraction.Composition",
+          "source_sha256": "6dccee2f67c6bcd0edaac4bc7b6c19fc248066eb1ccb65f958c39f6199ae80ab",
+          "olean_sha256": "014b0d1eb5149a04ff9cb22f4205c1d11ce704a8d65cc6110aac0829583e030e"
+        },
+        {
+          "module": "Rho5.Certificate.B16.LiftBox.IntervalMul",
+          "source_sha256": "1bbf7cb0857dd5a14c2079a805897a9eb895fac4202c57857c31ca07e26eecf0",
+          "olean_sha256": "61b7b59a7df4cc61c8bf0244f834c8877c2c4135da9c51847a318452b52a4789"
+        }
+      ]
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.QuadraticSyntax",
+      "exit_code": 0,
+      "wall_seconds": 3.566248655319214,
+      "source_sha256": "f173a11cd57f04112ae6fab97096c58e2d9463977b4bfb90b197f3d937cf0008",
+      "olean_sha256": "d5e7fc74afd59cc2d3942abfd91e0483f50740c8d85ae558ff82de62ac1f9446",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/results/Rho5.Shared.CertificateContraction.QuadraticSyntax_1789190378341577332.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/build/Rho5/Shared/CertificateContraction/QuadraticSyntax.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/src/Rho5/Shared/CertificateContraction/QuadraticSyntax.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/build:/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/inputs/lib:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [
+        "1112337 1112336  10 2306944 lean"
+      ],
+      "available_mem_kib": 83264672,
+      "free_disk_bytes": 16912728064,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/results/Rho5.Shared.CertificateContraction.QuadraticSyntax_1789190378341577332.json",
+      "external_dependencies_sha256": "3e30a79ae3aae7102b9cb01f712288961c366a4add779a35a4956d3a6dfab88b",
+      "direct_own_imports": [
+        {
+          "module": "Rho5.Shared.CertificateContraction.IntervalArithmetic",
+          "source_sha256": "dc5d6924b6728e4933be7b9611572a5d260676e8e0db949895cbab83282d0028",
+          "olean_sha256": "932bc8a26bc02ad4334bb7ef17aa54c7ab3690555e7fd635735ffa9fb8d04421"
+        }
+      ]
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.QuadraticLift",
+      "exit_code": 0,
+      "wall_seconds": 3.2627365589141846,
+      "source_sha256": "5dab61bc3cdae3c24ec7f85ab5673bd6e54a1e22f8f4516fce3a041dbb19a72f",
+      "olean_sha256": "3aa1d5002c30d24701cecca23f976fcf6b574c611d28c54bbe97a159aeab1e24",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/results/Rho5.Shared.CertificateContraction.QuadraticLift_1789190381918827283.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/build/Rho5/Shared/CertificateContraction/QuadraticLift.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/src/Rho5/Shared/CertificateContraction/QuadraticLift.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/build:/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/inputs/lib:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [
+        "1112337 1112336  10 2299868 lean"
+      ],
+      "available_mem_kib": 83279748,
+      "free_disk_bytes": 16912719872,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/results/Rho5.Shared.CertificateContraction.QuadraticLift_1789190381918827283.json",
+      "external_dependencies_sha256": "3e30a79ae3aae7102b9cb01f712288961c366a4add779a35a4956d3a6dfab88b",
+      "direct_own_imports": [
+        {
+          "module": "Rho5.Shared.CertificateContraction.QuadraticSyntax",
+          "source_sha256": "f173a11cd57f04112ae6fab97096c58e2d9463977b4bfb90b197f3d937cf0008",
+          "olean_sha256": "d5e7fc74afd59cc2d3942abfd91e0483f50740c8d85ae558ff82de62ac1f9446"
+        },
+        {
+          "module": "Rho5.Shared.XSmallKBranch.Sound",
+          "source_sha256": "558b297128cd3417a11350837c9638ae664a57a48095c8732c634b3f819a25a2",
+          "olean_sha256": "0f39a8587ac8e3ecb07036b4be59da833b7c9654eef709690a6bdaa7fd345028"
+        }
+      ]
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.QuadraticControls",
+      "exit_code": 0,
+      "wall_seconds": 3.267301321029663,
+      "source_sha256": "99a1f1e0c476aee5ca8f7f511b21fab53e8c1a28bde248054c8520daa52b4e85",
+      "olean_sha256": "79ef9fe6350314442cdbd8746f09604a561b6fa6dae48946acfd2d1467739d3b",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/results/Rho5.Shared.CertificateContraction.QuadraticControls_1789190385191951750.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/build/Rho5/Shared/CertificateContraction/QuadraticControls.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/src/Rho5/Shared/CertificateContraction/QuadraticControls.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/build:/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/inputs/lib:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [
+        "1112337 1112336  10 2231900 lean"
+      ],
+      "available_mem_kib": 83348468,
+      "free_disk_bytes": 16912711680,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/results/Rho5.Shared.CertificateContraction.QuadraticControls_1789190385191951750.json",
+      "external_dependencies_sha256": "3e30a79ae3aae7102b9cb01f712288961c366a4add779a35a4956d3a6dfab88b",
+      "direct_own_imports": [
+        {
+          "module": "Rho5.Shared.CertificateContraction.QuadraticLift",
+          "source_sha256": "5dab61bc3cdae3c24ec7f85ab5673bd6e54a1e22f8f4516fce3a041dbb19a72f",
+          "olean_sha256": "3aa1d5002c30d24701cecca23f976fcf6b574c611d28c54bbe97a159aeab1e24"
+        }
+      ]
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.QuadraticLiftAudit",
+      "exit_code": 0,
+      "wall_seconds": 2.7289066314697266,
+      "source_sha256": "68b612fbf836171ef0a29962b174065cdbc2512976c74a166ce1b63e9a0de6b1",
+      "olean_sha256": "8ebeb7417b5afc00574821cf1e2916955f77ef17af50cd19fe771a4a5dac6747",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/results/Rho5.Shared.CertificateContraction.QuadraticLiftAudit_1789190388471036415.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/build/Rho5/Shared/CertificateContraction/QuadraticLiftAudit.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/src/Rho5/Shared/CertificateContraction/QuadraticLiftAudit.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/build:/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/inputs/lib:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [
+        "1112337 1112336  10 2275484 lean"
+      ],
+      "available_mem_kib": 83303184,
+      "free_disk_bytes": 16912699392,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/c03/results/Rho5.Shared.CertificateContraction.QuadraticLiftAudit_1789190388471036415.json",
+      "external_dependencies_sha256": "3e30a79ae3aae7102b9cb01f712288961c366a4add779a35a4956d3a6dfab88b",
+      "direct_own_imports": [
+        {
+          "module": "Rho5.Shared.CertificateContraction.QuadraticControls",
+          "source_sha256": "99a1f1e0c476aee5ca8f7f511b21fab53e8c1a28bde248054c8520daa52b4e85",
+          "olean_sha256": "79ef9fe6350314442cdbd8746f09604a561b6fa6dae48946acfd2d1467739d3b"
+        }
+      ]
+    }
+  ],
+  "final_exit_code": 0,
+  "final_wall_seconds": 24.508183002471924,
+  "named_axiom_checks": 21,
+  "axioms_only_standard": true,
+  "external_files_verified_before_after": 15781,
+  "source_hashes_before_after_equal": true,
+  "hashes": {
+    "A_FINAL_BUILD.json": "a67ab396323b1dc641c0634a4bb6bde2cc41fecf440e0c5e33ab0d1d3860186b",
+    "A_FINAL_BUILD.log": "6e952e230d847f8472a9f846efe6648dff7a1769b1b184b8a7cc31c7c646dc72",
+    "A_ACTUAL_IMPORTS.json": "615d586caa003e1d204974b218e80d7607fa9db5666593f80630c004c92f76f5",
+    "A_EXTERNAL_DEPENDENCIES.json": "3e30a79ae3aae7102b9cb01f712288961c366a4add779a35a4956d3a6dfab88b",
+    "A_TYPES.txt": "6fa6742d95e5960e466373e2184d7aa0a0365833a5337bdcf9caae9eee210a3a",
+    "A_AXIOMS.json": "a3e0f441dc08b7e233cfb66c3159db2232bcd9f45d2535d8b6825b40e28b4a55",
+    "A_SOURCE_SHA256SUMS": "8ddef01380e3f6e7ec7cc6aa366d31a29dca69487f726df24d330a80ca3d4660",
+    "A_OLEAN_SHA256SUMS": "6c4f13e2f6e2d19002d56baf25e8ed2d8e15f0d21d4596a73a942628e75ebd45",
+    "UPSTREAM_MIRROR.json": "670138d32f65c59d9abee50db8bc5bf59763aa7e25e96875dc3b421b37738d6d"
+  },
+  "main_theorems": [
+    "sparse_dot",
+    "quadratic_row_identity",
+    "quadratic_lift_source",
+    "generatedRows_SourceRowsOn"
+  ],
+  "premises": [
+    "The same original real z is contained in the supplied rational original box.",
+    "The same z satisfies all declared quadratic source polynomials.",
+    "Typed QPolynomial/ProductPairs correspond to actual source data via separately paid exact transcription."
+  ],
+  "not_assumed": [
+    "Generated rows hold",
+    "Nonnegative intervals",
+    "Distinct product indices",
+    "Parent/root endpoints substituted for current subbox"
+  ],
+  "frozen_upstream_recompiled": false,
+  "remaining_stage": "B: actual nondual propagation; in progress",
+  "other_common_contract_obligations": [
+    "direct_bounds",
+    "reconstruct_tail",
+    "high_contract",
+    "strict_impossible",
+    "parent/baseline oracle"
+  ]
+}

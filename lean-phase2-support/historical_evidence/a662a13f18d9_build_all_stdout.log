@@ -1,0 +1,81 @@
+preflight: MemAvailable=79.8 GiB (need >= 16.0), disk free=16.0 GiB (need >= 10.0) -> OK
+module          : Rho5.ExternalTailSaturation.Basic
+source_sha256   : 8d5994cd776378aa6f384b42c7d8e4a04b6d762b22e2120c227771306c8be567
+exit_code       : 0
+wall_seconds    : 4.008
+child_peak_rss_kib: 2360192  rss_guard_killed: False
+log             : /root/microscope_ws/rho5_lean_dsh_20260911/D122/logs/mod_Rho5_ExternalTailSaturation_Basic.log
+olean_sha256    : 8da0a4ab253d31cb529d86a6dfb8894cb615f83152d10660a457aa16edd97ba5
+dependency_hash : f979e8a49f7aa4df93bb9dd214e75352f7020d1f3a2855ebe1f3ed9c72822be1  (closure 33 local Rho5 modules)
+=== Rho5.ExternalTailSaturation.Basic OK rc=0 wall=4.008s ===
+preflight: MemAvailable=80.1 GiB (need >= 16.0), disk free=16.0 GiB (need >= 10.0) -> OK
+module          : Rho5.ExternalTailSaturation.FullMatrixContraction
+source_sha256   : ad077a44f125729c9798caa5347d0352b4f88df2492dbb68cd6c3ae4b130e0a0
+exit_code       : 0
+wall_seconds    : 6.012
+child_peak_rss_kib: 2704096  rss_guard_killed: False
+log             : /root/microscope_ws/rho5_lean_dsh_20260911/D122/logs/mod_Rho5_ExternalTailSaturation_FullMatrixContraction.log
+olean_sha256    : 3a0e05cbfd8d6ccadf1bc34ca6f9d27b1174315e75361eae08e7d58b6ae66bff
+dependency_hash : 0255e1e8baed19545a8c34a512745539cfaa5f8e93c4e9544a836bc5ab1e8b65  (closure 34 local Rho5 modules)
+=== Rho5.ExternalTailSaturation.FullMatrixContraction OK rc=0 wall=6.012s ===
+preflight: MemAvailable=80.1 GiB (need >= 16.0), disk free=16.0 GiB (need >= 10.0) -> OK
+module          : Rho5.ExternalTailSaturation.FactorChoice
+source_sha256   : e57a6d234690201a126aca26fc29c2bad0639959594f55976b4f84cb099fab4f
+exit_code       : 0
+wall_seconds    : 4.008
+child_peak_rss_kib: 2356216  rss_guard_killed: False
+log             : /root/microscope_ws/rho5_lean_dsh_20260911/D122/logs/mod_Rho5_ExternalTailSaturation_FactorChoice.log
+olean_sha256    : ea814ae6361d8c546b28dd8b3b2cb7e14ea757b1ecd4fbaa24683c292abe1291
+dependency_hash : f4e7aec904329d0e0315982ca6477de576eb3466aaf6a9634f745e488deb24a9  (closure 35 local Rho5 modules)
+=== Rho5.ExternalTailSaturation.FactorChoice OK rc=0 wall=4.008s ===
+preflight: MemAvailable=80.5 GiB (need >= 16.0), disk free=16.0 GiB (need >= 10.0) -> OK
+module          : Rho5.ExternalTailSaturation.LiftCoordinates
+source_sha256   : 183d4dd452566289aebbcd8005998f50a0393a1645d9ca13c16d14fa9851cdf5
+exit_code       : 0
+wall_seconds    : 4.007
+child_peak_rss_kib: 2302944  rss_guard_killed: False
+log             : /root/microscope_ws/rho5_lean_dsh_20260911/D122/logs/mod_Rho5_ExternalTailSaturation_LiftCoordinates.log
+olean_sha256    : 8a9562426cab0c1f0991db56a4e3545ae0c2139a39e464b1bbae18409b7a8cff
+dependency_hash : 8f4326e8a13b7bd2e43266a2ad923c65392a2dcaa9620f3f584afeb622816088  (closure 35 local Rho5 modules)
+=== Rho5.ExternalTailSaturation.LiftCoordinates OK rc=0 wall=4.007s ===
+preflight: MemAvailable=80.5 GiB (need >= 16.0), disk free=16.0 GiB (need >= 10.0) -> OK
+module          : Rho5.ExternalTailSaturation.Saturation
+source_sha256   : 33691544ac046a09075ce43abffe7ded96348a7bba70dc2a3960df39ed1ac693
+exit_code       : 0
+wall_seconds    : 4.009
+child_peak_rss_kib: 2366400  rss_guard_killed: False
+log             : /root/microscope_ws/rho5_lean_dsh_20260911/D122/logs/mod_Rho5_ExternalTailSaturation_Saturation.log
+olean_sha256    : b2620578ac107f37032f294ac310489137ae47a37f8d254805ea18f7a0904f5a
+dependency_hash : 0b9663e6a456848f8f7c1287d164c868f6842f35108a28a0afcc361536188454  (closure 36 local Rho5 modules)
+=== Rho5.ExternalTailSaturation.Saturation OK rc=0 wall=4.009s ===
+preflight: MemAvailable=80.2 GiB (need >= 16.0), disk free=16.0 GiB (need >= 10.0) -> OK
+module          : Rho5.ExternalTailSaturation.Growth
+source_sha256   : a7ad3821ba0c0c2737a2532c73f2e70d940a1b92bf4c94ee98b8fbfe3514c184
+exit_code       : 0
+wall_seconds    : 4.008
+child_peak_rss_kib: 2353932  rss_guard_killed: False
+log             : /root/microscope_ws/rho5_lean_dsh_20260911/D122/logs/mod_Rho5_ExternalTailSaturation_Growth.log
+olean_sha256    : f8f11ea3c1c012be306db0d611d8bc394bf50f8dedb11d7faf59ad7f6ccfbf29
+dependency_hash : 260f649bd90e1aadcf1a3b6a288cfc9f25eb7b0f09999f2cdd1920c1481d2252  (closure 37 local Rho5 modules)
+=== Rho5.ExternalTailSaturation.Growth OK rc=0 wall=4.008s ===
+preflight: MemAvailable=80.3 GiB (need >= 16.0), disk free=16.0 GiB (need >= 10.0) -> OK
+module          : Rho5.ExternalTailSaturation.Core
+source_sha256   : 480ca3da1ed70b85ff244e62fbf9797b31fb611d2cd4bb3b48e8e0d3028cf9cf
+exit_code       : 0
+wall_seconds    : 4.008
+child_peak_rss_kib: 2353648  rss_guard_killed: False
+log             : /root/microscope_ws/rho5_lean_dsh_20260911/D122/logs/mod_Rho5_ExternalTailSaturation_Core.log
+olean_sha256    : 2b6c31e7d5880342a8868680dc8ccfe5093999c376d9130be3d02c07ec690bf2
+dependency_hash : 71e6f13dcadebe026041ebc944ea60aa2499e78987111483bc49fed8804911dd  (closure 39 local Rho5 modules)
+=== Rho5.ExternalTailSaturation.Core OK rc=0 wall=4.008s ===
+preflight: MemAvailable=80.4 GiB (need >= 16.0), disk free=16.0 GiB (need >= 10.0) -> OK
+module          : Rho5.ExternalTailSaturation.CoreAudit
+source_sha256   : 479f8fd2d74e15b7acaf7db7360d409396122d686d721d7cc669ee06f42db3c0
+exit_code       : 0
+wall_seconds    : 4.035
+child_peak_rss_kib: 2323916  rss_guard_killed: False
+log             : /root/microscope_ws/rho5_lean_dsh_20260911/D122/logs/mod_Rho5_ExternalTailSaturation_CoreAudit.log
+olean_sha256    : b8200ae508078bb653e0aaebc0de60d23c4549d72b94ec6fdfdaa0568c22b4a9
+dependency_hash : 4e647373e68bcf0bc445d4040bec119759d2c73fbfa9b4d0441f5e7edc3c6274  (closure 40 local Rho5 modules)
+=== Rho5.ExternalTailSaturation.CoreAudit OK rc=0 wall=4.035s ===
+=== ALL MODULES OK ===

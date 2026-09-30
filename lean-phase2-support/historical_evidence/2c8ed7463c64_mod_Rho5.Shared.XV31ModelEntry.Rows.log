@@ -1,0 +1,25 @@
+/root/microscope_ws/rho5_lean_dsh_20260911/D148/src/Rho5/Shared/XV31ModelEntry/Rows.lean:42:6: warning: This simp argument is unused:
+  List.map_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [RowProp, Model.integerPolynomials, QPolynomial.toRow, SparseRow.Holds, sparseEval,
+        List.map_c̵o̵ns̵,̵ ̵L̵is̵t̵.̵m̵a̵p̵_̵n̵i̵l]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/microscope_ws/rho5_lean_dsh_20260911/D148/src/Rho5/Shared/XV31ModelEntry/Rows.lean:42:21: warning: This simp argument is unused:
+  List.map_nil
+
+Hint: Omit it from the simp argument list.
+  simp only [RowProp, Model.integerPolynomials, QPolynomial.toRow, SparseRow.Holds, sparseEval,
+        List.map_cons,̵ ̵L̵i̵s̵t̵.̵m̵a̵p̵_̵n̵i̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+=== metrics ===
+lean_args: -j 1 -M 8192 -R /root/microscope_ws/rho5_lean_dsh_20260911/D148/src -o /root/microscope_ws/rho5_lean_dsh_20260911/D148/build/lib/lean/Rho5/Shared/XV31ModelEntry/Rows.olean /root/microscope_ws/rho5_lean_dsh_20260911/D148/src/Rho5/Shared/XV31ModelEntry/Rows.lean
+exit_code: 0
+rss_killed_by_wrapper: False  (ceiling 8388608 KiB)
+watched_vmhwm_kib: 3215244
+wall_seconds: 23.480
+child_user_cpu_seconds: 21.725
+child_sys_cpu_seconds: 1.716
+peak_rss_kib: 3215556

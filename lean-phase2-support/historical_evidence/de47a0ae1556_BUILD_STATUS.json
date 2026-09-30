@@ -1,0 +1,47 @@
+{
+  "lane": "D122",
+  "card": "parallel/D122/TASK.md",
+  "status": "READY",
+  "ready": true,
+  "receipts": ["results/TAIL_SATURATION_READY.json", "results/TAIL_CORE_READY.json"],
+  "summary": "external TS C02 core integrated: the actual 5x5 row/column tail contraction with S4/S3/T2 covariance, the same-source lift coordinates, the qualified D/X factor certificates, exact delta/height/legal-trace preservation, the fourth-CP preservation for the selected factors only, and the conditional growth equality with the four explicit dominance premises. 8/8 modules exit 0; CoreAudit 73 #check + 23 #print axioms all standard three axioms; entry closure 40 with 32 frozen ancestors bound and hash-matching the frozen manifest. T3 modules (Signs/Ties/Classification/Examples/aggregate/Audit) untouched and reserved for D123.",
+  "toolchain": {
+    "lean": "4.30.0",
+    "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+  },
+  "runs": [
+    {"what": "cache merge (symlinks only)", "exit_code": 0, "result": "7844 mathlib symlinks + lane Rho5 symlinks; ancestor oleans reused from D101's build root; no upstream recompile, no external installer/lake script run"},
+    {"what": "all", "exit_code": 0, "modules": 8, "slowest": "FullMatrixContraction 6.012 s", "note": "Basic, FullMatrixContraction, FactorChoice, LiftCoordinates, Saturation, Growth, Core, CoreAudit — every module exit 0; second full run reproduced identical hashes"},
+    {"what": "audit Rho5.ExternalTailSaturation.CoreAudit --json", "exit_code": 0, "result": "closure 40, missing_sources [], missing_oleans [], dependency_hash equals the recorded value, 32 frozen ancestors hash-match the manifest"}
+  ],
+  "forbidden_tokens": "none in the delivered sources (grep for sorry/admit/native_decide/axiom: 0 hits)",
+  "artifacts": {
+    "src/Rho5/ExternalTailSaturation/Basic.lean": "8d5994cd776378aa6f384b42c7d8e4a04b6d762b22e2120c227771306c8be567",
+    "src/Rho5/ExternalTailSaturation/FullMatrixContraction.lean": "ad077a44f125729c9798caa5347d0352b4f88df2492dbb68cd6c3ae4b130e0a0",
+    "src/Rho5/ExternalTailSaturation/FactorChoice.lean": "e57a6d234690201a126aca26fc29c2bad0639959594f55976b4f84cb099fab4f",
+    "src/Rho5/ExternalTailSaturation/LiftCoordinates.lean": "183d4dd452566289aebbcd8005998f50a0393a1645d9ca13c16d14fa9851cdf5",
+    "src/Rho5/ExternalTailSaturation/Saturation.lean": "33691544ac046a09075ce43abffe7ded96348a7bba70dc2a3960df39ed1ac693",
+    "src/Rho5/ExternalTailSaturation/Growth.lean": "a7ad3821ba0c0c2737a2532c73f2e70d940a1b92bf4c94ee98b8fbfe3514c184",
+    "src/Rho5/ExternalTailSaturation/Core.lean": "480ca3da1ed70b85ff244e62fbf9797b31fb611d2cd4bb3b48e8e0d3028cf9cf",
+    "src/Rho5/ExternalTailSaturation/CoreAudit.lean": "479f8fd2d74e15b7acaf7db7360d409396122d686d721d7cc669ee06f42db3c0",
+    "tools/d122_build.py": "e0ced4b7dcd61d6aa9a43f47a73796c2603ffd852be7cf22b501aaf731e5ca8a",
+    "results/TAIL_SATURATION_READY.json": "see results/SOURCE_SHA256SUMS.txt",
+    "results/TAIL_CORE_READY.json": "see results/SOURCE_SHA256SUMS.txt",
+    "results/REPORT.md": "see results/SOURCE_SHA256SUMS.txt",
+    "results/INTEGRATION.md": "see results/SOURCE_SHA256SUMS.txt"
+  },
+  "edits_to_external_source": [
+    {"file": "FactorChoice.lean", "kind": "Mathlib API fix (mul_le_mul_left is not an Iff in this mathlib version) — replaced by le_of_mul_le_mul_left", "mathematics_changed": false},
+    {"file": "Growth.lean", "kind": "rewrite-pattern fix (rw does not unfold the definition height) — explicitly typed max_eq_left step", "mathematics_changed": false},
+    {"file": "CoreAudit.lean", "kind": "new module written by this lane for the intermediate complete self-review", "mathematics_changed": false}
+  ],
+  "unpaid_or_untouched": [
+    "Signs / Ties / Classification / Examples / aggregate Rho5.ExternalTailSaturation / Audit — D123",
+    "no trichotomy, no high_value_X_or_properB, no growth_can_strictly_decrease",
+    "arbitrary (lam, mu) contraction preserves only the first three complete pivots; the fourth CP only for the certificate-selected factors",
+    "no r > 0 hypothesis added; the growth equality only under the four explicit dominance premises",
+    "no global four-pivot bound re-proof, no contraction mathematics re-derivation, no ODE content",
+    "the two auxiliary_cold files of the B package were not received and are not fabricated"
+  ],
+  "binding_note": "the CoreAudit dependency_hash 4e647373e68bcf0bc445d4040bec119759d2c73fbfa9b4d0441f5e7edc3c6274 binds all 40 ancestor module sources actually imported, of which 32 are frozen ancestors uploaded to D122/deps/src and hash-matching outputs/external_b_fibre_tail_returns_20260912/frozen_inputs/MANIFEST.json"
+}

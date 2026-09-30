@@ -1,0 +1,53 @@
+{
+  "lane": "D138",
+  "card": "原论文首Schur四阶界 F≤4p",
+  "status": "COMPLETE",
+  "gate": "SCHUR_FOUR_PIVOT_READY",
+  "main_theorem": "Rho5.Shared.SchurFourPivotBound.height_le_four_mul_p : forall (M : Rho5.Matrix5), Rho5.ExternalTailSaturation.LeadingInput M -> Rho5.ExternalTailSaturation.height M <= 4 * Rho5.Certificate.B24Extraction.p M",
+  "extra_hypotheses": "NONE (no ProperB, no F<=4p assumption)",
+  "modules": [
+    "Rho5.Shared.SchurFourPivotBound.Embed",
+    "Rho5.Shared.SchurFourPivotBound.Bound",
+    "Rho5.Shared.SchurFourPivotBound.Audit",
+    "Rho5.Shared.SchurFourPivotBound"
+  ],
+  "all_exit_code_0": true,
+  "axiom_audit": {
+    "records": 8,
+    "observed_union": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "violations": {}
+  },
+  "route": [
+    "padLast embeds n x n into (n+1) x (n+1) with a zero last row/column",
+    "fixedSchur_padLast: one pivot-(0,0) Schur step commutes with the padding (3-way index case proof on real entries)",
+    "isCompletePivot_padLast_iff + padLast_zero_zero: complete-pivot property and pivot entry preserved",
+    "ZeroTrace (explicitly dimension-indexed): all-(0,0), never-early-stopping real path S4 M -> S3 M -> T2 M -> 1x1",
+    "zeroTrace_S4: the real path of S4 M with readouts [|p|,|k|,|r|,|delta|] (S3/T2 are pivotSchur ... 0 0 BY DEFINITION)",
+    "toLegalTrace_padLast: lifts it to a frozen LegalTrace of the padded Matrix5, readouts preserved, +1 zero readout",
+    "D124 fourth_pivot_le_four_mul_entryMax_including_zero (already proved, no A != 0 hypothesis, covers zero stops)",
+    "matrixEntryMax_eq_abs_of_isCompletePivot + padLast_zero_zero + abs_of_pos: matrixEntryMax (padLast (S4 M)) = p M",
+    "conclude |delta M| <= 4 * p M, i.e. height M <= 4 * p M"
+  ],
+  "source_sha256": {
+    "src/Rho5/Shared/SchurFourPivotBound/Embed.lean": "5f453810cbbf15bee4824dc13a5bfaf40b421708742e262ce3714db7d1c5ce62",
+    "src/Rho5/Shared/SchurFourPivotBound/Bound.lean": "c2d7b614705f1f210e0be8d8efb51682e65200b6f127134827765f9bd0530e39",
+    "src/Rho5/Shared/SchurFourPivotBound/Audit.lean": "00a813bfc6f31d92c40d50561f96645ea91fbfd9b4855ac6a72e5f0bdd0ff153",
+    "src/Rho5/Shared/SchurFourPivotBound.lean": "9ac3c59c6dc729863e3295f2d254b4087656a9449b7993c1aae14a5271c76713"
+  },
+  "olean_sha256": {
+    "Rho5/Shared/SchurFourPivotBound.olean": "ea7eb8fa11ca28e1c970b2392d13b38a29c3f25aadd768d2c0324ab4552c2c70",
+    "Rho5/Shared/SchurFourPivotBound/Audit.olean": "434481d708236eec3061b6e3c1d7b058e9a4bfdff1e650b2d23d1c9e96359baa",
+    "Rho5/Shared/SchurFourPivotBound/Bound.olean": "600c709af103a1176a507fdc7f1aa792dd4057914aa5b7feca0b8e00cdf1be83",
+    "Rho5/Shared/SchurFourPivotBound/Embed.olean": "89950d099d49b107ef3e1d3ce530ba7b49b7643e13e4628f6796adbf1a8ffd13"
+  },
+  "downstream": "4 < height M now gives 1 < p M: pays the paper's F <= 4p (cor:firstfour) that D130's HeadBound took as hypothesis hFp",
+  "not_claimed": [
+    "nothing about the sign flip of the second row/column (D137, other lane)",
+    "no capacity mathematics, no F4HardGoal attack, no numeric search"
+  ],
+  "checked_at": "2026-09-12T11:57:13+0800"
+}

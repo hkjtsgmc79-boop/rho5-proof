@@ -1,0 +1,91 @@
+{
+ "schema": "D136_X_V31_SOURCE_SYSTEM_READY_V1",
+ "receipt": "X_V31_SOURCE_SYSTEM_READY",
+ "lane": "D136",
+ "card": "parallel/D136/TASK.md",
+ "stage": "A 续四：实际矩阵的完整**来源系统**（波输入）打包",
+ "status": "READY",
+ "ready": true,
+ "published_at": "2026-09-12T12:25:00+08:00",
+ "claim": "把真实矩阵侧的来源事实打包为单一可消费对象 `SourceSystem M`：106 条源行的 LP 语义、§3.4 的 22 维根盒（结论，非假设）、35 个共享乘积的真实提升、以及 35 个乘积关于根盒端点的四条 McCormick 外包。显式前提仅：`SatFrame`、`NormalizedSigns`、`PosSigns`（e>0, β>0）、`0 ≤ u₀`、`HighValue`、`k ≤ 2`。",
+ "module": "Rho5/Shared/XSmallKBranch/SourceSystem",
+ "source_sha256": "65c445b54d4f5701fcbbc36b9e01f22c7c5d86fd6c16a789e7f194cc270fac0e",
+ "olean_sha256": "2c126b81942e4a3a7078566495ea623d83c0ab9f396c9c5138cff15cd3fc3ac4",
+ "objects": {
+  "rows": "∀ i, i ∈ paidIdx ∨ i = 96 ∨ i = 98 → RowProp i (chartState M)（104 冻结 + 96 Fcore + 98 det3）",
+  "boxIn": "BoxIn (chartState M)（§3.4 根盒，由 rootBox_chartState_noRho4 导出）",
+  "lift": "IsLift (chartState M)（35 个共享乘积 = 真实乘积）",
+  "envelopes": "envelopes_all_chartState：35 个乘积 × 4 条 McCormick 外包（原文 (5.1)），端点取 boxLo/boxHi"
+ },
+ "explicit_premises": [
+  "SatFrame M",
+  "NormalizedSigns (chartState M)",
+  "PosSigns (chartState M)（0 < e, 0 < β）",
+  "0 ≤ uu (chartState M) 0",
+  "HighValue (chartState M)（F ≥ 1653/400）",
+  "SmallThirdPivot (chartState M)（k ≤ 2）"
+ ],
+ "internally_paid": [
+  "PhysicalBounds (chartState M)（D119 读数，PhysicalBridge 叶）",
+  "Rho4Input (chartState M)（F ≤ 4p，D138 薄适配 NoRho4 叶）"
+ ],
+ "audit": {
+  "log": "logs_x/SourceSystemAudit.log",
+  "log_sha256": "2d176a876a93a4f622a95daeea290f853d3bd405e10da8d647f6c69503547df1",
+  "targets": 3,
+  "violations": [],
+  "errors": 0,
+  "panics": 0,
+  "allowed_axioms": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "label": "ACTUAL_PASSES_FROM_REAL_LEAN_RUNS"
+ },
+ "d135_gate": {
+  "status": "BLOCKED_ON_REAL_SOUNDNESS",
+  "correction": "D135 当前 `Linear.Feasible`/`Rational.Feasible` 是 κ→ℚ（只有理域）；已通过的 v31/b16_check 精确计算有效，但 `terminal_empty` **不能**直接当作实际 ℝ 来源为空。",
+  "action": "等待 D135 发布 `CERTIFICATE_RULES_REAL_SOUNDNESS_READY` 后，消费其**真实实数无解**接口。",
+  "not_doing": [
+   "不重写 D135 检查器",
+   "不重算其样本",
+   "不用有理逼近替代缺失的全实数证明"
+  ],
+  "d135_core": "outputs/heartbeat_1124_delivery_20260912/D135_CORE/results/CERTIFICATE_RULES_CORE_READY.json（规则核 READY；样本尚未 Lean 通过）"
+ },
+ "mainline_split": {
+  "card": "M01（主线）",
+  "namespace": "Rho5.Shared.MainlineTreeCover",
+  "owns": "通用二叉闭盒覆盖/有限树健全性 + V31 首 C 之前的真实 S 前缀实例",
+  "note": "本卡不重复通用树/前缀；本卡的 `SourceSystem` 即为该覆盖层的**源端输入**"
+ },
+ "stage_b": {
+  "status": "WAITING_REAL_SOUNDNESS_GATE",
+  "plan": "首终端：SourceSystem（本回执）经 M01 的 S 前缀覆盖层抵达首 C 盒，再交 D135 的**实数**无解接口；每一分裂两边保留等号/覆盖语义；只声称首终端来源"
+ },
+ "integrity": {
+  "frozen_inputs_modified": 0,
+  "upstream_rebuilt": false,
+  "model_sound_recompiled": false,
+  "lake_build_run": false,
+  "deleted": 0,
+  "kills": 0,
+  "services": 0,
+  "network": false,
+  "outputs_written": false,
+  "other_lanes_touched": false,
+  "tmp_dir_used": false
+ },
+ "artifacts": {
+  "source_sha256": {
+   "SourceSystem.lean": "65c445b54d4f5701fcbbc36b9e01f22c7c5d86fd6c16a789e7f194cc270fac0e"
+  },
+  "log_sha256": {
+   "logs_x/SourceSystem.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "logs_x/SourceSystemAudit.log": "2d176a876a93a4f622a95daeea290f853d3bd405e10da8d647f6c69503547df1",
+   "logs_x/evidence_srcsys.txt": "b363692e8dd058c96ee15f4cc318ed57f182ee14084bbdc10dc30c48401498c8"
+  }
+ },
+ "updated_at": "2026-09-12T12:25:00+08:00"
+}

@@ -1,0 +1,30 @@
+{
+  "module": "Rho5.Integration.V31BatchKernel.IntegerModel",
+  "exit_code": 0,
+  "wall_seconds": 3.375258684158325,
+  "source_sha256": "f471a4e83ff629d75896127166336a2aa615a6ed97e2a1cbeb3367f036df0e6a",
+  "olean_sha256": "6dbb3e6848a97a2656ec08a3964d77d45ce0650d2a2ab88ef3bed5e84961f3fd",
+  "log": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/results/Rho5.Integration.V31BatchKernel.IntegerModel_1789197887210202701.log",
+  "log_sha256": "42579592f23a872abe4b641595823d0d5f310f9538d3c7ddd3a700d31188e4bf",
+  "command": [
+    "nice",
+    "-n",
+    "10",
+    "python3",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/tools/guard.py",
+    "180",
+    "-j1",
+    "-M8192",
+    "-R",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/src",
+    "-o",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/build/Rho5/Integration/V31BatchKernel/IntegerModel.olean",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/src/Rho5/Integration/V31BatchKernel/IntegerModel.lean"
+  ],
+  "LEAN_PATH": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/build:/root/microscope_ws/rho5_lean_dsh_20260911/D141/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+  "preflight_lean_jobs": [
+    "2184454 2184450  10 3142672 lean"
+  ],
+  "available_mem_kib": 82762472,
+  "free_disk_bytes": 16125743104
+}

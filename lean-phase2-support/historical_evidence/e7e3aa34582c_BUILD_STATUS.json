@@ -1,0 +1,85 @@
+{
+  "lane": "D148",
+  "card": "真实小 k 矩阵接入 M02 的 V31 来源与剩余前沿",
+  "status": "READY",
+  "gate": "X_SMALLK_ACTUAL_MATRIX_V31_MODEL_ENTRY_READY PUBLISHED (results/X_SMALLK_ACTUAL_MATRIX_V31_MODEL_ENTRY_READY.json)",
+  "compiled_ok": {
+    "modules": [
+      "Rho5.Shared.XV31ModelEntry.Coordinates",
+      "Rho5.Shared.XV31ModelEntry.Rows",
+      "Rho5.Shared.XV31ModelEntry.Entry",
+      "Rho5.Shared.XV31ModelEntry.Frontier",
+      "Rho5.Shared.XV31ModelEntry.Audit",
+      "Rho5.Shared.XV31ModelEntry"
+    ],
+    "all_exit_code_0": true,
+    "wall_seconds": {"Coordinates": 6.193, "Rows": 23.706, "Entry": 23.724, "Frontier": 3.537, "Audit": 3.033, "aggregate": 3.335},
+    "peak_rss_kib_max": 3216460,
+    "named_axiom_records": 39,
+    "axiom_union": ["propext", "Classical.choice", "Quot.sound"],
+    "nonstandard_axioms": [],
+    "forbidden_syntax_scan": "empty (no sorry / admit / native_decide / project axiom)",
+    "driver": "TMO=300 bash tools/d148_build.sh all -> COMPLETE (6/6 exit 0); bash tools/d148_build.sh staleness -> 6/6 FRESH",
+    "guard": "one Lean process, nice 10, -j 1 -M 8192, wrapper RSS ceiling 8 GiB, AS 12 GiB, pipe-free runner"
+  },
+  "remaining_work": [],
+  "delivered": {
+    "stage_A_coordinates": "matrixPoint, matrixPoint_apply, matrixPoint_0..21, matrixPoint_eq_chartState, liftedPoint_matrixPoint, projectPoint_liftedPoint_matrixPoint (Coordinates.lean)",
+    "stage_A_rows": "mem_paidIdx_or_matrix, rowProp_iff_toRow (106/106), eval_nonneg_of_rowProp, sameSource_of_rows, sameSource_of_satFrame (Rows.lean)",
+    "stage_B_entry": "root_lo_eq_boxLo, root_hi_eq_boxHi, root_eq_boxLoHi, matrixPoint_mem_root_of_boxIn, matrix_has_v31_source_representative (Entry.lean)",
+    "stage_C_frontier": "matrixPoint_remaining_frontier, matrixPoint_not_subRoot, representative_not_subRoot (Frontier.lean)"
+  },
+  "theorem_chain": [
+    "D143 sign_representative_chartState: SatFrame M + qstar <= height M + k M <= 2 -> real same-height N with NormalizedSigns/PosSigns/0<=u0/HighValue/SmallThirdPivot/Rho4Input/PhysicalBounds on chartState N",
+    "D136 sourceSystem_of_satFrame: those explicit premises -> SourceSystem N (106 RowProp rows + BoxIn + IsLift + 35 envelopes)",
+    "D148 Rows: RowProp i (chartState N) <-> (integerPolynomials i).toRow.Holds (chartState N) for all 106 i; quadratic_row_identity + liftedPoint_matrixPoint -> 0 <= polynomials r at matrixPoint N -> Model.SameSource (matrixPoint N)",
+    "D148 Entry: 44 root endpoints equal; BoxIn -> matrixPoint N in V31Prefix.root.denote; export uses only the three original hypotheses",
+    "D148 Frontier: FiveSource.actual_root_remaining_cover -> exists b in FiveTree.remainingSeven with matrixPoint N in Model.source ∩ b.denote; subtree_impossible exposed"
+  ],
+  "inputs": {
+    "D143": "Rho5.Shared.XSmallKSigns.Bridge (sign_representative_chartState, height_eq_rr_sub_ww) - olean a42f142278201fa6...",
+    "D136": "Rho5.Shared.XSmallKBranch.{PhysicalBridge,SourceSystem} (chartState, BoxIn, boxLo/boxHi, RowProp, paidIdx, sourceSystem_of_satFrame) - oleans 3fc3703057e3bf2d..., 2c126b81942e4a3a...",
+    "M01": "Rho5.Shared.MainlineTreeCover.V31Prefix (root with 4800 denominator, denote) - olean 3cc9e397f759e49d...",
+    "M02": "Rho5.Shared.MainlineTreeCover.V31Batch.{Model,FiveTree,FiveSource} - oleans d2bdbcfb177f8d4f..., 6dfe5d868d7c3d67..., 79fb925f425320e8...",
+    "M02_G01": "all 27 frozen delivery objects byte-identical in the D148 build root"
+  },
+  "mirror": {
+    "method": "hard-link mirror of verified roots; no upstream rebuild",
+    "roots": ["M01 build root", "M02 build root", "D135 cache (C03/C04 CertificateContraction)", "D136 build root", "D143 build root"],
+    "conflicts": 0,
+    "upstream_rho5_objects": {"total": 1995, "D136": 872, "D143": 1008, "M02": 103, "M01": 12},
+    "manifest": "logs/mirrored_input.tsv (rel, origin, status, sha256 for Rho5 paths)"
+  },
+  "source_sha256": {
+    "src/Rho5/Shared/XV31ModelEntry.lean": "f58720e8ddaa44970d405cdcaf4a87fddf25c206a04dcc5a219c8e23405c306d",
+    "src/Rho5/Shared/XV31ModelEntry/Coordinates.lean": "5cf134ba6d432fbd05654280c04b52a142d31c406ca02631e377250825b20c0a",
+    "src/Rho5/Shared/XV31ModelEntry/Rows.lean": "b3db57789457568205a8f85d163213b38eff711b3ff8a443af588aa77919d297",
+    "src/Rho5/Shared/XV31ModelEntry/Entry.lean": "3c22dc0526b7dcb1d805d4be79d75af5ee09eb7ce7f5bacc482bfa8f72e7ae24",
+    "src/Rho5/Shared/XV31ModelEntry/Frontier.lean": "d47aa8c8cc247c415c9acd915608e2b250f70dcfe8798d2e8725975418054d8e",
+    "src/Rho5/Shared/XV31ModelEntry/Audit.lean": "2bb5c9a2420bbf2d99673db1c5582179c2cd85c2df18f0f3eebc74d5c08e67fd"
+  },
+  "olean_sha256": {
+    "Rho5/Shared/XV31ModelEntry.olean": "61621b424c1bd04395978858e4395282b5c7febdc6b98f1356d99d69fb78ed22",
+    "Rho5/Shared/XV31ModelEntry/Coordinates.olean": "6f4f7aa1abe6f18459ac1d95bb035fcd0254532ec4ec4e913c18b349978ab9ca",
+    "Rho5/Shared/XV31ModelEntry/Rows.olean": "87c63d8d97218abb0f3e63de4a8cd5c6af086e5ecc9b38b12bb18938770db98a",
+    "Rho5/Shared/XV31ModelEntry/Entry.olean": "56a6971bd984ab3402061377012095f0577d2de38c98fbf328a9bc61dcc60dbe",
+    "Rho5/Shared/XV31ModelEntry/Frontier.olean": "329216a11d5b1dbf6e50ea7d5c50b7ab2061981b65e70ee5ce46dbf955afcf52",
+    "Rho5/Shared/XV31ModelEntry/Audit.olean": "fa97faf623ea699540bef3dac2e47b349006390e6376f47fc0b69ab3a4736146"
+  },
+  "artifacts": {
+    "publication": "results/X_SMALLK_ACTUAL_MATRIX_V31_MODEL_ENTRY_READY.json",
+    "report": "results/REPORT.md",
+    "integration": "results/INTEGRATION.md",
+    "hashes": "results/SOURCE_SHA256SUMS",
+    "import_binding": "results/IMPORT_BINDING.json",
+    "logs": "results/actual_success_logs/mod_Rho5.Shared.XV31ModelEntry*.log (6 files, each `exit_code: 0`)",
+    "driver": "tools/d148_build.sh (mirror|all|staleness), tools/d148_mirror.py, tools/d148_run_lean.py, tools/d148_bind.py"
+  },
+  "scope_limits": [
+    "No whole-V31 safety, no sibling-frontier safety, no rho=alpha, no global matrix closure.",
+    "The seven retained frontiers (including D136's first C) stay with their own owners.",
+    "M02_G01's five-leaf exclusion is consumed as-is; no terminal, checker or tree kernel is recomputed.",
+    "Typed model vs original JSON bytes remains an external provenance binding, not a Lean theorem."
+  ],
+  "checked_at": "2026-09-12T14:45:00+0800"
+}

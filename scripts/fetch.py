@@ -61,13 +61,27 @@ def download(entry, out):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--list', action='store_true')
-    parser.add_argument('--group', action='append', choices=['lean', 'sample', 'x', 'b', 'upstream', 'analytic'])
+    parser.add_argument('--group', action='append', choices=['lean', 'sample', 'x', 'b', 'upstream', 'analytic', 'paper', 'replay'])
     parser.add_argument('--id', action='append', help='Exact object id shown by --list')
     parser.add_argument('--all', action='store_true')
     parser.add_argument('--out', type=Path, default=ROOT / 'downloads')
     args = parser.parse_args()
     data = json.loads((ROOT / 'manifests/release-assets.json').read_text())
-    objects = data['objects']
+    objects = list(data['objects'])
+    # New document/source assets remain separate from the original certificate
+    # manifest. Both indexes use fixed hashes; this is an additive download view.
+    addition = json.loads((ROOT / 'manifests/v1.0.2.json').read_text())
+    for entry in addition['github_release_artifacts']:
+        if 'id' not in entry or 'group' not in entry:
+            raise ValueError('Current release attachment lacks id/group metadata')
+        objects.append({
+            'id': entry['id'], 'group': entry['group'],
+            'filename': entry['name'], 'bytes': entry['bytes'],
+            'sha256': entry['sha256'], 'assets': [entry],
+        })
+    ids = [entry['id'] for entry in objects]
+    if len(set(ids)) != len(ids):
+        raise ValueError('Duplicate fixed object ids across release indexes')
     if args.list:
         for x in objects:
             print(f"{x['id']:30s} {x['group']:10s} {x['bytes']/1e6:10.2f} MB  {x['filename']}")

@@ -1,0 +1,71 @@
+{
+  "receipt": "CERTIFICATE_RULES_SCOPE_CORRECTION",
+  "lane": "D135",
+  "namespace": "Rho5.Shared.CertificateRules",
+  "date": "2026-09-12",
+  "issued_before": "CERTIFICATE_RULES_REAL_SOUNDNESS_READY",
+  "reason": "Mainline M01 identified, and the coordinator confirmed, that the frozen Linear.lean stage-A soundness statements quantify the assignment over rational points only. Commentary (docstrings and the earlier stage-A/B reports) that spoke of 'no real feasible assignment' was broader than the compiled types. This receipt records the exact current scope; it corrects claims, not code.",
+  "frozen_modules_and_their_actual_types": {
+    "note": "no frozen module was edited, rebuilt or re-reviewed to produce this correction; the types below are quoted from audit/D135Audit.lean output (results/logs/audit_run4.log)",
+    "types": [
+      {
+        "name": "Linear.Feasible",
+        "type": "(S : LinearSystem ι κ) → (z : κ → ℚ) → Prop",
+        "meaning": "box and declared rows hold at a RATIONAL assignment"
+      },
+      {
+        "name": "nonneg_combination_sound",
+        "type": "∀ {ι κ} [Fintype ι] [Fintype κ] (S : LinearSystem ι κ) (w : ι → ℤ), (∀ i, 0 ≤ w i) → combRhs S w < boxMin S w → ∀ (z : κ → ℚ), ¬ Feasible S z",
+        "scope": "rational assignments only"
+      },
+      {
+        "name": "nonnegCheck_sound",
+        "type": "∀ {ι κ} [Fintype ι] [Fintype κ] (S : LinearSystem ι κ) (w : ι → ℤ), (∀ i, 0 ≤ w i) → nonnegCheck S w = true → ∀ (z : κ → ℚ), ¬ Feasible S z",
+        "scope": "rational assignments only"
+      },
+      {
+        "name": "interval_terminal_sound",
+        "type": "∀ {κ} [Fintype κ] (a : κ → ℤ) (b : ℤ) (lo hi : κ → ℤ), (∀ j, lo j ≤ hi j) → b < ∑ j, min (a j * lo j) (a j * hi j) → ∀ (z : κ → ℚ), (∀ j, ↑(lo j) ≤ z j ∧ z j ≤ ↑(hi j)) → ∑ j, ↑(a j) * z j ≤ ↑b → False",
+        "scope": "rational assignments only"
+      },
+      {
+        "name": "height_terminal_sound",
+        "type": "∀ {κ} [Fintype κ] (a h : κ → ℚ) (B t α : ℚ) (lo hi : κ → ℚ), (∀ j, lo j ≤ hi j) → 0 < t → B - ∑ j, min ((a j - t * h j) * lo j) ((a j - t * h j) * hi j) ≤ t * α → ∀ (z : κ → ℚ), (∀ j, lo j ≤ z j ∧ z j ≤ hi j) → ∑ j, a j * z j ≤ B → ∑ j, h j * z j ≤ α",
+        "scope": "rational assignments only; it is a SAFETY statement (F ≤ α), never an empty-source statement"
+      },
+      {
+        "name": "Rational.Feasible",
+        "type": "(S : Rational.RatSystem ι κ) → (z : κ → ℚ) → Prop",
+        "meaning": "box and declared rows hold at a RATIONAL assignment"
+      },
+      {
+        "name": "Rational.nonneg_combination_sound",
+        "type": "∀ {ι κ} [Fintype ι] [Fintype κ] (S : Rational.RatSystem ι κ) (w : ι → ℚ), (∀ i, 0 ≤ w i) → Rational.combRhs S w < Rational.boxMin S w → ∀ (z : κ → ℚ), ¬ Rational.Feasible S z",
+        "scope": "rational assignments only"
+      },
+      {
+        "name": "Rational.check_sound",
+        "type": "∀ {ι κ} [Fintype ι] [Fintype κ] (S : Rational.RatSystem ι κ) (w : ι → ℚ), (∀ i, 0 ≤ w i) → Rational.check S w = true → ∀ (z : κ → ℚ), ¬ Rational.Feasible S z",
+        "scope": "rational assignments only"
+      }
+    ],
+    "sample_corollaries_affected_by_the_wording_only": [
+      "Samples.v31_terminal_empty : ∀ z : Fin 57 → ℚ, ¬ Feasible v31System z",
+      "Samples.b16_terminal_empty : ∀ z : Fin 67 → ℚ, ¬ Feasible b16System z",
+      "ListCheck.SelfTest.empty : ∀ z : Fin 2 → ℚ, ¬ Feasible ListCheck.SelfTest.sys z"
+    ]
+  },
+  "what_is_not_affected": [
+    "The exact checker arithmetic and every check=true / check=false result (V31 24 s, B16 110 s kernel computations) are unchanged and remain valid; they are statements about integer/rational data and exact comparisons, with no assignment quantifier.",
+    "The certificate data transcription, the input manifests, the negative controls and the 33 named axiom checks are unaffected.",
+    "Stage A remains frozen; this correction adds no hypothesis and removes none."
+  ],
+  "corrected_reading": "Until CERTIFICATE_RULES_REAL_SOUNDNESS_READY lands, every D135 emptiness/soundness statement (including the stage-A receipt wording and the stage-B report wording) must be read as: no assignment with RATIONAL coordinates satisfies the declared box and rows. Real-valued exclusion is proved separately in the new leaf modules, by the same weighted-combination argument carried out over ℝ, not by rounding, density or rational-infeasibility transfer.",
+  "remedy_plan": [
+    "RealFeasible for LinearSystem (integer data) and Rational.RatSystem (rational data): z : κ → ℝ with all data cast into ℝ.",
+    "Real-valued soundness: nonneg_combination_sound_real / nonnegCheck_sound_real and Rational.nonneg_combination_sound_real / Rational.check_sound_real.",
+    "Real-valued interval and height variants (height stays a safety statement, distinct from empty-source semantics).",
+    "Two real-valued sample corollaries derived from the already compiled v31_check / b16_check and the nonnegativity theorems; quantifiers explicitly range over ℝ (not rational points embedded in ℝ). The large decide proofs are not re-run.",
+    "Positive-scaling feasibility transport proved in Lean for the B16 rational reading (ratScale), so that any claim relating the declared integer-scaled system to a rational system rests on a Lean transport plus an exactly verified transcription, not on a Python margin identity alone."
+  ]
+}

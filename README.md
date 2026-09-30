@@ -48,7 +48,7 @@ The [proof map](docs/PROOF_MAP.md) explains the role of each layer. Readers can 
 
 See [the cold-rebuild record](docs/LEAN_COLD_REBUILD.md) for the successful route and retained evidence. The original packaged Lake cold-build command failed; the guide distinguishes it from the successful driver. A complete dependency-from-scratch build, a new all-components certificate replay, and a fully kernel-checked global theorem are separate responsibilities.
 
-The separate second-phase B366 archive contains 1,452 accepted Lean source modules and four identified support sources. It is a **source-only review snapshot**; 57 direct imports outside that snapshot and the two global safety hypotheses remain. [Scope and dependencies](docs/PROOF_MAP.md).
+The separate second-phase B366 archive contains 1,452 accepted Lean source modules and four identified support sources. An additive [dependency supplement and source-assembly guide](docs/LEAN_PHASE2_SOURCE_ASSEMBLY.md) supplies 76 historically compiled sources: with the frozen first-phase base, the snapshot’s 2,027-module recursive Rho5 source closure is available. This is a **static source-availability check**, not a new combined Lean build; both global safety hypotheses remain. [Proof scope](docs/PROOF_MAP.md).
 
 ## Try one real certificate
 
@@ -61,9 +61,9 @@ python3 scripts/fetch.py --group sample
 
 Continue with [the 54-leaf anchor walkthrough](docs/VERIFY.md#3-a-small-real-certificate). It checks a named part of the proof in approximately three minutes in the recorded X run; it does not rerun the original search or verify the entire domain. The downloader checks file identity; the subsequent verifier checks the mathematics.
 
-**Download only what you need.** Lean source: **6.43 MB**. Small example: **18.29 MB**. Original archive collection: **4.494 GB**. [Sizes, disk space and measured timings](docs/DOWNLOADS.md).
+**Download only what you need.** First-phase Lean archive: **6.43 MB**. Small example: **18.29 MB**. Original archive collection: **4.494 GB**. [Sizes, disk space and measured timings](docs/DOWNLOADS.md).
 
-The [five v1.0.2 attachments](docs/DOWNLOADS.md#new-v102-attachments) include PDFs matching Zenodo, corresponding source and bounded checks, the dated replay evidence, and a separately labeled second-phase Lean source snapshot. Their exact sizes and hashes are in [the release index](manifests/v1.0.2.json).
+The [six v1.0.2 attachments](docs/DOWNLOADS.md#new-v102-attachments) include PDFs matching Zenodo, corresponding source and bounded checks, the dated replay evidence, a separately labeled second-phase Lean source snapshot, and its additive dependency supplement. Their exact sizes and hashes are in [the release index](manifests/v1.0.2.json).
 
 The original 24 release assets remain immutable under **v1.0.0**. **v1.0.2** adds new documents and dated replay evidence while retaining the original certificate URLs and SHA-256 identities. Existing verified certificate downloads remain valid. GitHub’s automatic “Source code” ZIP does not include the large certificates.
 

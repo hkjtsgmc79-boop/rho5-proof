@@ -1,0 +1,24 @@
+{
+  "status": "STATIC_HELPER_BOUNDED_CHECKS_PASS",
+  "lean_executed": false,
+  "checks": {
+    "nested_comment_and_escaped_string": true,
+    "dependency_order": true,
+    "reject_missing": true,
+    "reject_conflict": true,
+    "reject_unsafe_path": true,
+    "reject_syntax": true,
+    "reject_cycle": true,
+    "base_inputs_verified": true,
+    "snapshot_exact_members": true,
+    "reject_bare_import": true,
+    "reject_multiline_import": true,
+    "namespace_not_continuation": true,
+    "modifier_not_continuation": true,
+    "run_cmd_not_continuation": true,
+    "all_2102_pinned_union_import_headers_accepted": true,
+    "generated_lake_name_preserves_frozen_root": true,
+    "full_supplement_verify_only_passed_2027_closure": true
+  },
+  "base_union_modules_before_supplement": 2102
+}

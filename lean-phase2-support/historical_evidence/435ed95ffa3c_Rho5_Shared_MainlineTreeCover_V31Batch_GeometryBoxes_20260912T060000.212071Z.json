@@ -1,0 +1,42 @@
+{
+  "module": "Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes",
+  "source_sha256": "1a7c967f8e76d9dfcaf6c25e4d855367fb389de413dfbe5c2f2027ae0d8f762c",
+  "source_unchanged": true,
+  "exit_code": 0,
+  "wall_seconds": 6.457453249022365,
+  "log_sha256": "d151a37ce3dbfc234f98aa6f44961669e50d5aad22cabd9380f5fd38cd8cae6b",
+  "args": [
+    "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+    "-j",
+    "1",
+    "-M",
+    "8192",
+    "-R",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+    "-o",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.olean",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.lean"
+  ],
+  "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+  "peak_rss_kib": 2187608,
+  "rss_guard_fired": false,
+  "timeout": false,
+  "resources_before": {
+    "other_lean_jobs": [
+      1334718
+    ],
+    "available_kib": 83433680,
+    "disk_free_bytes": 16768978944
+  },
+  "dependencies": {
+    "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+    "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+    "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/FiveTree.olean": "6dfe5d868d7c3d670bf3234e8ed124f45fcf995793767e00c69c68f7a514d589",
+    "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Tactic/FinCases.olean": "8afa9765f63dea5ccf60d58b5c2e48cce1555e1cdff6974c5f6bdb24d37db8f7",
+    "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Tactic/FinCases.olean.private": "cea8fbe95bc04ad77ffa56ed70cc8801d36bd7764bd31c33225ccb3bca32f70c",
+    "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Tactic/FinCases.olean.server": "8303d194a8565ee2b3d138ea72644fd8bdd1eb92fbf81c5e6dbfc8e0b23ca46e"
+  },
+  "dependencies_unchanged": true,
+  "olean_sha256": "9bc078fdde2d0fa18d7d70e3df87b39f4e6fdacd724fae68c596d9d59b795f92"
+}

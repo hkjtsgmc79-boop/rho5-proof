@@ -1,0 +1,123 @@
+{
+ "schema": "D136_X_V31_ACTUAL_MATRIX_106_ROWS_READY_V1",
+ "receipt": "X_V31_ACTUAL_MATRIX_106_ROWS_READY",
+ "lane": "D136",
+ "card": "parallel/D136/TASK.md",
+ "stage": "A 续二：SatFrame M → PhysicalBounds (chartState M)（15 字段）+ 去掉该前提的实际矩阵 106 行入口",
+ "status": "READY",
+ "ready": true,
+ "published_at": "2026-09-12T12:00:00+08:00",
+ "claim": "`PhysicalBounds (chartState M)` 的 15 个字段全部由 D119 `Rho5.Shared.V43MatrixRoundTrip` 的已编译读数与 `SatFrame` 字段支付（不重做 Schur/主元数学、不改冻结 Model/Sound 与 104 行）；由此给出不再带自定义 `PhysicalBounds` 前提的实际矩阵 106 行入口。",
+ "physical_bounds_bridge": {
+  "theorem": "Rho5.Shared.XSmallKBranch.physicalBounds_chartState",
+  "full_type": "∀ (M : Matrix5), Rho5.Shared.V43MatrixRoundTrip.SatFrame M → PhysicalBounds (chartState M)",
+  "source_sha256": "2fcc50d014489778deeb53313a323aa9cd876cc16e84a64517c7160cd3c3d609",
+  "olean_sha256": "3fc3703057e3bf2d92612c96b40228d157dcc8ef05333d24882aab8b18317dff",
+  "fields": 15,
+  "payers": {
+   "e_abs": "|e| ≤ 1 ← D119 eX_abs_le_one",
+   "be_abs": "|β| ≤ 1 ← D119 betaX_abs_le_one",
+   "head_abs": "|p − eβ| ≤ 1 ← D119 head_abs_le_one",
+   "u_abs": "∀ i, |u_i| ≤ 1 ← D119 uX_abs_le_one",
+   "x_abs": "∀ i, |x_i| ≤ 1 ← D119 xX_abs_le_one",
+   "v_abs": "∀ i, |v_i| ≤ 1 ← D119 vX_abs_le_one",
+   "q_abs": "∀ i, |q_i| ≤ p ← D119 qX_abs_le_p",
+   "L_abs": "∀ i, |p x_i − e u_i| ≤ 1 ← D119 LX_abs_le_one",
+   "P_abs": "∀ i, |q_i + β v_i| ≤ 1 ← D119 PX_abs_le_one",
+   "D_abs": "∀ i j, |D_ij| ≤ k ← D119 DX_le_kX + neg_kX_le_DX",
+   "S_abs": "∀ i j, |S_ij| ≤ p ← D119 SX_le_pX + neg_pX_le_SX",
+   "O_abs": "∀ i j, |O_ij| ≤ 1 ← D119 OX_le_one + neg_one_le_OX",
+   "k_pos": "0 < k ← SatFrame.hk",
+   "r_pos": "0 < r ← SatFrame.hr",
+   "w_abs": "|w| ≤ r ← SatFrame.cp4 1 1（尾块完整主元）+ abs_of_pos"
+  },
+  "definitional_glue": {
+   "Dc_chartState_eq_DX": "Dc (chartState M) i j = DX M i j（fin_cases + simp + ring）",
+   "Sc_chartState_eq_SX": "Sc (chartState M) i j = SX M i j（读数引理，定义级）",
+   "Oc_chartState_eq_OX": "Oc (chartState M) i j = OX M i j（和式次序不同，ring 归一）",
+   "读数引理": "kk/rr/ww/AA/BB/cc/dd/pp/ee/be_chartState 与 uu/xx/vv/qq_chartState"
+  }
+ },
+ "matrix_entry_106": {
+  "theorem": "Rho5.Shared.XSmallKBranch.all_rows_sound_of_satFrame_noPhys",
+  "full_type": "∀ (M : Matrix5), SatFrame M → NormalizedSigns (chartState M) → HighValue (chartState M) → Rho4Input (chartState M) → SmallThirdPivot (chartState M) → ∀ i, (i ∈ paidIdx ∨ i = 96 ∨ i = 98) → RowProp i (chartState M)",
+  "note": "不再有 PhysicalBounds 前提（已由 physicalBounds_chartState 内部支付）；106 = 冻结 paidIdx 104 行 + 索引 96/98",
+  "olean_sha256": "3fc3703057e3bf2d92612c96b40228d157dcc8ef05333d24882aab8b18317dff"
+ },
+ "remaining_explicit_inputs": {
+  "NormalizedSigns": "原文 §2 符号规范输出（来源须准确保留；后续支付）",
+  "HighValue": "高值分支假设 F ≥ 1653/400",
+  "Rho4Input": "F ≤ 4p（ρ₄=4；D138 独占实施，本卡不重复证明、不改含义）",
+  "SmallThirdPivot": "k ≤ 2"
+ },
+ "frozen_untouched": {
+  "Model": "未改动、未重编",
+  "Sound": "未改动、未重编",
+  "rows_104": "未重审（paid_rows_sound 原样复用）",
+  "upstream": "D119/D54/D87 只读复用，未重编"
+ },
+ "audit": {
+  "log": "logs_x/PhysicalBridgeAudit.log",
+  "log_sha256": "0558824349a799385c3269cd7e1afa0275a9add138b5a08ef7d191f8a4263fac",
+  "targets": 5,
+  "standard_three_axioms": 5,
+  "violations": [],
+  "errors": 0,
+  "panics": 0,
+  "targets_list": [
+   "Dc_chartState_eq_DX",
+   "Sc_chartState_eq_SX",
+   "Oc_chartState_eq_OX",
+   "physicalBounds_chartState",
+   "all_rows_sound_of_satFrame_noPhys"
+  ],
+  "label": "ACTUAL_PASSES_FROM_REAL_LEAN_RUNS"
+ },
+ "build": {
+  "command": "TMO=300 bash scripts/d136_build.sh buildd",
+  "result": "PhysicalBridge exit 0 (3.9 s) / PhysicalBridgeAudit exit 0 (3.0 s)",
+  "audit_source_sha256": "5d012eda09eb3d526378dd88f7ad135fe62b67e11840418fcec67ee082bbfa62"
+ },
+ "stage_b": {
+  "status": "PENDING_D135_SAMPLES",
+  "note": "本项不依赖 D135 样本，已直接完成；阶段 B（首真实终端）仍待 D135 样本 Lean 通过",
+  "d135_core": "outputs/heartbeat_1124_delivery_20260912/D135_CORE/results/CERTIFICATE_RULES_CORE_READY.json"
+ },
+ "not_claimed": [
+  "未付 §2 符号规范",
+  "未付 F ≤ 4p（D138 独占）",
+  "不声称整棵证书树/其余分裂/全 X 或 rho = alpha",
+  "未改冻结 Model/Sound/104 行",
+  "未重编任何上游",
+  "不依赖 D135 样本"
+ ],
+ "integrity": {
+  "frozen_inputs_modified": 0,
+  "upstream_rebuilt": false,
+  "model_sound_recompiled": false,
+  "lake_build_run": false,
+  "deleted": 0,
+  "kills": 0,
+  "services": 0,
+  "network": false,
+  "outputs_written": false,
+  "other_lanes_touched": false,
+  "tmp_dir_used": false
+ },
+ "artifacts": {
+  "source_sha256": {
+   "src/Rho5/Shared/XSmallKBranch/PhysicalBridge.lean": "2fcc50d014489778deeb53313a323aa9cd876cc16e84a64517c7160cd3c3d609",
+   "src/Rho5/Shared/XSmallKBranch/PhysicalBridgeAudit.lean": "5d012eda09eb3d526378dd88f7ad135fe62b67e11840418fcec67ee082bbfa62"
+  },
+  "olean_sha256": {
+   "PhysicalBridge": "3fc3703057e3bf2d92612c96b40228d157dcc8ef05333d24882aab8b18317dff",
+   "PhysicalBridgeAudit": "bdb5e37b99ed0fb444a44cff57cce709c940950fdfcfcc27c12f8182e8310c3a"
+  },
+  "log_sha256": {
+   "logs_x/PhysicalBridge.log": "c7b37463561acb4a92c18f2e1e555110d4a26b3bb71d8cf636768d59e61a054a",
+   "logs_x/PhysicalBridgeAudit.log": "0558824349a799385c3269cd7e1afa0275a9add138b5a08ef7d191f8a4263fac",
+   "logs_x/evidence_phys.txt": "3d1cc9842c005ec399ed1b58d9e03a171b1b300a2d12e6288882709c752b0f4a"
+  }
+ },
+ "updated_at": "2026-09-12T12:00:00+08:00"
+}

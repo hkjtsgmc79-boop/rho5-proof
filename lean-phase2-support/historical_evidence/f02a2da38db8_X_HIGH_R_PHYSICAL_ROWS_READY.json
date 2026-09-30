@@ -1,0 +1,200 @@
+{
+  "receipt": "X_HIGH_R_PHYSICAL_ROWS_READY",
+  "lane": "D149",
+  "card": "D149 - 从真实严格高 r 矩阵支付 D145 的来源前提",
+  "ready": true,
+  "module": "Rho5.Shared.XHighRPhysicalRows",
+  "namespace": "Rho5.Shared.XHighRPhysicalRows",
+  "modules": [
+    "Rho5.Shared.XHighRPhysicalRows.Head",
+    "Rho5.Shared.XHighRPhysicalRows.CoreSlacks",
+    "Rho5.Shared.XHighRPhysicalRows.HighRows",
+    "Rho5.Shared.XHighRPhysicalRows.Packets",
+    "Rho5.Shared.XHighRPhysicalRows (aggregate)",
+    "Rho5.Shared.XHighRPhysicalRows.Audit"
+  ],
+  "toolchain": {
+    "lean": "4.30.0",
+    "mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+  },
+  "exact_entry": "SourceQual M := SatFrame M ∧ HighRDomain (extractX M) ∧ HighRSigns (extractX M)",
+  "exact_domain": "2 < k <= 21/10, r > k, F = height = r - w >= gamma = 4132517/1000000, with the original high diagram's core signs A,B <= 0 <= c,d; r = k stays low branch",
+  "premises_eliminated": {
+    "HeadRows": "was a hypothesis at the D145 packet entry; now theorem headRows_of_source (and headRows_of_satFrame from SatFrame alone)",
+    "CoreSlacks": "was a hypothesis; now theorem coreSlacks_of_source (all eight conjuncts)",
+    "HighSourceRows": "was a hypothesis; now theorem highSourceRows_of_source (all seven rows)",
+    "packet_entry": "realizes_orig / no_source_of_orig_* no longer require HeadRows; all packet entries take SourceQual plus the explicit leaf restriction BoxMem"
+  },
+  "delivered_paid_in_lean": {
+    "stage_A1_head_rows": {
+      "statement": "HeadRows M := p - 1 <= beta * e ∧ beta * e <= p + 1",
+      "real_origin": [
+        "D119 Readings.head_eq (M) (h00) : pX M - eX M * betaX M = M 1 1  (the real head identity, from the S4 entry computation at M 0 0 = 1)",
+        "D119 Physical.head_abs_le_one (M) (h) : |pX M - eX M * betaX M| <= 1  (the frozen normalisation matrixEntryMax = 1 bounds the (1,1) entry)"
+      ],
+      "theorems": [
+        "head_eq_entry",
+        "headRows_of_satFrame",
+        "headRows_of_source"
+      ]
+    },
+    "stage_A2_core_slacks": {
+      "statement": "CoreSlacks M : t = r - k >= 0; c(-B) >= t; d(-A) >= t; c(-A) >= t; c(-A) <= J; t <= J; d(-B) >= 0; c(-A) >= 0, J = 21/10",
+      "traceability": {
+        "t >= 0": "the strict domain k < r (SourceQual.domain)",
+        "c(-B) >= t": "real D-row D12+ : r + B c <= k  (DX_le_kX M h 1 2, i.e. SatFrame.cp3 at (1,2))",
+        "d(-A) >= t": "real D-row D21+ : r + A d <= k  (DX_le_kX M h 2 1, cp3 at (2,1))",
+        "c(-A) >= t": "real D-row D11+ : r + A c <= k  (DX_le_kX M h 1 1, cp3 at (1,1))",
+        "c(-A) <= J": "D01- : A >= -k (neg_kX_le_DX 0 1), D10+ : k c <= k hence c <= 1 (DX_le_kX 1 0, k > 0), and k <= 21/10 (domain)",
+        "t <= J": "the two previous slacks (t <= c(-A) <= J)",
+        "d(-B) >= 0, c(-A) >= 0": "the original high diagram's core signs B, A <= 0 <= c, d (HighRSigns)"
+      },
+      "theorems": [
+        "DX_00..DX_22",
+        "neg_k_le_aX",
+        "neg_k_le_bX",
+        "bX_le_kX",
+        "kX_mul_cX_le_kX",
+        "r_add_ac_le_k",
+        "r_add_bc_le_k",
+        "r_add_ad_le_k",
+        "neg_k_sub_bd_le_wX",
+        "wX_le_k_sub_bd",
+        "cX_le_one",
+        "dX_le_one",
+        "neg_aX_le_kX",
+        "coreSlacks_of_source"
+      ],
+      "not_reassumed": "none of the eight slacks is a hypothesis anywhere in this lane; each is derived from its own block bound"
+    },
+    "stage_B_high_rows": {
+      "statement": "HighSourceRows M (the seven archived high_* rows)",
+      "traceability": {
+        "r - k >= 0": "strict domain",
+        "k - B - r >= 0": "t <= c(-B) (slack 2) and c <= 1, -B >= 0, so t <= c(-B) <= -B",
+        "k(1+c) - r >= 0": "t <= c(-B) (slack 2) and D02- : B >= -k, so t <= c(-B) <= c k",
+        "k(1+d) - r >= 0": "t <= d(-A) (slack 3) and D01- : A >= -k, so t <= d(-A) <= d k",
+        "2k - r + w - B >= 0": "D12+ : r + B c <= k, c <= 1 (so -B c <= -B), D22- : w >= -k - B d, and d(-B) >= 0",
+        "-J B d - (r-k)^2 >= 0": "D145 high_rank_product_of_slacks on the paid CoreSlacks (verified decomposition, not re-proved)",
+        "-J A c - (r-k)^2 >= 0": "D145 high_rank_symmetric_of_slacks on the paid CoreSlacks (verified decomposition, not re-proved)"
+      },
+      "theorems": [
+        "neg_k_le_bX",
+        "highSourceRows_of_source",
+        "sourcePremises_of_source"
+      ],
+      "F_reading": "F = height = r - w is untouched; no 2r reading is introduced anywhere"
+    },
+    "stage_C_packets": {
+      "realization": [
+        "realizes_stage_of_source",
+        "realizes_orig_of_source",
+        "realizes_core_of_source"
+      ],
+      "rejection_P0_P3": [
+        "no_source_of_stage_empty_of_source",
+        "no_source_of_orig_empty_of_source",
+        "no_source_of_core_empty_of_source"
+      ],
+      "rejection_P2": [
+        "no_source_of_stage_cycle_of_source",
+        "no_source_of_orig_cycle_of_source",
+        "no_source_of_core_cycle_of_source"
+      ],
+      "discipline": "the rejection transfers call D145's ready theorems (no_source_of_*); no P rule, no interval contraction and no cycle search is reimplemented. BoxMem stays the explicit leaf restriction; no root qualification or diagram coverage is hidden in the background."
+    }
+  },
+  "reused_read_only": {
+    "D145": "Rho5.Shared.XHighRSource.{Defs,Height,Transpose,SchurTransport,CoordTransport,PRules,SourceRows,DiagramPackets} - consumed by olean, hashes identical to the accepted D145 receipts (see hashes.consumed_D145)",
+    "D119": "Rho5.Shared.V43MatrixRoundTrip.{Defs,Height,Physical,Readings} - SatFrame, extractX, DX/SX/OX readings, head_eq, head_abs_le_one, DX_le_kX, neg_kX_le_DX",
+    "not_used": "no D136/D143 result is consumed (their k <= 2 whole-root conclusions do not cover this domain); no recompilation of any upstream module"
+  },
+  "unpaid_recorded_not_assumed": [
+    "RTangents (the three inherited rational r tangents) and the remaining rows of the two models' 196-row dictionaries: outside this card, not assumed anywhere.",
+    "The structural traversal and numeric certificate binding of ONE actual leaf of the two archived trees (the card's stated next item), and any whole-tree replay.",
+    "The two roots' recorded node/leaf/open and P0-2/P3 counts remain archived evidence with SHA256 736ce26e428e3f8b4a741cda8d9983887194cfa4a679d0360766e1b70e6a45b2; not replayed here.",
+    "P1/P2 acceptance completeness of the packet theorem (explicitly excluded by this card).",
+    "No whole high-r branch, whole X or alpha safety statement is made; gamma stays separate from alpha."
+  ],
+  "evidence": {
+    "exit_codes": {
+      "Head": 0,
+      "CoreSlacks": 0,
+      "HighRows": 0,
+      "Packets": 0,
+      "XHighRPhysicalRows": 0,
+      "Audit": 0
+    },
+    "authoritative_success_log_map": {
+      "Head": "a2/Head.log",
+      "CoreSlacks": "a3/CoreSlacks.log",
+      "HighRows": "a4/HighRows.log",
+      "Packets": "a4/Packets.log",
+      "XHighRPhysicalRows": "a5/XHighRPhysicalRows.log",
+      "Audit": "a6/Audit.log"
+    },
+    "wall_seconds": {
+      "Head": 4.53,
+      "CoreSlacks": 6.543,
+      "HighRows": 6.794,
+      "Packets": 3.775,
+      "XHighRPhysicalRows": 3.776,
+      "Audit": 3.775
+    },
+    "peak_rss_kib_max": 2978692,
+    "rss_watchdog_tripped": false,
+    "as_cap_bytes": 12884901888,
+    "errors": 0,
+    "staleness": "FRESH x6 (the whole D149 chain)",
+    "named_axioms": {
+      "records": 13,
+      "observed_union": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "violations": [],
+      "sorryAx": false
+    },
+    "runner": "one Lean process, nice 10, -j 1 -M 8192, single-threaded BLAS/OMP/MKL, RSS 8 GiB watchdog (never tripped), AS 12 GiB",
+    "dependency_mirror": "884 artifacts hardlinked into lane_root (D145 lane_root + D119/D63/D135/D109/D134/D142/D139/D121/D120/D71/D115/D87/D92); no upstream module compiled",
+    "hashes_file": "results/SOURCE_SHA256SUMS.txt"
+  },
+  "hashes": {
+    "own_sources": {
+      "Rho5/Shared/XHighRPhysicalRows.lean": "941490dc837e0726c6fa80a4e6536c7fbd45be95753fca695e67557789ddf9a7",
+      "Rho5/Shared/XHighRPhysicalRows/Audit.lean": "1317a0ae78af66e7739fec0675c000f556ee9e8a7d299e8483ad605d81deb540",
+      "Rho5/Shared/XHighRPhysicalRows/CoreSlacks.lean": "e990c91f1cbc1139793f4019cda4578d03d6beac7672d094199afb879ba0abd9",
+      "Rho5/Shared/XHighRPhysicalRows/Head.lean": "fc8c6ec7dfcf236806d84ad2da51e3ace0bfef0f68f7438ffca1905eef72bf73",
+      "Rho5/Shared/XHighRPhysicalRows/HighRows.lean": "9c986608113c169ae664a6dae222a45a434375666f7a544fc3499bf3079e49cb",
+      "Rho5/Shared/XHighRPhysicalRows/Packets.lean": "7289fb3ba4f7cc85a9677e7adf48add7efd9db4e93d0e4d70bd5e2ac67bb1e2c"
+    },
+    "own_oleans": {
+      "Head.olean": "6d17de3953867ecbbfd1bca232b72037b1a881c98e20d0b174ac58f6fa7bceb5",
+      "CoreSlacks.olean": "c40ed8d2b25610fde44a34d07d3ff46dfd6ae744dc5a53e9da35e640f6a48371",
+      "HighRows.olean": "c79d674fadef7d63f3bd02582445ee9271fbe2e7cbd710bf0cbbab405913f7c8",
+      "Packets.olean": "dc8e55fb10a2e025a380d61d1ec6f4f6c90def185952c421fdc5db5bd11ab03f",
+      "XHighRPhysicalRows.olean": "2bb16ba2f9ea255de4b856e44db3af1b81b44fd4975fbf2bae75a3cf128574f2",
+      "Audit.olean": "ff496a282f014ccfb6740e6d7637b5a45b72b2d603b6c0325998a412b2792b45"
+    },
+    "consumed_D145": {
+      "XHighRSource.olean": "63205558b1334ed707a80f760da24d7382224076dac09940529b2c7e30f3fcc9",
+      "Defs.olean": "cd3c3c7283fbab9c9ade894298598325d6281f996d4315b4aa98a2d3be7f803c",
+      "Height.olean": "8ab8924e34e4074820d09e0ed83a0ef85e2003f582ca3f6160fb635e852426f4",
+      "Transpose.olean": "f464ea60724f3be716c1d1ac2e235c0aabb74e63c1e87ee0e791d07c00bfb0fc",
+      "SchurTransport.olean": "33fb9b07f8efca36a09ec480c3e45603eaad17a7faee1ef24eb440d14f9d5775",
+      "CoordTransport.olean": "dfe61533e343cb4ff9064f3d14ddd5857926dcbfb127d6ededbbed622630e707",
+      "PRules.olean": "571eb66b449b10c8698c5882c0adea661df7fd32deadcea1415dffeda305d2a3",
+      "SourceRows.olean": "916a2bcfcd7fd74d1a3036c1e9cf898f88bda1ee92339c5f6189ec6c4e54014d",
+      "DiagramPackets.olean": "f7ffe334f30eab604633cbd3146d3bd2bd565c4bb34248f468ab9d053f5009ec"
+    },
+    "consumed_ancestors": {
+      "V43MatrixRoundTrip.olean": "ffecf82360b3e190efe308694939296e27d0f7f632ffc2464c670b0adfb3006d",
+      "Defs.olean": "b1b7d1bf7d02848d577a26f826586a72bba0c491bd25f5c075d3fa76683197ea",
+      "Height.olean": "8f72b45b90b134d88c907cc4a0832617b62d529e87bf287e8cb8e8a40b8bee67",
+      "Physical.olean": "cf6871ce45db44ef325d880f53de419731a9c66f50cfe6b9a34b63a487b1841d",
+      "Readings.olean": "0237ddf5144bfcc62ccc1bd9aba6b2408d043ab09a8c6c309d1cacba8330c707"
+    }
+  },
+  "integration_note": "results/INTEGRATION.md gives the consumption entry points and the responsibility notes; results/SELF_REVIEW.md gives the statement-by-statement review."
+}

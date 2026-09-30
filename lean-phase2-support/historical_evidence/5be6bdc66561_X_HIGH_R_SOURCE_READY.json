@@ -1,0 +1,170 @@
+{
+  "receipt": "X_HIGH_R_SOURCE_READY",
+  "lane": "D145",
+  "card": "D145 - 原 X 严格高 r 分支的实际来源与模型接入",
+  "ready": true,
+  "stage": "A + B (source + model-intake coordinates, real transpose interface at entry/Schur/coordinate level, the archived P0-P3 factor rules over the reals, the two high roots' actual source rows, packet recipes and rejection transfers)",
+  "module": "Rho5.Shared.XHighRSource",
+  "namespace": "Rho5.Shared.XHighRSource",
+  "modules": [
+    "Rho5.Shared.XHighRSource.Defs",
+    "Rho5.Shared.XHighRSource.Height",
+    "Rho5.Shared.XHighRSource.Transpose",
+    "Rho5.Shared.XHighRSource.SchurTransport",
+    "Rho5.Shared.XHighRSource.CoordTransport",
+    "Rho5.Shared.XHighRSource.PRules",
+    "Rho5.Shared.XHighRSource.SourceRows",
+    "Rho5.Shared.XHighRSource.DiagramPackets",
+    "Rho5.Shared.XHighRSource (aggregate)",
+    "Rho5.Shared.XHighRSource.Audit"
+  ],
+  "toolchain": {"lean": "4.30.0", "mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f"},
+  "exact_domain": "2 < k <= 21/10, r > k, F = height >= gamma = 4132517/1000000 (actual, strict); r = k stays low branch",
+  "delivered_paid_in_lean": {
+    "stage_A": {
+      "domain": {
+        "gamma": "def gamma : R := 4132517 / 1000000",
+        "HighRDomain": "2 < x 0 /\\ x 0 <= 21/10 /\\ x 0 < x 1 /\\ gamma <= height x   (x 0 = k, x 1 = r on X22)",
+        "HighRClosedDomain": "2 <= x 0 /\\ x 0 <= 21/10 /\\ x 0 <= x 1 /\\ gamma <= height x   (the models' closed outer box)",
+        "HighRSigns": "x 3 <= 0 /\\ x 4 <= 0 /\\ 0 <= x 5 /\\ 0 <= x 6   (A,B <= 0 <= c,d)"
+      },
+      "F_is_height_not_two_r": {
+        "height_extractX_eq": "forall M, height (extractX M) = rX M - wX M   (F = r - w on the ACTUAL X22 point)",
+        "two_r_eq_height_iff": "forall M, 2 * rX M = height (extractX M) <-> wX M = -(rX M)   (the 2r reading coincides only when w = -r, NOT assumed)",
+        "gamma_le_height_iff": "forall M, gamma <= height (extractX M) <-> gamma <= rX M - wX M"
+      },
+      "actual_source_into_the_model_coordinates": {
+        "extractX_highDomain": "2 < kX M -> kX M <= 21/10 -> kX M < rX M -> gamma <= rX M - wX M -> HighRDomain (extractX M)",
+        "highDomain_subset_closed": "forall x, HighRDomain x -> HighRClosedDomain x",
+        "not_highR_of_r_eq_k": "forall x, x 1 = x 0 -> not (HighRDomain x)   (r = k is low branch)"
+      },
+      "real_transpose_entry_level": {
+        "transX": "(transX M) i j = sgnD i * M j i * sgnD j with D = Q * J0 = diag(1,-1,1,-1,-1), Z = diag(1,-1,-1)",
+        "eX_transX": "e_new = beta", "betaX_transX": "beta_new = e",
+        "uX_transX": "u_new = Z v", "vX_transX": "v_new = Z u",
+        "Ghead_transX": "Ghead (transX M) = GheadTranspose M, i.e. e_new * u0_new = beta * v0",
+        "transX_transX": "transX is an involution"
+      }
+    },
+    "stage_B_schur_transport": {
+      "S4_transX": "S4 (transX M) i j = J4 i * J4 j * S4 M j i",
+      "S3_transX": "S3 (transX M) i j = J3 i * J3 j * S3 M j i",
+      "T2_transX": "T2 (transX M) i j = J2 i * J2 j * T2 M j i",
+      "preserved": {
+        "p_transX": "p (transX M) = p M", "k_transX": "k (transX M) = k M",
+        "r_transX": "r (transX M) = r M", "wX_transX": "wX (transX M) = wX M",
+        "height_transX": "height (extractX (transX M)) = height (extractX M)"
+      },
+      "exchanged": {"s_transX": "s (transX M) = t M", "t_transX": "t (transX M) = s M"},
+      "matrixEntryMax_transX": "matrixEntryMax (transX M) = matrixEntryMax M; matrixEntryMax_transX_eq_one",
+      "cp1..cp4_transX": "the four complete pivots transport (the index swap is a bijection, |J| = 1)",
+      "satFrame_transX": "SatFrame M -> SatFrame (transX M)   (all eleven fields paid)"
+    },
+    "stage_B_actual_coordinates": {
+      "aX_transX": "A_new = -(k c)", "bX_transX": "B_new = -(k d)",
+      "cX_transX": "c_new = -(A/k)", "dX_transX": "d_new = -(B/k)",
+      "xX_transX": "x_new = -(Z q)/p", "qX_transX": "q_new = -p (Z x)",
+      "SX_transX": "S_new = Z (S M)^T Z   (through D119 SX_eq_S4)",
+      "OX_transX": "O_new = Z (O M)^T Z   (through D119 OX_eq_entry, needs satFrame_transX)",
+      "highRSigns_transX_iff": "HighRSigns (extractX (transX M)) <-> HighRSigns (extractX M)   (high-sign restoration)"
+    },
+    "stage_B_P0_P3_rules": {
+      "interval_layer": {
+        "BI": "closed intervals with Mem/Empty; plus/minus/meet/times exactly as rankone_oracle.hpp",
+        "soundness": ["BI.mem_plus", "BI.mem_minus", "BI.mem_meet", "BI.mem_times", "BI.mem_magPos", "BI.mem_magNeg"],
+        "P3_rule": "BI.not_mem_of_empty / BI.empty_contradiction: an empty contracted interval refutes every real point in it"
+      },
+      "packet_layer": {
+        "Packet.Realizes": "the three-conjunct realization predicate (own intervals, factor intervals, product intervals)",
+        "P0_rules": ["Packet.not_realizes_of_empty_a", "Packet.not_realizes_of_empty_b", "Packet.not_realizes_of_empty_z"],
+        "P1_rules": ["Packet.realizes_update_zero_a", "Packet.realizes_update_zero_b", "Packet.ne_zero_of_mem_a", "Packet.ne_zero_of_mem_b"]
+      },
+      "P2_multiplicative_cycle": {
+        "graph": "PVert (anchor/left/right), ppot (1, a_i, 1/b_j) and the six archived edge families PEdge (hiA/loA/hiB/loB/hiZ/loZ)",
+        "PEdge.le_pot": "every archived edge is a true constraint pot v <= pot u * w for strictly positive realizations",
+        "Walk.one_le_prod": "a closed constraint walk forces 1 <= product of its weights (the exact archived cycle criterion)",
+        "not_realizes_of_cycle": "a closed chain with weight product < 1 refutes every strictly positive realization - the P2 rejection certificate"
+      }
+    },
+    "stage_B_two_diagrams": {
+      "model_dictionary": {
+        "modelVec": "the archived 23-variable dictionary: k,r,w,A,B,c,d,p,e,be,u0..2,x0..2,v0..2,q0..2,G",
+        "Gmodel": "type I: G = e * beta; type II: G = e * u0 (the archived HEAD_TYPE)",
+        "Gmodel_I_transX": "type I's head product is transpose-invariant (e and beta are exchanged)",
+        "Gmodel_II_transX": "type II's head product becomes beta * v0 (G = e_new * u0_new = beta_old * v0_old)"
+      },
+      "source_rows": {
+        "HighSourceRows": "the seven high_* rows: r - k, k - B - r, k(1+c) - r, k(1+d) - r, 2k - r + w - B, -J d B - (r-k)^2, -J c A - (r-k)^2",
+        "ClosedOuterBox": "k >= 2, k <= 21/10, k <= r (the models' closed outer box); highDomain_closedOuter",
+        "RTangents": "the three inherited rational r tangents (r_tangent_1..3)",
+        "rank_product_decomp_dB": "-J B d - (r-k)^2 = (J - chi) d b + (c b - t) d a + t (d a - t), a = -A, b = -B, t = r-k, chi = c a",
+        "rank_product_decomp_symmetric": "-J A c - (r-k)^2 = (J - t) chi + t (chi - t), chi = c a",
+        "high_rank_product_of_slacks": "the row from the archived nonnegative decomposition on the core band (CoreSlacks)",
+        "high_rank_symmetric_of_slacks": "the symmetric row, same way"
+      },
+      "packet_recipes": {
+        "stagePacket": "X: a = (1, x0, x1, x2), b = (p, q0, q1, q2), z = b_j for i = 0 and a_i b_j otherwise",
+        "origPacket": "Y: a = (beta, u0, u1, u2), b = (e, v0, v1, v2), the head band p -/+ 1 at (0,0) and the G clamp at (0,0) for type I / (1,0) for type II",
+        "corePacket": "C: a = (c, d), b = (k, A, B), z = a_i b_j"
+      },
+      "realization_bridges": {
+        "realizes_stage": "a box containing the actual source point realizes X with (1, x_i) against (p, q_j)",
+        "realizes_orig": "same for Y, both head types, with the package's head rows as the explicit hypothesis HeadRows",
+        "realizes_core": "same for C with (c, d) against (k, A, B)"
+      },
+      "rejection_transfers": [
+        "no_source_of_stage_empty / no_source_of_orig_empty / no_source_of_core_empty (P0/P3)",
+        "no_source_of_stage_cycle / no_source_of_orig_cycle / no_source_of_core_cycle (P2)"
+      ],
+      "responsibility": {
+        "closedOuter_no_high_qualification": "a source with k = r satisfies the closed outer box yet lies outside the strict high-r domain, so the diagrams' closed outer box cannot be read as covering arbitrary r = k sources"
+      }
+    }
+  },
+  "explicitly_unpaid_recorded_not_assumed": [
+    "P1 completeness: the full sign-mask enumeration over the forced factors (the map from an arbitrary realization to one enumerated mask); only the single-factor zero reduction and the magnitude/sign membership lemmas are paid.",
+    "P2 completeness: the archived relaxation/shortest-path construction of positive rational factors when no cycle of weight product < 1 exists (the acceptance half of packet_feasible).",
+    "The C/R leaf payers of the archived trees and the archived interval-contraction driver make_factor_packets as an executable Lean function (this module pays the interval arithmetic and the initial packet recipes, the per-pass contraction schedule is not formalised).",
+    "The two roots' recorded node/leaf/open and P0-2/P3 counts are consumed as archived evidence with the archive SHA256 (736ce26e...), NOT replayed or re-derived in Lean; no whole-tree replay and no 131 MB rescan was performed.",
+    "The first complete branch is connected at the level of the domain rows, the packet recipes and the sound rejection rules; no tree-level closure claim is made beyond what the archived receipts record.",
+    "The whole high branch and whole X are NOT claimed; the remaining unpaid domain of the declared real X stays 2 < k < 2.1, r <= k (low branch / not covered).",
+    "The high-value threshold gamma stays separate from the actual alpha safety target; nothing here is an alpha statement."
+  ],
+  "reused_read_only": {
+    "D119": "Rho5.Shared.V43MatrixRoundTrip (extractX, X22 accessors, kX/rX/wX/aX..qX, eX/betaX/uX/vX/qX/xX, DX/SX/OX, OX_eq_entry, SX_eq_S4, SatFrame)",
+    "D63": "Rho5.Shared.TailTransposeOrder (the plain-transpose Schur facts)",
+    "D10": "Rho5.Shared.PivotReindex.Schur (pivotSchur_apply)",
+    "D135": "Rho5.Shared.CertificateRules (the generic checker interface; not re-developed)",
+    "frozen": "Rho5.LocalAnalysis.Model (height), Rho5.Matrix5, GrowthSupremum"
+  },
+  "frozen_archived_source": {
+    "archive": "/Users/mike/Documents/Codex/2026-09-03/rho5-cqg-cofactor-calibration/outputs/round46_v34_high/RHO5_V34_HIGH_EXACT_FULL.zip",
+    "sha256": "736ce26e428e3f8b4a741cda8d9983887194cfa4a679d0360766e1b70e6a45b2",
+    "local_documents_read": ["V34_HIGH_FINAL_REPORT.md", "TRANSPOSE_INTERFACE.md", "TRANSPOSE_INTERFACE_RESULT.json"],
+    "x_delivery_read": "/root/microscope_ws/rho5_cqg_v34_high_20260908/attempt_01/delivery/rho5_v34_high/fixed_source (models/{I200_210_high,II200_210_high}/model.json, scope.json, source/{factor_graph.hpp, factor_oracle.hpp, rankone_oracle.hpp}, theory/BOUNDED_RANK_ONE_GRAPH.md, theory/NEW_MODEL_SCOPES.md, REPORT.md)",
+    "read_not_copied": "the 131 MB archive was NOT copied or rescanned; only the report/interface documents and the X delivery's small model/source metadata were read",
+    "models": {
+      "I200_210_high": {"type": "I", "K": "2", "J": "21/10", "target": "4132517/1000000", "variables": 23, "pairs": 51, "rows": 196, "head": "G = e * beta", "archived_counts": {"nodes": 598693, "closed_leaves": 299347, "open": 0, "P0_2": 2972, "P3": 24605}},
+      "II200_210_high": {"type": "II", "K": "2", "J": "21/10", "target": "4132517/1000000", "variables": 23, "pairs": 51, "rows": 196, "head": "G = e * u0", "archived_counts": {"nodes": 848849, "closed_leaves": 424425, "open": 0, "P0_2": 7593, "P3": 33510}}
+    }
+  },
+  "evidence": {
+    "exit_codes": {"Defs": 0, "Height": 0, "Transpose": 0, "SchurTransport": 0, "CoordTransport": 0, "PRules": 0, "SourceRows": 0, "DiagramPackets": 0, "XHighRSource": 0, "Audit": 0},
+    "wall_seconds_last_full_chain": {"SchurTransport": 7.297, "CoordTransport": 6.292, "PRules": 5.555, "SourceRows": 4.527, "DiagramPackets": 6.295},
+    "peak_rss_kib": {"pipeline_max": 3031832},
+    "errors": 0,
+    "staleness": "FRESH for all ten chain entries (stage A modules unchanged: Defs/Height/Transpose oleans still cd3c3c72 / 8ab8924e / f464ea60)",
+    "named_axioms": {"records": 29, "observed_union": ["propext", "Classical.choice", "Quot.sound"], "violations": [], "forbidden_markers": 0},
+    "runner": "one Lean process, nice 10, -j 1 -M 8192, single-threaded BLAS/OMP/MKL, RSS 8 GiB watchdog (never tripped), AS 12 GiB",
+    "dependency_mirror": "ancestor artifacts hardlinked into lane_root (D119/D63/D135/D109/D134/D142/D139/D121/D120/D71/D115/D87/D92); no upstream module compiled",
+    "hashes_file": "results/SOURCE_SHA256SUMS.txt"
+  },
+  "scope_limits": [
+    "The completeness (acceptance) halves of P1/P2 are explicitly NOT paid and NOT assumed; only the soundness (rejection) direction is paid, which is the direction the archived closed leaves use.",
+    "The archived trees' counts and the two roots' zero-open status are consumed from the archived delivery receipts, not independently replayed in this lane.",
+    "The first endpoint / first complete branch is connected at the coordinate/row/packet level; the whole high branch and whole X are NOT claimed.",
+    "gamma is kept separate from the actual alpha safety target (no alpha statement here).",
+    "No re-proof of the archived mathematics beyond the Lean statements above, no whole-tree replay, no 131 MB archive copy."
+  ],
+  "integration_note": "results/INTEGRATION.md records the domain coverage, the two diagrams' missing-bound responsibility, the exact paid/unpaid split and the consumption instructions."
+}

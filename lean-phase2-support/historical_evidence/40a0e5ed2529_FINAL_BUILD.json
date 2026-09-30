@@ -1,0 +1,330 @@
+{
+  "exit_code": 0,
+  "started_unix": 1789188407.8799598,
+  "wall_seconds": 31.078036546707153,
+  "source_hashes_before_after_equal": true,
+  "external_files_verified_before": 15762,
+  "external_files_verified_after": 15762,
+  "external_dependencies_sha256": "e4bdac041db456029650dd064a2d27bbd458022c4a4e894844fae404b9a4c64a",
+  "modules": [
+    {
+      "module": "Rho5.Shared.CertificateContraction.Coordinate",
+      "exit_code": 0,
+      "wall_seconds": 3.621917724609375,
+      "source_sha256": "57ff0bbb69c15d2dcaddd71c75365f4a95138a6cc5be7e6a2c25d5ca2dd84eb8",
+      "olean_sha256": "d80b5909b12e47063884e52a40fc4fd98dfb5cb3d955cabed03094c1c89d45db",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.Coordinate_1789188410912681606.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build/Rho5/Shared/CertificateContraction/Coordinate.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/Coordinate.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [],
+      "available_mem_kib": 83786780,
+      "free_disk_bytes": 16998064128,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.Coordinate_1789188410912681606.json",
+      "external_dependencies_sha256": "e4bdac041db456029650dd064a2d27bbd458022c4a4e894844fae404b9a4c64a",
+      "direct_own_imports": []
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.Runtime",
+      "exit_code": 0,
+      "wall_seconds": 3.223496675491333,
+      "source_sha256": "2f2a2f877c2eb20c99c5ac5eb6a40d683f8930380566fce883b66f7407435373",
+      "olean_sha256": "ad91f723009d0ebc2142ef84b6c7511c7fca932fc059da7169f085cc1c4226b1",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.Runtime_1789188414545795931.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build/Rho5/Shared/CertificateContraction/Runtime.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/Runtime.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [],
+      "available_mem_kib": 83785836,
+      "free_disk_bytes": 16998051840,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.Runtime_1789188414545795931.json",
+      "external_dependencies_sha256": "e4bdac041db456029650dd064a2d27bbd458022c4a4e894844fae404b9a4c64a",
+      "direct_own_imports": [
+        {
+          "module": "Rho5.Shared.CertificateContraction.Coordinate",
+          "source_sha256": "57ff0bbb69c15d2dcaddd71c75365f4a95138a6cc5be7e6a2c25d5ca2dd84eb8",
+          "olean_sha256": "d80b5909b12e47063884e52a40fc4fd98dfb5cb3d955cabed03094c1c89d45db"
+        }
+      ]
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.Wave",
+      "exit_code": 0,
+      "wall_seconds": 3.479813575744629,
+      "source_sha256": "011302de09028ce888b4c8c1c6775c6e170a14d415ef5affe5e5e99056ceacc3",
+      "olean_sha256": "88fc73cc315d69899d8137979c94baaacd3ca46e02eaa112b80c2faf2424738c",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.Wave_1789188417780406712.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build/Rho5/Shared/CertificateContraction/Wave.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/Wave.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [],
+      "available_mem_kib": 83785688,
+      "free_disk_bytes": 16998043648,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.Wave_1789188417780406712.json",
+      "external_dependencies_sha256": "e4bdac041db456029650dd064a2d27bbd458022c4a4e894844fae404b9a4c64a",
+      "direct_own_imports": [
+        {
+          "module": "Rho5.Shared.CertificateContraction.Runtime",
+          "source_sha256": "2f2a2f877c2eb20c99c5ac5eb6a40d683f8930380566fce883b66f7407435373",
+          "olean_sha256": "ad91f723009d0ebc2142ef84b6c7511c7fca932fc059da7169f085cc1c4226b1"
+        }
+      ]
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.Composition",
+      "exit_code": 0,
+      "wall_seconds": 2.7777695655822754,
+      "source_sha256": "6dccee2f67c6bcd0edaac4bc7b6c19fc248066eb1ccb65f958c39f6199ae80ab",
+      "olean_sha256": "014b0d1eb5149a04ff9cb22f4205c1d11ce704a8d65cc6110aac0829583e030e",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.Composition_1789188421271099770.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build/Rho5/Shared/CertificateContraction/Composition.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/Composition.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [],
+      "available_mem_kib": 83785000,
+      "free_disk_bytes": 16998035456,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.Composition_1789188421271099770.json",
+      "external_dependencies_sha256": "e4bdac041db456029650dd064a2d27bbd458022c4a4e894844fae404b9a4c64a",
+      "direct_own_imports": [
+        {
+          "module": "Rho5.Shared.CertificateContraction.Wave",
+          "source_sha256": "011302de09028ce888b4c8c1c6775c6e170a14d415ef5affe5e5e99056ceacc3",
+          "olean_sha256": "88fc73cc315d69899d8137979c94baaacd3ca46e02eaa112b80c2faf2424738c"
+        }
+      ]
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.RuntimeWave",
+      "exit_code": 0,
+      "wall_seconds": 2.6773762702941895,
+      "source_sha256": "5f4bef1f27c32b96046cd0554824e73ff80ae87851f9701ebb8cc41a57ffd1cf",
+      "olean_sha256": "cfc512518518a6f45142305d3db219ef126cf047d599f47aaac2ac224089562c",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.RuntimeWave_1789188424059415254.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build/Rho5/Shared/CertificateContraction/RuntimeWave.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/RuntimeWave.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [],
+      "available_mem_kib": 83778468,
+      "free_disk_bytes": 16998027264,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.RuntimeWave_1789188424059415254.json",
+      "external_dependencies_sha256": "e4bdac041db456029650dd064a2d27bbd458022c4a4e894844fae404b9a4c64a",
+      "direct_own_imports": [
+        {
+          "module": "Rho5.Shared.CertificateContraction.Composition",
+          "source_sha256": "6dccee2f67c6bcd0edaac4bc7b6c19fc248066eb1ccb65f958c39f6199ae80ab",
+          "olean_sha256": "014b0d1eb5149a04ff9cb22f4205c1d11ce704a8d65cc6110aac0829583e030e"
+        }
+      ]
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.Examples",
+      "exit_code": 0,
+      "wall_seconds": 3.7821483612060547,
+      "source_sha256": "fec07acec710df9d639353df5a5e7d62d9bb548daece45d5f116107d90c22593",
+      "olean_sha256": "05a8c140fba1c8abcd312c2fe1c6ae137ce19832363abb8976fa1f62d0183b01",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.Examples_1789188426749806563.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build/Rho5/Shared/CertificateContraction/Examples.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/Examples.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [],
+      "available_mem_kib": 83782848,
+      "free_disk_bytes": 16998014976,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.Examples_1789188426749806563.json",
+      "external_dependencies_sha256": "e4bdac041db456029650dd064a2d27bbd458022c4a4e894844fae404b9a4c64a",
+      "direct_own_imports": [
+        {
+          "module": "Rho5.Shared.CertificateContraction.Composition",
+          "source_sha256": "6dccee2f67c6bcd0edaac4bc7b6c19fc248066eb1ccb65f958c39f6199ae80ab",
+          "olean_sha256": "014b0d1eb5149a04ff9cb22f4205c1d11ce704a8d65cc6110aac0829583e030e"
+        }
+      ]
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction",
+      "exit_code": 0,
+      "wall_seconds": 2.5618040561676025,
+      "source_sha256": "cc9ad9728295e581e581603871d1f73db2b13742aa61cd9550bda37eb5a69e9f",
+      "olean_sha256": "fa3d6cc51cb47181d09b4bf67bad0f45f591aa23a952c58034f136631bcead9b",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction_1789188430542866505.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build/Rho5/Shared/CertificateContraction.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [],
+      "available_mem_kib": 83778280,
+      "free_disk_bytes": 16998002688,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction_1789188430542866505.json",
+      "external_dependencies_sha256": "e4bdac041db456029650dd064a2d27bbd458022c4a4e894844fae404b9a4c64a",
+      "direct_own_imports": [
+        {
+          "module": "Rho5.Shared.CertificateContraction.Coordinate",
+          "source_sha256": "57ff0bbb69c15d2dcaddd71c75365f4a95138a6cc5be7e6a2c25d5ca2dd84eb8",
+          "olean_sha256": "d80b5909b12e47063884e52a40fc4fd98dfb5cb3d955cabed03094c1c89d45db"
+        },
+        {
+          "module": "Rho5.Shared.CertificateContraction.Runtime",
+          "source_sha256": "2f2a2f877c2eb20c99c5ac5eb6a40d683f8930380566fce883b66f7407435373",
+          "olean_sha256": "ad91f723009d0ebc2142ef84b6c7511c7fca932fc059da7169f085cc1c4226b1"
+        },
+        {
+          "module": "Rho5.Shared.CertificateContraction.Wave",
+          "source_sha256": "011302de09028ce888b4c8c1c6775c6e170a14d415ef5affe5e5e99056ceacc3",
+          "olean_sha256": "88fc73cc315d69899d8137979c94baaacd3ca46e02eaa112b80c2faf2424738c"
+        },
+        {
+          "module": "Rho5.Shared.CertificateContraction.Composition",
+          "source_sha256": "6dccee2f67c6bcd0edaac4bc7b6c19fc248066eb1ccb65f958c39f6199ae80ab",
+          "olean_sha256": "014b0d1eb5149a04ff9cb22f4205c1d11ce704a8d65cc6110aac0829583e030e"
+        },
+        {
+          "module": "Rho5.Shared.CertificateContraction.RuntimeWave",
+          "source_sha256": "5f4bef1f27c32b96046cd0554824e73ff80ae87851f9701ebb8cc41a57ffd1cf",
+          "olean_sha256": "cfc512518518a6f45142305d3db219ef126cf047d599f47aaac2ac224089562c"
+        }
+      ]
+    },
+    {
+      "module": "Rho5.Shared.CertificateContraction.Audit",
+      "exit_code": 0,
+      "wall_seconds": 2.8749988079071045,
+      "source_sha256": "db2337779b7e0e62cabe42f9b49dc9abd6d231e09dc444327d2856a9741de761",
+      "olean_sha256": "02259aa282ac3f93b0bb2dffc1ae237de0b8d11ded05aff24d6bced5248bddf0",
+      "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.Audit_1789188433119918624.log",
+      "command": [
+        "nice",
+        "-n",
+        "10",
+        "python3",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/tools/guard.py",
+        "180",
+        "-j1",
+        "-M8192",
+        "-R",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src",
+        "-o",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build/Rho5/Shared/CertificateContraction/Audit.olean",
+        "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/Audit.lean"
+      ],
+      "LEAN_PATH": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/build:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "preflight_lean_jobs": [],
+      "available_mem_kib": 83785020,
+      "free_disk_bytes": 16997990400,
+      "build_receipt": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/Rho5.Shared.CertificateContraction.Audit_1789188433119918624.json",
+      "external_dependencies_sha256": "e4bdac041db456029650dd064a2d27bbd458022c4a4e894844fae404b9a4c64a",
+      "direct_own_imports": [
+        {
+          "module": "Rho5.Shared.CertificateContraction",
+          "source_sha256": "cc9ad9728295e581e581603871d1f73db2b13742aa61cd9550bda37eb5a69e9f",
+          "olean_sha256": "fa3d6cc51cb47181d09b4bf67bad0f45f591aa23a952c58034f136631bcead9b"
+        },
+        {
+          "module": "Rho5.Shared.CertificateContraction.Examples",
+          "source_sha256": "fec07acec710df9d639353df5a5e7d62d9bb548daece45d5f116107d90c22593",
+          "olean_sha256": "05a8c140fba1c8abcd312c2fe1c6ae137ce19832363abb8976fa1f62d0183b01"
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/Audit.lean": "db2337779b7e0e62cabe42f9b49dc9abd6d231e09dc444327d2856a9741de761",
+    "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/Composition.lean": "6dccee2f67c6bcd0edaac4bc7b6c19fc248066eb1ccb65f958c39f6199ae80ab",
+    "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/Coordinate.lean": "57ff0bbb69c15d2dcaddd71c75365f4a95138a6cc5be7e6a2c25d5ca2dd84eb8",
+    "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/Examples.lean": "fec07acec710df9d639353df5a5e7d62d9bb548daece45d5f116107d90c22593",
+    "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/Runtime.lean": "2f2a2f877c2eb20c99c5ac5eb6a40d683f8930380566fce883b66f7407435373",
+    "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/RuntimeWave.lean": "5f4bef1f27c32b96046cd0554824e73ff80ae87851f9701ebb8cc41a57ffd1cf",
+    "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction/Wave.lean": "011302de09028ce888b4c8c1c6775c6e170a14d415ef5affe5e5e99056ceacc3",
+    "/root/microscope_ws/rho5_codex_c01_contraction_20260912/src/Rho5/Shared/CertificateContraction.lean": "cc9ad9728295e581e581603871d1f73db2b13742aa61cd9550bda37eb5a69e9f"
+  },
+  "log": "/root/microscope_ws/rho5_codex_c01_contraction_20260912/results/FINAL_BUILD.log",
+  "log_sha256": "f815b99c0d88edcbe6b9a9dbe6d0b0ba694b8e605450dad6a305b094b7dd61c3"
+}

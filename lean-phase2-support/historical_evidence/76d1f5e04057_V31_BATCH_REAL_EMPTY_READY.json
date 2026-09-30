@@ -1,0 +1,3156 @@
+{
+  "schema": "RHO5_M02_FIVE_SOURCE_READY_V1",
+  "status": "V31_BATCH_REAL_EMPTY_READY",
+  "scope": "Complete original polynomial-source subtree 0000001, records 8..16; not whole V31 or matrix/global closure",
+  "created_at_utc": "2026-09-12T06:08:43.557878+00:00",
+  "new_C_leaves": 5,
+  "source_rows_selected_instances": 108,
+  "lift_endpoint_identities": 570,
+  "actual_nodes": 9,
+  "actual_splits": 4,
+  "compiled_modules": 27,
+  "named_axiom_checks": 408,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "main_theorem": "Rho5.Shared.MainlineTreeCover.V31Batch.FiveSource.subtree_model_empty",
+  "remaining_frontier_paths": [
+    "0000000",
+    "000001",
+    "00001",
+    "0001",
+    "001",
+    "01",
+    "1"
+  ],
+  "excluded_D136_C_path": "0000000",
+  "remaining_premises": [
+    "Actual matrix/source to Model.SameSource remains separately owned.",
+    "Original-root entry remains explicit when transporting the root cover.",
+    "Typed data/source-file transcription and gzip parsing are external bindings, not kernel-verified parser theorems."
+  ],
+  "not_assumed": [
+    "per-leaf generated rows hold",
+    "per-leaf emptiness",
+    "per-leaf check=true",
+    "root McCormick replacing current leaf McCormick",
+    "whole V31 closure"
+  ],
+  "modules": {
+    "TerminalBridge": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_TerminalBridge_20260912T050855.876164Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_TerminalBridge_20260912T050855.876164Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/TerminalBridge",
+      "source_sha256": "3b9ed84f9716936457d2a15c1e2923d92ec05b040a187c66c47eeed115b1fdd9",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 2.984109180048108,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/TerminalBridge.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/TerminalBridge.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2138596,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          990078
+        ],
+        "available_kib": 83452416,
+        "disk_free_bytes": 16949850112
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/CertificateRules/ListCheck.olean": "987fe3d16c9a1cd46cf152cb5b40c07220f2cf9ffccfc89b889b8610d84ad61e",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/CertificateRules/RealSoundness.olean": "ec0f8661c34fb24d5be6f865a30e4fb672dc0361d08b2c52fb1e042a9487af63"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "bc22e574dbfba49cb6788effff455f5850e2ef58594081d59495334c133f205a"
+    },
+    "Scaling": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Scaling_20260912T052303.636999Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Scaling_20260912T052303.636999Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Scaling",
+      "source_sha256": "b17e8d90bf79e21ec1d293aaaf6d991536f30212aeb781e091b38c2ff62f2d42",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 3.3879767768085003,
+      "log_sha256": "2bcd69cb1b9837c374e818d615845789391e8dbbc02841afd464ee26799dd3e3",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2147144,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1112604
+        ],
+        "available_kib": 82179692,
+        "disk_free_bytes": 16902938624
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/TerminalBridge.olean": "bc22e574dbfba49cb6788effff455f5850e2ef58594081d59495334c133f205a"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "c0312704f96a5b966f4c79d489ca7fdafe73a6302a72fbcef62ce620a1b1ad30"
+    },
+    "SparseIntegerScaling": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_SparseIntegerScaling_20260912T055817.884512Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_SparseIntegerScaling_20260912T055817.884512Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/SparseIntegerScaling",
+      "source_sha256": "0a14a6ec65d3fa90878c50e40acaa6b9a76fdd2792d54e0477b5748150f0a15a",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 2.6326079349964857,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/SparseIntegerScaling.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/SparseIntegerScaling.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2144940,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [],
+        "available_kib": 83597580,
+        "disk_free_bytes": 16785604608
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.olean": "c0312704f96a5b966f4c79d489ca7fdafe73a6302a72fbcef62ce620a1b1ad30",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/CertificateContraction/QuadraticSyntax.olean": "d5e7fc74afd59cc2d3942abfd91e0483f50740c8d85ae558ff82de62ac1f9446"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "6a2553388875ee58117de095b333e5d4f85eae4e5736cd8d4a27adb476971227"
+    },
+    "GenericSourceBridge": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_GenericSourceBridge_20260912T055332.398324Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_GenericSourceBridge_20260912T055332.398324Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/GenericSourceBridge",
+      "source_sha256": "aa8b58cd31f090cce596cd3ed0b2dd197fa65008fb277977882fb9762909fee3",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 2.5847753416746855,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GenericSourceBridge.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/GenericSourceBridge.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2148524,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [],
+        "available_kib": 83612728,
+        "disk_free_bytes": 16791945216
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.olean": "c0312704f96a5b966f4c79d489ca7fdafe73a6302a72fbcef62ce620a1b1ad30",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/CertificateContraction/QuadraticLift.olean": "3aa1d5002c30d24701cecca23f976fcf6b574c611d28c54bbe97a159aeab1e24"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "669448df563da32dbd239ed9e80733d5dc82edb45af289e73fe690e7ccf29e8e"
+    },
+    "Model": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Model_20260912T054833.458000Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Model_20260912T054833.458000Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Model",
+      "source_sha256": "4f5f6b7d6357d2a8fb7c9b3f9f22fd453387a1d9f9eb120136d7614318a09469",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 4.747351499274373,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Model.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Model.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2193268,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1232510
+        ],
+        "available_kib": 83194288,
+        "disk_free_bytes": 16795848704
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/CertificateContraction/QuadraticLift.olean": "3aa1d5002c30d24701cecca23f976fcf6b574c611d28c54bbe97a159aeab1e24",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/Box.olean": "e1d57381dc7161c0e646b8682d2a28527f8bfe75fc1efdc0e20bdfd833f0f5b7"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "d2bdbcfb177f8d4f5effc46bb57364eb9da3e8d4a22433c830890b41a979164b"
+    },
+    "FiveTree": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_FiveTree_20260912T052103.883613Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_FiveTree_20260912T052103.883613Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/FiveTree",
+      "source_sha256": "5e1a043837c53510ee3f98acf8ef133f8ba303b628e9b0164dc2bc1515da7c60",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 3.2343582026660442,
+      "log_sha256": "286f67a8f2b82346235f2d99634fdc383923efc595db1da8f64032a262b90240",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/FiveTree.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/FiveTree.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2126392,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1112466,
+          1112531
+        ],
+        "available_kib": 83107952,
+        "disk_free_bytes": 16910811136
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Prefix.olean": "3cc9e397f759e49d463e61e4fe51507467306e56d48d584d0af3b97539de9171"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "6dfe5d868d7c3d670bf3234e8ed124f45fcf995793767e00c69c68f7a514d589"
+    },
+    "GeometryBoxes": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_GeometryBoxes_20260912T060000.212071Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_GeometryBoxes_20260912T060000.212071Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes",
+      "source_sha256": "1a7c967f8e76d9dfcaf6c25e4d855367fb389de413dfbe5c2f2027ae0d8f762c",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 6.457453249022365,
+      "log_sha256": "d151a37ce3dbfc234f98aa6f44961669e50d5aad22cabd9380f5fd38cd8cae6b",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2187608,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1334718
+        ],
+        "available_kib": 83433680,
+        "disk_free_bytes": 16768978944
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/FiveTree.olean": "6dfe5d868d7c3d670bf3234e8ed124f45fcf995793767e00c69c68f7a514d589",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Tactic/FinCases.olean": "8afa9765f63dea5ccf60d58b5c2e48cce1555e1cdff6974c5f6bdb24d37db8f7",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Tactic/FinCases.olean.private": "cea8fbe95bc04ad77ffa56ed70cc8801d36bd7764bd31c33225ccb3bca32f70c",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Tactic/FinCases.olean.server": "8303d194a8565ee2b3d138ea72644fd8bdd1eb92fbf81c5e6dbfc8e0b23ca46e"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "9bc078fdde2d0fa18d7d70e3df87b39f4e6fdacd724fae68c596d9d59b795f92"
+    },
+    "GeometryBindings": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_GeometryBindings_20260912T060454.795519Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_GeometryBindings_20260912T060454.795519Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBindings",
+      "source_sha256": "b4885ec92026d3669056eef6e887c979f3556eab173e792be29c4a71d35a9a4a",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 43.18379089422524,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBindings.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBindings.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2559420,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [],
+        "available_kib": 83589064,
+        "disk_free_bytes": 16758353920
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.olean": "9bc078fdde2d0fa18d7d70e3df87b39f4e6fdacd724fae68c596d9d59b795f92",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Model.olean": "d2bdbcfb177f8d4f5effc46bb57364eb9da3e8d4a22433c830890b41a979164b"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "a2f7691c0003aa1bb9ebf79afd1ac45ee274271dbbea253cb408fd72b28a5839"
+    },
+    "Leaf000": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf000_20260912T052859.986200Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf000_20260912T052859.986200Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Leaf000",
+      "source_sha256": "ae1bcff67471465c3cd2a80b3fd780351ad4efae1fa21f3e7402eb59a16f9813",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 20.153505766764283,
+      "log_sha256": "74cd7be357ca866e7d51a8b68d9ae3efea852501ac8b4fbae37bca120fc0b198",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf000.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf000.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2631520,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1122375
+        ],
+        "available_kib": 83287784,
+        "disk_free_bytes": 16875999232
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.olean": "c0312704f96a5b966f4c79d489ca7fdafe73a6302a72fbcef62ce620a1b1ad30",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean": "aa06ace8a00c96ef03aba5c00ffb280277f803d09a4cd59cf1da7f1415481747",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean.private": "1ca59d5741b5076f24172f4001040ec6053605607d637cf29a7e3a9502269f7c",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean.server": "ea4621637d212bfd2e1496bf5831361d54d0b4474ffc200d9c8f4a2f60a60e3c"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "65506933e33ac61f6bb248d78585f69371eb2f5aac33d87ed7e6da5d0bef5d52"
+    },
+    "Leaf001": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf001_20260912T054614.640711Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf001_20260912T054614.640711Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Leaf001",
+      "source_sha256": "9ee163f79640a5b04554bb686913978387a865cd4ca56cf5127504e4cd3b0c5e",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 4.749359004199505,
+      "log_sha256": "025c02539476a3f05b0141642a96c7ad351e1ffee46e1fb44210d3f63567f7e6",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf001.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf001.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2195644,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [],
+        "available_kib": 83667864,
+        "disk_free_bytes": 16847220736
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.olean": "c0312704f96a5b966f4c79d489ca7fdafe73a6302a72fbcef62ce620a1b1ad30",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean": "aa06ace8a00c96ef03aba5c00ffb280277f803d09a4cd59cf1da7f1415481747",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean.private": "1ca59d5741b5076f24172f4001040ec6053605607d637cf29a7e3a9502269f7c",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean.server": "ea4621637d212bfd2e1496bf5831361d54d0b4474ffc200d9c8f4a2f60a60e3c"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "912c124c473763d946451851951c9c50f9efebc7d34148a2fed30ce0faf27be9"
+    },
+    "Leaf002": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf002_20260912T054619.481413Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf002_20260912T054619.481413Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Leaf002",
+      "source_sha256": "29034ba2c4f3d778f2d81d55b9174f2080cc978e50ab58ea15d8ee0f92daed49",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 20.17579697072506,
+      "log_sha256": "efdaf1b70b52897243019d08eb1b64a72e2b5a5c60b5f0fa4c245c738f5d968c",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf002.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf002.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2631872,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1221795
+        ],
+        "available_kib": 83331204,
+        "disk_free_bytes": 16846311424
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.olean": "c0312704f96a5b966f4c79d489ca7fdafe73a6302a72fbcef62ce620a1b1ad30",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean": "aa06ace8a00c96ef03aba5c00ffb280277f803d09a4cd59cf1da7f1415481747",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean.private": "1ca59d5741b5076f24172f4001040ec6053605607d637cf29a7e3a9502269f7c",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean.server": "ea4621637d212bfd2e1496bf5831361d54d0b4474ffc200d9c8f4a2f60a60e3c"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "aa400b342b046b96a2d64ba923dfa6ac3821140342e263863ba960c457a163f3"
+    },
+    "Leaf003": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf003_20260912T054639.738007Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf003_20260912T054639.738007Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Leaf003",
+      "source_sha256": "06e6a5eb9375b598c09e3a293956900ed443a936b641946ece533f963477c62c",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 13.961501646786928,
+      "log_sha256": "6f60a7917ffc06fb0f025c6d46520c8bb8a69f81c628d8ac4b99fc56b04ec424",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf003.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf003.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2463036,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1221795
+        ],
+        "available_kib": 83258092,
+        "disk_free_bytes": 16843472896
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.olean": "c0312704f96a5b966f4c79d489ca7fdafe73a6302a72fbcef62ce620a1b1ad30",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean": "aa06ace8a00c96ef03aba5c00ffb280277f803d09a4cd59cf1da7f1415481747",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean.private": "1ca59d5741b5076f24172f4001040ec6053605607d637cf29a7e3a9502269f7c",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean.server": "ea4621637d212bfd2e1496bf5831361d54d0b4474ffc200d9c8f4a2f60a60e3c"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "bf2ada842b0f16f336e0cde50bad8bea57574abcd0e99cfc72eaa24a8658f301"
+    },
+    "Leaf004": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf004_20260912T054653.800634Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Leaf004_20260912T054653.800634Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Leaf004",
+      "source_sha256": "7b8e9e4bedca989d87420e7eb890c2010b257c7c6a342e472d08fdb612d83755",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 26.924809811636806,
+      "log_sha256": "3097791d1ab73b8b934107a68cb6630363c56091ccb089e98771f79a15e5425c",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf004.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf004.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2721852,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1221795
+        ],
+        "available_kib": 83199432,
+        "disk_free_bytes": 16841334784
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.olean": "c0312704f96a5b966f4c79d489ca7fdafe73a6302a72fbcef62ce620a1b1ad30",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean": "aa06ace8a00c96ef03aba5c00ffb280277f803d09a4cd59cf1da7f1415481747",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean.private": "1ca59d5741b5076f24172f4001040ec6053605607d637cf29a7e3a9502269f7c",
+        "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean.server": "ea4621637d212bfd2e1496bf5831361d54d0b4474ffc200d9c8f4a2f60a60e3c"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "7de0f78db6c53271c14292d8129880d3610b3bd9f49c3a2fdf748f3cc9df4cee"
+    },
+    "Rows000": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows000_20260912T060213.052013Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows000_20260912T060213.052013Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Rows000",
+      "source_sha256": "623fe681c3f1d35bcf319a1caafc7a5230df2c310c5e66ece7e5ad586a6c3865",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 39.38356251642108,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows000.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Rows000.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2301648,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [],
+        "available_kib": 83598596,
+        "disk_free_bytes": 16766111744
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf000.olean": "65506933e33ac61f6bb248d78585f69371eb2f5aac33d87ed7e6da5d0bef5d52",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.olean": "9bc078fdde2d0fa18d7d70e3df87b39f4e6fdacd724fae68c596d9d59b795f92",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Model.olean": "d2bdbcfb177f8d4f5effc46bb57364eb9da3e8d4a22433c830890b41a979164b",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/SparseIntegerScaling.olean": "6a2553388875ee58117de095b333e5d4f85eae4e5736cd8d4a27adb476971227"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "230fc6235ffba610f7592af596e2c9aa0cf55ff53a712d0ee23e8d4650dd63c7"
+    },
+    "Rows001": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows001_20260912T060209.896796Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows001_20260912T060209.896796Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Rows001",
+      "source_sha256": "1292266003720fe41f2a51270c5885e41e461e00946bbbae7c8226ad424fd5a8",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 3.0388565864413977,
+      "log_sha256": "6e3d76ac152584049af29f19ce89661b9e8b34403c5e0e17eff3151f1a7004bc",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows001.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Rows001.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2183196,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [],
+        "available_kib": 83600596,
+        "disk_free_bytes": 16766226432
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf001.olean": "912c124c473763d946451851951c9c50f9efebc7d34148a2fed30ce0faf27be9",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.olean": "9bc078fdde2d0fa18d7d70e3df87b39f4e6fdacd724fae68c596d9d59b795f92",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Model.olean": "d2bdbcfb177f8d4f5effc46bb57364eb9da3e8d4a22433c830890b41a979164b",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/SparseIntegerScaling.olean": "6a2553388875ee58117de095b333e5d4f85eae4e5736cd8d4a27adb476971227"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "576a77b3ec2d371976bf4c3bce74f2bb6db67fa33c3c99e2dafcdc8b9677fd90"
+    },
+    "Rows002": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows002_20260912T060252.528849Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows002_20260912T060252.528849Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Rows002",
+      "source_sha256": "84e4094551b38057af1a162b47b7d09ba999602de5b79b635e1e7e095126b9fe",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 45.48772699944675,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows002.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Rows002.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2301364,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1350070
+        ],
+        "available_kib": 83389684,
+        "disk_free_bytes": 16764030976
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf002.olean": "aa400b342b046b96a2d64ba923dfa6ac3821140342e263863ba960c457a163f3",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.olean": "9bc078fdde2d0fa18d7d70e3df87b39f4e6fdacd724fae68c596d9d59b795f92",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Model.olean": "d2bdbcfb177f8d4f5effc46bb57364eb9da3e8d4a22433c830890b41a979164b",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/SparseIntegerScaling.olean": "6a2553388875ee58117de095b333e5d4f85eae4e5736cd8d4a27adb476971227"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "c7a9b024decd387246724bbf6d2bd76c63a7278ff5badc0dbab8f36e5c51e223"
+    },
+    "Rows003": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows003_20260912T060338.092213Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows003_20260912T060338.092213Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Rows003",
+      "source_sha256": "a6ddd5df665b8ea0950055618f21e47d5e022b4310f19bdddaae86f83c3366fc",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 27.401753729209304,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows003.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Rows003.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2260524,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [],
+        "available_kib": 83594648,
+        "disk_free_bytes": 16761757696
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf003.olean": "bf2ada842b0f16f336e0cde50bad8bea57574abcd0e99cfc72eaa24a8658f301",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.olean": "9bc078fdde2d0fa18d7d70e3df87b39f4e6fdacd724fae68c596d9d59b795f92",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Model.olean": "d2bdbcfb177f8d4f5effc46bb57364eb9da3e8d4a22433c830890b41a979164b",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/SparseIntegerScaling.olean": "6a2553388875ee58117de095b333e5d4f85eae4e5736cd8d4a27adb476971227"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "d927c9989b0d79f01f031bd4c0323e2bd77113231a7723b5cd40cf3933014c44"
+    },
+    "Rows004": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows004_20260912T060405.585190Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Rows004_20260912T060405.585190Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Rows004",
+      "source_sha256": "7cd4d8c485b64af559e7c51bf87c37cb2b01ed12a2550dfe77378569deea3a50",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 49.121341770514846,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows004.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Rows004.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2319760,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [],
+        "available_kib": 83589076,
+        "disk_free_bytes": 16760631296
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf004.olean": "7de0f78db6c53271c14292d8129880d3610b3bd9f49c3a2fdf748f3cc9df4cee",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.olean": "9bc078fdde2d0fa18d7d70e3df87b39f4e6fdacd724fae68c596d9d59b795f92",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Model.olean": "d2bdbcfb177f8d4f5effc46bb57364eb9da3e8d4a22433c830890b41a979164b",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/SparseIntegerScaling.olean": "6a2553388875ee58117de095b333e5d4f85eae4e5736cd8d4a27adb476971227"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "4d74862f61cd86496c2a59ec426c55d77442437c87e1bbd1d2acc821404248e6"
+    },
+    "Binding000": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding000_20260912T060603.651715Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding000_20260912T060603.651715Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Binding000",
+      "source_sha256": "abcd131093d43c76ddef5e882040d080f6a5f9d400cc09d837b3a095ddfdf91d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 13.443007102236152,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding000.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Binding000.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2264404,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1388346
+        ],
+        "available_kib": 83383636,
+        "disk_free_bytes": 16754982912
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows000.olean": "230fc6235ffba610f7592af596e2c9aa0cf55ff53a712d0ee23e8d4650dd63c7",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBindings.olean": "a2f7691c0003aa1bb9ebf79afd1ac45ee274271dbbea253cb408fd72b28a5839",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GenericSourceBridge.olean": "669448df563da32dbd239ed9e80733d5dc82edb45af289e73fe690e7ccf29e8e"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "c8c0e626e6927d983fffdc6999a7b1f289f0b53508eb5a2af37adcacb6b686cf"
+    },
+    "Binding001": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding001_20260912T060617.167915Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding001_20260912T060617.167915Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Binding001",
+      "source_sha256": "f51dd9b23bf4316cc03d91da03fc8e00dfcb880237285331bf7d91ab375eef1c",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 13.451449565589428,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding001.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Binding001.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2259876,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1388346
+        ],
+        "available_kib": 83350116,
+        "disk_free_bytes": 16753303552
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows001.olean": "576a77b3ec2d371976bf4c3bce74f2bb6db67fa33c3c99e2dafcdc8b9677fd90",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBindings.olean": "a2f7691c0003aa1bb9ebf79afd1ac45ee274271dbbea253cb408fd72b28a5839",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GenericSourceBridge.olean": "669448df563da32dbd239ed9e80733d5dc82edb45af289e73fe690e7ccf29e8e"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "5b16f23346fae575435349d0e15c58ad21961d395b177f7df335e8f5cefca8bb"
+    },
+    "Binding002": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding002_20260912T060630.719970Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding002_20260912T060630.719970Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Binding002",
+      "source_sha256": "77f68c4abc883213be81828a6013616cee7ed6526b86ff413e73b9449649ec90",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 13.401705756783485,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding002.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Binding002.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2264356,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [],
+        "available_kib": 83632096,
+        "disk_free_bytes": 16751390720
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows002.olean": "c7a9b024decd387246724bbf6d2bd76c63a7278ff5badc0dbab8f36e5c51e223",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBindings.olean": "a2f7691c0003aa1bb9ebf79afd1ac45ee274271dbbea253cb408fd72b28a5839",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GenericSourceBridge.olean": "669448df563da32dbd239ed9e80733d5dc82edb45af289e73fe690e7ccf29e8e"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "57d4d2f4d6bf3e9c7c9b3a2bb0186228c11ead3d50b85861391140abb4cb8a0b"
+    },
+    "Binding003": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding003_20260912T060644.229898Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding003_20260912T060644.229898Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Binding003",
+      "source_sha256": "6922f22950da4c3a3329148d431b0051305ccda066398b9cc37bdd6bd94f550d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 13.693268712610006,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding003.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Binding003.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2263900,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1404348,
+          1404356
+        ],
+        "available_kib": 83201384,
+        "disk_free_bytes": 16749215744
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows003.olean": "d927c9989b0d79f01f031bd4c0323e2bd77113231a7723b5cd40cf3933014c44",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBindings.olean": "a2f7691c0003aa1bb9ebf79afd1ac45ee274271dbbea253cb408fd72b28a5839",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GenericSourceBridge.olean": "669448df563da32dbd239ed9e80733d5dc82edb45af289e73fe690e7ccf29e8e"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "a44c98bddd190f6d5943898980c290d6e5e56a17692462d18534ec8abc296b91"
+    },
+    "Binding004": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding004_20260912T060658.000348Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Binding004_20260912T060658.000348Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Binding004",
+      "source_sha256": "cef9fa00a884deac311274c91fbcee4f307fd76c5a5d0a72dd929ea60acedb26",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 13.355986988171935,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding004.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Binding004.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2264460,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1405940
+        ],
+        "available_kib": 83377344,
+        "disk_free_bytes": 16747618304
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows004.olean": "4d74862f61cd86496c2a59ec426c55d77442437c87e1bbd1d2acc821404248e6",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBindings.olean": "a2f7691c0003aa1bb9ebf79afd1ac45ee274271dbbea253cb408fd72b28a5839",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GenericSourceBridge.olean": "669448df563da32dbd239ed9e80733d5dc82edb45af289e73fe690e7ccf29e8e"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "292241df3e772dddda029bd88a429b9db0990521fac9046880118ed97f30496e"
+    },
+    "FiveSource": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_FiveSource_20260912T060711.425788Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_FiveSource_20260912T060711.425788Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/FiveSource",
+      "source_sha256": "1bcb7504645f1d03d2b90936187c57a2f9103ff8890cafe67e65c1a48070b523",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 2.5860992819070816,
+      "log_sha256": "e6b08adbc8c05e5723f2c325353bf83102ec1a19ada5cfd818be7015c71e01ad",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/FiveSource.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/FiveSource.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2156604,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1405940
+        ],
+        "available_kib": 83194728,
+        "disk_free_bytes": 16746094592
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding000.olean": "c8c0e626e6927d983fffdc6999a7b1f289f0b53508eb5a2af37adcacb6b686cf",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding001.olean": "5b16f23346fae575435349d0e15c58ad21961d395b177f7df335e8f5cefca8bb",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding002.olean": "57d4d2f4d6bf3e9c7c9b3a2bb0186228c11ead3d50b85861391140abb4cb8a0b",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding003.olean": "a44c98bddd190f6d5943898980c290d6e5e56a17692462d18534ec8abc296b91",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding004.olean": "292241df3e772dddda029bd88a429b9db0990521fac9046880118ed97f30496e"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "79fb925f425320e88ae2b4c92cb2904887fc84d2b70e94b1cf02b6572881c807"
+    },
+    "Controls": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Controls_20260912T060714.131034Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_Controls_20260912T060714.131034Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/Controls",
+      "source_sha256": "ecb4db40a38ce8e2a93d58d77927cfed26b02d44f2a023ea8147712385ffa9c6",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 2.5343858171254396,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Controls.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/Controls.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2157924,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [],
+        "available_kib": 83620860,
+        "disk_free_bytes": 16746029056
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/BoundaryChecks.olean": "4f20ab90629a7ed27ae799926538a09a760e018ffa4b6ad52b14938372bca239",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/FiveSource.olean": "79fb925f425320e88ae2b4c92cb2904887fc84d2b70e94b1cf02b6572881c807"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "d662a15837f8091d317823baba70dc5df70ed76e692b47e0880698321885ef10"
+    },
+    "AuditCore": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_AuditCore_20260912T060716.728572Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_AuditCore_20260912T060716.728572Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/AuditCore",
+      "source_sha256": "0c490e411d5120a9be6a305e62d2e08780f4833396fbda25ca51119b4c16a1c1",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 2.6352479346096516,
+      "log_sha256": "dc1a96efc69fc4ef3e72b3d6f0175f0ffcdc3a12ce91010cae1f7a8e5879c566",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/AuditCore.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/AuditCore.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2143704,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1407641
+        ],
+        "available_kib": 83523468,
+        "disk_free_bytes": 16746008576
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/TerminalBridge.olean": "bc22e574dbfba49cb6788effff455f5850e2ef58594081d59495334c133f205a",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.olean": "c0312704f96a5b966f4c79d489ca7fdafe73a6302a72fbcef62ce620a1b1ad30",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/SparseIntegerScaling.olean": "6a2553388875ee58117de095b333e5d4f85eae4e5736cd8d4a27adb476971227",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GenericSourceBridge.olean": "669448df563da32dbd239ed9e80733d5dc82edb45af289e73fe690e7ccf29e8e",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Model.olean": "d2bdbcfb177f8d4f5effc46bb57364eb9da3e8d4a22433c830890b41a979164b",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/FiveTree.olean": "6dfe5d868d7c3d670bf3234e8ed124f45fcf995793767e00c69c68f7a514d589",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.olean": "9bc078fdde2d0fa18d7d70e3df87b39f4e6fdacd724fae68c596d9d59b795f92",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBindings.olean": "a2f7691c0003aa1bb9ebf79afd1ac45ee274271dbbea253cb408fd72b28a5839"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "36c2a2a125fa3185b9207b1fee9b1b9e95a5ff500bbc8c022ea75e59c0b30f24"
+    },
+    "AuditInstances": {
+      "receipt": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_AuditInstances_20260912T060719.442106Z.json",
+      "log": "evidence/Rho5_Shared_MainlineTreeCover_V31Batch_AuditInstances_20260912T060719.442106Z.log",
+      "module": "Rho5/Shared/MainlineTreeCover/V31Batch/AuditInstances",
+      "source_sha256": "176692ecf45423925845ef7892f48754f51c40163577a8027989472f5fd1f24d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "wall_seconds": 3.1906373854726553,
+      "log_sha256": "c483dd68c206ac1e947b5322583abb6ba909c117b0a33169a4f12bdab6401b5b",
+      "args": [
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "8192",
+        "-R",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src",
+        "-o",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/AuditInstances.olean",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/src/Rho5/Shared/MainlineTreeCover/V31Batch/AuditInstances.lean"
+      ],
+      "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean:/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+      "peak_rss_kib": 2163520,
+      "rss_guard_fired": false,
+      "timeout": false,
+      "resources_before": {
+        "other_lean_jobs": [
+          1407641
+        ],
+        "available_kib": 83281156,
+        "disk_free_bytes": 16745963520
+      },
+      "dependencies": {
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+        "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf000.olean": "65506933e33ac61f6bb248d78585f69371eb2f5aac33d87ed7e6da5d0bef5d52",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf001.olean": "912c124c473763d946451851951c9c50f9efebc7d34148a2fed30ce0faf27be9",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf002.olean": "aa400b342b046b96a2d64ba923dfa6ac3821140342e263863ba960c457a163f3",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf003.olean": "bf2ada842b0f16f336e0cde50bad8bea57574abcd0e99cfc72eaa24a8658f301",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf004.olean": "7de0f78db6c53271c14292d8129880d3610b3bd9f49c3a2fdf748f3cc9df4cee",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows000.olean": "230fc6235ffba610f7592af596e2c9aa0cf55ff53a712d0ee23e8d4650dd63c7",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows001.olean": "576a77b3ec2d371976bf4c3bce74f2bb6db67fa33c3c99e2dafcdc8b9677fd90",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows002.olean": "c7a9b024decd387246724bbf6d2bd76c63a7278ff5badc0dbab8f36e5c51e223",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows003.olean": "d927c9989b0d79f01f031bd4c0323e2bd77113231a7723b5cd40cf3933014c44",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows004.olean": "4d74862f61cd86496c2a59ec426c55d77442437c87e1bbd1d2acc821404248e6",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding000.olean": "c8c0e626e6927d983fffdc6999a7b1f289f0b53508eb5a2af37adcacb6b686cf",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding001.olean": "5b16f23346fae575435349d0e15c58ad21961d395b177f7df335e8f5cefca8bb",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding002.olean": "57d4d2f4d6bf3e9c7c9b3a2bb0186228c11ead3d50b85861391140abb4cb8a0b",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding003.olean": "a44c98bddd190f6d5943898980c290d6e5e56a17692462d18534ec8abc296b91",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding004.olean": "292241df3e772dddda029bd88a429b9db0990521fac9046880118ed97f30496e",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/FiveSource.olean": "79fb925f425320e88ae2b4c92cb2904887fc84d2b70e94b1cf02b6572881c807",
+        "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Controls.olean": "d662a15837f8091d317823baba70dc5df70ed76e692b47e0880698321885ef10"
+      },
+      "dependencies_unchanged": true,
+      "olean_sha256": "09dc9b1cb2a3069e40a9dc11b6865853cc3be5468d96712eeb9d41af619e017c"
+    }
+  },
+  "axioms": {
+    "Rho5.Shared.MainlineTreeCover.V31Batch.TerminalData.rhs_eq_list": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.TerminalData.comb_eq_list": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.TerminalData.min_eq_list": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.TerminalData.check_eq_list": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.TerminalData.empty_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.TerminalData.rejected_check": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.TerminalData.feasible_scaledSystem": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.TerminalData.scaled_empty_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.sparseCoeff_scaled_integer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.scaled_dense_eq_sparse": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.ratFeasibleR_of_source_rows": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.source_empty_of_rat_terminal_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.source_empty_of_rat_check": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Model.polynomial_eval_eq_integer_div": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Model.sameSource_iff_integer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Model.toContractionBox_contains_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Model.liftedBox_contains": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Model.model_source_on_box": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Model.generatedSystem_holds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Model.project_liftedPoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.splitAxes_values": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.cut12_midpoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.cut12_valid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.cut16_midpoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.cut16_valid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.cut18_midpoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.cut18_valid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.cut17_midpoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.cut17_valid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.tree_wellFormed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.four_splits": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.leafBoxes_tree": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.five_leaves": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.leafPaths_tree": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.fullPaths_values": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.fullPaths_length": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.subtree_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.leaves_subset_root": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.mem_subRoot_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.source_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.source_safe_of_five": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.source_empty_of_five": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.remainingSeven_length": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.frontier_partition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.root_refined_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveTree.remainingSeven_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.flatBox0_eq_leaf0": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.flatBox1_eq_leaf1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.flatBox2_eq_leaf2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.flatBox3_eq_leaf3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.flatBox4_eq_leaf4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_flatBox0_lo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_leaf0_lo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_flatBox0_hi": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_leaf0_hi": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_flatBox1_lo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_leaf1_lo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_flatBox1_hi": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_leaf1_hi": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_flatBox2_lo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_leaf2_lo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_flatBox2_hi": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_leaf2_hi": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_flatBox3_lo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_leaf3_lo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_flatBox3_hi": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_leaf3_hi": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_flatBox4_lo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_leaf4_lo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_flatBox4_hi": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.GeometryBindings.lifted_leaf4_hi": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Model.variableNames_length": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Model.rowNames_length": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Model.actualPairs_values": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.shape": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.ordered": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.weights_nonnegative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.check_true": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.empty_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.coordinateScale_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.rational_empty_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.changed_weight_rejected": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.missing_row_rejected": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.shape": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.ordered": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.weights_nonnegative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.check_true": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.empty_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.coordinateScale_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.rational_empty_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.changed_weight_rejected": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.missing_row_rejected": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.shape": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.ordered": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.weights_nonnegative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.check_true": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.empty_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.coordinateScale_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.rational_empty_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.changed_weight_rejected": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.missing_row_rejected": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.shape": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.ordered": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.weights_nonnegative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.check_true": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.empty_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.coordinateScale_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.rational_empty_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.changed_weight_rejected": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.missing_row_rejected": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.shape": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.ordered": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.weights_nonnegative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.check_true": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.empty_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.coordinateScale_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.rational_empty_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.changed_weight_rejected": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.missing_row_rejected": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row0": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs0": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row9": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs9": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row10": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs10": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row11": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs11": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row12": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs12": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row13": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs13": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row14": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs14": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row15": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs15": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row16": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs16": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row17": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs17": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row18": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs18": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row19": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs19": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row20": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs20": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row21": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs21": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row22": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs22": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row23": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs23": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row25": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs25": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row26": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs26": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.row27": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.rhs27": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.all_rows": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows000.all_rhs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows001.row0": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows001.rhs0": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows001.all_rows": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows001.all_rhs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row0": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs0": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row9": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs9": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row10": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs10": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row11": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs11": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row12": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs12": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row13": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs13": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row14": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs14": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row15": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs15": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row16": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs16": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row17": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs17": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row18": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs18": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row19": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs19": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row20": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs20": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row21": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs21": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row22": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs22": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row23": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs23": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row25": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs25": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row26": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs26": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.row27": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.rhs27": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.all_rows": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows002.all_rhs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row0": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs0": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row9": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs9": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row10": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs10": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row11": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs11": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row12": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs12": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row13": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs13": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row14": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs14": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row15": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs15": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row16": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs16": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.row17": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.rhs17": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.all_rows": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows003.all_rhs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row0": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs0": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row9": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs9": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row10": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs10": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row11": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs11": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row12": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs12": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row13": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs13": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row14": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs14": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row15": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs15": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row16": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs16": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row17": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs17": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row18": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs18": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row19": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs19": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row20": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs20": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row21": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs21": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row22": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs22": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row23": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs23": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs24": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row25": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs25": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row26": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs26": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row27": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs27": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row28": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs28": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row29": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs29": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row30": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs30": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row31": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs31": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.row32": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.rhs32": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.all_rows": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Rows004.all_rhs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding000.lower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding000.upper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding000.weights_positive": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding000.source_feasible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding000.source_impossible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding000.source_leaf_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding001.lower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding001.upper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding001.weights_positive": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding001.source_feasible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding001.source_impossible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding001.source_leaf_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding002.lower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding002.upper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding002.weights_positive": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding002.source_feasible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding002.source_impossible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding002.source_leaf_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding003.lower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding003.upper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding003.weights_positive": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding003.source_feasible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding003.source_impossible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding003.source_leaf_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding004.lower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding004.upper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding004.weights_positive": [
+      "propext"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding004.source_feasible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding004.source_impossible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding004.source_leaf_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveSource.all_five_paid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveSource.subtree_model_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveSource.subtree_impossible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveSource.actual_root_remaining_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.FiveSource.source_remaining_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Controls.dropped_child_loses_geometric_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Controls.zero_width_cut_rejected": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.dimension": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.support_count": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.support_ids_valid": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf000.support_ids_unique": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.dimension": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.support_count": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.support_ids_valid": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf001.support_ids_unique": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.dimension": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.support_count": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.support_ids_valid": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf002.support_ids_unique": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.dimension": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.support_count": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.support_ids_valid": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf003.support_ids_unique": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.dimension": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.support_count": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.support_ids_valid": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Leaf004.support_ids_unique": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding000.support_ids_count": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding001.support_ids_count": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding002.support_ids_count": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding003.support_ids_count": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Binding004.support_ids_count": [],
+    "Rho5.Shared.MainlineTreeCover.V31Batch.Controls.out_of_range_axis_rejected": []
+  },
+  "live_dependencies": {
+    "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean": "c4f3675f64306af5e7101bbda77bb960f306373873184df01ec972fd1cef372d",
+    "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.private": "73d77b75d2edfc320d5adb53d087a09e33587e4e580be2a2d7ef98e4993d3084",
+    "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/lib/lean/Init.olean.server": "34036358656a929ac473b049bf7bb0dcf2a08a2a8bece0e9f016d6978a1b118c",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/CertificateRules/ListCheck.olean": "987fe3d16c9a1cd46cf152cb5b40c07220f2cf9ffccfc89b889b8610d84ad61e",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/CertificateRules/RealSoundness.olean": "ec0f8661c34fb24d5be6f865a30e4fb672dc0361d08b2c52fb1e042a9487af63",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/TerminalBridge.olean": "bc22e574dbfba49cb6788effff455f5850e2ef58594081d59495334c133f205a",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Scaling.olean": "c0312704f96a5b966f4c79d489ca7fdafe73a6302a72fbcef62ce620a1b1ad30",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/CertificateContraction/QuadraticSyntax.olean": "d5e7fc74afd59cc2d3942abfd91e0483f50740c8d85ae558ff82de62ac1f9446",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/CertificateContraction/QuadraticLift.olean": "3aa1d5002c30d24701cecca23f976fcf6b574c611d28c54bbe97a159aeab1e24",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/Box.olean": "e1d57381dc7161c0e646b8682d2a28527f8bfe75fc1efdc0e20bdfd833f0f5b7",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Prefix.olean": "3cc9e397f759e49d463e61e4fe51507467306e56d48d584d0af3b97539de9171",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/FiveTree.olean": "6dfe5d868d7c3d670bf3234e8ed124f45fcf995793767e00c69c68f7a514d589",
+    "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Tactic/FinCases.olean": "8afa9765f63dea5ccf60d58b5c2e48cce1555e1cdff6974c5f6bdb24d37db8f7",
+    "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Tactic/FinCases.olean.private": "cea8fbe95bc04ad77ffa56ed70cc8801d36bd7764bd31c33225ccb3bca32f70c",
+    "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Tactic/FinCases.olean.server": "8303d194a8565ee2b3d138ea72644fd8bdd1eb92fbf81c5e6dbfc8e0b23ca46e",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBoxes.olean": "9bc078fdde2d0fa18d7d70e3df87b39f4e6fdacd724fae68c596d9d59b795f92",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Model.olean": "d2bdbcfb177f8d4f5effc46bb57364eb9da3e8d4a22433c830890b41a979164b",
+    "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean": "aa06ace8a00c96ef03aba5c00ffb280277f803d09a4cd59cf1da7f1415481747",
+    "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean.private": "1ca59d5741b5076f24172f4001040ec6053605607d637cf29a7e3a9502269f7c",
+    "/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean/Mathlib/Data/Fintype/Fin.olean.server": "ea4621637d212bfd2e1496bf5831361d54d0b4474ffc200d9c8f4a2f60a60e3c",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf000.olean": "65506933e33ac61f6bb248d78585f69371eb2f5aac33d87ed7e6da5d0bef5d52",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/SparseIntegerScaling.olean": "6a2553388875ee58117de095b333e5d4f85eae4e5736cd8d4a27adb476971227",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf001.olean": "912c124c473763d946451851951c9c50f9efebc7d34148a2fed30ce0faf27be9",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf002.olean": "aa400b342b046b96a2d64ba923dfa6ac3821140342e263863ba960c457a163f3",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf003.olean": "bf2ada842b0f16f336e0cde50bad8bea57574abcd0e99cfc72eaa24a8658f301",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Leaf004.olean": "7de0f78db6c53271c14292d8129880d3610b3bd9f49c3a2fdf748f3cc9df4cee",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows000.olean": "230fc6235ffba610f7592af596e2c9aa0cf55ff53a712d0ee23e8d4650dd63c7",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GeometryBindings.olean": "a2f7691c0003aa1bb9ebf79afd1ac45ee274271dbbea253cb408fd72b28a5839",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/GenericSourceBridge.olean": "669448df563da32dbd239ed9e80733d5dc82edb45af289e73fe690e7ccf29e8e",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows001.olean": "576a77b3ec2d371976bf4c3bce74f2bb6db67fa33c3c99e2dafcdc8b9677fd90",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows002.olean": "c7a9b024decd387246724bbf6d2bd76c63a7278ff5badc0dbab8f36e5c51e223",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows003.olean": "d927c9989b0d79f01f031bd4c0323e2bd77113231a7723b5cd40cf3933014c44",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Rows004.olean": "4d74862f61cd86496c2a59ec426c55d77442437c87e1bbd1d2acc821404248e6",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding000.olean": "c8c0e626e6927d983fffdc6999a7b1f289f0b53508eb5a2af37adcacb6b686cf",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding001.olean": "5b16f23346fae575435349d0e15c58ad21961d395b177f7df335e8f5cefca8bb",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding002.olean": "57d4d2f4d6bf3e9c7c9b3a2bb0186228c11ead3d50b85861391140abb4cb8a0b",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding003.olean": "a44c98bddd190f6d5943898980c290d6e5e56a17692462d18534ec8abc296b91",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Binding004.olean": "292241df3e772dddda029bd88a429b9db0990521fac9046880118ed97f30496e",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/BoundaryChecks.olean": "4f20ab90629a7ed27ae799926538a09a760e018ffa4b6ad52b14938372bca239",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/FiveSource.olean": "79fb925f425320e88ae2b4c92cb2904887fc84d2b70e94b1cf02b6572881c807",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/m02/build/lib/lean/Rho5/Shared/MainlineTreeCover/V31Batch/Controls.olean": "d662a15837f8091d317823baba70dc5df70ed76e692b47e0880698321885ef10"
+  },
+  "line_counts": {
+    "TerminalBridge": 86,
+    "Scaling": 87,
+    "SparseIntegerScaling": 54,
+    "GenericSourceBridge": 66,
+    "Model": 285,
+    "FiveTree": 212,
+    "GeometryBoxes": 957,
+    "GeometryBindings": 1271,
+    "Leaf000": 111,
+    "Leaf001": 84,
+    "Leaf002": 111,
+    "Leaf003": 101,
+    "Leaf004": 116,
+    "Rows000": 589,
+    "Rows001": 49,
+    "Rows002": 589,
+    "Rows003": 389,
+    "Rows004": 689,
+    "Binding000": 50,
+    "Binding001": 50,
+    "Binding002": 50,
+    "Binding003": 50,
+    "Binding004": 50,
+    "FiveSource": 52,
+    "Controls": 24,
+    "AuditCore": 161,
+    "AuditInstances": 690
+  },
+  "success_compile_wall_seconds": 397.9024264253676,
+  "guard_notes": "Incremental owner compilation and first named axiom review. No whole-library or original-tree replay. All failed development receipts are retained separately.",
+  "local_packaged_at": "2026-09-12T14:16:47.823782+08:00",
+  "local_source_root": "/Users/mike/Documents/Codex/2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/src",
+  "local_objects_root": "/Users/mike/Documents/Codex/2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m02_g01_20260912/M02_G01/build/lib/lean",
+  "upstream_note": "Reuse frozen accepted M01/D135/C03 objects. Their actual imported paths/hashes are in receipts and FROZEN_IMPORT_OBJECTS. mathlib and all upstream project libraries are not rebuilt or duplicated in this own-module package."
+}

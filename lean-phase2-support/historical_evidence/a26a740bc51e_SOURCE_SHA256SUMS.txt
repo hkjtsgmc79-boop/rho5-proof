@@ -1,0 +1,11 @@
+# D145 source/olean hashes (local; the X lane_root oleans are byte-identical, see binding)
+0cbf258d9d314edb5431f09017afb330c40cc6156e14e00dec8e5a375cfdd81e  src/Rho5/Shared/XHighRSource.lean
+bf68278f0d657f287a5089d21d1dd4459e043fd39ce97d034d1262b7dedaebdb  src/Rho5/Shared/XHighRSource/Defs.lean
+9ac0f8012c11609a3f6a501d23ddf280b1a25c86d82de0d21500c8853ea077f1  src/Rho5/Shared/XHighRSource/Height.lean
+c091f39dbcf587e52db54f9078a96887ce9962ec60b4c6ba90100678d4754b8e  src/Rho5/Shared/XHighRSource/Transpose.lean
+484b35e63557a74c6fdc8ddddb9e3d86698b9472b255acdd55e83903545db3cb  src/Rho5/Shared/XHighRSource/SchurTransport.lean
+21448640e936741e506080d8cccab5c6e9a9d338e8ddf5b8795c437966c55a36  src/Rho5/Shared/XHighRSource/CoordTransport.lean
+7f283817590638a2663a1aac80e1fcbe77c5f7cd54110f73579ed4be11f702cc  src/Rho5/Shared/XHighRSource/PRules.lean
+a67629ab741a9457f5f5159e07f7a8cc556adca6245f1e28e3164b4229898595  src/Rho5/Shared/XHighRSource/SourceRows.lean
+5b3d7f4e33417c1b394464b8ea08bffd9ae111e34071c00286969a59acacb79d  src/Rho5/Shared/XHighRSource/DiagramPackets.lean
+5097be9c8092edf2218b4eb1db55d87b1c4efeedd96450fab501a5736e19a3a2  src/Rho5/Shared/XHighRSource/Audit.lean

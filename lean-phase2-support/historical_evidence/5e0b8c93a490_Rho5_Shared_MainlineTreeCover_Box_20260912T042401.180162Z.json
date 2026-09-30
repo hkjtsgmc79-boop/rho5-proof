@@ -1,0 +1,25 @@
+{
+  "module": "Rho5/Shared/MainlineTreeCover/Box",
+  "source_sha256": "2456e93bffd254d728a024b96009e04491e79c44e4d94e7606a320dfb3d5434c",
+  "source_unchanged": true,
+  "exit_code": 0,
+  "wall_seconds": 2.933035995811224,
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "args": [
+    "/root/microscope_ws/rho5_lean_pilot_20260911/runtime/lean-4.30.0-linux/bin/lean",
+    "-j",
+    "1",
+    "-M",
+    "8192",
+    "-R",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/src",
+    "-o",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean/Rho5/Shared/MainlineTreeCover/Box.olean",
+    "/root/microscope_ws/mainline_v31_tree_cover_20260912/src/Rho5/Shared/MainlineTreeCover/Box.lean"
+  ],
+  "lean_path": "/root/microscope_ws/mainline_v31_tree_cover_20260912/build/lib/lean:/root/microscope_ws/rho5_lean_dsh_20260911/D135/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/mathlib/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+  "peak_rss_kib": 1987020,
+  "rss_guard_fired": false,
+  "timeout": false,
+  "olean_sha256": "e1d57381dc7161c0e646b8682d2a28527f8bfe75fc1efdc0e20bdfd833f0f5b7"
+}

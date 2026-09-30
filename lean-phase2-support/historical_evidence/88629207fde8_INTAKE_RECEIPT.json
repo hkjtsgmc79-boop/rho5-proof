@@ -1,0 +1,40 @@
+{
+  "schema": "RHO5_ASSEMBLY_INTAKE_V1",
+  "lane": "M01",
+  "created_at": "2026-09-12T04:57:24.904142+00:00",
+  "status": "ACCEPTED_FOR_ASSEMBLY_WITH_EXPLICIT_PREMISES",
+  "source_package": "/Users/mike/Documents/Codex/2026-09-07/rho5-mainline-v2/outputs/lean_mainline_m01_20260912/M01_V31_TREE_COVER_READY.zip",
+  "source_package_sha256": "3583c27d94697e6a7354d6980817a83c608051ec8d0c87546c35d8f755b39b3e",
+  "package_manifest_files_verified": 76,
+  "own_sources": 10,
+  "successful_own_module_receipts": 10,
+  "local_work_sources_equal_package": true,
+  "actual_named_axiom_records": 65,
+  "axiom_free_records": 0,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "live_x_read_only_checks": 40,
+  "all_live_x_checks_match": true,
+  "lean_invocations_by_intake": 0,
+  "mathematical_reaudit_by_intake": false,
+  "external_dependency_file_rescan": false,
+  "owner_dependency_review_reused": true,
+  "scope": "Closed rational-endpoint boxes over real points, finite binary-tree coverage, actual V31 first seven splits with an eight-box frontier, plus restricted-source safety composition on source intersect leaf.",
+  "frontier_obligations": 8,
+  "first_terminal_obligation_discharged_here": false,
+  "right_sibling_obligations": 7,
+  "source_restriction": "The consumer must pay safety or emptiness for source intersect each leaf; no requirement or claim that the whole geometric leaf is empty.",
+  "remaining": [
+    "Actual source and root/row mapping",
+    "First C terminal semantics and concrete check",
+    "Seven sibling subtrees",
+    "Whole V31 and all other roots",
+    "Final sharp rho5 theorem",
+    "Verified source-byte parser"
+  ],
+  "dependency_note": "Reuse the owner incremental dependency and accepted upstream audit. Box/Tree initial build receipts predate dependency capture; later named audits bind their unchanged oleans. No cold replay.",
+  "owner_review": "evidence/OWNER_REVIEW.json"
+}

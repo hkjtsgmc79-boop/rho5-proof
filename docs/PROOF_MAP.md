@@ -14,7 +14,7 @@ The paper proves the real five-dimensional complete-pivoting growth bound using 
 
 The no-external-safety baseline includes `alpha ≤ rho5Trace ≤ 81/16`. It is distinct from the conditional sharp equality.
 
-The v1.0.2 B366 addition is a **source-only** second-phase review snapshot. It preserves 1,452 accepted Lean sources and adds four identified support sources; 57 direct imports outside the snapshot are not included. It does not replace the first-phase cold-build record or prove either global safety interface unconditionally.
+The v1.0.2 B366 addition is a **source-only** second-phase review snapshot. It preserves 1,452 accepted Lean sources and adds four identified support sources. Its 57 external direct imports are available across the frozen first-phase base and the additive [76-source dependency supplement](LEAN_PHASE2_SOURCE_ASSEMBLY.md). Static assembly checks the 2,027-module recursive Rho5 source closure; no new combined build or axiom audit is claimed. It does not replace the first-phase cold-build record or prove either global safety interface unconditionally.
 
 See [the detailed Lean coverage catalogue](../lean/docs/COVERAGE.md), [obligations](../lean/docs/OBLIGATIONS.md), [public types](../lean/FINAL_THEOREM_TYPES.txt) and [axiom records](../lean/AXIOMS.json).
 

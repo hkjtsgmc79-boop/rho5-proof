@@ -1,0 +1,7 @@
+=== metrics ===
+lean_args: ['-j', '1', '-M', '8192', '-R', '/root/microscope_ws/rho5_lean_dsh_20260911/D149/src', '-o', '/root/microscope_ws/rho5_lean_dsh_20260911/D149/lane_root/Rho5/Shared/XHighRPhysicalRows/CoreSlacks.olean', '/root/microscope_ws/rho5_lean_dsh_20260911/D149/src/Rho5/Shared/XHighRPhysicalRows/CoreSlacks.lean']
+exit_code: 0
+wall_seconds: 6.543
+child_peak_rss_kib: 2978692
+rss_watchdog_tripped: False
+as_cap_bytes: 12884901888

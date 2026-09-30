@@ -1,0 +1,125 @@
+{
+ "schema": "D136_X_V31_ROOTBOX_READY_V1",
+ "receipt": "X_V31_ROOTBOX_READY",
+ "lane": "D136",
+ "card": "parallel/D136/TASK.md",
+ "stage": "A 续三：D138 薄适配（去掉 Rho4Input）+ 原论文 §3.4 精确 22 维根盒",
+ "status": "READY",
+ "ready": true,
+ "published_at": "2026-09-12T12:15:00+08:00",
+ "claim": "(1) 用 D138 已冻结的 `Rho5.Shared.SchurFourPivotBound.height_le_four_mul_p` 支付 `Rho4Input (chartState M)`，从而给出**无 `PhysicalBounds`、无 `Rho4Input`** 的实际矩阵 106 行入口（`SatFrame` + 符号 + 高值 + `k ≤ 2`）；(2) 在同一组显式前提下**导出**（不假设）原论文 §3.4 的 22 维根盒 `BoxIn (chartState M)`。",
+ "d138_adapter": {
+  "module": "Rho5/Shared/XSmallKBranch/NoRho4",
+  "source_sha256": "c11363e94e577a90c659ad108963e61aa19005bebe03e1d0f8dd2c4cbf56f5b8",
+  "olean_sha256": "561cd41646cb42891ba70aa3967b4cb9032a731a9fdb6526e6b09e003f17f7c3",
+  "consumed": {
+   "theorem": "Rho5.Shared.SchurFourPivotBound.height_le_four_mul_p",
+   "receipt": "outputs/progress_1204_delivery_20260912/D138/results/SCHUR_FOUR_PIVOT_READY.json",
+   "olean_sha256": "ea7eb8fa11ca28e1c970b2392d13b38a29c3f25aadd768d2c0324ab4552c2c70",
+   "note": "只读复用；未重编、未重审 D138"
+  },
+  "lemmas": [
+   {
+    "name": "leadingInput_of_satFrame_high",
+    "type": "∀ M, SatFrame M → HighValue (chartState M) → Rho5.ExternalTailSaturation.LeadingInput M",
+    "note": "八字段；delta_ne 来自高值 F > 0"
+   },
+   {
+    "name": "rho4Input_chartState",
+    "type": "∀ M, SatFrame M → HighValue (chartState M) → Rho4Input (chartState M)",
+    "note": "F ≤ 4p；由 D138 的 height ≤ 4p 与 height = |w − r| ≥ r − w 得到"
+   },
+   {
+    "name": "all_rows_sound_of_satFrame_noRho4",
+    "type": "∀ M, SatFrame M → NormalizedSigns (chartState M) → HighValue (chartState M) → SmallThirdPivot (chartState M) → ∀ i, (i ∈ paidIdx ∨ i = 96 ∨ i = 98) → RowProp i (chartState M)",
+    "note": "**106 行**；不再有 PhysicalBounds 与 Rho4Input 前提"
+   }
+  ]
+ },
+ "root_box": {
+  "module": "Rho5/Shared/XSmallKBranch/RootBox",
+  "source_sha256": "a2e8539d5bdcf4492f55cd399587d8f39ba88f0249dffb93fbe63569b6d5560d",
+  "olean_sha256": "8d5a4ace8faf9fe3e8e89d358d02a37460d48f315f6d2e9cb0e288d50414ba51",
+  "main": "rootBox_chartState : SatFrame M → PhysicalBounds → NormalizedSigns → PosSigns → 0 ≤ uu z 0 → HighValue → SmallThirdPivot → Rho4Input → BoxIn (chartState M)",
+  "main_no_rho4": "rootBox_chartState_noRho4（同上但去掉 Rho4Input，内部用 D138 薄适配）",
+  "pos_signs": "structure PosSigns：0 < e ∧ 0 < β（显式输入，原文 §2 的规范化输出）",
+  "not_assumed": "BoxIn 是**结论**；本叶不把根盒当假设",
+  "derivations": {
+   "k ≥ 551/300": "Fcore（F ≤ 9k/4，D87 行）+ F ≥ q_*",
+   "r ≥ 1653/800": "|w| ≤ r 与 F ≥ q_*",
+   "r ≤ 3147/800": "rAd（r ≤ k(1+d)）+ d ≤ 747/800 + k ≤ 2",
+   "w ∈ [−2, −53/800]": "D₂₂ 带（w + dB ≥ −k）+ w = r − F + r 上界",
+   "A, B ≤ −53/400": "§3.3 的 B ≤ 2k − F 与 A − B ≤ 2k − F（冻结行 row_B/row_BA）+ q_* − 4 = 53/400",
+   "c ≥ 53/400, d ∈ [53/800, 747/800]": "(3.1)/(3.2) 恒等式（core_bound_1/2）+ B−A ≤ k + c ≤ 1",
+   "p ∈ [1653/1600, 2]": "F ≤ 4p（D138）+ |p − eβ| ≤ 1 + |e|,|β| ≤ 1 + e,β > 0",
+   "e, β ≥ 53/1600": "p − eβ ≤ 1 + p ≥ q_*/4 + β ≤ 1（及对称）",
+   "u₀ ∈ [0,1]、u₁,u₂,x,v ∈ [−1,1]、q ∈ [−2,2]": "物理带 + p ≤ 2；u₀ ≥ 0 为显式输入"
+  },
+  "note": "§3.4 表中每个端点都由本叶的具名引理（k_lower/d_lower/c_lower/A_upper/B_upper/p_lower/p_upper/e_lower/…）支付"
+ },
+ "audit": {
+  "noRho4": {
+   "log": "logs_x/NoRho4Audit.log",
+   "targets": 3
+  },
+  "rootBox": {
+   "log": "logs_x/RootBoxAudit.log",
+   "targets": 11
+  },
+  "violations": [],
+  "errors": 0,
+  "panics": 0,
+  "allowed_axioms": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "label": "ACTUAL_PASSES_FROM_REAL_LEAN_RUNS"
+ },
+ "still_explicit_inputs": [
+  "NormalizedSigns（§2）",
+  "PosSigns（e > 0, β > 0，§2 输出）",
+  "0 ≤ u₀",
+  "HighValue（F ≥ q_*）",
+  "SmallThirdPivot（k ≤ 2）"
+ ],
+ "mainline_split": {
+  "card": "M01（主线已认领）",
+  "namespace": "Rho5.Shared.MainlineTreeCover",
+  "note": "通用二叉闭盒覆盖/有限树健全性与 V31 首 C 之前的真实 S 前缀实例归 M01；本卡**不重复**通用树/前缀证明，只提供真实矩阵行与 22 维根盒供其消费"
+ },
+ "stage_b": {
+  "status": "PENDING_D135_SAMPLES_AND_M01_COVER",
+  "d135": "outputs/heartbeat_1124_delivery_20260912/D135_CORE/results/CERTIFICATE_RULES_CORE_READY.json（规则核 READY；**样本尚未 Lean 通过**）",
+  "plan": "首终端来源 = 本卡的 106 行 + 根盒（本叶）经 M01 的 S 前缀覆盖层抵达首 C 盒，再交 D135 的检查器实例；每一分裂两边保留等号/覆盖语义"
+ },
+ "integrity": {
+  "frozen_inputs_modified": 0,
+  "upstream_rebuilt": false,
+  "model_sound_recompiled": false,
+  "lake_build_run": false,
+  "deleted": 0,
+  "kills": 0,
+  "services": 0,
+  "network": false,
+  "outputs_written": false,
+  "other_lanes_touched": false,
+  "tmp_dir_used": false
+ },
+ "artifacts": {
+  "source_sha256": {
+   "NoRho4.lean": "c11363e94e577a90c659ad108963e61aa19005bebe03e1d0f8dd2c4cbf56f5b8",
+   "RootBox.lean": "a2e8539d5bdcf4492f55cd399587d8f39ba88f0249dffb93fbe63569b6d5560d"
+  },
+  "olean_sha256": {
+   "NoRho4.olean": "561cd41646cb42891ba70aa3967b4cb9032a731a9fdb6526e6b09e003f17f7c3",
+   "RootBox.olean": "8d5a4ace8faf9fe3e8e89d358d02a37460d48f315f6d2e9cb0e288d50414ba51"
+  },
+  "log_sha256": {
+   "logs_x/NoRho4Audit.log": "c42677b683092cb98c3f7a1525907f8e019ffaf6db520ea7c59a23d32c28ce8f",
+   "logs_x/RootBoxAudit.log": "a59591d3048a94ede2147df996b81274884bf78162bcb0f3288bb4809f981d9f",
+   "logs_x/evidence_rootbox.txt": "5c81017b04d04fecf3363d60a37aa6210f313738fb8a7b62934851c17f56beaf"
+  }
+ },
+ "updated_at": "2026-09-12T12:15:00+08:00"
+}

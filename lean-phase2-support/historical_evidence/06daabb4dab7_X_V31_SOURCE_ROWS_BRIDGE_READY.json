@@ -1,0 +1,104 @@
+{
+ "schema": "D136_X_V31_SOURCE_ROWS_BRIDGE_READY_V1",
+ "receipt": "X_V31_SOURCE_ROWS_BRIDGE_READY",
+ "lane": "D136",
+ "card": "parallel/D136/TASK.md",
+ "stage": "A 续：实际矩阵桥 + 两条矩阵行（Model/Sound 冻结不变）",
+ "status": "READY",
+ "ready": true,
+ "published_at": "2026-09-12T11:45:00+08:00",
+ "claim": "在冻结的 104 行来源层之上，新增叶模块 `MatrixBridge.lean`：(1) 把实际矩阵的 chart 状态定义为 D119 `Rho5.Shared.V43MatrixRoundTrip.extractX` 的 22 个反向读数加 35 个真实共享乘积（**定义级桥，全部 `rfl`**）；(2) 证明同一 height 读数 `TS.height M = F = r - w`；(3) 用**已编译上游定理**支付此前未付的两行：`det3`（`p·k ≤ 4`）← D54 `Rho5.MinorThreeBound.p_mul_k_le_four`，`Fcore`（`F ≤ 9k/4`）← D87 `Rho5.LastThreePivotEnvelope.delta_abs_le_nine_quarters_mul_k`。于是 106/106 行对实际 `SatFrame` 矩阵的 chart 状态成立（在显式输入之下）。",
+ "sealed_partial_layer": {
+  "receipt": "results/X_V31_SOURCE_ROWS_READY.json",
+  "status": "SEALED_AS_PARTIAL_SOURCE_LAYER（104/106 行；Model/Sound 未改动，哈希见该回执）",
+  "note": "按协调者指示：104 行阶段准确封存为部分来源层，不重编、不修改"
+ },
+ "bridge": {
+  "module": "Rho5/Shared/XSmallKBranch/MatrixBridge",
+  "source_sha256": "03e3b6dca91023578a1888b293088e797244820a1c49463d6778a20f50dda128",
+  "olean_sha256": "fc691b7f450cf8e5087361102f9daadb445617d0e73380a0dbde24a9945ac87b",
+  "chart_state": "`chartState M`：前 22 个坐标 = `extractX M`（D119 反向读数，顺序与 `Model.varNames` 一致）；后 35 个 = 真实共享乘积",
+  "definitional": "`chartState_isLift M`（35 个 `rfl`）、`chartState_kk/rr/ww/pp/AA/BB/cc/dd/ee/be`、`chartState_u*/x*/v*/q*`（全部 `rfl`）",
+  "height_same_reading": {
+   "delta": "`delta_eq_wX_sub_rX`：`CanonicalTail.delta M = T2 M 1 1 - r M`（用 SatFrame 的 s = t = r）",
+   "ts_delta": "`ts_delta_eq_wX_sub_rX`：`TS.delta M = T2 M 1 1 - r M`",
+   "height": "`height_reading`：`TS.height M = rr (chartState M) - ww (chartState M)`（w ≤ r 时）",
+   "abs": "`abs_delta_eq_F`：`|CanonicalTail.delta M| = F`（高值分支 F > 0）"
+  },
+  "rows_paid": {
+   "det3": {
+    "idx": 98,
+    "from_": "D54 `Rho5.MinorThreeBound.p_mul_k_le_four`（参数 M、entryMax=1、M00=1、0<p、0<k）",
+    "theorem": "`det3_of_satFrame`：`0 ≤ 4 - kk (chartState M) * pp (chartState M)`；行形式 `rowProp98_of_satFrame`"
+   },
+   "Fcore": {
+    "idx": 96,
+    "from_": "D87 `Rho5.LastThreePivotEnvelope.delta_abs_le_nine_quarters_mul_k`（参数 M、M00=1、PolyCP M；PolyCP 由 SatFrame 经 `polyCP_iff_frame` 给出）",
+    "theorem": "`Fcore_of_satFrame`：`0 ≤ 9/4 * kk (chartState M) - rr (chartState M) + ww (chartState M)`；行形式 `rowProp96_of_satFrame`"
+   }
+  },
+  "capstone": {
+   "theorem": "`all_rows_sound_of_satFrame`",
+   "statement": "对实际 `SatFrame M`，在显式输入 `PhysicalBounds/NormalizedSigns/HighValue/Rho4Input/SmallThirdPivot (chartState M)` 之下，`∀ i, i ∈ paidIdx ∨ i = 96 ∨ i = 98 → RowProp i (chartState M)`（即 106/106 行）",
+   "note": "106 = 冻结 `paidIdx` 的 104 行（`paid_rows_sound`）+ 索引 96、98 两行"
+  },
+  "upstream_oleans_used": {
+   "Rho5/Shared/V43MatrixRoundTrip": "ffecf82360b3e190efe308694939296e27d0f7f632ffc2464c670b0adfb3006d",
+   "Rho5/Shared/V43MatrixRoundTrip/Defs": "b1b7d1bf7d02848d577a26f826586a72bba0c491bd25f5c075d3fa76683197ea",
+   "Rho5/Shared/LastThreePivotEnvelope": "0789bf4a9a94d80ead9fe32db34cfe532e8babc77ae4449f397c86837dd51973",
+   "Rho5/Shared/LastThreePivotEnvelope/StageA": "911469d993885d9753482502239f160fbb4daf13017220a56772fe65965ea261",
+   "Rho5/Shared/MinorThreeBound": "07c573b3549d2d991d33a00ddf5935bc788c5d6e20d45bceba75a615c6840c29",
+   "Rho5/Shared/MinorThreeBound/Block": "66afad9b3f35077b281f044d09a27e0883b180dfa63a822b2a095e0786fd77de"
+  },
+  "audit": {
+   "log": "logs_x/MatrixBridgeAudit.log",
+   "log_sha256": "0d22e4d42cb4791ce2da10998c3591921931d0b07334c0d1ce4cde407b94952c",
+   "targets": 10,
+   "standard_three_axioms": 10,
+   "violations": [],
+   "errors": 0,
+   "panics": 0,
+   "label": "ACTUAL_PASSES_FROM_REAL_LEAN_RUNS"
+  }
+ },
+ "build": {
+  "command": "bash scripts/d136_build.sh buildb ; bash scripts/d136_build.sh buildc",
+  "result": "MatrixBridge exit 0 (5.9 s) / MatrixBridgeAudit exit 0 (3.1 s) / 聚合与旧 Audit 重编 exit 0",
+  "aggregate_source_sha256": "bd09c2c4654b81a9d6a02ef18e6a2bc2cd1d54e6fe544193e1ea9d4bc1318024",
+  "note": "Model 与 Sound **未重编**（冻结；哈希见部分来源层回执）"
+ },
+ "still_explicit_inputs": {
+  "PhysicalBounds": "96 条物理带（式 (1.2)–(1.3)）仍作为输入——`SatFrame M → PhysicalBounds (chartState M)` 的逐带识别**尚未支付**（下一步；部分带可直接由 `matrixEntryMax M = 1` 与主元关系给出）",
+  "NormalizedSigns": "原文 §2 符号规范输出（来源须准确保留，后续支付）",
+  "HighValue": "高值分支假设 F ≥ 1653/400",
+  "Rho4Input": "F ≤ 4p（原文 §1.1 的 ρ₄=4 输入；**D138 独占实施**，本卡只保留为显式输入，不改其含义）",
+  "SmallThirdPivot": "k ≤ 2"
+ },
+ "stage_b": {
+  "status": "PENDING_D135_SAMPLES",
+  "d135_core": "outputs/heartbeat_1124_delivery_20260912/D135_CORE/results/CERTIFICATE_RULES_CORE_READY.json（规则核已发布；其样本尚未 Lean 通过）",
+  "plan": "复用 D135 规则核与首 C 终端，从本阶段来源行 + 具体路径/盒条件推出首终端分支无高值完成态；每一分裂两边保留等号/覆盖语义；只声称首终端来源"
+ },
+ "not_claimed": [
+  "未支付 96 条物理带的 SatFrame 识别",
+  "未支付 §2 符号规范",
+  "未支付 F ≤ 4p（D138 独占）",
+  "未声称整棵证书树/其余 134408 分裂/全 X 或 rho = alpha",
+  "未修改 D135 或任何上游",
+  "未重编冻结的 Model/Sound"
+ ],
+ "integrity": {
+  "frozen_inputs_modified": 0,
+  "upstream_rebuilt": false,
+  "model_sound_recompiled": false,
+  "lake_build_run": false,
+  "deleted": 0,
+  "kills": 0,
+  "services": 0,
+  "network": false,
+  "outputs_written": false,
+  "other_lanes_touched": false,
+  "tmp_dir_used": false
+ },
+ "updated_at": "2026-09-12T11:45:00+08:00"
+}

@@ -1,0 +1,30 @@
+{
+  "module": "Rho5.Integration.V31BatchKernel.IntegerSyntax",
+  "exit_code": 0,
+  "wall_seconds": 3.0586633682250977,
+  "source_sha256": "f6870a3d4435f2ebe0960555f5fe2b84032ff4be5eb9d893b700efaee8f689c1",
+  "olean_sha256": "bebe42411fc1d1e91bdfc777d2f09b19eee050c9cbde6049e92bf70b478f9f5b",
+  "log": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/results/Rho5.Integration.V31BatchKernel.IntegerSyntax_1789197803985239839.log",
+  "log_sha256": "773fad40c2eafa423c08d5e99055a2e76b42bfe5c3ad33e19bc74190796a2384",
+  "command": [
+    "nice",
+    "-n",
+    "10",
+    "python3",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/tools/guard.py",
+    "180",
+    "-j1",
+    "-M8192",
+    "-R",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/src",
+    "-o",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/build/Rho5/Integration/V31BatchKernel/IntegerSyntax.olean",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/src/Rho5/Integration/V31BatchKernel/IntegerSyntax.lean"
+  ],
+  "LEAN_PATH": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/build:/root/microscope_ws/rho5_lean_dsh_20260911/D141/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+  "preflight_lean_jobs": [
+    "2184454 2184450  10 3074348 lean"
+  ],
+  "available_mem_kib": 82879312,
+  "free_disk_bytes": 16128270336
+}

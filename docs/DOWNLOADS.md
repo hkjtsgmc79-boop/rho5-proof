@@ -6,7 +6,7 @@ The [88-page article and 9-page index](https://doi.org/10.5281/zenodo.23057256) 
 
 ## New v1.0.2 attachments
 
-These five objects total **5,705,626 bytes**. Their exact sizes and SHA-256 values are in [the v1.0.2 release index](../manifests/v1.0.2.json). The two PDFs are byte-identical to the published Zenodo version; the ZIPs are additional GitHub materials.
+These six objects total **6,226,081 bytes**. The dependency supplement was added on 30 September after the original five attachments; the fixed tag and original file hashes are unchanged. Their exact sizes and SHA-256 values are in [the v1.0.2 release index](../manifests/v1.0.2.json). The two PDFs are byte-identical to the published Zenodo version; the ZIPs are additional GitHub materials.
 
 | Attachment | Bytes | Contents |
 |---|---:|---|
@@ -15,12 +15,13 @@ These five objects total **5,705,626 bytes**. Their exact sizes and SHA-256 valu
 | [Source and bounded checks](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_v1.0.2_source_and_checks.zip) | 126,083 | Matching TeX/Bib source, changes, responsibility map and small exact checks |
 | [Dated replay evidence](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_v1.0.2_replay_evidence.zip) | 2,962,411 | Executed plan and drivers, final receipt export, source mapping and separate audits |
 | [Partial Lean source snapshot](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_Lean_Phase2_B366_SOURCE_ONLY_v1.0.2.zip) | 2,048,268 | B366 second-phase source review; no standalone cold build or unconditional theorem |
+| [Lean dependency supplement](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_Lean_Phase2_B366_DEPENDENCY_SUPPLEMENT_v1.0.2.zip) | 520,455 | 76 historical source versions, acceptance evidence and tested static assembly helper; no new combined Lean build |
 
 The dated replay ZIP does not include the inherited 3.575 GB compressed B archives or all mathematical runtime inputs. Its `verify_public_replay_bundle.py` checks the supplied receipt identities and 570 links, not the underlying mathematics. The clean-directory assembly of its source layout from public archives is a separately recorded portability gate; see [the replay guide](REPLAY_20260930.md).
 
 ## Choose what to download
 
-Use `python3 scripts/fetch.py --list` to list object ids. Choose `--group sample`, `--group lean`, `--group x`, `--group b`, `--group upstream`, or `--group analytic`. `--all` selects the entire published inventory. The helper checks every downloaded file and reconstructs multipart archives.
+Use `python3 scripts/fetch.py --list` to list object ids. On the current main branch, choose `--group sample`, `--group lean`, `--group x`, `--group b`, `--group upstream`, `--group analytic`, `--group paper`, or `--group replay`. `--all` selects the inherited inventory and all six v1.0.2 attachments. The frozen v1.0.2 tag predates the added supplement and retains its original downloader; use current main or the fixed direct URLs for the new attachment. The helper checks every downloaded file and reconstructs multipart archives.
 
 | Group | Logical archive | Download | Outer extracted payload |
 |---|---|---:|---:|
@@ -55,7 +56,7 @@ The historical-root archive exceeds GitHub’s per-asset limit. Five byte-transp
 
 - Canonical project source: **646 modules, 35,027,225 bytes**. The default product loads 634 project modules.
 - Original source ZIP: **6,428,728 bytes**, expanding to **40,620,705 bytes** including docs and evidence; 2 additional `.lean` members are evidence copies, not new canonical modules.
-- The separate B366 second-phase archive preserves 1,452 accepted source modules and adds four identified support sources. Its 57 direct imports outside that snapshot are not bundled into a standalone cold-build product; this addition is a source review object, not a new Lean acceptance of the full theorem.
+- The separate B366 second-phase archive preserves 1,452 adopted source modules (151,211 physical lines) and four identified support sources. Of 57 direct Rho5 imports outside that snapshot, 39 are in the frozen first-phase base; the dependency supplement adds the other 18 and missing recursive dependencies, 76 sources in total. Static assembly confirms a reachable closure of 2,027 Rho5 modules. This is source availability, not a new combined compilation or Lean acceptance of the full theorem. See the [assembly guide](LEAN_PHASE2_SOURCE_ASSEMBLY.md).
 - Lean 4.30.0 and pinned mathlib are separate downloads. Their caches and compiled project objects are not included in the source ZIP.
 
 | Recorded check | Wall time | Scope and environment |

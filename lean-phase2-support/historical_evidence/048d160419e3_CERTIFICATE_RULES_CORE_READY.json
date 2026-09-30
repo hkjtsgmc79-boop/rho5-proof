@@ -1,0 +1,149 @@
+{
+  "receipt": "CERTIFICATE_RULES_CORE_READY",
+  "lane": "D135",
+  "namespace": "Rho5.Shared.CertificateRules",
+  "entry_module": "Rho5.Shared.CertificateRules",
+  "date": "2026-09-12",
+  "environment": {
+    "lean": "4.30.0",
+    "mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+  },
+  "stage_A_claim": "The four certificate semantics (SourceImage, threshold-parameterised GammaEmpty, AlphaSafe, Cover) are formalised as distinct types with their composition/pullback rules; the exact finite-linear certificate rules are formalised with real soundness: integer and rational box/row systems, exact decidable checks, nonneg_combination_sound / nonnegCheck_sound / Rational.check_sound, interval_terminal_sound, height_terminal_sound, and transport_terminal_with_loss with an explicit loss budget. No floating point, no solver, no native_decide, no project axiom.",
+  "public_types": {
+    "Basic": [
+      "SourceImage : Set X → Set X → Prop",
+      "GammaEmpty : Set X → (X → ℝ) → ℝ → Prop",
+      "AlphaSafe : Set X → (X → ℝ) → ℝ → Prop",
+      "Cover : Set X → (ι → Set X) → Prop (= Rho5.CoverWave.Covers)",
+      "cover_iff",
+      "alpha_safe_of_cover",
+      "gamma_empty_of_cover",
+      "cover_pullback",
+      "source_image_compose",
+      "source_image_trans",
+      "gamma_empty_of_source_image",
+      "alpha_safe_of_gamma_empty",
+      "not_gamma_empty_of_feasible",
+      "alpha_safe_of_lt_threshold",
+      "transport_terminal_with_loss",
+      "transport_terminal_lossless"
+    ],
+    "Linear": [
+      "LinearSystem (lo hi lo_le_hi rows rhs)",
+      "comb",
+      "combRhs",
+      "boxMin",
+      "nonnegCheck",
+      "Feasible",
+      "nonnegCheck_eq_true",
+      "nonneg_combination_sound",
+      "nonnegCheck_sound",
+      "nonnegCheck_false_iff",
+      "interval_terminal_sound",
+      "height_terminal_sound",
+      "Rational.RatSystem",
+      "Rational.comb",
+      "Rational.combRhs",
+      "Rational.boxMin",
+      "Rational.check",
+      "Rational.Feasible",
+      "Rational.check_eq_true",
+      "Rational.nonneg_combination_sound",
+      "Rational.check_sound",
+      "Rational.check_false_iff"
+    ],
+    "key_statements": {
+      "nonneg_combination_sound": "combRhs S w < boxMin S w → (∀ i, 0 ≤ w i) → ∀ z, ¬ Feasible S z",
+      "height_terminal_sound": "B - Σ min ((a j - t*h j)*lo j) ((a j - t*h j)*hi j) ≤ t*α → (Σ a j * z j ≤ B) → Σ h j * z j ≤ α  (t > 0)",
+      "transport_terminal_with_loss": "F z ≤ F (T z) + loss → F w ≤ bound (w ∈ complete) → AlphaSafe (source ∩ box) F (bound + loss)",
+      "not_gamma_empty_of_feasible": "z ∈ source → θ ≤ F z → ¬ GammaEmpty source F θ"
+    }
+  },
+  "hashes": {
+    "sources": {
+      "src/Rho5/Shared/CertificateRules/Basic.lean": "f35834ee56f5512e38513605bfe71066e0025d01ac8c340497c9a6ef1ad6c0e3",
+      "src/Rho5/Shared/CertificateRules/Linear.lean": "6b27cf43c248bdc55880a938a680997f96b105256db119c7035b8661c7b09866",
+      "src/Rho5/Shared/CertificateRules.lean": "4c34a1fd4523d49c238ba73c8f767084f6f1ffa179ede50c80008bfba623ae8e",
+      "audit/D135Audit.lean": "e98b37f3ba6ad281cd9566f1510729e7e34be6e06da07566b69d00f24a53f084",
+      "tools/gen_samples.py": "740008db2b7c9de7313c2e4bc38846eb67c419302cc3b8a521d12b6e0dc0d7b7",
+      "src/Rho5/Shared/CertificateRules/Samples/V31.lean": "ca024fa84558c74782fe72e3071061712be68e8e20e2c8f9acbf88058b57693e",
+      "src/Rho5/Shared/CertificateRules/Samples/B16.lean": "193f49fa5b553936c51f1910b0398d745163662fb71e58b3fde1c57a3af755e5",
+      "inputs/v31/first_terminal_manifest.json": "b156c169611bd42ff2682f966f7a62050b2ee4542e488713d5036c0720abb6ab",
+      "inputs/b16/first_terminal_manifest.json": "9abb83ada58845adf4640acb88aaeb75d019af9240c4d0f06f34c38dce57ae55",
+      "inputs/ancestors/PILOT_CoverWave.lean": "f3706a4a02b95226ea65ee82578827b224bb0bc33bd53f3b566c0b6425ad1bff"
+    },
+    "oleans": {
+      "Rho5/Shared/CertificateRules/Basic.olean": "9c61ae319eb921d88aa4519ae19e92f658ab54e1c55fc122df5cb85525daa2bc",
+      "Rho5/Shared/CertificateRules/Linear.olean": "76350c508a293df2c8cdf5fd98d7ce6af2cb823e92e545cbc62a35864808e584",
+      "Rho5/Shared/CertificateRules.olean": "6de7f508d495bb08b5a706b602c48794b8b6db50775efbbd2b06bef27bfc46c6",
+      "build/audit/D135Audit.olean": "41be0639319dda329d77c1fd303209f7132dfd1c2acee2b91e9a77698dfa4584"
+    },
+    "deps_hash": "578e8e14a13fdfbc8721ee01ca71d1922b7fdf409d1ab067cd3ed67e5e07ba00",
+    "deps_hash_definition": "sha256 of (staged ancestor sources under inputs/ incl. Rho5.Shared.CoverWave + every frozen upstream olean this card imports (577, own subtree excluded) + mathlib rev + cache_receipt sha256)",
+    "binding": "FRESH x3 (Basic, Linear, aggregate) sharing deps_hash 578e8e14... (logs/staleness via build script)",
+    "mathlib_closure_modules": 2471,
+    "mirrored_upstream_modules": 577,
+    "staged_ancestor_sources": 1,
+    "cache_receipt_sha256": "aa86c5e63b9853e77725a51eea339be979e2d5100185b93373e9038e5a6eb85c"
+  },
+  "axioms": {
+    "checked": true,
+    "items": 10,
+    "observed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx": false,
+    "native_decide": false,
+    "project_axioms": false,
+    "log": "results/logs/audit_run1.log"
+  },
+  "build_evidence": {
+    "Basic": {
+      "exit_code": 0,
+      "wall_seconds": null,
+      "log": "results/logs/mod_CertificateRules_Basic_run2.log"
+    },
+    "Linear": {
+      "exit_code": 0,
+      "wall_seconds": null,
+      "log": "results/logs/mod_CertificateRules_Linear_run2.log"
+    },
+    "aggregate": {
+      "exit_code": 0,
+      "wall_seconds": null,
+      "log": "results/logs/mod_CertificateRules_run2.log"
+    },
+    "audit": {
+      "exit_code": 0,
+      "wall_seconds": null,
+      "log": "results/logs/audit_run1.log"
+    }
+  },
+  "stage_B_status": {
+    "status": "IN_PROGRESS",
+    "done": [
+      "Real terminal data extracted and independently verified in Python: V31 first C terminal (7 splits, 17 rows incl. 9 McCormick rows, weights to 1e6, 57 coords; margin < 0, 297-bit) and B16 branch B1|N:L1-:L0+ (50 rows, 67 coords, 24 declared intervals + 43 corner-enclosed products; margin < 0 AND byte-equal to the archived terminal_exact_margin)",
+      "Emitters and exact small manifests saved (tools/gen_samples.py, inputs/*/first_terminal_manifest.json)",
+      "Lean sample modules generated (Samples/V31.lean, Samples/B16.lean) with the real data as literal Fin-indexed tables"
+    ],
+    "blocked_on": "Lean-side kernel evaluation of the assembled check on the literal tables: `decide` does not reduce the closed Finset/vector-projection expression for the integer case, and the rational case additionally has non-reducible Rat comparison instances plus simp step limits (Samples/V31.lean, Samples/B16.lean are therefore NOT in the module chain).",
+    "next_step": "Replace the reflection with a computable list-based checker (List.foldr over literal tables) plus a proven bridge to the Fin-indexed rule, or expand the tables with fin_cases per coordinate before norm_num; then prove check = true for both terminals and derive emptiness with the already-compiled check_sound. Negative controls (zero weights / drop-max-weight) were verified in Python to make the check false and are ready to be emitted.",
+    "not_claimed": [
+      "no Lean check=true for the two terminals yet",
+      "no matrix/Physical → model-row source-row gate",
+      "no two-chart cover, no ancestor prefix, no whole-source GammaEmpty (D134 scope)",
+      "no alpha/target threshold semantics beyond the definitions"
+    ]
+  },
+  "reproduce": {
+    "cache": "bash tools/d135_build.sh cache",
+    "mirror": "bash tools/d135_build.sh mirror",
+    "guard": "bash tools/d135_build.sh guard",
+    "module": "bash tools/d135_build.sh module",
+    "audit": "bash tools/d135_build.sh audit",
+    "staleness": "bash tools/d135_build.sh staleness",
+    "deps": "bash tools/d135_build.sh deps"
+  }
+}

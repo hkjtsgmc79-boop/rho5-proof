@@ -1,0 +1,9 @@
+=== metrics ===
+lean_args: -j 1 -M 8192 -R /root/microscope_ws/rho5_lean_dsh_20260911/D143/src -o /root/microscope_ws/rho5_lean_dsh_20260911/D143/build/lib/lean/Rho5/Shared/XSmallKSigns/Signs.olean /root/microscope_ws/rho5_lean_dsh_20260911/D143/src/Rho5/Shared/XSmallKSigns/Signs.lean
+exit_code: 0
+rss_killed_by_wrapper: False  (ceiling 8388608 KiB)
+watched_vmhwm_kib: 2928460
+wall_seconds: 3.288
+child_user_cpu_seconds: 1.769
+child_sys_cpu_seconds: 1.505
+peak_rss_kib: 2939628

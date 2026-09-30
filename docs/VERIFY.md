@@ -31,7 +31,7 @@ The fixed mathlib revision is `c5ea00351c28e24afc9f0f84379aa41082b1188f`. Preser
 
 The default product is `Rho5.PhaseOne`. It includes 634 loaded project modules out of 646 canonical source files. It does not select the deferred full-tree Lean experiments.
 
-The separate B366 second-phase addition is a **source-only review snapshot**: 1,452 accepted source modules and four separately identified support sources. It has 57 direct imports outside that snapshot. The first-phase build record below does not certify this archive as a new standalone build or close the whole theorem in Lean.
+The separate B366 second-phase addition is a **source-only review snapshot**: 1,452 accepted source modules and four separately identified support sources. The [additive dependency supplement](LEAN_PHASE2_SOURCE_ASSEMBLY.md), together with the frozen first-phase base, supplies its 57 external direct imports and missing recursive sources. Static assembly checks 2,027 reachable Rho5 modules. Its generated compiler configuration is not yet Lean-tested, and the first-phase build record below does not certify a new combined build or close the whole theorem in Lean.
 
 Expected result: successful module builds and the declared theorem/axiom output. Inspect [the full public types](../lean/FINAL_THEOREM_TYPES.txt) and [recorded axioms](../lean/AXIOMS.json). The sharp endpoint has two visible assumptions:
 

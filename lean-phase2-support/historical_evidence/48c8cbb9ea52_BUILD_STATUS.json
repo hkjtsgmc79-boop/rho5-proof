@@ -1,0 +1,41 @@
+{
+  "receipt": "BUILD_STATUS", "card": "D149", "status": "COMPLETE",
+  "title": "Rho5.Shared.XHighRPhysicalRows compiled on X: D145's HeadRows, CoreSlacks and HighSourceRows paid from the real matrix; packet bridges at the SourceQual entry",
+  "ready_published": true, "ready_file": "results/X_HIGH_R_PHYSICAL_ROWS_READY.json",
+  "build": {"host": "X (rho5_lean_dsh_20260911/D149)", "driver": "scripts/d149_build.sh {mirror|module|audit|staleness|binding|leaf}",
+    "runner": "scripts/d149_run_lean.py (RSS 8 GiB watchdog, AS 12 GiB, -j 1 -M 8192, nice 10, one Lean process)",
+    "chain": ["Head", "CoreSlacks", "HighRows", "Packets", "XHighRPhysicalRows (aggregate)", "Audit"],
+    "modules": [
+      {"module": "Rho5/Shared/XHighRPhysicalRows/Head", "exit_code": 0, "wall_seconds": 4.530},
+      {"module": "Rho5/Shared/XHighRPhysicalRows/CoreSlacks", "exit_code": 0, "wall_seconds": 6.543},
+      {"module": "Rho5/Shared/XHighRPhysicalRows/HighRows", "exit_code": 0, "wall_seconds": 6.794},
+      {"module": "Rho5/Shared/XHighRPhysicalRows/Packets", "exit_code": 0, "wall_seconds": 3.775},
+      {"module": "Rho5/Shared/XHighRPhysicalRows", "exit_code": 0, "wall_seconds": 3.776},
+      {"module": "Rho5/Shared/XHighRPhysicalRows/Audit", "exit_code": 0, "wall_seconds": 3.775}],
+    "logs": "logs/a{1..6}/*.log (a1 = first Head attempt with the import defect, kept for honesty; a2..a6 are the successful runs)",
+    "build_complete_rc": 0, "rss_watchdog_tripped": false, "as_cap_bytes": 12884901888,
+    "peak_rss_kib_observed": 2978692, "staleness_after_build": "FRESH x6",
+    "retries_recorded": [
+      "a1: Head.lean imported XHighRSource.SourceRows, but HeadRows is defined in DiagramPackets; fixed the import (and HeadRows is the packet-entry name, not a source-row name)",
+      "a2: CoreSlacks had four defects: the D22- reading was stated with the wrong sign (k + w + B d >= 0 means w >= -k - B d, not w >= -k + B d); cX_le_one/dX_le_one used h.hk : 0 < k M without the kX reading; the chi <= k step used mul_le_mul with the factors swapped",
+      "a3: HighRows' obtain closed over the CoreSlacks hypothesis; replaced by explicit projections",
+      "a5: the aggregate doc block was missing its closing -/",
+      "a6: the Audit module still named the pre-rename bd_sub_k_le_wX"
+    ]},
+  "axioms": {"standard_three": ["propext", "Classical.choice", "Quot.sound"], "records": 13,
+    "observed": "13/13 records report exactly the standard three", "violations": [],
+    "sorryAx": false, "forbidden_constructs_absent": ["sorry", "admit", "native_decide", "project axioms"]},
+  "premises_paid": {
+    "HeadRows": "headRows_of_satFrame / headRows_of_source (real head identity + frozen entry bound)",
+    "CoreSlacks": "coreSlacks_of_source (eight conjuncts, each traced to a real D-row / sign / domain)",
+    "HighSourceRows": "highSourceRows_of_source (seven rows; two via D145's verified decompositions)",
+    "packet_entry": "realizes_orig / no_source_of_orig_* now take SourceQual, not HeadRows"
+  },
+  "unpaid_recorded": [
+    "RTangents (three) and the remaining rows of the 196-row model dictionaries",
+    "the structural traversal / numeric certificate binding of one actual leaf (next card) and any tree replay",
+    "P1/P2 acceptance completeness (excluded by this card)",
+    "whole high-r branch, whole X, alpha safety, and the low r <= k branch"
+  ],
+  "hashes_file": "results/SOURCE_SHA256SUMS.txt"
+}

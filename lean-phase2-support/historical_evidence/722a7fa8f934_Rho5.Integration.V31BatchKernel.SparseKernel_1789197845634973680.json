@@ -1,0 +1,31 @@
+{
+  "module": "Rho5.Integration.V31BatchKernel.SparseKernel",
+  "exit_code": 0,
+  "wall_seconds": 3.730405569076538,
+  "source_sha256": "a2bdb14757e4d331d9a01dc20bf7ef33e4fb8799fa8e22bdbe65f667929c84c3",
+  "olean_sha256": "d6e2835f8c8d0242ce47225aabc65762cf346bc829cd3eff0129498a36581bfe",
+  "log": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/results/Rho5.Integration.V31BatchKernel.SparseKernel_1789197845634973680.log",
+  "log_sha256": "cf46ee81de6b62b7e15a394ce6df4de02a2be7baffc96f64495206a330eeae7d",
+  "command": [
+    "nice",
+    "-n",
+    "10",
+    "python3",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/tools/guard.py",
+    "180",
+    "-j1",
+    "-M8192",
+    "-R",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/src",
+    "-o",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/build/Rho5/Integration/V31BatchKernel/SparseKernel.olean",
+    "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/src/Rho5/Integration/V31BatchKernel/SparseKernel.lean"
+  ],
+  "LEAN_PATH": "/root/microscope_ws/rho5_codex_c02_assembly_20260912/c10/build:/root/microscope_ws/rho5_lean_dsh_20260911/D141/cache/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/batteries/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/Qq/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/aesop/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/proofwidgets/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/importGraph/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/root/microscope_ws/rho5_lean_pilot_20260911/project/.lake/packages/plausible/.lake/build/lib/lean",
+  "preflight_lean_jobs": [
+    "2184454 2184450  10 3112292 lean",
+    "2211404 2211398  10 2876216 lean"
+  ],
+  "available_mem_kib": 82496444,
+  "free_disk_bytes": 16127852544
+}

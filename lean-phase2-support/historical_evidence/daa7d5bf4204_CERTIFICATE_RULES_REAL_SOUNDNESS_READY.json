@@ -1,0 +1,91 @@
+{
+  "receipt": "CERTIFICATE_RULES_REAL_SOUNDNESS_READY",
+  "lane": "D135",
+  "namespace": "Rho5.Shared.CertificateRules",
+  "date": "2026-09-12",
+  "addendum": "parallel/D135/REAL_SEMANTICS_ADDENDUM.md (mainline M01 + coordinator confirmed interface gap)",
+  "companion_scope_correction": "results/CERTIFICATE_RULES_SCOPE_CORRECTION.json",
+  "claim": "The unchanged exact checkers (nonnegCheck for integer box-row systems and Rational.check for rational box-row systems), with nonnegative certificate weights, exclude ALL assignments with coordinates in Real — not merely rational assignments, and not by embedding rational points. The frozen stage-A modules are untouched; the real-valued argument is carried out in two new leaf modules. The two real terminals reuse the already compiled v31_check/b16_check and the nonnegativity theorems (the large decide proofs are not re-run), and the B16 rational reading is obtained through a positive-scaling feasibility transport proved in Lean.",
+  "new_modules": [
+    {
+      "module": "Rho5.Shared.CertificateRules.RealSoundness",
+      "file": "src/Rho5/Shared/CertificateRules/RealSoundness.lean",
+      "source_sha256": "7c756c3a9b269e163416bdc8bce2b73b67a8be9987c8ad47dedaa48c0ff92e45",
+      "olean_sha256": "ec0f8661c34fb24d5be6f865a30e4fb672dc0361d08b2c52fb1e042a9487af63",
+      "log": "results/logs/mod_CertificateRules_RealSoundness_run3.log",
+      "imports_actual": ["Rho5.Shared.CertificateRules.Linear", "Mathlib.Data.Real.Basic", "Mathlib.Algebra.Order.Field.Basic", "Mathlib.Tactic.FieldSimp", "Mathlib.Tactic.Linarith", "Mathlib.Tactic.Push", "Mathlib.Tactic.Ring"]
+    },
+    {
+      "module": "Rho5.Shared.CertificateRules.Samples.RealTerminals",
+      "file": "src/Rho5/Shared/CertificateRules/Samples/RealTerminals.lean",
+      "source_sha256": "a54b949a70b6c58627decd4a0de362e33afba35e3ed099eb13da47992ca3011a",
+      "olean_sha256": "3a1248ade12820ec81be54b627ae185b04964776ef833c4a057b9e6e8b20b699",
+      "log": "results/logs/mod_CertificateRules_Samples_RealTerminals_run1.log",
+      "imports_actual": ["Rho5.Shared.CertificateRules.RealSoundness", "Rho5.Shared.CertificateRules.Samples.V31", "Rho5.Shared.CertificateRules.Samples.B16"],
+      "note": "no frozen sample/checker module was edited or recompiled for this continuation; V31/B16 oleans kept their previous hashes"
+    }
+  ],
+  "exact_types": {
+    "integer_system_real_feasibility": "FeasibleR : {ι κ} → [Fintype ι] → [Fintype κ] → LinearSystem ι κ → (κ → ℝ) → Prop   (= (∀ j, (S.lo j : ℝ) ≤ z j ∧ z j ≤ (S.hi j : ℝ)) ∧ ∀ i, (∑ j, (S.rows i j : ℝ) * z j) ≤ (S.rhs i : ℝ))",
+    "rational_system_real_feasibility": "Rational.FeasibleR : {ι κ} → [Fintype ι] → [Fintype κ] → Rational.RatSystem ι κ → (κ → ℝ) → Prop   (= (∀ j, (S.lo j : ℝ) ≤ z j ∧ z j ≤ (S.hi j : ℝ)) ∧ ∀ i, (∑ j, (S.rows i j : ℝ) * z j) ≤ (S.rhs i : ℝ))",
+    "real_soundness_integer": "nonnegCheck_sound_real : ∀ {ι κ} [Fintype ι] [Fintype κ] (S : LinearSystem ι κ) (w : ι → ℤ), (∀ i, 0 ≤ w i) → nonnegCheck S w = true → ∀ (z : κ → ℝ), ¬ FeasibleR S z",
+    "real_core_soundness_integer": "nonneg_combination_sound_real : ∀ {ι κ} [Fintype ι] [Fintype κ] (S : LinearSystem ι κ) (w : ι → ℤ), (∀ i, 0 ≤ w i) → combRhs S w < boxMin S w → ∀ (z : κ → ℝ), ¬ FeasibleR S z",
+    "real_soundness_rational": "Rational.check_sound_real : ∀ {ι κ} [Fintype ι] [Fintype κ] (S : Rational.RatSystem ι κ) (w : ι → ℚ), (∀ i, 0 ≤ w i) → Rational.check S w = true → ∀ (z : κ → ℝ), ¬ Rational.FeasibleR S z",
+    "real_core_soundness_rational": "Rational.nonneg_combination_sound_real : ∀ {ι κ} [Fintype ι] [Fintype κ] (S : Rational.RatSystem ι κ) (w : ι → ℚ), (∀ i, 0 ≤ w i) → Rational.combRhs S w < Rational.boxMin S w → ∀ (z : κ → ℝ), ¬ Rational.FeasibleR S z",
+    "real_interval_terminal": "interval_terminal_sound_real : ∀ {κ} [Fintype κ] (a : κ → ℤ) (b : ℤ) (lo hi : κ → ℤ), (∀ j, lo j ≤ hi j) → b < ∑ j, min (a j * lo j) (a j * hi j) → ∀ (z : κ → ℝ), (∀ j, (lo j : ℝ) ≤ z j ∧ z j ≤ (hi j : ℝ)) → (∑ j, (a j : ℝ) * z j) ≤ (b : ℝ) → False",
+    "real_height_terminal_safety": "height_terminal_sound_real : ∀ {κ} [Fintype κ] (a h : κ → ℚ) (B t α : ℚ) (lo hi : κ → ℚ), (∀ j, lo j ≤ hi j) → 0 < t → B - (∑ j, min ((a j - t * h j) * lo j) ((a j - t * h j) * hi j)) ≤ t * α → ∀ (z : κ → ℝ), (∀ j, (lo j : ℝ) ≤ z j ∧ z j ≤ (hi j : ℝ)) → (∑ j, (a j : ℝ) * z j) ≤ (B : ℝ) → (∑ j, (h j : ℝ) * z j) ≤ (α : ℝ)",
+    "rational_point_is_real_point_integer": "feasibleR_of_feasible : ∀ {ι κ} [Fintype ι] [Fintype κ] (S : LinearSystem ι κ) (z : κ → ℚ), Feasible S z → FeasibleR S (fun j => (z j : ℝ))",
+    "rational_point_is_real_point_rational": "Rational.feasibleR_of_feasible : ∀ {ι κ} [Fintype ι] [Fintype κ] (S : Rational.RatSystem ι κ) (z : κ → ℚ), Rational.Feasible S z → Rational.FeasibleR S (fun j => (z j : ℝ))",
+    "positive_scaling_transport_rational": "feasible_of_ratScale : ∀ {ι κ} [Fintype ι] [Fintype κ] (S : LinearSystem ι κ) (z : κ → ℚ) (α β : ℚ), 0 < α → 0 < β → Rational.Feasible (ratScale S α β hα) z → Feasible S (fun j => α * z j)",
+    "positive_scaling_transport_real": "feasibleR_of_ratScale : ∀ {ι κ} [Fintype ι] [Fintype κ] (S : LinearSystem ι κ) (z : κ → ℝ) (α β : ℚ), 0 < α → 0 < β → Rational.FeasibleR (ratScale S α β hα) z → FeasibleR S (fun j => (α : ℝ) * z j)",
+    "positive_scaling_contrapositive": "not_feasible_ratScale : ∀ {ι κ} [Fintype ι] [Fintype κ] (S : LinearSystem ι κ) (α β : ℚ), 0 < α → 0 < β → (∀ z : κ → ℚ, ¬ Feasible S z) → ∀ z : κ → ℚ, ¬ Rational.Feasible (ratScale S α β hα) z",
+    "v31_real": "Samples.v31_terminal_empty_real : ∀ (z : Fin 57 → ℝ), ¬ FeasibleR Samples.v31System z",
+    "b16_real": "Samples.b16_terminal_empty_real : ∀ (z : Fin 67 → ℝ), ¬ FeasibleR Samples.b16System z",
+    "b16_rational_reading": "Samples.b16RatSystem_empty : ∀ (z : Fin 67 → ℚ), ¬ Rational.Feasible Samples.b16RatSystem z",
+    "b16_rational_reading_real": "Samples.b16RatSystem_empty_real : ∀ (z : Fin 67 → ℝ), ¬ Rational.FeasibleR Samples.b16RatSystem z",
+    "b16_rational_reading_weights": "Samples.b16RatWeights_nonneg : ∀ i : Fin 50, 0 ≤ Samples.b16RatWeights i"
+  },
+  "how_the_quantifier_gap_is_closed": [
+    "FeasibleR / Rational.FeasibleR quantify over κ → ℝ directly (no rational points embedded in ℝ).",
+    "The real proofs redo the frozen weighted-combination argument over ℝ: transport of finite sums (Finset induction for ℚ → ℝ; push_cast for ℤ → ℝ), transport of min (min x y cast = min of casts, proved by cases on the order), products, order and the strict contradiction B < m.",
+    "No rounding, density, or 'rational infeasible implies real infeasible' step is used; feasibilityR_of_feasible goes the other way and shows the real statement is the stronger one.",
+    "height_terminal_sound_real remains a SAFETY statement (F ≤ α) and is kept distinct from empty-source semantics."
+  ],
+  "sample_corollaries_reuse_frozen_results": {
+    "v31": "nonnegCheck_sound_real v31System v31MainWeights v31_weights_nonneg v31_check",
+    "b16": "nonnegCheck_sound_real b16System b16MainWeights b16_weights_nonneg b16_check",
+    "no_large_decide_rerun": "the V31/B16 source and olean hashes are unchanged from CERTIFICATE_RULES_SAMPLES_READY; only the new leaf modules were compiled"
+  },
+  "b16_rational_reading": {
+    "construction": "b16RatSystem := ratScale b16System b16RatAlpha b16RatBeta (b16RatAlpha_pos): data are (integer)/α for the box, (integer)/β for rows, (integer)/(α·β) for the rhs; b16RatWeights := ratScaleWeights b16MainWeights b16RatLambda",
+    "scales": "α = b16ScaleAlpha (104-bit box/rhs denominator lcm), β = b16ScaleBeta (170-bit row/rhs denominator lcm), λ = b16ScaleLambda = 1",
+    "in_lean": "the positive-scaling feasibility transport (both the rational and the real version) is proved in RealSoundness; the emptiness of the rational reading follows from the compiled integer terminal by not_feasible_ratScale",
+    "python_only_part": "the equality 'scaled-down integer data = archived B16 rational data' is a transcription check performed exactly in tools/gen_samples.py and recorded in inputs/b16/first_terminal_manifest.json (scaling_adaptation); it is NOT claimed as a Lean theorem",
+    "mainline_note": "D136/M01 and D140 retain their separate source/coverage ownership; this receipt claims no source-row connection"
+  },
+  "build_evidence": {
+    "real_soundness_module": {"exit_code": 0, "wall_seconds": 9.7, "log": "results/logs/mod_CertificateRules_RealSoundness_run3.log"},
+    "real_terminals_module": {"exit_code": 0, "wall_seconds": 2.59, "peak_rss_kib": 2105844, "log": "results/logs/mod_CertificateRules_Samples_RealTerminals_run1.log"},
+    "chain_build_log": "results/logs/stageB_build9.out",
+    "staleness": {"log": "results/logs/stageB_staleness2.log", "result": "10/10 FRESH", "deps_hash": "578e8e14a13fdfbc8721ee01ca71d1922b7fdf409d1ab067cd3ed67e5e07ba00"},
+    "audit": {"log": "results/logs/audit_run5.log", "wrapper_log": "results/logs/stageB_audit4.out", "module": "audit/D135Audit.lean", "exit_code": 0, "named_prints": 44, "result": "all subsets of {propext, Classical.choice, Quot.sound}; the 11 new real-soundness prints are included"},
+    "probes": ["results/logs/probe4.log", "results/logs/probe5c.log"],
+    "runner_guards": "single Lean child, nice 10, -j 1 -M 8192, RSS 8 GiB watchdog not triggered, RLIMIT_AS 12 GiB"
+  },
+  "axioms": {
+    "allowed": ["propext", "Classical.choice", "Quot.sound"],
+    "new_named_prints": [
+      "nonnegCheck_sound_real", "Rational.check_sound_real", "interval_terminal_sound_real",
+      "height_terminal_sound_real", "feasible_of_ratScale", "feasibleR_of_ratScale",
+      "not_feasible_ratScale", "Samples.v31_terminal_empty_real", "Samples.b16_terminal_empty_real",
+      "Samples.b16RatSystem_empty", "Samples.b16RatSystem_empty_real"
+    ],
+    "forbidden_absent": ["sorryAx", "native_decide", "project axioms", "choice of a real solution", "density/rounding axioms"]
+  },
+  "scope_and_non_claims": [
+    "The frozen stage-A modules (Basic/Linear/aggregate) and the stage-B ListCheck/sample modules are untouched: the coordinator's instruction not to edit or rebuild them just to change commentary is followed, and the only correction to their over-broad wording is the separate scope-correction receipt.",
+    "Rational infeasibility is never used to infer real infeasibility; the real statements have their own proofs over ℝ.",
+    "The two real corollaries concern the declared integer-scaled systems of the B16/V31 terminals; no original-matrix, Physical or source-row claim is made (D136/M01/D140 own those).",
+    "height_terminal_sound_real gives only α-safety, never emptiness; thresholds 1653/400 (V31), γ = 4132517/1000000 (B16) and AlphaSafe α remain distinct."
+  ]
+}

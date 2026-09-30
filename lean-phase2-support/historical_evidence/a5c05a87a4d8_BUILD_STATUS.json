@@ -1,0 +1,117 @@
+{
+  "lane": "D143",
+  "card": "原 V31 小 k 高值实际 X 符号代表",
+  "status": "READY",
+  "gate": "X_SMALLK_SIGN_REPRESENTATIVE_READY PUBLISHED (results/X_SMALLK_SIGN_REPRESENTATIVE_READY.json); earlier gate X_SMALLK_CORE_SIGNS_READY still valid (stage A source hashes unchanged)",
+  "earlier_gate_note": "Re-checking X_SMALLK_CORE_SIGNS_READY.json against the current tree: every mathematical source it recorded (Defs, Core, Signs, Flip, FlipWIP, Head) is byte-identical; the only file that differs is Audit.lean (the review module, extended this round to cover the new stages). No stage-A statement was touched or re-proved.",
+  "compiled_ok": {
+    "modules": [
+      "Rho5.Shared.XSmallKSigns.Defs",
+      "Rho5.Shared.XSmallKSigns.Core",
+      "Rho5.Shared.XSmallKSigns.Signs",
+      "Rho5.Shared.XSmallKSigns.Flip",
+      "Rho5.Shared.XSmallKSigns.FlipWIP",
+      "Rho5.Shared.XSmallKSigns.Head",
+      "Rho5.Shared.XSmallKSigns.Tail",
+      "Rho5.Shared.XSmallKSigns.Adapt",
+      "Rho5.Shared.XSmallKSigns.Representative",
+      "Rho5.Shared.XSmallKSigns.Bridge",
+      "Rho5.Shared.XSmallKSigns.Audit",
+      "Rho5.Shared.XSmallKSigns"
+    ],
+    "all_exit_code_0": true,
+    "newly_compiled_this_round": ["Tail", "Adapt", "Representative", "Bridge", "Audit", "XSmallKSigns (aggregate)"],
+    "reused_fresh_not_recompiled": ["Defs", "Core", "Signs", "Flip", "FlipWIP", "Head"],
+    "named_axiom_records": 83,
+    "axiom_union": ["propext", "Classical.choice", "Quot.sound"],
+    "nonstandard_axioms": [],
+    "forbidden_syntax_scan": "empty (no sorry / admit / native_decide / project axiom in any D143 source)",
+    "driver": "TMO=300 bash tools/d143_build.sh all -> COMPLETE (12/12 exit 0); bash tools/d143_build.sh staleness -> 12/12 FRESH",
+    "guard": "nice 10, -j 1 -M 8192, wrapper RSS ceiling 8 GiB (observed peak 3002852 KiB), AS 12 GiB, pipe-free runner, one Lean process at a time"
+  },
+  "remaining_stage_A": [],
+  "remaining_stage_B": [],
+  "remaining_work": [],
+  "delivered": {
+    "stage_A": "sign_normalization_exists (frozen; source hashes unchanged this round: Signs.lean 58794de3..., Flip.lean f351101c..., FlipWIP.lean 00b73ac6...)",
+    "stage_B_head": "head_flip_normalization (frozen; Head.lean ef98d589... unchanged)",
+    "stage_B_tail": "tail_flip_normalization (Tail.lean 73b33e27...): midLast3/midLast4, flipLast3, S4/S3/T2 transports, S3_flipLast3_eq/T2_flipLast3_eq (sigma^2=1), uX/vX/qX/xX readers get sigma, eX/betaX/aX/bX/cX/dX/kX/pX/rX/wX unchanged, satFrame_flipLast3, height/p/k/r/w_flipLast3, u0 >= 0 chosen by sigma",
+    "stage_B_adapter": "delta_ne_of_height, height_le_four_mul_p_of_satFrame, one_lt_p_of_height, eX_mul_betaX_pos (Adapt.lean b6ea96d4...)",
+    "stage_C": "sign_representative_exists, representative_uX, p/k/r/w/height invariance for flipMid + flipSecond, mid2nd_succ_succ, uX/vX/qX/xX_flipSecond (Representative.lean eb3f9235...)",
+    "d136_bridge": "height_eq_rr_sub_ww, chartState_interface, sign_representative_chartState (Bridge.lean cfdd77e7...)"
+  },
+  "tail_errors_fixed": [
+    "39:84 — the recorded statement `midLast4 sigma 0 = sigma` was itself false (S4 index 0 is original index 1, never flipped); corrected to `midLast4 sigma 0 = 1`, which is exactly what `p` invariance needs",
+    "76:79 — T2_flipLast3 transported the S3 layer with `midLast4` (wrong remainingIndex domain); replaced by the actual constant `fun _ : Fin 3 => sigma` transported to `fun _ : Fin 2 => sigma`",
+    "89:6 — the uX reader passed sigma as the explicit Fin 3 argument; fixed to `midLast3_succ_succ (sigma := sigma) i`; `le_or_lt` is absent from the mirrored roots, replaced by by_cases + not_le.mp",
+    "follow-on — qX_flipLast3's hm needed a closing `ring`; the composition needed the head flip's u-invariance, so `mid2nd_succ_succ` and `uX_flipSecond` (plus vX/qX/xX_flipSecond) were added; no statement weakened"
+  ],
+  "mathematics": {
+    "tail_flip": "fold the last three original rows/columns (indices 2,3,4): u,v,q,x all pick up sigma, S3/T2 pick up sigma^2 = 1 hence are literally unchanged, e/beta (indices 0,1) untouched, so sigma chooses the sign of u0 without disturbing any earlier conclusion",
+    "one_lt_p": "qstar <= height M -> delta M != 0 -> LeadingInput -> D138 height_le_four_mul_p -> 4 < qstar <= height <= 4p -> 1 < p; D119 head band -> e*beta > 0.  V31 F = height = r - w is kept distinct from TS F = 2r",
+    "composition": "N = flipLast3 s3 (flipSecond s2 (flipMid s1 M)) is a real same-source matrix with SatFrame, identical height/p/k/r/w, A,B<0<c,d, e,beta>0, u0 >= 0",
+    "d136_interface": "chartState N satisfies PhysicalBounds (D136's own theorem from SatFrame N), NormalizedSigns, PosSigns, HighValue, SmallThirdPivot, Rho4Input (D138 re-derived on N) and 0 <= uu 0 --- all proved, none assumed"
+  },
+  "inputs": {
+    "SatFrame": "Rho5.Shared.V43MatrixRoundTrip.Defs (D119): h00, hmax, cp1..cp4, p/k/r>0, s=t=r",
+    "d138": "Rho5.Shared.SchurFourPivotBound.height_le_four_mul_p (reused as-is)",
+    "d136": "Rho5.Shared.XSmallKBranch.{Sound,MatrixBridge,PhysicalBridge,RootBox} oleans (frozen interface reused read-only)"
+  },
+  "mirror": {
+    "hard_linked": 55,
+    "identical": 21832,
+    "conflicts": 0,
+    "origins": [
+      "D138 build root (Mathlib + D124 + D123 + D120 + D109 closure)",
+      "D119 build root (V43MatrixRoundTrip / SatFrame)",
+      "D136 build root (Rho5.Shared.XSmallKBranch leaf)"
+    ],
+    "pre_link_conflict_check": "10699 identical, 0 conflicts, 55 new",
+    "d136_source_identity": "X D136 src Sound/MatrixBridge/RootBox/PhysicalBridge/Model byte-identical (sha256) with parallel/D136/src"
+  },
+  "source_sha256": {
+    "src/Rho5/Shared/XSmallKSigns.lean": "91baa8c67e65de464fa0d38c54900dd3df6446c3e7bc87e76708b06cad94c520",
+    "src/Rho5/Shared/XSmallKSigns/Defs.lean": "399a6e0f05ff95904400cd84de60a08c0b705f51bc053460c3c02490c31eb509",
+    "src/Rho5/Shared/XSmallKSigns/Core.lean": "c27a10377336501540728d2fa6ae463d79c999556230baaaf1e8f5043cfa6592",
+    "src/Rho5/Shared/XSmallKSigns/Signs.lean": "58794de320b3cbd895e6be5d5e9407d52cea2db75439cb71bc889e22631e6ef2",
+    "src/Rho5/Shared/XSmallKSigns/Flip.lean": "f351101cf4b7df26828ed69f1e42c6b0867efc511f10561aef3e028fca453154",
+    "src/Rho5/Shared/XSmallKSigns/FlipWIP.lean": "00b73ac6106560291db9517009555c5a3a04d9c143fd747ddaf0014e1884b354",
+    "src/Rho5/Shared/XSmallKSigns/Head.lean": "ef98d589c122450b64459856a55f86e3225a18d558024e2e3b6f77103a757be4",
+    "src/Rho5/Shared/XSmallKSigns/Tail.lean": "73b33e278aa6610748a278ceec49deabe769b94306a92ee8fc5c48fe3986306e",
+    "src/Rho5/Shared/XSmallKSigns/Adapt.lean": "b6ea96d4748486dad7709eaf167742d55206f72429334fe0e88329a0dd3ace23",
+    "src/Rho5/Shared/XSmallKSigns/Representative.lean": "eb3f9235a66747dfe00633e1acac0f88a062f4539abf33e391d05968ad598060",
+    "src/Rho5/Shared/XSmallKSigns/Bridge.lean": "cfdd77e72e7a7648fc4f42c7f4e42a7cfe3fd18bf910b488ca3ed43ab7d0f212",
+    "src/Rho5/Shared/XSmallKSigns/Audit.lean": "7660ab261bebb0fa2e63ef8111513609e5f26378e32180a7c5a76aa5f9dd3e70"
+  },
+  "olean_sha256": {
+    "Rho5/Shared/XSmallKSigns.olean": "97ca22cfb492a20d54067176f3f367aeac4dcfe78dc9b16656eff34ed2ab5e4b",
+    "Rho5/Shared/XSmallKSigns/Defs.olean": "a4bf40894e4e0232e7e97847392132177424f96f856cc96c1b1e3428db467d40",
+    "Rho5/Shared/XSmallKSigns/Core.olean": "fe0c0f52bb307d6ab2de0fb5d2a28c8919358108cfb1f544d1c2fdb2abef8020",
+    "Rho5/Shared/XSmallKSigns/Signs.olean": "53e74b122a2e237779a22f98eec6e7de5c28b480bb57f45f16269f2eaa1d1d19",
+    "Rho5/Shared/XSmallKSigns/Flip.olean": "b3e26bea40b6977d6586a352844bd8280cc1adc3c64fa2dcf2fb01115f98a9a2",
+    "Rho5/Shared/XSmallKSigns/FlipWIP.olean": "f597f65d4fffa324925fd6e41c9325eb0036125ec01cfe526c5c0a0cab7f697e",
+    "Rho5/Shared/XSmallKSigns/Head.olean": "ed73277796e8c8a66d9352cb513e2117e08c90dfe7fb34b43715f6809d8cfa64",
+    "Rho5/Shared/XSmallKSigns/Tail.olean": "c67f1d11daba8e7dfb96700184f5bd4b3fe1ea80bd1320e46c64f0c325692dbb",
+    "Rho5/Shared/XSmallKSigns/Adapt.olean": "29f7b6960929ff88543414ea4941f97e3472c09d4bb1fd8cc78867fc41efa03a",
+    "Rho5/Shared/XSmallKSigns/Representative.olean": "f94011043aef12f7e59af14a83d0cf3183e929bc4055c845b36ae2bb5f83c912",
+    "Rho5/Shared/XSmallKSigns/Bridge.olean": "a42f142278201fa6d238aa7d0717c204bd518adec049d15bc28ab3fe318402f5",
+    "Rho5/Shared/XSmallKSigns/Audit.olean": "f64d86e9b965c797930dcf97af1fe9fc1fb911b116e0b260b20a2aea9d50938c",
+    "Rho5/Shared/XSmallKBranch/Sound.olean": "0f39a8587ac8e3ecb07036b4be59da833b7c9654eef709690a6bdaa7fd345028",
+    "Rho5/Shared/XSmallKBranch/MatrixBridge.olean": "fc691b7f450cf8e5087361102f9daadb445617d0e73380a0dbde24a9945ac87b",
+    "Rho5/Shared/XSmallKBranch/PhysicalBridge.olean": "3fc3703057e3bf2d92612c96b40228d157dcc8ef05333d24882aab8b18317dff",
+    "Rho5/Shared/XSmallKBranch/RootBox.olean": "8d5a4ace8faf9fe3e8e89d358d02a37460d48f315f6d2e9cb0e288d50414ba51",
+    "Rho5/Shared/XSmallKBranch/Model.olean": "c71b702b6b6378afac5eb3137bf6fbf8c7f42e4ed60ba5f7f85511a638eb5ad4"
+  },
+  "artifacts": {
+    "publication": "results/X_SMALLK_SIGN_REPRESENTATIVE_READY.json",
+    "report": "results/REPORT.md",
+    "logs": "results/actual_success_logs/mod_Rho5.Shared.XSmallKSigns*.log (12 files, each with `exit_code: 0`)",
+    "driver": "tools/d143_build.sh (mirror|all|staleness), tools/d143_mirror.py, tools/d143_run_lean.py"
+  },
+  "scope_limits": [
+    "No root bound, no whole-tree safety and no rho=alpha is claimed by this card.",
+    "The D136 root-box derivation itself is not duplicated here; the bridge only instantiates the frozen D136 interface.",
+    "The representative is a real sign-flipped matrix of the same source (signedEntries row/column scaling), not a chart-level substitution."
+  ],
+  "checked_at": "2026-09-12T14:15:00+0800"
+}

@@ -1,0 +1,191 @@
+{
+ "schema": "D136_X_V31_SOURCE_ROWS_READY_V1",
+ "receipt": "X_V31_SOURCE_ROWS_READY",
+ "lane": "D136",
+ "card": "parallel/D136/TASK.md",
+ "stage": "A（原论文 §6 第 1 块：实际 X 来源 → 精确模型行）",
+ "status": "READY",
+ "ready": true,
+ "published_at": "2026-09-12T11:40:00+08:00",
+ "claim": "V31 精确模型（22 变量/35 共享乘积/106 行/根盒/靶值 1653/400）由 hash 钉定的 JSON 逐项生成进 Lean；实际 X chart 的物理带（原文式 (1.2)–(1.3)）推出 104/106 条源行的 LP 语义；35 个共享乘积满足原文 (5.1) 四条 McCormick 外包；覆盖关系（106 = 104 + 2）为内核可复查事实。",
+ "model_data": {
+  "source_json": "rho5_v31_exact/mc_exact_model.json（V31 zip 内）",
+  "sha256": "5fb91ced098b36174e1f307f543cf30872a075f262d477bc2bdb378b39aa94c5",
+  "size_bytes": 82171,
+  "nvars": 22,
+  "nprods": 35,
+  "nrows": 106,
+  "target": "1653/400",
+  "root_denominator": 4800,
+  "base_multiplier": 1600,
+  "root_box": "k∈[551/300,2], r∈[1653/800,3147/800], w∈[-2,-53/800], A,B∈[-2,-53/400], c∈[53/400,1], d∈[53/800,747/800], p∈[1653/1600,2], e,β∈[53/1600,1], u₀∈[0,1], u₁,u₂,x,v∈[-1,1], q∈[-2,2]",
+  "generated_by": "tools/gen_model.py（逐项来自 JSON）；Lean `Model.rows` 的 name/系数/右端与 JSON 一一对应",
+  "sha256_in_lean": "Model.modelSha256"
+ },
+ "variable_order": [
+  "k",
+  "r",
+  "w",
+  "A",
+  "B",
+  "c",
+  "d",
+  "p",
+  "e",
+  "be",
+  "u0",
+  "u1",
+  "u2",
+  "x0",
+  "x1",
+  "x2",
+  "v0",
+  "v1",
+  "v2",
+  "q0",
+  "q1",
+  "q2"
+ ],
+ "rows_paid": 104,
+ "rows_unpaid": 2,
+ "rows_unpaid_detail": {
+  "Fcore": {
+   "idx": 96,
+   "row": "9k/4 - r + w ≥ 0（F ≤ 9k/4）",
+   "status": "NOT_FORMALIZED",
+   "needs": "原文 §3.1 恒等式 (3.4) 与 a,b,c,d∈(0,1]、ac,bc,ad≥z 等排序事实"
+  },
+  "det3": {
+   "idx": 98,
+   "row": "4 - k·p ≥ 0（p·k ≤ 4）",
+   "status": "NOT_FORMALIZED",
+   "needs": "原文 §3.2：左上 3×3 行列式 = p·k（完全主元 Schur 身份）+ 九条目 ∈[-1,1] + 3×3 ±1 行列式 ≤ 4"
+  }
+ },
+ "declared_inputs": {
+  "HighValue": "1653/400 ≤ r - w（高值分支假设；支付行 F）",
+  "Rho4Input": "r - w ≤ 4p（原文 §1.1 唯一外部低阶输入 ρ₄=4 的实例；支付行 plower）",
+  "NormalizedSigns": "A,B ≤ 0 ≤ c,d（原文 §2 符号规范的输出；显式声明为输入，§2 论证未形式化）",
+  "SmallThirdPivot": "k ≤ 2（与 PhysicalBounds.k_pos 合为 0 < k ≤ 2）",
+  "note": "四项都在定理类型中显式出现，未隐藏"
+ },
+ "mccormick": {
+  "structure": "McCormick x y lx ux ly uy = 原文 (5.1) 四条外包",
+  "generic": "mccormick_of_bounds（区间内两实数与真实乘积同时满足四条）",
+  "instantiations": "envelope_0 … envelope_34（35 个共享乘积逐一实例化，盒端点 boxLo/boxHi 精确有理数）",
+  "box_predicate": "BoxIn z"
+ },
+ "x_chart_correspondence": {
+  "matrix": "原文 (1.1)：M = [[1, -e, vᵀ], [β, p-eβ, (q+βv)ᵀ], [u, px-eu, D + x qᵀ + u vᵀ]]",
+  "core": "原文 (1.3)：D = [[k, A, B], [c·k, r+cA, r+cB], [d·k, r+dA, w+dB]]",
+  "combos": "L = px - eu、P = q + βv、S = D + x qᵀ、O = S + u vᵀ（Lean `Lc/Pc/Sc/Oc`）",
+  "bands": "|e|,|β|,|u_i|,|x_i|,|v_j|,|p-eβ|,|L_i|,|P_j|,|O_ij| ≤ 1；|q_j|,|S_ij| ≤ p；|D_ij| ≤ k = D₀₀；p,k > 0（Lean `PhysicalBounds`）",
+  "height_reading": "尾块 H=[[r,r],[r,w]]，五步主元 1,p,k,r,w-r ⇒ F = r - w 与 TS.height/CanonicalTail.delta 的 X chart 读数一致（**仅记录，未形式化**）",
+  "status": "22 变量 ↔ chart 表达式 ↔ 矩阵条目已逐项写出并在 Lean 中以 `Lc/Pc/Sc/Oc/Dc` + `PhysicalBounds` 显式呈现；**V43.Physical/实际矩阵 → chart 的识别层尚未形式化**"
+ },
+ "coverage": {
+  "paid_idx_count": 104,
+  "unpaid_idx": [
+   96,
+   98
+  ],
+  "kernel_checked": "coverage_complete（decide）：长度 106 ∧ eraseDups 长度 106 ∧ 全部 < 106 ∧ 两组不交",
+  "lengths": "coverage_lengths：104 + 2"
+ },
+ "build": {
+  "command": "TMO=300 bash scripts/d136_build.sh build",
+  "result": "COMPLETE 4/4 exit_code 0",
+  "modules": [
+   {
+    "module": "Rho5/Shared/XSmallKBranch/Model",
+    "exit_code": 0,
+    "wall_seconds": 3.4,
+    "source_sha256": "6a88898b0aadb4edbf44632b6d90afba423128e9b11327e3462db5f2660a0b67",
+    "olean_sha256": "c71b702b6b6378afac5eb3137bf6fbf8c7f42e4ed60ba5f7f85511a638eb5ad4",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "module": "Rho5/Shared/XSmallKBranch/Sound",
+    "exit_code": 0,
+    "wall_seconds": 48.4,
+    "source_sha256": "558b297128cd3417a11350837c9638ae664a57a48095c8732c634b3f819a25a2",
+    "olean_sha256": "0f39a8587ac8e3ecb07036b4be59da833b7c9654eef709690a6bdaa7fd345028",
+    "log_sha256": "991f282a94e513d96cd6b3b4392863d39e34e2ec7f4e44919665938c225b8f90"
+   },
+   {
+    "module": "Rho5/Shared/XSmallKBranch",
+    "exit_code": 0,
+    "wall_seconds": 2.2,
+    "source_sha256": "de0cfb232171bb3a863e53d1927a1d2fc92108e7bd70861112152101e9fb0665",
+    "olean_sha256": "5416d8012594b0ebddb3b130c35e5033986351665bcddc21772e66c381f85cab",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "module": "Rho5/Shared/XSmallKBranch/Audit",
+    "exit_code": 0,
+    "wall_seconds": 3.0,
+    "source_sha256": "de77677d5add45882c32046fbe56c55f11e6a4d38197a3b4d75bae97b6383e23",
+    "olean_sha256": "8474c92597f1f1ac6d16019e66241fd34495a8407763665049eb9c0c5d632539",
+    "log_sha256": "95439913ba7c0a19983de543e0f8b5fd87e03dfb33eafb382f92828e58c2a697"
+   }
+  ],
+  "guard": {
+   "nice": 10,
+   "jobs": 1,
+   "max_memory_MiB": 8192,
+   "rss_guard_gib": 8.0,
+   "as_limit_gib": 12.0,
+   "rss_guard_fired": false,
+   "timed_out": false,
+   "lake_used": false
+  },
+  "note": "Sound.log 含 linter 警告（unused variable 等），0 error、0 panic"
+ },
+ "audit": {
+  "log": "logs_x/Audit.log",
+  "log_sha256": "95439913ba7c0a19983de543e0f8b5fd87e03dfb33eafb382f92828e58c2a697",
+  "targets": 15,
+  "standard_three_axioms": 13,
+  "no_axioms": 2,
+  "errors": 0,
+  "panics": 0,
+  "allowed_axioms": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "label": "ACTUAL_PASSES_FROM_REAL_LEAN_RUNS"
+ },
+ "not_claimed": [
+  "完整 106 行尚未齐全（Fcore、det3 两行未付）",
+  "未形式化 §2 符号规范（作为显式输入）",
+  "未形式化 V43.Physical/实际矩阵 → chart 识别层",
+  "未形式化 TS.height/delta 与该 chart 的等式",
+  "未做 LP/数值搜索；未重编上游；未触碰 D135 文件",
+  "不声称整棵证书树、非原论文符号限制或全 X/rho=alpha"
+ ],
+ "stage_b": {
+  "status": "PENDING_D135",
+  "gate": "D135 CERTIFICATE_RULES_CORE_READY（尚未发布）",
+  "plan": "复用 D135 规则核与首 C 终端，从本阶段来源行 + 具体路径/盒条件推出首终端分支无高值完成态；每一分裂两边保留等号/覆盖语义；只声称首终端来源，不声称其余 134408 分裂"
+ },
+ "integrity": {
+  "frozen_inputs_modified": 0,
+  "upstream_rebuilt": false,
+  "lake_build_run": false,
+  "deleted": 0,
+  "kills": 0,
+  "services": 0,
+  "network": false,
+  "outputs_written": false,
+  "other_lanes_touched": false,
+  "tmp_dir_used": false
+ },
+ "updated_at": "2026-09-12T11:40:00+08:00",
+ "sealed": {
+  "status": "SEALED_AS_PARTIAL_SOURCE_LAYER",
+  "at": "2026-09-12T11:45:00+08:00",
+  "superseded_in_scope_by": "results/X_V31_SOURCE_ROWS_BRIDGE_READY.json（同一 Model/Sound 哈希；新增矩阵桥与两条行）",
+  "note": "104/106 行阶段；本文件保留为部分来源层回执，内容未改动"
+ }
+}

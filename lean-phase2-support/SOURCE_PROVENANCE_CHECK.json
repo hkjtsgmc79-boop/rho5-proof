@@ -1,0 +1,8 @@
+{
+  "status": "STATIC_SOURCE_AND_HISTORICAL_EVIDENCE_HASH_PASS",
+  "source_files": 76,
+  "unique_historical_evidence_files": 75,
+  "each_source_sha_present_in_supplied_owner_evidence": true,
+  "new_compilation": false,
+  "dependency_manifest_sha256": "00348c9d0508a364e3b6ffed51957a896592891ef25d0677c77095cb31d54a67"
+}

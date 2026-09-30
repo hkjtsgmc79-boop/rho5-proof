@@ -1,0 +1,327 @@
+{
+  "receipt": "CERTIFICATE_RULES_SAMPLES_READY",
+  "lane": "D135",
+  "namespace": "Rho5.Shared.CertificateRules",
+  "date": "2026-09-12",
+  "environment": {
+    "lean": "4.30.0",
+    "mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+    "host_root": "/root/microscope_ws/rho5_lean_dsh_20260911/D135",
+    "runner": "tools/d135_run_lean.py (single Lean child, nice 10, -j 1 -M 8192, RSS 8 GiB watchdog, RLIMIT_AS 12 GiB)"
+  },
+  "stage_A_frozen": {
+    "receipt": "CERTIFICATE_RULES_CORE_READY",
+    "status": "unchanged and re-verified FRESH during this stage",
+    "modules": [
+      "Rho5.Shared.CertificateRules.Basic",
+      "Rho5.Shared.CertificateRules.Linear",
+      "Rho5.Shared.CertificateRules"
+    ],
+    "sources_sha256": {
+      "Basic.lean": "f35834ee56f5512e38513605bfe71066e0025d01ac8c340497c9a6ef1ad6c0e3",
+      "Linear.lean": "6b27cf43c248bdc55880a938a680997f96b105256db119c7035b8661c7b09866",
+      "CertificateRules.lean": "4c34a1fd4523d49c238ba73c8f767084f6f1ffa179ede50c80008bfba623ae8e"
+    },
+    "oleans_sha256": {
+      "Basic.olean": "9c61ae319eb921d88aa4519ae19e92f658ab54e1c55fc122df5cb85525daa2bc",
+      "Linear.olean": "76350c508a293df2c8cdf5fd98d7ce6af2cb823e92e545cbc62a35864808e584",
+      "CertificateRules.olean": "6de7f508d495bb08b5a706b602c48794b8b6db50775efbbd2b06bef27bfc46c6"
+    },
+    "note": "no Stage A source was edited in Stage B; the aggregate still imports only Basic+Linear"
+  },
+  "stage_B_claim": "Both real C terminals located by D132 are consumed as declared finite box-row systems and are proved infeasible with the frozen Stage A rule: the certificate data are transcribed as list literals, the list-level checker computes exactly inside the Lean kernel (decide, no native_decide, no float, no solver), four bridge lemmas (proved once, symbolically, with no new mathematics) identify the list computation with the frozen Finset-over-Fin nonnegCheck, and the frozen nonnegCheck_sound yields the emptiness statement. Real negative controls are recorded as check=false theorems, not executor errors.",
+  "entry_modules": [
+    "Rho5.Shared.CertificateRules.ListCheck",
+    "Rho5.Shared.CertificateRules.Samples.V31",
+    "Rho5.Shared.CertificateRules.Samples.B16"
+  ],
+  "chain": [
+    "Rho5/Shared/CertificateRules/Basic",
+    "Rho5/Shared/CertificateRules/Linear",
+    "Rho5/Shared/CertificateRules",
+    "Rho5/Shared/CertificateRules/ListCheck",
+    "Rho5/Shared/CertificateRules/Samples/V31Data",
+    "Rho5/Shared/CertificateRules/Samples/V31",
+    "Rho5/Shared/CertificateRules/Samples/B16Data",
+    "Rho5/Shared/CertificateRules/Samples/B16"
+  ],
+  "list_checker": {
+    "module": "Rho5.Shared.CertificateRules.ListCheck",
+    "public": [
+      "dotL : List ℤ → List ℤ → ℤ",
+      "colL : List (List ℤ) → Nat → List ℤ",
+      "combL : List (List ℤ) → List ℤ → Nat → ℤ",
+      "boxMinFrom : List (List ℤ) → List ℤ → List ℤ → List ℤ → Nat → ℤ",
+      "boxMinL : List ℤ → List ℤ → List (List ℤ) → List ℤ → ℤ",
+      "checkL : List ℤ → List ℤ → List (List ℤ) → List ℤ → List ℤ → Bool",
+      "checkL_eq_true / checkL_eq_false",
+      "sum_fin_getD_mul / getD_colL / sum_fin_rows_eq_combL / sum_fin_boxMin / sum_fin_boxMinFrom / succ_add_eq_add_succ",
+      "SelfTest.check / SelfTest.empty (2×2 end-to-end instance)"
+    ],
+    "bridge_meaning": "the four bridge lemmas are pure computation-equivalence statements: Fin-indexed Finset sums equal list folds. They introduce no axiom, no hypothesis about the data, and no new mathematical content; the frozen rule remains the only soundness source.",
+    "why_needed": "Finset.sum over Fin is kernel-reducible in this toolchain, but Matrix.vecCons projections and ℚ/Rat arithmetic are not; list literals plus structural recursion give a form the kernel always evaluates, and the bridge keeps the frozen rule as the declared semantics."
+  },
+  "terminals": {
+    "v31": {
+      "source": "rho5_v31_exact.zip :: rho5_v31_exact/small_exact.tree.gz, first C terminal",
+      "payload_zip_sha256": "computed in inputs/v31/first_terminal_manifest.json",
+      "split_path": [
+        21,
+        20,
+        19,
+        15,
+        13,
+        14,
+        11
+      ],
+      "split_semantics": "each S step takes the lower half of the box in the acceptor's own DFS pre-order",
+      "support_rows": [
+        21,
+        24,
+        51,
+        63,
+        90,
+        95,
+        100,
+        103,
+        155,
+        162,
+        163,
+        174,
+        175,
+        221,
+        222,
+        240,
+        242
+      ],
+      "mccormick_rows": 9,
+      "weights": [
+        1199,
+        35,
+        625,
+        574,
+        619,
+        654,
+        45,
+        35,
+        918333,
+        959167,
+        40833,
+        959167,
+        959167,
+        989734,
+        918333,
+        71401,
+        1000000
+      ],
+      "coordinates": 57,
+      "coordinates_note": "22 original variables + 35 shared-product coordinates (corner enclosures), acceptor scaling UNIT = 4800·2^128",
+      "model_target": "1653/400",
+      "root_denominator": 4800,
+      "B": "3513884312646805735305741021983214984604973504415186603649181078575838564597896315215544320",
+      "m": "3689462543446565476651608983056353955925790261780781538290280835144948713150240469005893632",
+      "margin": "-175578230799759741345867961073138971320816757365594934641099756569110148552344153790349312",
+      "margin_bits": 297,
+      "lean_theorems": [
+        "v31Main_checkL : checkL v31LoL v31HiL v31RowsL v31RhsL v31WeightsL = true",
+        "v31Main_check_eq : nonnegCheck v31System v31MainWeights = checkL …",
+        "v31_check : nonnegCheck v31System v31MainWeights = true",
+        "v31_weights_nonneg : ∀ i, 0 ≤ v31MainWeights i",
+        "v31_terminal_empty : ∀ z, ¬ Feasible v31System z",
+        "v31_margin_eq : combRhs … − boxMin … = v31MarginRef",
+        "v31_margin_neg : combRhs … < boxMin …"
+      ]
+    },
+    "b16": {
+      "source": "B_STRUCTURE_16_DELIVERY/evidence/VERIFICATION.json, branch B1|N:L1-:L0+",
+      "rule": "B16_CANONICAL_PREFIX_TWO_CHART_GAMMA_V1",
+      "rows": 50,
+      "lifted_dimension": 67,
+      "lifted_dimension_note": "24 declared coordinate intervals + 43 shared-product coordinates (corner enclosures of the declared intervals)",
+      "archived_rational_margin": "-21760033620778493566513137217319713306972713630662751193/2722258935367507707706996859454145691648000000000000",
+      "archived_margin_reproduced_exactly_in_python": true,
+      "scaling_adaptation": {
+        "reason": "ℚ/Rat arithmetic is not kernel-reducible in this mathlib (decide gets stuck on Rat.blt / Rat.num), so the frozen checker is evaluated on exactly scaled integer data",
+        "alpha": "alpha = lcm of box/rhs denominators (104 bits)",
+        "beta": "beta = lcm of row/rhs denominators (170 bits)",
+        "lambda": "lambda = lcm of weight denominators (= 1: the archived weights are integers)",
+        "formula": "L = alpha·lo, U = alpha·hi, A = beta·a, R = alpha·beta·b, W = lambda·w",
+        "equivalence": "C^ = lambda·beta·C, B^ = lambda·alpha·beta·B, m^ = lambda·alpha·beta·m, hence B^ < m^ iff B < m (same strict contradiction)",
+        "scaled_margin": "-200700885618908136431891278264196567194618540252386804827944205674499538944000000000000",
+        "scaled_margin_bits": 287,
+        "scaled_margin_identity_verified_exactly_in_python": "B^ − m^ = lambda·alpha·beta·(archived rational margin)"
+      },
+      "lean_theorems": [
+        "b16Main_checkL : checkL b16LoZL b16HiZL b16RowsZL b16RhsZL b16WeightsZL = true",
+        "b16Main_check_eq : nonnegCheck b16System b16MainWeights = checkL …",
+        "b16_check : nonnegCheck b16System b16MainWeights = true",
+        "b16_weights_nonneg : ∀ i, 0 ≤ b16MainWeights i",
+        "b16_terminal_empty : ∀ z, ¬ Feasible b16System z",
+        "b16_margin_eq : combRhs … − boxMin … = b16MarginZRef",
+        "b16_margin_rational_identity : (b16MarginZRef : ℚ) = lambda·alpha·beta·b16RationalMarginRef  (norm_num, kernel-checked)",
+        "b16_rational_margin_neg : b16RationalMarginRef < 0  (norm_num, kernel-checked)",
+        "b16_margin_neg : combRhs … < boxMin …"
+      ],
+      "archived_rational_margin_kernel_check": {
+        "theorem": "b16_rational_margin_neg",
+        "log": "results/logs/audit_run4.log",
+        "meaning": "the archived terminal_exact_margin literal is transcribed into Lean and proved strictly negative in the kernel (norm_num), so the scaled strict contradiction is tied to the archived rational value by two kernel-checked theorems (identity + negativity)."
+      }
+    }
+  },
+  "negative_controls": {
+    "policy": "each control is a check=false theorem (a proved false proposition), not a compile error, not an executor fault, and not a claim that the underlying system is feasible",
+    "v31_zero_weights": {
+      "theorem": "v31_neg_zero_check : nonnegCheck v31System v31ZeroWeights = false",
+      "companion": "v31_neg_zero_not_lt : ¬ combRhs … < boxMin …",
+      "kernel_checkL": "v31Zero_checkL : checkL v31LoL v31HiL v31RowsL v31RhsL v31ZeroWeightsL = false"
+    },
+    "v31_drop_max_weight": {
+      "dropped_index": 16,
+      "theorem": "v31_neg_drop_max_check : nonnegCheck v31System v31DropMaxWeights = false",
+      "companion": "v31_neg_drop_max_not_lt"
+    },
+    "b16_zero_weights": {
+      "theorem": "b16_neg_zero_check : nonnegCheck b16System b16ZeroWeights = false",
+      "companion": "b16_neg_zero_not_lt"
+    },
+    "b16_drop_max_weight": {
+      "dropped_index": 46,
+      "theorem": "b16_neg_drop_max_check : nonnegCheck b16System b16DropMaxWeights = false",
+      "companion": "b16_neg_drop_max_not_lt"
+    }
+  },
+  "axioms": {
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "audit_module": "audit/D135Audit.lean",
+    "named_prints": 33,
+    "result": "every named #print axioms line is a subset of the allowed three; the two kernel computations v31Main_checkL and b16Main_checkL depend on [propext] only",
+    "forbidden_absent": [
+      "sorryAx",
+      "native_decide",
+      "project axioms",
+      "solver/float axioms"
+    ]
+  },
+  "build_evidence": {
+    "module_compiles": [
+      {
+        "module": "ListCheck",
+        "exit_code": 0,
+        "wall_seconds": 3.99,
+        "peak_rss_kib": 2098328,
+        "source_sha256": "2e35d5b2249e00eb5331a9a5e43a61d349567225c23e2feb6166cd83865b546e",
+        "olean_sha256": "987fe3d16c9a1cd46cf152cb5b40c07220f2cf9ffccfc89b889b8610d84ad61e",
+        "log": "results/logs/mod_CertificateRules_ListCheck_run3.log"
+      },
+      {
+        "module": "Samples/V31Data",
+        "exit_code": 0,
+        "wall_seconds": 2.23,
+        "peak_rss_kib": 1049524,
+        "source_sha256": "bdbac1d2e894d5c366d43f916ffe2e329398c8cd0e5180492ae9099272fcee5d",
+        "olean_sha256": "520b832907a534eccf6f9cf2468f7b64ea07169304c579239279b1563ed158d8",
+        "log": "results/logs/mod_CertificateRules_Samples_V31Data_run1.log"
+      },
+      {
+        "module": "Samples/V31",
+        "exit_code": 0,
+        "wall_seconds": 24.14,
+        "peak_rss_kib": 2364224,
+        "source_sha256": "883bffd8788431298e3da06323a298e134f0a64f034737946f373d55d1fc3562",
+        "olean_sha256": "8213023b979de7d5e4a3f1a1f4f6495c7ca416b1f086c847f1c6882aa06832c4",
+        "log": "results/logs/mod_CertificateRules_Samples_V31_run1.log"
+      },
+      {
+        "module": "Samples/B16Data",
+        "exit_code": 0,
+        "wall_seconds": 15.42,
+        "peak_rss_kib": 1928116,
+        "source_sha256": "f66ddb0f9dc07786efb5eeafcf23d2244f3e98968c62c949006abebd6dbea649",
+        "olean_sha256": "4dbed8dbb6544f6d3c2e5e2cd2406115769e8303a0c5120abbdefa551818e907",
+        "log": "results/logs/mod_CertificateRules_Samples_B16Data_run3.log"
+      },
+      {
+        "module": "Samples/B16",
+        "exit_code": 0,
+        "wall_seconds": 109.71,
+        "peak_rss_kib": 3209116,
+        "source_sha256": "4203b36af8206881289ce6cd4056129e23c76f085e24a9aa2b2b2b9cd2aa15dd",
+        "olean_sha256": "124bf9ad092e9659f767b8816ad97d8a8cc6b0d526be3f35206463ab1144dfab",
+        "log": "results/logs/mod_CertificateRules_Samples_B16_run2.log"
+      }
+    ],
+    "chain_log": "results/logs/stageB_build6.out (final rebuild after the rational-binding addition); results/logs/stageB_build5.out (first full-chain build in which all five Stage B modules compiled)",
+    "staleness": {
+      "log": "results/logs/stageB_staleness.log",
+      "result": "8/8 FRESH (re-run after the final B16 source change)",
+      "deps_hash": "578e8e14a13fdfbc8721ee01ca71d1922b7fdf409d1ab067cd3ed67e5e07ba00",
+      "deps_hash_inputs": "staged ancestor sources under inputs/**, 577 frozen upstream oleans outside CertificateRules, mathlib revision, cache receipt"
+    },
+    "audit_log": "results/logs/audit_run4.log",
+    "probe_log": "results/logs/probe2.log",
+    "rss_watchdog_triggered": false,
+    "audit_wrapper_log": "results/logs/stageB_audit3.out",
+    "probe_logs": [
+      "results/logs/probe2.log",
+      "results/logs/probe3.log"
+    ]
+  },
+  "compile_adaptations": [
+    {
+      "id": "list-literal-data",
+      "what": "certificate data are emitted as List ℤ / List (List ℤ) literals instead of ![…] vector notation",
+      "why": "kernel evaluation of the assembled check must not depend on Matrix.vecCons projection reduction (the earlier blocked route)",
+      "soundness_impact": "none: data are the same exact numbers, and the four bridge lemmas prove the list computation equals the frozen Fin rule"
+    },
+    {
+      "id": "b16-integer-scaling",
+      "what": "the rational B16 terminal is declared in exactly scaled integer form (alpha, beta, lambda)",
+      "why": "ℚ/Rat arithmetic is not kernel-reducible in this mathlib, so the frozen checker cannot be evaluated on rational literals",
+      "soundness_impact": "none for the declared system: B^ < m^ iff B < m, and B^ − m^ = lambda·alpha·beta·(archived rational margin) is verified exactly in Python; the archived rational margin is reproduced byte-exactly"
+    }
+  ],
+  "hashes": {
+    "note": "SOURCE_SHA256SUMS lists every delivered file; per-module source/olean hashes are also listed under build_evidence",
+    "manifests": {
+      "inputs/v31/first_terminal_manifest.json": "see SOURCE_SHA256SUMS",
+      "inputs/b16/first_terminal_manifest.json": "see SOURCE_SHA256SUMS"
+    },
+    "stage_B_module_hashes": {
+      "ListCheck.lean": "2e35d5b2249e00eb5331a9a5e43a61d349567225c23e2feb6166cd83865b546e",
+      "ListCheck.olean": "987fe3d16c9a1cd46cf152cb5b40c07220f2cf9ffccfc89b889b8610d84ad61e",
+      "Samples/V31Data.lean": "bdbac1d2e894d5c366d43f916ffe2e329398c8cd0e5180492ae9099272fcee5d",
+      "Samples/V31Data.olean": "520b832907a534eccf6f9cf2468f7b64ea07169304c579239279b1563ed158d8",
+      "Samples/V31.lean": "883bffd8788431298e3da06323a298e134f0a64f034737946f373d55d1fc3562",
+      "Samples/V31.olean": "8213023b979de7d5e4a3f1a1f4f6495c7ca416b1f086c847f1c6882aa06832c4",
+      "Samples/B16Data.lean": "f66ddb0f9dc07786efb5eeafcf23d2244f3e98968c62c949006abebd6dbea649",
+      "Samples/B16Data.olean": "4dbed8dbb6544f6d3c2e5e2cd2406115769e8303a0c5120abbdefa551818e907",
+      "Samples/B16.lean": "4203b36af8206881289ce6cd4056129e23c76f085e24a9aa2b2b2b9cd2aa15dd",
+      "Samples/B16.olean": "124bf9ad092e9659f767b8816ad97d8a8cc6b0d526be3f35206463ab1144dfab"
+    }
+  },
+  "reproduce": [
+    "python3 tools/gen_samples.py <lane> both   # regenerates Samples/V31Data.lean and Samples/B16Data.lean byte-identically from the read-only payloads and re-verifies the margins exactly",
+    "bash tools/d135_build.sh module            # compiles the 8-module chain (Stage A modules are skipped as FRESH)",
+    "bash tools/d135_build.sh staleness         # re-checks the source|deps binding of all 8 modules",
+    "bash tools/d135_build.sh audit             # full public types + 31 named #print axioms"
+  ],
+  "scope_and_non_claims": [
+    "Only the two declared finite box-row systems are claimed infeasible. The matrix/Physical → model-row source-row gate is explicitly separate and remains with the D137/B branch; this receipt does not claim that any original matrix branch is empty.",
+    "The threshold semantics stay distinct: V31 small-k target 1653/400, B16/high-k γ = 4132517/1000000, and AlphaSafe α are different predicates; AlphaSafe does not imply gamma-infeasibility (Basic.not_gamma_empty_of_feasible).",
+    "The negative controls show only that the modified certificate fails the check; they do not claim feasibility of the underlying system.",
+    "The abstract CoverWave cover is not called a checker and carries no acceptance claim.",
+    "No upstream module was rebuilt or re-reviewed; no sorry, no native_decide, no project axiom was introduced."
+  ],
+  "continuation": {
+    "receipt": "CERTIFICATE_RULES_REAL_SOUNDNESS_READY",
+    "file": "results/CERTIFICATE_RULES_REAL_SOUNDNESS_READY.json",
+    "scope_correction": "results/CERTIFICATE_RULES_SCOPE_CORRECTION.json",
+    "why": "the frozen Feasible / Rational.Feasible of this stage quantify assignments over Rat; the real-valued exclusion is proved in the new leaf modules RealSoundness + Samples/RealTerminals, which reuse the compiled v31_check/b16_check without recompiling or re-running them",
+    "frozen_hashes_unchanged": true
+  }
+}

@@ -38,7 +38,7 @@ complete pivoting on real \(5\times5\) matrices}
 \email{chao.wu@zju.edu.cn}
 \hypersetup{pdfauthor={Qianli Ma, Chao Wu},
 pdftitle={The exact maximum growth factor for complete pivoting on real 5 x 5 matrices}}
-\date{11 September 2026}
+\date{30 September 2026}
 \begin{document}
 
 \begin{abstract}
@@ -207,6 +207,20 @@ therefore audit the reduction and the verifier logic from the text;
 checking every large proof object additionally requires the supplied
 exact-arithmetic programs or an independent implementation of their rules.
 
+\paragraph{Objects used in the certificate argument.}
+A \emph{physical source} is one reconstructed real matrix together with
+the legal pivot path and all inequalities imposed on that same matrix.
+A \emph{framework} records the seventeen shared parameters of a
+negative-diagonal source; its fibre consists of feasible completions,
+not independently chosen bounds for six tail variables. A
+\emph{certificate region} is a closed rational box together with its
+inherited conditions and coordinate transformations. A statement about
+such a region applies to physical sources only through the proved
+source-to-model inclusion. Definition~\ref{def:complete-fibre} makes the
+negative-diagonal fibre precise. Here \emph{complete} means that all
+physical conditions are retained; it does not mean that a certificate
+has already been verified.
+
 \begin{center}
 \small
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{.25\linewidth}>{\raggedright\arraybackslash}p{.32\linewidth}>{\raggedright\arraybackslash}p{.33\linewidth}@{}}
@@ -235,7 +249,7 @@ and its constant coefficient is
 \[
 -400768351683901408958416200638054732473753927680.
 \]
-Supplementary Material~S1 gives the full ascending coefficient list
+The Supplementary Index, S1, identifies the full ascending coefficient list
 and exact decimal rational endpoints \(L<U\), with
 \(U-L=10^{-200}\), isolating one real root. Throughout, \(\alpha\) means this root and \(\amin=L\).
 There is also a short exact identification with the published constant.
@@ -251,7 +265,7 @@ of \(Q\), hence at most one root of \(P_{61}\) in \((4,5)\).
 Exact evaluation gives \(P_{61}(L)<0<P_{61}(U)\).
 Consequently \(\alpha\) is the unique root in \((4,5)\).
 The exact coefficient comparison, transformed coefficients, and
-endpoint signs are recorded in Supplementary Material~S1.
+endpoint signs are recorded in the Supplementary Index, S1.
 For orientation,
 \[
 \begin{gathered}
@@ -272,7 +286,7 @@ The lower bound and an attaining completely pivoted matrix are
 and root identification above identify their constant with the present
 \(\alpha\). Only this established lower-bound direction is needed here.
 
-Supplementary Material~S1 also identifies an independent exact
+The Supplementary Index, S1, also identifies an independent exact
 reconstruction of the same algebraic candidate. Its archived equations,
 rational reconstruction functions, nonzero-denominator checks, and
 complete-pivoting inequalities allow the witness to be checked separately.
@@ -543,12 +557,15 @@ W_0=|\omega/\rho|,\qquad S_0,T_0,W_0\in[0,1].
 \]
 If \(W_0\ge S_0T_0\), choose
 \(\lambda=\max(T_0,W_0)\), \(\mu=W_0/\lambda\).
-If \(W_0\) vanished, then \(S_0T_0=0\) and the original height would
-be zero. Thus the division is valid and \(\lambda\mu>0\).
+In this case \(W_0=0\) would force \(S_0T_0=0\), hence
+\(\omega=0\) and \(\sigma\tau=0\). This would give
+\(F=k|\omega-\tau\sigma/\rho|=0\), contrary to the hypothesis.
+Thus \(W_0>0\), the division is valid, and \(\lambda\mu>0\).
 Now \(\lambda\ge T_0\), \(\mu\ge S_0\), and
 \(\lambda\mu=W_0\), so the new completely pivoted tail lies on \(D\).
 If \(W_0\le S_0T_0\), take \(\lambda=T_0,\mu=S_0\).
-Positivity of the original height again excludes \(\lambda\mu=0\);
+Here \(S_0T_0=0\) would also force \(W_0=0\) and \(F=0\),
+so \(\lambda\mu=S_0T_0>0\);
 the new tail lies on \(X\). At the positive-product junction
 \(W_0=S_0T_0>0\), the constructions agree.
 Finally,
@@ -618,7 +635,7 @@ Every real complete lift with \eqref{eq:XD}, \(p,k,r>0\), and
 \end{proposition}
 
 The proposition is assembled from four groups of certified source domains.
-Appendix~\ref{app:artifacts} and Supplementary Material~S4
+Appendix~\ref{app:artifacts} and the Supplementary Index, S4,
 identify the component certificates and their source domains.
 \begin{center}
 \begin{tabular}{@{}p{.53\linewidth}p{.33\linewidth}@{}}
@@ -660,22 +677,12 @@ acceptance rules and domain maps. An \(\alpha\)-safe leaf can contain
 feasible points; it is not an infeasibility certificate at \(\gam\).
 
 \paragraph{Order of the analytic inputs.}
-The low-\(r\) certificate uses a wall flow in the complete
-22-coordinate \(X\) model. This flow decreases \(r+w\) to zero;
-only at that wall is a signed tail permutation applied. Its endpoint
-satisfies all sixteen strict positive-room conditions, and its height
-is bounded by the independent strict-room theorem. That theorem
-uses the two-face normalization, the safe-tail and middle-face
-reductions, and the canonical-height theorem explained below.
-The separate weak-room exit uses the full six-cofactor closure
-theorem, including its zero-coordinate cases.
-In contrast, the two-gap transport of Lemma~\ref{transport:local-lemma}
-uses 24 source coordinates, decreases \(r-s\) and \(r-t\),
-and preserves \(r+w\). Its endpoint is bounded by
-Proposition~\ref{prop:X}. Neither that transport nor the later
-guard-preserving flow is an input to the low-\(r\) certificate or to
-Proposition~\ref{prop:X}. The distinct original statements and
-their entry conditions are identified in Supplement S4.
+The strict- and weak-room statements, their full physical predicates,
+and the qualified 22-coordinate wall entrance are given in
+Section~\ref{x:room-interface}. They use the independent
+canonical-height theorem below. The 24-coordinate two-gap transport
+of Lemma~\ref{transport:local-lemma} instead uses the complete
+\(X\) bound; it is not an input to this proposition.
 
 % Included section: s3_main
 \subsection{The exact height in the canonical near-peak domain}
@@ -822,6 +829,203 @@ the explicit room-reduction results apply. The complete \(X\)
 bound subsequently serves the negative-diagonal proof; it is not an
 input to the canonical-height argument.
 
+
+% Insert after the canonical-height subsection and before Section 7.
+% Uses only environments, macros and labels already present in the manuscript.
+\subsection{The positive-room interfaces and the complete source cover}
+\label{x:room-interface}
+
+Here the variables are those of the complete lift \eqref{eq:lift},
+with the core \eqref{eq:XD}.  Thus \(v,q\in\R^3\) are the actual
+receiver vectors, and \(P_j=\beta v_j+q_j\).  Write
+\(u=(U,V,T)^T\), \(x=(X,Y,Z)^T\), and define
+\begin{equation}\label{x:room-cofactors}
+\begin{gathered}
+\delta=U-\beta X,\qquad \Gamma=V-\beta Y,\qquad
+\nu=\beta Z-T,\\
+\tau=UY-XV,\qquad \Delta=UZ-TX,\qquad \mu=VZ-TY.
+\end{gathered}
+\end{equation}
+These are room cofactors; \(\Gamma\) is distinct from the height
+threshold \(\gam\), and \(\tau\) here is distinct from the later
+tail-gap coordinate.  A \emph{strict positive-room source}, denoted
+\(\mathcal R_0^+\), satisfies all of
+\eqref{eq:bands1}--\eqref{eq:bands4}, \(\mx D\le k\), and
+\begin{equation}\label{x:strict-room}
+\begin{gathered}
+p,k,r>0,\qquad |w|\le r,\qquad A,B,d\le0,\\
+\beta,U,V,T,X,Y,Z>0,\qquad
+\delta,\Gamma,\nu,\tau,\Delta,\mu>0.
+\end{gathered}
+\end{equation}
+Here ``strict'' refers to the seven receiver signs and six cofactor
+signs; physical pivot ties and the weak bounds on \(A,B,d\) are retained.
+The physical bands retain every upper bound on these coordinates.
+The \emph{weak positive room} \(\mathcal R_0^{\ge0}\) replaces only
+the seven receiver and six cofactor positivity conditions by
+nonnegativity.  It retains \(p,k,r>0\), \(A,B,d\le0\), and all
+physical bands.  Neither room imposes an additional rank hypothesis.
+
+\begin{proposition}[Strict-room reduction and weak-room closure]
+\label{x:room-proposition}
+\textup{(i)} Every source in \(\mathcal R_0^+\) with
+\(F\ge33/8\) has a complete physical representative in
+\(\mathcal K\) of Definition~\ref{s3:canonical-domain} with exactly
+the same height.  Consequently every source in \(\mathcal R_0^+\)
+satisfies \(F\le\alpha\).
+
+\smallskip
+\textup{(ii)} Every source in \(\mathcal R_0^{\ge0}\) is a limit
+of complete strict-room sources whose heights converge to its height.
+Consequently it also satisfies \(F\le\alpha\), including when
+receiver coordinates, receiver vectors, or cofactors vanish.
+\end{proposition}
+
+\begin{proof}[Reduction and closure inputs]
+For \textup{(i)}, the two-face normalization preserves the complete
+physical conditions and \(F\), and sends every strict-room source
+with \(F>4\) to one of
+\[
+ e=1,\ P_1=-1,
+ \qquad\hbox{or}\qquad
+ e=1,\ P_2=1,\ v_2<0.
+\]
+It changes only \(e,\beta\), preserving \(D,p,u,x,v,q\) and
+the strict cofactor signs.  The second face, including its boundary
+\(v_2=0\), has \(F<33/8\).  On the first face the feasible shear
+\[
+\begin{gathered}
+ p'=p+\lambda,\quad \beta'=\beta+\lambda,\quad
+ u'=u+\lambda x,\quad q'=q-\lambda v,\\
+ \lambda=\min\left\{1-\beta,\frac{1-U}{X},
+                   \frac{1-V}{Y},\frac{1-T}{Z}\right\}.
+\end{gathered}
+\]
+preserves \(D,F,e=1,P_1=-1\), every physical band and all six
+cofactors.  To identify the endpoint, \(F>4\) and \(|w|\le r\)
+give \(r>2\), while \(r+dA\le k\) and \(dA\ge0\) give
+\(k\ge r>2\).  Put \(O_{00}=k+Xq_0+Uv_0\).  The physical
+bands and \(\delta>0\) imply
+\[
+\begin{split}
+1+U+(1-\beta)X-k
+ &=(1-O_{00})+X(1+P_0)+\delta(1+v_0)\\
+ &\ge0.
+\end{split}
+\]
+Thus \(k\le3-\beta\), and every such high-value source has
+\(\beta<1\).  This also applies to the physical shear endpoint,
+so \(\beta'<1\).  Moreover \(\nu'=\beta'Z-T'>0\), with
+\(\beta',Z\le1\), gives \(T'<1\).  At least one of the four
+bounds defining \(\lambda\) is attained; hence the endpoint has
+\(U'=1\) or \(V'=1\).  This includes tied minima and \(\lambda=0\).
+The latter face also has \(F<33/8\); thus a source with
+\(F\ge33/8\) reaches \(U'=1\), \(0<V'<1\).
+Here \(p\) is allowed to change in the shear.
+The exact dictionary to Definition~\ref{s3:canonical-domain} is
+\[
+\begin{gathered}
+ t=c,\quad E=-d,\quad a=-A,\quad b=-B,\\
+ \widehat v=(v_0,v_1,v_2)^T,\quad
+ \widehat q=(q_0,-1-\beta v_1,q_2)^T.
+\end{gathered}
+\]
+The canonical scalars \(g,h,j\) are respectively
+\(-v_0,v_1,-q_0\); the scalars denoted \(v,q\) there are
+\(v_2,q_2\) here.  This is a single complete matrix at each stage.
+Theorem~\ref{s3:canonical-height-main} now gives the bound; sources
+below \(33/8\) already lie below \(\alpha\).
+The original two-face, tail-face and middle-face statements are V10,
+Sections 2--6; V11, Theorem T11; and V12, Section 8, respectively,
+as indexed in Supplementary Index S4.
+
+For \textup{(ii)}, V27, Theorem 4.1, first applies a positive
+diagonal contraction that preserves all weak signs and gives strict
+margins in the physical bands changed by the subsequent regularization.
+Its height is \(\lambda_0^2F\), with
+\(0<\lambda_0<1\) tending to one.  It then regularizes the four
+ordered nonnegative rays
+\[
+ (U,X),\quad(V,Y),\quad(\beta,1),\quad(T,Z),
+\]
+whose six ordered determinants are precisely
+\eqref{x:room-cofactors}.  The regularization makes all receiver
+coordinates and all six determinants positive, including at zero
+vectors, while retaining the contracted \(p,D,e,v,q\) and hence
+its height.  Reconstructing \eqref{eq:lift} preserves the physical
+bands by their strict margins.  Taking the contraction and
+regularization parameters to their limits gives the stated complete
+physical approximation and the bound from \textup{(i)}.
+This closure uses all six weak cofactors.  Three adjacent weak
+minors, or the nonnegative version of a strict ten-term entry test,
+do not suffice.  No same-height strict-room representative is
+asserted for an arbitrary weak-room source.
+\end{proof}
+
+\begin{lemma}[Qualified complete \(X\)-to-room wall entrance]
+\label{x:wall-entrance}
+Use the ordered native coordinates
+\[
+ z=(k,r,w,A,B,c,d,p,e,\beta,u_0,u_1,u_2,x_0,x_1,x_2,
+       v_0,v_1,v_2,q_0,q_1,q_2).
+\]
+Let \(\bar c_j\), \(j=0,1,2,3\), be the first 22 coordinates
+of the rational centres in Appendix~\ref{transport:centres-detail},
+in the declared \(\xi\)-order of \eqref{transport:coordinates-main}
+rather than the grouped display order of the centre tables.
+If a complete physical \(X\) source satisfies
+\begin{equation}\label{x:wall-qualification}
+ \iin{z-\bar c_j}+3(r+w)<\frac1{1250},
+\end{equation}
+there is a complete physical path to \(r+w=0\), followed by a
+signed permutation of the last two rows and columns, whose complete
+endpoint \(\widetilde z\) belongs to \(\mathcal R_0^+\) and satisfies
+\[
+ F(\widetilde z)\ge F(z)+\frac{r+w}{10}.
+\]
+Thus \(F(z)\le\alpha-(r+w)/10\).
+\end{lemma}
+
+\begin{proof}[Wall-flow input]
+The 22-coordinate V35 certificate and its Round47 flow-tube statement
+in Supplementary Index S4 keep the source's \(p\) and twenty
+selected physical slacks fixed, decrease \(r+w\) at unit speed,
+and certify speed less than 3 and height gain at least \(1/10\).
+All other physical slacks stay positive on the radius-\(1/1250\)
+outer box.  Condition~\eqref{x:wall-qualification} keeps the entire
+path strictly inside this box, so the ordinary differential equation
+continues to the wall.  Only there is the signed tail permutation
+applied.  Its sixteen certified strict conditions are the seven
+positive receiver coordinates, \(-A,-B,-d>0\), and all six positive
+cofactors; these imply \eqref{x:strict-room}.  Signed permutations
+preserve the physical bands and height.  Proposition~\ref{x:room-proposition}
+then applies.  When \(r+w=0\), the path has zero length and the
+same endpoint argument applies.  The use of the centres above merely
+identifies the common rational data: this proof uses the original
+22-coordinate wall certificate.
+\end{proof}
+
+\paragraph{Coverage and direction of dependence.}
+The wall entrance is a qualified local exit.  The complete low-\(r\)
+trees also have weak-room exits using
+Proposition~\ref{x:room-proposition}\textup{(ii)}, direct rational
+height exits, and exact contradiction leaves.  Their original-root
+cover retains all other signs, zero receivers and cofactors, and
+physical ties; these are not assumed to enter a positive room.
+The two complete low-\(r\) roots, together with the first three
+domains of Proposition~\ref{prop:X}, supply the complete cover.
+In particular \(r=k\) remains in the low-\(r\) root, and the
+interfaces \(k=2,21/10\) are covered as stated in its assembly.
+Earlier zero pivots have zero subsequent growth by
+Section~\ref{sec:scalar}.
+
+The dependency is the canonical-height theorem, then the room bounds,
+then the wall exits and complete \(X\) cover.  The 24-coordinate
+two-gap transport of Lemma~\ref{transport:local-lemma} instead
+preserves \(r+w\), removes the two cross gaps, and uses
+Proposition~\ref{prop:X} to bound its endpoint.  The later V43
+guard-preserving flow also uses that proposition.  Neither is an
+input to the room bounds or the complete \(X\) certificate.
 
 \section{Exact reduction of the negative diagonal domain}\label{sec:fibre}
 
@@ -1050,6 +1254,9 @@ box
 \end{equation}
 The lower bound on \(k\) follows from \(F\le(9/4)k\), and the other
 bounds from the complete bands and actual sign normalizations.
+These endpoints follow from universal source bounds; the coverage claim
+does not depend on which boxes were tried during discovery. A larger
+closed box would retain coverage but could make exclusion harder.
 The root retains the complete fibre conditions, not merely the box.
 In particular it does not discard the proper negative domain with
 \(k\le2\). An additional shared head budget \(pk\le4\), when used,
@@ -1163,6 +1370,17 @@ Acceptance checks them by exact rational arithmetic on their
 complete declared sources. Floating-point optimization may guide
 discovery but is not an acceptance criterion.
 
+A \emph{root box} is a closed rational region before subdivision; its
+\emph{child boxes} cover the parent box. An \emph{open terminal} is a
+region for which that tree has not yet established either exclusion
+above \(\gam\) or safety at \(\alpha\). A \emph{verified terminal}
+has one of these two conclusions, with its full inherited source
+conditions. Grafting a subcertificate discharges an open terminal only
+when its region and inherited conditions agree with that terminal.
+The words \emph{accepted}, \emph{frozen}, and \emph{receipt} below refer
+to recorded verifier results and data identities, not to additional
+mathematical axioms.
+
 \subsection{Necessary outer systems}
 Each actual source gives all coordinates and products simultaneously.
 Necessary polynomial inequalities may be relaxed over a rational box,
@@ -1211,9 +1429,7 @@ using both inequality directions. It must not be replaced by the
 \label{certificate:worked}
 
 We give an actual terminal from the final negative-diagonal computation.
-It lies at the local binary path
-\(\mathtt{1001110110011011111}\) in parent 435003, below the anchor
-\(\mathtt{10011101}\). The source being excluded consists of the
+The source being excluded consists of the
 canonical high sources at this target satisfying \(F\ge\gam\), with
 the complete parent and ancestor restrictions retained. It is not the
 entire geometric box. The frozen construction supplies 24 rationally
@@ -1221,6 +1437,18 @@ bounded source coordinates and 43 shared products, hence a lifted vector
 \(z\in\R^{67}\), together with 692 necessary linear inequalities.
 Every physical source under consideration has a lift satisfying these
 inequalities and all 67 coordinate bounds.
+The identifiers locate this source in the frozen certificate:
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Identifier & Value\\
+\midrule
+Original residual parent & 435003\\
+Anchor path & \texttt{10011101}\\
+Local terminal path & \texttt{1001110110011011111}\\
+\bottomrule
+\end{tabular}
+\end{center}
 
 The certificate selects 49 rows with positive integer weights; all
 unselected weights are zero. Two of its actual rows are
@@ -1271,7 +1499,8 @@ m-B=
 \end{equation}
 Consequently \(m\le a\cdot z\le B<m\) is impossible. This is an
 exact rational contradiction for the specified high source. Its margin
-depends on the normalization of the weights; it is not a bound on
+is approximately \(1.84680335\times10^3\) in the displayed weight
+normalization. It depends on that normalization and is not a bound on
 \(\alpha-F\).
 
 The complete row list, weights, coordinate bounds and weighted sums
@@ -1282,11 +1511,11 @@ bindings are needed to establish that the rows and bounds apply to
 this source; the arithmetic in
 \eqref{certificate:actualmargin} alone does not establish that fact.
 
-This terminal pays one position in the anchor's complete 54-terminal
+This terminal discharges one position in the anchor's complete 54-terminal
 cover. The other positions are retained, including those proved safe
 by a height bound or feasible transport instead of a contradiction.
 By Lemma~\ref{lem:mixed}, their composition proves that complete anchor
-safe at \(\alpha\). The anchor then pays the last of 240 constituent
+safe at \(\alpha\). The anchor then discharges the last of 240 constituent
 sources of parent 435003; the other 239 sources retain their accepted
 coverage. Finally, that parent is bound to one of the four open
 positions of the preserved original root. Thus the example illustrates
@@ -1557,8 +1786,8 @@ The computation uses the full seventeen-variable root \eqref{eq:Broot}
 with Theorem~\ref{thm:fibre}'s exact framework semantics.
 Its model contains every hypothetical \(F>\alpha\) source after
 the three actual paths; it imposes no selected tail-contact equation
-on all canonical images. Supplementary Materials~S5--S7 specify the
-model, acceptance rules, and complete certificate data.
+on all canonical images. The Supplementary Index, parts S5--S7,
+identifies the model, acceptance rules, and complete certificate data.
 
 \subsection{Base certificate and remaining source domains}
 Exact rational verification of the base certificate accepted
@@ -1567,7 +1796,7 @@ four safe terminals, and four open terminals. Its \(750\) enclosed
 continuation certificates had no internal open terminal.
 The four remaining domains are closed dyadic boxes reconstructed
 from the original seventeen-dimensional root. Denote them by
-\(Q_1,Q_2,Q_3,Q_4\), in the order specified in Supplementary Material~S7.
+\(Q_1,Q_2,Q_3,Q_4\), in the order specified in the Supplementary Index, S7.
 The base certificate proves the required bound outside their union.
 
 Complete certificates for \(Q_1,Q_3,Q_4\) cover, respectively,
@@ -1623,7 +1852,7 @@ Appendix~\ref{certificate:details} makes this distinction explicit and
 describes the source-by-source correspondence.
 This count provides a consistency check; coverage follows from
 the complete root traversal and exact source comparisons.
-Supplementary Material~S7 records the paths, endpoints, certificate
+The Supplementary Index, S7, identifies the paths, endpoints, certificate
 identities, and composition results needed to check these bindings.
 
 \begin{proof}[Proof of Proposition~\ref{prop:B}]
@@ -1693,26 +1922,61 @@ establishes that verified pieces cover the original domain with
 matching source data. This separation allows component proofs to
 be checked and reused independently.
 
-The supplementary documentation is organized into eight modules,
-listed in Appendix~\ref{app:artifacts}. It identifies the polynomial
+The separately available Supplementary Index is organized into eight
+parts, S1--S8, listed in Appendix~\ref{app:artifacts}. It identifies the polynomial
 and algebraic witness, analytic reductions, complete \(X\) certificates,
 negative-diagonal model, terminal rules, and final coverage graph.
-The accompanying source and dependency index specifies exact file
+The index points to archived proofs, executable verifiers, and certificate
+payloads; it is not itself the complete proof-data archive.
+It specifies exact file
 identities, source domains, verification entry points, and the scope
 of each recorded run. Large certificate payloads are separate from
 the readable documentation; full verification requires those payloads
 and all referenced component dependencies.
 
-The base-root verification used exact rational arithmetic and took
-\(22815.35\) recorded seconds. The final local verification took
-approximately \(184.37\) seconds. These are the times for their
-respective verification scopes, not the total cost of discovery
-or of checking the entire proof. Later parent and root compositions
-reuse the identified component verification records while checking
-exact source bindings. A fresh end-to-end verification therefore
-requires execution of every necessary component verifier as well
-as the final composition. Checking a file's hash alone establishes
-identity, not mathematical validity.
+The preserved base-root run used the exact \texttt{Fraction} backend on
+Linux with eight worker processes, and recorded \(22815.35\) seconds
+of elapsed wall time (about \(6.34\) hours). The separate final
+54-terminal anchor recorded \(184.37\) seconds. Neither value measures
+the whole proof: the former excludes the additional parent and
+transport acceptances, and the latter checks only the named anchor.
+They are elapsed times, not summed process CPU times or estimates of
+the discovery cost. The retained acceptance records fix the inputs,
+backend and worker count; they do not supply a portable performance
+benchmark with a recorded processor model and peak memory usage.
+
+Later parent and root compositions reuse identified mathematical
+acceptance records while checking exact source bindings. An independent
+fresh reproduction must execute the mathematical producers of all
+required records, then compose the resulting conclusions. A review
+that instead checks the preserved records and their bindings should
+be described as a record-and-composition audit. Both procedures have
+well-defined scopes; the latter is not a fresh execution of the former.
+Appendix~\ref{certificate:verification} gives the order and acceptance
+conditions. A file hash establishes identity, not the truth of a
+mathematical conclusion.
+
+\paragraph{Fresh negative-diagonal replay.}
+On 30 September 2026, a separate directory on the existing Linux host
+was used to re-execute the four-parent mathematical plan and the
+original root.  All 570 planned producers passed their prescribed
+acceptance conditions: 512 algebraic cuts, 46 branch checks, seven
+production projections, four whole-anchor complements, and one joint
+anchor.  The complements intentionally retained their prescribed
+open paths; their acceptance alone did not close a parent.
+The 566 distinct target sources, in groups of 111, 240, 159 and 56,
+were covered before the four parent paths and rational boxes were
+matched back to the actual root.  The resulting effective open count
+was zero.  The root used sixteen \texttt{Fraction} workers and retained
+its four expected open positions.  Its internal elapsed time was
+\(12952.26\) seconds; the launcher's elapsed interval, including overhead,
+was \(12965.71\) seconds (about 3.60 hours).
+Supplementary Index S7--S8 identifies the sealed plan, executed drivers
+and complete receipt archive.  This establishes fresh negative-diagonal
+finite coverage relative to retained upstream analytic and complete
+\(X\) inputs; those inputs were not re-executed in this run.
+It is neither a new-machine replay nor an independent implementation
+of the acceptors, and does not enlarge the Lean scope stated below.
 
 A companion Lean development formalizes the algebraic constant and its
 attainment, key analytic reductions, and a conditional final theorem.
@@ -1725,7 +1989,7 @@ their complete discharge in Lean, including the remaining model and
 coverage connections, is not claimed. The Python/C++ verifier
 implementations are not formally verified. This is a computer-assisted
 proof with partial Lean formalization. Component verifications and
-final composition are distinguished in Supplementary Material~S8;
+final composition are distinguished in the Supplementary Index, S8;
 composition does not re-execute every earlier verifier.
 
 \paragraph{Lean project cold rebuild.}
@@ -1736,7 +2000,7 @@ all 634 product modules, three additional example/audit modules,
 and 47 named axiom checks. It used an explicit dependency-order
 driver, with third-party caches reused and supplemented as needed.
 The final theorem's two safety parameters were checked and remain
-explicit. Supplement S8 records the source identity, successful
+explicit. The Supplementary Index, S8, records the source identity, successful
 build route, and scope of the retained evidence.
 
 \paragraph{Data and code availability.}
@@ -1749,7 +2013,11 @@ verification scopes:
 \url{https://github.com/hkjtsgmc79-boop/rho5-proof/releases/tag/v1.0.1}.
 The project cold rebuild is distinct from a fresh-machine rebuild of
 Lean and all dependencies, and from a new end-to-end mathematical
-replay of the large certificates. Zenodo archival will follow separately.
+replay of the large certificates. The original v1.0.1 manuscript and
+Supplementary Index PDFs are archived at
+\url{https://doi.org/10.5281/zenodo.22727368}.
+The present v1.0.2 manuscript and Supplementary Index are archived at
+\url{https://doi.org/10.5281/zenodo.23057256}.
 
 The theorem determines the maximum value and supplies an attaining
 matrix. Classification of all maximizers, uniqueness modulo symmetry,
@@ -1773,7 +2041,7 @@ mathematical claims, supporting evidence, and final manuscript.
 % Replacement appendix section; insert after the manuscript's \appendix.
 \section{Proof modules and supplementary material}\label{app:artifacts}
 
-Supplementary Materials S1--S8 organize the analytic and computational
+The Supplementary Index, parts S1--S8, maps the analytic and computational
 dependencies by their mathematical role. The theorem statements in the
 text specify the domains on which each component is used.
 
@@ -1871,11 +2139,53 @@ for independent reproduction.
 This appendix separates three operations: choosing a representative of a
 prescribed attainable height; reconstructing that representative from one
 set of row-scale coordinates; and bounding the resulting height by a
-constrained maximum argument. The first operation uses earlier reduction
-results. The second and third are stated and proved below, with the finite
-interval statements isolated as computational propositions. This ordering
+constrained maximum argument. All three operations are developed below. The common-column budgets,
+wall recovery, and prescribed-target construction have explicit analytic
+proofs; the safe-tail, stationary-source, exceptional-contact, and
+localization exclusions are identified separately as finite
+computational inputs. This ordering
 prevents the final \(X\) or negative-diagonal bound from being used to
 justify an earlier near-peak terminal.
+
+\paragraph{Reading map.}
+The deduction proceeds in the order below. Each representative or
+reconstruction retains a common physical source and its stated
+qualifications. The last column distinguishes analytic arguments from
+finite certificate inputs; their source inclusions are proved before
+acceptance is used.
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.15\linewidth}
+                  >{\raggedright\arraybackslash}p{.40\linewidth}
+                  >{\raggedright\arraybackslash}p{.39\linewidth}@{}}
+\toprule
+Sections & Conclusion used next & Method and finite inputs\\
+\midrule
+\ref{s3:cc-reconstruction} &
+High-value budgets and simultaneous first/middle columns &
+Analytic recovery; thirteen fixed safe-tail positivity checks.\\[2pt]
+\ref{s3:wall-calculus}--\ref{s3:wall-head-entrance-section} &
+Same-head wall maximum and qualified head entrance &
+Tail reconstruction and maximum argument; C19 and difference exclusions.\\[2pt]
+\ref{s3:target-endpoint-proof}--\ref{s3:target-theorem-section} &
+Representative at a prescribed height; endpoint equivalence &
+Exceptional-contact exclusions, compactness and minimum attainment.\\[2pt]
+\ref{s3:scale-section} &
+One complete row-scale coordinate system &
+Analytic reconstruction in both directions.\\[2pt]
+\ref{s3:localization-section}--\ref{s3:transport-section} &
+Localization and a compact model near the sharp height &
+Finite localization, qualified target transport and upper-target exclusion.\\[2pt]
+\ref{s3:slack-section}--\ref{s3:carrier-section} &
+Forced contacts at a maximum and the exact height \(\alpha\) &
+Uniform Jacobian bound, feasible local variation and algebraic elimination.\\
+\bottomrule
+\end{tabular}
+\end{center}
+Section~\ref{s3:provenance} is the source and certificate crosswalk,
+not a further deduction. The chain runs from canonical source to exact
+height; neither the later complete \(X\) bound nor the final
+negative-diagonal theorem is an input to it.
 
 All indices of the \(3\times3\) blocks and their vectors are
 \(0,1,2\). The letter \(s\) in this appendix means \(p-1\), and
@@ -1938,9 +2248,1866 @@ The last signed pivot is \(w-r=-F\). In the positive high-value
 regime no division at a zero pivot is made. Sources with an earlier
 zero pivot have already been handled before entry to this chamber.
 
-The following is the precise inherited representative reduction. Its
-source is the target theorem of the canonical-wall reduction, rather
-than an assertion that every source is already a wall point.
+% Insert after the paragraph following Definition s3:canonical-domain,
+% before the prescribed-target representative proposition.
+% This fragment uses precisely the symbols in that definition.
+\subsection{High-value budgets and simultaneous column reconstruction}
+\label{s3:cc-reconstruction}
+
+The reductions in this subsection keep the seven-coordinate head
+\(\eta=(t,\beta,V,T,X,Y,Z)\) fixed. Whenever the row scale \(E\)
+is fixed as well, the first, middle, and last columns always use the
+same \(E,p,k\). The sign conclusions below are consequences of a
+complete source; they are not imposed on an enlarged independent-column
+relaxation.
+
+\begin{lemma}[Elementary budgets of a complete high-value source]
+\label{s3:cc-budgets}
+Every source of Definition~\ref{s3:canonical-domain} with \(F>4\)
+satisfies
+\begin{gather}
+ 2<r\le k<3,\quad 0<g,j,h\le1,\quad j<1,
+ \quad1<p<1+\beta<2,\quad0<a<p,\label{s3:cc-basic-budget}\\
+ 0<t\le1,\quad X>\frac1{1+\beta}>\frac12,\quad
+ Ek<1-T,\quad r<\frac52,\quad r+2E+T<3,
+ \label{s3:cc-scale-budget}\\
+ \Delta>\tau,\quad t>V,\quad
+ Q_o:=t\delta-\Gamma>0,\quad
+ \Omega:=t\Delta+E\tau-\mu>0,\notag\\
+ \zeta:=t\nu-E\Gamma>0.\label{s3:cc-directions}
+\end{gather}
+Moreover \(q>0\). If \(F\ge33/8\), the positive-receiver
+conclusion of Lemma~\ref{s3:cc-positive-receiver} also gives
+\(v>0\), and the quantitative bounds are
+\begin{equation}\label{s3:cc-quantitative-budgets}
+ 3-r-2E-T>\frac1{320},\quad
+ \Delta-\tau>\frac1{32},\quad t-V>\frac1{48},\quad
+ q>\frac{41}{480},\quad P_2>\frac{61}{480}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Since \(|w|\le r\) and \(D_{21}=r+Ea\le k\), we have
+\(r\ge F/2>2\) and \(k\ge r+Ea\).
+The identity \(O_{00}=k+XP_0-\delta g\), together with
+\(P_0\ge-1\), implies \(g>0\). If \(j\le0\), then
+\(O_{00}=k-Xj-g\ge k-1>1\), a contradiction. Similarly
+\(O_{21}=r+Ea-Z-\nu h\le1\) gives \(h>0\).
+Thus \(|\widehat q_1|=1+\beta h\le p\) implies \(p>1\),
+and \(P_0=-j-\beta g\ge-1\) gives
+\(j+\beta g\le1\), in particular \(j<1\).
+Put \(s=p-1\) and \(\epsilon=r-2\). Initially
+\(0<s\le\beta\le1\), and the same first column yields
+\[
+ k\le p+Xj,\qquad k\le1+Xj+g,
+ \qquad k\le1+s+X(1-\beta s).
+\]
+For the last inequality substitute \(j\le1-\beta g\):
+the function \(\min(s,g)-\beta Xg\) is maximized at \(g=s\)
+on \([0,1]\). Also
+\(k\le1+X+(1-\beta X)g\le2+(1-\beta)X\le3-\beta\).
+Consequently \(\beta<1\), \(p<2\), and
+\(0<\epsilon\le s(1-\beta)<s\).
+The middle-column original bound gives
+\(r+Ea\le1+Z+\nu h\le2+\beta-T\), whence
+\(T\le\beta-\epsilon\). Adding this bound for \(r\) to
+\(r\le3-\beta\) proves \(r<5/2\).
+
+The inequality \(O_{11}=r-ta-Y+\Gamma h\le1\) gives
+\(ta>0\), hence \(t>0\) and \(a>0\).
+The stage bound \(S_{01}\ge-p\) gives
+\(a+X(1+\beta h)\le p\), so \(a<p\).
+If \(X\le1/(1+\beta)\), the preceding bound for \(k\) gives
+\[
+ k\le1+s+\frac{1-\beta s}{1+\beta}
+ =2+\frac{s-\beta}{1+\beta}\le2,
+\]
+a contradiction. In particular \(X>\delta\).
+Since \(Xj+g\ge k-1>1\), we have \(j+g>1\).
+Now \(Z>T\) and \(O_{20}=-Ek-Zj-Tg\ge-1\) imply
+\(Ek<1-T\). Thus \(E<1/2\).
+Finally,
+\[
+ (1+\beta)Z-1-T
+ =(r-2)+Ea+(1-O_{21})+\nu(1-h)>0.
+\]
+Together with \(pZ\le1+T\), this proves the strict inequality
+\(p\le(1+T)/Z<1+\beta\).
+
+Here is a positive-sum proof of the stronger row-scale budget.
+Set
+\[
+ A=r-p,\quad z_*={1+\epsilon+Ts/\beta\over p},\quad
+ C_0=1-Ek-{Z\over X}(k-p)-Ts.
+\]
+The exact identities
+\begin{align*}
+ C_0&=(1+O_{20})+T(1-O_{00})
+       +{\Delta\over X}(p-S_{00})\ge0,\\
+ B_R&:=1-Er-Z(r-p)-Ts\\
+    &=C_0+(E+Z)(k-r)+Z(1/X-1)(k-p)\ge0,\\
+ \beta p(Z-z_*)&=\beta(Ea+1-O_{21})
+                      +\nu(s-\beta h)\ge0
+\end{align*}
+show that \(C:=1-Er-z_*A-Ts=B_R+A(Z-z_*)\ge0\).
+Define
+\begin{align*}
+ m&={r\over2}-s-{As\over\beta p}
+   ={(1-s)(2s-\epsilon)\over2p}
+     +{A(\beta-s)\over\beta p}>0,\\
+ B&=3s(1+s)(1-\beta)+4(\beta-s)
+                   +(1+s)(\beta-s)(1-\beta),\\
+ N&=2(\beta-s)\epsilon^2+B\epsilon
+                        +2\beta(1-\beta)(1-s^2)>0.
+\end{align*}
+All displayed signs follow from \(0<\epsilon<s\le\beta<1\).
+Direct expansion, using \(p=1+s\) and \(r=2+\epsilon\), gives
+\[
+ W:=3-r-2E-T
+ ={N\over\beta p r}
+  +{2\over r}\{C+m(\beta-\epsilon-T)\}>0.
+\]
+This proves the row-scale budget without changing a matrix coordinate.
+
+For \(\Delta>\tau\), use
+\(\Delta-\tau=\delta(Z-Y)+X(\Gamma+\nu)\).
+If \(Y\ge Z\), then
+\[
+ h(\Delta-\tau)-X\epsilon
+ =X\{Ea+1-Y+1-O_{21}\}+X\Gamma h
+                         +(X-\delta h)(Y-Z)\ge0.
+\]
+If \(Y\le Z\), the same difference equals
+\[
+ \delta h(Z-Y)+X\Gamma h+X\{Ea+1-Z+1-O_{21}\}\ge0.
+\]
+Thus \(\Delta-\tau\ge X\epsilon/h>0\).
+Let
+\[
+ \begin{gathered} B_0=(1+O_{20})+T(1-O_{00})\ge0,\\
+ J=\mu(1+O_{02})+\Delta(1-O_{12})+\tau(1+O_{22})\ge0.\end{gathered}
+\]
+Expansion at the same complete source gives
+\begin{align*}
+ \Delta b(t-V)-{\Delta+\tau\over2}(F-4)
+ ={}&\Delta(1-V)+\tau\{B_0+\Delta j+(E+T)(k-b)\}\\
+ &+J+{\Delta-\tau\over2}(r+w)>0.
+\end{align*}
+The strict sign follows already from \(\tau\Delta j>0\).
+Since \(b\ge0\), it implies \(b>0\) and \(t>V\).
+Therefore
+\(Q_o=\delta(t-V)+\beta\tau>0\) and
+\(\Omega=(t-V)\Delta+(E+T)\tau>0\).
+For the last direction use
+\[
+ \zeta h-(t+E)(r-2)
+ =E(1-Y)+t(1-Z)+E(1-O_{11})+t(1-O_{21})\ge0.
+\]
+
+The tail signs follow from two more slack identities:
+\begin{align*}
+ 4-W+(EX+Z)q-F
+   &=(1+O_{22})+E(1+O_{02})\\
+   &\quad +(E+T)(1-v)\ge0,\\
+ 4-T-W+(EX+Z)P_2-F
+   &=(1+O_{22})+E(1+O_{02})+E(1-v)\\
+   &\quad +E\beta Xv+\nu v\ge0\quad(v\ge0).
+\end{align*}
+The first, with \(W>0\), proves \(q>0\); the second proves
+\(P_2>0\) after Lemma~\ref{s3:cc-positive-receiver} has supplied
+\(v>0\). That lemma uses only the preceding budgets, not this last
+positive-prefix conclusion.
+
+For the quantitative assertions assume \(F\ge33/8\), so
+\(\epsilon\ge1/16\). Since \(r\le3-\beta\),
+\(1-\beta\ge\epsilon\), and \(s\le\beta\) gives
+\(1-s\ge\epsilon\). Keeping only the constant term of \(N\)
+in the formula for \(W\) yields
+\[
+ W\ge {2(1-\beta)(1-s)\over r}
+   >{2(1/16)^2\over5/2}=\frac1{320}.
+\]
+The already proved direction estimates give
+\(\Delta-\tau\ge X\epsilon/h>\epsilon/2\ge1/32\), and
+\(t-V>(F-4)/(2b)>1/48\), using \(b\le k<3\).
+The middle and head bands also give
+\[
+ r+Ea\le1+Z(1+\beta h)-Th\le1+pZ-Th
+ \le2+T(1-h),
+\]
+so \(T>\epsilon\ge1/16\).
+Finally \(EX+Z<3/2\), and the two tail slack identities imply
+\[
+ q>{1/8+1/320\over3/2}=\frac{41}{480},\qquad
+ P_2>{1/8+1/16+1/320\over3/2}=\frac{61}{480}.
+\]
+\end{proof}
+
+% Insert after the elementary-budget proof and before cc-positive-receiver.
+% Proves the U=1 subdomain actually needed there; no general U shear is used.
+\begin{lemma}[The nonpositive-receiver tail face]
+\label{s3:cc-safe-tail}
+On the complete canonical source of
+Definition~\ref{s3:canonical-domain}, the conditions
+\(P_2=1\) and \(v\le0\) imply
+\[
+ r<\frac{33}{16},\qquad F<\frac{33}{8}.
+\]
+\end{lemma}
+\begin{proof}
+We give the analytic reduction and all the scalar polynomials used in
+its finite sign check. This lemma is restricted to the canonical
+\(u_0=1\) source already under discussion; it does not need a further
+normalization of the first head coordinate.
+
+Suppose instead that \(r\ge R:=33/16\), and put
+\(\epsilon=1/16\), \(\rho=17/16=R-1\).
+Then \(k\ge r+Ea\ge r>2\). Directly from the first-column
+bands, \(g>0\) and \(j>0\): use
+\(O_{00}=k+XP_0-\delta g\le1\) with \(P_0\ge-1\)
+for the former; \(j\le0\) would give
+\(O_{00}=k-Xj-g\ge k-1>1\).
+Also \(O_{21}=r+Ea-Z-\nu h\le1\) implies \(h>0\),
+so \(p\ge1+\beta h>1\). Consequently
+\(0<s:=p-1\le\beta\le1\).
+Write \(f=-v\in[0,1]\), so the tail-face equality gives
+\(q=1+\beta f\ge1\). If \(t\le0\), then
+\(O_{12}=r-tb+Yq-Vf\ge r+Y-V>1\), a contradiction.
+Thus \(0<t\le1\). These facts use only \(r>2\), not the
+height conclusion being proved.
+
+The first-column slack identity
+\begin{align*}
+ V(p+Y)-\beta Y(p-1)-Vtk
+ ={}&\Gamma(p-S_{10})+\beta Y(1-O_{10})\\
+ &+VY(1+P_0)\ge0
+\end{align*}
+retains the prefix bound at this same matrix. It gives
+\begin{equation}\label{s3:st-first-payment}
+ tk\le1+s+Y-\frac{\beta Ys}{V}.
+\end{equation}
+Let \(d_0=tX-Y\) be the physical head difference. The tail
+original bounds give
+\[
+ r\le1+t+d_0q+(V-t)f.
+\]
+If \(d_0\le0\), then \(q\ge1\) and \(0\le f\le1\)
+bound this expression by \(1+t+\max(0,V-t)\le2\).
+Hence \(d_0>0\). Moreover \(\tau=Y-XV>0\) gives
+\[
+ t\delta-\Gamma=t-V-\beta d_0>\frac{d_0\delta}{X}>0.
+\]
+Substituting \(q=1+\beta f\) therefore yields
+\[
+ r\le1+t+d_0-(t\delta-\Gamma)f\le1+t+d_0,
+\quad d_0\ge\rho-t>0,\quad Y\le t-d_0.
+\]
+
+The middle-column receiver is denoted here by
+\(\chi=-\widehat q_1=1+\beta h\), to avoid confusing it
+with the first-column parameter \(j\). Its two row-0 bounds give
+\(a+X\chi\le\min(1+s,1+h)\). Thus
+\begin{equation}\label{s3:st-middle-payment}
+ r\le1+t+t\min(s,h)-d_0\chi-Vh.
+\end{equation}
+From \(L_2\le1\), \(O_{21}\le1\), and \(Ea\ge0\),
+we also have \(r\le1+h+Z(\chi-ph)\).
+The factor \(\chi-ph\) is positive, since otherwise \(r\le2\).
+Using \(Z\le1\), we obtain
+\[
+ \chi\ge\rho+sh,\qquad
+ \epsilon\le(\beta-s)h,
+ \qquad0<s\le\beta-\epsilon\le15/16.
+\]
+For the moment put \(d=d_0\), and define
+\[
+ A=\rho(1+d)-t>0,\qquad B=ts-A.
+\]
+Equation~\eqref{s3:st-middle-payment} implies both
+\[
+ A\le(t-V-ds)h,\qquad (V+ds)h\le B.
+\]
+In particular \(t-V-ds>0\), \(B>0\). Comparing the two
+bounds on \(h\), and using \(A+B=ts\), gives
+\[
+ V\le\frac{B-ds^2}{s},\qquad
+ (\beta-s)B\ge\epsilon(V+ds).
+\]
+Let
+\[
+ H=1+s+Y-tR,\quad J=B+\epsilon d>0,\quad
+ K=B-ds^2>0,\quad C=BH-\epsilon Ys.
+\]
+From \eqref{s3:st-first-payment} and \(k\ge R\),
+\(VH\ge\beta Ys>0\). Combining this with the preceding
+inequality gives \(VC\ge Ys^2J>0\), hence \(C>0\).
+Now \(V\le K/s\) and
+\(V(Y+d)<tY\), the latter being the cofactor condition
+\(V<Y/X\), imply
+\begin{equation}\label{s3:st-two-polynomials}
+ Q:=HK-Ys(\epsilon+s^2)\ge0,
+ \qquad P:=tC-s^2J(Y+d)\ge0.
+\end{equation}
+For the first implication use the exact identity
+\(KC-Ys^3J=BQ\), with \(B>0\). For the second,
+\(VC\ge Ys^2J\) and \(V<tY/(Y+d)\) even give \(P>0\);
+the weaker form above suffices.
+
+We next lower the auxiliary difference to \(d=\rho-t\).
+This is a relaxation of necessary inequalities, not a new physical
+matrix. The left side \(A\) decreases, \(t-V-ds\) increases,
+\(V+ds\) decreases, and \(B\) increases. The constraints
+\(\epsilon\le(\beta-s)h\) and \(VH\ge\beta Ys\) do not
+change; \(V(Y+d)<tY\) and \(Y\le t-d\) become weaker.
+Thus the same \(s,t,Y,V,\beta,h\) satisfies this relaxed system,
+and the preceding eliminations may be repeated at the new \(d\).
+All letters \(A,B,H,J,K,C,Q,P\) henceforth use
+\(d=\rho-t\). Since
+\[
+ K=t(1+s+\rho+s^2)-\rho(1+\rho+s^2)>0,
+\]
+we have
+\[
+ t>\ell(s):=\frac{17(16s^2+33)}{16(16s^2+16s+33)}.
+\]
+The coefficient of \(t\) is positive, and \(t\le1\), so
+\(0<K\le K|_{t=1}=s-2\epsilon-\epsilon^2-\epsilon s^2
+<s-1/8\). Every hypothetical source therefore supplies
+\begin{equation}\label{s3:st-scalar-domain}
+ \begin{gathered}\frac18<s\le\frac{15}{16},\qquad
+ \ell(s)<t\le1,\\ 0<Y\le Y_m:=2t-\rho,\qquad H,K>0,\quad Q,P\ge0.
+ \end{gathered}\end{equation}
+
+Here is the complete finite exclusion of this scalar domain.
+Put \(H_*=1+s-tR\) and \(u_*(s)=16(1+s)/33\).
+Both \(Q\) and \(P\) are affine in \(Y\).
+If \(H_*\le0\), write
+\(Q=H_*K+Y\{K-s(\epsilon+s^2)\}\).
+Since \(Q\ge0\), its slope in \(Y\) must be nonnegative;
+therefore \(Q\le Q(s,t,Y_m)\). The finite sign checks below
+give \(Q(s,t,Y_m)<0\) throughout
+\([1/8,15/16]\times[\ell(s),1]\), a contradiction.
+If \(H_*>0\), then \(t<u_*(s)\). The same checks give
+\(u_*<\ell\) on \([1/8,7/10]\), so \(s>7/10\).
+They also give \(P(s,t,0)<0\) and \(P(s,t,Y_m)<0\)
+on \([7/10,15/16]\times[\ell(s),u_*(s)]\).
+Affineness in \(Y\) then contradicts \(P\ge0\) on the
+whole interval \([0,Y_m]\). This proves \(r<R\), and
+\(F\le2r<33/8\).
+
+To specify the finite checks without an external polynomial dictionary,
+write \(f(s,t)=\sum_{i=0}^n f_i(s)t^i\), and define
+\begin{equation}\label{s3:st-scaled-bernstein}
+ \mathcal B_k[f;a_0,a_1,D_0]
+ =\sum_{j=0}^k\frac{\binom{k}{j}}{\binom{n}{j}}
+   (a_1-a_0)^j\sum_{i=j}^n\binom{i}{j}
+             f_i a_0^{i-j}D_0^{n-i}.
+\end{equation}
+Here \(a_0,a_1,D_0\) are polynomials in \(s\).
+The polynomial \(\mathcal B_k\) is \(D_0^n\) times the
+\(k\)-th Bernstein coefficient of \(f\) on
+\([a_0/D_0,a_1/D_0]\). Its formula divides by no interval
+length and remains valid at coincident endpoints.
+Let
+\[
+\begin{gathered} D_s=16s^2+16s+33,\qquad a=17(16s^2+33),\\
+ d_Q=16D_s,\quad d_P=528D_s,\quad b_P=256(1+s)D_s.\end{gathered}
+\]
+All these denominators are strictly positive for \(s\ge0\).
+The eleven coefficient polynomials and the twelfth polynomial are
+specified exactly by
+\begin{align*}
+ Z_{Qi}&=-\mathcal B_i[Q(s,t,2t-\rho);a,d_Q,d_Q],
+                                      &&0\le i\le2,\\
+ Z_{0i}&=-\mathcal B_i[P(s,t,0);33a,b_P,d_P],
+                                      &&0\le i\le3,\\
+ Z_{mi}&=-\mathcal B_i[P(s,t,2t-\rho);33a,b_P,d_P],
+                                      &&0\le i\le3,\\
+ Z_u&=33a-b_P.
+\end{align*}
+The degrees in \(t\) used in \eqref{s3:st-scaled-bernstein}
+are respectively 2, 3, and 3. Also
+\(u_* -\ell=-Z_u/d_P\).
+For any univariate polynomial \(z(s)=\sum_{i=0}^N z_i s^i\),
+its Bernstein coefficients on \([L,H]\) are explicitly
+\begin{equation}\label{s3:st-univariate-bernstein}
+ b_k=\sum_{j=0}^k\frac{\binom{k}{j}}{\binom{N}{j}}
+       (H-L)^j\sum_{i=j}^N z_i\binom{i}{j}L^{i-j}
+       \qquad(0\le k\le N).
+\end{equation}
+Applying this rational formula to the twelve displayed polynomials
+gives the following thirteen checks. In every row, every coefficient
+is strictly greater than 1 under the stated common-denominator
+normalization.
+\begin{center}
+\begin{tabular}{ccl}
+\toprule
+Polynomial&Degree&Interval\\
+\midrule
+\(Z_{Q0},Z_{Q1}\)&7&\([1/8,15/16]\), each\\
+\(Z_{Q2}\)&7&\([1/8,17/32]\) and \([17/32,15/16]\)\\
+\(Z_{00}\)&7&\([7/10,15/16]\)\\
+\(Z_{01}\)&10&\([7/10,15/16]\)\\
+\(Z_{02},Z_{03}\)&11&\([7/10,15/16]\), each\\
+\(Z_{m0}\)&9&\([7/10,15/16]\)\\
+\(Z_{m1}\)&10&\([7/10,15/16]\)\\
+\(Z_{m2},Z_{m3}\)&11&\([7/10,15/16]\), each\\
+\(Z_u\)&3&\([1/8,7/10]\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+These inequalities are fixed finite rational arithmetic statements:
+the formulas above define every coefficient to be checked. Positive
+Bernstein coefficients imply strict positivity because the Bernstein
+basis is nonnegative and sums to 1 on the closed unit interval.
+Thus \(Z_{Qi},Z_{0i},Z_{mi}>0\) give the required strict
+negative \(t\)-coefficients, and \(Z_u>0\) gives the endpoint
+ordering. Empty \(t\)-intervals impose no condition; degenerate
+ones are covered by the same formulas. The two intervals for
+\(Z_{Q2}\) cover the whole required \(s\)-range.
+This is a fixed thirteen-check certificate, with no adaptive
+subdivision or unreported numerical optimization.
+\end{proof}
+
+\begin{lemma}[Positive tail receiver]
+\label{s3:cc-positive-receiver}
+On the complete canonical source, \(v\le0\) implies \(F<33/8\).
+The required tail-face bound is Lemma~\ref{s3:cc-safe-tail}, whose fixed polynomial-positivity certificate is displayed above.
+\end{lemma}
+
+\begin{proof}
+Only \(F>4\) needs consideration. If \(v\le0\), then
+\(O_{02}=-b+XP_2+\delta v\ge-1\) gives \(b\le2<k\).
+The preceding budgets give \(q>0\), \(t>V\), and
+\(r+E<3\). From
+\(O_{12}-tO_{02}=r-(tX-Y)q+(V-t)v\) we obtain
+\(r\le1+t+(tX-Y)q+(t-V)v\); thus \(tX-Y>0\).
+Increase \(v,b\) together by
+\[
+ 0\le\lambda\le\min\{-v,(1-P_2)/\beta\}.
+\]
+This fixes \(p,r,w,F\), the head, \(E\), and both other columns.
+The changes in the last original column are
+\((0,-(t-V)\lambda,(E+T)\lambda)\), while
+\(P_2\) increases by \(\beta\lambda\).
+Throughout the segment \(v'\le0\), \(P'_2\le1\), and
+\(0\le b'\le2<k\).
+The original lower bound in row 1 is safe because
+\(O'_{12}\ge r-2-V>-1\); its upper bound improves.
+The stage bounds satisfy
+\(S'_{02}=O_{02}-v'\ge-1\) and
+\(S'_{12}=r-tb'+Yq>0\), while their upper bounds improve.
+Both row-2 lower bounds improve, and
+\[
+ S'_{22}=w+Eb'+Zq\le w+Ek+Zp<w+2<1,
+ \qquad O'_{22}\le S'_{22}.
+\]
+Here \(Ek<1-T\), \(pZ\le1+T\), and
+\(w+2=r-F+2<1/2\). The core entry \(r-tb'\) stays positive;
+\(w+Eb'\) lies between \(w\ge-k\) and \(S'_{22}<k\).
+All remaining changed bounds are either fixed or improved. Hence the
+whole segment is physical.
+
+Its endpoint has \(P'_2=1\) or \(v'=0\). In the latter case,
+if \(P'_2<1\), then \(0<q=P'_2<1\). Increase \(q\) by
+\(0\le\sigma\le1-q\), increase \(b'\) by \(X\sigma\),
+and keep \(v'=0\). The original changes are
+\((0,-(tX-Y)\sigma,(EX+Z)\sigma)\).
+We still have \(b''\le1+Xq''\le2\); now
+\(O''_{12}\ge r-2>0\), \(O''_{22}<w+2<1\), and
+\(S''_{i2}=O''_{i2}\). The same core estimates apply.
+This second physical segment ends at \(P''_2=1,v''=0\).
+The finite safe-tail exclusion therefore applies to a complete source
+with the original \(r,F\), proving the claim. No rank assumption is
+added and no cofactor changes in either segment.
+\end{proof}
+
+\begin{lemma}[Normalization of the second pivot]
+\label{s3:cc-p-normalization}
+Every complete source with \(F>4\) can be replaced, at the same
+head, \(E,D,F\), by one with
+\(p=\bar p:=(1+T)/Z\). This replacement preserves the entire
+original tail block \(O\) and all prefix coordinates \(P_j\).
+\end{lemma}
+\begin{proof}
+The preceding proof gives \(p\le\bar p<1+\beta<2\).
+Increase only \(p\) along \([p,\bar p]\). The \(\widehat q,S\)
+bounds are relaxed. All tail and core coordinates are fixed.
+For the head column, its lower bounds follow from
+\(p'x_i-u_i\ge-u_i\ge-1\); its upper bounds follow from
+\[
+ p'X<2,
+ \qquad p'Y<(1+\beta)Y<1+V,
+ \qquad p'Z\le1+T.
+\]
+The middle strict inequality uses
+\(1+V-(1+\beta)Y=1-Y+\Gamma>0\).
+Also \(0<p'-\beta<1\). Thus every point of the segment is a
+complete physical source, and at its endpoint \(L_2=1\).
+\end{proof}
+
+\begin{lemma}[The complete twelve first-column capacities]
+\label{s3:cc-twelve-capacities}
+Fix \(0<\beta,V,T,X,Y,Z\le1\), all six positive cofactors,
+\(0\le E\le1\), \(V<t\le1\), and
+\(1<p=\bar p<1+\beta<2\). These assumptions hold for a
+complete high-value head by Lemmas~\ref{s3:cc-budgets}
+and~\ref{s3:cc-p-normalization}; the recovery assertion does not
+require an already completed middle or last column. Define
+\begin{align*}
+ j_L(k)&=\max\{(k-p)/X,(tk-p)/Y,(tk-1-V)/Y\},\\
+ j_U(k)&=\min\{(1+\beta-\beta k)/\delta,
+       (1+T-(E+T)k)/\Delta,\\
+ &\hspace{34mm}(V+\beta-\beta tk)/\Gamma,
+       (V+T-(VE+Tt)k)/\mu\}.
+\end{align*}
+For \(k>2\), a complete first column exists if and only if
+\(j_L(k)\le j_U(k)\). A single witnessing pair is
+\begin{equation}\label{s3:cc-first-recovery}
+ j=j_L(k),\qquad
+ g=\max\{k-1-Xj,(tk-1-Yj)/V\}.
+\end{equation}
+Write the three lower affine functions as \(\lambda_i k-\eta_i\)
+and the four upper functions as \(\xi_j-\kappa_j k\), where
+\[
+ (\lambda_i,\eta_i)=
+ (1/X,p/X),\ (t/Y,p/Y),\ (t/Y,(1+V)/Y),
+\]
+\[
+ (\xi_j,\kappa_j)=\begin{gathered}
+ ((1+\beta)/\delta,\beta/\delta),\
+  ((1+T)/\Delta,(E+T)/\Delta),\\
+ \
+ ((V+\beta)/\Gamma,\beta t/\Gamma),\
+ ((V+T)/\mu,(VE+Tt)/\mu).\end{gathered}
+\]
+Then the complete first-column capacity is
+\begin{equation}\label{s3:cc-twelve-K}
+ K=\min_{1\le i\le3,\,1\le j\le4}K_{ij},\qquad
+ K_{ij}:={\eta_i+\xi_j\over\lambda_i+\kappa_j}.
+\end{equation}
+Every denominator is positive. Raising an existing \(k>2\) to
+\(K\), while reconstructing the first column, preserves the
+head, \(E,p,r,w,F\) and the other two columns.
+\end{lemma}
+\begin{proof}
+The first-column constraints require
+\[
+\begin{gathered} j\ge(k-p)/X,\quad j\ge(tk-p)/Y,\\
+ g\ge\max\{k-1-Xj,(tk-1-Yj)/V\},\\
+ g\le\min\{1,(1-j)/\beta,(1-Ek-Zj)/T\}.\end{gathered}
+\]
+Comparing the two lower bounds for \(g\) with its last two upper
+bounds gives exactly the four terms of \(j_U\). The first lower
+bound for \(g\) is at most \(p-1<1\); the second is at most
+1 precisely when \(j\ge(tk-1-V)/Y\). This proves necessity
+and gives \eqref{s3:cc-first-recovery} when the intervals intersect.
+
+For completeness, the omitted physical bounds follow from this same
+pair. We have \(j>0\), and the first upper bound in \(j_U\)
+gives \(j<1\), since
+\(\beta(1+X-k)<0\). Then \(g\ge k-1-Xj>k-2>0\),
+while the interval comparisons give \(g\le1\).
+Thus \(O_{00}=k-Xj-g>k-2>0\) and
+\(O_{10}=tk-Yj-Vg>t(k-g)-1>-1\), using \(t>V\).
+Their upper bounds have already been imposed.
+The stage entries \(S_{00},S_{10}\) lie above \(-1\) and
+below \(p\). Also \(-1\le O_{20}<0\) gives
+\(-1\le S_{20}<0\); \(P_0=-j-\beta g\in[-1,0)\),
+and the receiver bounds follow from \(0<j<1<p\), \(0<g\le1\).
+Finally the first core column obeys \(|D_{i0}|\le k\) because
+\(0<t\le1\), \(0\le E\le1\). This is a complete column.
+
+Every lower--upper comparison is
+\((\lambda_i+\kappa_j)k\le\eta_i+\xi_j\), proving
+\eqref{s3:cc-twelve-K}. At \(k=K>2\) the displayed construction
+is therefore feasible. Interpolate linearly between the old and new
+triples \((k,j,g)\): all first-column conditions are affine at the
+fixed head and \(E,p\), while increasing \(k\) relaxes all other
+core bounds and \(a,b\le k\). The other two columns and the
+height stay fixed. The reconstructed first column itself gives
+\(k\le1+Xj+g\le2+(1-\beta)X<3\) and
+\(j+g>1\); together with \(Z>T\) and
+\(Ek+Zj+Tg\le1\), this proves \(Ek<1-T\) without assuming
+the existence of either of the other columns.
+\end{proof}
+
+\begin{lemma}[Strict gaps at an actually completed high-value capacity]
+\label{s3:cc-strict-gap}
+Every complete source with \(F>4\) satisfies
+\[
+ O_{00}<3-F/2,\qquad g<3-F/2,\qquad F+\beta<5.
+\]
+Consequently, at a complete high-value source with \(k=K\), all
+eight capacities other than \(K_{13},K_{14},K_{23},K_{24}\)
+are strictly larger than \(K\). In particular
+\begin{align*}
+ K_{13}&={p\Gamma+X(V+\beta)\over\Gamma+\beta tX},&
+ K_{23}&={p\Gamma+Y(V+\beta)\over tV},\\
+ K_{14}&={p\mu+X(V+T)\over\mu+X(VE+Tt)},&
+ K_{24}&={p\mu+Y(V+T)\over V(tZ+EY)}.
+\end{align*}
+These four capacities may replace the twelve at this completed source
+and in any neighborhood where the strict gaps persist. This statement
+does not assert that deleting eight inequalities from an arbitrary
+uncompleted or low-value first-column problem is harmless.
+\end{lemma}
+\begin{proof}
+With the nonnegative tail slack \(J\) used above,
+\begin{align*}
+ \mu(1-O_{00})={}&\tau(F-4)+(\Delta-\tau)(r-2)
+       +\Omega(k-b)\\
+       &+\Delta(1-O_{10})+\tau(1+O_{20})+J.
+\end{align*}
+Since \(r-2\ge(F-4)/2\) and
+\(0<\mu=V\Delta-T\tau<\Delta+\tau\), this yields
+\(1-O_{00}>(F-4)/2\). Furthermore
+\begin{align*}
+ \beta X(1-g)={}&(k-2)+(p-S_{00})+X(1+P_0)\\
+ &+(1+\beta-p)+(1-\beta)(1-X)\ge k-2,
+\end{align*}
+and \(0<\beta X<1\) gives \(1-g>k-2\ge F/2-2\).
+Finally
+\[
+ O_{00}-(k-2+\beta)
+ =(1-X)j+(1+P_0)+(1-\beta)(1-g)>0,
+\]
+so \(k\ge F/2\) proves \(F+\beta<5\).
+
+If a first-column capacity is attained, its lower and upper affine
+bounds for \(j\) coincide and equal the actual \(j\).
+For columns 1 or 2 of the capacity array, equality forces the
+\(O_{00}\) lower bound on \(g\) to equal a prefix or row-2
+upper bound, hence \(O_{00}=1\), which is impossible.
+For row 3 of the capacity array, equality forces the \(O_{10}\)
+lower bound for \(g\) to be 1, hence \(g=1\), also impossible.
+The excluded indices are precisely the complement of
+\(\{13,14,23,24\}\). All inequalities are strict at the complete
+source, so continuity preserves them locally.
+\end{proof}
+
+\begin{lemma}[Recovering the omitted first-column bounds from a common tail]
+\label{s3:cc-four-recovery}
+Fix \(0<\beta,V,T,X,Y,Z\le1\), all six positive cofactors,
+\(0\le E\le1\), and \(V<t\le1\). Assume
+\(\Delta>\tau\), \(\Omega>0\), and
+\(1<p=\bar p<1+\beta<2\).
+Suppose
+\[
+ 2<k\le K_{13},K_{14},K_{23},K_{24},\qquad
+ 2<r\le k,\quad |w|\le r,\quad F=r-w>4,
+\]
+and suppose a tail choice \(0\le b\le k\) has
+\begin{equation}\label{s3:cc-formal-tail-slack}
+ J_{\rm tail}:=\mu+\Delta+\tau-\Delta r+\tau w+\Omega b\ge0.
+\end{equation}
+Then the first column has the complete physical reconstruction
+\begin{equation}\label{s3:cc-four-first-recovery}
+ j=\max\{(k-p)/X,(tk-p)/Y\},\qquad
+ g=(tk-1-Yj)/V.
+\end{equation}
+In particular \(O_{10}=1\), and the original twelve-capacity
+test holds. If \(k=\min\{K_{13},K_{14},K_{23},K_{24}\}\),
+then \(k=K\) as defined in \eqref{s3:cc-twelve-K}.
+\end{lemma}
+\begin{proof}
+The four capacity inequalities say that each of the two lower bounds
+in \eqref{s3:cc-four-first-recovery} is at most each of the last
+two upper bounds in \(j_U\). Substitution therefore gives
+\[
+ S_{00}\le p,\quad S_{10}\le p,\quad O_{10}=1,
+ \quad j+\beta g\le1,\quad Ek+Zj+Tg\le1.
+\]
+At this point no sign or receiver bound for \(g\) is presumed.
+The first-column gap identity used in
+Lemma~\ref{s3:cc-strict-gap}, being algebraic, now gives
+\[
+ \mu(1-O_{00})=\tau(F-4)+(\Delta-\tau)(r-2)
+       +\Omega(k-b)+\tau(1+O_{20})+J_{\rm tail}>0.
+\]
+Thus \(O_{00}<1\) follows from the common tail slack, without
+assuming that the unfinished first column is already physical.
+We have \(j>0\) because \(k>2>p\). If \(g\le0\), then
+\(j+\beta g\le1\) implies
+\(O_{00}=k-Xj-g\ge k-X-\delta g\ge k-1>1\), a contradiction.
+Hence \(g>0\) and \(j<1\).
+Combining \(k-Xj\le p\) with \(j\le1-\beta g\) gives
+\[
+ \beta Xg\le p+X-k<\beta+X-1\le\beta X,
+\]
+so \(g<1\). Now \(O_{00}>k-2>0\), \(O_{10}=1\),
+and \(-1\le O_{20}<0\). The stage entries satisfy
+\(S_{00}>k-1>0\), \(S_{10}=1+Vg>0\), and
+\(-1\le S_{20}<0\); their upper bounds were already imposed.
+The prefix, receiver, and first-core-column bounds follow as in
+Lemma~\ref{s3:cc-twelve-capacities}. This is a complete first column.
+Consequently \(k\le K\). Conversely \(K\) is the minimum of
+all twelve capacities and hence at most their four-term minimum,
+which proves the final assertion. The argument makes no claim about
+a four-capacity point lacking the common positive-height tail slack.
+\end{proof}
+
+\begin{lemma}[The complete middle-column capacity]
+\label{s3:cc-middle-capacity}
+Fix head coordinates in \((0,1]\) with all six cofactors positive.
+Assume
+\[
+\begin{gathered}
+ 0\le E\le1,\quad V<t\le1,\quad X>\delta,\quad
+ \zeta=t\nu-E\Gamma>0,\\
+ p=\bar p,\qquad 1<p<1+\beta<2.
+\end{gathered}
+\]
+Fix \(k>2\) for which a
+complete first column has been supplied; in particular one may use
+Lemma~\ref{s3:cc-four-recovery} or \(k=K\) above.
+No pre-existing complete high-value matrix is assumed in the converse.
+Put \(H=(p-1)/\beta\in(0,1)\), and define
+\begin{align*}
+ A_1&=1+Y+t(1-X),&B_1&=Q_o,\\
+ A_2&={t(1+Z)+E(1+Y)\over t+E},&B_2&={\zeta\over t+E},\\
+ C_1&=1+Y+t(p-X),&D_1&=\Gamma+t\beta X,\\
+ C_2&={tk+E(1+Y)\over t+E},&D_2&={E\Gamma\over t+E}.
+\end{align*}
+Then \(B_1,B_2,D_1>0\), \(D_2\ge0\), and the middle
+column can carry a prescribed \(r>2\) if and only if
+\begin{equation}\label{s3:cc-middle-eight}
+  r\le\mathcal R_{\rm mid}:=\min\left\{\begin{gathered}
+  C_1,C_2,A_1+B_1H,A_2+B_2H,\\
+  {B_iC_j+D_jA_i\over B_i+D_j}\quad(1\le i,j\le2)
+ \end{gathered}\right\}.
+\end{equation}
+For every such \(r\), the single reconstruction is
+\begin{equation}\label{s3:cc-middle-recovery}
+ \begin{gathered} h=\max\{0,(r-A_1)/B_1,(r-A_2)/B_2\},\\
+  a={r-1-Y+\Gamma h\over t},\qquad\widehat q_1=-1-\beta h.\end{gathered}
+\end{equation}
+It has \(O_{11}=1\) and \(O_{01}=-1\) or \(O_{21}=1\).
+It uses exactly the \(p,k,E\) of the reconstructed first column.
+\end{lemma}
+\begin{proof}
+First consider an existing middle column. Lower \(a\) to
+\(a_*=(r-1-Y+\Gamma h)/t>0\). Since \(O_{11}\le1\),
+this does not increase \(a\); it raises \(O_{11}\) to 1.
+The potentially increasing \(O_{01}\) remains below zero because
+\(O_{01}=-a-X+\delta h<\delta-X<0\).
+The stage entry \(S_{01}\) rises but stays negative.
+Both \(O_{21}\) and \(D_{21}\) decrease and remain positive,
+because \(r>2\), \(Z\le1\), and \(\nu h<1\).
+At the endpoint \(D_{11}=1+Y-\Gamma h\in(0,2)\) and
+\(S_{11}=1-Vh\in(0,1]\); their lower bounds improve and their
+upper bounds hold throughout. Thus the segment is physical and fixes
+every other column and \(r,w\).
+
+With \(O_{11}=1\), substitution of \(a=a_*\) gives exactly
+\begin{align*}
+ t(1+O_{01})&=A_1+B_1h-r,\\
+ t(1-O_{21})&=(t+E)(A_2+B_2h-r),\\
+ t(p+S_{01})&=C_1-D_1h-r,\\
+ t(k-r-Ea)&=(t+E)(C_2-D_2h-r).
+\end{align*}
+Together with \(0\le h\le H\), these are the four line tests
+\(r\le A_i+B_i h,C_j-D_jh\).
+Their interval intersection is nonempty exactly under the eight
+comparisons in \eqref{s3:cc-middle-eight}. This remains valid when
+\(E=0,D_2=0\), because every \(B_i+D_j\) stays positive.
+Its smallest admissible \(h\) is \eqref{s3:cc-middle-recovery}.
+Since \(A_2\le2<r\), this \(h\) is positive and at least one
+of the two increasing lines is attained.
+
+Conversely use this \(h,a\). The four identities impose the two
+original bounds, the stage bound, and \(D_{21}\le k\).
+We have \(a>0\), while the stage bound gives
+\(a+X(1+\beta h)\le p\), hence \(a<p<2<k\).
+The other core entry is \(D_{11}=1+Y-\Gamma h\in(0,2)\).
+The stage entries are \(S_{11}=1-Vh\in(0,1]\) and
+\(S_{21}=r+Ea-Z(1+\beta h)\ge r-p>0\);
+also \(S_{21}\le O_{21}\le1\).
+The remaining original bounds follow from
+\(O_{01}<\delta-X<0\) and \(O_{21}>r-2>0\).
+Receiver and prefix bounds follow from \(0<h\le H<1\),
+\(1+\beta h\le p\), and \(P_1=-1\).
+All head quantities, the first column, and the last column remain
+unchanged. This proves simultaneous physical reconstruction, rather
+than independent existence claims for different columns.
+\end{proof}
+
+% Insert after the common-column lemmas, before the prescribed-target theorem.
+% Not a standalone file. Labels s3:cc-* are provided by the companion fragment.
+% Insert after the common-column lemmas, before the prescribed-target theorem.
+% Not a standalone file. Labels s3:cc-* are provided by the companion fragment.
+\subsection{The height polygon and simultaneous wall reconstruction}
+\label{s3:wall-calculus}
+
+Throughout this subsection put \(H_0=33/8\), and fix the seven-coordinate
+head \(\eta=(t,\beta,V,T,X,Y,Z)\). Cofactors always have the meanings in
+\eqref{s3:six-cofactors}. We use \(\Gamma\), not the height threshold
+\(\gam\), for the cofactor \(V-\beta Y\). Define
+\[
+ Q_o=t\delta-\Gamma,\quad \ell=\nu-E\delta,\quad
+ \Omega=t\Delta+E\tau-\mu,\quad \zeta=t\nu-E\Gamma.
+\]
+The common-column results above give, in the high-value domain,
+\(t>V\), \(\Delta>\tau\), \(Q_o>0\), \(\Omega>0\),
+\(p=(1+T)/Z<1+\beta<2\), and \(X>1/(1+\beta)\).
+They also provide one first column at the complete twelve-capacity
+minimum \(k=K(E)\), and one middle column for every
+\(2<r\le\mathcal R_{\rm mid}(E)\). These are simultaneous
+completions at the same \(\eta,E,p,k\).
+
+\begin{lemma}[The positive tail slope gap]\label{s3:wall-ell-positive}
+A complete canonical source with \(F\ge H_0\) has \(\ell>0\).
+\end{lemma}
+\begin{proof}
+Suppose instead that \(\ell\le0\). Write
+\(\epsilon=r-2\ge1/16\), \(s=p-1\), and, for this proof only,
+\(A=(1+E)\epsilon\), \(B=\beta\), \(D_B=1-B^2\).
+The common-column budgets give \(0<s\le B<1\), \(E<1/2\), and
+\(k\le1+s+X(1-Bs)\). The middle-column identity
+\[
+ t(a-\epsilon)=\epsilon(1-t)+(1-Y)+\Gamma h+(1-O_{11})>0
+\]
+gives \(a>\epsilon\). Since \(\nu>0\) and
+\(\nu\le E\delta\), also \(E>0\), and hence
+\(k\ge r+Ea>2+A\). It follows that
+\[
+ A\le s(1-B)\le B(1-B),\qquad
+ X\ge\frac{1+A-s}{1-Bs}.
+\]
+The difference between the last lower bound and its value at \(s=B\) is
+\[
+ \frac{(B-s)(1-B-BA)}{(1-Bs)(1-B^2)}\ge0,
+\]
+where \(1-B-BA\ge(1-B)(1-B^2)>0\). Consequently
+\[
+ 0<\delta\le\bar\delta:=\frac{1-B-BA}{1-B^2}.
+\]
+Two further same-matrix identities are
+\[
+\begin{split}
+ E\delta-(1+A-Z)
+ &=(E\delta-\nu)+\nu(1-h)\\
+ &\quad+E(a-\epsilon)+(1-O_{21})>0,\\
+ 1-Ek-\frac ZX(k-p)-Ts
+ &=(1+O_{20})+T(1-O_{00})+\frac\Delta X(p-S_{00})\ge0.
+\end{split}
+\]
+Using \(X\le1\), \(k>2+A\), \(s\le B\), \(Z>T\), and
+\(T=BZ-\nu\ge BZ-E\delta\), they imply
+\[
+ E\bar\delta>A,\qquad
+ 1>E(2+A-B\bar\delta)
+       +(1+A-E\bar\delta)(1+A-B+B^2).
+\]
+The substitution \(\delta\le\bar\delta\) in the second inequality
+has the stated direction: its right-hand side before substitution has
+coefficient \(-E(1+A+B^2)<0\) in \(\delta\).
+
+Set
+\[
+\begin{split}
+ \mathfrak F(A,E,B)&=(1-B^2)
+   \bigl\{E(2+A-B\bar\delta)\\
+  &\quad +(1+A-E\bar\delta)(1+A-B+B^2)-1\bigr\},\\
+ \mathfrak G(A,E,B)&=E(1-B)-(1-B^2+EB)A.
+\end{split}
+\]
+Thus \(\mathfrak F<0<\mathfrak G\). Direct expansion gives
+\[
+ \mathfrak F_A=(1-B^2+EB)(2A+B^2-B+2)>0,
+ \qquad \mathfrak G_A=-(1-B^2+EB)<0.
+\]
+Replacing \(A\) by \(A_0=(1+E)/16\) preserves these necessary
+inequalities. Put \(C=B^2-17B+15\), \(D=1-B^2\).
+Then \(16\mathfrak G(A_0,E,B)=CE-BE^2-D>0\), so
+\(C>0\), \(E>D/C\), and \(C>2D\). Since
+\(3B^2-17B+13\) decreases on \([0,1]\) and is negative at
+\(11/12\), we obtain \(0<B<11/12\).
+
+Writing \(\mathfrak F_0(E,B)=\mathfrak F(A_0,E,B)\), expansion gives
+\[
+ 256(\mathfrak F_0)_E
+ =3BE^2+(32B^3-34B^2+68B+2)E+H_4(B),
+\]
+where
+\[
+ H_4=-16B^4+288B^3-802B^2+273B+290.
+\]
+The Bernstein coefficients of \(H_4\) on \([0,1]\) are
+\(290,1433/4,1757/6,663/4,33\), all positive. Therefore
+\(\mathfrak F_0\) increases in \(E\ge0\). Moreover
+\[
+ \mathfrak F_0(D/C,B)=\frac{(1-B)^2(1+B)P_7(B)}{256C^3},
+\]
+\[
+\begin{split}
+ P_7(B)={}&-256B^7+13072B^6-233488B^5+1641728B^4\\
+ &-3447057B^3+3056607B^2-1206016B+176640.
+\end{split}
+\]
+On the three intervals \([0,3/8]\), \([3/8,1/2]\), and
+\([1/2,11/12]\), its degree-seven Bernstein coefficients have
+respective positive minima
+\[
+ \frac{52615035}{16384},\qquad
+ \frac{31756901}{17920},\qquad
+ \frac{43980727}{559872}.
+\]
+These three finite coefficient calculations can be recovered directly
+from the displayed polynomial: after substituting \(B=a+(b-a)z\),
+if the power coefficients are \(c_j\), the Bernstein coefficient of
+index \(i\) is
+\(\sum_{j=0}^i c_j\binom{i}{j}/\binom7j\).
+Thus \(P_7>0\) on the entire required interval, and
+\(\mathfrak F_0(E,B)>\mathfrak F_0(D/C,B)>0\), a contradiction.
+This proof uses four fixed univariate positive-coefficient certificates;
+it does not use an adaptive multidimensional tree.
+\end{proof}
+
+For the reconstruction statements below, the head satisfies the
+common-column entrance inequalities just listed, and
+\(0\le E<\min\{1,\nu/\delta\}\); in particular \(\ell>0\).
+The quantities \(K\) and \(\mathcal R_{\rm mid}\) are the complete
+capacities, with \(K>2\) and \(\mathcal R_{\rm mid}>2\).
+When a reconstruction is applied at \(r>2\), its first and middle
+columns are supplied by those capacity lemmas before the tail is
+constructed. Put
+\begin{equation}\label{s3:wall-tail-functions}
+\begin{gathered}
+ b_0=1+X,\qquad
+ a_T=1-Y+\Gamma b_0/\delta,\quad
+ c_T=1+Z+\nu b_0/\delta,\\
+ R_T(b)=a_T+Q_ob/\delta,\quad
+ C_T(b)=c_T-\ell b/\delta,\quad
+ C_0=C_T(b_0)=1+Z+Eb_0,\\
+ A_c=\mu+\Delta+\tau,\qquad B_c=\Delta+\nu+\delta,\\
+ \mathcal C=A_c+\Omega K,\qquad
+ \mathcal D=\ell a_T+Q_oc_T.
+\end{gathered}
+\end{equation}
+Here \(R_T,C_T\) are scalar tail capacities, not matrices.
+Two useful cofactor identities are
+\[
+ \Delta Q_o-\tau\ell=\Omega\delta,\qquad
+ \Delta\mathcal D=\ell A_c+\Omega B_c.
+\]
+
+\begin{lemma}[Anchor bounds and lowering the shared coordinate]
+\label{s3:wall-monotonicity}
+One has \(a_T<2<c_T\). At fixed head, decreasing \(E\) preserves
+a completed first and middle column at any \(r>2\).
+After replacing the first column by its new complete maximum
+\(K(E)\), the same \(r\) remains feasible. In particular
+\(\mathcal R_{\rm mid}(E)\) is nonincreasing on its high-value
+range, in the precise sense that
+\[
+ E_1\le E_2,\quad 2<r\le\mathcal R_{\rm mid}(E_2)
+ \quad\Longrightarrow\quad
+ r\le\mathcal R_{\rm mid}(E_1).
+\]
+This statement concerns the first two columns only.
+\end{lemma}
+\begin{proof}
+From \(Q_o>0\), \(t\le1\), and \(\tau>0\), one obtains
+\(\Gamma<\delta\) and \(\Gamma X<\delta Y\).
+If \(Y\ge X\), then \(a_T<2+X-Y\le2\);
+if \(Y\le X\), then \(a_T<1+Y/X\le2\).
+Also \(p<1+\beta\) gives \(\nu+Z>1\), whence
+\(c_T>1+Z+\nu>2\).
+
+For the monotonicity assertion retain all completed variables except
+\(E\). In the first column the only affected entries are
+\(-Ek\), \(-Ek-Zj\), and \(-Ek-Zj-Tg\).
+They increase toward zero when \(E\) decreases, and remain negative
+because \(j,g>0\); all their absolute-value bounds are preserved.
+In the middle column the affected entries are
+\(r+Ea\), \(r+Ea-Z(1+\beta h)\), and
+\(r+Ea-Z-\nu h\). Their upper bounds improve. Their lower bounds
+remain valid since
+\[
+ r+Ea-Z(1+\beta h)\ge r-Zp=r-1-T>0,
+\]
+and the last original entry is this stage entry plus \(Th\ge0\).
+Here \(1+\beta h\le p\), \(pZ=1+T\), and \(r>2\).
+The core entry \(r+Ea\) remains positive. These are all occurrences
+of \(E\) in the two columns. Finally each original first-column
+capacity has a positive constant numerator and a positive affine
+denominator with nonnegative slope in \(E\); hence \(K\) cannot
+decrease when \(E\) is lowered. Enlarging the permitted core bound
+from the old \(k\) to this new \(K\), and using the common-column
+reconstruction, preserves the middle column. No assertion about
+preserving the tail column under this operation has been used.
+\end{proof}
+
+\begin{lemma}[Tail slacks at one complete matrix]
+\label{s3:wall-slack-identities}
+Write \(x_r=r\), \(y=-w\), and define
+\[
+\begin{split}
+ J_a&=\mu(1+O_{02})+\Delta(1-O_{12})+\tau(1+O_{22}),\\
+ J_b&=\Delta(1-P_2)+\nu(1+O_{02})+\delta(1+O_{22}).
+\end{split}
+\]
+Then the following exact identities hold:
+\begin{equation}\label{s3:wall-slack-formulas}
+\begin{split}
+ J_a&=A_c+\Omega b-\Delta x_r-\tau y,\\
+ J_b&=B_c-\ell b-\delta y,\\
+ \ell J_a+\Omega J_b
+ &=\Delta(\mathcal D-\ell x_r-Q_oy),\\
+ C_0-y&=(1+O_{22})+E(1+O_{02})
+               +(EX+Z)(1-P_2)+\ell v.
+\end{split}
+\end{equation}
+At a complete source of height at least \(H_0\), all displayed
+slacks are nonnegative, and \(C_0-y>0\).
+\end{lemma}
+\begin{proof}
+Expand \(O=S+u\widehat v^T\), \(S=D+x\widehat q^T\),
+and \(P=\beta\widehat v+\widehat q\), and cancel terms by the six
+cofactor definitions. Every weight in \(J_a,J_b\) is positive.
+In the last identity all terms are nonnegative and \(\ell v>0\),
+by Lemmas~\ref{s3:wall-ell-positive} and~\ref{s3:cc-positive-receiver}.
+\end{proof}
+
+The height polygon is the following closed set of scalar pairs:
+\begin{equation}\label{s3:wall-polygon}
+\begin{gathered}
+ 0\le y\le x_r\le\mathcal R_{\rm mid},\qquad y\le C_0,\\
+ \Delta x_r+\tau y\le\mathcal C,\qquad
+ \ell x_r+Q_oy\le\mathcal D.
+\end{gathered}
+\end{equation}
+Every complete high-value source maps to this polygon after
+normalizing \(p,k\): the first oblique inequality follows from
+\(b\le K\) and \(J_a\ge0\), the second from their positive
+combination in \eqref{s3:wall-slack-formulas}, and \(y\le C_0\)
+from the last identity. Also \(y=F-r>0\), because \(r<5/2<F\).
+This argument does not assume that the original matrix already has
+any of the three tail contacts.
+
+\begin{lemma}[Complete recovery on the wall]
+\label{s3:wall-reconstruction}
+Fix normalized common first and middle columns, and suppose
+\(r\ge H_0/2\). There is a complete tail at \(w=-r\) if and only if
+\[
+ r\le\mathcal R_{\rm mid}(E),\qquad r\le\mathcal W(E),\qquad
+ \mathcal W(E):=\min\left\{C_0,
+ \frac{\mathcal C}{\Delta+\tau},
+ \frac{\mathcal D}{\ell+Q_o}\right\}.
+\]
+The sufficiency assertion uses the complete twelve-capacity first
+column. It does not treat four selected capacities as a standalone
+relaxation. If a complete wall of height \(m\ge f>H_0\) exists
+at this head and \(E\), another complete wall of height exactly
+\(f\) exists there, with all columns reconstructed at common
+\(p,K,E\).
+\end{lemma}
+\begin{proof}
+Necessity is \eqref{s3:wall-polygon} at \(x_r=y=r\).
+For sufficiency first suppose \(r\le R_T(K)\). Set
+\[
+ b=\max\{b_0,\delta(r-a_T)/Q_o\},\qquad
+ v=(b-b_0)/\delta,\qquad q=1-\beta v.
+\]
+Then \(b_0\le b\le K\), \(R_T(b)\ge r\), and
+\(C_T(b)\ge r\). For the last inequality use \(r\le C_0\)
+when \(b=b_0\), and
+\((\ell+Q_o)r\le\mathcal D\) otherwise.
+The capacity \(K\le b_0+\delta(p-1)\) gives
+\(0\le v\le p-1<1\); hence \(0<q\le1\), \(P_2=1\),
+and \(O_{02}=-1\). The two remaining original entries obey
+\(O_{12}=1+r-R_T(b)\le1\) and
+\(O_{22}=-r+C_T(b)-1\ge-1\).
+Their opposite bounds follow from
+\[
+ O_{12}>r-K>-1,\qquad
+ O_{22}\le-r+EK+Zq+Tv<2-r<0.
+\]
+The strict upper estimate uses \(EK<1-T\), \(Zq\le1\),
+and \(Tv\le T\). For the stage bounds,
+\(S_{02}=-1-v\ge-p\), \(S_{12}>r-K>-1>-p\), and
+\(S_{22}=O_{22}-Tv\ge-1-Tv\ge-p\).
+All stage upper bounds follow from \(S_{i2}=O_{i2}-u_iv\le1<p\).
+The core entries satisfy
+\(r-tb\ge r-K>-K\), \(-r+Eb\ge-r\ge-K\);
+their upper bounds follow from the corresponding original entries
+after subtracting the nonnegative completion terms. Also \(b\le K\).
+These verify every tail band in \eqref{s3:outer-physical}.
+
+If instead \(r>R_T(K)\), set
+\[
+ \begin{gathered} b=K,\qquad q=\frac{1+V+(t-V)K-r}{\tau},\\
+ v=\frac{Xr-(tX-Y)K-X-Y}{\tau}.\end{gathered}
+\]
+Then \(O_{02}=-1\), \(O_{12}=1\), and
+\(O_{22}\ge-1\) is exactly
+\((\Delta+\tau)r\le\mathcal C\).
+At \(r=R_T(K)\) these formulas agree with the preceding formulas
+at \(b=K\); increasing \(r\) increases \(v\) and decreases
+\(P_2\). Thus \(v>0\) and \(P_2<1\).
+The missing upper bound for \(v\) must not be assumed. It follows
+from the independent identity
+\[
+\begin{split}
+ \mu(p+S_{02})={}&X(V+T)(r-2)\\
+ &+[X(VE+Tt)+\mu](K-b)+\mu(p-S_{00})\\
+ &+XV[(1+O_{20})+(1+O_{22})]\\
+ &+XT[(1-O_{10})+(1-O_{12})]>0.
+\end{split}
+\]
+All quantities on its right have already been verified, and its first
+term is strictly positive. Since \(S_{02}=-1-v\), it gives
+\(v<p-1<1\). Now \(q=(K-1-v)/X>0\), so \(0<P_2<1\)
+and \(q<1\). The remaining original, stage, receiver, and core
+bounds follow exactly as in the preceding construction; in particular
+\(S_{12}=1-Vv>0\) and \(S_{22}\ge-1-Tv\ge-p\).
+
+In both cases first and middle columns are those given by
+Lemmas~\ref{s3:cc-twelve-capacities} and~\ref{s3:cc-middle-capacity}
+at the same \(p,K,E,r\). Hence this is a single matrix, not a
+combination of separately optimized completions. Finally, decreasing
+the wall coordinate from \(m/2\) to \(f/2\) preserves every
+inequality of \eqref{s3:wall-polygon}: the two oblique coefficients
+are positive and all other bounds are upper bounds. The two explicit
+constructions apply again at \(r=f/2>2\).
+\end{proof}
+
+\begin{lemma}[Exactness at high polygon maxima]
+\label{s3:wall-polygon-maximum}
+If the maximum of \(x_r+y\) on \eqref{s3:wall-polygon} exceeds
+\(H_0\), it is attained by one complete canonical source at the
+fixed \(\eta,E\). Thus the polygon computes the exact maximum
+on this high-value range; no assertion about recovery of arbitrary
+low-value polygon points is made.
+\end{lemma}
+\begin{proof}
+Take a maximizing point. The first and middle columns are reconstructed
+at \(k=K\) and its actual \(r=x_r\). Since \(x_r\ge(x_r+y)/2>2\), the first and middle
+columns alone give \(k\le3-\beta\) and
+\(x_r\le2+\beta-T\). Thus
+\(x_r\le\mathcal R_{\rm mid}<5/2\) and \(y>0\). A wall point was handled in
+Lemma~\ref{s3:wall-reconstruction}. At a nonwall point with \(y=C_0\),
+the second oblique inequality gives \(x_r\le R_T(b_0)\);
+take \(b=b_0,v=0,q=1,w=-C_0\). The same entrywise checks apply,
+and \(O_{22}=-1\). This would contradict the positive-receiver
+lemma at high value, so this alternative cannot actually occur.
+
+If \(x_r>y\) and \(y<C_0\), the second oblique inequality
+must be an equality. Otherwise a sufficiently small move in the
+direction \((-\tau,\Delta)\) preserves the first oblique constraint,
+improves the bound on \(x_r\), preserves all strict bounds, and
+increases the objective by \(\Delta-\tau>0\).
+Set
+\[
+ b=(B_c-\delta y)/\ell,\qquad
+ v=(b-b_0)/\delta,\qquad q=1-\beta v,\qquad w=-y.
+\]
+The inequalities and the two cofactor identities give
+\(b_0<b\le K\), \(R_T(b)=x_r\), and \(C_T(b)=y\).
+Thus \(P_2=1\), \(O_{02}=-1\), \(O_{12}=1\),
+\(O_{22}=-1\). The bounds \(v\le p-1\), \(q>0\),
+and all stage bounds are as in the first wall construction.
+For the last core entry use \(-y+Eb\ge-y\ge-x_r\ge-K\)
+and \(-y+Eb\le O_{22}=-1<K\). This proves complete recovery.
+\end{proof}
+
+\subsection{Why a maximum at fixed head has a wall representative}
+\label{s3:wall-global-representative}
+
+The next finite statement is an explicit computational input. Its
+analytic role is separated from the existence and derivative argument.
+For \(i=X,Y\) set
+\[
+ c_X=\frac\mu{VX}+\frac{Tt}{V},\qquad c_Y=\frac{tZ}{Y},\qquad
+ D_i=E+c_i,\qquad\sigma=Q_o-\ell,
+\]
+and define
+\begin{equation}\label{s3:wall-nonwall-numerators}
+\begin{split}
+ N_{i1}&=(Q_o+\delta E)D_i b-\sigma(D_i a+k),\\
+ N_{i2}&=Q_o\nu(t+E)D_i b
+           -\sigma[t\nu D_i a+\zeta k].
+\end{split}
+\end{equation}
+
+\begin{proposition}[Finite exclusion of the nonwall stationary source]
+\label{s3:wall-C19-finite}
+Consider a complete source with \(F\ge H_0\), \(\Gamma>\nu\),
+\(\sigma>0\), \(r+w>0\), and the simultaneous contacts
+\begin{equation}\label{s3:wall-C19-contacts}
+\begin{gathered}
+ O_{10}=1,\quad O_{20}=-1,\quad D_{21}=k,\quad pZ=1+T,\quad O_{11}=1,\\
+ P_2=1,\quad O_{02}=-1,\quad O_{12}=1,\quad O_{22}=-1,\\
+ (S_{00}=p\ \hbox{or}\ S_{10}=p),\qquad
+ (O_{01}=-1\ \hbox{or}\ O_{21}=1).
+\end{gathered}
+\end{equation}
+Then all four numbers \(N_{X1},N_{Y1},N_{X2},N_{Y2}\) are positive.
+\end{proposition}
+\begin{proof}[Certificate reduction and verification obligation]
+The identity
+\[
+ N_{i2}=\zeta N_{i1}+E\Gamma\sigma D_i(b-a)
+\]
+reduces the assertion to \(N_{X1}>0\) and \(N_{Y1}>0\).
+Here \(\zeta=t\ell+EQ_o>0\), and
+\(b=1+X+\delta v>1+X\), whereas
+\(a<p-X<2-X\); thus \(b-a>0\).
+The two choices in each of the last line of
+\eqref{s3:wall-C19-contacts} give four contact systems. Each is
+combined separately with \(-N_{X1}\ge0\) and \(-N_{Y1}\ge0\),
+giving eight closed necessary systems.
+
+Their algebraic elimination is explicit. The first column is
+\[
+\begin{array}{ll}
+ S_{00}=p:& k=\dfrac{p\mu+X(V+T)}{\mu+X(VE+Tt)},\quad j=(k-p)/X,\\[1mm]
+ S_{10}=p:& k=\dfrac{p\mu+Y(V+T)}{V(tZ+EY)},\quad j=(tk-p)/Y,
+\end{array}
+\]
+with \(g=(tk-1-Yj)/V\). The middle column is respectively
+\[
+\begin{array}{ll}
+ O_{01}=-1:&
+ r=\dfrac{Q_ok+E[\delta(1+Y)+\Gamma(1-X)]}{Q_o+\delta E},\\
+ &h=(r-1-Y-t(1-X))/Q_o,\quad a=1-X+\delta h;\\[1mm]
+  O_{21}=1:&h=(k-1-Z)/\nu,\quad r=k-Ea,\\
+  &a=(k-1-Y+\Gamma h)/(t+E).
+\end{array}
+\]
+In either case
+\[
+ \begin{gathered} b=\frac{\delta(r-1+Y)-\Gamma(1+X)}{Q_o},\quad v=(b-1-X)/\delta,\\
+ q=1-\beta v,\qquad y=1+Z+Eb-\nu v.\end{gathered}
+\]
+Every denominator displayed is positive. The archived finite systems
+retain these as denominator-cleared equations and retain defined
+auxiliaries, so the maximum input degree is three; no auxiliary is
+free to vary independently of its defining equation.
+
+For precision, their common closed root box is
+\[
+\begin{array}{c|c@{\qquad}c|c}
+ t&[1/16,1]&E&[1/512,1/2]\\
+ \beta,T&[1/16,7/8]&V&[1/16,1]\\
+ X,Z&[1/2,1]&Y&[1/32,1]\\
+ \delta&[1/8,1]&\Gamma,\nu&[1/16,1]\\
+ Q_o+\delta E&[0,2]&k&[33/16,3]\\
+ a&[1/8,3/2]&b&[3/2,3]\\
+ r&[33/16,5/2]&y&[13/8,5/2]\\
+ p&[17/16,15/8]&g&[1/8,15/16]\\
+ j&[3/16,1]&h&[1/16,1]\\
+ v&[0,1]&D_i&[0,48].
+\end{array}
+\]
+The less immediate bounds follow without numerical root searching.
+Put \(\epsilon=r-2\ge1/16\). The middle column gives
+\(\nu h\ge\epsilon\), hence \(\nu\ge1/16\);
+\(\Gamma>\nu\), \(V>\Gamma\), and \(Y>XV\) give the displayed
+lower bounds for \(\Gamma,V,Y\). The strict first-column gap gives
+\[
+ g-1/8=(k-33/16)+(1-Xj)+(15/16-O_{00})>0.
+\]
+Also \(p<15/8\) and \(k-Xj\le p\) imply \(j>3/16\).
+The contact \(O_{20}=-1\) gives
+\(Ek-\nu g=(1-Z)+Z(1-j-\beta g)\ge0\), so
+\(E>1/384>1/512\). Further,
+\[
+ (t-E)a-2\epsilon=(1-Y)+(1-Z)+(\Gamma-\nu)h+(1-O_{21})>0,
+\]
+giving \(a>1/8\), and
+\(T(1-h)-\epsilon-Ea=(1-O_{21})+Z(p-1-\beta h)\ge0\)
+gives \(T>1/16\). Finally
+\(k\le3-\beta\) and \(r\le2+\beta-T\) imply
+\(r<5/2\), whence \(y=F-r>13/8\).
+The definitions bound \(D_X<1/2+32+14<48\) and
+\(D_Y<1/2+32<48\). Other endpoints are weakened forms of the
+common-column and first-column height bounds.
+
+The eight proof trees, grouped by stage contact, middle contact, and
+tested numerator \(X,Y\), have respective node counts
+\[
+ (17317,9111),\quad(42915,22627),\quad
+ (8781,4825),\quad(20223,10711).
+\]
+They contain \(136510\) nodes and \(68259\) contradictory leaves,
+with no open leaf. Each stored model has 18 equalities and 60
+nonnegative polynomial rows, including the one tested negative
+numerator. Their coefficients, root boxes, and immutable payload
+identities are specified in the supplementary source index under
+the nonwall stationary exclusion (historical identifier C19/V20).
+Acceptance reconstructs those rows and checks every leaf with outward
+integer interval arithmetic; covered binary splits propagate emptiness
+to each root by finite induction. This finite acceptance, rather than
+the preceding algebra alone, establishes the two strict positivities.
+The displayed numerator identity then establishes the other two.
+\end{proof}
+
+\begin{theorem}[Same-head maximum on the wall]
+\label{s3:wall-head-maximum}
+If the complete canonical fibre at a fixed head has a source of
+height greater than \(H_0\), its maximum is attained, and every
+value of \(E\) attaining that maximum has a complete wall
+representative of the same height. Consequently every attainable
+target \(H_0<f<5\) has a same-head wall representative of height
+exactly \(f\).
+\end{theorem}
+\begin{proof}
+Attainment follows directly from the full physical domain. Restrict
+to heights \(F\ge f>H_0\) below a known attainable height. Then
+\(r\ge f/2\), \(k\ge r\), \(p\ge k/2\ge f/4\), and
+\(p\le2,k\le4\); all other inner variables are bounded by the
+physical bands. At a fixed head the six positive cofactors are
+constant. The remaining constraints are closed, and the pivots have
+uniform positive lower bounds. This high-value fibre is compact.
+
+Normalize \(p,k\) and use the exact polygon maximum. Write
+\(\sigma=Q_o-\ell\) and \(R_m=\mathcal R_{\rm mid}\).
+For \(\sigma\ge0\), elimination of \(y=F-x_r\) from the polygon
+gives its high maximum as the minimum of
+\[
+\begin{gathered}
+ U_1=2R_m,\quad U_2=2\mathcal C/(\Delta+\tau),\quad
+  U_3=R_m+C_0,\\
+  U_4=[\mathcal C+(\Delta-\tau)C_0]/\Delta,\\
+ U_5=(\mathcal D+\sigma R_m)/Q_o,\qquad
+ U_6=a_T+c_T+\sigma K/\delta.
+\end{gathered}
+\]
+For example, set \(s_0=R_m-x_r\), \(s_1=x_r-y\),
+\(s_2=C_0-y\), \(s_3=\mathcal C-\Delta x_r-\tau y\),
+and \(s_4=\mathcal D-\ell x_r-Q_oy\). Their slack identities are
+\[
+\begin{gathered}
+ U_1-F=2s_0+s_1,\quad
+ U_2-F=[2s_3+(\Delta-\tau)s_1]/(\Delta+\tau),\\
+ U_3-F=s_0+s_2,\quad
+ U_4-F=[s_3+(\Delta-\tau)s_2]/\Delta,\\
+ U_5-F=(s_4+\sigma s_0)/Q_o,\quad
+ U_6-F=[(\Delta-\tau)s_4+\sigma s_3]/(\Omega\delta).
+\end{gathered}
+\]
+The converse follows by comparing the lower and upper bounds for
+\(x_r\), so these are complete polygon budgets, not a selection
+of numerically observed active constraints.
+
+Suppose there is no wall maximum at a maximizing \(E_*\).
+If \(\sigma\le0\), the direction \((-1,1)\) preserves height,
+improves both oblique bounds and the upper bound on \(x_r\),
+and reaches either the wall or \(y=C_0\). The latter has a
+complete high-value recovery with \(v=0\), already excluded.
+Hence \(\sigma>0\). The first four budget equalities force,
+respectively, a wall point or \(y=C_0\). They therefore have
+strict slack at this maximum. Only \(U_5,U_6\) can be active.
+
+We next verify the increase of \(U_6\) where needed. By the strict
+first-column gap, the only locally relevant capacities are the four
+in \eqref{s3:four-capacities}; two are constant in \(E\), and the
+others have the form \(n/(E+c_i)\), \(i=X,Y\).
+For these last two branches
+\[
+ \frac{d}{dE}\left(a_T+c_T+\frac{\sigma n}{\delta(E+c_i)}\right)
+ =\frac{n[\delta c_i-(Q_o-\nu)]}{\delta(E+c_i)^2}>0.
+\]
+Here is a direct proof of the sign. The inequalities
+\(X>\delta\), \(\nu+Z>1\) imply \(\Delta>X\delta\):
+for \(Z\ge X\) use
+\(\Delta-X\delta=\delta(Z-X)+X\nu\); for \(Z\le X\) use
+\[
+ \Delta-X\delta=X(\nu+Z-1)+X(1-X)+(X-\delta)(X-Z).
+\]
+Thus \(\delta Z/X-(Q_o-\nu)=\Delta/X-Q_o>0\).
+If \(d=tX-Y\ge0\), both \(c_X,c_Y\ge Z/X\).
+If \(d\le0\), then \(c_X\ge c_Y\), and positivity for \(c_Y\)
+follows from \(\Gamma+\nu+t\delta(Z/Y-1)>0\) when \(Z\ge Y\),
+or from
+\[
+ \Gamma+(\nu+Z-1)+(1-Y)+(1-t\delta/Y)(Y-Z)>0
+\]
+when \(Z\le Y\); here \(t\delta<Y\).
+Constant capacities likewise give a positive derivative.
+All finitely many active right branches of \(U_6\) increase.
+
+It follows that \(U_5\) must be active. Its slack identity gives
+\(x_r=R_m\) and \(\ell x_r+Q_oy=\mathcal D\).
+The nonwall construction in Lemma~\ref{s3:wall-polygon-maximum}
+therefore gives all four tail contacts in
+\eqref{s3:wall-C19-contacts}. The common middle reconstruction gives
+\(O_{11}=1\), with \(O_{01}=-1\) or \(O_{21}=1\).
+
+On an active differentiable branch of \(R_m\),
+\[
+ U_5'=b+\frac\sigma{Q_o}R_m',\qquad
+ b=\delta(R_m-a_T)/Q_o>1+X>a,\qquad 0<\sigma/Q_o<1.
+\]
+For the five middle capacities independent of \(K\), the derivatives
+are zero or, at their actual contacts,
+\[
+ -\frac{ta}{t+E},\qquad
+ -\frac{(\Gamma+t\beta X)a}{\nu+\Gamma+t\beta X+\beta XE}.
+\]
+Each is at least \(-a\), so it cannot prevent \(U_5\) from
+increasing. For a constant active \(K\), the two core intersection
+derivatives are likewise
+\(-Q_oa/(Q_o+\delta E)\) and \(-ta/(t+E)\).
+Thus a blocking right branch must use an \(E\)-dependent first
+capacity and an active middle core capacity. These force
+\(O_{20}=-1\), \(D_{21}=k\). The strict first-column gap
+excludes \(O_{00}=1\) and \(g=1\); hence they also force
+\(O_{10}=1\) and \(S_{00}=p\) or \(S_{10}=p\).
+
+For completeness the sign region of this source is determined by
+three identities. Put \(G=g-v\), \(A=k-b\), \(s_P=1+P_0\).
+The contacts just obtained give
+\[
+ \Gamma G=(r-2)+tA+Ys_P>0,\qquad
+ (t-E)k=(Y+Z)j+(V+T)g>0,
+\]
+\[
+ (\Gamma-\nu)G=(r+w)+(t-E)A+(Y+Z)s_P>0.
+\]
+Thus \(\Gamma>\nu\). In particular the region
+\(\Gamma\le\nu\), including equality, requires no finite
+nonwall exclusion.
+
+The two possible variable-\(K\) core derivatives are
+\[
+ R_{12}'=\frac{Q_o(K_i'-a)}{Q_o+\delta E},\qquad
+ R_{22}'=\frac{\zeta K_i'}{\nu(t+E)}-\frac{ta}{t+E},\qquad
+ K_i'=-\frac{k}{D_i}.
+\]
+Multiplying \(U_5'\) by the respective positive denominators gives
+exactly \(N_{i1}\) and \(N_{i2}\) in
+\eqref{s3:wall-nonwall-numerators}. At a local maximum at least one
+common active right branch must have a nonpositive numerator;
+otherwise the finite minimum of all active budgets increases.
+Proposition~\ref{s3:wall-C19-finite} excludes this.
+
+No differentiability assumption at a capacity tie is needed: take
+all active right branches of the finite family of rational functions.
+There is a right neighbourhood since a high source has
+\(E<1/2\) and \(\ell>0\). At \(E=0\), the bare middle capacity
+\(C_2\) ties the two core intersection capacities at \(K\).
+Its right derivative is \(K_i'-a_0\), where
+\(a_0=(r-1-Y)/t\); the actual reconstructed
+\(a=a_0+\Gamma h/t>a_0\) supplies an intersection branch with
+no greater derivative. Thus it introduces no missing obstruction.
+The hypothetical absence of a wall representative is impossible.
+Finally lower a maximum wall to any prescribed \(f>H_0\) by
+Lemma~\ref{s3:wall-reconstruction}.
+\end{proof}
+
+\subsection{The head entrance used by the near-peak argument}
+\label{s3:wall-head-entrance-section}
+
+\begin{proposition}[Finite nonpositive-difference exclusion]
+\label{s3:wall-d-finite}
+A complete canonical source with \(d=tX-Y\le0\) has
+\(F\le H_0\). This includes \(d=0\).
+\end{proposition}
+\begin{proof}[Analytic reduction to eight finite systems]
+Suppose \(F>H_0\). Theorem~\ref{s3:wall-head-maximum} supplies
+a same-head maximum wall of height \(m>H_0\).
+At a normalized wall feasibility is exactly
+\(r\le\mathcal R_{\rm mid}(E),\mathcal W(E)\).
+The first capacity is nonincreasing in its high range.
+When \(d\le0\), the second is nondecreasing: \(C_0\) increases,
+and
+\[
+ \left(\frac{\mathcal D}{\ell+Q_o}\right)'
+   =\frac{\delta Q_o(c_T-a_T)}{(\ell+Q_o)^2}>0.
+\]
+For the complete first-column terms \(N/(A+BE)\), differentiation
+of \(\Omega K_i\) gives a positive multiple of
+\(\tau/X-(t-V)=-d/X\), or
+\(\tau t/Y-(t-V)=-Vd/Y\), when \(B>0\); when \(B=0\)
+the derivative is positive. Hence their minimum is nondecreasing.
+
+These directions allow a maximum wall with
+\(\mathcal R_{\rm mid}(E)=\mathcal W(E)=m/2\).
+Indeed \(\mathcal W(0)\le1+Z\le2<m/2\), whereas at an
+actual maximum both capacities are at least \(m/2\).
+Continue the two continuous capacities to
+\(E_{\max}=\min\{1,\nu/\delta\}\).
+At the right endpoint \(\mathcal R_{\rm mid}\) cannot remain
+above \(H_0/2\) while \(\mathcal W\ge m/2\): near-endpoint
+wall recovery and a convergent subsequence of bounded inner variables
+would give a complete high wall with either \(\ell=0\) or
+\(E=1\), contrary to the proved high-value bounds.
+The intermediate value theorem gives an interior intersection at
+height at least \(m/2\); maximality gives equality.
+
+At this intersection the \(C_0\) capacity cannot be active, by the
+strict last slack of Lemma~\ref{s3:wall-slack-identities}.
+The two other tail-capacity slack identities force
+\[
+ O_{02}=-1,\quad O_{12}=1,\quad O_{22}=-1,\qquad
+ P_2=1\ \hbox{or}\ b=k.
+\]
+Moreover
+\[
+ \frac{k-p}{X}-\frac{tk-p}{Y}
+ =\frac{(Y-tX)(k-p)+pX(1-t)}{XY}\ge0.
+\]
+The common first-column completion therefore gives
+\(S_{00}=p\), \(O_{10}=1\), and
+\(P_0=-1\) or \(O_{20}=-1\).
+The middle completion gives \(O_{11}=1\) and
+\(O_{01}=-1\) or \(O_{21}=1\). Together with
+\(pZ=1+T,w=-r,r\ge33/16,d\le0\), these are eight
+exhaustive contact systems. Ties belong to multiple systems and are
+not discarded.
+
+The finite certificates for these eight systems have, in the order
+\((P_0=-1,O_{20}=-1)\), then \((O_{01}=-1,O_{21}=1)\),
+then \((P_2=1,b=k)\), node counts
+\[
+ 21341, 31141, 101533, 313597,
+ 21593, 30615, 106077, 284869.
+\]
+The total is \(910766\) nodes, \(455387\) contradictory leaves,
+and zero open leaves. The exact source systems and payload identities
+are indexed as the nonpositive head-difference exclusion
+(historical identifier D22/V22). For the \(P_2=1\) systems there
+are 24 equalities and 50 nonnegative rows; for the \(b=k\)
+systems there are 23 equalities and 49 nonnegative rows. All input
+polynomials have degree at most three. These finite acceptance
+results are computational premises of this proposition.
+
+We record the source of their compact root boxes, to distinguish
+coverage from a box chosen around numerical samples. Write
+\(\epsilon=r-2\ge1/16\). The contacts give
+\[
+ (t-V)v=\epsilon+(1-t)+(Y-tX)q,\qquad
+ tp=1+Vg+(Y-tX)j,
+\]
+\[
+\begin{split}
+ \mu(g-v)&=(Y+Z)\epsilon+(tZ+YE)(k-b)
+              +Y(1+O_{20})+Y(1+O_{22}),\\
+ \mu(1-p+g)&=(\Delta+\tau)\epsilon+\Omega(k-b)
+              +\tau(1+O_{20})+\tau(1+O_{22}).
+\end{split}
+\]
+The common first-column budget gives \(k\le9/4\) and
+\(16X^2-17X+4\ge0\). This polynomial is negative on
+\([1/2,45/64]\), so \(X>45/64\).
+Since \(v\le p-1<7/8\), the first identity gives
+\(t>17/30>9/16\), \(t-V>1/14\), and \(v>\epsilon\).
+The middle column gives \(\nu\ge1/16\), \(T>1/16\),
+then \(\beta>1/8\), \(Z>1/2\).
+With \(Y\ge tX\), this yields \(Y>25/64\), \(V>3/64\),
+\(\tau>3/64\), \(\mu=\Gamma Z+\nu Y>3/128\), and
+\(\Delta>\tau+1/32>5/64\).
+The strict first-column gap gives \(g>1/8,j>3/16\).
+On the wall
+\[
+ Eb-\epsilon=(1+O_{22})+(1-Z)+Z(1-P_2)+\nu v>0,
+\]
+so \(E>1/36>1/64\). The other upper bounds are the physical
+boxes, \(a<p-X<3/2\), \(b\le k\le9/4\), and the first-column
+height bounds of Lemma~\ref{s3:cc-budgets}, equation~\eqref{s3:cc-quantitative-budgets},
+and Lemma~\ref{s3:cc-strict-gap}. The archive uses the following closed weakenings:
+\[
+\begin{array}{c|c@{\qquad}c|c}
+ t&[9/16,1]&E&[1/64,1/2]\\
+ \beta&[1/8,7/8]&V&[3/64,1]\\
+ T&[1/16,7/8]&X&[45/64,1]\\
+ Y&[25/64,1]&Z&[1/2,1]\\
+ \delta&[1/8,1]&\Gamma&[0,1]\\
+ \nu&[1/16,1]&\tau&[3/64,1]\\
+ \Delta&[5/64,1]&\mu&[3/128,1]\\
+ k,r&[33/16,9/4]&a&[0,3/2]\\
+ b&[3/2,9/4]&p&[17/16,15/8]\\
+ g&[1/8,15/16]&j&[3/16,1]\\
+ h&[1/16,1]&v&[1/16,7/8]\\
+ q&[1/16,1].&&
+\end{array}
+\]
+The stated lower bound for \(q\) uses the high-value
+positive-tail bound in \eqref{s3:cc-quantitative-budgets} of Lemma~\ref{s3:cc-budgets}, namely \(q>41/480>1/16\); this is one of the
+root-entry dependencies and is not inferred merely from \(q>0\).
+All six cofactor auxiliaries remain bound to their definitions.
+As for Proposition~\ref{s3:wall-C19-finite}, full integer interval
+acceptance and covered split induction exclude each closed necessary
+system. Hence a complete source with \(d\le0,F>H_0\) cannot exist.
+\end{proof}
+
+\begin{corollary}[The two remaining head entrance inequalities]
+\label{s3:wall-head-entrance}
+At a head which admits height \(f>H_0\), put
+\(p=(1+T)/Z\), \(d=tX-Y\). Then
+\[
+ d>0,\qquad tp+d-1>0,\qquad1+t+d<33/16.
+\]
+\end{corollary}
+\begin{proof}
+The first statement follows from
+Proposition~\ref{s3:wall-d-finite}. At a normalized complete
+representative \(O_{10}=1\), and
+\[
+ tp+d-1=(O_{10}-1)+t(p-S_{00})+Vg+d(1-j)>0.
+\]
+Let \(r_0=1+t+d\) and take the same-head wall of height \(f\),
+with \(r=f/2\). If \(r\le r_0\), replace only its tail by
+\(b=b_0=1+X,v=0,q=1,w=-r\). The resulting original entries are
+\[
+ O_{02}=-1,\qquad O_{12}=1+r-r_0,\qquad
+ O_{22}=C_0-r-1.
+\]
+Here \(O_{12}>0\) because \(r>2\), \(t\le1\), and
+\(0<d<1\), while \(O_{12}\le1\) by the supposed bound on \(r\).
+Also \(C_0>r\) by the strict wall slack, and
+\(Eb_0\le EK<1-T\), giving \(-1<O_{22}<0\).
+As \(b_0\le2<K\), all remaining stage, receiver, prefix,
+and core bounds follow as in the wall construction. This would
+be a complete source of height \(f>H_0\) with \(v=0\), impossible.
+Thus \(r>r_0\).
+
+If nevertheless \(r_0\ge33/16\), keep the same \(E,p,K\)
+and first column, reconstruct the middle column at \(r'=r_0\),
+and use the same zero-receiver tail with \(w=-r_0\).
+The middle reconstruction is valid because
+\(2<r_0<r\le\mathcal R_{\rm mid}\); the tail check now uses
+\(C_0>r>r_0\). It gives a complete source of height
+\(2r_0\ge H_0\) and \(v=0\), again impossible.
+Therefore \(r_0<33/16\).
+\end{proof}
+
+\subsection{From a wall representative to a single target endpoint}
+\label{s3:target-endpoint-proof}
+
+We now isolate the last finite input to the representative theorem.
+It concerns a specified set of complete matrices, not all matrices
+having one of the listed contacts. Let \(\mathcal R_*\) be the subset
+of \(\mathcal K\) satisfying
+\begin{equation}\label{s3:representative-set}
+\begin{gathered}
+ w=-r,\quad pZ=1+T,\quad O_{10}=O_{11}=1,\\
+ (O_{02},O_{12},O_{22})=(-1,1,-1),\\
+ (S_{00}=p\ \text{or}\ S_{10}=p),\quad
+ (P_0=-1\ \text{or}\ O_{20}=-1),\\
+ (O_{01}=-1\ \text{or}\ O_{21}=1),\quad
+ (P_2=1\ \text{or}\ b=k).
+\end{gathered}
+\end{equation}
+Every contact here is evaluated in the same matrix
+\eqref{s3:physical-matrix}.
+
+\begin{proposition}[Finite exceptional-contact exclusion]
+\label{s3:exceptional-finite}
+For a complete source in \(\mathcal R_*\),
+\[
+ S_{00}=p\ \text{or}\ P_0=-1
+ \quad\Longrightarrow\quad F<\Lambda=1653/400.
+\]
+This is a computational proposition, established by the six exact
+exclusion certificates described below.
+\end{proposition}
+
+\begin{proof}[Source reduction and certificate acceptance]
+Suppose \(F\ge\Lambda\). The analytic entrance results above apply
+since \(\Lambda>33/8\). The possible exceptional contacts are covered
+by the following six systems; no disjointness is required at ties.
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+System&First-column contact&Stage contact&Middle contact\\
+\midrule
+PX1&\(P_0=-1\)&\(S_{00}=p\)&\(O_{01}=-1\)\\
+PX2&\(P_0=-1\)&\(S_{00}=p\)&\(O_{21}=1\)\\
+PY1&\(P_0=-1\)&\(S_{10}=p\)&\(O_{01}=-1\)\\
+PY2&\(P_0=-1\)&\(S_{10}=p\)&\(O_{21}=1\)\\
+EX1&\(O_{20}=-1\)&\(S_{00}=p\)&\(O_{01}=-1\)\\
+EX2&\(O_{20}=-1\)&\(S_{00}=p\)&\(O_{21}=1\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+In each system retain all complete physical inequalities and all
+common contacts in \eqref{s3:representative-set}. The last disjunction
+is encoded by \((1-P_2)(k-b)=0\); both factors are nonnegative.
+The trigger is the exact integer inequality \(800r-1653\ge0\).
+Thus it is not rounded to the earlier threshold \(33/8\).
+
+For explicit source-to-box inclusion put
+\(\epsilon=r-2\), \(A=\delta h\), \(B=\epsilon+Ea\), and
+\(u_1=1+O_{01}\). These three additional coordinates and the three
+cofactors below are bound to their defining polynomials. The frozen
+24-coordinate root boxes are
+\begin{center}\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+Coordinate&Interval&Coordinate&Interval\\
+\midrule
+\(t\)&\([15/32,1]\)&\(E\)&\([1/64,1/2]\)\\
+\(\beta\)&\([1/8,7/8]\)&\(V\)&\([0,1]\)\\
+\(T\)&\([1/16,7/8]\)&\(X\)&\([45/64,1]\)\\
+\(Y\)&\([0,1]\)&\(Z\)&\([1/2,1]\)\\
+\(\delta\)&\([1/8,1]\)&\(\Gamma\)&\([0,1]\)\\
+\(\nu\)&\([1/16,1]\)&\(k\)&\([33/16,9/4]\)\\
+\(a\)&\([0,3/2]\)&\(b\)&\([1,9/4]\)\\
+\(r\)&\([33/16,9/4]\)&\(p\)&\([17/16,15/8]\)\\
+\(g\)&\([1/8,15/16]\)&\(j\)&\([3/16,1]\)\\
+\(h\)&\([1/16,1]\)&\(v\)&\([0,7/8]\)\\
+\(q\)&\([1/16,1]\)&\(A\)&\([0,1]\)\\
+\(B\)&\([1/16,1/4]\)&\(u_1\)&\([0,1]\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+Here \(\epsilon>1/16\), \(r\le k\le9/4\), and
+\(\beta<5-F<7/8\). The normalized middle-column bands imply
+\[
+\begin{gathered}
+ \nu h\ge\epsilon+Ea,\qquad \beta h\le s,\\
+ \epsilon+Ea\le\nu h-(1-Z)\le\nu s/\beta-(1-Z)
+ =T(\beta-s)/\beta<T\le s=p-1.
+\end{gathered}
+\]
+Consequently \(\nu,T,h>1/16\), \(\beta>1/8\),
+\(17/16<p<15/8\), and \(Z=(1+T)/p>1/2\).
+Also \(\delta>1/8\), \(g<3-r<15/16\), and
+\(k\le p+Xj\) gives \(j>3/16\). The first-column bound
+\(O_{00}<3-r\), together with \(Xj<1\), gives
+\(g=k-Xj-O_{00}>1/8\).
+
+To obtain the stated lower bound for \(X\), use
+\(X>1/(1+\beta)>1/2\) and the common first-column budget
+\(k\le1+\beta+X(1-\beta^2)\). The identity
+\[
+ X(1+X-k)+\tfrac14
+ =X[1+\beta+X(1-\beta^2)-k]+(X\beta-\tfrac12)^2
+ \ge0
+\]
+gives \(16X^2-17X+4\ge0\). This convex quadratic is
+negative at both endpoints of \([1/2,45/64]\), and hence throughout
+that interval. Thus \(X>45/64\).
+The contact \(O_{02}=-1\) gives
+\(b=1+Xq+v>1\) and \(v\le p-1<7/8\).
+The contact \(O_{12}=1\) gives
+\(r<1+(9/4)t\), so \(t>17/36>15/32\).
+The positive wall slack gives \(Eb>\epsilon\), hence
+\(E>1/36>1/64\); the common budget \(Ek<1-T\)
+gives \(E<1/2\). The middle stage gives
+\(a<p-X<3/2\), and \(r+Ea\le k\) gives
+\(1/16<B\le1/4\). Since \(X>\delta\) and \(h\le1\),
+\(O_{01}=-a-X+\delta h<0\); therefore \(0\le u_1<1\).
+Finally \(q>41/480>1/16\), while \(P_2\le1\) gives
+\(q<1\). The remaining bounds follow directly from
+\eqref{s3:outer-physical}. Closed endpoints in the model enlarge
+this necessary system and do not remove any strict physical source.
+
+For completeness, the additional polynomial inequalities used in the
+six models have explicit same-source payments. Put
+\(L=1+B-X>0\). The normalized bottom prefix and the middle bands give
+\[
+ Z\{h(\beta-s)-B\}
+  =(1-O_{21})+(1-Z)(1-h+B)\ge0,
+ \quad h\le s+u_1,\quad \delta s\ge L.
+\]
+Define
+\[
+ \begin{split}
+ F_1&=(1+Xu_1)^2-4XA-4X^2B,\\
+ F_2&=A-4XAL-4X^2BL,\\
+ F_3&=(1+Xu_1)^2(1-4XL)-4X^2B.
+ \end{split}
+\]
+Their nonnegativity follows from
+\[
+ \begin{split}
+ F_1={}&(2Xh-1-Xu_1)^2
+       +4X^2[h(\beta-s)-B]+4X^2h(s+u_1-h),\\
+ AF_2={}&[2\delta(A+XB)-A]^2
+       +4XA(A+XB)(\delta s-L)\\
+       &+4X\delta^2(A+XB)[h(\beta-s)-B],\\
+ F_3={}&4XF_2+(1-4XL)F_1.
+ \end{split}
+\]
+Indeed \(A>0\), and \(F_2\ge0\), \(B,L>0\) imply
+\(1-4XL>0\). These identities use \(A=\delta h\) and
+\(u_1=1-a-X+A\). If \(O_{01}=-1\), so \(u_1=0\),
+\(F_3\ge0\), \(B>1/16\), and \(X>1/2\) further imply
+\(X\ge4/5\), because
+\[
+ [4X(1+B-X)+4X^2B-1]_{B=1/16}
+ =-\tfrac14(3X-1)(5X-4).
+\]
+This last strengthening is used only in the three systems with
+\(O_{01}=-1\). All equalities and inequalities remain polynomial
+conditions on one 24-coordinate point.
+
+Two further strict rows in the model also come from this same source:
+\[
+\begin{aligned}
+ \mu(g-v)&=(Y+Z)\epsilon+(tZ+YE)(k-b)+Y(1+O_{20})>0,\\
+ (t-E)k&=O_{10}+O_{20}+(Y+Z)j+(V+T)g>0.
+\end{aligned}
+\]
+The first uses the three tail contacts and \(O_{10}=1\); the second
+uses \(O_{10}=1\), \(O_{20}\ge-1\), and positive receivers.
+Thus \(g>v\) and \(t>E\) are necessary rows, not extra assumptions.
+
+The model files specify the complete coefficient lists and their
+necessary-row derivations. The exact acceptor rebuilds interval
+bounds and polynomial derivative enclosures. An interval leaf
+exhibits an empty necessary interval. At a combination leaf, after
+normalizing the current box to \(z_i\in[-1,1]\), it reconstructs
+necessary rows \(b_j+\sum_i a_{ji}z_i\ge0\) and verifies rational
+weights \(\lambda_j\ge0\) with
+\[
+ \sum_j\lambda_jb_j+
+ \sum_i\left|\sum_j\lambda_ja_{ji}\right|<0.
+\]
+The left side bounds the weighted sum above on the entire box,
+contradicting the necessary rows. Each split covers its closed parent;
+induction through every branch therefore proves root emptiness.
+The six accepted trees contain respectively
+\(28073,38039,42425,49053,29989,40963\) nodes, and together
+\(114274\) contradiction leaves with no open leaf.
+Their exact files and replay entry are identified in Supplementary
+Index S3. The argument above supplies the source inclusion and the
+logical meaning of acceptance; the finite verification of all those
+leaves is a separate part of the computational proof.
+\end{proof}
+
+\begin{lemma}[Strict selection of the first-column capacity]
+\label{s3:strict-K24}
+Every source in \(\mathcal R_*\) with \(F\ge\Lambda\) satisfies
+\[
+ S_{10}=p,\quad O_{20}=-1,\quad S_{00}<p,\quad P_0>-1,
+ \qquad k=K_{24}<K_{13},K_{14},K_{23},
+\]
+where the capacities are those in \eqref{s3:four-capacities}.
+\end{lemma}
+\begin{proof}
+Proposition~\ref{s3:exceptional-finite} and the disjunctions in
+\eqref{s3:representative-set} give the four entry conditions.
+Write \(K_i=N_i/D_i\), with each \(D_i>0\). Direct expansion
+in the common matrix gives
+\[
+\begin{aligned}
+ N_{13}-D_{13}k
+ &=\Gamma(p-S_{00})+XV(1+P_0)+\beta X(1-O_{10})>0,\\
+ N_{14}-D_{14}k
+ &=\mu(p-S_{00})+XV(1+O_{20})+XT(1-O_{10})>0,\\
+ N_{23}-D_{23}k
+ &=\Gamma(p-S_{10})+VY(1+P_0)+\beta Y(1-O_{10})>0,\\
+ N_{24}-D_{24}k
+ &=\mu(p-S_{10})+VY(1+O_{20})+YT(1-O_{10})=0.
+\end{aligned}
+\]
+All strict signs follow from the positive cofactors and positive
+\(X,Y,V\). Dividing by the positive denominators proves the claim.
+\end{proof}
+
+\subsection{The prescribed-target representative and its equivalence}
+\label{s3:target-theorem-section}
+
+The preceding analytic lemmas and the explicitly identified finite
+exclusions give the following representative theorem. It asserts
+existence at the same head, not that every original source already
+has the representative contacts.
 
 \begin{proposition}[Prescribed-target representative]
 \label{s3:target-reduction}
@@ -1965,162 +4132,157 @@ Conversely, a target representative at this head is a complete
 physical source of height \(f\).
 \end{proposition}
 
-\paragraph{Scope and proof ingredients of the inherited proposition.}
-Fix \(\eta\) and \(\Lambda\le f<5\), and assume that the complete
-fibre at this head contains a source with \(F\ge f\).
-We first establish the required attainment in the full physical domain,
-before imposing any strict endpoint qualifications. On its subset
-\(F\ge f\), the inequalities \eqref{s3:outer-physical} give
+\begin{proof}
+Fix the head \(\eta\) and a target \(\Lambda\le f<5\), and assume
+that some complete source has \(F\ge f\). Compactness is applied
+before imposing the strict endpoint qualifications. On the high-value
+part of the fixed-head fibre,
 \[
- r\ge F/2\ge f/2,\qquad k\ge D_{21}=r+Ea\ge r,
- \qquad p\le1+\beta\le2,
+ r\ge F/2\ge f/2,\quad k\ge r+Ea\ge r,\quad
+ p\le1+\beta\le2,\quad k\le p(1+X)\le4.
 \]
-and, using the stage and auxiliary-vector bounds at the same source,
-\[
- k=D_{00}=S_{00}-X\widehat q_0
- \le p(1+X)\le2p\le4.
-\]
-Consequently \(p\ge f/4>1\) and \(k,r\ge f/2>2\).
-Also \(0\le a,b\le4\), \(|w|\le4\),
-\(|g|,|h|,|v|\le1\), \(|j|,|q|\le2\), and
-\(0\le E\le1\). All inner variables are bounded.
-The physical conditions are polynomial weak inequalities, apart from
-the positive pivots, whose uniform lower bounds have just been proved.
-The six strictly positive cofactors depend only on the fixed head.
-Thus this nonempty high-value fibre is compact, and the continuous
-function \(F=r-w\) attains its maximum \(m\ge f\).
-It is also the maximum on the whole fibre, since omitted sources have
-height below \(f\).
+Thus \(p\ge f/4>1\), \(k,r>2\); all remaining inner coordinates
+are bounded by the original and stage bands. The six positive
+cofactors are fixed with the head. The polynomial weak physical
+inequalities and the uniform positive pivot bounds make this fibre
+compact. Height therefore attains a maximum \(m\ge f\).
 
-The wall assertion is a separate inherited input. V20, \S7,
-gives a complete wall representative at the same head and height
-\(m>33/8\), using V19's wall result on \(\Gamma\le\nu\)
-and the C19 exclusion on the remaining head region.
-V18, \S5, then gives a wall of height exactly \(f\).
-For this latter step, V15, \S\S2 and~4, first normalizes
-\(p=(1+T)/Z\) and raises \(k\) to the complete first-column
-capacity, preserving the head, \(E\), and height. In the resulting
-V16 height polygon, decreasing the wall coordinates
-\((m/2,m/2)\) to \((f/2,f/2)\) preserves every inequality:
-the two oblique inequalities have positive coefficients, and the
-remaining height constraints are upper bounds. Physical realization
-uses specifically the wall constructions of V16, \S4.2, together
-with V15's middle-column formula (5.5) at the new \(r=f/2\).
-It does not assume that every low-value polygon point is realizable.
-All columns use the same head, \(E,p,k\).
+Theorem~\ref{s3:wall-head-maximum} supplies a complete wall
+representative at the same head and height \(m\).
+The wall polygon and reconstruction in
+Lemma~\ref{s3:wall-reconstruction} then give height exactly \(f\):
+lowering its two equal wall coordinates from \(m/2\) to \(f/2\)
+preserves every positive-coefficient upper inequality of the polygon.
+This use of reconstruction is confined to the high range \(f/2>2\).
+The set of such complete walls of height \(f\) is a nonempty closed
+subset of the compact fibre. Choose one minimizing \(E\), and
+write \(r=f/2\).
 
-It follows that the set of complete sources at this head satisfying
-\(F=f\) and \(w=-r\) is nonempty. It is a closed subset of the
-compact high-value fibre above, so \(E\) attains a minimum on it.
-Denote this value by \(E_{\min}\). This optimization concerns the
-prescribed target \(f\), which need not be a maximum. It takes place
-in the full \(\mathcal K\), not in the open predicate
-\eqref{s3:QUAL}. The positive-tail theorem of V13, \S3, gives
-\(v>0\) since \(f>33/8\); at this target wall the exact identity
-\[
- Eb-(r-2)=(1+O_{22})+(1-Z)+Z(1-P_2)+\nu v>0
-\]
-shows that \(E_{\min}>0\). Indeed \(b\le4\) gives
-\(E>(f-4)/8\). V16, \S2, excludes high-value sources with
-\(\ell:=\nu-E\delta\le0\), so \(\ell>0\).
-The inherited bound \(Ek<1-T\), together with \(k>2\),
-gives \(E<1/2\).
-Hence the minimum is strictly inside the upper computational endpoint
-\(\min\{1,\nu/\delta\}\). No strict cofactor or pivot condition
-is lost in a limiting argument.
+Normalize its common first and middle columns by
+Lemmas~\ref{s3:cc-p-normalization},~\ref{s3:cc-twelve-capacities},
+and~\ref{s3:cc-middle-capacity}, without changing the head, \(E,r,w\).
+The resulting first-column capacity is the full \(K(E)\).
+The high-value entrance inequalities give
+\(v,\ell>0\), \(Ek<1-T\), and \(Eb>r-2\); hence
+\(0<E<1/2\), strictly within the admissible \(E\)-interval.
+In the notation of Lemma~\ref{s3:wall-reconstruction}, feasibility
+requires \(r\le\mathcal R_{\rm mid}(E),\mathcal W(E)\).
+If \(\mathcal W(E)>r\), continuity preserves that strict inequality when
+\(E\) decreases a little. Lemma~\ref{s3:wall-monotonicity} preserves
+first- and middle-column feasibility. The full wall reconstruction
+would therefore yield the same height at smaller \(E\), contradicting
+minimality. Thus \(\mathcal W(E)=r\).
 
-Normalize \(p,k\) at this minimizing \(E\), keeping height \(f\).
-Write \(\mathcal R_{\rm mid}(E)\) for the complete middle-column
-capacity, and \(\mathcal W(E)\) for the minimum of the three complete
-wall tail capacities of V23. The joint wall test is
-\(r\le\mathcal R_{\rm mid}(E),\mathcal W(E)\).
-These capacities are continuous near \(E_{\min}\). The original
-first-column capacities have positive affine denominators in \(E\);
-their common minimum is continuous even at ties. The middle-column
-denominators remain positive because \(t+E>0\),
-\(Q_o=t\delta-\Gamma>0\), and
-\(t\nu-E\Gamma=t\ell+EQ_o>0\).
-The tail denominators \(\Delta+\tau\) and \(\ell+Q_o\)
-are likewise positive. If \(\mathcal W(E_{\min})>r\), continuity
-preserves the tail test after a small decrease in \(E\).
-V17, \S3.1, proves that this decrease preserves high-value first-
-and middle-column feasibility; adopting the new maximal first-column
-capacity only enlarges the middle-column feasible range. The same
-target could therefore be reconstructed at a smaller \(E\), a
-contradiction. Thus \(\mathcal W(E_{\min})=r\).
+On this wall \(y=r\), and the last identity in
+\eqref{s3:wall-slack-formulas} gives \(C_0-y>0\), since
+\(\ell v>0\) and all other terms are nonnegative. Thus
+\(C_0>r\), so the active tail bound is not \(C_0\). If the active
+bound is \(\mathcal C/(\Delta+\tau)\), its slack
+\(J_a+\Omega(K-b)=0\) forces \(J_a=0\) and \(b=K\).
+If it is \(\mathcal D/(\ell+Q_o)\), its slack
+\(\ell J_a+\Omega J_b=0\) forces \(J_a=J_b=0\).
+All the coefficients in these sums are positive. It follows that
+\[
+ (O_{02},O_{12},O_{22})=(-1,1,-1),
+ \qquad P_2=1\ \text{or}\ b=k.
+\]
+The common column reconstructions also give the first- and
+middle-column alternatives in \eqref{s3:representative-set}.
+Consequently this one complete representative belongs to
+\(\mathcal R_*\). Proposition~\ref{s3:exceptional-finite} and
+Lemma~\ref{s3:strict-K24} give
+\[
+ S_{00}<p,\quad P_0>-1,\quad S_{10}=p,\quad O_{20}=-1,
+ \qquad k=K_{24}<K_{13},K_{14},K_{23}.
+\]
 
-V23, \S3, expresses the active tail-capacity slacks as positive
-weighted sums of the slacks of this one complete matrix. It follows
-that
-\[
- (O_{02},O_{12},O_{22})=(-1,1,-1),\qquad P_2=1\ \text{or}\ b=k.
-\]
-The common first- and middle-column normalizations also give
-\(O_{10}=O_{11}=1\) and
-\[
-\begin{gathered}
- S_{00}=p\ \text{or}\ S_{10}=p,\qquad
- P_0=-1\ \text{or}\ O_{20}=-1,\\
- O_{01}=-1\ \text{or}\ O_{21}=1.
-\end{gathered}
-\]
-Together with the wall and head contacts, these specify the complete
-representative set used in V24, \S2. Only after reaching this set do
-we invoke its exceptional-contact exclusion at \(F=f\ge\Lambda\).
-The six systems exclude \(S_{00}=p\) or \(P_0=-1\) there;
-they make no such assertion about arbitrary nonrepresentative sources.
-Their finite certificates are inherited inputs; the argument here
-identifies the physical set to which they apply.
-
-The remaining contacts are \(S_{10}=p\), \(O_{20}=-1\),
-\(S_{00}<p\), and \(P_0>-1\). V24, \S6, writes the four
-capacity gaps as positive weighted sums of these same matrix slacks,
-yielding \(k=K_{24}<K_{13},K_{14},K_{23}\) in
-\eqref{s3:four-capacities}. If \(P_2<1\), then \(b=k\),
-and the only active tail capacity is
-\[
- \frac{\mu+\Delta+\tau+\Omega K}{\Delta+\tau},
- \qquad \Omega=t\Delta+E\tau-\mu.
-\]
-V19, \S4.4, strictly excludes the other eight original first-column
-capacities. Together with the three gaps just obtained, this makes the
-complete \(K\) locally equal to \(K_{24}\). These strict gaps
-persist by continuity. Since \(d=tX-Y>0\), V24, \S7, gives
+Suppose now that \(P_2<1\). Then \(b=k\), \(J_a=0\), and
+\(J_b=\Delta(1-P_2)>0\). The only active tail bound is
+\(\mathcal C/(\Delta+\tau)\); the other two have strict slack.
+Lemma~\ref{s3:cc-strict-gap} excludes the other eight original
+capacities. Together with the three strict comparisons above, this
+makes the full \(K(E)\) locally equal to \(K_{24}(E)\).
+Its numerator \(N_{24}=p\mu+Y(V+T)>0\) is independent of \(E\),
+and direct differentiation gives
 \[
  \frac{d(\Omega K_{24})}{dE}
- =-\frac{N_{24}V\mu d}{[V(tZ+EY)]^2}<0,
- \qquad N_{24}=p\mu+Y(V+T).
+ =-\frac{N_{24}V\mu(tX-Y)}{[V(tZ+EY)]^2}<0.
 \]
-Decreasing \(E\) improves this active tail capacity, preserves the
-other tail margins, and does not impair the middle column. Minimality
-again gives a contradiction. Therefore \(P_2=1\).
+Decreasing \(E\) therefore improves the active tail capacity;
+continuity preserves the other tail and first-column gaps, and
+Lemma~\ref{s3:wall-monotonicity} preserves the middle-column test.
+Reconstruction again contradicts minimality. Thus \(P_2=1\).
 
-The two vanishing tail payments now give \(E=L_D\) and the formula
-for \(b\) in \eqref{s3:QUAL}. V18 proves \(a_T<2<r\),
-so its denominator is positive. V24, \S\S7--8, establishes the
-remaining endpoint qualifications and the five joint middle-column
-tests. Its theorem T24-target also proves sufficiency: the tests
-restore the full middle-column conditions, the strict comparisons
-restore the common first-column capacity, and V19's twelve-capacity
-recovery and the wall construction produce one complete matrix of
-height \(f\). These analytic and algebraic arguments apply to real
-heads and real targets; the executable checker's rational-input restriction
-does not restrict the mathematical quantifiers. Every use of a
-representative above preserves all seven head coordinates.
+The equalities \(J_a=J_b=0\) now give
+\[
+ \ell(r-a_T)+Q_o(r-c_T)=0,\qquad
+ r=a_T+Q_ob/\delta.
+\]
+Since \(a_T<2<r\), solving them is legitimate and yields
+\(E=L_D\) and \(b=\delta(r-a_T)/Q_o\) in
+\eqref{s3:QUAL}. The strict \(C_0\) slack gives \(E>L_C\).
+The tail receiver is positive, so \(b>1+X\); the complete core
+retains \(b\le k\). This proves all contacts and qualifications
+claimed for the prescribed-target representative.
 
-\paragraph{Domains of the inherited high-value budgets.}
-The inequalities \eqref{s3:high-budgets} are consumed only in their
-complete positive canonical domain. In particular, V19, \S2,
-proves \(F+\beta<5\) and \(g<3-F/2\) for complete sources
-with \(F>4\); the form \(g<3-r\) is used only on the wall.
-V22's exclusion gives \(d>0\) for original sources with \(F>33/8\);
-its \S6 gives \(tp+d-1>0\) with the normalized
-\(p=(1+T)/Z\), and \(1+t+d<33/16\) by a common
-zero-tail-receiver reconstruction and V13's exclusion.
-These are necessary conditions at the fixed head, not conclusions
-from the exceptional-contact tree or the later height bound.
-They do not extend this argument to arbitrary signed matrices or to
-an unrestricted cofactor-nonnegative enlargement.
+Here is also the reduction to the five simultaneous middle tests,
+including its converse. Write the two increasing lines as
+\(I_i(h)=A_i+B_i h\), the decreasing lines as
+\(J_i(h)=C_i-D_i h\), and put
+\(R_{ij}=(B_iC_j+D_jA_i)/(B_i+D_j)\).
+The complete middle test is the minimum of
+\[
+ I_1(H),\ I_2(H),\ C_1,\ C_2,\ R_{11},\ R_{21},\ R_{12},\ R_{22}.
+\]
+The common normalization has \(H=s/\beta\), and
+\[
+ \begin{gathered} R_{11}=A_1+B_1s,\qquad I_1(H)-R_{11}=Q_os(1-\beta)/\beta>0,\\
+ C_1-R_{11}=(t-Q_o)s>0.\end{gathered}
+\]
+Also \(A_2\le2<r\) and
+\[
+ B_2(C_2-R_{22})=D_2(R_{22}-A_2).
+\]
+Thus the five retained tests in \eqref{s3:M5} imply the three
+omitted ones, and the reverse implication is immediate.
+All denominators are positive; at ties the same closed inequalities
+remain valid. If the minimum capacity is written before selecting
+\(K_{24}\), the two relevant intersections increase with \(K\):
+\[
+ \partial_K R_{12}=\frac{Q_o}{Q_o+\delta E}>0,
+ \qquad
+ \partial_K R_{22}=\frac{t\nu-E\Gamma}{\nu(t+E)}>0.
+\]
+Hence the strict capacity qualifications retain every original
+first-column comparison rather than discarding it.
+
+Conversely, a head satisfying the stated entrance qualifications,
+\eqref{s3:QUAL}, and \eqref{s3:M5} supplies the formal tail
+\(v=(b-1-X)/\delta>0\), \(q=1-\beta v\), \(w=-r\).
+The formulas for \(E,b\) give all three original tail contacts by
+substitution. In particular
+\[
+ Eb-(r-2)=(1-Z)+\nu v>0,
+\]
+so \(E>0\) before any assertion of complete physicality.
+First apply the five-to-eight line-interval argument purely
+algebraically and choose its smallest admissible \(h\), then
+\(a=(r-1-Y+\Gamma h)/t>0\). The fourth line inequality gives
+\(r+Ea\le k\), hence \(r<k\).
+The formal tail contacts also give \(J_{\rm tail}=J_a=0\).
+These facts, \(b\le k\), and the four capacity qualifications are
+exactly the hypotheses of Lemma~\ref{s3:cc-four-recovery}; they
+restore the full twelve-capacity first-column condition without
+assuming a pre-existing complete matrix.
+Lemma~\ref{s3:cc-middle-capacity} now supplies the complete middle
+column, and Lemma~\ref{s3:wall-reconstruction} supplies the tail.
+Their common realization is exactly the one printed below
+\eqref{s3:M5}, with every initial, stage and core band satisfied.
+Its height is \(2r=f\). No step selects incompatible completions of
+different columns, assumes that all maxima share these contacts, or
+uses the final global height bound.
+\end{proof}
+
 
 For clarity, the exact endpoint qualifications used in this proposition
 are included here. They can either be retained in these coordinates or
@@ -2206,8 +4368,10 @@ reduction says that existence of a complete source of height at least
 The proof uses the exact complete-column reconstruction, not separate
 optimal completions of different columns.
 
-The particular inherited necessary bounds used subsequently, at a
-high target representative, are
+Collecting Lemmas~\ref{s3:cc-budgets},~\ref{s3:cc-positive-receiver},
+\ref{s3:cc-strict-gap},~\ref{s3:wall-ell-positive}, and
+Corollary~\ref{s3:wall-head-entrance}, together with the early-pivot
+bound, gives the necessary inequalities used subsequently:
 \begin{equation}\label{s3:high-budgets}
 \begin{gathered}
  0<g,j,h\le1,\quad v,q,\ell>0,\quad
@@ -2227,7 +4391,7 @@ signed \(X\) matrices.
 An admissible target representative is a source in
 \(\mathcal K\), at a height \(\Lambda\le F<5\), with all
 contacts \eqref{s3:target-contacts}. In using its high-value
-necessary inequalities we retain the inherited qualifications
+necessary inequalities we retain the proved qualifications
 \eqref{s3:high-budgets}. No conditions \(t=X=Z=1\), \(b=k\),
 or \(h=s\) are included in this definition.
 \end{definition}
@@ -2364,12 +4528,12 @@ the physical bands are not discarded. They follow as follows:
  \(O_{01}=S_{01}+h<1\).
  Furthermore \(S_{11}=1-Vh\in(0,1)\), \(O_{11}=1\),
  and \(S_{21}=r+Ea-Z(1+\beta h)>r-2>0\).
- Together with \(O_{21}=S_{21}+Th\le1\), this pays both sides
+ Together with \(O_{21}=S_{21}+Th\le1\), this establishes both sides
  of the remaining middle-column bands.
 \item The tail has \(P_2=1\),
  \((O_{02},O_{12},O_{22})=(-1,1,-1)\), and
  \[ (S_{02},S_{12},S_{22})=(-1-v,1-Vv,-1-Tv). \]
- The condition \(v\le s=p-1\) pays all three \(p\)-bands.
+ The condition \(v\le s=p-1\) establishes all three \(p\)-bands.
 \item The core bounds use \(a<p<2<k\), \(b\le k\),
  \(tk\le k\), \(Ek<k\), and \(r+Ea\le k\).
  Here \(a>0\) follows from \(R>1\ge Y\), and
@@ -2380,7 +4544,7 @@ the physical bands are not discarded. They follow as follows:
  \(D_{22}=-r+C\in(-r,0)\).
 \end{itemize}
 All entries are those of the same reconstructed matrix. These
-identities pay the complete bands, not only a subset of necessary
+identities establish the complete bands, not only a subset of necessary
 inequalities. They also recover the strict first-column capacity
 comparisons in \eqref{s3:QUAL} from the first-column residual
 identities and \(S_{00}<p\), \(P_0>-1\).
@@ -3014,76 +5178,118 @@ Theorem~\ref{s3:canonical-height-main} for every source in
 \(\mathcal K\). Neither a stationary-point calculation nor the
 root-isolation certificate alone supplies this global bound.
 
+\clearpage
 \subsection{Source dependencies and the finite proof payloads}
 \label{s3:provenance}
 
-The reproducibility unit for the finite statements in this appendix is
-\path{rho5_v28_exact.zip}, with internal root
-\path{rho5_v28_exact/}. Its top-level report, Sections 1--5,
-specifies the repaired localization and its interfaces. The
-\path{RHO5_V26_REBUILT/REPORT.md} retained within it supplies
-the mathematical argument in Theorem 6.1 and Sections 7--10.
-The latter report's superseded tree counts and old Jacobian
-contraction bound are not the data used in this appendix.
+The analytic representative and reconstruction arguments are proved in
+\S\ref{s3:cc-reconstruction}--\S\ref{s3:target-theorem-section} above.
+The historical labels in the following crosswalk identify their sources
+and the frozen finite certificates still used by those proofs. The
+source-to-model arguments, the exact certificate acceptance, and the
+final composition have separate responsibilities; a localization tree
+does not by itself establish the preceding representative theorems.
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.34\linewidth}>{\raggedright\arraybackslash}p{.57\linewidth}@{}}
+\toprule
+Responsibility & Proof in this article and archived origin\\
+\midrule
+High-value signs and quantitative budgets &
+ Lemma~\ref{s3:cc-budgets} and Lemma~\ref{s3:cc-positive-receiver};
+ V11/V13 safe-tail argument and V14 budgets.\\
+Common first-column reconstruction &
+ Lemmas~\ref{s3:cc-twelve-capacities}--\ref{s3:cc-four-recovery};
+ V15 and V19.\\
+Simultaneous middle column &
+ Lemma~\ref{s3:cc-middle-capacity}; V15/V18, with one shared
+ head, row scale and pivot.\\
+Tail polygon and wall reconstruction &
+ Lemmas~\ref{s3:wall-ell-positive}--\ref{s3:wall-polygon-maximum};
+ V16--V19, including zero-scale and boundary qualifications.\\
+Same-head wall maximum &
+ Theorem~\ref{s3:wall-head-maximum}; V20, with the separate
+ finite C19 exclusion of Proposition~\ref{s3:wall-C19-finite}.\\
+Head entrance &
+ Proposition~\ref{s3:wall-d-finite} and Corollary~\ref{s3:wall-head-entrance};
+ V22's finite difference exclusion and analytic reconstruction.\\
+Exceptional contacts and prescribed target &
+ Proposition~\ref{s3:exceptional-finite}, Lemma~\ref{s3:strict-K24},
+ and Proposition~\ref{s3:target-reduction}; V23/V24.\\
+Row-scale equivalence &
+ Proposition~\ref{s3:scale-equivalence}; V25.\\
+Localization and exact canonical height &
+ The later sections of this appendix; the repaired V28 localization,
+ transport, peak-neighborhood and algebraic modules.\\
+\bottomrule
+\end{tabular}
+\end{center}
 
-The responsibilities of the mathematical inputs are as follows.
+The finite representative exclusions have three distinct scopes:
+eight C19 systems in Proposition~\ref{s3:wall-C19-finite}, eight
+difference systems in Proposition~\ref{s3:wall-d-finite}, and six
+exceptional-contact systems in Proposition~\ref{s3:exceptional-finite}.
+Their continuous source coverage is derived above before their accepted
+trees are used. The safe-tail polynomial positivity checks are a
+separate fixed finite certificate. The Supplementary Index, S3,
+identifies the nested V24 replay with its full-chain option and the
+recorded acceptance of all 22 exclusion trees. Neither the V28
+localization entry nor the final global composer re-executes these
+upstream trees automatically.
+
+The reproducibility unit for the localization and peak-height statements
+in the later part of this appendix is \path{rho5_v28_exact.zip}, with
+internal root \path{rho5_v28_exact/}. Its top-level report, Sections
+1--5, specifies the repaired localization and its interfaces. The
+\path{RHO5_V26_REBUILT/REPORT.md} retained within it supplies the
+mathematical argument in its Theorem 6.1 and Sections 7--10. The latter
+report's superseded tree counts and old Jacobian contraction bound are
+not the data used in this appendix.
+
+The order of the mathematical dependencies is essential:
 \begin{enumerate}
-\item The primary prescribed-target theorem is T24-target in
- Sections 7--8 of the theorem document in the original canonical
- representative archive identified in Supplement S3. Its nested
- sources give the wall-maximizer theorem (V20, Section 7),
- prescribed-height wall reconstruction (V18, Section 5; V16,
- Section 4.2), and common column reconstruction (V15, Sections
- 2, 4--5). The compactness and minimum-attainment argument is
- given directly after Proposition~\ref{s3:target-reduction}.
- The wall choice and minimization in \(E\) precede the exceptional
- contact exclusions, which apply only in the complete representative
- set of V24, Section 2. Sections 6--8 of that source establish the
- common \(E=L_D\), \(k=K_{24}\) endpoint, its three strict capacity
- comparisons, and the five simultaneous middle-column tests.
- The V25 handoff in the localization package restates these inputs;
- it is not a substitute for their primary proofs.
-\item The high-value inequalities \eqref{s3:high-budgets} are
- inherited only in their declared positive canonical representative
- domain and height range. In particular \(k\le9/4\),
- \(Ek<1-T\), \(g<3-r\), and \(F+\beta<5\) supply
- the common pivot and first-column budgets. The three V22 entrance
- inequalities \(d>0\), \(tp+d-1>0\), and
- \(1+t+d<33/16\) supply localization rows 31--33. These
- are not deductions from an arbitrary signed matrix or from the
- observed contact candidate. The first-column height payment is
- proved in V19, Section 2: it gives \(g<3-F/2\) and
- \(F+\beta<5\) before wall selection; \(g<3-r\) uses \(F=2r\)
- only after selection. V22, Sections 2--5, proves the head-only
- inequality \(d>0\) via a same-head wall maximum. Its Section 6.1
- proves \(tp+d-1>0\) after \(p=(1+T)/Z\) is imposed, and
- Section 6.2 proves the last head inequality by a common
- zero-receiver reconstruction and the safe-tail bound. These
- earlier V20/V22/V24 proof trees are separate dependencies;
- the localization payload itself does not re-execute them.
-\item The V25 row-scale report in \path{sources/}, Sections
- 2--4, supplies the exact shared reconstruction and its complete
- fibre equivalence. The dictionary, \(\mathrm{BASE}\), strict
- scale endpoints, and the necessity and sufficiency argument have
- been reproduced in \S\ref{s3:scale-section}. This appendix
- does not need the report's later finite elimination of \(\beta\).
-\item The repaired V28 certificate supplies the continuous root-box
- coverage, the fixed-target transport margins, the upper-target
+\item The same-head wall maximum and the simultaneous reconstruction
+ first give a complete representative at the prescribed attainable
+ height. Compactness and minimization in \(E\) are applied to the
+ complete fixed-head fiber. Only then do the exceptional-contact
+ exclusions and the strict capacity comparisons force
+ \(E=L_D\), \(k=K_{24}\), and the five simultaneous middle-column
+ tests. These steps are proved in
+ Proposition~\ref{s3:target-reduction}; the V25 handoff is a
+ historical restatement, not an additional premise.
+\item The high-value bounds \eqref{s3:high-budgets} are used only in
+ their declared positive canonical domain. The common source budgets
+ and Lemma~\ref{s3:cc-strict-gap} supply
+ \(Ek<1-T\), \(F+\beta<5\), and \(g<3-F/2\) before wall
+ selection; the latter becomes \(g<3-r\) on the wall. The
+ earlier-pivot bound supplies \(k\le9/4\).
+ Proposition~\ref{s3:wall-d-finite} and
+ Corollary~\ref{s3:wall-head-entrance} supply the three entrance
+ inequalities used in localization rows 31--33. These conclusions
+ are not inferred from an arbitrary signed matrix or from an
+ observed extremal candidate.
+\item The scale dictionary, \(\mathrm{BASE}\), strict scale endpoints,
+ and both directions of the complete fiber equivalence are proved in
+ \S\ref{s3:scale-section}. The archived V25 report gives their
+ original derivation and exact symbolic checks. This appendix does
+ not use its later finite elimination of \(\beta\).
+\item The repaired V28 certificate supplies continuous root-box
+ coverage, fixed-target transport margins, the upper-target
  exclusion, the nine-dimensional slack theorem, and the exact
- carrier/resultant connection. None of these statements uses the
- complete \(X\)-domain or negative-diagonal bound as an input.
- Root uniqueness and the definition of the exact constant are the
- separate result of Section~\ref{sec:alpha}.
+ carrier/resultant connection. None uses the complete \(X\)-domain
+ or negative-diagonal bound as a premise. Root uniqueness and the
+ definition of the exact constant are the separate result of
+ Section~\ref{sec:alpha}.
 \end{enumerate}
 
-Supplement S3 identifies the complete replay entry point and the
-separate localization, symbolic-interface, target-transport, Jacobian,
-carrier, and resultant checks. Acceptance requires every localization
-graft and all required modules. Discovery output or summary counts do
-not replace that finite replay. The inherited representative reductions
-remain separate mathematical dependencies: the canonical-height
-certificate by itself does not prove the other sign chambers,
-degenerate entrances, or the full matrix theorem.
+The Supplementary Index identifies the complete replay entry point and
+the separate localization, symbolic-interface, target-transport,
+Jacobian, carrier, and resultant checks. Acceptance requires every
+localization graft and all required modules. Discovery output or summary
+counts do not replace that finite replay. The representative reductions
+and their explicit finite inputs have distinct domains: the
+canonical-height certificate alone does not prove the other sign
+chambers, degenerate entrances, or the full matrix theorem.
 
 
 \section{Data and coordinates for the two-gap transport}
@@ -3441,7 +5647,8 @@ A terminal is a local region with an accepted conclusion. A constituent
 source may require a tree of such terminals. An original parent
 responsibility may in turn require many constituent sources.
 In particular, the last 54-terminal anchor of
-Section~\ref{certificate:worked} pays one constituent source, not 54
+Section~\ref{certificate:worked} discharges one constituent-source
+obligation, not 54
 original parents.
 
 The four residual original-root responsibilities have the following
@@ -3465,12 +5672,12 @@ Accordingly,
 \[
 \begin{gathered}
 111+240+159+56=566\\
-\text{constituent sources pay four original responsibilities},
+\text{constituent sources discharge four original obligations},
 \end{gathered}
 \]
 whereas the original-parent accounting is
 \[
-465\ \text{previously paid responsibilities}+4=469.
+465\ \text{previously discharged obligations}+4=469.
 \]
 There is no proposed bijection between the 566 constituents and the
 469 original parents. For each of the four parents, the constituent
@@ -3526,11 +5733,11 @@ The archive contains all 49 weighted rows and all 67 coordinate
 bounds used above, not only the two displayed rows.
 
 The included restoration and joint-verification entry points replay
-the complete 54-terminal anchor. Their successful result pays only
+the complete 54-terminal anchor. Their successful result discharges only
 that anchor; the standalone whole-parent and whole-domain flags remain
 false. The complete final-cover archive additionally contains the
 frozen 239-source baseline, the completed parent record and the
-original-root overlay. Supplement S7 identifies these objects and
+original-root overlay. The Supplementary Index, S7, identifies these objects and
 their hashes. Thus the source-to-root chain for the example is
 \[
 \begin{gathered}
@@ -3583,25 +5790,93 @@ S8 & The analytical, upstream, \(X\) and negative-diagonal archive
 \end{tabular}
 \end{center}
 
-There are three distinct checks. File hashes establish input identity.
-Mathematical acceptors regenerate or verify necessary rows, rational
-bounds, qualified analytic rules and local coverage. Source-cover
-composition attaches these conclusions to the complete original
-domain. The final composer consumes accepted records; rerunning it
-alone does not rerun the mathematics behind those records. Its 357
-direct file dependencies are also not a statement that the transitive
-proof dependency closure has only 357 objects.
+\paragraph{Dependency order for a complete reproduction.}
+The following stages follow mathematical dependencies, rather than the
+chronological labels used during discovery.
+\begin{enumerate}
+\item Fix the polynomial and attaining-matrix inputs (S1), and check
+      the analytic source reductions and their zero and tie cases (S2).
+\item Check the canonical representative and reconstruction inputs,
+      including the nested exclusion trees, and then the complete
+      localization and canonical-height certificates (S3).
+\item Check all seven complete-\(X\) components (S4), using the preceding
+      height theorem for their qualified local exits. Assemble their
+      stated domains into the complete \(X\) bound.
+\item Check the seventeen-coordinate negative-diagonal source model
+      and the acceptance rules (S5--S6). Replay the preserved original
+      root, retaining its four explicitly identified open positions.
+\item Replay the mathematical contributions to each of the four
+      residual parents: their inherited closed complements, verified
+      continuations, and height or transport certificates. Include the
+      final 54-terminal anchor. Match every contribution to its actual
+      parent source and ancestor transformations.
+\item Compose the four complete parent covers with the preserved root
+      (S7). Combine the resulting negative-diagonal bound with the
+      complete \(X\) bound, saturation and attainment.
+\end{enumerate}
+The dependency direction in the middle three stages is canonical
+height, then complete \(X\), then negative-diagonal safety. The final
+negative-diagonal conclusion is not an input to its own upstream
+canonical-height proof. The frozen component manifests must be
+followed recursively; neither the release's asset count nor the final
+composer's 357 direct file dependencies gives the full transitive
+mathematical dependency set.
 
-An independent complete reproduction therefore checks the upstream
-analysis and \(X\) components, the original negative-diagonal root,
-the four parent contributions, their height or transport mathematics,
-and the final source bindings. Python assertion optimization must
-remain disabled. Some historical configurations use absolute source
-locations, so a new installation must supply an explicit path mapping
-that preserves frozen identities and source checks. A tested,
-location-independent command for the entire chain is not claimed.
-The published component records remain evidence of their stated runs;
-publication itself is not a new mathematical cold replay.
+\paragraph{Acceptance conditions.}
+At each stage, retain the input manifest, verifier identity, exact
+command or API call, software versions, exit status, mathematical
+conclusion and elapsed time. A contradiction terminal requires its
+nonnegative weights and rational upper/lower bounds to be checked.
+A conditional row requires its guard on the whole box, and a height
+or transport terminal requires its stated source qualifications and
+threshold. Such a terminal concludes safety at \(\alpha\); it is not
+a contradiction at the smaller rational threshold \(\gamma\).
+
+For the preserved root, the accepted intermediate result has exactly
+749,693 nodes, 374,839 contradiction terminals, four \(\alpha\)-safe
+terminals and the four stated open positions. Each completed parent
+must cover its entire frozen target-path set without omissions or
+duplicates: respectively 111, 240, 159 and 56 constituent sources.
+The final composition must match all four parent boxes and paths to
+the actual root and obtain effective open count zero. Counts are
+cross-checks on the cover; they do not replace these source and
+mathematical checks. A missing dependency, failed guard, changed model,
+incomplete target set or unmatched source invalidates the proposed
+acceptance at that stage.
+
+\paragraph{Executable scope and implementation trust.}
+The Supplementary Index, S8, distinguishes command-line entries from
+lower-level mathematical interfaces and from record composers.
+The small anchor has a self-contained replay entry. The original
+negative-diagonal root also has a frozen mathematical replay command.
+The four-parent chain uses separate mathematical interfaces followed
+by record composition; its historical configurations include absolute
+workspace paths. Reproduction on another installation requires an
+explicit location mapping and fresh output locations while preserving
+all mathematical input identities and source checks. The dated
+four-parent orchestration described in Section~\ref{sec:reproducibility}
+and Supplementary Index S8 supplies such mappings for the recorded
+negative-diagonal replay.  This supplements the historical lower-level
+interfaces; it does not regenerate their entire upstream dependency chain.
+There is not yet
+a tested location-independent driver that performs this entire
+transitive chain in one fresh environment. This packaging limitation
+does not negate the documented component runs and final composition;
+it limits the presently demonstrated portability of their complete
+re-execution.
+
+The full computational claim trusts the implementations of the exact
+rational and interval acceptors, their parsers and row/model
+generation, and the code that checks source-cover composition.
+In particular, exact arithmetic prevents rounding uncertainty but
+does not by itself prove that a guard was applied to the correct
+source or that all branches were covered. The written arguments in
+this article establish the intended mathematical rules; the frozen
+Python/C++ programs implement their finite instances. Independent
+reimplementation of those rules would reduce reliance on these
+particular implementations. No discovery optimizer, floating-point
+search output or search heuristic is accepted as a proof terminal.
+Python assertion optimization must remain disabled during replay.
 
 The exact Python and C++ acceptors are not asserted to be formally
 verified programs. Their correctness, the written analytic arguments
@@ -3611,7 +5886,6 @@ remaining global safety hypotheses explicitly; a successful build or
 a certificate hash does not remove those hypotheses.
 
 
-\clearpage
 \bibliographystyle{plain}
 \bibliography{references}
 \end{document}

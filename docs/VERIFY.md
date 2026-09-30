@@ -5,13 +5,13 @@ This guide separates **Lean proof checking**, **exact certificate checking**, an
 ## 1. Obtain the fixed source version
 
 ```sh
-git clone --branch v1.0.1 --depth 1 https://github.com/hkjtsgmc79-boop/rho5-proof.git
+git clone --branch v1.0.2 --depth 1 https://github.com/hkjtsgmc79-boop/rho5-proof.git
 cd rho5-proof
 git rev-parse HEAD
 python3 scripts/fetch.py --list
 ```
 
-Keep the printed commit hash with your verification records. The v1.0.1 checkout indexes the unchanged v1.0.0 certificate assets; the downloader retains their fixed URLs and hashes. The repository contains source and instructions; the large certificates are separate release assets. [DOWNLOADS.md](DOWNLOADS.md) gives exact sizes and resource allowances.
+Keep the printed commit hash with your verification records. The v1.0.2 checkout indexes the unchanged v1.0.0 certificate assets; the downloader retains their fixed URLs and hashes. The repository contains source and instructions; the large certificates are separate release assets. The revised [article and index have their own Zenodo version DOI](https://doi.org/10.5281/zenodo.23057256). [DOWNLOADS.md](DOWNLOADS.md) gives exact sizes and resource allowances.
 
 The helper uses only Python's standard library. Downloads are selected explicitly; it checks SHA-256 and rejoins transport parts. Rerunning the same command resumes partial downloads. Download success is not a mathematical result.
 
@@ -30,6 +30,8 @@ lake exe cache get
 The fixed mathlib revision is `c5ea00351c28e24afc9f0f84379aa41082b1188f`. Preserve the committed lock file; do not upgrade dependencies as a workaround for a failed build. `cache get` obtains third-party precompiled dependencies, not a substitute for checking the project source.
 
 The default product is `Rho5.PhaseOne`. It includes 634 loaded project modules out of 646 canonical source files. It does not select the deferred full-tree Lean experiments.
+
+The separate B366 second-phase addition is a **source-only review snapshot**: 1,452 accepted source modules and four separately identified support sources. It has 57 direct imports outside that snapshot. The first-phase build record below does not certify this archive as a new standalone build or close the whole theorem in Lean.
 
 Expected result: successful module builds and the declared theorem/axiom output. Inspect [the full public types](../lean/FINAL_THEOREM_TYPES.txt) and [recorded axioms](../lean/AXIOMS.json). The sharp endpoint has two visible assumptions:
 
@@ -124,7 +126,13 @@ The complete B route then replays the four parent contributions, the alpha-cover
 
 **Portability boundary:** there is not yet one tested, location-independent command that replays this entire chain from scratch. Some composition configurations contain original absolute paths, and the final composer consumes previously checked receipts. Fresh reproduction must prepare an explicit path mapping, preserve frozen source hashes and the 435003 parent’s frozen 239/240 baseline, rerun all necessary mathematical dependencies, and compose the newly generated records. Do not disable source checks or replace this work with receipt-hash checking. See S7–S8 of the supplement for the precise composition scope.
 
-## 6. Read the combined conclusion
+## 6. Inspect the 30 September negative-diagonal replay
+
+The [replay record and scope guide](REPLAY_20260930.md) documents a separate run on the existing X Linux host. The sealed plan called 570 exact producers for 566 constituent targets and four inherited complements. All 570 passed; a fresh Fraction check accepted the original root, and the source-bound four-parent composition recorded `effective_open_count = 0`. Four expected OPEN records in intermediate complement receipts are paid by their corresponding complete parent covers. The result covers the **negative-diagonal finite domain conditional on retained upstream analytic and complete-X results**.
+
+The [fixed replay supplement](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_v1.0.2_replay_evidence.zip) separates the frozen executed plan, drivers and receipts from subsequent source/receipt audits. Its `verify_public_replay_bundle.py` checks supplied hashes and final links without re-executing mathematics. A [selective clean assembly preflight](../provenance/v102_assembly_preflight/README.md) reproduced the source identities and 570-job plan from public archive members. Full extraction and a fresh-machine, location-independent run of the entire theorem chain remain outside the recorded scope. For the exact parent interfaces, dependencies and rejection conditions, use the [reproducibility protocol](REPRODUCIBILITY_PROTOCOL_v1.0.2.md) alongside the frozen release assets.
+
+## 7. Read the combined conclusion
 
 The proof combines the written analytic arguments with complete component verification and exact source/domain coverage. It includes the actual alpha constant and an attaining matrix; it quantifies over real matrices and all legal pivot choices. The Lean theorem map is provided separately and keeps its remaining global hypotheses visible.
 

@@ -1,0 +1,63 @@
+{
+  "schema": "RHO5_DOCUMENT_RELEASE_V2",
+  "release": "v1.0.2",
+  "status": "FROZEN_RELEASE_CONTENT",
+  "release_asset_manifest_complete": true,
+  "paper_pages": 88,
+  "supplementary_index_pages": 9,
+  "paper_version_doi": "10.5281/zenodo.23057256",
+  "previous_paper_version_doi": "10.5281/zenodo.22727368",
+  "zenodo_paper_files": [
+    {
+      "name": "rho5_manuscript.pdf",
+      "bytes": 477462,
+      "sha256": "0789c855cdadf909bfc31d4346b384bd2564b42bb90258eaad3721e950095d7a"
+    },
+    {
+      "name": "RHO5_SUPPLEMENTARY_INDEX.pdf",
+      "bytes": 91402,
+      "sha256": "9014ff830c87b1d1695bb40ac82b5325753a60b8689286c7f75829ffab3a261e"
+    }
+  ],
+  "github_release_artifacts": [
+    {
+      "name": "RHO5_Lean_Phase2_B366_SOURCE_ONLY_v1.0.2.zip",
+      "bytes": 2048268,
+      "sha256": "3c4dcb433ad5af1deee9c2f18531e862110c62c501cdbe5c54ed2a9d06d97fc7",
+      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_Lean_Phase2_B366_SOURCE_ONLY_v1.0.2.zip"
+    },
+    {
+      "name": "RHO5_SUPPLEMENTARY_INDEX_v1.0.2.pdf",
+      "bytes": 91402,
+      "sha256": "9014ff830c87b1d1695bb40ac82b5325753a60b8689286c7f75829ffab3a261e",
+      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_SUPPLEMENTARY_INDEX_v1.0.2.pdf"
+    },
+    {
+      "name": "RHO5_v1.0.2_replay_evidence.zip",
+      "bytes": 2962411,
+      "sha256": "b64e10e02ab09094c26a4e876a25dc0797e3b5f7a4e9dea11223cea94aab69a8",
+      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_v1.0.2_replay_evidence.zip"
+    },
+    {
+      "name": "RHO5_v1.0.2_source_and_checks.zip",
+      "bytes": 126083,
+      "sha256": "341ce24537f8d95d1a10ecc5121426f40729018b3c641aaa8730581a34a7cd2c",
+      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_v1.0.2_source_and_checks.zip"
+    },
+    {
+      "name": "rho5_manuscript_v1.0.2.pdf",
+      "bytes": 477462,
+      "sha256": "0789c855cdadf909bfc31d4346b384bd2564b42bb90258eaad3721e950095d7a",
+      "url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/rho5_manuscript_v1.0.2.pdf"
+    }
+  ],
+  "inherited_certificate_release": "v1.0.0",
+  "inherited_release_assets_count": 24,
+  "inherited_archive_inventory_bytes": 4494382372,
+  "certificate_asset_manifest_sha256": "e87b54adf2b26d6cb1d03c2e2399f029a2ee2a41f51f8708fe4cffe04f69d2ac",
+  "certificate_asset_manifest_url": "https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/release-assets.json",
+  "certificate_bytes_unchanged": true,
+  "negative_diagonal_replay_scope": "570 accepted producers, fresh original Fraction root and four-parent composition; effective_open_count=0; upstream analytic and complete-X results retained",
+  "whole_theorem_fresh_machine_replay_claimed": false,
+  "lean_final_theorem_unconditional": false
+}

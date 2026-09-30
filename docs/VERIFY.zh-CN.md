@@ -5,13 +5,13 @@
 ## 1. 获取固定版本
 
 ```sh
-git clone --branch v1.0.1 --depth 1 https://github.com/hkjtsgmc79-boop/rho5-proof.git
+git clone --branch v1.0.2 --depth 1 https://github.com/hkjtsgmc79-boop/rho5-proof.git
 cd rho5-proof
 git rev-parse HEAD
 python3 scripts/fetch.py --list
 ```
 
-保留输出的提交哈希。v1.0.1 索引未改动的 v1.0.0 证书附件；下载器保留原地址和哈希。Git 仓库包含 Lean、验证器源码、论文和说明；大证书在 Release 附件中。GitHub 自动生成的 “Source code” ZIP 不包含这些大附件。
+保留输出的提交哈希。v1.0.2 索引未改动的 v1.0.0 证书附件；下载器保留原地址和哈希。新版[正文与索引已有单独的 Zenodo 版本 DOI](https://doi.org/10.5281/zenodo.23057256)。Git 仓库包含 Lean、验证器源码、论文和说明；大证书在 Release 附件中。GitHub 自动生成的 “Source code” ZIP 不包含这些大附件。
 
 下载器只使用 Python 标准库，会验证 SHA-256、续传并重组运输分片。下载成功仅说明文件身份正确，尚未执行数学检查。
 
@@ -47,6 +47,8 @@ Rho5.PhaseOne.rho5Trace_eq_alpha_of_safety
 ```
 
 编译成功不会消去这两个前提。它们的完整全域支付仍由论文解析论证、外部精确验证和来源覆盖承担，不能把本版本称为完整 Lean 证明。完整类型和公理记录见 [FINAL_THEOREM_TYPES.txt](../lean/FINAL_THEOREM_TYPES.txt) 和 [AXIOMS.json](../lean/AXIOMS.json)。
+
+新版另提供二期 B366 **源码审阅快照**：1,452 个已采纳源码模块及 4 个另标明来源的支持源码。它还缺少快照外的 57 个直接导入依赖，不是独立冷编译包，也没有消去上述两项全域前提。
 
 **冷重建更新：** 冻结产品现已完成 634 个模块、3 个附加模块和 47 项具名公理检查。成功采用显式依赖顺序的逐模块驱动，第三方缓存复用并补齐。原命令 `lake build +Rho5.PhaseOne:olean` 在冷状态失败，不能将其列为已验证的冷启动方法。公开回执不包含成功驱动。继续构建前请先看[完整记录与范围](LEAN_COLD_REBUILD.md)。旧记录的 8.051 秒和 12.021 秒仅是缓存运行，不能当作冷编译时间。
 
@@ -106,6 +108,10 @@ python3 -B -S runtime/r54_replay.py \
 输出文件必须是新的。原根预期为 `PARTIAL_EXACT_COVERAGE_ONLY`，包含 749,693 个节点、374,839 个矛盾终点、4 个 alpha 安全终点和 4 个开放终点。四个旧开放终点由后续完整覆盖分别支付；不要改写旧文件让开放数变成零。
 
 原根历史 8 进程运行约 6.34 小时，之后还需要父框、alpha 覆盖及最终来源组合，不能据此给出整套证明的完成时间保证。
+
+**9 月 30 日的新记录：** 在既有 X Linux 主机的独立目录中，570 项任务全部通过，原根又以 16 个 Fraction 进程重新验收，四父域与原根接回后 `effective_open_count = 0`。原根这次的墙钟时间约 3 小时 36 分钟，未计入 570 项任务或全证明的时间。四项中间补集保留指定 OPEN，它们通过完整父域覆盖支付。本轮仅重新运行负对角有限覆盖；上游解析和完整 X 结论作为已保留前提。具体身份、收据和复现顺序见[本轮重放记录](REPLAY_20260930.md)与[详细协议](REPRODUCIBILITY_PROTOCOL_v1.0.2.md)。
+
+固定的[重放证据 ZIP](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_v1.0.2_replay_evidence.zip)内有 `verify_public_replay_bundle.py`，可核对 628 个收据文件身份与 570 条最终关联，但这个小检查不会重新执行数学验收。另有[公开归档选择性干净装配记录](../provenance/v102_assembly_preflight/README.md)：直接从两份已验哈希的压缩包提取 706 个选定成员，复现了 570 项、566 个目标的入口计划。它没有全量解包，也没有重新运行生产任务与原根，因此现阶段不把这一套称作已经测试过的位置无关整链重放。
 
 **完整重放的现有限制：** 目前尚没有经过新机器演练的一键全链命令。部分最终组合配置保留历史绝对路径，且组合器使用之前验收的收据。独立复核必须明确迁移路径、保留冻结输入哈希与 435003 父框的 239/240 基线，执行所需数学检查，再组合新收据。不能关闭来源检查，也不能只验旧 PASS 收据的哈希来代替数学重放。详见[英文教程第 5 节](VERIFY.md#5-check-the-b-root-and-final-covers)和[论文补充索引 S7–S8](../paper/RHO5_SUPPLEMENTARY_INDEX.pdf)。
 

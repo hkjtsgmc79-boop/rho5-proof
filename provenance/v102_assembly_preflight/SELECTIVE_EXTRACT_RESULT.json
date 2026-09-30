@@ -1,0 +1,22 @@
+{
+  "status": "SELECTIVE_PUBLIC_ARCHIVE_MEMBER_IDENTITIES_PASS",
+  "scope": "Only pinned plan/root entry members; not complete archive extraction or theorem replay",
+  "sources": "/root/microscope_ws/rho5_v102_public_assembly_20260930/sources",
+  "archives": {
+    "final_cover.tar.gz": {
+      "expected_archive_sha256": "1c9fb99d184eaf9d79b44d33826e4db8fbced8db41ee2b46ec2e1616bd12361c",
+      "archive_sha256_prechecked_separately": true,
+      "selected_file_count": 702,
+      "selected_file_bytes": 627425250,
+      "elapsed_seconds": 14.401383876800537
+    },
+    "historical_root.tar.gz": {
+      "expected_archive_sha256": "15ef795e85d0d295e92fdd629f313b9c284cc6519388011862aee3c1e18e3f73",
+      "archive_sha256_prechecked_separately": true,
+      "selected_file_count": 4,
+      "selected_file_bytes": 2102875884,
+      "elapsed_seconds": 36.60246753692627
+    }
+  },
+  "free_bytes_after_extraction": 12459081728
+}

@@ -1,6 +1,22 @@
 # Downloads, disk space and computing time
 
-**Current documents: v1.0.1. Frozen certificate inventory: v1.0.0.** The newer release links the original assets; it does not duplicate or change them. The [current release index](../manifests/v1.0.1.json) lists the new document/evidence attachments and the inherited certificate inventory. File identities are recorded in [release-assets.json](../manifests/release-assets.json). MB and GB below are decimal; GiB is binary.
+**Current documents: v1.0.2. Frozen original certificate inventory: v1.0.0.** The newer release links the original assets; it does not duplicate or change them. The [v1.0.2 release index](../manifests/v1.0.2.json) records the revised paper and new dated evidence; the [original certificate manifest](../manifests/release-assets.json) retains its fixed URLs and hashes. MB and GB below are decimal; GiB is binary.
+
+The [88-page article and 9-page index](https://doi.org/10.5281/zenodo.23057256) are archived at Zenodo with their own version DOI. GitHub v1.0.2 also supplies source and verification material, including the 30 September negative-diagonal replay records and a **source-only** second-phase Lean review snapshot. The [dated replay guide](REPLAY_20260930.md) explains which parts are executable mathematics and which are file or receipt checks.
+
+## New v1.0.2 attachments
+
+These five objects total **5,705,626 bytes**. Their exact sizes and SHA-256 values are in [the v1.0.2 release index](../manifests/v1.0.2.json). The two PDFs are byte-identical to the published Zenodo version; the ZIPs are additional GitHub materials.
+
+| Attachment | Bytes | Contents |
+|---|---:|---|
+| [Article PDF](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/rho5_manuscript_v1.0.2.pdf) | 477,462 | Published 88-page manuscript |
+| [Supplementary index PDF](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_SUPPLEMENTARY_INDEX_v1.0.2.pdf) | 91,402 | Published 9-page index |
+| [Source and bounded checks](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_v1.0.2_source_and_checks.zip) | 126,083 | Matching TeX/Bib source, changes, responsibility map and small exact checks |
+| [Dated replay evidence](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_v1.0.2_replay_evidence.zip) | 2,962,411 | Executed plan and drivers, final receipt export, source mapping and separate audits |
+| [Partial Lean source snapshot](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.2/RHO5_Lean_Phase2_B366_SOURCE_ONLY_v1.0.2.zip) | 2,048,268 | B366 second-phase source review; no standalone cold build or unconditional theorem |
+
+The dated replay ZIP does not include the inherited 3.575 GB compressed B archives or all mathematical runtime inputs. Its `verify_public_replay_bundle.py` checks the supplied receipt identities and 570 links, not the underlying mathematics. The clean-directory assembly of its source layout from public archives is a separately recorded portability gate; see [the replay guide](REPLAY_20260930.md).
 
 ## Choose what to download
 
@@ -27,7 +43,7 @@ Use `python3 scripts/fetch.py --list` to list object ids. Choose `--group sample
 | upstream | [rho5_v37_exact.zip](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/rho5_v37_exact.zip) | 0.90 MB | 1.99 MB |
 | analytic | [RHO5_PAPER_REVIEW_PHASE1_20260912.zip](https://github.com/hkjtsgmc79-boop/rho5-proof/releases/download/v1.0.0/RHO5_PAPER_REVIEW_PHASE1_20260912.zip) | 0.86 MB | 4.30 MB |
 
-The published archive inventory totals **4,494,382,372 bytes (4.494 GB)**. It contains intentional overlap (for example, the small final-anchor example and corresponding B material). Do not interpret a sum of package sizes as a proof of transitive dependency closure.
+The inherited original archive inventory totals **4,494,382,372 bytes (4.494 GB)**. It contains intentional overlap (for example, the small final-anchor example and corresponding B material). The v1.0.2 document and evidence attachments are additional. Do not interpret a sum of package sizes as a proof of transitive dependency closure.
 
 `RHO5_PAPER_REVIEW_PHASE1_20260912.zip` preserves the original pre-GitHub review collection byte for byte, including its historical publication-status fields. The current paper with the public repository address is in [paper/](../paper/); the old review record is not a statement about the present availability of this release.
 
@@ -39,6 +55,7 @@ The historical-root archive exceeds GitHub’s per-asset limit. Five byte-transp
 
 - Canonical project source: **646 modules, 35,027,225 bytes**. The default product loads 634 project modules.
 - Original source ZIP: **6,428,728 bytes**, expanding to **40,620,705 bytes** including docs and evidence; 2 additional `.lean` members are evidence copies, not new canonical modules.
+- The separate B366 second-phase archive preserves 1,452 accepted source modules and adds four identified support sources. Its 57 direct imports outside that snapshot are not bundled into a standalone cold-build product; this addition is a source review object, not a new Lean acceptance of the full theorem.
 - Lean 4.30.0 and pinned mathlib are separate downloads. Their caches and compiled project objects are not included in the source ZIP.
 
 | Recorded check | Wall time | Scope and environment |
@@ -48,8 +65,9 @@ The historical-root archive exceeds GitHub’s per-asset limit. Five byte-transp
 | Examples and example audit | 12.021 seconds | Separate cached X run |
 | Final 54-leaf anchor | 184.37 seconds | Historical exact X run of the named anchor |
 | Original B root | 22,815.35 seconds (6.34 hours) | Historical X run, 8 processes, Fraction backend |
+| 30 September fresh B root | 12,965.7057178 seconds (about 3 h 36 min) | Existing X host, 16 Fraction workers; original root only, excluding 570 producer calls and final composition |
 
-The entry/audit and example timings are cached runs. The cold-rebuild row records a separate completed session; fixed third-party caches were reused and supplemented. See [the build scope](LEAN_COLD_REBUILD.md). The last row excludes the additional parent/alpha-cover checks and source composition. These wall times are not summed CPU seconds or total discovery cost. No whole-proof runtime is inferred from them.
+The entry/audit and example timings are cached runs. The cold-rebuild row records a separate completed session; fixed third-party caches were reused and supplemented. See [the build scope](LEAN_COLD_REBUILD.md). Both root rows exclude parent/alpha-cover checks and source composition. These wall times are not summed CPU seconds or total discovery cost. No whole-proof runtime is inferred from them.
 
 ## Provisional resource allowances
 

@@ -14,6 +14,8 @@ The paper proves the real five-dimensional complete-pivoting growth bound using 
 
 The no-external-safety baseline includes `alpha ≤ rho5Trace ≤ 81/16`. It is distinct from the conditional sharp equality.
 
+The v1.0.2 B366 addition is a **source-only** second-phase review snapshot. It preserves 1,452 accepted Lean sources and adds four identified support sources; 57 direct imports outside the snapshot are not included. It does not replace the first-phase cold-build record or prove either global safety interface unconditionally.
+
 See [the detailed Lean coverage catalogue](../lean/docs/COVERAGE.md), [obligations](../lean/docs/OBLIGATIONS.md), [public types](../lean/FINAL_THEOREM_TYPES.txt) and [axiom records](../lean/AXIOMS.json).
 
 ## What the exact certificates establish
@@ -21,6 +23,8 @@ See [the detailed Lean coverage catalogue](../lean/docs/COVERAGE.md), [obligatio
 The frozen acceptors check rational identities, inequalities, qualified analytic rules, source bindings and tree/domain coverage. Some terminal rules exclude a stronger rational-threshold hypothesis, while others prove safety at the exact alpha bound. These must not be conflated. A domain can be alpha-safe without being empty.
 
 The final root preserves four original open records. Separate source-bound covers discharge them. Existing final composition records refer to accepted components and are not themselves a fresh execution of every component checker. The published archives and supplementary index retain that distinction.
+
+On 30 September 2026 the negative-diagonal finite cover was freshly checked on the existing X host: 570 producer calls passed, the original root was rerun with exact Fraction arithmetic, and all four parent covers were bound back to its four original OPEN boxes. The final finite-cover receipt has `effective_open_count = 0`. This result retains upstream analytic and complete-X premises; see the [dated replay guide](REPLAY_20260930.md) for its exact scope and evidence.
 
 ## What is trusted in this release
 
@@ -30,6 +34,6 @@ The release contains no assertion that a Python PASS directly constructs a Lean 
 
 ## What is deferred
 
-Full-tree Lean instances, a fully verified executable checker, a fresh-machine build of Lean and all third-party dependencies, and a tested single-command complete mathematical replay are not claimed by this release. A cold rebuild of the frozen project itself has completed with third-party caches reused and supplemented; see [the recorded scope](LEAN_COLD_REBUILD.md). Existing partial Lean tree experiments are not included in the default product.
+Full-tree Lean instances, a fully verified executable checker, a fresh-machine build of Lean and all third-party dependencies, and a tested single-command complete mathematical replay are not claimed by this release. A cold rebuild of the frozen first-phase project itself has completed with third-party caches reused and supplemented; see [the recorded scope](LEAN_COLD_REBUILD.md). The second-phase source review archive is not included in that default product.
 
 The real-field theorem does not claim a complex-field result or a classification of all maximizing matrices.

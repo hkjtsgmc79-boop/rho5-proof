@@ -6,21 +6,23 @@
 \usepackage{xurl}
 \usepackage[colorlinks=true,urlcolor=blue]{hyperref}
 \usepackage{microtype}
-\hypersetup{pdftitle={Supplementary material: proof objects and reproducibility},pdfauthor={Qianli Ma, Chao Wu}}
-\title{Supplementary material\\[3pt]\large The exact maximum growth factor for complete pivoting\\on real \(5\times5\) matrices}
+\hypersetup{pdftitle={Supplementary index: proof objects and reproducibility},pdfauthor={Qianli Ma, Chao Wu}}
+\title{Supplementary index\\[3pt]\large The exact maximum growth factor for complete pivoting\\on real \(5\times5\) matrices}
 \author{Qianli Ma\textsuperscript{1,2}, Chao Wu\textsuperscript{1}\\[3pt]
 \small \textsuperscript{1}Zhejiang University\quad\textsuperscript{2}WUJIE AI\\[3pt]
 \small \href{mailto:qianli.ma@zju.edu.cn}{\texttt{qianli.ma@zju.edu.cn}}\quad
 \href{mailto:chao.wu@zju.edu.cn}{\texttt{chao.wu@zju.edu.cn}}}
-\date{11 September 2026}
+\date{30 September 2026}
 \begin{document}
 \maketitle
 % LaTeX body fragment. Requires amsmath, booktabs, longtable, array, and xurl.
 % Provenance transcription only: no certificate replay was performed to write it.
 \section*{Proof objects and reproducibility index}
 
-This supplement identifies the mathematical modules used in the article,
-their proof objects, and the scopes of the recorded exact acceptances.
+This index identifies the mathematical modules used in the article,
+their archived proof objects, and the scopes of the recorded exact
+acceptances. It is a map to the archived arguments, code, and large
+certificate payloads, not a replacement for them.
 Historical labels beginning R, V, B, or Round identify archived sources;
 they are not additional mathematical hypotheses. File and collection
 names identify manifest objects. The public repository is
@@ -59,6 +61,8 @@ The third responsibility includes recursive dependencies and cannot be
 inferred from file counts or hashes alone. The public verification guide
 specifies which component commands execute mathematics and which later
 commands compose previously checked results.
+The original v1.0.1 manuscript and index PDFs are archived at
+\url{https://doi.org/10.5281/zenodo.22727368}.
 
 \section*{S1. The constant and attainment}
 
@@ -140,21 +144,39 @@ Its SHA-256 is
 \path{2478b3d6c8d9189fd508e2af4695bb2086c6628d5049c75cef759bd3e455dfa8}.
 \end{quote}
 Here T24 denotes the canonical target proved in this package.
-Its primary statement is \path{RHO5_V24/THEOREM.md}, Sections
+Its original statement is \path{RHO5_V24/THEOREM.md}, Sections
 7--8, and the exceptional representative domain is defined in
-Section 2. The nested V20 theorem, Section 7, supplies an attained
-same-head wall maximum; V18, Section 5, and V16, Section 4.2,
-supply the complete reconstruction at any prescribed attainable
-high target. V15, Sections 2 and 4--5, retains a common framework
-for all columns. Appendix B now proves compactness of the complete
-fixed-head high-value fiber and attainment of its exact-target wall
-minimum in E, before any strict endpoint qualifications are imposed.
-The V25 handoff restates these inputs but does not replace their
-original proofs. To replay the six V24 exclusions together with
-the nested earlier acceptances, run \texttt{python verify.py
---jobs 4 --full-chain} in \path{RHO5_V24/}; omitting
-\texttt{--full-chain} runs only V23's algebra after the new V24
-checks, and does not re-execute the V22/V20 exclusions.
+Section 2. Appendix B of the revised article now gives the analytic
+chain explicitly: high-value budgets and signs; first- and
+middle-column capacities using common parameters; simultaneous tail
+reconstruction; an attained same-head wall maximum; compactness and
+minimum attainment at a prescribed target; and the qualified endpoint
+equivalence. The finite C19, difference, and exceptional-contact
+exclusions remain separately identified computational inputs. Their
+continuous source-to-model inclusions precede their use.
+
+The safe-tail predecessor, retained among the nested V13 dependencies,
+has SHA-256
+\begin{quote}
+\path{099eae4a478096c3d31a8ed10023ad2219f2879a0cb05fdd29ea64743020d247}.
+\end{quote}
+It contains \path{TAIL_THEOREM.md}, \path{proof_certificate.py},
+\path{certificate.json}, and \path{verify.py}: thirteen fixed
+polynomial-positivity certificates and twenty-two symbolic identity
+checks. These are distinct from the later adaptive exclusion trees.
+The article states the needed canonical-domain reduction and finite
+positivity conditions; it does not assume the safe-tail implication
+for an arbitrary signed source.
+
+To replay the six V24 exclusions together with the nested earlier
+acceptances, run the following in \path{RHO5_V24/}:
+\begin{verbatim}
+python verify.py --jobs 4 --full-chain
+\end{verbatim}
+Omitting \verb|--full-chain| runs only
+V23's algebra after the new V24 checks, and does not re-execute the
+V22/V20 exclusions. The V25 handoff restates mathematical inputs; it
+does not replace their proofs or the indicated finite acceptance.
 
 \textbf{Row-scale reconstruction (V25).}
 The original nested object is
@@ -185,7 +207,7 @@ V27 entrance dictionaries and other earlier dependencies are retained
 where the frozen component manifests require them.
 
 \textbf{Additional upstream replay, 12 September 2026.}
-The unmodified V24 entry with \texttt{--full-chain} was executed in
+The unmodified V24 entry with \verb|--full-chain| was executed in
 a fresh directory. All 22 V20/V22/V24 exclusion trees passed:
 1,275,818 nodes, 637,920 contradiction leaves, and no unresolved
 leaf, together with the invoked nested algebra and reconstruction
@@ -289,6 +311,13 @@ requirements. Their previously recorded acceptances are not represented
 as new runs performed in preparing this index.
 
 \textbf{Two distinct analytic entry rules.}
+The article's Section 6.2 now states the complete strict- and weak-room
+predicates, the same-height strict-room reduction, the weak-room
+approximation at zero receivers and cofactors, and the qualified wall
+entrance. It distinguishes the room signs \(A,B,d\le0\) from the
+wall certificate's stronger three negative signs. The local entrances
+do not cover every complete source; the original-root trees retain
+the other exits and boundary cases.
 The low-r package's \path{source/THEORY.md}, Theorem V35-local,
 and \path{source/FLOW_TUBE_THEOREM.md} describe the 22-coordinate
 X-to-room wall flow. It decreases \(r+w\), then applies an actual
@@ -400,8 +429,8 @@ has SHA-256
 \begin{quote}
 \path{55f3a9dd5090cfd9e21c479444d5cca1fc15fde2b5c22b8180bbd1c834156b37}.
 \end{quote}
-The recorded Fraction replay used eight workers and took 22,815.35
-seconds. That is a historical mathematical acceptance, not the runtime
+The recorded Fraction replay ran on Linux with eight worker processes
+and took 22,815.35 seconds of elapsed wall time. That is a historical mathematical acceptance, not the runtime
 of the final composition.
 
 The article's \(Q_1,Q_2,Q_3,Q_4\) are the following actual old-root
@@ -462,6 +491,33 @@ Its 357 direct dependencies are enumerated in
 \path{FINAL_OVERLAY_DIRECT_DEPENDENCIES.json}. Recursive runtime and
 upstream theorem dependencies are additional objects; this list alone
 is not the complete proof archive.
+
+\textbf{Fresh negative-diagonal replay, 30 September 2026.}
+The dated replay supplement contains
+\path{replay_engineering/EXECUTABLE_DEPENDENCY_MANIFEST.json},
+the sealed 570-job plan covering 566 distinct targets, and
+\path{replay_engineering/replay_parents.py}, its mathematical driver.
+The unchanged executed plan and driver have SHA-256 values
+\begin{quote}\small
+\path{1bb4be62a66fe3570ea845c33ceb3df4e47f48d44899ea7f718a972eda50717f}\\
+\path{bd1ea197b0342e095f7d53bd2f2d325270e92f1e967c40349fee3733bd70e53e}.
+\end{quote}
+The receipt archive \path{FINAL_REPLAY_RECEIPTS_20260930.tar.gz},
+under \path{replay_engineering/x_return/final_20260930/}, has SHA-256
+\begin{quote}\small
+\path{24f85c5ec1128409bdd1c15015d7f2227755f3ac61ef1f322270166ff40aefab}.
+\end{quote}
+It contains 628 indexed payload files plus the export manifest itself
+(629 regular files).  The four whole-anchor complements retain their
+specified open paths as intermediate obligations.  The accepted target
+cover and actual-root binding yield effective open count zero;
+570 successful producers do not mean 570 independently closed domains.
+The archive preserves the actual executed code, root and parent
+receipts, and failed first root attempt.  Historical inputs copied under
+\path{fresh/joint/} remain historical inputs, not newly generated proofs.
+This lightweight archive does not include all certificate payloads.
+Its scope is the negative-diagonal finite cover relative to retained
+upstream analytic and complete \(X\) results, not a fresh full-theorem replay.
 
 \section*{S8. Artifact collections and reproducibility scope}
 
@@ -552,11 +608,98 @@ Boost headers. Python dependencies, working directories and migration
 constraints are given in \path{docs/VERIFY.md} and
 \path{docs/VERIFY.zh-CN.md}. The global theorem also uses S1--S5,
 including the complete X certificates, attained lower bound and
-analytic boundary arguments. \path{THEOREM_CHAIN.md} and
+analytic boundary arguments. In the published supplementary analysis archive \path{RHO5_PAPER_REVIEW_PHASE1_20260912.zip}, the root-level files \path{THEOREM_CHAIN.md} and
 \path{REPRODUCIBILITY.md} specify dependencies, entry points and scopes.
 Recorded component acceptances and source compositions are preserved;
 a tested, new-machine single-command replay of the entire theorem is
 not claimed. Publication and hash checks do not constitute that replay.
+
+\textbf{Ordered independent reproduction.}
+The minimal dependency order is S1--S2 (constant, attainment and source
+reductions), S3 (canonical representative, reconstruction and height),
+S4 (all seven complete-\(X\) components), S5--S6 (the negative-diagonal
+source and qualified rules), then S7 (the original root, all four
+parent mathematics, and final composition). The S3 V24 command must
+include \verb|--full-chain| when the nested exclusion acceptances are
+to be regenerated. S3's V28 entry is \texttt{python3 verify\_v28\_all.py}
+in the extracted \path{rho5_v28_exact/} package. S4 lists the seven
+component entries. The actual domain theorem is assembled only after
+all of its required components and qualifications have been checked.
+
+The four-parent mathematical interfaces live in
+\path{rho5_deep500_all_open_20260910_08/} inside
+\path{final_cover.tar.gz}. The function
+\path{deep_math.load_protocol} loads the frozen depth-500 protocol;
+\path{deep_math.verify_branch} checks that a continuation is attached
+to its actual source and invokes its exact verifier with cross-checks.
+The function \path{alpha_cover.verify_cut}, after configuration with
+the frozen rule support, replays the source-to-cut mathematics,
+including the ancestor image. These are Python interfaces, not
+standalone command-line commands in their historical packages.
+The dated supplement's \path{replay_engineering/CURRENT_REPLAY_STATUS.md}
+provides the later plan--root--parents--gates--composition command sequence;
+\path{PATH_MAPPING.json} gives its explicit source mappings.
+These commands orchestrate the negative-diagonal component, with the
+retained upstream inputs and portability limitations described above.
+Their producers precede
+\path{alpha_parent_cover.py}, which binds their accepted records.
+The final composer is
+\path{rho5_b16_v53_closure_20260911_18/final_overlay_accept.py}.
+It checks the complete parent target sets and the actual original-root
+bindings; it does not execute every earlier mathematical producer.
+For parent 435003 its input is the frozen 239/240 basis plus the
+last complete anchor, not an arbitrary later mutable state file.
+
+A fresh complete reproduction records fresh mathematical results for
+all the required sources before the final composition. If historical
+acceptance records are reused instead, report that reuse and its
+source-binding checks explicitly. The four preserved root O records
+are acceptable only as the specified intermediate result; a final
+unpaid target is a failed complete reproduction. Hash mismatches,
+missing recursive inputs, altered models or disabled assertions are
+also failures, not permitted environment adaptations.
+
+\textbf{Version identities.}
+The version of the article, the version of a source checkout and the
+version of a certificate asset need not coincide. The v1.0.2 article
+revision preserves the frozen certificate identities indexed by the
+v1.0.1 checkout, including assets originally published under
+v1.0.0. Their earlier URLs and SHA-256 values remain intentional.
+The DOI \url{https://doi.org/10.5281/zenodo.22727368} identifies the
+original v1.0.1 PDFs and must not be cited as the archival identity of
+this v1.0.2 revision. The present manuscript and index are archived at
+\url{https://doi.org/10.5281/zenodo.23057256}. The accompanying revision change log distinguishes exposition and
+verification-documentation changes from changes to proof data; the
+frozen mathematical inputs and their identities are unchanged.
+
+\textbf{Second-phase source review snapshot.}
+The separately supplied B366 snapshot preserves 1,452 accepted Lean
+modules and their source/progress evidence. Its packaging supplement
+adds four previously compiled reuse-support sources, separately
+identified as \path{StrictWall.lean}, \path{WallBudgets.lean},
+\path{TailFeasibility.lean}, and \path{TailCoordinates.lean} in
+\path{Rho5.PhaseTwo.Canonical.Representatives.WallMaximum.MinimumE}.
+The original sources and manifest remain byte-for-byte unchanged;
+the four supports are not counted as newly adopted modules.
+The supplement records their hashes and frozen Git identities.
+A static import check finds no missing PhaseTwo source import;
+57 directly imported Rho5 modules outside PhaseTwo remain absent.
+Project configuration, external dependencies and their full transitive
+closure are not supplied, so this is not a standalone cold-build
+archive. No new Lean compilation was performed for the supplement.
+
+The package records additional checked lemmas and limited concrete
+certificate instances; it does not supply a complete kernel check of
+the large trees or discharge the two global safety hypotheses.
+Its module count does not measure the proportion of the full theorem
+formally proved. The historical ``awaiting pinned Lean compilation''
+comment in \path{CommonRepresentative.lean} is preserved; the
+supplement supplies the later successful compiler receipt and
+coordinator adoption record, bound to that exact source.
+The supplemented ZIP has SHA-256
+\begin{quote}
+\path{3c4dcb433ad5af1deee9c2f18531e862110c62c501cdbe5c54ed2a9d06d97fc7}.
+\end{quote}
 
 \textbf{First-phase Lean project cold rebuild.}
 The frozen project was rebuilt on Linux on 12 September 2026, starting
@@ -594,8 +737,8 @@ The 107,995-byte cold-build receipt archive has SHA-256
 \begin{quote}
 \path{c0ec1be2dc8b2aff26f987d13be34a20f0f2e92a4d2389523e9fe88c9c980415}.
 \end{quote}
-This revision includes that archive and the completion summary under
-\path{data/lean_cold_build/}. It preserves the source/object manifest,
+The v1.0.1 public source repository preserves that archive and the
+completion summary under \path{paper/data/lean_cold_build/}. It preserves the source/object manifest,
 finalization and axiom/type logs, and failed-build evidence; it is not
 a standalone replay package and does not contain all module logs,
 compiled objects, dependency caches, or the successful build drivers.

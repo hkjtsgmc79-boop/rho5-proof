@@ -1,0 +1,14 @@
+{
+  "jobs": 570,
+  "kinds": {
+    "alpha_cut": 512,
+    "branch": 46,
+    "complement": 4,
+    "joint_anchor": 1,
+    "production_projection": 7
+  },
+  "manifest_sha256": "2c299f3f5268dbf4d1539ba5130639779ea2dec8d1044d08001ae07dc5edd106",
+  "pinned_files": 483,
+  "target_count": 566,
+  "unique_input_bytes": 581693717
+}

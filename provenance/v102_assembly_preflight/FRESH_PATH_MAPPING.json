@@ -1,0 +1,31 @@
+{
+  "schema": "RHO5_REVIEW3_PATH_MAPPING_V1",
+  "created_epoch": 1790769121.0589254,
+  "input_copies": {
+    "independent": {
+      "historical_root": "/root/microscope_ws/rho5_v102_public_assembly_20260930/sources/rho5_independent_acceptance_20260911_11",
+      "new_root": "/root/microscope_ws/rho5_v102_public_assembly_20260930/sources/replay_preflight/inputs/independent"
+    },
+    "deep": {
+      "historical_root": "/root/microscope_ws/rho5_v102_public_assembly_20260930/sources/rho5_deep500_all_open_20260910_08",
+      "new_root": "/root/microscope_ws/rho5_v102_public_assembly_20260930/sources/replay_preflight/inputs/deep"
+    },
+    "closure": {
+      "historical_root": "/root/microscope_ws/rho5_v102_public_assembly_20260930/sources/rho5_b16_v53_closure_20260911_18",
+      "new_root": "/root/microscope_ws/rho5_v102_public_assembly_20260930/sources/replay_preflight/inputs/closure"
+    },
+    "B_STRUCTURE_16_DELIVERY": {
+      "historical_root": "/root/microscope_ws/rho5_v102_public_assembly_20260930/sources/rho5_b16_20260911_17/B_STRUCTURE_16_DELIVERY",
+      "new_root": "/root/microscope_ws/rho5_v102_public_assembly_20260930/sources/replay_preflight/inputs/B_STRUCTURE_16_DELIVERY"
+    }
+  },
+  "source_inputs_modified": false,
+  "mathematical_rules_modified": false,
+  "root_file_sha256": "8e138dce9a65e49252a1f4714229b1ca95227943913f1eeefdf51714810a563c",
+  "deep_receipts": {
+    "338726": "12463d6ea5fba04a4ab8562eb74abd9f8c2ab348579223ba1824730165fbebd2",
+    "435003": "79a4f0523c27bc0a93210f22446cb87e6cea02fcf088505d5e264a874366d5b7",
+    "563285": "27ec79e257ffe9205d8fecfdee4f06c885cc9d8ee0b052f831931dce41109c17",
+    "675104": "f3236f455b4a7824a3dabe508a732f0d174b9ecf276a7835cbb05250d30be42b"
+  }
+}
